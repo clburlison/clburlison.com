@@ -15,7 +15,7 @@ I finally got around to setting up two-factor authentication on my Github accoun
 
 ###SourceTree error
 The error message that I was receiving seemed pretty generic at the time. Besides I knew I was typing my Github password correctly, so that could not be the issue. In hindsight not realizing the two-factor authentication (2fa) was the problem immediately was pretty stupid. The solution to this error is to login with a One Time Password (OTP)  token _not_ your normal Github password. If you do use the wrong password you will receive the follow error message.  
-{% img test/images/posts/2014-05-14/login_error.png SourceTree error %}
+{% img /images/posts/2014-05-14/login_error.png SourceTree error %}
 
 **Note:** If you use the official [GitHub app](https://mac.github.com/) you will not run into a login error because the app uses the GitHub API for authentication.  
 
@@ -25,23 +25,23 @@ Below are the steps needed to create your OTP token and re-add your Github accou
 
 ###Setting up the OTP
 To create the OTP, use the following [link](https://github.com/settings/applications). Click on "Generate New Token".  
-{% img test/images/posts/2014-05-14/otp.png Creating an OTP %}
+{% img /images/posts/2014-05-14/otp.png Creating an OTP %}
 
 Give your OTP a Token description. Make sure at least the "repo" and "public_repo" options are checked. Click "Generate token".  
-{% img test/images/posts/2014-05-14/new_token.png Token permissions %}
+{% img /images/posts/2014-05-14/new_token.png Token permissions %}
 
 ###Configuration for SourceTree
 If you already have SourceTree setup, you will need to edit your account password for GitHub. You can accomplish this by opening the Bookmarks window and clicking on the "Hosted Repositories" button.  
-{% img test/images/posts/2014-05-14/bookmarks.png Bookmarks Window %}
+{% img /images/posts/2014-05-14/bookmarks.png Bookmarks Window %}
 
 Now you need to click on "Edit Accounts..." so you can select your Github account and make modifications.  
-{% img test/images/posts/2014-05-14/hosted_repositories.png Hosted Repositories %}  
+{% img /images/posts/2014-05-14/hosted_repositories.png Hosted Repositories %}  
 
 Click on "Set Password".  
-{% img test/images/posts/2014-05-14/github_options.png Github Acct Options %}
+{% img /images/posts/2014-05-14/github_options.png Github Acct Options %}
 
 In the Authenticate window make sure and use your newly generated OTP token as your password. I recommend saving the password in your keychain.  
-{% img test/images/posts/2014-05-14/authenticate.png Authenticate Window %}
+{% img /images/posts/2014-05-14/authenticate.png Authenticate Window %}
 
 ---
 

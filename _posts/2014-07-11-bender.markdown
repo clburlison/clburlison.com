@@ -12,7 +12,7 @@ categories: osx backup
 
 Many administrators use OS X Server. In my opinion the server OS has always lacked choices when it comes to backing up the server services data. Until I found Bender...
 
-{% img test/images/posts/2014-07-11/bendericon_display.png %}
+{% img /images/posts/2014-07-11/bendericon_display.png %}
 
 
 > Bender is a utility written by Forget Computers to automate the backup of OS X Server settings to provide easy restoration of services should they become corrupt, and for importing server settings after a migration or server upgrade.

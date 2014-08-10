@@ -26,14 +26,14 @@ Some side affects of enabling FMM means giving access from [iCloud.com](https://
 3. erase the computer
 
 The web interface  
-{% img test/images/posts/2014-05-19/icloud-interface.png 600 420 %}
+{% img /images/posts/2014-05-19/icloud-interface.png 600 420 %}
 
 Close up of the options  
-{% img test/images/posts/2014-05-19/icloud-options.png %}
+{% img /images/posts/2014-05-19/icloud-options.png %}
 
 
 From my testing, if a computer is offline while one of these options are clicked from iCloud it takes approximately one minute for the signal to be processed on the computer in question (those this could be connectivity related). Playing a sound is by far the fastest option while taking less than one second most of the time when the computer is online. If you choice to lock the computer this will cause your computer will immediately lock up and restart. You will presented with the a screen like the following.  
-{% img test/images/posts/2014-05-19/icloud-lock.png 600 400 %}
+{% img /images/posts/2014-05-19/icloud-lock.png 600 400 %}
 
 Though I did not test, my guess is that an erase will prompt the computer to go into a state like the lock screen while deleting your data. If anyone feels like testing this feel free to contact me with results on twitter.
 
