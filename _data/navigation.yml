@@ -1,0 +1,10 @@
+# Site navigation links
+
+- title: About
+  url: /about/
+
+- title: Resources
+  url: /resources/
+
+- title: Archives
+  url: /blog/archives/  

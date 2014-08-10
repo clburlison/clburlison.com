@@ -1,0 +1,13 @@
+---
+layout: {{ layout }}
+title: {{ title }}
+date: {{ date }}
+modified:
+categories: {{ dir }}
+excerpt:
+comments: true
+published: true
+tags: []
+image:
+  feature:
+---
