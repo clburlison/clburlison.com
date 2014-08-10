@@ -9,6 +9,11 @@ keywords: octopress, amazon s3, amazon aws, website, s3cmd
 description: Deploy octopress with s3cmd command.
 categories: [octopress]
 ---
+#NOTICE
+This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.
+
+---
+
 This post will go over how I upload my octopress site from my computer to Amazon s3 cloud service using s3cmd.  
 
 Firstly, you will need to sign up for an [Amazon AWS account](http://aws.amazon.com/s3/) if you do not have one already. It is quite cheap and you only pay for what you use.

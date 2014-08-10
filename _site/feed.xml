@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-08-10T18:47:54-05:00</updated>
+<updated>2014-08-10T18:55:38-05:00</updated>
 <id>/</id>
 <author>
   <name>Clayton Burlison</name>
@@ -17,14 +17,17 @@
   <title type="html"><![CDATA[Moving to Plain Jekyll]]></title>
   <link rel="alternate" type="text/html" href="/blog/2014/08/09/moving-to-plain-jekyll/" />
   <id>/blog/2014/08/09/moving-to-plain-jekyll</id>
+  <updated>2014-08-10T00:00:00-00:00</updated>
   <published>2014-08-09T01:06:34-05:00</published>
-  <updated>2014-08-09T01:06:34-05:00</updated>
+  
   <author>
     <name>Clayton Burlison</name>
     <uri></uri>
     <email>clburlison@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Finally moved the blog over from Octopress to a plain Jekyll setup. This allows me to have a bit more control while also removing some of the fluff that was installed by Ocotopress but I did not use. I am very glad to have found such a great theme created by Michael Rose. I will release another post once I have had a little more time to play around. As of this momemnt it is about 10 times faster to generate the website on my laptop. The &lt;code&gt;--watch&lt;/code&gt; flag from jekyll is also faster.&lt;/p&gt;
+  <content type="html">&lt;p&gt;Moved the blog over from Octopress to a plain Jekyll setup. This allows me to have a bit more control while also removing some of the fluff that was installed by Octopress that I did not use. I am very glad to have found such a great theme created by Michael Rose. I will release another post once I have had a little more time to play around. As of this moment, it is about 10 times faster to generate the website on my laptop. The &lt;code&gt;--watch&lt;/code&gt; flag from raw jekyll much faster at recreating pages.&lt;/p&gt;
+
+&lt;p&gt;Still need to add tags and a few other plugins.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/blog/2014/08/09/moving-to-plain-jekyll/&quot;&gt;Moving to Plain Jekyll&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;&quot;&gt;Just another tech blog&lt;/a&gt; on August 09, 2014.&lt;/p&gt;</content>
 </entry>
@@ -1074,7 +1077,12 @@ Article: &lt;a href=&quot;http://www.narga.net/improve-octopress-advanced-tweaks
     <uri></uri>
     <email>clburlison@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;This post will go over how I upload my octopress site from my computer to Amazon s3 cloud service using s3cmd.  &lt;/p&gt;
+  <content type="html">&lt;h1 id=&quot;notice&quot;&gt;NOTICE&lt;/h1&gt;
+&lt;p&gt;This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This post will go over how I upload my octopress site from my computer to Amazon s3 cloud service using s3cmd.  &lt;/p&gt;
 
 &lt;p&gt;Firstly, you will need to sign up for an &lt;a href=&quot;http://aws.amazon.com/s3/&quot;&gt;Amazon AWS account&lt;/a&gt; if you do not have one already. It is quite cheap and you only pay for what you use.&lt;/p&gt;
 
@@ -1147,7 +1155,12 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     <uri></uri>
     <email>clburlison@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;For various reasons I decided to set up my puppetmaster on an OS X install of Mavericks instead of what I would consider the norm, being a linux distro. Here are the results. This documentation is strongly based on the article by Nate Walck on afp548.com.&lt;/p&gt;
+  <content type="html">&lt;h1 id=&quot;notice&quot;&gt;NOTICE&lt;/h1&gt;
+&lt;p&gt;This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For various reasons I decided to set up my puppetmaster on an OS X install of Mavericks instead of what I would consider the norm, being a linux distro. Here are the results. This documentation is strongly based on the article by Nate Walck on afp548.com.&lt;/p&gt;
 
 &lt;hr /&gt;
 
