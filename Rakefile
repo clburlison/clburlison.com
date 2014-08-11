@@ -25,7 +25,7 @@ end
 desc "Commit _site/"
 task :commit do
   puts "\n## Staging modified files"
-  status = system("git add -A .")
+  status = system("git add .")
   puts status ? "Success" : "Failed"
   puts "\n## Committing a site build at #{Time.now.utc}"
   message = "Build site at #{Time.now.utc}"
