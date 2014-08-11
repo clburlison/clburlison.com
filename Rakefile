@@ -24,8 +24,6 @@ end
 
 desc "Commit _site/"
 task :commit do
-  puts "\n## Remove _site/ from source branch"
-  status = system("rm -r _site")
   puts "\n## Staging modified files"
   status = system("git add -A")
   puts status ? "Success" : "Failed"

@@ -1,0 +1,284 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Bender &#8211; Just another tech blog</title>
+<meta name="description" content="Many administrators use OS X Server. In my opinion the server OS has always lacked choices when it comes to backing up the server services data. Until I found Bender…
+
+">
+<meta name="keywords" content="">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Bender">
+<meta name="twitter:description" content="Many administrators use OS X Server. In my opinion the server OS has always lacked choices when it comes to backing up the server services data. Until I found Bender…
+
+">
+<meta name="twitter:site" content="@clburlison">
+<meta name="twitter:creator" content="@clburlison">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bender">
+<meta property="og:description" content="Many administrators use OS X Server. In my opinion the server OS has always lacked choices when it comes to backing up the server services data. Until I found Bender…
+
+">
+<meta property="og:url" content="http://localhost:4000/blog/2014/07/11/bender/">
+<meta property="og:site_name" content="Just another tech blog">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/blog/2014/07/11/bender/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000">Just another tech blog</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+					    
+					        
+					    
+					    <li><a href="http://localhost:4000/about/" >About</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://localhost:4000/resources/" >Resources</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://localhost:4000/blog/archives/" >Archives</a></li>
+					  
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+
+
+	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+
+<h3>Clayton Burlison</h3>
+<p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
+<a href="mailto:clburlison@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+<a href="http://twitter.com/clburlison" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://facebook.com/clburlison" class="author-social" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+
+<a href="http://linkedin.com/in/clburlison" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/clburlison" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+<a href="http://steamcommunity.com/id/DancingMonkey" class="author-social" target="_blank"><i class="fa fa-steam-square"></i> Steam</a>
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/blog/2014/07/11/bender/" rel="bookmark" title="Bender">Bender</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>Many administrators use OS X Server. In my opinion the server OS has always lacked choices when it comes to backing up the server services data. Until I found Bender…</p>
+
+<p><img src="/images/posts/2014-07-11/bendericon_display.png" /></p>
+
+<blockquote>
+  <p>Bender is a utility written by Forget Computers to automate the backup of OS X Server settings to provide easy restoration of services should they become corrupt, and for importing server settings after a migration or server upgrade.</p>
+
+  <p>Bender Home Page</p>
+</blockquote>
+
+<p>Sure you have TimeMachine but some of the postgresql databases have been known to not backup property with TimeMachine. Honestly, I had given up on a backup solution that just gets the data I need for OS X Server. While reading though the <a href="https://groups.google.com/d/msg/macenterprise/MxLssCqR72Y/J1qFuALErMwJ">macenterprise list</a> I found someone recommended Bender. Once I got to work I realized what a gem I had been missing out on. In my testing I have only used Bender on Mavericks (10.9) but it should work on Lion and up. It will daily backup the following:</p>
+
+<ul>
+  <li>Open Directory</li>
+  <li>Single XML plist of all the server settings (aka DHCP, DNS, NetBoot, FileShares, etc.)</li>
+  <li>A series of individual XML plists of each server setting (aka all the above as individual files)</li>
+  <li>Profile Manager and Wiki services</li>
+</ul>
+
+<p>The last one was the true winner for me. I had been researching what I needed to do to backup my wiki, as over the past few months it has become an invaluable documentation tool for me. After finding little to none in the way of Apple documentation/release notes I finally gave up. Although, Bender in combination with TimeMachine makes for a much more complete backup solution for OS X Server.</p>
+
+<p>Hopefully you find it as invaluable as I did or at least a nice utility to have in your tool-belt. </p>
+
+<hr />
+
+<p>Articles: <a href="http://robotcloud.screenstepslive.com/s/2459/m/5322/l/94467-bender-automated-backup-of-os-x-server-settings">Bender Home Page</a>, <a href="https://groups.google.com/d/msg/macenterprise/MxLssCqR72Y/J1qFuALErMwJ">macenterprise list</a>  </p>
+
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+
+
+
+	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+
+<h3>Clayton Burlison</h3>
+<p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
+<a href="mailto:clburlison@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+<a href="http://twitter.com/clburlison" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://facebook.com/clburlison" class="author-social" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+
+<a href="http://linkedin.com/in/clburlison" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/clburlison" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+<a href="http://steamcommunity.com/id/DancingMonkey" class="author-social" target="_blank"><i class="fa fa-steam-square"></i> Steam</a>
+        </div>
+        <p><b>Published: </b><time datetime="2014-07-11T16:42:20-05:00">July 11, 2014</time><br>
+		<b>Modified:</b> <time datetime="2014-07-20">July 20, 2014</time></p>
+      </footer>
+    </div><!-- /.article-wrap -->
+    <center><nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/blog/2014/06/17/encrypted-dmgs/" class="btn" title="Encrypted DMGs">Previous article</a>
+      
+      
+        <a href="http://localhost:4000/blog/2014/07/14/show-helpdesk-info/" class="btn" title="Show Help Desk Information">Next article</a>
+      
+    </nav><!-- /.pagination --></center>
+    <hr />
+  
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+
+  <footer>
+    <div class="google-ads">
+  <!-- 320 x 50 ad -->
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client=""
+       data-ad-slot=""></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+<span>&copy; 2014 Clayton Burlison. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-49614309-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'clburlison'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+	        
+
+</body>
+</html>

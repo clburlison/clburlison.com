@@ -1,0 +1,1336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Just another tech blog</title>
+<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://localhost:4000" />
+<updated>2014-08-10T19:15:12-05:00</updated>
+<id>http://localhost:4000/</id>
+<author>
+  <name>Clayton Burlison</name>
+  <uri>http://localhost:4000/</uri>
+  <email>clburlison@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[Moving to Plain Jekyll]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/08/09/moving-to-plain-jekyll/" />
+  <id>http://localhost:4000/blog/2014/08/09/moving-to-plain-jekyll</id>
+  <updated>2014-08-10T00:00:00-00:00</updated>
+  <published>2014-08-09T01:06:34-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Moved the blog over from Octopress to a plain Jekyll setup. This allows me to have a bit more control while also removing some of the fluff that was installed by Octopress that I did not use. I am very glad to have found such a great theme created by Michael Rose. I will release another post once I have had a little more time to play around. As of this moment, it is about 10 times faster to generate the website on my laptop. The &lt;code&gt;--watch&lt;/code&gt; flag from raw jekyll much faster at recreating pages.&lt;/p&gt;
+
+&lt;p&gt;Still need to add tags and a few other plugins.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/08/09/moving-to-plain-jekyll/&quot;&gt;Moving to Plain Jekyll&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on August 09, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Bash if then cheat sheet]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/07/28/bash-if-then-cheat-sheet/" />
+  <id>http://localhost:4000/blog/2014/07/28/bash-if-then-cheat-sheet</id>
+  <updated>2014-07-31T00:00:00-00:00</updated>
+  <published>2014-07-28T22:05:56-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;I always find myself looking for a good resource when writing if/then statements in bash scripts. It’s hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet…copied here because I was tired of having to look for a good resource.   &lt;/p&gt;
+
+&lt;p&gt;Examples on usage can be found in the &lt;a href=&quot;http://tldp.org/LDP/abs/html/comparison-ops.html&quot;&gt;original article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;integer-comparison&quot;&gt;integer comparison&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# The following are for number values only.&lt;/span&gt;
+	-eq
+		is equal to
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; -eq &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+	-ne
+		is not equal to
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; -ne &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+	-gt
+		is greater than
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; -gt &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+	-ge
+		is greater than or equal to
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; -ge &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+	-lt
+		is less than
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; -lt &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+	-le
+		is less than or equal to
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; -le &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+	&amp;lt;
+		is less than &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;within double parentheses&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+
+	&amp;lt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+		is less than or equal to &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;within double parentheses&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; &amp;lt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+
+	&amp;gt;
+		is greater than &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;within double parentheses&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; &amp;gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+
+	&amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+		is greater than or equal to &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;within double parentheses&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; &amp;gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;string-comparison&quot;&gt;string comparison&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# The following are for strings of data.&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+		is equal to
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+	Caution:	
+		Note the whitespace framing &lt;span class=&quot;nv&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; is not equivalent to the above.
+
+	&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;
+		is equal to
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+	This is a synonym &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+	Note:	
+		&lt;span class=&quot;nv&quot;&gt;The&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; comparison operator behaves differently 
+		within a double-brackets &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;than within single brackets.
+		&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; z* &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# True if $a starts with an &amp;quot;z&amp;quot; (pattern matching).&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;z*&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# True if $a is equal to z* (literal matching).&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; z* &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;# File globbing and word splitting take place.&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;z*&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# True if $a is equal to z* (literal matching).&lt;/span&gt;
+		&lt;span class=&quot;c&quot;&gt;# Thanks, Stéphane Chazelas&lt;/span&gt;
+
+	!&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+		is not equal to
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; !&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+	This operator uses pattern matching within a &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; ... &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; construct.
+
+	&amp;lt;
+		is less than, in ASCII alphabetical order
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&amp;lt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+	Note: that the &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;&amp;quot;&lt;/span&gt; needs to be escaped within a &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; construct.
+
+	&amp;gt;
+		is greater than, in ASCII alphabetical order
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; &amp;gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$a&amp;quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+	Note that the &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt; needs to be escaped within a &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; construct.
+
+	-z
+		string is null, that is, has zero length
+
+	&lt;span class=&quot;nv&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# Zero-length (&amp;quot;null&amp;quot;) string variable.&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; -z &lt;span class=&quot;s2&quot;&gt;&amp;quot;$String&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+		  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;\$String is null.&amp;quot;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+		  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;\$String is NOT null.&amp;quot;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;# $String is null.&lt;/span&gt;
+
+	-n
+		string is not null.
+
+	Caution:
+		The -n &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;requires that the string be quoted within the &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;brackets. 
+		Using an unquoted string with ! -z, or even just the unquoted string a
+		lone within &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;brackets &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;see Example 7-6&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; normally works, however, 
+		this is an unsafe practice. Always quote a tested string. &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Special Thanks to the The Linux Documentation Project for outlining the information in such a usable format. They also include great examples on their website.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Articles: 
+&lt;a href=&quot;http://tldp.org/LDP/abs/html/comparison-ops.html&quot;&gt;Advanced Bash-Scripting Guide&lt;/a&gt;  &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/07/28/bash-if-then-cheat-sheet/&quot;&gt;Bash if then cheat sheet&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on July 28, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Converting Audio With Media Encoder]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/07/23/converting-audio-with-media-encoder/" />
+  <id>http://localhost:4000/blog/2014/07/23/converting-audio-with-media-encoder</id>
+  <updated>2014-08-09T00:00:00-00:00</updated>
+  <published>2014-07-23T04:32:35-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;I received a unique request today from a co-worker of mine. In short, he asked me if I was able to convert an audio clip from a Tascam audio recorder to a lower quality format suitable for our phone distribution system. The real challenege…was I going to be able to do this with the software currently installed?
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;Fortunately, I have access to the Adobe Create Suite (CS6) at work from which I will be using Media Encoder in this tutorial. The screenshots below are from a Mac but the steps should be pretty close on a Windows computer. The added benefit of this process is if you ever need to post-process audio that was recorded &lt;code&gt;clean&lt;/code&gt; and make it sound like it went through a phone this will produce a pretty decent &lt;code&gt;phone sound&lt;/code&gt;. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; Create a &lt;code&gt;.wma&lt;/code&gt; or &lt;code&gt;.wav&lt;/code&gt; format file with a low sample rate, low sample size, and mono channel audio. &lt;/p&gt;
+
+&lt;h1 id=&quot;process-to-convert-the-audio&quot;&gt;Process to convert the audio&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open Adobe Media Encoder.&lt;br /&gt;
+    &lt;figure&gt;
+     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/1_open.png&quot; /&gt;
+ &lt;/figure&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Create the Phone Preset by clicking on the &lt;code&gt;+&lt;/code&gt; button in the Preset Browser window.&lt;br /&gt;
+    &lt;figure&gt;
+     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/2_add_preset.png&quot; /&gt;
+ &lt;/figure&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add a preset name and change the format to Waveform Audio.&lt;br /&gt;
+    &lt;figure&gt;
+     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/3_format.png&quot; /&gt;
+ &lt;/figure&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Change the basic audio setting the values below. Click okay to save the preset.  &lt;br /&gt;
+    &lt;figure&gt;
+     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/4_settings.png&quot; /&gt;
+ &lt;/figure&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add your audio file to be converted by clicking the &lt;code&gt;+&lt;/code&gt; button in the Queue window.&lt;br /&gt;
+    &lt;figure&gt;
+     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/5_adding_file_2_encode.png&quot; /&gt;
+ &lt;/figure&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Drag your phone setting preset from the Preset Browser window on top of the audio file you want to convert. It should look like the picture below. (note the .wav file extension)&lt;br /&gt;
+    &lt;figure&gt;
+     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/6_ready_2_encode.png&quot; /&gt;
+ &lt;/figure&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Click the green encode button.&lt;br /&gt;
+    &lt;figure&gt;
+     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/7_encode.png&quot; /&gt;
+ &lt;/figure&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;beforeafter&quot;&gt;Before/After&lt;/h2&gt;
+&lt;div&gt;
+	&lt;a href=&quot;http://localhost:4000/images/posts/2014-07-23/audio-test.mp3&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://localhost:4000/images/speaker-30.jpg&quot; height=&quot;30&quot; /&gt; Before&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+	&lt;a href=&quot;http://localhost:4000/images/posts/2014-07-23/audio-test_1.wav&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://localhost:4000/images/speaker-30.jpg&quot; height=&quot;30&quot; /&gt;  After&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The result is a Linear PCM codec audio file with 16 bit/sample rate, 8 kilohertz (kHz) in a &lt;code&gt;.wav&lt;/code&gt; format.&lt;/p&gt;
+
+&lt;h1 id=&quot;update&quot;&gt;Update&lt;/h1&gt;
+&lt;p&gt;Although, this method does work and creates a windows audio file, it ended up not working for the original application that I needed. Needless to say there is no point removing this guide.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/07/23/converting-audio-with-media-encoder/&quot;&gt;Converting Audio With Media Encoder&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on July 23, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Show Help Desk Information]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/07/14/show-helpdesk-info/" />
+  <id>http://localhost:4000/blog/2014/07/14/show-helpdesk-info</id>
+  <updated>2014-08-09T00:00:00-00:00</updated>
+  <published>2014-07-14T17:47:53-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Display useful information on your Desktop using Geektool. Make troubleshooting network issues for your end users easier. Find your hostname faster. The amount of useful information is limitless. If you can script it…you can display it.  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2014-07-14/current_info.png&quot; width=&quot;400&quot; height=&quot;100&quot; title=&quot;My Results&quot; /&gt;&lt;br /&gt;
+My Geektools Results &lt;/p&gt;
+
+&lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
+  &lt;header&gt;
+    &lt;h3&gt;Overview&lt;/h3&gt;
+  &lt;/header&gt;
+&lt;div id=&quot;drawer&quot;&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-is-it&quot;&gt;What is it?&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-script&quot;&gt;The Script&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-do-you-use-it&quot;&gt;How do you use it?&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#modify-the-script&quot;&gt;Modify the script&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#creating-the-profiles&quot;&gt;Creating the profiles&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#part-1---login-profile&quot;&gt;Part 1 - Login profile&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#part-2---organization-profile&quot;&gt;Part 2 - Organization profile&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#deploying-your-profiles&quot;&gt;Deploying your Profiles&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ending-notes&quot;&gt;Ending Notes&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#dependencies&quot;&gt;Dependencies&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#credits&quot;&gt;Credits&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- /#table-of-contents --&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Firstly, I take no credit for this valuable resource. All credit should go to Erik Gomez from the munki-dev &lt;a href=&quot;https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY&quot;&gt;mailing list&lt;/a&gt;. All I have done is modified the script to work in my environment. Modifications included removing some excess &lt;code&gt;if&lt;/code&gt;/ &lt;code&gt;then&lt;/code&gt; statements, remove the MAC address, adding current SSID, and a few other tweaks so the script played nicely as a profile. The writing is on the wall, mcx is slowing dying or at least it is becoming a less preferred method of managing preferences.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2014-07-14/eriks_info.png&quot; width=&quot;400&quot; height=&quot;100&quot; title=&quot;Eriks Results&quot; /&gt;&lt;br /&gt;
+Erik’s Original Desktop Results  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt; &lt;em&gt;-You will want to download and save these somewhere.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://projects.tynsoe.org/en/geektool/download.php&quot;&gt;Geektool&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/timsutton/mcxToProfile&quot;&gt;mcxToProfile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/timsutton/make-profile-pkg&quot;&gt;make-profile-pkg&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/clburlison/af2a1afe01fb9aff9288&quot;&gt;Gist files for this project&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://localhost:4000/images/posts/2014-07-14/Geektool-login-item.mobileconfig&quot;&gt;Geektool-login-item.mobileconfig&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;what-is-it&quot;&gt;What is it?&lt;/h1&gt;
+&lt;p&gt;In short, this is simply a bash script that Geektool is running in the background. It defaults to refreshing every 30 seconds, though you can modify this in the &lt;code&gt;org.tynsoe.geeklet.shell.plist&lt;/code&gt; file, which has negligible performance toll on Mac clients. You want the refresh rate low so when the network drops or you get a new IP address you can easily see changes.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-script&quot;&gt;The Script&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;  1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;  2&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;  3&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Created by Erik Gomez&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;  4&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Modified 30-10-2013&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;  5&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;##### White Backgrounds will kill you!&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;  6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Modified by Clayton Burlison for use at Birdville ISD&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;  7&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Date Modified June 25, 2014&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;  8&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;  9&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#### Script Variables&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 10&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Computer_Name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;scutil --get ComputerName&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 11&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;HostName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;scutil --get HostName&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 12&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;LocalHostName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;scutil --get LocalHostName&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 13&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;OS_Version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;sw_vers &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s2&quot;&gt;&amp;quot;ProductVersion:&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 14&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;OS_Sub_Build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;sw_vers &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s2&quot;&gt;&amp;quot;BuildVersion:&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 15&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Hardware_ID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;sysctl hw.model &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s2&quot;&gt;&amp;quot;hw.model:&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 16&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IP_en0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ifconfig en0 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s2&quot;&gt;&amp;quot;inet &amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -v 127.0.0.1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 17&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IP_en1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ifconfig en1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s2&quot;&gt;&amp;quot;inet &amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -v 127.0.0.1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 18&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IP_en2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ifconfig en2 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s2&quot;&gt;&amp;quot;inet &amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -v 127.0.0.1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 19&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IP_en3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ifconfig en3 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s2&quot;&gt;&amp;quot;inet &amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -v 127.0.0.1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 20&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IP_en4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ifconfig en4 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s2&quot;&gt;&amp;quot;inet &amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -v 127.0.0.1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 21&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IP_en5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ifconfig en5 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s2&quot;&gt;&amp;quot;inet &amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -v 127.0.0.1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 22&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;SSID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;/ SSID/ {print substr($0, index($0, $2))}&amp;#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 23&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 24&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#### Display Computer Names&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 25&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Computer Name: $Computer_Name&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 26&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#echo &amp;quot;Host Name: $HostName&amp;quot;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 27&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#echo &amp;quot;LocalHost Name: $LocalHostName&amp;quot;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 28&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 29&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#### Display User Name&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 30&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Username: $USER&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 31&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 32&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#### Display Operating System and Sub Build&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 33&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Operating System: $OS_Version&amp;quot;&lt;/span&gt;_&lt;span class=&quot;s2&quot;&gt;&amp;quot;$OS_Sub_Build&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 34&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 35&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#### Display Hardware ID&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 36&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hardware ID: $Hardware_ID&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 37&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 38&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;### Spacing to make things pretty&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 39&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 40&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 41&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;### This will show the Current IP addresses.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 42&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;### This should show all IP Addresses:&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 43&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;### Wi-FI, Ethernet 1 &amp;amp;amp; 2, and even Thunderbolt NICs&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 44&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en0&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en1&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en2&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en3&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en4&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en5&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 45&lt;/span&gt; 	&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 46&lt;/span&gt; 		&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;IP Address: No connection found&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 47&lt;/span&gt; 	&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 48&lt;/span&gt; 		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en0&amp;quot;&lt;/span&gt; !&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 49&lt;/span&gt; 			&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 50&lt;/span&gt; 				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;IP Address: $IP_en0&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 51&lt;/span&gt;  			&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 52&lt;/span&gt;  				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;/dev/null
+&lt;span class=&quot;lineno&quot;&gt; 53&lt;/span&gt;  		&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 54&lt;/span&gt;  		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en1&amp;quot;&lt;/span&gt; !&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 55&lt;/span&gt; 			&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 56&lt;/span&gt; 				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;IP Address: $IP_en1&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 57&lt;/span&gt;  			&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 58&lt;/span&gt;  				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;/dev/null
+&lt;span class=&quot;lineno&quot;&gt; 59&lt;/span&gt;  		&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 60&lt;/span&gt;  		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en2&amp;quot;&lt;/span&gt; !&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 61&lt;/span&gt; 			&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 62&lt;/span&gt; 				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;IP Address: $IP_en2&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 63&lt;/span&gt;  			&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 64&lt;/span&gt;  				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;/dev/null
+&lt;span class=&quot;lineno&quot;&gt; 65&lt;/span&gt;  		&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 66&lt;/span&gt;  		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en3&amp;quot;&lt;/span&gt; !&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 67&lt;/span&gt; 			&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 68&lt;/span&gt; 				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;IP Address: $IP_en3&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 69&lt;/span&gt;  			&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 70&lt;/span&gt;  				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;/dev/null
+&lt;span class=&quot;lineno&quot;&gt; 71&lt;/span&gt;  		&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 72&lt;/span&gt;  		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en4&amp;quot;&lt;/span&gt; !&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 73&lt;/span&gt; 			&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 74&lt;/span&gt; 				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;IP Address: $IP_en4&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 75&lt;/span&gt;  			&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 76&lt;/span&gt;  				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;/dev/null
+&lt;span class=&quot;lineno&quot;&gt; 77&lt;/span&gt;  		&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 78&lt;/span&gt;  		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$IP_en5&amp;quot;&lt;/span&gt; !&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 79&lt;/span&gt; 			&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 80&lt;/span&gt; 				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;IP Address: $IP_en5&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 81&lt;/span&gt;  			&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 82&lt;/span&gt;  				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;/dev/null
+&lt;span class=&quot;lineno&quot;&gt; 83&lt;/span&gt;  		&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 84&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;		
+&lt;span class=&quot;lineno&quot;&gt; 85&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 86&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 87&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;### Display current wireless SSID&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 88&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$SSID&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 89&lt;/span&gt; 	&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 90&lt;/span&gt; 		&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Wireless SSID: Disconnected&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 91&lt;/span&gt; 	&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 92&lt;/span&gt; 		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$SSID&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;           SSID: &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 93&lt;/span&gt; 			&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 94&lt;/span&gt; 				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Wireless SSID: Disconnected&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 95&lt;/span&gt; 			&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 96&lt;/span&gt; 				&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Wireless SSID: $SSID&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 97&lt;/span&gt; 		&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;	
+&lt;span class=&quot;lineno&quot;&gt; 98&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 99&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;### Spacing to make things pretty&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;101&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;102&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;103&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#### Technology Support&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;104&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;For Help Desk Support call: x3819&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;how-do-you-use-it&quot;&gt;How do you use it?&lt;/h1&gt;
+&lt;p&gt;Great now what? Well that script does nothing for you. Unless you want to manually copy and paste on every computer…for every user profile…in your entire fleet. So lets automate that process a bit. If you have not done so already you will want to download all five (5) of the requirements above. This includes two command lines tools created by Tim Sutton, Geektool.app, the gist with all the necessary plist files, and a profile to launch Geektool at login.&lt;/p&gt;
+
+&lt;h2 id=&quot;modify-the-script&quot;&gt;Modify the script&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; If you wish to use the script as is, feel free to skip below to creating the profiles.  &lt;/p&gt;
+
+&lt;p&gt;This will be the most time consuming process so start small. Lets start by changing the Help Desk Phone Number in my script. Open the main plist &lt;code&gt;org.tynsoe.geeklet.shell.plist&lt;/code&gt; from the gist zip file. Scroll down to line 116 and change the following line to something useful.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#### Technology Support&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;For Help Desk Support call: x3819&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now is a good time to mention that the script inside of the plist has been modified from the original &lt;code&gt;geektool_script.sh&lt;/code&gt; script. The plist file needs to have &lt;code&gt;&amp;amp;&lt;/code&gt; encoded as &lt;code&gt;&amp;amp;amp;&lt;/code&gt;. For that reason if you make to many changes to the script you will need to test for compatibility with GeekTool. Testing will be outside the scope of this post but a hint if you are running into errors: open Geektool manually and paste your script directly into the application.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-the-profiles&quot;&gt;Creating the profiles&lt;/h2&gt;
+&lt;p&gt;Note for this to work, I have found that having two profiles was the easiest solution but your milage may vary. The main reason for splitting the profiles into two, was to use one profile for launching Geektool at login and the second profile deals with organization settings for Geektool: refresh rate, script, color of the text, etc.&lt;/p&gt;
+
+&lt;h3 id=&quot;part-1---login-profile&quot;&gt;Part 1 - Login profile&lt;/h3&gt;
+&lt;p&gt;With that out of the way, I will go ahead and say I cheated and created the &lt;code&gt;Geektool-login-item.mobileconfig&lt;/code&gt; with my profile server since it was easier than creating from scratch. You should have downloaded the referenced profile under the requirement section. You can modify this profile to have your organization name by opening the file in a &lt;a href=&quot;http://www.barebones.com/products/textwrangler/&quot;&gt;text editing&lt;/a&gt; application (aka not TextEdit.app). Search for “Birdville ISD” and change to your organization name. Save and exit.&lt;/p&gt;
+
+&lt;h3 id=&quot;part-2---organization-profile&quot;&gt;Part 2 - Organization profile&lt;/h3&gt;
+&lt;p&gt;Now we are going to use Tim Sutton’s mcxToProfile. This tool will combine the three plist files below: &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;org.tynsoe.geeklet.shell.plist&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;org.tynsoe.GeekTool.plist&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;org.tynsoe.geektool3.plist&lt;/code&gt; into a single usable profile. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Put mcxToProfile.py in the same directory as your three plist files. After changing directory to the folder with your files run the following in Terminal:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Creating your profile&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mcxToProfile.py -r org.tynsoe.geeklet.shell.plist org.tynsoe.GeekTool.plist &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+org.tynsoe.geektool3.plist --identifier BISD-GeekTool --manage Often&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; you will want to change your identifier to something useful for your organization. &lt;/p&gt;
+
+&lt;p&gt;This will create a second profile with the name of your “identifier + .mobileconfig”&lt;/p&gt;
+
+&lt;h2 id=&quot;deploying-your-profiles&quot;&gt;Deploying your Profiles&lt;/h2&gt;
+&lt;p&gt;This is kind of the bonus round. If you have made it this far you should have two working profiles (one was already made for you). If you have a MDM server you could simply upload the profiles to that, you could have users double click the files, etc. I however choose to install the profiles via a package for my users.&lt;/p&gt;
+
+&lt;p&gt;Luckily, Tim has made our life easy once again. This time we will use &lt;code&gt;make-profile-pkg&lt;/code&gt; to create a package containing our profiles.  If you are using munki it is even easier, as this tool can even automatically import into your munki repository. &lt;/p&gt;
+
+&lt;p&gt;Making sure your .mobileconfig files and &lt;code&gt;make-profile-pkg.py&lt;/code&gt; are in the same directory. Run the following to create your install package.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;make_profile_pkg.py --munki-import Geektool-login-item.mobileconfig&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In the following, you will need to modify the profile name with your correct file.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;make_profile_pkg.py --munki-import identifier.mobileconfig&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; you will want to remove the &lt;code&gt;--munki-import&lt;/code&gt; flag if you just want to create a package.&lt;/p&gt;
+
+&lt;h1 id=&quot;ending-notes&quot;&gt;Ending Notes&lt;/h1&gt;
+&lt;p&gt;Hopefully you find this as useful as I did. If you run into any issues feel free to contact me on Twitter or email.&lt;/p&gt;
+
+&lt;h2 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Geektool.app needs to be located in /Applications/.&lt;/li&gt;
+  &lt;li&gt;A logout/login is required after the profiles are installed for the information to be displayed.&lt;/li&gt;
+  &lt;li&gt;If one or both of your profiles are removed…bye bye Desktop Info.&lt;/li&gt;
+  &lt;li&gt;This script is only good for network interfaces up to 5. If you need more add them in the script.&lt;/li&gt;
+  &lt;li&gt;Tested with 10.7 Lion through 10.9 Mavericks with success. &lt;/li&gt;
+  &lt;li&gt;The text is white by default. If your desktop background is a bright color then you will want to change the text color using Geektool.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;credits&quot;&gt;Credits&lt;/h2&gt;
+&lt;p&gt;Again, a giant thank you to Erik Gomez for sharing with the munki community. Without his original documentation I would have never gotten this to work. Thanks to Tim Sutton for providing awesome tools.  &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Articles: &lt;a href=&quot;https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY&quot;&gt;Using GeekTool to show HelpDesk Information&lt;/a&gt;  &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/07/14/show-helpdesk-info/&quot;&gt;Show Help Desk Information&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on July 14, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Bender]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/07/11/bender/" />
+  <id>http://localhost:4000/blog/2014/07/11/bender</id>
+  <updated>2014-07-20T00:00:00-00:00</updated>
+  <published>2014-07-11T16:42:20-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Many administrators use OS X Server. In my opinion the server OS has always lacked choices when it comes to backing up the server services data. Until I found Bender…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2014-07-11/bendericon_display.png&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Bender is a utility written by Forget Computers to automate the backup of OS X Server settings to provide easy restoration of services should they become corrupt, and for importing server settings after a migration or server upgrade.&lt;/p&gt;
+
+  &lt;p&gt;Bender Home Page&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sure you have TimeMachine but some of the postgresql databases have been known to not backup property with TimeMachine. Honestly, I had given up on a backup solution that just gets the data I need for OS X Server. While reading though the &lt;a href=&quot;https://groups.google.com/d/msg/macenterprise/MxLssCqR72Y/J1qFuALErMwJ&quot;&gt;macenterprise list&lt;/a&gt; I found someone recommended Bender. Once I got to work I realized what a gem I had been missing out on. In my testing I have only used Bender on Mavericks (10.9) but it should work on Lion and up. It will daily backup the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open Directory&lt;/li&gt;
+  &lt;li&gt;Single XML plist of all the server settings (aka DHCP, DNS, NetBoot, FileShares, etc.)&lt;/li&gt;
+  &lt;li&gt;A series of individual XML plists of each server setting (aka all the above as individual files)&lt;/li&gt;
+  &lt;li&gt;Profile Manager and Wiki services&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The last one was the true winner for me. I had been researching what I needed to do to backup my wiki, as over the past few months it has become an invaluable documentation tool for me. After finding little to none in the way of Apple documentation/release notes I finally gave up. Although, Bender in combination with TimeMachine makes for a much more complete backup solution for OS X Server.&lt;/p&gt;
+
+&lt;p&gt;Hopefully you find it as invaluable as I did or at least a nice utility to have in your tool-belt. &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Articles: &lt;a href=&quot;http://robotcloud.screenstepslive.com/s/2459/m/5322/l/94467-bender-automated-backup-of-os-x-server-settings&quot;&gt;Bender Home Page&lt;/a&gt;, &lt;a href=&quot;https://groups.google.com/d/msg/macenterprise/MxLssCqR72Y/J1qFuALErMwJ&quot;&gt;macenterprise list&lt;/a&gt;  &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/07/11/bender/&quot;&gt;Bender&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on July 11, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Encrypted DMGs]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/06/17/encrypted-dmgs/" />
+  <id>http://localhost:4000/blog/2014/06/17/encrypted-dmgs</id>
+  <published>2014-06-17T19:49:02-05:00</published>
+  <updated>2014-06-17T19:49:02-05:00</updated>
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-to-secure&quot;&gt;What to secure&lt;/h2&gt;
+&lt;p&gt;First, you can secure whatever files your heart desires: bank statements, work files, secret plans for that special vacation with the family, photos, passwords, etc. Pretty much anything you want, though fair-warning this is not a backup solution and if you forget your encryption password it will make accessing those files quite difficult. &lt;/p&gt;
+
+&lt;p&gt;The reason to secure files is because you do not want others to have access to your data. This will help protect you in case your laptop gets stolen or maybe it just get physically accessed by someone you know. This method will use a 256-bit AES encryption algorithm to secure your data. That being said if you use a simple password, &lt;em&gt;cough&lt;/em&gt; &lt;code&gt;password&lt;/code&gt; &lt;em&gt;cough&lt;/em&gt;, then it is quite simple for someone to brute force hack that password and have access to your data. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: Nothing is 100% secure. This method is just another step that can help make it harder for someone to obtain your information. With enough time the right person could access these files but your average Joe is going to have a darn hard time.&lt;/p&gt;
+
+&lt;h1 id=&quot;creating-an-encrypted-dmg&quot;&gt;Creating an encrypted DMG&lt;/h1&gt;
+&lt;p&gt;Step 1 - Open Disk Utility&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-06-17/step1.png&quot; width=&quot;400&quot; height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Step 2 - Create a Blank Disk Image…&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-06-17/step2.png&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Step 3 - Name your new dmg. Note the values shown are important.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Name: the mounted disk image name&lt;/li&gt;
+  &lt;li&gt;Size: depends on your data needs&lt;/li&gt;
+  &lt;li&gt;Format: the default &lt;code&gt;Mac OS Extended (Journaled)&lt;/code&gt; should be fine for most needs&lt;/li&gt;
+  &lt;li&gt;Encryption: use 256-bit AES unless you have a solid reason to not&lt;/li&gt;
+  &lt;li&gt;Partitions: using &lt;code&gt;Single partition - GUID Partition Map&lt;/code&gt; is a standard that is compatible with most Macs&lt;/li&gt;
+  &lt;li&gt;Image Format: using &lt;code&gt;sparse disk image&lt;/code&gt; will save space on your hard drive and only use the disk space needed by the dmg&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2014-06-17/step3.png&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Step 4 - Here you want to type a secure password&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-06-17/step4.png&quot; width=&quot;400&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Step 5 - If you click the key icon OS X will help you create a secure password using the Password Assistant&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-06-17/step5.png&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Step 6 - Note the file names. This is your encrypted dmg. You can store files here just like a flash drive.&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-06-17/step6.png&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Step 7 - If you eject your dmg you will be presented with this pop-up the next time you try to open the dmg. Type your encryption password to unlock the dmg.&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-06-17/step7.png&quot; width=&quot;400&quot; height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;video-showing-the-process&quot;&gt;Video showing the process&lt;/h2&gt;
+&lt;div class=&quot;embed-video-container&quot;&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/zAc9H7AQ2TQ&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;Creating an encrypted dmg is quite easy once you know the steps. My preference is to not store the password in your Keychain. If you are logged into your machine another users could walk right up and open the dmg without typing a password.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/06/17/encrypted-dmgs/&quot;&gt;Encrypted DMGs&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on June 17, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Find My Mac]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/05/19/find-my-mac/" />
+  <id>http://localhost:4000/blog/2014/05/19/find-my-mac</id>
+  <published>2014-05-19T11:38:52-05:00</published>
+  <updated>2014-05-19T11:38:52-05:00</updated>
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Under the hood of Find My Mac there are some security details that are not widely published. I take no credit to figuring these out since they were just recently brought to my attention. These are not details that a consumer would need to concern themselves with but I found them quite interesting. I decided to share what information I found.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;When a user enables Find My Mac (FMM) on their computer this is a system level change. This means if a user wishes to enable FMM they must be an administrator of the computer. A result of this is that in most environments where students are standard users this feature should never be enabled by accident. Another action that can be taken to limit FMM on machines under your management is to disable the iCloud prompt when a user logs into the machine for the first time. Look at Rich Trouton’s &lt;a href=&quot;https://github.com/rtrouton/rtrouton_scripts/blob/master/rtrouton_scripts/disable_icloud_pop_up/disable_icloud_pop_up.sh&quot;&gt;script&lt;/a&gt; if you need a solution to do just that. &lt;/p&gt;
+
+&lt;p&gt;Some side affects of enabling FMM means giving access from &lt;a href=&quot;https://www.icloud.com/#find&quot;&gt;iCloud.com&lt;/a&gt; to do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;play a sound on the computer&lt;/li&gt;
+  &lt;li&gt;lock the computer 
+    &lt;ul&gt;
+      &lt;li&gt;requiring a four (4) digit passcode&lt;/li&gt;
+      &lt;li&gt;optionally include a recovery message on the lock screen&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;erase the computer&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The web interface&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-19/icloud-interface.png&quot; width=&quot;600&quot; height=&quot;420&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Close up of the options&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-19/icloud-options.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From my testing, if a computer is offline while one of these options are clicked from iCloud it takes approximately one minute for the signal to be processed on the computer in question (those this could be connectivity related). Playing a sound is by far the fastest option while taking less than one second most of the time when the computer is online. If you choice to lock the computer this will cause your computer will immediately lock up and restart. You will presented with the a screen like the following.&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-19/icloud-lock.png&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Though I did not test, my guess is that an erase will prompt the computer to go into a state like the lock screen while deleting your data. If anyone feels like testing this feel free to contact me with results on twitter.&lt;/p&gt;
+
+&lt;h2 id=&quot;nvram&quot;&gt;NVRAM&lt;/h2&gt;
+&lt;p&gt;None of the information above is particularly shocking if you yourself have ever used Find my iPhone or any of the similar Find my device services from Apple. What is interesting is where this data is stored on your computer…the nvram. This means even if someone removes the hard drive of your computer the information to connect to iCloud is still present. This is great news if your laptop was actually stolen (and connected to the internet) but what does this mean when reassigning a computer that has had FMM enabled? Well the previous user could erase all the information on this laptop at any time in the future. So now I have to check with every user to see if they have had FMM enabled when reassigning a computer? Well, instead of dealing with that huge hassle when it comes around to re-imaging or reassigning a computer you can simply run the following command to clear the nvram of content related to Find my Mac. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disable iCloud from the Command Line&lt;/strong&gt;   &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;nvram -d fmm-computer-name  
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;nvram -d fmm-mobileme-token-FMM&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;consumers&quot;&gt;Consumers&lt;/h2&gt;
+&lt;p&gt;This means if you ever purchase a second hand Mac from someone you will want to run the same command just for safty. Also, if you are attempting to sell your device be a good consumer and run the command for the next owner. &lt;/p&gt;
+
+&lt;p&gt;If you are not familiar with the command line use the following:&lt;/p&gt;
+
+&lt;h4 id=&quot;resetting-nvram--pram&quot;&gt;Resetting NVRAM / PRAM&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Shut down your Mac.&lt;/li&gt;
+  &lt;li&gt;Locate the following keys on the keyboard: Command (⌘), Option, P, and R. You will need to hold these keys down simultaneously in step 4.&lt;/li&gt;
+  &lt;li&gt;Turn on the computer.&lt;/li&gt;
+  &lt;li&gt;Press and hold the Command-Option-P-R keys before the gray screen appears.&lt;/li&gt;
+  &lt;li&gt;Hold the keys down until the computer restarts and you hear the startup sound for the second time.&lt;/li&gt;
+  &lt;li&gt;Release the keys. &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Apple ID’s are considered personal. Even if you use a work email address these are accounts are not designed to be use by more than ten (10) devices. This is a hard limit set by Apple. Do &lt;em&gt;not&lt;/em&gt; attempt to setup all corporate laptops on one Apple ID it will not work. In fact do not use FMM, it was not designed for this…look into &lt;a href=&quot;https://meraki.com/login/dashboard_login&quot;&gt;Meraki&lt;/a&gt; if you need a free solution.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Articles: &lt;a href=&quot;http://ilostmynotes.blogspot.com/2013/11/disable-find-my-mac-by-modifiying-nvram.html&quot;&gt;Disable find my Mac&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;External resources regarding iCloud: &lt;a href=&quot;http://www.apple.com/support/icloud/find-my-device/&quot;&gt;Apple Find my Device Support&lt;/a&gt;, 
+&lt;a href=&quot;http://www.cnet.com/how-to/how-to-use-find-my-mac-in-icloud/&quot;&gt;Cnet&lt;/a&gt;, &lt;a href=&quot;http://www.macworld.com/article/2034795/how-to-track-a-lost-computer-with-find-my-mac.html&quot;&gt;Macworld&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/05/19/find-my-mac/&quot;&gt;Find My Mac&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on May 19, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Creating a development munki_repo]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/05/17/creating-a-development-munki-repo/" />
+  <id>http://localhost:4000/blog/2014/05/17/creating-a-development-munki-repo</id>
+  <updated>2014-05-18T00:00:00-00:00</updated>
+  <published>2014-05-17T07:51:22-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;I created a vagrant box that allows you create a completely self contained munki_repo for testing purposes. With the usage of &lt;a href=&quot;https://puphpet.com&quot;&gt;PuPHPet&lt;/a&gt; the process was quite easy.&lt;/p&gt;
+
+&lt;p&gt;This article describes basic usage and setup for the project &lt;strong&gt;munki.dev&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
+  &lt;header&gt;
+    &lt;h3&gt;Overview&lt;/h3&gt;
+  &lt;/header&gt;
+&lt;div id=&quot;drawer&quot;&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#purpose&quot;&gt;Purpose&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#required-software&quot;&gt;Required software&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#software-prerequisites-for-munkidev&quot;&gt;Software prerequisites for munki.dev&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#vagrant&quot;&gt;Vagrant&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#virtualbox&quot;&gt;Virtualbox&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#git&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#munkitools&quot;&gt;Munkitools&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#installation&quot;&gt;Installation&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#adding-the-hostname&quot;&gt;Adding the hostname&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#munkirepo-modifications&quot;&gt;munki_repo Modifications&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#client-settings&quot;&gt;Client Settings&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ending-notes&quot;&gt;Ending notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- /#table-of-contents --&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;purpose&quot;&gt;Purpose&lt;/h1&gt;
+
+&lt;p&gt;Setting up and maintaining a web server can be a pretty complex job. Apache is great at actually serving files but the initial setup can be tedious. Thanks to the many resources that are available on the internet this can become less tedious. Which brings me to the true purpose of the post…a way to setup a web server so I can test software patches using Munki.&lt;/p&gt;
+
+&lt;p&gt;In case you are unaware, Munki is a popular way to manage software installs on Mac OSX created by Greg Neagle. Learning Munki can be a time consuming process due to the many layers of the management system. One of the more important layers is the munki_repo, which is what this project is dedicated at helping with. This will allow you to setup a development environment which is self-contained on your administrative machine. Once the initial setup has been made you will be able to test changes locally without the need for a second machine.&lt;br /&gt;
+&lt;em&gt;Disclaimer&lt;/em&gt;: this vagrant box is not designed for usage in production.&lt;/p&gt;
+
+&lt;h1 id=&quot;required-software&quot;&gt;Required software&lt;/h1&gt;
+
+&lt;p&gt;To use this project you will need to make sure you have the following software installed on your machine. All of these products can be obtained for free from the links provided. Below the prerequisites, each of the individual pieces of software have a short description explaining what they do. If you have some or any experience with the software needed for this you will likely want to skip past to the &lt;a href=&quot;./#installation&quot;&gt;Installation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;software-prerequisites-for-munkidev&quot;&gt;Software prerequisites for munki.dev&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Vagrant  http://www.vagrantup.com&lt;/li&gt;
+  &lt;li&gt;VirtualBox  https://www.virtualbox.org&lt;/li&gt;
+  &lt;li&gt;Git  http://sourceforge.net/projects/git-osx-installer/&lt;/li&gt;
+  &lt;li&gt;Munkitools  &lt;a href=&quot;https://munkibuilds.org/munkitools-latest.dmg&quot;&gt;munkitools v.1- latest.dmg&lt;/a&gt; or &lt;a href=&quot;https://munkibuilds.org/munkitools2-latest.pkg&quot;&gt;munkitools v.2 - latest.pkg&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;vagrant&quot;&gt;Vagrant&lt;/h3&gt;
+&lt;p&gt;This is the backbone of this project. Vagrant’s job is to interface directly with Virtualbox to create the virtual machine, download a ubuntu box, configure the box with puppet (plus other magic), and finally make any final changes needed for the munki.dev environment to work as intended. If this is the first project that are using Vagrant let me go ahead and say do not freak out. You do not actually have to know how to use Vagrant to take advantage of this project.&lt;/p&gt;
+
+&lt;h3 id=&quot;virtualbox&quot;&gt;Virtualbox&lt;/h3&gt;
+&lt;p&gt;A virtualization product created by Oracle that is free to use. At the time of this writing, I am using version 4.3.8, though munki.dev and Vagrant should not have issues with other versions so long as no incompatibilities arise from future releases of the software. &lt;/p&gt;
+
+&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
+&lt;p&gt;Git is a way to store files and the changes that go along with those files in a logical manner. For this project, Git is the tool that will be used to download munki.dev and potentially a test munki_repo from from GitHub.
+If you would like to learn more, I recommend reading this &lt;a href=&quot;http://git-scm.com/book/en/Getting-Started-Git-Basics&quot;&gt;Git Basics&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;h3 id=&quot;munkitools&quot;&gt;Munkitools&lt;/h3&gt;
+&lt;p&gt;This is the client software needed for Munki to work on Macintosh Clients created by Greg Neagle. This technically is not a requirement for the administrative machine but will make your life easier when making changes to the munki_repo. For that reason alone it is strongly recommended. Any clients that you wish to connect to this local webshare will require munkitools to be installed.&lt;/p&gt;
+
+&lt;h1 id=&quot;installation&quot;&gt;Installation&lt;/h1&gt;
+&lt;p&gt;Installing is quite straight forward once you have the required software. Simply issue the following commands in Terminal. You will want to &lt;code&gt;cd&lt;/code&gt; to a directory of your choosing. I will pick &lt;code&gt;~/src/mine&lt;/code&gt;. This will download the project from github.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir -p ~/src/mine/
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/src/mine/
+git clone https://github.com/clburlison/munki.dev.git munki.dev
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;munki.dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will pull down all the necessary files from Github.&lt;/p&gt;
+
+&lt;h2 id=&quot;adding-the-hostname&quot;&gt;Adding the hostname&lt;/h2&gt;
+&lt;p&gt;One change you will want to make is adding munki.dev to your &lt;code&gt;/etc/hosts&lt;/code&gt; file. This allows you to connect to the web share as munki.dev instead of the IP address (default 192.168.56.150). &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo nano /etc/hosts&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Add the following line to the bottom of your file.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;192.168.56.150  munki.dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Save with Control + X.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: at this current time there a known bug that prevents usage of the hostname from working when using an alias folder, aka Option 2 of the &lt;code&gt;bootstrap.sh&lt;/code&gt;. Until this is fixed, please use the IP address for testing purposes instead of the hostname. Follow the issue &lt;a href=&quot;https://github.com/clburlison/munki.dev/issues/1&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;munkirepo-modifications&quot;&gt;munki_repo Modifications&lt;/h2&gt;
+&lt;p&gt;Make these changes in the &lt;code&gt;bootstrap.sh&lt;/code&gt; file. &lt;/p&gt;
+
+&lt;p&gt;Currently with Option 1, a developmental munki_repo will be pulled down via git from &lt;a href=&quot;https://github.com/clburlison/munki_repo.dev&quot;&gt;munki_repo.dev&lt;/a&gt;. With Option 2, you can point this virtual machine to a munki_repo that exists on your local admin machine. This means theoretically you could have a complete copy of your production munki_repo on your localhost or an external hard drive. This would allow you to point to that folder and start testing/development immediately.&lt;/p&gt;
+
+&lt;p&gt;This will default to downloading a the testing munki_repo since this will allow new users to get started with the least amount of work. To get the virtual machine started run the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;./bootstrap&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: the default Option 1 will take some time to download. This is due to the software packages in the repo. It might even look like the command has become stalled. Go grab a coffee.&lt;/p&gt;
+
+&lt;h1 id=&quot;client-settings&quot;&gt;Client Settings&lt;/h1&gt;
+&lt;p&gt;At this point, the munki_repo should be up and running. You will want to setup a client computer to connect to the munki_repo. To do this you will need to run the following command on a client computer.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL &lt;span class=&quot;s2&quot;&gt;&amp;quot;http://192.168.56.150/munki_repo&amp;quot;&lt;/span&gt;
+sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier testing&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now you should ready to test away. Open up &lt;code&gt;/Applications/Managed Software Center.app&lt;/code&gt; if you are testing Munkitools v2 or &lt;code&gt;/Applications/Utilities/Managed Software Update.app&lt;/code&gt; if you are testing Munkitools v1.&lt;/p&gt;
+
+&lt;h1 id=&quot;ending-notes&quot;&gt;Ending notes&lt;/h1&gt;
+&lt;p&gt;If you have any problems please create an &lt;a href=&quot;https://github.com/clburlison/munki.dev/issues&quot;&gt;Issue&lt;/a&gt; on Github. Let me know what you think on Twitter, Email, etc.&lt;/p&gt;
+
+&lt;p&gt;Also, go check out &lt;a href=&quot;https://github.com/hjuutilainen/munkiadmin&quot;&gt;MunkiAdmin&lt;/a&gt; for a GUI to modify your munki_repo. Another great resource is &lt;a href=&quot;https://github.com/wollardj/Mandrill&quot;&gt;Mandrill&lt;/a&gt;, a web front end for managing you munki_repo. Lastly, check out the &lt;a href=&quot;https://code.google.com/p/munki/wiki/GettingStartedWithMunki&quot;&gt;Getting Started with Munki&lt;/a&gt; guide if you have any questions about munki.  &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/05/17/creating-a-development-munki-repo/&quot;&gt;Creating a development munki_repo&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on May 17, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Github Two-factor Authentication with SourceTree]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/05/14/github-two-factor-authentication/" />
+  <id>http://localhost:4000/blog/2014/05/14/github-two-factor-authentication</id>
+  <updated>2014-05-15T00:00:00-00:00</updated>
+  <published>2014-05-14T23:48:17-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;I finally got around to setting up two-factor authentication on my Github account. The process went quite smoothly, until I started to play around with  &lt;a href=&quot;http://www.sourcetreeapp.com/&quot;&gt;SourceTree&lt;/a&gt; and I found out that I was unable to push commits to a git repo.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;sourcetree-error&quot;&gt;SourceTree error&lt;/h3&gt;
+&lt;p&gt;The error message that I was receiving seemed pretty generic at the time. Besides I knew I was typing my Github password correctly, so that could not be the issue. In hindsight not realizing the two-factor authentication (2fa) was the problem immediately was pretty stupid. The solution to this error is to login with a One Time Password (OTP)  token &lt;em&gt;not&lt;/em&gt; your normal Github password. If you do use the wrong password you will receive the follow error message.&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-14/login_error.png&quot; title=&quot;SourceTree error&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you use the official &lt;a href=&quot;https://mac.github.com/&quot;&gt;GitHub app&lt;/a&gt; you will not run into a login error because the app uses the GitHub API for authentication.  &lt;/p&gt;
+
+&lt;p&gt;Luckily Github has made creating a OTP quite easy once you know what you are looking for. It is recommended practice to use one token per application. This means if I ever need to reject a token it will only effect the one version of SourceTree on one device.&lt;/p&gt;
+
+&lt;p&gt;Below are the steps needed to create your OTP token and re-add your Github account in SourceTree.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-up-the-otp&quot;&gt;Setting up the OTP&lt;/h3&gt;
+&lt;p&gt;To create the OTP, use the following &lt;a href=&quot;https://github.com/settings/applications&quot;&gt;link&lt;/a&gt;. Click on “Generate New Token”.&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-14/otp.png&quot; title=&quot;Creating an OTP&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Give your OTP a Token description. Make sure at least the “repo” and “public_repo” options are checked. Click “Generate token”.&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-14/new_token.png&quot; title=&quot;Token permissions&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;configuration-for-sourcetree&quot;&gt;Configuration for SourceTree&lt;/h3&gt;
+&lt;p&gt;If you already have SourceTree setup, you will need to edit your account password for GitHub. You can accomplish this by opening the Bookmarks window and clicking on the “Hosted Repositories” button.&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-14/bookmarks.png&quot; title=&quot;Bookmarks Window&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you need to click on “Edit Accounts…” so you can select your Github account and make modifications.&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-14/hosted_repositories.png&quot; title=&quot;Hosted Repositories&quot; /&gt;  &lt;/p&gt;
+
+&lt;p&gt;Click on “Set Password”.&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-14/github_options.png&quot; title=&quot;Github Acct Options&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the Authenticate window make sure and use your newly generated OTP token as your password. I recommend saving the password in your keychain.&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-14/authenticate.png&quot; title=&quot;Authenticate Window&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Articles: &lt;a href=&quot;https://confluence.atlassian.com/display/SOURCETREEKB/Two-Factor+Authentication+%282FA%29+with+GitHub+in+SourceTree&quot;&gt;atlassian KB&lt;/a&gt;, 
+&lt;a href=&quot;http://ryansechrest.com/2013/12/sourcetree-github-must-specify-two-factor-authentication-otp-code/&quot;&gt;Ryan Sechrest&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;Updated: May 15th, 2014 - Add KB link from atlassian. Thanks &lt;a href=&quot;https://twitter.com/kieransenior/statuses/466879257864847360&quot;&gt;@kieransenior&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/05/14/github-two-factor-authentication/&quot;&gt;Github Two-factor Authentication with SourceTree&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on May 14, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Why I love my job?]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/05/06/why-i-love-my-job/" />
+  <id>http://localhost:4000/blog/2014/05/06/why-i-love-my-job</id>
+  <updated>2014-05-16T00:00:00-00:00</updated>
+  <published>2014-05-06T00:05:31-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;&lt;strong&gt;I get to be everyone’s white knight&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-06/white_knight.jpg&quot; width=&quot;290&quot; height=&quot;512&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Technology Superhero&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-06/superhero.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Or my personal favorite wizard&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/posts/2014-05-06/wizard.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All funny pictures aside, being in the information technology field is a perfect fit for me. When people ask for help I get to take personal satisfaction in helping them. Very few times do I have to send the task to another tech. Sometimes this turns into a mini-adventure to learn how to fix the problem. Plus, my end users have a name and face to the person helping. The past four years of my job have been an amazing experience.&lt;/p&gt;
+
+&lt;p&gt;As an added bonus no day is the same as the previous. One day I will be building a new SQL database, setting up a new lab, or resetting a password while the next I might be helping with student certifications. The job scope of “tech support” is so broad and I love it. &lt;/p&gt;
+
+&lt;p&gt;For anyone wondering if this industry is for you, all I have to say is learn to &lt;em&gt;listen&lt;/em&gt;. We need to always remember to be customer orientated. It does not matter if you have a masters degree or make 300K a year, your job requires you to think of others. If you do not remember that you might have forgotten why you are where you are.&lt;/p&gt;
+
+&lt;p&gt;TLDR: Information Technology allows you to help others. Pretty cool feeling when you get to help people on a daily basis. &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/05/06/why-i-love-my-job/&quot;&gt;Why I love my job?&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on May 06, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Things learned from boxen]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/24/things-learned-from-boxen/" />
+  <id>http://localhost:4000/blog/2014/04/24/things-learned-from-boxen</id>
+  <published>2014-04-24T11:55:48-05:00</published>
+  <updated>2014-04-24T11:55:48-05:00</updated>
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;h2 id=&quot;what-is-boxen&quot;&gt;What is boxen?&lt;/h2&gt;
+&lt;p&gt;So odds are if you have landed on this page you have probably already heard of boxen. For those who have not heard yet, boxen is an open source project created by the good people at &lt;a href=&quot;http://github.com&quot;&gt;github.com&lt;/a&gt; as a way to quickly setup a Macintosh computer. Boxen can also be used as a way to keep certain settings managed between two or more devices. Think for a second, your laptop goes with you everywhere and along with that you have all of your custom shell scripts, shell alias, ssh keys, etc. With boxen you can systematically take all those settings that you love and move them to every computer you use.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;first-lesson-learned&quot;&gt;First lesson learned&lt;/h2&gt;
+&lt;p&gt;Starting out I found out how few of my settings I had documented. The problem that plagues every IT department, documentation. With a mult-user network, this is a pretty big deal since it can cause confusion in the future along with creating ample down time when you are trying to troubleshoot a system that you setup, customized, and did not document. We all know the pit falls of doing this in a mult-user environment but my laptop is a single-user environment and except for extremely rare cases, I am the only one that uses it. Why do I need to document settings for my laptop you might ask? &lt;/p&gt;
+
+&lt;p&gt;Well hopefully, this never happens but what do you do when your hard drive crashes, or you accidentally ran a remove command in the wrong directory tree? Gone are the days where you could shut the door and start rebuilding from scratch…sure you could restore from a backup but boxen tackles a task like this a little differently. Boxen is not a backup solution it is used to manage a system. With boxen, I have a complete history of all the changes I have made to my system. Might not seem like a big deal, but it makes life much easier when trying to find out how you set AirDrop to work over Ethernet connections. Hint: &lt;a href=&quot;/blog/2014/04/18/enable-airdrop-on-ethernet/&quot;&gt;Previous Article&lt;/a&gt;, or &lt;a href=&quot;https://raw.githubusercontent.com/clburlison/my-boxen/master/modules/people/manifests/clburlison/config.pp&quot;&gt;my config file&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hopefully you can see the power of this. I was late to the party but finally got around to using boxen and now cannot imagine making changes without documenting it this way. Sure having text files stored on a file-share is a solution, but this is a living git repo that allows me to document everything, plus I have a built-in file versioning with commits.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-you-can-get-started&quot;&gt;How you can get started?&lt;/h3&gt;
+&lt;p&gt;Now is a good time to note, I am not completely up to speed with puppet aka the backend of boxen. I was however able to hack around until I got the stuff to work. Start small with configuring the installation of say Firefox. Once you get that working keep looking around on &lt;a href=&quot;http://github.com/boxen&quot;&gt;github.com/boxen&lt;/a&gt; and see if there are other applications you can add easily. If not move on to what I like to call “borrowing code from those smarter than me”. You too can participate in this act by downloading other’s boxen repos. Looking inside their configurations files and copying and pasting code. &lt;/p&gt;
+
+&lt;p&gt;At first, you might not know what you’re doing and that is fine. It is a learning experience after all but over time you will begin to understand the structure of the code. Odds are, if you are trying to automate some part of your Mac someone else wants to do it as well or already has. Do not attempt to reinvent the wheel.&lt;/p&gt;
+
+&lt;p&gt;So which repo’s do I recommend you looking at the most? &lt;a href=&quot;https://github.com/glarizza/my-boxen&quot;&gt;Gary Larizza&lt;/a&gt;, &lt;a href=&quot;https://github.com/grahamgilbert/my-boxen&quot;&gt;Graham Gilbert&lt;/a&gt;, and &lt;a href=&quot;https://github.com/clburlison/my-boxen&quot;&gt;mine&lt;/a&gt; are full of useful code. You will still want to learn puppet but hopefully the comments in the repos listed above help guide you through starting out.&lt;/p&gt;
+
+&lt;h3 id=&quot;dropbox-usage&quot;&gt;Dropbox usage&lt;/h3&gt;
+&lt;p&gt;One of the issues I ran into while looking at boxen was storing personal information in a public github repo. You could make your boxen repo private but that was not the method I wanted to take. I could also just copy all my private information after the initial boxen setup but does that not defeat the main purpose of boxen? Luckily Graham had already found out a solution which is to use Dropbox for everything that should not be shared with others. Before I continue on let me put a disclaimer that if you plan on storing ssh keys, license files, or really personal information you really need to enable two-step verification. Attached &lt;a href=&quot;https://www.dropbox.com/help/363/en&quot;&gt;here&lt;/a&gt; is the setup guide as this is very important for you to do.&lt;/p&gt;
+
+&lt;p&gt;You setup 2fa for Drobox, right? If you have not what are you waiting for? Now that your Dropbox is secure or at least more secure, I would create a directory structure that matches OS X. This might make for long paths while creating settings in puppet code but having a logical file-management system that actually matches where the files are actually being placed by boxen will help. Below is a screenshot of my directory structure as of this writing.&lt;br /&gt;
+&lt;img src=&quot;http://localhost:4000/images/posts/2014-04-24/Dropbox-config.png&quot; alt=&quot;dropbox-config&quot; /&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;no-really-how-can-i-get-started&quot;&gt;No really how can I get started?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Well Gary has the best write up though it is a bit dated &lt;a href=&quot;http://garylarizza.com/blog/2013/02/15/puppet-plus-github-equals-laptop-love/&quot;&gt;Puppet + Github = Laptop Love&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Easy step-by-step setup &lt;a href=&quot;http://coffeecupblog.com/blog/2013/03/24/automate-your-mac-provisioning-with-boxen-first-steps/&quot;&gt;Coffee Cup Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Another easy let’s get started &lt;a href=&quot;https://coderwall.com/p/kppokq&quot;&gt;Thomas Riboulet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Boxen is free to use. Allows you to configure existing computers, bootstrap new computers, and keep an online documentation detailed of all the custom settings that you love about your computer. Boxen is also a great way to get started with puppet. &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/24/things-learned-from-boxen/&quot;&gt;Things learned from boxen&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 24, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Enable AirDrop on Ethernet]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/18/enable-airdrop-on-ethernet/" />
+  <id>http://localhost:4000/blog/2014/04/18/enable-airdrop-on-ethernet</id>
+  <updated>2014-05-06T00:00:00-00:00</updated>
+  <published>2014-04-18T08:43:36-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;A quick post over enabling AirDrop to use an ethernet connection along with the default wireless connection. &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;AirDrop helps you share items with others nearby…a quick way to share files wirelessly between two Macs, without having to connect to an existing network.&lt;/p&gt;
+
+  &lt;p&gt;–Apple KB Article&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;AirDrop provides a great file-sharing experience and numerous departments at my workplace have grown to love it. The service is good for simple file exchanges without needing to use a files-share. That is until someone in the audio video department tries to send five (5) or more gigabytes of video files to someone sitting right next to him. This starts to cause problems as people experience slow downs and decide to wait instead of using our gigabit ethernet connection.&lt;/p&gt;
+
+&lt;p&gt;Apple provides the ability to use AirDrop over ethernet but did not enable it by default. We can only assume this was for good reason so enabling it could have unknown consequences. I have been using it for well over three (3) months without any issue, but your milage may vary. I will state that after issuing this change I needed to restart my machines for the devices to be able to utilize the AirDrop service (wireless or wired).&lt;/p&gt;
+
+&lt;p&gt;Type the following line of code into Terminal to make the change. Remember this needs to be made on both machines for it to take place.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Enable AirDrop Over Any Network Connection&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Disable AirDrop Over Any Network Connection&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;defaults write com.apple.NetworkBrowser BrowseAllInterfaces 0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Article: 
+&lt;a href=&quot;http://support.apple.com/kb/ht4783&quot;&gt;Mac Basics: AirDrop&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/18/enable-airdrop-on-ethernet/&quot;&gt;Enable AirDrop on Ethernet&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Setting up octopress]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/15/setting-up-octopress/" />
+  <id>http://localhost:4000/blog/2014/04/15/setting-up-octopress</id>
+  <updated>2014-04-21T00:00:00-00:00</updated>
+  <published>2014-04-15T00:00:00-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Setting up a blog can be a time consuming task. Setting up a blog that is created from static (markdown) files can be much more time consuming. In this post, I list references to most of the custom changes that were made to this site.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;this-is-not-a-setup-guide&quot;&gt;This is not a setup guide…&lt;/h2&gt;
+&lt;p&gt;…the internet has many really well outlined guides that do walk you through setting up Octopress. Since that is the case, I will instead list a few of the most helpful resources that I have found while attempting to setup Ocotpress. Please also note that the Octopress &lt;a href=&quot;http://octopress.org/docs/&quot;&gt;Documentation&lt;/a&gt; is the best source of information but it might not be the easiest to understand at first glance. &lt;/p&gt;
+
+&lt;p&gt;**&lt;em&gt;Disclaimer what works for me might not work for you. At the time of this writing release v3.0.0.rc.7 all of the following references do work. This is definitely not the faint of heart. Something down the line will break and you will have to troubleshoot the error.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+&lt;p&gt;The most important reference, a get started guide that will walk you through the initial installation.&lt;br /&gt;
+Article: &lt;a href=&quot;http://webdesign.tutsplus.com/tutorials/getting-started-with-octopress--webdesign-11442&quot;&gt;Getting Started with Octopress&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;changing-the-color&quot;&gt;Changing the color&lt;/h3&gt;
+&lt;p&gt;I did not find any themes that I liked so I used this article to change the colors. This article establishes the easiest way to customize Octopress with the main drawback being the least amount of visual change.&lt;br /&gt;
+Article: &lt;a href=&quot;http://aijazansari.com/2012/08/27/how-to-customize-octopress-theme/index.html&quot;&gt;How to Customize Your Octopress Theme&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
+&lt;p&gt;###Monthly Archive Sidebar
+The setup for this plugin is really well done in the help file for the repo so I shall direct you there.&lt;br /&gt;
+&lt;img src=&quot;http://localhost:4000/images/posts/2014-04-15/monthly_archives.png&quot; alt=&quot;Monthly Archives&quot; /&gt;&lt;br /&gt;
+Article: &lt;a href=&quot;https://github.com/rcmdnk/monthly-archive&quot;&gt;Github-Plugin&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;categories&quot;&gt;Categories&lt;/h3&gt;
+&lt;p&gt;The setup for this plugin is really well done in the help file for the repo so I shall direct you there.
+Article: &lt;a href=&quot;https://github.com/matthiasbeyer/jekyll_group_categories&quot;&gt;Github-Plugin&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tag-cloud-sidebar&quot;&gt;Tag Cloud (sidebar)&lt;/h3&gt;
+&lt;p&gt;The setup for this plugin is really well done in the help file for the repo so I shall direct you there.&lt;br /&gt;
+&lt;img src=&quot;http://localhost:4000/images/posts/2014-04-15/tag_cloud.png&quot; alt=&quot;Tag Cloud&quot; /&gt;&lt;br /&gt;
+Article: &lt;a href=&quot;https://github.com/tokkonopapa/octopress-tagcloud&quot;&gt;Github-Plugin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you would like your tags to show up in a vertical view visit the following link.&lt;br /&gt;
+Article: &lt;a href=&quot;http://www.narga.net/improve-octopress-advanced-tweaks-tips/&quot;&gt;Tags vertical view&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;custom-404-page&quot;&gt;Custom 404 Page&lt;/h2&gt;
+&lt;p&gt;I was unable to find much information about 404 Errors for Octopress. After some googling, I found out it is super easy to add a custom 404 page to Octopress. In your config.ru file, you add the following code:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;not_found &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  send_sinatra_file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;404.html&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Sorry, I cannot find #{request.path}&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To create the page, make a new file named 404.markdown in your /sources directory. Now, write your own 404 Error Page then deploy your website.&lt;br /&gt;
+Article: &lt;a href=&quot;http://www.narga.net/improve-octopress-advanced-tweaks-tips/&quot;&gt;Custom 404 Page&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Resources:
+&lt;a href=&quot;http://warpedvisions.org/projects/markdown-cheat-sheet.md&quot;&gt;Markdown Cheat Sheet&lt;/a&gt; , 
+&lt;a href=&quot;http://biancarelli.org/blog/2013/05/14/octopress-cheat-sheet&quot;&gt;Octopress Cheat Sheet&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/15/setting-up-octopress/&quot;&gt;Setting up octopress&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Deploying Octopress to Amazon S3]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/04/deploying-octopress-to-amazon-s3/" />
+  <id>http://localhost:4000/blog/2014/04/04/deploying-octopress-to-amazon-s3</id>
+  <updated>2014-05-06T00:00:00-00:00</updated>
+  <published>2014-04-04T15:08:15-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;notice&quot;&gt;NOTICE&lt;/h1&gt;
+&lt;p&gt;This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This post will go over how I upload my octopress site from my computer to Amazon s3 cloud service using s3cmd.  &lt;/p&gt;
+
+&lt;p&gt;Firstly, you will need to sign up for an &lt;a href=&quot;http://aws.amazon.com/s3/&quot;&gt;Amazon AWS account&lt;/a&gt; if you do not have one already. It is quite cheap and you only pay for what you use.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-s3tools&quot;&gt;Installing s3tools&lt;/h2&gt;
+&lt;p&gt;This is available in most Linux distributions, via Homebrew, directly from &lt;a href=&quot;http://s3tools.org/download&quot;&gt;s3tools.org&lt;/a&gt;, or the source directory on &lt;a href=&quot;https://github.com/s3tools/s3cmd/releases&quot;&gt;github&lt;/a&gt;. Run the following commands on the tar ball. (use at least version 1.0.X)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;tar xzvf s3cmd-1.5.0-alpha1.tar.gz
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;s3cmd-1.5.0-alpha1
+python setup.py install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You will need to copy &amp;amp; paste &lt;code&gt;access_key&lt;/code&gt; and &lt;code&gt;secret_key&lt;/code&gt; from the &lt;em&gt;Security Credentials&lt;/em&gt; page of Amazon AWS into s3cmd’s configuration wizard. Use this &lt;a href=&quot;http://www.cloudberrylab.com/blog/how-to-find-your-aws-access-key-id-and-secret-access-key-and-register-with-cloudberry-s3-explorer/&quot;&gt;article&lt;/a&gt; if you need help looking for keys. Then you will need to configure the c3cmd command with the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;s3cmd --configure         &lt;span class=&quot;c&quot;&gt;# Begin interactive configuration&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When finished, your ~/.s3cfg file should end up looking something like this.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;default&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ...snip...&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;access_key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; ALRJCALDDZUDEGNSSIPE 
+&lt;span class=&quot;nv&quot;&gt;secret_key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 9DJWHga1Y+uBAFXntDM1Ujd6FrnnUZb/9dLMOqzn
+&lt;span class=&quot;c&quot;&gt;# ...snip...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;creating-your-s3-bucket&quot;&gt;Creating your s3 bucket&lt;/h2&gt;
+&lt;p&gt;You will have to create your s3 bucket with in the &lt;a href=&quot;https://console.aws.amazon.com/s3/home&quot;&gt;Amazon AWS console&lt;/a&gt;. Create a bucket using the fully-qualified domain name of your blog &lt;code&gt;(e.g., www.example.com)&lt;/code&gt;. Open the Properties pane for your bucket, and then enable “Static web hosting”. Make note of the “endpoint”, something like &lt;code&gt;example.com.s3-website-us-east-1.amazonaws.com&lt;/code&gt;. You can use this directly, but most people will create a DNS CNAME pointing to it instead.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/2014-04-04/amazon_aws.png&quot; alt=&quot;Amazon AWS&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;modifying-your-rakefile&quot;&gt;Modifying your Rakefile&lt;/h2&gt;
+&lt;p&gt;Inside your octopress directory, you have a file &lt;code&gt;Rakefile&lt;/code&gt; that we need to make a few modifications to so that we can upload to Amazon s3. Start by editing the &lt;code&gt;deploy_default&lt;/code&gt; variable to be &lt;code&gt;s3&lt;/code&gt;. Next establish a new variable by adding this line into the file &lt;code&gt;s3_bucket = &quot;www.mywebsite.com&quot;&lt;/code&gt; modifying the website name. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;## -- Rsync Deploy config -- ##&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Be sure your public key is listed in your server&amp;#39;s ~/.ssh/authorized_keys file&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;ssh_user&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;user@domain.com&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;ssh_port&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;22&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;document_root&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;~/website.com/&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;rsync_delete&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;rsync_args&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# Any extra arguments to pass to rsync&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;deploy_default&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;s3&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;s3_bucket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;www.clburlison.com&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Lastly, you need to make a new task in the &lt;code&gt;Rakefile&lt;/code&gt;. Add the following text lines to the end of your file.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;desc &lt;span class=&quot;s2&quot;&gt;&amp;quot;Deploy website via s3cmd&amp;quot;&lt;/span&gt;
+task :s3 &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  puts &lt;span class=&quot;s2&quot;&gt;&amp;quot;## Deploying website via s3cmd&amp;quot;&lt;/span&gt;
+  ok_failed system&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;s3cmd sync --acl-public --reduced-redundancy public/* s3://#{s3_bucket}/&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Deployment is now only a matter of running the usual command: &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;rake deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Articles: &lt;a href=&quot;http://blog.jacobelder.com/2012/03/deploying-octopress-to-amazon-s3/&quot;&gt;Jacob Elder&lt;/a&gt;, &lt;a href=&quot;http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/&quot;&gt;Jerome Bernard&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/04/deploying-octopress-to-amazon-s3/&quot;&gt;Deploying Octopress to Amazon S3&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 04, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Setting up a puppetmaster on Mavericks]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/" />
+  <id>http://localhost:4000/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks</id>
+  <updated>2014-05-22T00:00:00-00:00</updated>
+  <published>2014-04-04T11:40:54-05:00</published>
+  
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;notice&quot;&gt;NOTICE&lt;/h1&gt;
+&lt;p&gt;This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For various reasons I decided to set up my puppetmaster on an OS X install of Mavericks instead of what I would consider the norm, being a linux distro. Here are the results. This documentation is strongly based on the article by Nate Walck on afp548.com.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;introduction-to-puppet&quot;&gt;Introduction to puppet&lt;/h3&gt;
+&lt;p&gt;Puppet is a service that is normally ran in a client/server setup that helps manage and configure devices. Since I am an OS X administrator, this article will be coving the installation and configuration on an OS X platform. While many sysadmins will prefer server installation on a linux distro I simply did not want to mess with getting a Virtual Machine approved in my environment. Below are the steps that I took to set up a puppetmaster on an OS X Mavericks install.  &lt;/p&gt;
+
+&lt;h3 id=&quot;pre-steps&quot;&gt;Pre-steps&lt;/h3&gt;
+&lt;p&gt;Setting up dns, creating a CNAME record, verifying dns records, etc. Aka all the things I should have done but did not. I will go ahead and mention now that if you are doing this for production taking a moment to do this correctly the first time will save you hours of headache down the road. Since I do not have control over network settings at work, I skipped these steps and decided to use the server hostnames in my case. Please refer to the &lt;a href=&quot;http://www.afp548.com/2013/02/26/setting-up-a-basic-3-1-x-puppet-master-on-os-x-10-8/&quot;&gt;article&lt;/a&gt; by Nate if you want to do things the approved way.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-the-software&quot;&gt;Install the software&lt;/h3&gt;
+&lt;p&gt;Next, we must install Puppet on our master.  The Reference Manual has a section specifically for OS X regarding the puppet install. For Mavericks, you will want at least &lt;strong&gt;Puppet version 3.2.X&lt;/strong&gt; or higher. You will also want to install &lt;strong&gt;Facter, and Hiera&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Each of these pieces of software can be obtained from &lt;a href=&quot;http://downloads.puppetlabs.com/mac/&quot;&gt;here&lt;/a&gt;. (After downloading, you will want to install each of the three packages. A control click might be needed if you have Gatekeeper enabled.)&lt;/p&gt;
+
+&lt;p&gt;The puppet service account should be created automatically. It is good practice to double checking this by running. Check for Puppet user: &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;id puppet&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The command above should list the puppet user’s uid, gid and groups.  If you get ‘id: puppet: no such user’ instead, then you will need to create the user manually.  Create the service account and puppet group using the following two commands (As per the Reference Manual):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo puppet resource group puppet &lt;span class=&quot;nv&quot;&gt;ensure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;present
+sudo puppet resource user puppet &lt;span class=&quot;nv&quot;&gt;ensure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;present &lt;span class=&quot;nv&quot;&gt;gid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;puppet &lt;span class=&quot;nv&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/sbin/nologin&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You also do not want this puppet user to appear at the login window (since it is a service account), so run the following command to hide it (or you can set it via MCX, Profile, etc):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo defaults write /Library/Preferences/com.apple.loginwindow Hide500Users -boolean YES&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;settings-up-our-puppetmaster&quot;&gt;Settings up our puppetmaster&lt;/h3&gt;
+&lt;p&gt;Now we will make changes to the default puppet configuration for our server. This can be done with &lt;strong&gt;sudo nano /etc/puppet/puppet.conf&lt;/strong&gt; then enter the following text. Save with “Ctrl + X”&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Default Puppet Settings&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; server_host_name_here &lt;span class=&quot;c&quot;&gt;# default is &amp;#39;puppet&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;report&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;pluginsync&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;certname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; server.company.com &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;The FQDN of the machine that is running puppet&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Also, since pluginsync is enabled by default, create the modules folder and make sure the puppet user owns it. We can create our manifests directory while we are at it. The latter command will create the default &lt;em&gt;site.pp&lt;/em&gt; file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo mkdir /etc/puppet/modules
+sudo chown puppet /etc/puppet/modules
+sudo mkdir /etc/puppet/manifests
+sudo touch /etc/puppet/manifests/site.pp
+sudo chown puppet /etc/puppet/manifests/site.pp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Lastly, run puppet as a master for the first time using the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo puppet master --debug --verbose --no-daemonize&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Because we are running puppet as a master, it will generate a CA (Certificate Authority) so it can securely talk to clients and create other folder structure that the master needs to function.&lt;/p&gt;
+
+&lt;h4 id=&quot;launchdaemon-setup&quot;&gt;LaunchDaemon setup&lt;/h4&gt;
+&lt;p&gt;Puppet is now fully configured as a basic master, but we are missing one key component: a service to make sure that Puppet is running.  Since we are setting this up on OS X, we will use a launchd job.  The Puppet documentation on setting up the launchd item can be found &lt;a href=&quot;http://docs.puppetlabs.com/guides/installation.html#with-launchd&quot;&gt;here&lt;/a&gt;.  In this documentation, Puppet Labs has provided us with a launchd item that can take care of starting our puppet master for us.  You can view the original plist &lt;a href=&quot;http://docs.puppetlabs.com/guides/installation.html#mac-os-x&quot;&gt;here&lt;/a&gt; or copy it from the box.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;lt;?xml &lt;span class=&quot;nv&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;1.0&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;?&amp;gt;
+&amp;lt;!DOCTYPE plist PUBLIC &lt;span class=&quot;s2&quot;&gt;&amp;quot;-//Apple Computer//DTD PLIST 1.0//EN&amp;quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&lt;/span&gt;&amp;gt;
+&amp;lt;plist &lt;span class=&quot;nv&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;1.0&amp;quot;&lt;/span&gt;&amp;gt;
+&amp;lt;dict&amp;gt;
+        &amp;lt;key&amp;gt;EnvironmentVariables&amp;lt;/key&amp;gt;
+        &amp;lt;dict&amp;gt;
+                &amp;lt;key&amp;gt;PATH&amp;lt;/key&amp;gt;
+                &amp;lt;string&amp;gt;/sbin:/usr/sbin:/bin:/usr/bin&amp;lt;/string&amp;gt;
+                &amp;lt;key&amp;gt;RUBYLIB&amp;lt;/key&amp;gt;
+                &amp;lt;string&amp;gt;/usr/lib/ruby/site_ruby/1.8/&amp;lt;/string&amp;gt;
+        &amp;lt;/dict&amp;gt;
+        &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt;
+        &amp;lt;string&amp;gt;com.puppetlabs.puppetmaster&amp;lt;/string&amp;gt;
+        &amp;lt;key&amp;gt;OnDemand&amp;lt;/key&amp;gt;
+        &amp;lt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;/&amp;gt;
+        &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt;
+        &amp;lt;array&amp;gt;
+                &amp;lt;string&amp;gt;/usr/bin/puppet&amp;lt;/string&amp;gt;
+                &amp;lt;string&amp;gt;master&amp;lt;/string&amp;gt;
+                &amp;lt;string&amp;gt;--verbose&amp;lt;/string&amp;gt;
+                &amp;lt;string&amp;gt;--no-daemonize&amp;lt;/string&amp;gt;
+        &amp;lt;/array&amp;gt;
+        &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt;
+        &amp;lt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;/&amp;gt;
+        &amp;lt;key&amp;gt;ServiceDescription&amp;lt;/key&amp;gt;
+        &amp;lt;string&amp;gt;Puppetmaster Daemon&amp;lt;/string&amp;gt;
+        &amp;lt;key&amp;gt;ServiceIPC&amp;lt;/key&amp;gt;
+        &amp;lt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;/&amp;gt;
+        &amp;lt;key&amp;gt;StandardErrorPath&amp;lt;/key&amp;gt;
+        &amp;lt;string&amp;gt;/var/log/puppet/puppetmaster.err&amp;lt;/string&amp;gt;
+        &amp;lt;key&amp;gt;StandardOutPath&amp;lt;/key&amp;gt;
+        &amp;lt;string&amp;gt;/var/log/puppet/puppetmaster.out&amp;lt;/string&amp;gt;
+&amp;lt;/dict&amp;gt;
+&amp;lt;/plist&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Save the contents of this file into &lt;strong&gt;/Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist&lt;/strong&gt; . Also, make sure the permissions are correct on the file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo chown root:wheel /Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist  
+sudo chmod &lt;span class=&quot;m&quot;&gt;644&lt;/span&gt; /Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Lastly, load the launchd using launchctl:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo launchctl load -w /Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We should now have a fully functional puppetmaster running on OS X Mavericks. Note that this is running with the default WEBrick server that comes with puppet. While this should be okay for development it is not suitable for production. Methods for scaling Puppet can be found on the &lt;a href=&quot;http://docs.puppetlabs.com/guides/scaling.html&quot;&gt;Scaling Puppet&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;More information about puppet will be published in the future. I am going through beta testing with Puppet at the time of this writing.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Articles: &lt;a href=&quot;http://www.afp548.com/2013/02/26/setting-up-a-basic-3-1-x-puppet-master-on-os-x-10-8/&quot;&gt;afp548.com&lt;/a&gt;, &lt;a href=&quot;http://docs.puppetlabs.com/guides/installation.html#mac-os-x&quot;&gt;Puppetlabs Offical Documentation&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/&quot;&gt;Setting up a puppetmaster on Mavericks&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 04, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Shrinking the disk image of an OS X VM]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/01/shrinking-the-disk-image-of-an-os-x-vm/" />
+  <id>http://localhost:4000/blog/2014/04/01/shrinking-the-disk-image-of-an-os-x-vm</id>
+  <published>2014-04-01T08:49:20-05:00</published>
+  <updated>2014-04-01T08:49:20-05:00</updated>
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Reducing the size of a guest OS X Virtual Machines’s vmdk file requires a few steps.  For a Windows VM’s, there is a tool from VMWare with a GUI.  Unfortunately, there is not an equivalent tool for the Mac guest VM.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This technique has tested and confirmed on OS X 10.9.2 using VMware Fusion 6.02 though it should work from 10.7 and up. This assumes your guest vm’s disk is not pre-allocated, and the virtual machine does not have any snapshots. If you have any snapshots now would be a good time to delete them.  &lt;/p&gt;
+
+&lt;p&gt;Space is always a constraint so the smaller my Virtual Machines the better. Plus, backing up a Virtual Machine or transferring to a separate drive is much faster the smaller the vmdk is.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Prepare the disk image for shrinking by using the guest vm’s Disk Utility.app to “Erase Free Space” (fast zero’ing will suffice).  For a disk image using 15 to 20GB, this may take five to ten minutes. When complete, shut down the vm and close the VMware Fusion app.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Using Finder, confirm the location of your guest vm’s vmdk files.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open Terminal and type the following changing the path to your virtual disk at the end.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;/Applications/VMware Fusion.app/Contents/Library/vmware-vdiskmanager&amp;quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+ -k &lt;span class=&quot;s2&quot;&gt;&amp;quot;/path/to/your/vm/disk.vmdk&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you’ve successfully entered the command, Terminal will display &lt;code&gt;&quot;$ Shrink: xx% done.&quot;&lt;/code&gt; until the operation is complete.  &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Article: &lt;a href=&quot;http://blog.aitrus.com/2012/07/28/vmware-fusion-shrinking-the-disk-image-of-an-os-x-guest-vm/&quot;&gt;http://blog.aitrus.com/&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/01/shrinking-the-disk-image-of-an-os-x-vm/&quot;&gt;Shrinking the disk image of an OS X VM&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 01, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[First post]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/03/31/first-post/" />
+  <id>http://localhost:4000/blog/2014/03/31/first-post</id>
+  <published>2014-03-31T23:38:41-05:00</published>
+  <updated>2014-03-31T23:38:41-05:00</updated>
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://localhost:4000</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;This blog is setup as a personal resource for myself. Eventually, I can grow the information on this blog so that others can gain some educational value from this being hosted.  &lt;/p&gt;
+
+&lt;p&gt;The site is being hosted on Amazon’s S3 backend with the content being created through &lt;a href=&quot;http://octopress.org/&quot;&gt;Octopress&lt;/a&gt;.
+Over the next months, I will be documenting how I setup Octopress with Amazon S3 along with customizing the layout of this site.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/03/31/first-post/&quot;&gt;First post&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on March 31, 2014.&lt;/p&gt;</content>
+</entry>
+
+</feed>

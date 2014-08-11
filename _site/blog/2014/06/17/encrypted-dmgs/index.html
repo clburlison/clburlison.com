@@ -1,0 +1,304 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Encrypted DMGs &#8211; Just another tech blog</title>
+<meta name="description" content="We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.
+
+">
+<meta name="keywords" content="">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Encrypted DMGs">
+<meta name="twitter:description" content="We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.
+
+">
+<meta name="twitter:site" content="@clburlison">
+<meta name="twitter:creator" content="@clburlison">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Encrypted DMGs">
+<meta property="og:description" content="We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.
+
+">
+<meta property="og:url" content="http://localhost:4000/blog/2014/06/17/encrypted-dmgs/">
+<meta property="og:site_name" content="Just another tech blog">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/blog/2014/06/17/encrypted-dmgs/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000">Just another tech blog</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+					    
+					        
+					    
+					    <li><a href="http://localhost:4000/about/" >About</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://localhost:4000/resources/" >Resources</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://localhost:4000/blog/archives/" >Archives</a></li>
+					  
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+
+
+	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+
+<h3>Clayton Burlison</h3>
+<p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
+<a href="mailto:clburlison@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+<a href="http://twitter.com/clburlison" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://facebook.com/clburlison" class="author-social" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+
+<a href="http://linkedin.com/in/clburlison" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/clburlison" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+<a href="http://steamcommunity.com/id/DancingMonkey" class="author-social" target="_blank"><i class="fa fa-steam-square"></i> Steam</a>
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/blog/2014/06/17/encrypted-dmgs/" rel="bookmark" title="Encrypted DMGs">Encrypted DMGs</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.</p>
+
+<h2 id="what-to-secure">What to secure</h2>
+<p>First, you can secure whatever files your heart desires: bank statements, work files, secret plans for that special vacation with the family, photos, passwords, etc. Pretty much anything you want, though fair-warning this is not a backup solution and if you forget your encryption password it will make accessing those files quite difficult. </p>
+
+<p>The reason to secure files is because you do not want others to have access to your data. This will help protect you in case your laptop gets stolen or maybe it just get physically accessed by someone you know. This method will use a 256-bit AES encryption algorithm to secure your data. That being said if you use a simple password, <em>cough</em> <code>password</code> <em>cough</em>, then it is quite simple for someone to brute force hack that password and have access to your data. </p>
+
+<p><strong>Disclaimer</strong>: Nothing is 100% secure. This method is just another step that can help make it harder for someone to obtain your information. With enough time the right person could access these files but your average Joe is going to have a darn hard time.</p>
+
+<h1 id="creating-an-encrypted-dmg">Creating an encrypted DMG</h1>
+<p>Step 1 - Open Disk Utility<br />
+<img src="/images/posts/2014-06-17/step1.png" width="400" height="100" /></p>
+
+<p>Step 2 - Create a Blank Disk Image…<br />
+<img src="/images/posts/2014-06-17/step2.png" width="600" height="400" /></p>
+
+<p>Step 3 - Name your new dmg. Note the values shown are important.</p>
+
+<ul>
+  <li>Name: the mounted disk image name</li>
+  <li>Size: depends on your data needs</li>
+  <li>Format: the default <code>Mac OS Extended (Journaled)</code> should be fine for most needs</li>
+  <li>Encryption: use 256-bit AES unless you have a solid reason to not</li>
+  <li>Partitions: using <code>Single partition - GUID Partition Map</code> is a standard that is compatible with most Macs</li>
+  <li>Image Format: using <code>sparse disk image</code> will save space on your hard drive and only use the disk space needed by the dmg</li>
+</ul>
+
+<p><img src="/images/posts/2014-06-17/step3.png" width="600" height="400" /></p>
+
+<p>Step 4 - Here you want to type a secure password<br />
+<img src="/images/posts/2014-06-17/step4.png" width="400" height="400" /></p>
+
+<p>Step 5 - If you click the key icon OS X will help you create a secure password using the Password Assistant<br />
+<img src="/images/posts/2014-06-17/step5.png" width="600" height="400" /></p>
+
+<p>Step 6 - Note the file names. This is your encrypted dmg. You can store files here just like a flash drive.<br />
+<img src="/images/posts/2014-06-17/step6.png" width="600" height="400" /></p>
+
+<p>Step 7 - If you eject your dmg you will be presented with this pop-up the next time you try to open the dmg. Type your encryption password to unlock the dmg.<br />
+<img src="/images/posts/2014-06-17/step7.png" width="400" height="100" /></p>
+
+<h2 id="video-showing-the-process">Video showing the process</h2>
+<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/zAc9H7AQ2TQ" allowfullscreen=""></iframe></div>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>Creating an encrypted dmg is quite easy once you know the steps. My preference is to not store the password in your Keychain. If you are logged into your machine another users could walk right up and open the dmg without typing a password.</p>
+
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+
+
+
+	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+
+<h3>Clayton Burlison</h3>
+<p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
+<a href="mailto:clburlison@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+<a href="http://twitter.com/clburlison" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://facebook.com/clburlison" class="author-social" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+
+<a href="http://linkedin.com/in/clburlison" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/clburlison" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+<a href="http://steamcommunity.com/id/DancingMonkey" class="author-social" target="_blank"><i class="fa fa-steam-square"></i> Steam</a>
+        </div>
+        <p><b>Published: </b><time datetime="2014-06-17T19:49:02-05:00">June 17, 2014</time><br>
+		</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+    <center><nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/blog/2014/05/19/find-my-mac/" class="btn" title="Find My Mac">Previous article</a>
+      
+      
+        <a href="http://localhost:4000/blog/2014/07/11/bender/" class="btn" title="Bender">Next article</a>
+      
+    </nav><!-- /.pagination --></center>
+    <hr />
+  
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+
+  <footer>
+    <div class="google-ads">
+  <!-- 320 x 50 ad -->
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client=""
+       data-ad-slot=""></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+<span>&copy; 2014 Clayton Burlison. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-49614309-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'clburlison'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+	        
+
+</body>
+</html>
