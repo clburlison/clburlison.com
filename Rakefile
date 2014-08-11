@@ -24,6 +24,8 @@ end
 
 desc "Commit _site/"
 task :commit do
+  puts "\n## Remove _site/ from source branch"
+  status = system("rm -r _site")
   puts "\n## Staging modified files"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
@@ -49,6 +51,8 @@ task :deploy do
   puts status ? "Success" : "Failed"
   puts "\n## Switching back to source branch"
   status = system("git checkout source")
+  puts "\n## Remove _site/ from source branch"
+  status = system("rm -r _site")
   puts status ? "Success" : "Failed"
   puts "\n## Pushing all branches to origin"
   status = system("git push --all origin")

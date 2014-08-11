@@ -2,18 +2,8 @@
 
 title:            Just another tech blog
 locale:           en_US
-
-# The production_url is only used when full-domain names are needed
-# such as sitemap.txt
-# Most places will/should use BASE_PATH to make the urls
-#
-# If you have set a CNAME (pages.github.com) set your custom domain here.
-# Else if you are pushing to username.github.io, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-
-production_url:  http://clburlison.com
-source_url:      http://github.com/clburlison/blog
-
+url:              http://clburlison.com
+url:              http://localhost:4000
 
 # Jekyll configuration
 
