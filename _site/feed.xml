@@ -2,47 +2,47 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">Just another tech blog</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-08-10T19:17:26-05:00</updated>
-<id>http://localhost:4000/</id>
+<link rel="self" type="application/atom+xml" href="http://clburlison.com/feed.xml" />
+<link rel="alternate" type="text/html" href="http://clburlison.com" />
+<updated>2014-08-10T19:18:13-05:00</updated>
+<id>http://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
-  <uri>http://localhost:4000/</uri>
+  <uri>http://clburlison.com/</uri>
   <email>clburlison@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[Moving to Plain Jekyll]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/08/09/moving-to-plain-jekyll/" />
-  <id>http://localhost:4000/blog/2014/08/09/moving-to-plain-jekyll</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/08/09/moving-to-plain-jekyll/" />
+  <id>http://clburlison.com/blog/2014/08/09/moving-to-plain-jekyll</id>
   <updated>2014-08-10T00:00:00-00:00</updated>
   <published>2014-08-09T01:06:34-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Moved the blog over from Octopress to a plain Jekyll setup. This allows me to have a bit more control while also removing some of the fluff that was installed by Octopress that I did not use. I am very glad to have found such a great theme created by Michael Rose. I will release another post once I have had a little more time to play around. As of this moment, it is about 10 times faster to generate the website on my laptop. The &lt;code&gt;--watch&lt;/code&gt; flag from raw jekyll much faster at recreating pages.&lt;/p&gt;
 
 &lt;p&gt;Still need to add tags and a few other plugins.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/08/09/moving-to-plain-jekyll/&quot;&gt;Moving to Plain Jekyll&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on August 09, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/08/09/moving-to-plain-jekyll/&quot;&gt;Moving to Plain Jekyll&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on August 09, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Bash if then cheat sheet]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/07/28/bash-if-then-cheat-sheet/" />
-  <id>http://localhost:4000/blog/2014/07/28/bash-if-then-cheat-sheet</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/07/28/bash-if-then-cheat-sheet/" />
+  <id>http://clburlison.com/blog/2014/07/28/bash-if-then-cheat-sheet</id>
   <updated>2014-07-31T00:00:00-00:00</updated>
   <published>2014-07-28T22:05:56-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;I always find myself looking for a good resource when writing if/then statements in bash scripts. It’s hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet…copied here because I was tired of having to look for a good resource.   &lt;/p&gt;
@@ -163,20 +163,20 @@
 &lt;p&gt;Articles: 
 &lt;a href=&quot;http://tldp.org/LDP/abs/html/comparison-ops.html&quot;&gt;Advanced Bash-Scripting Guide&lt;/a&gt;  &lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/07/28/bash-if-then-cheat-sheet/&quot;&gt;Bash if then cheat sheet&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on July 28, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/07/28/bash-if-then-cheat-sheet/&quot;&gt;Bash if then cheat sheet&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on July 28, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Converting Audio With Media Encoder]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/07/23/converting-audio-with-media-encoder/" />
-  <id>http://localhost:4000/blog/2014/07/23/converting-audio-with-media-encoder</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/07/23/converting-audio-with-media-encoder/" />
+  <id>http://clburlison.com/blog/2014/07/23/converting-audio-with-media-encoder</id>
   <updated>2014-08-09T00:00:00-00:00</updated>
   <published>2014-07-23T04:32:35-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;I received a unique request today from a co-worker of mine. In short, he asked me if I was able to convert an audio clip from a Tascam audio recorder to a lower quality format suitable for our phone distribution system. The real challenege…was I going to be able to do this with the software currently installed?
@@ -191,48 +191,48 @@
 &lt;ol&gt;
   &lt;li&gt;Open Adobe Media Encoder.&lt;br /&gt;
     &lt;figure&gt;
-     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/1_open.png&quot; /&gt;
+     &lt;img src=&quot;http://clburlison.com/images/posts/2014-07-23/1_open.png&quot; /&gt;
  &lt;/figure&gt;
   &lt;/li&gt;
   &lt;li&gt;Create the Phone Preset by clicking on the &lt;code&gt;+&lt;/code&gt; button in the Preset Browser window.&lt;br /&gt;
     &lt;figure&gt;
-     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/2_add_preset.png&quot; /&gt;
+     &lt;img src=&quot;http://clburlison.com/images/posts/2014-07-23/2_add_preset.png&quot; /&gt;
  &lt;/figure&gt;
   &lt;/li&gt;
   &lt;li&gt;Add a preset name and change the format to Waveform Audio.&lt;br /&gt;
     &lt;figure&gt;
-     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/3_format.png&quot; /&gt;
+     &lt;img src=&quot;http://clburlison.com/images/posts/2014-07-23/3_format.png&quot; /&gt;
  &lt;/figure&gt;
   &lt;/li&gt;
   &lt;li&gt;Change the basic audio setting the values below. Click okay to save the preset.  &lt;br /&gt;
     &lt;figure&gt;
-     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/4_settings.png&quot; /&gt;
+     &lt;img src=&quot;http://clburlison.com/images/posts/2014-07-23/4_settings.png&quot; /&gt;
  &lt;/figure&gt;
   &lt;/li&gt;
   &lt;li&gt;Add your audio file to be converted by clicking the &lt;code&gt;+&lt;/code&gt; button in the Queue window.&lt;br /&gt;
     &lt;figure&gt;
-     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/5_adding_file_2_encode.png&quot; /&gt;
+     &lt;img src=&quot;http://clburlison.com/images/posts/2014-07-23/5_adding_file_2_encode.png&quot; /&gt;
  &lt;/figure&gt;
   &lt;/li&gt;
   &lt;li&gt;Drag your phone setting preset from the Preset Browser window on top of the audio file you want to convert. It should look like the picture below. (note the .wav file extension)&lt;br /&gt;
     &lt;figure&gt;
-     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/6_ready_2_encode.png&quot; /&gt;
+     &lt;img src=&quot;http://clburlison.com/images/posts/2014-07-23/6_ready_2_encode.png&quot; /&gt;
  &lt;/figure&gt;
   &lt;/li&gt;
   &lt;li&gt;Click the green encode button.&lt;br /&gt;
     &lt;figure&gt;
-     &lt;img src=&quot;http://localhost:4000/images/posts/2014-07-23/7_encode.png&quot; /&gt;
+     &lt;img src=&quot;http://clburlison.com/images/posts/2014-07-23/7_encode.png&quot; /&gt;
  &lt;/figure&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;beforeafter&quot;&gt;Before/After&lt;/h2&gt;
 &lt;div&gt;
-	&lt;a href=&quot;http://localhost:4000/images/posts/2014-07-23/audio-test.mp3&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://localhost:4000/images/speaker-30.jpg&quot; height=&quot;30&quot; /&gt; Before&lt;/a&gt;
+	&lt;a href=&quot;http://clburlison.com/images/posts/2014-07-23/audio-test.mp3&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://clburlison.com/images/speaker-30.jpg&quot; height=&quot;30&quot; /&gt; Before&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
-	&lt;a href=&quot;http://localhost:4000/images/posts/2014-07-23/audio-test_1.wav&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://localhost:4000/images/speaker-30.jpg&quot; height=&quot;30&quot; /&gt;  After&lt;/a&gt;
+	&lt;a href=&quot;http://clburlison.com/images/posts/2014-07-23/audio-test_1.wav&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://clburlison.com/images/speaker-30.jpg&quot; height=&quot;30&quot; /&gt;  After&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;The result is a Linear PCM codec audio file with 16 bit/sample rate, 8 kilohertz (kHz) in a &lt;code&gt;.wav&lt;/code&gt; format.&lt;/p&gt;
@@ -240,20 +240,20 @@
 &lt;h1 id=&quot;update&quot;&gt;Update&lt;/h1&gt;
 &lt;p&gt;Although, this method does work and creates a windows audio file, it ended up not working for the original application that I needed. Needless to say there is no point removing this guide.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/07/23/converting-audio-with-media-encoder/&quot;&gt;Converting Audio With Media Encoder&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on July 23, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/07/23/converting-audio-with-media-encoder/&quot;&gt;Converting Audio With Media Encoder&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on July 23, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Show Help Desk Information]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/07/14/show-helpdesk-info/" />
-  <id>http://localhost:4000/blog/2014/07/14/show-helpdesk-info</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/07/14/show-helpdesk-info/" />
+  <id>http://clburlison.com/blog/2014/07/14/show-helpdesk-info</id>
   <updated>2014-08-09T00:00:00-00:00</updated>
   <published>2014-07-14T17:47:53-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Display useful information on your Desktop using Geektool. Make troubleshooting network issues for your end users easier. Find your hostname faster. The amount of useful information is limitless. If you can script it…you can display it.  &lt;/p&gt;
@@ -308,7 +308,7 @@ Erik’s Original Desktop Results  &lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/timsutton/mcxToProfile&quot;&gt;mcxToProfile&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/timsutton/make-profile-pkg&quot;&gt;make-profile-pkg&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://gist.github.com/clburlison/af2a1afe01fb9aff9288&quot;&gt;Gist files for this project&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://localhost:4000/images/posts/2014-07-14/Geektool-login-item.mobileconfig&quot;&gt;Geektool-login-item.mobileconfig&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://clburlison.com/images/posts/2014-07-14/Geektool-login-item.mobileconfig&quot;&gt;Geektool-login-item.mobileconfig&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;what-is-it&quot;&gt;What is it?&lt;/h1&gt;
@@ -495,20 +495,20 @@ org.tynsoe.geektool3.plist --identifier BISD-GeekTool --manage Often&lt;/code&gt
 
 &lt;p&gt;Articles: &lt;a href=&quot;https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY&quot;&gt;Using GeekTool to show HelpDesk Information&lt;/a&gt;  &lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/07/14/show-helpdesk-info/&quot;&gt;Show Help Desk Information&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on July 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/07/14/show-helpdesk-info/&quot;&gt;Show Help Desk Information&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on July 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Bender]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/07/11/bender/" />
-  <id>http://localhost:4000/blog/2014/07/11/bender</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/07/11/bender/" />
+  <id>http://clburlison.com/blog/2014/07/11/bender</id>
   <updated>2014-07-20T00:00:00-00:00</updated>
   <published>2014-07-11T16:42:20-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Many administrators use OS X Server. In my opinion the server OS has always lacked choices when it comes to backing up the server services data. Until I found Bender…&lt;/p&gt;
@@ -538,19 +538,19 @@ org.tynsoe.geektool3.plist --identifier BISD-GeekTool --manage Often&lt;/code&gt
 
 &lt;p&gt;Articles: &lt;a href=&quot;http://robotcloud.screenstepslive.com/s/2459/m/5322/l/94467-bender-automated-backup-of-os-x-server-settings&quot;&gt;Bender Home Page&lt;/a&gt;, &lt;a href=&quot;https://groups.google.com/d/msg/macenterprise/MxLssCqR72Y/J1qFuALErMwJ&quot;&gt;macenterprise list&lt;/a&gt;  &lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/07/11/bender/&quot;&gt;Bender&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on July 11, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/07/11/bender/&quot;&gt;Bender&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on July 11, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Encrypted DMGs]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/06/17/encrypted-dmgs/" />
-  <id>http://localhost:4000/blog/2014/06/17/encrypted-dmgs</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/06/17/encrypted-dmgs/" />
+  <id>http://clburlison.com/blog/2014/06/17/encrypted-dmgs</id>
   <published>2014-06-17T19:49:02-05:00</published>
   <updated>2014-06-17T19:49:02-05:00</updated>
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.&lt;/p&gt;
@@ -600,19 +600,19 @@ org.tynsoe.geektool3.plist --identifier BISD-GeekTool --manage Often&lt;/code&gt
 &lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
 &lt;p&gt;Creating an encrypted dmg is quite easy once you know the steps. My preference is to not store the password in your Keychain. If you are logged into your machine another users could walk right up and open the dmg without typing a password.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/06/17/encrypted-dmgs/&quot;&gt;Encrypted DMGs&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on June 17, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/06/17/encrypted-dmgs/&quot;&gt;Encrypted DMGs&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on June 17, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Find My Mac]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/05/19/find-my-mac/" />
-  <id>http://localhost:4000/blog/2014/05/19/find-my-mac</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/05/19/find-my-mac/" />
+  <id>http://clburlison.com/blog/2014/05/19/find-my-mac</id>
   <published>2014-05-19T11:38:52-05:00</published>
   <updated>2014-05-19T11:38:52-05:00</updated>
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Under the hood of Find My Mac there are some security details that are not widely published. I take no credit to figuring these out since they were just recently brought to my attention. These are not details that a consumer would need to concern themselves with but I found them quite interesting. I decided to share what information I found.&lt;/p&gt;
@@ -677,20 +677,20 @@ org.tynsoe.geektool3.plist --identifier BISD-GeekTool --manage Often&lt;/code&gt
 &lt;p&gt;External resources regarding iCloud: &lt;a href=&quot;http://www.apple.com/support/icloud/find-my-device/&quot;&gt;Apple Find my Device Support&lt;/a&gt;, 
 &lt;a href=&quot;http://www.cnet.com/how-to/how-to-use-find-my-mac-in-icloud/&quot;&gt;Cnet&lt;/a&gt;, &lt;a href=&quot;http://www.macworld.com/article/2034795/how-to-track-a-lost-computer-with-find-my-mac.html&quot;&gt;Macworld&lt;/a&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/05/19/find-my-mac/&quot;&gt;Find My Mac&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on May 19, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/05/19/find-my-mac/&quot;&gt;Find My Mac&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on May 19, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Creating a development munki_repo]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/05/17/creating-a-development-munki-repo/" />
-  <id>http://localhost:4000/blog/2014/05/17/creating-a-development-munki-repo</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/05/17/creating-a-development-munki-repo/" />
+  <id>http://clburlison.com/blog/2014/05/17/creating-a-development-munki-repo</id>
   <updated>2014-05-18T00:00:00-00:00</updated>
   <published>2014-05-17T07:51:22-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;I created a vagrant box that allows you create a completely self contained munki_repo for testing purposes. With the usage of &lt;a href=&quot;https://puphpet.com&quot;&gt;PuPHPet&lt;/a&gt; the process was quite easy.&lt;/p&gt;
@@ -809,20 +809,20 @@ sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier testin
 
 &lt;p&gt;Also, go check out &lt;a href=&quot;https://github.com/hjuutilainen/munkiadmin&quot;&gt;MunkiAdmin&lt;/a&gt; for a GUI to modify your munki_repo. Another great resource is &lt;a href=&quot;https://github.com/wollardj/Mandrill&quot;&gt;Mandrill&lt;/a&gt;, a web front end for managing you munki_repo. Lastly, check out the &lt;a href=&quot;https://code.google.com/p/munki/wiki/GettingStartedWithMunki&quot;&gt;Getting Started with Munki&lt;/a&gt; guide if you have any questions about munki.  &lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/05/17/creating-a-development-munki-repo/&quot;&gt;Creating a development munki_repo&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on May 17, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/05/17/creating-a-development-munki-repo/&quot;&gt;Creating a development munki_repo&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on May 17, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Github Two-factor Authentication with SourceTree]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/05/14/github-two-factor-authentication/" />
-  <id>http://localhost:4000/blog/2014/05/14/github-two-factor-authentication</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/05/14/github-two-factor-authentication/" />
+  <id>http://clburlison.com/blog/2014/05/14/github-two-factor-authentication</id>
   <updated>2014-05-15T00:00:00-00:00</updated>
   <published>2014-05-14T23:48:17-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;I finally got around to setting up two-factor authentication on my Github account. The process went quite smoothly, until I started to play around with  &lt;a href=&quot;http://www.sourcetreeapp.com/&quot;&gt;SourceTree&lt;/a&gt; and I found out that I was unable to push commits to a git repo.&lt;/p&gt;
@@ -866,20 +866,20 @@ sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier testin
 
 &lt;p&gt;Updated: May 15th, 2014 - Add KB link from atlassian. Thanks &lt;a href=&quot;https://twitter.com/kieransenior/statuses/466879257864847360&quot;&gt;@kieransenior&lt;/a&gt;.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/05/14/github-two-factor-authentication/&quot;&gt;Github Two-factor Authentication with SourceTree&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on May 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/05/14/github-two-factor-authentication/&quot;&gt;Github Two-factor Authentication with SourceTree&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on May 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Why I love my job?]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/05/06/why-i-love-my-job/" />
-  <id>http://localhost:4000/blog/2014/05/06/why-i-love-my-job</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/05/06/why-i-love-my-job/" />
+  <id>http://clburlison.com/blog/2014/05/06/why-i-love-my-job</id>
   <updated>2014-05-16T00:00:00-00:00</updated>
   <published>2014-05-06T00:05:31-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;&lt;strong&gt;I get to be everyone’s white knight&lt;/strong&gt;&lt;br /&gt;
@@ -899,19 +899,19 @@ sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier testin
 
 &lt;p&gt;TLDR: Information Technology allows you to help others. Pretty cool feeling when you get to help people on a daily basis. &lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/05/06/why-i-love-my-job/&quot;&gt;Why I love my job?&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on May 06, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/05/06/why-i-love-my-job/&quot;&gt;Why I love my job?&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on May 06, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Things learned from boxen]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/24/things-learned-from-boxen/" />
-  <id>http://localhost:4000/blog/2014/04/24/things-learned-from-boxen</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/04/24/things-learned-from-boxen/" />
+  <id>http://clburlison.com/blog/2014/04/24/things-learned-from-boxen</id>
   <published>2014-04-24T11:55:48-05:00</published>
   <updated>2014-04-24T11:55:48-05:00</updated>
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;h2 id=&quot;what-is-boxen&quot;&gt;What is boxen?&lt;/h2&gt;
@@ -937,7 +937,7 @@ sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier testin
 &lt;p&gt;One of the issues I ran into while looking at boxen was storing personal information in a public github repo. You could make your boxen repo private but that was not the method I wanted to take. I could also just copy all my private information after the initial boxen setup but does that not defeat the main purpose of boxen? Luckily Graham had already found out a solution which is to use Dropbox for everything that should not be shared with others. Before I continue on let me put a disclaimer that if you plan on storing ssh keys, license files, or really personal information you really need to enable two-step verification. Attached &lt;a href=&quot;https://www.dropbox.com/help/363/en&quot;&gt;here&lt;/a&gt; is the setup guide as this is very important for you to do.&lt;/p&gt;
 
 &lt;p&gt;You setup 2fa for Drobox, right? If you have not what are you waiting for? Now that your Dropbox is secure or at least more secure, I would create a directory structure that matches OS X. This might make for long paths while creating settings in puppet code but having a logical file-management system that actually matches where the files are actually being placed by boxen will help. Below is a screenshot of my directory structure as of this writing.&lt;br /&gt;
-&lt;img src=&quot;http://localhost:4000/images/posts/2014-04-24/Dropbox-config.png&quot; alt=&quot;dropbox-config&quot; /&gt; &lt;/p&gt;
+&lt;img src=&quot;http://clburlison.com/images/posts/2014-04-24/Dropbox-config.png&quot; alt=&quot;dropbox-config&quot; /&gt; &lt;/p&gt;
 
 &lt;h3 id=&quot;no-really-how-can-i-get-started&quot;&gt;No really how can I get started?&lt;/h3&gt;
 &lt;ul&gt;
@@ -949,20 +949,20 @@ sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier testin
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Boxen is free to use. Allows you to configure existing computers, bootstrap new computers, and keep an online documentation detailed of all the custom settings that you love about your computer. Boxen is also a great way to get started with puppet. &lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/24/things-learned-from-boxen/&quot;&gt;Things learned from boxen&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 24, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/04/24/things-learned-from-boxen/&quot;&gt;Things learned from boxen&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 24, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Enable AirDrop on Ethernet]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/18/enable-airdrop-on-ethernet/" />
-  <id>http://localhost:4000/blog/2014/04/18/enable-airdrop-on-ethernet</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/04/18/enable-airdrop-on-ethernet/" />
+  <id>http://clburlison.com/blog/2014/04/18/enable-airdrop-on-ethernet</id>
   <updated>2014-05-06T00:00:00-00:00</updated>
   <published>2014-04-18T08:43:36-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;A quick post over enabling AirDrop to use an ethernet connection along with the default wireless connection. &lt;/p&gt;
@@ -994,20 +994,20 @@ sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier testin
 &lt;p&gt;Article: 
 &lt;a href=&quot;http://support.apple.com/kb/ht4783&quot;&gt;Mac Basics: AirDrop&lt;/a&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/18/enable-airdrop-on-ethernet/&quot;&gt;Enable AirDrop on Ethernet&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/04/18/enable-airdrop-on-ethernet/&quot;&gt;Enable AirDrop on Ethernet&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Setting up octopress]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/15/setting-up-octopress/" />
-  <id>http://localhost:4000/blog/2014/04/15/setting-up-octopress</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/04/15/setting-up-octopress/" />
+  <id>http://clburlison.com/blog/2014/04/15/setting-up-octopress</id>
   <updated>2014-04-21T00:00:00-00:00</updated>
   <published>2014-04-15T00:00:00-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Setting up a blog can be a time consuming task. Setting up a blog that is created from static (markdown) files can be much more time consuming. In this post, I list references to most of the custom changes that were made to this site.&lt;/p&gt;
@@ -1030,7 +1030,7 @@ Article: &lt;a href=&quot;http://aijazansari.com/2012/08/27/how-to-customize-oct
 &lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
 &lt;p&gt;###Monthly Archive Sidebar
 The setup for this plugin is really well done in the help file for the repo so I shall direct you there.&lt;br /&gt;
-&lt;img src=&quot;http://localhost:4000/images/posts/2014-04-15/monthly_archives.png&quot; alt=&quot;Monthly Archives&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;http://clburlison.com/images/posts/2014-04-15/monthly_archives.png&quot; alt=&quot;Monthly Archives&quot; /&gt;&lt;br /&gt;
 Article: &lt;a href=&quot;https://github.com/rcmdnk/monthly-archive&quot;&gt;Github-Plugin&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;categories&quot;&gt;Categories&lt;/h3&gt;
@@ -1039,7 +1039,7 @@ Article: &lt;a href=&quot;https://github.com/matthiasbeyer/jekyll_group_categori
 
 &lt;h3 id=&quot;tag-cloud-sidebar&quot;&gt;Tag Cloud (sidebar)&lt;/h3&gt;
 &lt;p&gt;The setup for this plugin is really well done in the help file for the repo so I shall direct you there.&lt;br /&gt;
-&lt;img src=&quot;http://localhost:4000/images/posts/2014-04-15/tag_cloud.png&quot; alt=&quot;Tag Cloud&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;http://clburlison.com/images/posts/2014-04-15/tag_cloud.png&quot; alt=&quot;Tag Cloud&quot; /&gt;&lt;br /&gt;
 Article: &lt;a href=&quot;https://github.com/tokkonopapa/octopress-tagcloud&quot;&gt;Github-Plugin&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you would like your tags to show up in a vertical view visit the following link.&lt;br /&gt;
@@ -1061,20 +1061,20 @@ Article: &lt;a href=&quot;http://www.narga.net/improve-octopress-advanced-tweaks
 &lt;a href=&quot;http://warpedvisions.org/projects/markdown-cheat-sheet.md&quot;&gt;Markdown Cheat Sheet&lt;/a&gt; , 
 &lt;a href=&quot;http://biancarelli.org/blog/2013/05/14/octopress-cheat-sheet&quot;&gt;Octopress Cheat Sheet&lt;/a&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/15/setting-up-octopress/&quot;&gt;Setting up octopress&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/04/15/setting-up-octopress/&quot;&gt;Setting up octopress&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Deploying Octopress to Amazon S3]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/04/deploying-octopress-to-amazon-s3/" />
-  <id>http://localhost:4000/blog/2014/04/04/deploying-octopress-to-amazon-s3</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/04/04/deploying-octopress-to-amazon-s3/" />
+  <id>http://clburlison.com/blog/2014/04/04/deploying-octopress-to-amazon-s3</id>
   <updated>2014-05-06T00:00:00-00:00</updated>
   <published>2014-04-04T15:08:15-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;h1 id=&quot;notice&quot;&gt;NOTICE&lt;/h1&gt;
@@ -1108,7 +1108,7 @@ python setup.py install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;creating-your-s3-bucket&quot;&gt;Creating your s3 bucket&lt;/h2&gt;
 &lt;p&gt;You will have to create your s3 bucket with in the &lt;a href=&quot;https://console.aws.amazon.com/s3/home&quot;&gt;Amazon AWS console&lt;/a&gt;. Create a bucket using the fully-qualified domain name of your blog &lt;code&gt;(e.g., www.example.com)&lt;/code&gt;. Open the Properties pane for your bucket, and then enable “Static web hosting”. Make note of the “endpoint”, something like &lt;code&gt;example.com.s3-website-us-east-1.amazonaws.com&lt;/code&gt;. You can use this directly, but most people will create a DNS CNAME pointing to it instead.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/2014-04-04/amazon_aws.png&quot; alt=&quot;Amazon AWS&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://clburlison.com/images/posts/2014-04-04/amazon_aws.png&quot; alt=&quot;Amazon AWS&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;modifying-your-rakefile&quot;&gt;Modifying your Rakefile&lt;/h2&gt;
 &lt;p&gt;Inside your octopress directory, you have a file &lt;code&gt;Rakefile&lt;/code&gt; that we need to make a few modifications to so that we can upload to Amazon s3. Start by editing the &lt;code&gt;deploy_default&lt;/code&gt; variable to be &lt;code&gt;s3&lt;/code&gt;. Next establish a new variable by adding this line into the file &lt;code&gt;s3_bucket = &quot;www.mywebsite.com&quot;&lt;/code&gt; modifying the website name. &lt;/p&gt;
@@ -1139,20 +1139,20 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Articles: &lt;a href=&quot;http://blog.jacobelder.com/2012/03/deploying-octopress-to-amazon-s3/&quot;&gt;Jacob Elder&lt;/a&gt;, &lt;a href=&quot;http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/&quot;&gt;Jerome Bernard&lt;/a&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/04/deploying-octopress-to-amazon-s3/&quot;&gt;Deploying Octopress to Amazon S3&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 04, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/04/04/deploying-octopress-to-amazon-s3/&quot;&gt;Deploying Octopress to Amazon S3&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Setting up a puppetmaster on Mavericks]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/" />
-  <id>http://localhost:4000/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/" />
+  <id>http://clburlison.com/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks</id>
   <updated>2014-05-22T00:00:00-00:00</updated>
   <published>2014-04-04T11:40:54-05:00</published>
   
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;h1 id=&quot;notice&quot;&gt;NOTICE&lt;/h1&gt;
@@ -1266,19 +1266,19 @@ sudo chmod &lt;span class=&quot;m&quot;&gt;644&lt;/span&gt; /Library/LaunchDaemo
 
 &lt;p&gt;Articles: &lt;a href=&quot;http://www.afp548.com/2013/02/26/setting-up-a-basic-3-1-x-puppet-master-on-os-x-10-8/&quot;&gt;afp548.com&lt;/a&gt;, &lt;a href=&quot;http://docs.puppetlabs.com/guides/installation.html#mac-os-x&quot;&gt;Puppetlabs Offical Documentation&lt;/a&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/&quot;&gt;Setting up a puppetmaster on Mavericks&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 04, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/&quot;&gt;Setting up a puppetmaster on Mavericks&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Shrinking the disk image of an OS X VM]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/04/01/shrinking-the-disk-image-of-an-os-x-vm/" />
-  <id>http://localhost:4000/blog/2014/04/01/shrinking-the-disk-image-of-an-os-x-vm</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/04/01/shrinking-the-disk-image-of-an-os-x-vm/" />
+  <id>http://clburlison.com/blog/2014/04/01/shrinking-the-disk-image-of-an-os-x-vm</id>
   <published>2014-04-01T08:49:20-05:00</published>
   <updated>2014-04-01T08:49:20-05:00</updated>
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Reducing the size of a guest OS X Virtual Machines’s vmdk file requires a few steps.  For a Windows VM’s, there is a tool from VMWare with a GUI.  Unfortunately, there is not an equivalent tool for the Mac guest VM.&lt;/p&gt;
@@ -1310,19 +1310,19 @@ sudo chmod &lt;span class=&quot;m&quot;&gt;644&lt;/span&gt; /Library/LaunchDaemo
 
 &lt;p&gt;Article: &lt;a href=&quot;http://blog.aitrus.com/2012/07/28/vmware-fusion-shrinking-the-disk-image-of-an-os-x-guest-vm/&quot;&gt;http://blog.aitrus.com/&lt;/a&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/04/01/shrinking-the-disk-image-of-an-os-x-vm/&quot;&gt;Shrinking the disk image of an OS X VM&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on April 01, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/04/01/shrinking-the-disk-image-of-an-os-x-vm/&quot;&gt;Shrinking the disk image of an OS X VM&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 01, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[First post]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/2014/03/31/first-post/" />
-  <id>http://localhost:4000/blog/2014/03/31/first-post</id>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/03/31/first-post/" />
+  <id>http://clburlison.com/blog/2014/03/31/first-post</id>
   <published>2014-03-31T23:38:41-05:00</published>
   <updated>2014-03-31T23:38:41-05:00</updated>
   <author>
     <name>Clayton Burlison</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;This blog is setup as a personal resource for myself. Eventually, I can grow the information on this blog so that others can gain some educational value from this being hosted.  &lt;/p&gt;
@@ -1330,7 +1330,7 @@ sudo chmod &lt;span class=&quot;m&quot;&gt;644&lt;/span&gt; /Library/LaunchDaemo
 &lt;p&gt;The site is being hosted on Amazon’s S3 backend with the content being created through &lt;a href=&quot;http://octopress.org/&quot;&gt;Octopress&lt;/a&gt;.
 Over the next months, I will be documenting how I setup Octopress with Amazon S3 along with customizing the layout of this site.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/2014/03/31/first-post/&quot;&gt;First post&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://localhost:4000&quot;&gt;Just another tech blog&lt;/a&gt; on March 31, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/03/31/first-post/&quot;&gt;First post&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on March 31, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
