@@ -9,6 +9,11 @@ keywords: octopress, markdown, customize, plugins, setup
 description: Go over customizing octopress and installing plugins.
 categories: [octopress]
 ---
+#NOTICE
+This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.
+
+---
+
 Setting up a blog can be a time consuming task. Setting up a blog that is created from static (markdown) files can be much more time consuming. In this post, I list references to most of the custom changes that were made to this site.
 
 ---

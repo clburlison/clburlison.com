@@ -54,6 +54,29 @@ task :deploy do
   puts status ? "Success" : "Failed"
 end
 
+desc 'Notify various services of the updated website'
+task :ping => ['ping:sitemap', 'ping:pingomatic']
+
+
+namespace :ping do
+  task :sitemap do
+    Net::HTTP.get(
+        'www.google.com',
+        '/webmasters/tools/ping?sitemap=' +
+        URI.escape(File.join(config['base_url'], 'sitemap.xml'))
+    )
+  end
+
+  task :pingomatic do
+    XMLRPC::Client.new('rpc.pingomatic.com', '/').call(
+      'weblogUpdates.extendedPing',
+      'Just another tech blog',
+      'http://clburlison.com',
+      'http://clburlison.com/sitemap.xml'
+    )
+  end
+end
+
 
 desc "Commit and deploy _site/"
 task :push => [:build, :commit, :build, :deploy] do

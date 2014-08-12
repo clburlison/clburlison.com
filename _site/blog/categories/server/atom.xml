@@ -139,7 +139,7 @@
   <title><![CDATA[Category: server | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/server/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-08-11T21:04:20-05:00</updated>
+  <updated>2014-08-11T23:44:24-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -153,12 +153,7 @@
     <link href="http://clburlison.com/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/"/>
     <updated>2014-04-04T11:40:54-05:00</updated>
     <id>http://clburlison.com/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks</id>
-    <content type="html"><![CDATA[<h1 id="notice">NOTICE</h1>
-<p>This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.</p>
-
-<hr />
-
-<p>For various reasons I decided to set up my puppetmaster on an OS X install of Mavericks instead of what I would consider the norm, being a linux distro. Here are the results. This documentation is strongly based on the article by Nate Walck on afp548.com.</p>
+    <content type="html"><![CDATA[<p>For various reasons I decided to set up my puppetmaster on an OS X install of Mavericks instead of what I would consider the norm, being a linux distro. Here are the results. This documentation is strongly based on the article by Nate Walck on afp548.com.</p>
 
 <hr />
 

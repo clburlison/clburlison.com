@@ -139,7 +139,7 @@
   <title><![CDATA[Category: octopress | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-08-11T21:04:20-05:00</updated>
+  <updated>2014-08-11T23:44:24-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -153,7 +153,12 @@
     <link href="http://clburlison.com/blog/2014/04/15/setting-up-octopress/"/>
     <updated>2014-04-15T00:00:00-05:00</updated>
     <id>http://clburlison.com/blog/2014/04/15/setting-up-octopress</id>
-    <content type="html"><![CDATA[<p>Setting up a blog can be a time consuming task. Setting up a blog that is created from static (markdown) files can be much more time consuming. In this post, I list references to most of the custom changes that were made to this site.</p>
+    <content type="html"><![CDATA[<h1 id="notice">NOTICE</h1>
+<p>This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.</p>
+
+<hr />
+
+<p>Setting up a blog can be a time consuming task. Setting up a blog that is created from static (markdown) files can be much more time consuming. In this post, I list references to most of the custom changes that were made to this site.</p>
 
 <hr />
 
