@@ -12,7 +12,7 @@ image:
 
 My name is Clayton Burlison and I am a Macintosh administrator based in Texas, with an interest in Open Source products.  
 
-I have been managing Macintosh computers since 2009, and now I am lucky enough to be managing Macs full time. Articles on this site will include information related to [osx](/blog/categories/osx/), [munki](/blog/categories/munki/), reposado, [automation](/blog/categories/automation/), and more. The Macintosh community is an amazing resource for users both new and old alike. Hopefully you can find something helpful on this blog...my attempt at giving a little back to the community.  
+I have been managing Macintosh computers since 2009, and now I am lucky enough to be managing Macs full time. Articles on this site will include information related to [osx](/blog/tags/osx/), [munki](/blog/tags/munki/), reposado, [automation](/blog/tags/automation/), and more. The Macintosh community is an amazing resource for users both new and old alike. Hopefully you can find something helpful on this blog...my attempt at giving a little back to the community.  
 
 Many articles on this site will have external references. If you feel I have material on this site and did not give credit where due please contact me by email and I will get this fixed.  
 

@@ -1,0 +1,316 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Category: server &#8211; Just another tech blog</title>
+
+<meta name="keywords" content="">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Category: server">
+
+<meta name="twitter:site" content="@clburlison">
+<meta name="twitter:creator" content="@clburlison">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://clburlison.com/images/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Category: server">
+
+<meta property="og:url" content="http://clburlison.com/blog/tags/server/atom.xml">
+<meta property="og:site_name" content="Just another tech blog">
+
+
+
+
+
+<link rel="canonical" href="http://clburlison.com/blog/tags/server/atom.xml">
+<link href="http://clburlison.com/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://clburlison.com/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://clburlison.com/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://clburlison.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://clburlison.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://clburlison.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://clburlison.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://clburlison.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://clburlison.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://clburlison.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://clburlison.com/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://clburlison.com">Just another tech blog</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+					    
+					        
+					    
+					    <li><a href="http://clburlison.com/about/" >About</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://clburlison.com/resources/" >Resources</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://clburlison.com/blog/archives/" >Archives</a></li>
+					  
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+
+
+	<img src="http://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+
+<h3>Clayton Burlison</h3>
+<p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
+<a href="mailto:clburlison@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+<a href="http://twitter.com/clburlison" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://facebook.com/clburlison" class="author-social" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+
+<a href="http://linkedin.com/in/clburlison" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/clburlison" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+<a href="http://steamcommunity.com/id/DancingMonkey" class="author-social" target="_blank"><i class="fa fa-steam-square"></i> Steam</a>
+  </div>
+  <article>
+    <h1>Category: server</h1>
+    <div class="article-wrap">
+      <?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: server | Just another tech blog]]></title>
+  <link href="http://clburlison.com/blog/tags/server/atom.xml" rel="self"/>
+  <link href="http://clburlison.com/"/>
+  <updated>2014-08-11T20:52:04-05:00</updated>
+  <id>http://clburlison.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up a puppetmaster on Mavericks]]></title>
+    <link href="http://clburlison.com/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/"/>
+    <updated>2014-04-04T11:40:54-05:00</updated>
+    <id>http://clburlison.com/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks</id>
+    <content type="html"><![CDATA[<h1 id="notice">NOTICE</h1>
+<p>This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.</p>
+
+<hr />
+
+<p>For various reasons I decided to set up my puppetmaster on an OS X install of Mavericks instead of what I would consider the norm, being a linux distro. Here are the results. This documentation is strongly based on the article by Nate Walck on afp548.com.</p>
+
+<hr />
+
+<h3 id="introduction-to-puppet">Introduction to puppet</h3>
+<p>Puppet is a service that is normally ran in a client/server setup that helps manage and configure devices. Since I am an OS X administrator, this article will be coving the installation and configuration on an OS X platform. While many sysadmins will prefer server installation on a linux distro I simply did not want to mess with getting a Virtual Machine approved in my environment. Below are the steps that I took to set up a puppetmaster on an OS X Mavericks install.  </p>
+
+<h3 id="pre-steps">Pre-steps</h3>
+<p>Setting up dns, creating a CNAME record, verifying dns records, etc. Aka all the things I should have done but did not. I will go ahead and mention now that if you are doing this for production taking a moment to do this correctly the first time will save you hours of headache down the road. Since I do not have control over network settings at work, I skipped these steps and decided to use the server hostnames in my case. Please refer to the <a href="http://www.afp548.com/2013/02/26/setting-up-a-basic-3-1-x-puppet-master-on-os-x-10-8/">article</a> by Nate if you want to do things the approved way.</p>
+
+<h3 id="install-the-software">Install the software</h3>
+<p>Next, we must install Puppet on our master.  The Reference Manual has a section specifically for OS X regarding the puppet install. For Mavericks, you will want at least <strong>Puppet version 3.2.X</strong> or higher. You will also want to install <strong>Facter, and Hiera</strong>.</p>
+
+<p>Each of these pieces of software can be obtained from <a href="http://downloads.puppetlabs.com/mac/">here</a>. (After downloading, you will want to install each of the three packages. A control click might be needed if you have Gatekeeper enabled.)</p>
+
+<p>The puppet service account should be created automatically. It is good practice to double checking this by running. Check for Puppet user: 
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">id puppet</code></pre></div>  </p>
+
+<p>The command above should list the puppet user’s uid, gid and groups.  If you get ‘id: puppet: no such user’ instead, then you will need to create the user manually.  Create the service account and puppet group using the following two commands (As per the Reference Manual):</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo puppet resource group puppet <span class="nv">ensure</span><span class="o">=</span>present
+sudo puppet resource user puppet <span class="nv">ensure</span><span class="o">=</span>present <span class="nv">gid</span><span class="o">=</span>puppet <span class="nv">shell</span><span class="o">=</span>’/sbin/nologin’</code></pre></div></p>
+
+<p>You also do not want this puppet user to appear at the login window (since it is a service account), so run the following command to hide it (or you can set it via MCX, Profile, etc):</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo defaults write /Library/Preferences/com.apple.loginwindow Hide500Users -boolean YES</code></pre></div></p>
+
+<h3 id="settings-up-our-puppetmaster">Settings up our puppetmaster</h3>
+<p>Now we will make changes to the default puppet configuration for our server. This can be done with <strong>sudo nano /etc/puppet/puppet.conf</strong> then enter the following text. Save with “Ctrl + X”</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Default Puppet Settings</span>
+<span class="nv">server</span> <span class="o">=</span> server_host_name_here <span class="c"># default is ‘puppet’</span>
+<span class="nv">report</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="nv">pluginsync</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="nv">certname</span> <span class="o">=</span> server.company.com <span class="o">(</span>The FQDN of the machine that is running puppet<span class="o">)</span></code></pre></div></p>
+
+<p>Also, since pluginsync is enabled by default, create the modules folder and make sure the puppet user owns it. We can create our manifests directory while we are at it. The latter command will create the default <em>site.pp</em> file:</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo mkdir /etc/puppet/modules
+sudo chown puppet /etc/puppet/modules
+sudo mkdir /etc/puppet/manifests
+sudo touch /etc/puppet/manifests/site.pp
+sudo chown puppet /etc/puppet/manifests/site.pp</code></pre></div></p>
+
+<p>Lastly, run puppet as a master for the first time using the following command:</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo puppet master –debug –verbose –no-daemonize</code></pre></div></p>
+
+<p>Because we are running puppet as a master, it will generate a CA (Certificate Authority) so it can securely talk to clients and create other folder structure that the master needs to function.</p>
+
+<h4 id="launchdaemon-setup">LaunchDaemon setup</h4>
+<p>Puppet is now fully configured as a basic master, but we are missing one key component: a service to make sure that Puppet is running.  Since we are setting this up on OS X, we will use a launchd job.  The Puppet documentation on setting up the launchd item can be found <a href="http://docs.puppetlabs.com/guides/installation.html#with-launchd">here</a>.  In this documentation, Puppet Labs has provided us with a launchd item that can take care of starting our puppet master for us.  You can view the original plist <a href="http://docs.puppetlabs.com/guides/installation.html#mac-os-x">here</a> or copy it from the box.</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;?xml <span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span> <span class="nv">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span>?&gt;
+<span class="p">&amp;</span>lt<span class="p">;</span>!DOCTYPE plist PUBLIC “-//Apple Computer//DTD PLIST 1.0//EN” “http://www.apple.com/DTDs/PropertyList-1.0.dtd”<span class="p">&amp;</span>gt<span class="p">;</span>
+&lt;plist <span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span>&gt;&lt;/plist&gt;&lt;/p&gt;
+&lt;dict&gt;
+        &lt;key&gt;EnvironmentVariables&lt;/key&gt;
+        &lt;dict&gt;
+                &lt;key&gt;PATH&lt;/key&gt;
+                &lt;string&gt;/sbin:/usr/sbin:/bin:/usr/bin&lt;/string&gt;
+                &lt;key&gt;RUBYLIB&lt;/key&gt;
+                &lt;string&gt;/usr/lib/ruby/site_ruby/1.8/&lt;/string&gt;
+        &lt;/dict&gt;
+        &lt;key&gt;Label&lt;/key&gt;
+        &lt;string&gt;com.puppetlabs.puppetmaster&lt;/string&gt;
+        &lt;key&gt;OnDemand&lt;/key&gt;
+        &lt;<span class="nb">false</span> /&gt;
+        &lt;key&gt;ProgramArguments&lt;/key&gt;
+        &lt;array&gt;
+                &lt;string&gt;/usr/bin/puppet&lt;/string&gt;
+                &lt;string&gt;master&lt;/string&gt;
+                &lt;string&gt;--verbose&lt;/string&gt;
+                &lt;string&gt;--no-daemonize&lt;/string&gt;
+        &lt;/array&gt;
+        &lt;key&gt;RunAtLoad&lt;/key&gt;
+        &lt;<span class="nb">true</span> /&gt;
+        &lt;key&gt;ServiceDescription&lt;/key&gt;
+        &lt;string&gt;Puppetmaster Daemon&lt;/string&gt;
+        &lt;key&gt;ServiceIPC&lt;/key&gt;
+        &lt;<span class="nb">false</span> /&gt;
+        &lt;key&gt;StandardErrorPath&lt;/key&gt;
+        &lt;string&gt;/var/log/puppet/puppetmaster.err&lt;/string&gt;
+        &lt;key&gt;StandardOutPath&lt;/key&gt;
+        &lt;string&gt;/var/log/puppet/puppetmaster.out&lt;/string&gt;
+&lt;/dict&gt;
+&lt;p&gt;<span class="p">&amp;</span>lt<span class="p">;</span>/plist<span class="p">&amp;</span>gt<span class="p">;</span></code></pre></div></p>
+
+<p>Save the contents of this file into <strong>/Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist</strong> . Also, make sure the permissions are correct on the file:</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo chown root:wheel /Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist&lt;br /&gt;
+sudo chmod <span class="m">644</span> /Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist</code></pre></div></p>
+
+<p>Lastly, load the launchd using launchctl:</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo launchctl load -w /Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist</code></pre></div></p>
+
+<p>We should now have a fully functional puppetmaster running on OS X Mavericks. Note that this is running with the default WEBrick server that comes with puppet. While this should be okay for development it is not suitable for production. Methods for scaling Puppet can be found on the <a href="http://docs.puppetlabs.com/guides/scaling.html">Scaling Puppet</a> page.</p>
+
+<p>More information about puppet will be published in the future. I am going through beta testing with Puppet at the time of this writing.</p>
+
+<hr />
+
+<p>Articles: <a href="http://www.afp548.com/2013/02/26/setting-up-a-basic-3-1-x-puppet-master-on-os-x-10-8/">afp548.com</a>, <a href="http://docs.puppetlabs.com/guides/installation.html#mac-os-x">Puppetlabs Offical Documentation</a></p>
+]]></content>
+  </entry>
+  
+</feed>
+    </div><!-- /.article-wrap -->
+    
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div class="google-ads">
+  <!-- 320 x 50 ad -->
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client=""
+       data-ad-slot=""></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+<span>&copy; 2014 Clayton Burlison. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://clburlison.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://clburlison.com/assets/js/scripts.min.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-49614309-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+          
+
+</body>
+</html>

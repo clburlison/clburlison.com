@@ -1,0 +1,580 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Category: munki &#8211; Just another tech blog</title>
+
+<meta name="keywords" content="">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Category: munki">
+
+<meta name="twitter:site" content="@clburlison">
+<meta name="twitter:creator" content="@clburlison">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://clburlison.com/images/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Category: munki">
+
+<meta property="og:url" content="http://clburlison.com/blog/tags/munki/atom.xml">
+<meta property="og:site_name" content="Just another tech blog">
+
+
+
+
+
+<link rel="canonical" href="http://clburlison.com/blog/tags/munki/atom.xml">
+<link href="http://clburlison.com/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://clburlison.com/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://clburlison.com/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://clburlison.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://clburlison.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://clburlison.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://clburlison.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://clburlison.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://clburlison.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://clburlison.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://clburlison.com/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://clburlison.com">Just another tech blog</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+					    
+					        
+					    
+					    <li><a href="http://clburlison.com/about/" >About</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://clburlison.com/resources/" >Resources</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://clburlison.com/blog/archives/" >Archives</a></li>
+					  
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+
+
+	<img src="http://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+
+<h3>Clayton Burlison</h3>
+<p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
+<a href="mailto:clburlison@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+<a href="http://twitter.com/clburlison" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://facebook.com/clburlison" class="author-social" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+
+<a href="http://linkedin.com/in/clburlison" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/clburlison" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+<a href="http://steamcommunity.com/id/DancingMonkey" class="author-social" target="_blank"><i class="fa fa-steam-square"></i> Steam</a>
+  </div>
+  <article>
+    <h1>Category: munki</h1>
+    <div class="article-wrap">
+      <?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: munki | Just another tech blog]]></title>
+  <link href="http://clburlison.com/blog/tags/munki/atom.xml" rel="self"/>
+  <link href="http://clburlison.com/"/>
+  <updated>2014-08-11T20:52:04-05:00</updated>
+  <id>http://clburlison.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Show Help Desk Information]]></title>
+    <link href="http://clburlison.com/blog/2014/07/14/show-helpdesk-info/"/>
+    <updated>2014-07-14T17:47:53-05:00</updated>
+    <id>http://clburlison.com/blog/2014/07/14/show-helpdesk-info</id>
+    <content type="html"><![CDATA[<p>Display useful information on your Desktop using Geektool. Make troubleshooting network issues for your end users easier. Find your hostname faster. The amount of useful information is limitless. If you can script it…you can display it.  </p>
+
+<p><img src="/images/posts/2014-07-14/current_info.png" width="400" height="100" title="My Results" ><br />
+My Geektools Results </p>
+
+<section id="table-of-contents" class="toc">
+  <header>
+    <h3>Overview</h3>
+  </header>
+<div id="drawer">
+<ul id="markdown-toc">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#what-is-it">What is it?</a>    <ul>
+      <li><a href="#the-script">The Script</a></li>
+    </ul>
+  </li>
+  <li><a href="#created-by-erik-gomez">Created by Erik Gomez</a>    <ul>
+      <li><a href="#script-variables">Script Variables</a></li>
+      <li><a href="#display-computer-names">Display Computer Names</a></li>
+      <li><a href="#display-user-name">Display User Name</a></li>
+      <li><a href="#display-operating-system-and-sub-build">Display Operating System and Sub Build</a></li>
+      <li><a href="#display-hardware-id">Display Hardware ID</a></li>
+      <li><a href="#spacing-to-make-things-pretty">Spacing to make things pretty</a></li>
+      <li><a href="#this-will-show-the-current-ip-addresses">This will show the Current IP addresses.</a></li>
+      <li><a href="#display-current-wireless-ssid">Display current wireless SSID</a></li>
+      <li><a href="#spacing-to-make-things-pretty-1">Spacing to make things pretty</a>        <ul>
+          <li><a href="#technology-support">Technology Support</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#how-do-you-use-it">How do you use it?</a>    <ul>
+      <li><a href="#modify-the-script">Modify the script</a></li>
+      <li><a href="#creating-the-profiles">Creating the profiles</a>        <ul>
+          <li><a href="#part-1---login-profile">Part 1 - Login profile</a></li>
+          <li><a href="#part-2---organization-profile">Part 2 - Organization profile</a></li>
+        </ul>
+      </li>
+      <li><a href="#deploying-your-profiles">Deploying your Profiles</a></li>
+    </ul>
+  </li>
+  <li><a href="#ending-notes">Ending Notes</a>    <ul>
+      <li><a href="#dependencies">Dependencies</a></li>
+      <li><a href="#credits">Credits</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</section>
+<!-- /#table-of-contents -->
+
+<hr />
+
+<h1 id="introduction">Introduction</h1>
+<p>Firstly, I take no credit for this valuable resource. All credit should go to Erik Gomez from the munki-dev <a href="https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY">mailing list</a>. All I have done is modified the script to work in my environment. Modifications included removing some excess <code>if</code>/ <code>then</code> statements, remove the MAC address, adding current SSID, and a few other tweaks so the script played nicely as a profile. The writing is on the wall, mcx is slowing dying or at least it is becoming a less preferred method of managing preferences.</p>
+
+<p><img src="/images/posts/2014-07-14/eriks_info.png" width="400" height="100" title="Eriks Results" ><br />
+Erik’s Original Desktop Results  </p>
+
+<p><strong>Requirements</strong> <em>-You will want to download and save these somewhere.</em></p>
+
+<ul>
+  <li><a href="http://projects.tynsoe.org/en/geektool/download.php">Geektool</a></li>
+  <li><a href="https://github.com/timsutton/mcxToProfile">mcxToProfile</a></li>
+  <li><a href="https://github.com/timsutton/make-profile-pkg">make-profile-pkg</a></li>
+  <li><a href="https://gist.github.com/clburlison/af2a1afe01fb9aff9288">Gist files for this project</a></li>
+  <li><a href="http://clburlison.com/images/posts/2014-07-14/Geektool-login-item.mobileconfig">Geektool-login-item.mobileconfig</a></li>
+</ul>
+
+<h1 id="what-is-it">What is it?</h1>
+<p>In short, this is simply a bash script that Geektool is running in the background. It defaults to refreshing every 30 seconds, though you can modify this in the <code>org.tynsoe.geeklet.shell.plist</code> file, which has negligible performance toll on Mac clients. You want the refresh rate low so when the network drops or you get a new IP address you can easily see changes.</p>
+
+<h2 id="the-script">The Script</h2>
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno">  1</span> <span class="c">#!/bin/sh&lt;/p&gt;</span>
+<span class="lineno">  2</span> 
+<span class="lineno">  3</span> &lt;h1 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;created-by-erik-gomez&quot;</span>&gt;Created by Erik Gomez&lt;/h1&gt;
+<span class="lineno">  4</span> &lt;p&gt;# Modified 30-10-2013
+<span class="lineno">  5</span> <span class="c">##### White Backgrounds will kill you!</span>
+<span class="lineno">  6</span> <span class="c"># Modified by Clayton Burlison for use at Birdville ISD</span>
+<span class="lineno">  7</span> <span class="c"># Date Modified June 25, 2014&lt;/p&gt;</span>
+<span class="lineno">  8</span> 
+<span class="lineno">  9</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;script-variables&quot;</span>&gt;Script Variables&lt;/h4&gt;
+<span class="lineno"> 10</span> &lt;p&gt;Computer_Name<span class="o">=</span>&lt;code&gt;scutil --get ComputerName&lt;/code&gt;
+<span class="lineno"> 11</span> <span class="nv">HostName</span><span class="o">=</span>&lt;code&gt;scutil --get HostName&lt;/code&gt;
+<span class="lineno"> 12</span> <span class="nv">LocalHostName</span><span class="o">=</span>&lt;code&gt;scutil --get LocalHostName&lt;/code&gt;
+<span class="lineno"> 13</span> <span class="nv">OS_Version</span><span class="o">=</span>&lt;code&gt;sw_vers <span class="p">|</span> grep <span class="s2">&quot;ProductVersion:&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 14</span> <span class="nv">OS_Sub_Build</span><span class="o">=</span>&lt;code&gt;sw_vers <span class="p">|</span> grep <span class="s2">&quot;BuildVersion:&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 15</span> <span class="nv">Hardware_ID</span><span class="o">=</span>&lt;code&gt;sysctl hw.model <span class="p">|</span> grep <span class="s2">&quot;hw.model:&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 16</span> <span class="nv">IP_en0</span><span class="o">=</span>&lt;code&gt;ifconfig en0 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 17</span> <span class="nv">IP_en1</span><span class="o">=</span>&lt;code&gt;ifconfig en1 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 18</span> <span class="nv">IP_en2</span><span class="o">=</span>&lt;code&gt;ifconfig en2 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 19</span> <span class="nv">IP_en3</span><span class="o">=</span>&lt;code&gt;ifconfig en3 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 20</span> <span class="nv">IP_en4</span><span class="o">=</span>&lt;code&gt;ifconfig en4 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 21</span> <span class="nv">IP_en5</span><span class="o">=</span>&lt;code&gt;ifconfig en5 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 22</span> <span class="nv">SSID</span><span class="o">=</span>&lt;code&gt;/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I <span class="p">|</span> awk <span class="s1">&#39;/ SSID/ {print substr($0, index($0, $2))}&#39;</span>&lt;/code&gt;&lt;/p&gt;
+<span class="lineno"> 23</span> 
+<span class="lineno"> 24</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;display-computer-names&quot;</span>&gt;Display Computer Names&lt;/h4&gt;
+<span class="lineno"> 25</span> &lt;p&gt;echo “Computer Name: <span class="nv">$Computer_Name</span>”<span class="p">;</span>
+<span class="lineno"> 26</span> <span class="c">#echo “Host Name: $HostName”;</span>
+<span class="lineno"> 27</span> <span class="c">#echo “LocalHost Name: $LocalHostName”;&lt;/p&gt;</span>
+<span class="lineno"> 28</span> 
+<span class="lineno"> 29</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;display-user-name&quot;</span>&gt;Display User Name&lt;/h4&gt;
+<span class="lineno"> 30</span> &lt;p&gt;echo “Username: <span class="nv">$USER</span>”<span class="p">;</span>&lt;/p&gt;
+<span class="lineno"> 31</span> 
+<span class="lineno"> 32</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;display-operating-system-and-sub-build&quot;</span>&gt;Display Operating System and Sub Build&lt;/h4&gt;
+<span class="lineno"> 33</span> &lt;p&gt;echo “Operating System: <span class="nv">$OS_Version</span>”_“<span class="nv">$OS_Sub_Build</span>”<span class="p">;</span>&lt;/p&gt;
+<span class="lineno"> 34</span> 
+<span class="lineno"> 35</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;display-hardware-id&quot;</span>&gt;Display Hardware ID&lt;/h4&gt;
+<span class="lineno"> 36</span> &lt;p&gt;echo “Hardware ID: <span class="nv">$Hardware_ID</span>”<span class="p">;</span>&lt;/p&gt;
+<span class="lineno"> 37</span> 
+<span class="lineno"> 38</span> &lt;h3 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;spacing-to-make-things-pretty&quot;</span>&gt;Spacing to make things pretty&lt;/h3&gt;
+<span class="lineno"> 39</span> &lt;p&gt;echo “”&lt;/p&gt;
+<span class="lineno"> 40</span> 
+<span class="lineno"> 41</span> &lt;h3 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;this-will-show-the-current-ip-addresses&quot;</span>&gt;This will show the Current IP addresses.&lt;/h3&gt;
+<span class="lineno"> 42</span> &lt;p&gt;### This should show all IP Addresses:
+<span class="lineno"> 43</span> <span class="c">### Wi-FI, Ethernet 1 &amp;amp; 2, and even Thunderbolt NICs</span>
+<span class="lineno"> 44</span> <span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en0</span>” <span class="o">=</span> ‘’ <span class="o">]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="o">[</span> “<span class="nv">$IP_en1</span>” <span class="o">=</span> ‘’ <span class="o">]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="o">[</span> “<span class="nv">$IP_en2</span>” <span class="o">=</span> ‘’ <span class="o">]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="o">[</span> “<span class="nv">$IP_en3</span>” <span class="o">=</span> ‘’ <span class="o">]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="o">[</span> “<span class="nv">$IP_en4</span>” <span class="o">=</span> ‘’ <span class="o">]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="o">[</span> “<span class="nv">$IP_en5</span>” <span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 45</span> 	<span class="k">then</span>
+<span class="lineno"> 46</span> 		<span class="nb">echo</span> “IP Address: No connection found”
+<span class="lineno"> 47</span> 	<span class="k">else</span>
+<span class="lineno"> 48</span> 		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en0</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 49</span> 			<span class="k">then</span> 
+<span class="lineno"> 50</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en0</span>”
+<span class="lineno"> 51</span>  			<span class="k">else</span>
+<span class="lineno"> 52</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 53</span>  		<span class="k">fi</span>
+<span class="lineno"> 54</span>  		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en1</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 55</span> 			<span class="k">then</span> 
+<span class="lineno"> 56</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en1</span>”
+<span class="lineno"> 57</span>  			<span class="k">else</span>
+<span class="lineno"> 58</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 59</span>  		<span class="k">fi</span>
+<span class="lineno"> 60</span>  		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en2</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 61</span> 			<span class="k">then</span> 
+<span class="lineno"> 62</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en2</span>”
+<span class="lineno"> 63</span>  			<span class="k">else</span>
+<span class="lineno"> 64</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 65</span>  		<span class="k">fi</span>
+<span class="lineno"> 66</span>  		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en3</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 67</span> 			<span class="k">then</span> 
+<span class="lineno"> 68</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en3</span>”
+<span class="lineno"> 69</span>  			<span class="k">else</span>
+<span class="lineno"> 70</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 71</span>  		<span class="k">fi</span>
+<span class="lineno"> 72</span>  		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en4</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 73</span> 			<span class="k">then</span> 
+<span class="lineno"> 74</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en4</span>”
+<span class="lineno"> 75</span>  			<span class="k">else</span>
+<span class="lineno"> 76</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 77</span>  		<span class="k">fi</span>
+<span class="lineno"> 78</span>  		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en5</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 79</span> 			<span class="k">then</span> 
+<span class="lineno"> 80</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en5</span>”
+<span class="lineno"> 81</span>  			<span class="k">else</span>
+<span class="lineno"> 82</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 83</span>  		<span class="k">fi</span>
+<span class="lineno"> 84</span> <span class="k">fi</span>		&lt;/p&gt;
+<span class="lineno"> 85</span> 
+<span class="lineno"> 86</span> &lt;h3 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;display-current-wireless-ssid&quot;</span>&gt;Display current wireless SSID&lt;/h3&gt;
+<span class="lineno"> 87</span> &lt;p&gt;if <span class="o">[</span> “<span class="nv">$SSID</span>” <span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 88</span> 	<span class="k">then</span>
+<span class="lineno"> 89</span> 		<span class="nb">echo</span> “Wireless SSID: Disconnected”
+<span class="lineno"> 90</span> 	<span class="k">else</span>
+<span class="lineno"> 91</span> 		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$SSID</span>” <span class="o">=</span> “           SSID: “ <span class="o">]</span>
+<span class="lineno"> 92</span> 			<span class="k">then</span>
+<span class="lineno"> 93</span> 				<span class="nb">echo</span> “Wireless SSID: Disconnected”
+<span class="lineno"> 94</span> 			<span class="k">else</span>
+<span class="lineno"> 95</span> 				<span class="nb">echo</span> “Wireless SSID: <span class="nv">$SSID</span>”
+<span class="lineno"> 96</span> 		<span class="k">fi</span>	
+<span class="lineno"> 97</span> <span class="k">fi</span>&lt;/p&gt;
+<span class="lineno"> 98</span> 
+<span class="lineno"> 99</span> &lt;h3 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;spacing-to-make-things-pretty-1&quot;</span>&gt;Spacing to make things pretty&lt;/h3&gt;
+<span class="lineno">100</span> &lt;p&gt;echo “”&lt;/p&gt;
+<span class="lineno">101</span> 
+<span class="lineno">102</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;technology-support&quot;</span>&gt;Technology Support&lt;/h4&gt;
+<span class="lineno">103</span> &lt;p&gt;echo “For Help Desk Support call: x3819”</code></pre></div></p>
+
+<h1 id="how-do-you-use-it">How do you use it?</h1>
+<p>Great now what? Well that script does nothing for you. Unless you want to manually copy and paste on every computer…for every user profile…in your entire fleet. So lets automate that process a bit. If you have not done so already you will want to download all five (5) of the requirements above. This includes two command lines tools created by Tim Sutton, Geektool.app, the gist with all the necessary plist files, and a profile to launch Geektool at login.</p>
+
+<h2 id="modify-the-script">Modify the script</h2>
+<p><em>Note:</em> If you wish to use the script as is, feel free to skip below to creating the profiles.  </p>
+
+<p>This will be the most time consuming process so start small. Lets start by changing the Help Desk Phone Number in my script. Open the main plist <code>org.tynsoe.geeklet.shell.plist</code> from the gist zip file. Scroll down to line 116 and change the following line to something useful.</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#### Technology Support</span>
+<span class="nb">echo</span> “For Help Desk Support call: x3819”</code></pre></div></p>
+
+<p>Now is a good time to mention that the script inside of the plist has been modified from the original <code>geektool_script.sh</code> script. The plist file needs to have <code>&amp;</code> encoded as <code>&amp;amp;</code>. For that reason if you make to many changes to the script you will need to test for compatibility with GeekTool. Testing will be outside the scope of this post but a hint if you are running into errors: open Geektool manually and paste your script directly into the application.</p>
+
+<h2 id="creating-the-profiles">Creating the profiles</h2>
+<p>Note for this to work, I have found that having two profiles was the easiest solution but your milage may vary. The main reason for splitting the profiles into two, was to use one profile for launching Geektool at login and the second profile deals with organization settings for Geektool: refresh rate, script, color of the text, etc.</p>
+
+<h3 id="part-1---login-profile">Part 1 - Login profile</h3>
+<p>With that out of the way, I will go ahead and say I cheated and created the <code>Geektool-login-item.mobileconfig</code> with my profile server since it was easier than creating from scratch. You should have downloaded the referenced profile under the requirement section. You can modify this profile to have your organization name by opening the file in a <a href="http://www.barebones.com/products/textwrangler/">text editing</a> application (aka not TextEdit.app). Search for “Birdville ISD” and change to your organization name. Save and exit.</p>
+
+<h3 id="part-2---organization-profile">Part 2 - Organization profile</h3>
+<p>Now we are going to use Tim Sutton’s mcxToProfile. This tool will combine the three plist files below: </p>
+
+<ul>
+  <li><code>org.tynsoe.geeklet.shell.plist</code></li>
+  <li><code>org.tynsoe.GeekTool.plist</code></li>
+  <li><code>org.tynsoe.geektool3.plist</code> into a single usable profile. </li>
+</ul>
+
+<p>Put mcxToProfile.py in the same directory as your three plist files. After changing directory to the folder with your files run the following in Terminal:</p>
+
+<p><strong>Creating your profile</strong>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mcxToProfile.py -r org.tynsoe.geeklet.shell.plist org.tynsoe.GeekTool.plist <span class="se">\</span>
+org.tynsoe.geektool3.plist –identifier BISD-GeekTool –manage Often</code></pre></div></p>
+
+<p><em>Note:</em> you will want to change your identifier to something useful for your organization. </p>
+
+<p>This will create a second profile with the name of your “identifier + .mobileconfig”</p>
+
+<h2 id="deploying-your-profiles">Deploying your Profiles</h2>
+<p>This is kind of the bonus round. If you have made it this far you should have two working profiles (one was already made for you). If you have a MDM server you could simply upload the profiles to that, you could have users double click the files, etc. I however choose to install the profiles via a package for my users.</p>
+
+<p>Luckily, Tim has made our life easy once again. This time we will use <code>make-profile-pkg</code> to create a package containing our profiles.  If you are using munki it is even easier, as this tool can even automatically import into your munki repository. </p>
+
+<p>Making sure your .mobileconfig files and <code>make-profile-pkg.py</code> are in the same directory. Run the following to create your install package.</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">make_profile_pkg.py –munki-import Geektool-login-item.mobileconfig</code></pre></div></p>
+
+<p>In the following, you will need to modify the profile name with your correct file.</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">make_profile_pkg.py –munki-import identifier.mobileconfig</code></pre></div></p>
+
+<p><em>Note:</em> you will want to remove the <code>--munki-import</code> flag if you just want to create a package.</p>
+
+<h1 id="ending-notes">Ending Notes</h1>
+<p>Hopefully you find this as useful as I did. If you run into any issues feel free to contact me on Twitter or email.</p>
+
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+  <li>Geektool.app needs to be located in /Applications/.</li>
+  <li>A logout/login is required after the profiles are installed for the information to be displayed.</li>
+  <li>If one or both of your profiles are removed…bye bye Desktop Info.</li>
+  <li>This script is only good for network interfaces up to 5. If you need more add them in the script.</li>
+  <li>Tested with 10.7 Lion through 10.9 Mavericks with success. </li>
+  <li>The text is white by default. If your desktop background is a bright color then you will want to change the text color using Geektool.</li>
+</ul>
+
+<h2 id="credits">Credits</h2>
+<p>Again, a giant thank you to Erik Gomez for sharing with the munki community. Without his original documentation I would have never gotten this to work. Thanks to Tim Sutton for providing awesome tools.  </p>
+
+<hr />
+
+<p>Articles: <a href="https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY">Using GeekTool to show HelpDesk Information</a>  </p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Creating a development munki_repo]]></title>
+    <link href="http://clburlison.com/blog/2014/05/17/creating-a-development-munki-repo/"/>
+    <updated>2014-05-17T07:51:22-05:00</updated>
+    <id>http://clburlison.com/blog/2014/05/17/creating-a-development-munki-repo</id>
+    <content type="html"><![CDATA[<p>I created a vagrant box that allows you create a completely self contained munki_repo for testing purposes. With the usage of <a href="https://puphpet.com">PuPHPet</a> the process was quite easy.</p>
+
+<p>This article describes basic usage and setup for the project <strong>munki.dev</strong>.</p>
+
+<section id="table-of-contents" class="toc">
+  <header>
+    <h3>Overview</h3>
+  </header>
+<div id="drawer">
+<ul id="markdown-toc">
+  <li><a href="#purpose">Purpose</a></li>
+  <li><a href="#required-software">Required software</a>    <ul>
+      <li><a href="#software-prerequisites-for-munkidev">Software prerequisites for munki.dev</a>        <ul>
+          <li><a href="#vagrant">Vagrant</a></li>
+          <li><a href="#virtualbox">Virtualbox</a></li>
+          <li><a href="#git">Git</a></li>
+          <li><a href="#munkitools">Munkitools</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#installation">Installation</a>    <ul>
+      <li><a href="#adding-the-hostname">Adding the hostname</a></li>
+      <li><a href="#munkirepo-modifications">munki_repo Modifications</a></li>
+    </ul>
+  </li>
+  <li><a href="#client-settings">Client Settings</a></li>
+  <li><a href="#ending-notes">Ending notes</a></li>
+</ul>
+
+  </div>
+</section>
+<!-- /#table-of-contents -->
+
+<hr />
+
+<h1 id="purpose">Purpose</h1>
+
+<p>Setting up and maintaining a web server can be a pretty complex job. Apache is great at actually serving files but the initial setup can be tedious. Thanks to the many resources that are available on the internet this can become less tedious. Which brings me to the true purpose of the post…a way to setup a web server so I can test software patches using Munki.</p>
+
+<p>In case you are unaware, Munki is a popular way to manage software installs on Mac OSX created by Greg Neagle. Learning Munki can be a time consuming process due to the many layers of the management system. One of the more important layers is the munki_repo, which is what this project is dedicated at helping with. This will allow you to setup a development environment which is self-contained on your administrative machine. Once the initial setup has been made you will be able to test changes locally without the need for a second machine.<br />
+<em>Disclaimer</em>: this vagrant box is not designed for usage in production.</p>
+
+<h1 id="required-software">Required software</h1>
+
+<p>To use this project you will need to make sure you have the following software installed on your machine. All of these products can be obtained for free from the links provided. Below the prerequisites, each of the individual pieces of software have a short description explaining what they do. If you have some or any experience with the software needed for this you will likely want to skip past to the <a href="./#installation">Installation</a>.</p>
+
+<h2 id="software-prerequisites-for-munkidev">Software prerequisites for munki.dev</h2>
+
+<ul>
+  <li>Vagrant  http://www.vagrantup.com</li>
+  <li>VirtualBox  https://www.virtualbox.org</li>
+  <li>Git  http://sourceforge.net/projects/git-osx-installer/</li>
+  <li>Munkitools  <a href="https://munkibuilds.org/munkitools-latest.dmg">munkitools v.1- latest.dmg</a> or <a href="https://munkibuilds.org/munkitools2-latest.pkg">munkitools v.2 - latest.pkg</a>  </li>
+</ul>
+
+<h3 id="vagrant">Vagrant</h3>
+<p>This is the backbone of this project. Vagrant’s job is to interface directly with Virtualbox to create the virtual machine, download a ubuntu box, configure the box with puppet (plus other magic), and finally make any final changes needed for the munki.dev environment to work as intended. If this is the first project that are using Vagrant let me go ahead and say do not freak out. You do not actually have to know how to use Vagrant to take advantage of this project.</p>
+
+<h3 id="virtualbox">Virtualbox</h3>
+<p>A virtualization product created by Oracle that is free to use. At the time of this writing, I am using version 4.3.8, though munki.dev and Vagrant should not have issues with other versions so long as no incompatibilities arise from future releases of the software. </p>
+
+<h3 id="git">Git</h3>
+<p>Git is a way to store files and the changes that go along with those files in a logical manner. For this project, Git is the tool that will be used to download munki.dev and potentially a test munki_repo from from GitHub.
+If you would like to learn more, I recommend reading this <a href="http://git-scm.com/book/en/Getting-Started-Git-Basics">Git Basics</a> page.</p>
+
+<h3 id="munkitools">Munkitools</h3>
+<p>This is the client software needed for Munki to work on Macintosh Clients created by Greg Neagle. This technically is not a requirement for the administrative machine but will make your life easier when making changes to the munki_repo. For that reason alone it is strongly recommended. Any clients that you wish to connect to this local webshare will require munkitools to be installed.</p>
+
+<h1 id="installation">Installation</h1>
+<p>Installing is quite straight forward once you have the required software. Simply issue the following commands in Terminal. You will want to <code>cd</code> to a directory of your choosing. I will pick <code>~/src/mine</code>. This will download the project from github.</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir -p ~/src/mine/
+<span class="nb">cd</span> ~/src/mine/
+git clone https://github.com/clburlison/munki.dev.git munki.dev
+<span class="nb">cd </span>munki.dev</code></pre></div></p>
+
+<p>This will pull down all the necessary files from Github.</p>
+
+<h2 id="adding-the-hostname">Adding the hostname</h2>
+<p>One change you will want to make is adding munki.dev to your <code>/etc/hosts</code> file. This allows you to connect to the web share as munki.dev instead of the IP address (default 192.168.56.150). </p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo nano /etc/hosts</code></pre></div></p>
+
+<p>Add the following line to the bottom of your file.</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">192.168.56.150  munki.dev</code></pre></div></p>
+
+<p>Save with Control + X.</p>
+
+<p><strong>Note</strong>: at this current time there a known bug that prevents usage of the hostname from working when using an alias folder, aka Option 2 of the <code>bootstrap.sh</code>. Until this is fixed, please use the IP address for testing purposes instead of the hostname. Follow the issue <a href="https://github.com/clburlison/munki.dev/issues/1">here</a>.</p>
+
+<h2 id="munkirepo-modifications">munki_repo Modifications</h2>
+<p>Make these changes in the <code>bootstrap.sh</code> file. </p>
+
+<p>Currently with Option 1, a developmental munki_repo will be pulled down via git from <a href="https://github.com/clburlison/munki_repo.dev">munki_repo.dev</a>. With Option 2, you can point this virtual machine to a munki_repo that exists on your local admin machine. This means theoretically you could have a complete copy of your production munki_repo on your localhost or an external hard drive. This would allow you to point to that folder and start testing/development immediately.</p>
+
+<p>This will default to downloading a the testing munki_repo since this will allow new users to get started with the least amount of work. To get the virtual machine started run the following command.</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">./bootstrap</code></pre></div></p>
+
+<p><em>Note</em>: the default Option 1 will take some time to download. This is due to the software packages in the repo. It might even look like the command has become stalled. Go grab a coffee.</p>
+
+<h1 id="client-settings">Client Settings</h1>
+<p>At this point, the munki_repo should be up and running. You will want to setup a client computer to connect to the munki_repo. To do this you will need to run the following command on a client computer.</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL “http://192.168.56.150/munki_repo”
+sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier testing</code></pre></div></p>
+
+<p>Now you should ready to test away. Open up <code>/Applications/Managed Software Center.app</code> if you are testing Munkitools v2 or <code>/Applications/Utilities/Managed Software Update.app</code> if you are testing Munkitools v1.</p>
+
+<h1 id="ending-notes">Ending notes</h1>
+<p>If you have any problems please create an <a href="https://github.com/clburlison/munki.dev/issues">Issue</a> on Github. Let me know what you think on Twitter, Email, etc.</p>
+
+<p>Also, go check out <a href="https://github.com/hjuutilainen/munkiadmin">MunkiAdmin</a> for a GUI to modify your munki_repo. Another great resource is <a href="https://github.com/wollardj/Mandrill">Mandrill</a>, a web front end for managing you munki_repo. Lastly, check out the <a href="https://code.google.com/p/munki/wiki/GettingStartedWithMunki">Getting Started with Munki</a> guide if you have any questions about munki.  </p>
+]]></content>
+  </entry>
+  
+</feed>
+    </div><!-- /.article-wrap -->
+    
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div class="google-ads">
+  <!-- 320 x 50 ad -->
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client=""
+       data-ad-slot=""></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+<span>&copy; 2014 Clayton Burlison. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://clburlison.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://clburlison.com/assets/js/scripts.min.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-49614309-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+          
+
+</body>
+</html>

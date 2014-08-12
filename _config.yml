@@ -23,7 +23,7 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
-category_dir: blog/categories
+category_dir: blog/tags
 
 # Site owner
 owner:
