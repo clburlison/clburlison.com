@@ -4,13 +4,36 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://clburlison.com" />
-<updated>2014-08-11T23:45:53-05:00</updated>
+<updated>2014-08-12T23:18:56-05:00</updated>
 <id>http://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
   <uri>http://clburlison.com/</uri>
   <email>clburlison@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Google Classroom]]></title>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/08/12/google-classroom/" />
+  <id>http://clburlison.com/blog/2014/08/12/google-classroom</id>
+  <published>2014-08-12T00:00:00-05:00</published>
+  <updated>2014-08-12T00:00:00-05:00</updated>
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://clburlison.com</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Chromebooks are pretty popular in Education due to their low learning curve, low price, and relatively high usability. Google is helping promote a paperless class with the Classroom.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Hopefully Classroom will help you spend a little less time at the photocopier and a little more time doing what you love—teaching.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Read more: &lt;a href=&quot;http://googleenterprise.blogspot.com/2014/08/more-teaching-less-tech-ing-google.html&quot;&gt;More Teaching Less Tech-ing&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/08/12/google-classroom/&quot;&gt;Google Classroom&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on August 12, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
