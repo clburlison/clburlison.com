@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://clburlison.com/blog/2014/08/14/vimium/</loc>
+    <lastmod>2014-08-14T15:50:38-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://clburlison.com/blog/2014/08/12/google-classroom/</loc>
     <lastmod>2014-08-12T00:00:00-05:00</lastmod>
     <priority>0.8</priority>
@@ -112,36 +118,36 @@
   
   
   <url>
-    <loc>http://clburlison.com/about/</loc>
-    <lastmod>2014-08-12T23:28:24-05:00</lastmod>
+    <loc>http://clburlison.com/blog/archives/</loc>
+    <lastmod>2014-08-14T16:44:39-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://clburlison.com/resources/</loc>
-    <lastmod>2014-08-12T23:28:24-05:00</lastmod>
+    <lastmod>2014-08-14T16:44:39-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://clburlison.com/</loc>
-    <lastmod>2014-08-12T23:28:24-05:00</lastmod>
+    <lastmod>2014-08-14T16:44:39-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://clburlison.com/resume/</loc>
-    <lastmod>2014-08-12T23:28:24-05:00</lastmod>
+    <lastmod>2014-08-14T16:44:39-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://clburlison.com/blog/archives/</loc>
-    <lastmod>2014-08-12T23:28:24-05:00</lastmod>
+    <loc>http://clburlison.com/about/</loc>
+    <lastmod>2014-08-14T16:44:39-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Category: jekyll &#8211; Just another tech blog</title>
+<title>Category: plugins &#8211; Just another tech blog</title>
 
 <meta name="keywords" content="">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Category: jekyll">
+<meta name="twitter:title" content="Category: plugins">
 
 <meta name="twitter:site" content="@clburlison">
 <meta name="twitter:creator" content="@clburlison">
@@ -23,16 +23,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Category: jekyll">
+<meta property="og:title" content="Category: plugins">
 
-<meta property="og:url" content="http://clburlison.com/blog/categories/jekyll/atom.xml">
+<meta property="og:url" content="http://clburlison.com/blog/categories/plugins/atom.xml">
 <meta property="og:site_name" content="Just another tech blog">
 
 
 
 
 
-<link rel="canonical" href="http://clburlison.com/blog/categories/jekyll/atom.xml">
+<link rel="canonical" href="http://clburlison.com/blog/categories/plugins/atom.xml">
 <link href="http://clburlison.com/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
 
 
@@ -131,13 +131,13 @@
 
   </div>
   <article>
-    <h1>Category: jekyll</h1>
+    <h1>Category: plugins</h1>
     <div class="article-wrap">
       <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: jekyll | Just another tech blog]]></title>
-  <link href="http://clburlison.com/blog/categories/jekyll/atom.xml" rel="self"/>
+  <title><![CDATA[Category: plugins | Just another tech blog]]></title>
+  <link href="http://clburlison.com/blog/categories/plugins/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
   <updated>2014-08-14T16:44:39-05:00</updated>
   <id>http://clburlison.com/</id>
@@ -149,13 +149,25 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Moving to Plain Jekyll]]></title>
-    <link href="http://clburlison.com/blog/2014/08/09/moving-to-plain-jekyll/"/>
-    <updated>2014-08-09T01:06:34-05:00</updated>
-    <id>http://clburlison.com/blog/2014/08/09/moving-to-plain-jekyll</id>
-    <content type="html"><![CDATA[<p>Moved the blog over from Octopress to a plain Jekyll setup. This allows me to have a bit more control while also removing some of the fluff that was installed by Octopress that I did not use. I am very glad to have found such a great theme created by Michael Rose. I will release another post once I have had a little more time to play around. As of this moment, it is about 10 times faster to generate the website on my laptop. The <code>--watch</code> flag from raw jekyll much faster at recreating pages.</p>
+    <title type="html"><![CDATA[Vimium]]></title>
+    <link href="http://clburlison.com/blog/2014/08/14/vimium/"/>
+    <updated>2014-08-14T15:50:38-05:00</updated>
+    <id>http://clburlison.com/blog/2014/08/14/vimium</id>
+    <content type="html"><![CDATA[<h1 id="the-hackers-sbrowsers-plugin">The Hacker’s <s>Browser</s> Plugin</h1>
 
-<p>Still need to add tags and a few other plugins.</p>
+<p>A plugin that increases speed and efficiency while browsing the internet? Yes please! I only recently found out about Vimium and wanted to share my thoughts on this plugin. </p>
+
+<p>We all spend too much time on the internet. Reading forums, blogs, facebook, twitter, news, youtube,…the list goes on and on. Phil Crosby and Ilya Sukhar created Vimium to speed up the navigation of websites. No longer must you use your mouse to click that link, or trackpad to scroll down. Check out the keyboard shortcuts in the picture above. The shortcuts mimic the vim text based editor, so if you have any prior knowledge of vim remembering the shortcuts is quite easy.</p>
+
+<p><a href="http://vimium.github.io/">Vimium - Project Website</a></p>
+
+<h2 id="demo-video">Demo Video</h2>
+
+<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/t67Sn0RGK54" allowfullscreen></iframe></div></p>
+
+<h2 id="thoughts">Thoughts</h2>
+<p>Vimium is amazing! Even if you only use 3-4 of the features selecting links and scrolling become much faster. I would recomend anyone who uses Chrome to at least give the plugin a try. Once it is installed if you ever forget the shortcuts just type a <code>?</code>.</p>
+
 ]]></content>
   </entry>
   
