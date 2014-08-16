@@ -79,5 +79,5 @@ end
 
 
 desc "Commit and deploy _site/"
-task :push => [:build, :commit, :build, :deploy] do
+task :push => [:build, :commit, :deploy] do
 end

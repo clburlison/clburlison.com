@@ -50,7 +50,7 @@ module Jekyll
 
   end
 
-  # The CategoryFeed class creates an Atom feed for the specified category.
+  # # The CategoryFeed class creates an Atom feed for the specified category.
   class CategoryFeed < Page
 
     # Initializes a new CategoryFeed.

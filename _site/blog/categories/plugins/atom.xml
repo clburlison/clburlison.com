@@ -139,7 +139,7 @@
   <title><![CDATA[Category: plugins | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/plugins/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-08-15T21:14:40-05:00</updated>
+  <updated>2014-08-16T11:18:48-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -193,6 +193,8 @@
 
 <span>&copy; 2014 Clayton Burlison. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
 
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100737449); }catch(e){}</script>
   </footer>
 </div><!-- /.footer-wrap -->
 
