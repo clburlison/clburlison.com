@@ -18,22 +18,22 @@
 <meta name="twitter:creator" content="@clburlison">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://localhost:4000/images/">
+<meta name="twitter:image" content="http://clburlison.com/images/">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Category: geektool">
 
-<meta property="og:url" content="http://localhost:4000/blog/categories/geektool/atom.xml">
+<meta property="og:url" content="http://clburlison.com/blog/categories/geektool/atom.xml">
 <meta property="og:site_name" content="Just another tech blog">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/blog/categories/geektool/atom.xml">
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+<link rel="canonical" href="http://clburlison.com/blog/categories/geektool/atom.xml">
+<link href="http://clburlison.com/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
 
 
 <!-- http://t.co/dKP3o1e -->
@@ -42,32 +42,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<link rel="stylesheet" href="http://clburlison.com/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
 
 <!-- HTML5 Shiv and Media Query Support -->
 <!--[if lt IE 9]>
-	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
-	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+	<script src="http://clburlison.com/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://clburlison.com/assets/js/vendor/respond.min.js"></script>
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<script src="http://clburlison.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<link rel="shortcut icon" href="http://clburlison.com/favicon.ico">
 <!-- 32x32 -->
-<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<link rel="shortcut icon" href="http://clburlison.com/favicon.png">
 <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://clburlison.com/images/apple-touch-icon-precomposed.png">
 <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://clburlison.com/images/apple-touch-icon-72x72-precomposed.png">
 <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://clburlison.com/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://clburlison.com/images/apple-touch-icon-144x144-precomposed.png">
 
 </head>
 
@@ -77,7 +77,7 @@
 
 <div class="navigation-wrapper">
 	<div class="site-name">
-		<a href="http://localhost:4000">Just another tech blog</a>
+		<a href="http://clburlison.com">Just another tech blog</a>
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
@@ -86,17 +86,17 @@
 					    
 					        
 					    
-					    <li><a href="http://localhost:4000/about/" >About</a></li>
+					    <li><a href="http://clburlison.com/about/" >About</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="http://localhost:4000/resources/" >Resources</a></li>
+					    <li><a href="http://clburlison.com/resources/" >Resources</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="http://localhost:4000/blog/archives/" >Archives</a></li>
+					    <li><a href="http://clburlison.com/blog/archives/" >Archives</a></li>
 					  
 		    </ul>
 		</nav>
@@ -111,7 +111,7 @@
 
 
 
-	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+	<img src="http://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
 
 <h3>Clayton Burlison</h3>
 <p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
@@ -137,10 +137,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: geektool | Just another tech blog]]></title>
-  <link href="http://localhost:4000/blog/categories/geektool/atom.xml" rel="self"/>
-  <link href="http://localhost:4000/"/>
-  <updated>2014-09-16T23:28:39-05:00</updated>
-  <id>http://localhost:4000/</id>
+  <link href="http://clburlison.com/blog/categories/geektool/atom.xml" rel="self"/>
+  <link href="http://clburlison.com/"/>
+  <updated>2014-09-16T23:32:04-05:00</updated>
+  <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
     
@@ -150,9 +150,9 @@
   
   <entry>
     <title type="html"><![CDATA[Show Help Desk Information]]></title>
-    <link href="http://localhost:4000/blog/2014/07/14/show-helpdesk-info/"/>
+    <link href="http://clburlison.com/blog/2014/07/14/show-helpdesk-info/"/>
     <updated>2014-07-14T17:47:53-05:00</updated>
-    <id>http://localhost:4000/blog/2014/07/14/show-helpdesk-info</id>
+    <id>http://clburlison.com/blog/2014/07/14/show-helpdesk-info</id>
     <content type="html"><![CDATA[<p>Display useful information on your Desktop using Geektool. Make troubleshooting network issues for your end users easier. Find your hostname faster. The amount of useful information is limitless. If you can script it…you can display it.  </p>
 
 <p><img src="/images/posts/2014-07-14/current_info.png" width="400" height="100" title="My Results" ><br />
@@ -220,7 +220,7 @@ Erik’s Original Desktop Results  </p>
   <li><a href="https://github.com/timsutton/mcxToProfile">mcxToProfile</a></li>
   <li><a href="https://github.com/timsutton/make-profile-pkg">make-profile-pkg</a></li>
   <li><a href="https://gist.github.com/clburlison/af2a1afe01fb9aff9288">Gist files for this project</a></li>
-  <li><a href="http://localhost:4000/images/posts/2014-07-14/Geektool-login-item.mobileconfig">Geektool-login-item.mobileconfig</a></li>
+  <li><a href="http://clburlison.com/images/posts/2014-07-14/Geektool-login-item.mobileconfig">Geektool-login-item.mobileconfig</a></li>
 </ul>
 
 <h1 id="what-is-it">What is it?</h1>
@@ -434,8 +434,8 @@ org.tynsoe.geektool3.plist –identifier BISD-GeekTool –manage Often</code></p
 </div><!-- /.footer-wrap -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://clburlison.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://clburlison.com/assets/js/scripts.min.js"></script>
 
 <!-- Asynchronous Google Analytics snippet -->
 <script>
