@@ -5,40 +5,34 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Encrypted DMGs &#8211; Just another tech blog</title>
-<meta name="description" content="We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.
-
-">
+<title>Shellshock &#8211; Just another tech blog</title>
+<meta name="description" content="Everything you need to know about Shellshock for OS X in English.">
 <meta name="keywords" content="">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Encrypted DMGs">
-<meta name="twitter:description" content="We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.
-
-">
+<meta name="twitter:title" content="Shellshock">
+<meta name="twitter:description" content="Everything you need to know about Shellshock for OS X in English.">
 <meta name="twitter:site" content="@clburlison">
 <meta name="twitter:creator" content="@clburlison">
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://localhost:4000/images/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:4000/images/posts/2014-09-29/shellshock3.jpg">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Encrypted DMGs">
-<meta property="og:description" content="We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.
-
-">
-<meta property="og:url" content="http://localhost:4000/blog/2014/06/17/encrypted-dmgs/">
+<meta property="og:title" content="Shellshock">
+<meta property="og:description" content="Everything you need to know about Shellshock for OS X in English.">
+<meta property="og:url" content="http://localhost:4000/blog/2014/09/29/shellshock/">
 <meta property="og:site_name" content="Just another tech blog">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/blog/2014/06/17/encrypted-dmgs/">
+<link rel="canonical" href="http://localhost:4000/blog/2014/09/29/shellshock/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
 
 
@@ -110,6 +104,17 @@
 </div><!-- /.navigation-wrapper -->
 
 
+  <div class="image-wrap">
+  <img src=
+    
+      "http://localhost:4000/images/posts/2014-09-29/shellshock3.jpg"
+    
+  alt="Shellshock feature image">
+  
+    <span class="image-credit">Photo Credit: <a href="http://nghenhinvietnam.vn/tin-tuc/shellshock-bash-loi-bao-mat-gay-tac-hai-lon-hon-heartbleed-988.html">nghenhinvietnam</a></span>
+  
+  </div><!-- /.image-wrap -->
+
 
 <div id="main" role="main">
   <div class="article-author-side">
@@ -139,65 +144,57 @@
   <article>
     <div class="headline-wrap">
       
-        <h1><a href="http://localhost:4000/blog/2014/06/17/encrypted-dmgs/" rel="bookmark" title="Encrypted DMGs">Encrypted DMGs</a></h1>
+        <h1><a href="http://localhost:4000/blog/2014/09/29/shellshock/" rel="bookmark" title="Shellshock">Shellshock</a></h1>
       
     Categories: 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/osx/'>osx</a>
+    <a class='category' href='/blog/categories/bash/'>bash</a>
   
 </span>
 
 	 
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.</p>
+      <p>On September 24, 2014, a security vulnerability was publicly announced that affects a large percentage of Internet connected devices. This vulnerability, known as Shellshock, affects the Unix command shell Bash. Bash, the bourne again shell, is one of the most common applications on Unix based systems. Many devices running Mac OS X or Linux are affected by this serious exploit.</p>
 
-<h2 id="what-to-secure">What to secure</h2>
-<p>First, you can secure whatever files your heart desires: bank statements, work files, secret plans for that special vacation with the family, photos, passwords, etc. Pretty much anything you want, though fair-warning this is not a backup solution and if you forget your encryption password it will make accessing those files quite difficult. </p>
+<p>It is important to understand that this vulnerability could allow unauthorized access of your computer. Although this exploit has been around for over two decades do not underestimate the seriousness, immediate patching should be deployed when possible.</p>
 
-<p>The reason to secure files is because you do not want others to have access to your data. This will help protect you in case your laptop gets stolen or maybe it just get physically accessed by someone you know. This method will use a 256-bit AES encryption algorithm to secure your data. That being said if you use a simple password, <em>cough</em> <code>password</code> <em>cough</em>, then it is quite simple for someone to brute force hack that password and have access to your data. </p>
+<h2 id="patch">Patch</h2>
 
-<p><strong>Disclaimer</strong>: Nothing is 100% secure. This method is just another step that can help make it harder for someone to obtain your information. With enough time the right person could access these files but your average Joe is going to have a darn hard time.</p>
+<p><strong>OS X bash Update 1.0 may be obtained from the following webpages:</strong>
+<a href="">http://support.apple.com/kb/DL1767</a> – OS X Lion 
+<a href="">http://support.apple.com/kb/DL1768</a> – OS X Mountain Lion 
+<a href="">http://support.apple.com/kb/DL1769</a> – OS X Mavericks</p>
 
-<h1 id="creating-an-encrypted-dmg">Creating an encrypted DMG</h1>
-<p>Step 1 - Open Disk Utility<br />
-<img src="/images/posts/2014-06-17/step1.png" width="400" height="100" /></p>
+<p><em>released:</em> September 29th, 2014</p>
 
-<p>Step 2 - Create a Blank Disk Image…<br />
-<img src="/images/posts/2014-06-17/step2.png" width="600" height="400" /></p>
+<h2 id="future">Future</h2>
+<p>So if you install the patch you might think, “Great I’m done”, crisis adverted. False! Since the original Shellshock exploit (CVE-2014-6271) at least four additional exploits have been found. If you would like to test your Mac to see if you are vulnerable you can use the following <a href="https://github.com/hannob/bashcheck">script</a> to help identify exploits that you are susceptible to.</p>
 
-<p>Step 3 - Name your new dmg. Note the values shown are important.</p>
+<p>Additional bugs related to Shellshock:</p>
 
 <ul>
-  <li>Name: the mounted disk image name</li>
-  <li>Size: depends on your data needs</li>
-  <li>Format: the default <code>Mac OS Extended (Journaled)</code> should be fine for most needs</li>
-  <li>Encryption: use 256-bit AES unless you have a solid reason to not</li>
-  <li>Partitions: using <code>Single partition - GUID Partition Map</code> is a standard that is compatible with most Macs</li>
-  <li>Image Format: using <code>sparse disk image</code> will save space on your hard drive and only use the disk space needed by the dmg</li>
+  <li>CVE-2014-6271 (original shellshock)</li>
+  <li>CVE-2014-7169 (taviso bug)</li>
+  <li>CVE-2014-7186 (redir_stack bug)</li>
+  <li>CVE-2014-7187 (nested loops off by one)</li>
+  <li>CVE-2014-6277 (lcamtuf bug)</li>
 </ul>
 
-<p><img src="/images/posts/2014-06-17/step3.png" width="600" height="400" /></p>
+<p>You can use the following website if you would like to see the official reports <a href="https://cve.mitre.org">here</a>.</p>
 
-<p>Step 4 - Here you want to type a secure password<br />
-<img src="/images/posts/2014-06-17/step4.png" width="400" height="400" /></p>
+<p>At this point, the worst might be behind us. Pay attention to Apple updates, as future issues are reported, another patch for Bash will be most likely be released by Apple.</p>
 
-<p>Step 5 - If you click the key icon OS X will help you create a secure password using the Password Assistant<br />
-<img src="/images/posts/2014-06-17/step5.png" width="600" height="400" /></p>
+<hr />
 
-<p>Step 6 - Note the file names. This is your encrypted dmg. You can store files here just like a flash drive.<br />
-<img src="/images/posts/2014-06-17/step6.png" width="600" height="400" /></p>
-
-<p>Step 7 - If you eject your dmg you will be presented with this pop-up the next time you try to open the dmg. Type your encryption password to unlock the dmg.<br />
-<img src="/images/posts/2014-06-17/step7.png" width="400" height="100" /></p>
-
-<h2 id="video-showing-the-process">Video showing the process</h2>
-<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/zAc9H7AQ2TQ" allowfullscreen=""></iframe></div>
-
-<h1 id="conclusion">Conclusion</h1>
-<p>Creating an encrypted dmg is quite easy once you know the steps. My preference is to not store the password in your Keychain. If you are logged into your machine another users could walk right up and open the dmg without typing a password.</p>
+<p>Articles:<br />
+<a href="http://www.imore.com/apple-working-quickly-protect-os-x-against-shellshock-exploit">Apple working to protect OS X against shellshock</a>,<br />
+<a href="https://twitter.com/harryfike/status/516767315636285440">Bash Fix not in SUS</a>,<br />
+<a href="https://github.com/hannob/bashcheck">Github bashcheck</a>,<br />
+<a href="https://groups.google.com/forum/?fromgroups#!topic/macenterprise/o26UYKc2JvM">Remote exploit vulnerability in bash</a>,<br />
+<a href="http://www.pcworld.com/article/2688672/two-scenarios-that-would-make-os-x-vulnerable-to-the-shellshock-bug.html">What is Shellshock</a></p>
 
       <footer role="contentinfo">
         <div class="article-author-bottom">
@@ -224,16 +221,14 @@
 
 
         </div>
-        <p><b>Published: </b><time datetime="2014-06-17T19:49:02-05:00">June 17, 2014</time><br>
+        <p><b>Published: </b><time datetime="2014-09-29T22:55:49-05:00">September 29, 2014</time><br>
 		</p>
       </footer>
     </div><!-- /.article-wrap -->
     <center><nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/blog/2014/05/19/find-my-mac/" class="btn" title="Find My Mac">Previous article</a>
+        <a href="http://localhost:4000/blog/2014/09/09/java-coreos-docker-and-more/" class="btn" title="Java, CoreOS, Docker, & More">Previous article</a>
       
-      
-        <a href="http://localhost:4000/blog/2014/07/11/bender/" class="btn" title="Bender">Next article</a>
       
     </nav><!-- /.pagination --></center>
     <hr />
