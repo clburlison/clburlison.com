@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://clburlison.com" />
-<updated>2014-09-30T00:35:46-05:00</updated>
+<updated>2014-09-30T08:58:29-05:00</updated>
 <id>http://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
@@ -17,8 +17,9 @@
   <title type="html"><![CDATA[Shellshock]]></title>
   <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/09/29/shellshock/" />
   <id>http://clburlison.com/blog/2014/09/29/shellshock</id>
+  <updated>2014-09-30T00:00:00-00:00</updated>
   <published>2014-09-29T22:55:49-05:00</published>
-  <updated>2014-09-29T22:55:49-05:00</updated>
+  
   <author>
     <name>Clayton Burlison</name>
     <uri>http://clburlison.com</uri>
@@ -31,9 +32,9 @@
 &lt;h2 id=&quot;patch&quot;&gt;Patch&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;OS X bash Update 1.0 may be obtained from the following webpages:&lt;/strong&gt;
-&lt;a href=&quot;&quot;&gt;http://support.apple.com/kb/DL1767&lt;/a&gt; – OS X Lion 
-&lt;a href=&quot;&quot;&gt;http://support.apple.com/kb/DL1768&lt;/a&gt; – OS X Mountain Lion 
-&lt;a href=&quot;&quot;&gt;http://support.apple.com/kb/DL1769&lt;/a&gt; – OS X Mavericks&lt;/p&gt;
+&lt;a href=&quot;&quot;&gt;http://support.apple.com/kb/DL1767&lt;/a&gt; – OS X Lion&lt;br /&gt;
+&lt;a href=&quot;&quot;&gt;http://support.apple.com/kb/DL1768&lt;/a&gt; – OS X Mountain Lion&lt;br /&gt;
+&lt;a href=&quot;&quot;&gt;http://support.apple.com/kb/DL1769&lt;/a&gt; – OS X Mavericks  &lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;released:&lt;/em&gt; September 29th, 2014&lt;/p&gt;
 
@@ -58,8 +59,8 @@
 
 &lt;p&gt;Articles:&lt;br /&gt;
 &lt;a href=&quot;http://www.imore.com/apple-working-quickly-protect-os-x-against-shellshock-exploit&quot;&gt;Apple working to protect OS X against shellshock&lt;/a&gt;,&lt;br /&gt;
-&lt;a href=&quot;https://twitter.com/harryfike/status/516767315636285440&quot;&gt;Bash Fix not in SUS&lt;/a&gt;,&lt;br /&gt;
-&lt;a href=&quot;https://github.com/hannob/bashcheck&quot;&gt;Github bashcheck&lt;/a&gt;,&lt;br /&gt;
+&lt;a href=&quot;https://twitter.com/harryfike/status/516767315636285440&quot;&gt;Bash fix not in SUS&lt;/a&gt;,&lt;br /&gt;
+&lt;a href=&quot;https://github.com/hannob/bashcheck&quot;&gt;Github bashcheck script&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;https://groups.google.com/forum/?fromgroups#!topic/macenterprise/o26UYKc2JvM&quot;&gt;Remote exploit vulnerability in bash&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;http://www.pcworld.com/article/2688672/two-scenarios-that-would-make-os-x-vulnerable-to-the-shellshock-bug.html&quot;&gt;What is Shellshock&lt;/a&gt;&lt;/p&gt;
 

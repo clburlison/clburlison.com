@@ -2,7 +2,7 @@
 layout: post
 title: "Shellshock"
 date: 2014-09-29T22:55:49-05:00
-modified:
+modified: 2014-09-30
 categories: Bash
 excerpt: Everything you need to know about Shellshock for OS X in English.
 comments: true
@@ -21,9 +21,9 @@ It is important to understand that this vulnerability could allow unauthorized a
 ##Patch
 
 __OS X bash Update 1.0 may be obtained from the following webpages:__
-[http://support.apple.com/kb/DL1767]() – OS X Lion 
-[http://support.apple.com/kb/DL1768]() – OS X Mountain Lion 
-[http://support.apple.com/kb/DL1769]() – OS X Mavericks
+[http://support.apple.com/kb/DL1767]() – OS X Lion  
+[http://support.apple.com/kb/DL1768]() – OS X Mountain Lion  
+[http://support.apple.com/kb/DL1769]() – OS X Mavericks  
 
 _released:_ September 29th, 2014
 
@@ -46,7 +46,7 @@ At this point, the worst might be behind us. Pay attention to Apple updates, as 
 
 Articles:  
 [Apple working to protect OS X against shellshock](http://www.imore.com/apple-working-quickly-protect-os-x-against-shellshock-exploit),  
-[Bash Fix not in SUS](https://twitter.com/harryfike/status/516767315636285440),  
-[Github bashcheck](https://github.com/hannob/bashcheck),  
+[Bash fix not in SUS](https://twitter.com/harryfike/status/516767315636285440),  
+[Github bashcheck script](https://github.com/hannob/bashcheck),  
 [Remote exploit vulnerability in bash](https://groups.google.com/forum/?fromgroups#!topic/macenterprise/o26UYKc2JvM),  
 [What is Shellshock](http://www.pcworld.com/article/2688672/two-scenarios-that-would-make-os-x-vulnerable-to-the-shellshock-bug.html)
