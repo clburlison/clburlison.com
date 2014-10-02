@@ -18,22 +18,22 @@
 <meta name="twitter:creator" content="@clburlison">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://localhost:4000/images/">
+<meta name="twitter:image" content="http://clburlison.com/images/">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Setup Reposado + Margarita on Ubuntu 14.04">
 <meta property="og:description" content="A setup guide for Reposado and Margarita using Apache on Ubuntu 14.04 with notes on securing Margarita.">
-<meta property="og:url" content="http://localhost:4000/blog/2014/10/02/reposado-guide/">
+<meta property="og:url" content="http://clburlison.com/blog/2014/10/02/reposado-guide/">
 <meta property="og:site_name" content="Just another tech blog">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/blog/2014/10/02/reposado-guide/">
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+<link rel="canonical" href="http://clburlison.com/blog/2014/10/02/reposado-guide/">
+<link href="http://clburlison.com/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
 
 
 <!-- http://t.co/dKP3o1e -->
@@ -42,32 +42,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<link rel="stylesheet" href="http://clburlison.com/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
 
 <!-- HTML5 Shiv and Media Query Support -->
 <!--[if lt IE 9]>
-	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
-	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+	<script src="http://clburlison.com/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://clburlison.com/assets/js/vendor/respond.min.js"></script>
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<script src="http://clburlison.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<link rel="shortcut icon" href="http://clburlison.com/favicon.ico">
 <!-- 32x32 -->
-<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<link rel="shortcut icon" href="http://clburlison.com/favicon.png">
 <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://clburlison.com/images/apple-touch-icon-precomposed.png">
 <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://clburlison.com/images/apple-touch-icon-72x72-precomposed.png">
 <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://clburlison.com/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://clburlison.com/images/apple-touch-icon-144x144-precomposed.png">
 
 </head>
 
@@ -77,7 +77,7 @@
 
 <div class="navigation-wrapper">
 	<div class="site-name">
-		<a href="http://localhost:4000">Just another tech blog</a>
+		<a href="http://clburlison.com">Just another tech blog</a>
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
@@ -86,17 +86,17 @@
 					    
 					        
 					    
-					    <li><a href="http://localhost:4000/about/" >About</a></li>
+					    <li><a href="http://clburlison.com/about/" >About</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="http://localhost:4000/resources/" >Resources</a></li>
+					    <li><a href="http://clburlison.com/resources/" >Resources</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="http://localhost:4000/blog/archives/" >Archives</a></li>
+					    <li><a href="http://clburlison.com/blog/archives/" >Archives</a></li>
 					  
 		    </ul>
 		</nav>
@@ -111,7 +111,7 @@
 
 
 
-	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+	<img src="http://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
 
 <h3>Clayton Burlison</h3>
 <p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
@@ -133,7 +133,7 @@
   <article>
     <div class="headline-wrap">
       
-        <h1><a href="http://localhost:4000/blog/2014/10/02/reposado-guide/" rel="bookmark" title="Setup Reposado + Margarita on Ubuntu 14.04">Setup Reposado + Margarita on Ubuntu 14.04</a></h1>
+        <h1><a href="http://clburlison.com/blog/2014/10/02/reposado-guide/" rel="bookmark" title="Setup Reposado + Margarita on Ubuntu 14.04">Setup Reposado + Margarita on Ubuntu 14.04</a></h1>
       
     Categories: 
 
@@ -181,7 +181,7 @@
 <!-- /#table-of-contents -->
 
 <h1 id="intro">Intro</h1>
-<p>Why on earth are you creating another guide? Cannot you do that in Puppet or Docker? Well the short answer is yes but I could not find anything that covered all the criteria that I needed. The first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04. </p>
+<p>Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup.</p>
 
 <h1 id="the-software">The software</h1>
 <p>If you have not heard of <a href="https://github.com/wdas/reposado">reposado</a>. It is a set of tools that replicate the key functionality of Mac OS X Server’s Software Update Service.</p>
@@ -194,7 +194,9 @@
   </ul>
 </blockquote>
 
-<p>And <a href="https://github.com/jessepeterson/margarita">Margarita</a> is an add-on to reposado that gives you a web GUI!</p>
+<p>Plus, with reposado you can create multiple releases aka Production and Testing catalogs. </p>
+
+<p><a href="https://github.com/jessepeterson/margarita">Margarita</a> is an add-on to reposado that gives you a web GUI!</p>
 
 <blockquote>
   <p>Margarita is a web interface to reposado the Apple Software Update replication and catalog management tool. While the reposado command line administration tools work great for folks who are comfortable in that environment something a little more accesible might be desired.</p>
@@ -206,7 +208,7 @@
 
 <h1 id="the-install">The Install</h1>
 
-<p>As a matter of good practice, we are going to make sure our Ubuntu server is fully patched before we start. Then we will install <em>mod_wsgi, git, apache tools, python setuptools, curl, pip, and apache2</em>. Since Margarita runs on Flask, we will need to install that as well.</p>
+<p>As a matter of good practice, we are going to make sure our Ubuntu server is fully patched before we start. Then we will install <em>mod_wsgi, git, apache tools, python setuptools, curl, pip, and apache2</em>. Since Margarita runs on <em>Flask</em>, we will need to install that as well.</p>
 
 <h2 id="installing-required-software">Installing Required Software</h2>
 
@@ -215,7 +217,7 @@ sudo apt-get upgrade
 sudo apt-get -y install apache2-utils libapache2-mod-wsgi git python-setuptools python curl python-pip apache2
 sudo easy_install flask</code></pre></div>
 
-<p>You can install Reposado and Margarita anywhere you’d like, but I am going to use <em>/usr/local/asus</em> (which stands for Apple Software Update Server) just to keep things organized. The following commands will create the reposado, margarita, www and meta directories within <em>/usr/local/asus</em>. The <em>www</em> directory will be the location from which reposado’s catalogs and downloads will be served, and you can think of the <em>meta</em> directory as reposado’s work area. A link to the asus directory will also be created at your home.</p>
+<p>You can install Reposado and Margarita anywhere you would like, but I am going to use <em>/usr/local/asus</em> (which stands for Apple Software Update Server) just to keep things organized. The following commands will create the reposado, margarita, www and meta directories within <em>/usr/local/asus</em>. The <em>www</em> directory will be the location from which reposado’s catalogs and downloads will be served, and you can think of the <em>meta</em> directory as reposado’s work area. A link to the asus directory will also be created in your home directory for faster access.</p>
 
 <h3 id="clone-the-code-and-setup-the-directories">Clone the code and setup the directories:</h3>
 
@@ -242,18 +244,18 @@ Base URL <span class="k">for</span> your <span class="nb">local </span>Software 
 
 ./reposado/code/repo_sync <span class="c"># This will take a while</span></code></pre></div>
 
-<p><em>Note:</em> the repo_sync will download Apple catalogs + updates (if enabled). Grab a coffee could be upwards of 170GB.</p>
+<p><em>Note:</em> the repo_sync will download Apple catalogs + updates (if enabled). Grab a coffee, this could be upwards of 170GB.</p>
 
-<p>You have got Reposado fully installed and configured! Now we need to serve those files over http so clients can do something with the downloads.</p>
+<p>You now have Reposado fully installed and configured! Now we need to serve those files over http so clients can do something with the downloads.</p>
 
-<p>Now we can move on to setting up your Margarita front-end. We will start things off by borrowing from Jesse’s instructions, just to make sure things have been properly installed. Since Margarita and Reposado are both written in Python and share common tasks, it only makes sense that code is reused where possible; that is exactly what Jesse has done. So in order for Margarita to use Reposado’s code, it needs to be able to find it. We will need to create a few symbolic links to do this.</p>
+<p>Lets move on to setting up your Margarita front-end. We will start things off by borrowing from Jesse’s instructions, just to make sure things have been properly installed. Since Margarita and Reposado are both written in Python and share common tasks, it only makes sense that code is reused where possible; that is exactly what Jesse has done. So in order for Margarita to use Reposado’s code, it needs to be able to find it. We will need to create a few symbolic links to do this.</p>
 
 <h3 id="let-margarita-access-reposados-shared-resources">Let Margarita access Reposado’s shared resources:</h3>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">ln -s /usr/local/asus/reposado/code/reposadolib margarita/reposadolib
 ln -s /usr/local/asus/reposado/code/preferences.plist margarita/preferences.plist</code></pre></div>
 
-<p>At this point Margarita should be completely installed and configured. To test, run the following command and then point your favorite browser to <a href="">http://example.com:8089</a> (do not worry, port 8089 is just for this test). If all goes well, Margarita should load but without showing any updates. To see the updates, uncheck the “Hide commonly listed updates” button at the top of the page. If you still do not see any updates, you have encountered a problem and should look at the output in your terminal window to start troubleshooting.</p>
+<p>At this point, Margarita should be completely installed and configured. To test, run the following command and then point your favorite browser to <a href="">http://example.com:8089</a> (do not worry, port 8089 is just for this test). If all goes well, Margarita should load but without showing any updates. To see the updates, uncheck the “Hide commonly listed updates” button at the top of the page. If you still do not see any updates, you have encountered a problem and should look at the output in your terminal window to start troubleshooting.</p>
 
 <p><strong>Testing Margarita:</strong></p>
 
@@ -310,7 +312,7 @@ Listen 8089
 
 <p>Once done your files should look like the above.</p>
 
-<p><strong>Now lets get reposado and margarita conf files for apache.</strong></p>
+<p><strong>Now, lets get reposado and margarita configured with apache:</strong></p>
 
 <p><code>sudo nano /etc/apache2/sites-enabled/reposado.conf</code></p>
 
@@ -409,7 +411,7 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div>
 <hr />
 
 <h1 id="addendum-1-scheduling-reposync">Addendum 1: Scheduling repo_sync</h1>
-<p>Out of the box, reposado will not run the repo_sync command without your direct invocation. If you want your new SUS server to look for any new updates released by Apple on its own, leaving you to simply approve them, you can setup a simple cron job. Since it is probably sane for most environments to simply run this script once per day, fire up a sudo vim session and…</p>
+<p>Out of the box, reposado will not run the repo_sync command without your direct invocation. If you want your new SUS server to look for any new updates released by Apple on its own, leaving you to simply approve them, you can setup a simple cron job. Since it is probably sane for most environments to simply run this script once per day, fire up a sudo nano session and…</p>
 
 <p><code>sudo nano /etc/cron.daily/repo_sync</code></p>
 
@@ -437,6 +439,8 @@ sudo apachectl restart</code></pre></div>
 
 <p>Margarita by default is open to everyone. To secure the site using basic http authentication make the following changes.</p>
 
+<p>First, lets create a basic authentication user with the following.</p>
+
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">htpasswd -c /usr/local/asus/users admin
 <span class="c"># The following is output.enter a secure password!</span>
 New password: **********
@@ -448,16 +452,24 @@ Adding password <span class="k">for</span> user admin</code></pre></div>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo chown root.nogroup /usr/local/asus/users 
 sudo chmod <span class="m">640</span> /usr/local/asus/users</code></pre></div>
 
-<p>Now modify the apache configuration file for Margarita. Add the following in-between the “Margarita” and logging sections.<br />
+<p>Now modify the apache configuration file for Margarita. Add the following “Authentication” section in-between the “Margarita” and “logging” sections.<br />
 <code>sudo nano /etc/apache2/sites-enabled/margarita.conf</code></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Authentication    </span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;---Require all granted
+    &lt;/Directory&gt;
+    
+    <span class="c"># Authentication    </span>
     &lt;Location /&gt;
       AuthType Basic
       AuthName <span class="s2">&quot;Authentication Required&quot;</span>
       AuthUserFile <span class="s2">&quot;/usr/local/asus/users&quot;</span>
       Require valid-user
-    &lt;/Location&gt;</code></pre></div>
+    &lt;/Location&gt;
+    
+    <span class="c"># Logging</span>
+        ErrorLog <span class="k">${</span><span class="nv">APACHE_LOG_DIR</span><span class="k">}</span>/asus-error.log
+        LogLevel warn
+---&gt;</code></pre></div>
 
 <p>Modify permissions, one last time.</p>
 
@@ -487,7 +499,7 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div>
 
 
 
-	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+	<img src="http://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
 
 <h3>Clayton Burlison</h3>
 <p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
@@ -512,7 +524,7 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div>
     </div><!-- /.article-wrap -->
     <center><nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/blog/2014/09/29/shellshock/" class="btn" title="Shellshock">Previous article</a>
+        <a href="http://clburlison.com/blog/2014/09/29/shellshock/" class="btn" title="Shellshock">Previous article</a>
       
       
     </nav><!-- /.pagination --></center>
@@ -546,8 +558,8 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div>
 </div><!-- /.footer-wrap -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://clburlison.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://clburlison.com/assets/js/scripts.min.js"></script>
 
 <!-- Asynchronous Google Analytics snippet -->
 <script>

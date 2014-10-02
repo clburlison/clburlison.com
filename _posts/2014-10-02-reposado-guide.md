@@ -25,7 +25,7 @@ image:
 </section><!-- /#table-of-contents -->
 
 #Intro
-Why on earth are you creating another guide? Cannot you do that in Puppet or Docker? Well the short answer is yes but I could not find anything that covered all the criteria that I needed. The first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04. 
+Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup.
 
 #The software
 If you have not heard of [reposado](https://github.com/wdas/reposado). It is a set of tools that replicate the key functionality of Mac OS X Server's Software Update Service.
@@ -34,7 +34,9 @@ If you have not heard of [reposado](https://github.com/wdas/reposado). It is a s
 > * It can provide updates to any OS X version, whereas Apple’s Mac OS X server can only provide updates (not strictly true, but not easily!) to its current version or below e.g. your OS X 10.6 server can only provide to OS X 10.6 or below – it can’t cater for your OS X 10.7 or OS X 10.8 clients. Reposado doesn’t have this pitfall, it caters for all!  
 >   -- [Jerome](http://jerome.co.za/reposado-a-custom-apple-software-update-server/)
 
-And [Margarita](https://github.com/jessepeterson/margarita) is an add-on to reposado that gives you a web GUI!
+Plus, with reposado you can create multiple releases aka Production and Testing catalogs. 
+
+[Margarita](https://github.com/jessepeterson/margarita) is an add-on to reposado that gives you a web GUI!
 
 >Margarita is a web interface to reposado the Apple Software Update replication and catalog management tool. While the reposado command line administration tools work great for folks who are comfortable in that environment something a little more accesible might be desired.
 >
@@ -44,7 +46,7 @@ And [Margarita](https://github.com/jessepeterson/margarita) is an add-on to repo
 
 #The Install
 
-As a matter of good practice, we are going to make sure our Ubuntu server is fully patched before we start. Then we will install _mod_wsgi, git, apache tools, python setuptools, curl, pip, and apache2_. Since Margarita runs on Flask, we will need to install that as well.
+As a matter of good practice, we are going to make sure our Ubuntu server is fully patched before we start. Then we will install _mod_wsgi, git, apache tools, python setuptools, curl, pip, and apache2_. Since Margarita runs on _Flask_, we will need to install that as well.
 
 
 ##Installing Required Software
@@ -58,7 +60,7 @@ sudo easy_install flask
 
 {% endhighlight %}
 
-You can install Reposado and Margarita anywhere you’d like, but I am going to use _/usr/local/asus_ (which stands for Apple Software Update Server) just to keep things organized. The following commands will create the reposado, margarita, www and meta directories within _/usr/local/asus_. The _www_ directory will be the location from which reposado’s catalogs and downloads will be served, and you can think of the _meta_ directory as reposado’s work area. A link to the asus directory will also be created at your home.
+You can install Reposado and Margarita anywhere you would like, but I am going to use _/usr/local/asus_ (which stands for Apple Software Update Server) just to keep things organized. The following commands will create the reposado, margarita, www and meta directories within _/usr/local/asus_. The _www_ directory will be the location from which reposado’s catalogs and downloads will be served, and you can think of the _meta_ directory as reposado’s work area. A link to the asus directory will also be created in your home directory for faster access.
 
 ###Clone the code and setup the directories:
 {% highlight bash %}
@@ -92,11 +94,11 @@ Base URL for your local Software Update Service
 
 {% endhighlight %}
 
-_Note:_ the repo_sync will download Apple catalogs + updates (if enabled). Grab a coffee could be upwards of 170GB.
+_Note:_ the repo_sync will download Apple catalogs + updates (if enabled). Grab a coffee, this could be upwards of 170GB.
 
-You have got Reposado fully installed and configured! Now we need to serve those files over http so clients can do something with the downloads.
+You now have Reposado fully installed and configured! Now we need to serve those files over http so clients can do something with the downloads.
 
-Now we can move on to setting up your Margarita front-end. We will start things off by borrowing from Jesse’s instructions, just to make sure things have been properly installed. Since Margarita and Reposado are both written in Python and share common tasks, it only makes sense that code is reused where possible; that is exactly what Jesse has done. So in order for Margarita to use Reposado’s code, it needs to be able to find it. We will need to create a few symbolic links to do this.
+Lets move on to setting up your Margarita front-end. We will start things off by borrowing from Jesse’s instructions, just to make sure things have been properly installed. Since Margarita and Reposado are both written in Python and share common tasks, it only makes sense that code is reused where possible; that is exactly what Jesse has done. So in order for Margarita to use Reposado’s code, it needs to be able to find it. We will need to create a few symbolic links to do this.
 
 ###Let Margarita access Reposado’s shared resources:
 {% highlight bash %}
@@ -106,7 +108,7 @@ ln -s /usr/local/asus/reposado/code/preferences.plist margarita/preferences.plis
 
 {% endhighlight %}
 
-At this point Margarita should be completely installed and configured. To test, run the following command and then point your favorite browser to [http://example.com:8089]() (do not worry, port 8089 is just for this test). If all goes well, Margarita should load but without showing any updates. To see the updates, uncheck the “Hide commonly listed updates” button at the top of the page. If you still do not see any updates, you have encountered a problem and should look at the output in your terminal window to start troubleshooting.
+At this point, Margarita should be completely installed and configured. To test, run the following command and then point your favorite browser to [http://example.com:8089]() (do not worry, port 8089 is just for this test). If all goes well, Margarita should load but without showing any updates. To see the updates, uncheck the “Hide commonly listed updates” button at the top of the page. If you still do not see any updates, you have encountered a problem and should look at the output in your terminal window to start troubleshooting.
 
 **Testing Margarita:**
 {% highlight bash %}
@@ -178,7 +180,7 @@ Listen 8089
 
 Once done your files should look like the above.
 
-**Now lets get reposado and margarita conf files for apache.**
+**Now, lets get reposado and margarita configured with apache:**
 
 ``sudo nano /etc/apache2/sites-enabled/reposado.conf``
 
@@ -290,7 +292,7 @@ Well, that is the plan anyway. If you are still having trouble getting things wo
 ---
 
 #Addendum 1: Scheduling repo_sync
-Out of the box, reposado will not run the repo_sync command without your direct invocation. If you want your new SUS server to look for any new updates released by Apple on its own, leaving you to simply approve them, you can setup a simple cron job. Since it is probably sane for most environments to simply run this script once per day, fire up a sudo vim session and…
+Out of the box, reposado will not run the repo_sync command without your direct invocation. If you want your new SUS server to look for any new updates released by Apple on its own, leaving you to simply approve them, you can setup a simple cron job. Since it is probably sane for most environments to simply run this script once per day, fire up a sudo nano session and…
 
 ``sudo nano /etc/cron.daily/repo_sync``
 {% highlight bash %}
@@ -321,6 +323,8 @@ sudo apachectl restart
 
 Margarita by default is open to everyone. To secure the site using basic http authentication make the following changes.
 
+First, lets create a basic authentication user with the following.
+
 {% highlight bash %}
 htpasswd -c /usr/local/asus/users admin
 # The following is output.enter a secure password!
@@ -335,10 +339,13 @@ sudo chown root.nogroup /usr/local/asus/users
 sudo chmod 640 /usr/local/asus/users 
 {% endhighlight %}
 
-Now modify the apache configuration file for Margarita. Add the following in-between the "Margarita" and logging sections.  
+Now modify the apache configuration file for Margarita. Add the following "Authentication" section in-between the "Margarita" and "logging" sections.  
 ``sudo nano /etc/apache2/sites-enabled/margarita.conf``
 
 {% highlight bash %}
+    
+       <---Require all granted
+    </Directory>
     
     # Authentication    
     <Location />
@@ -347,6 +354,11 @@ Now modify the apache configuration file for Margarita. Add the following in-bet
       AuthUserFile "/usr/local/asus/users"
       Require valid-user
     </Location>
+    
+    # Logging
+        ErrorLog ${APACHE_LOG_DIR}/asus-error.log
+        LogLevel warn
+--->
     
 {% endhighlight %}
 
