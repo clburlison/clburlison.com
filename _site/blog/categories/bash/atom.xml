@@ -18,22 +18,22 @@
 <meta name="twitter:creator" content="@clburlison">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://clburlison.com/images/">
+<meta name="twitter:image" content="http://localhost:4000/images/">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Category: bash">
 
-<meta property="og:url" content="http://clburlison.com/blog/categories/bash/atom.xml">
+<meta property="og:url" content="http://localhost:4000/blog/categories/bash/atom.xml">
 <meta property="og:site_name" content="Just another tech blog">
 
 
 
 
 
-<link rel="canonical" href="http://clburlison.com/blog/categories/bash/atom.xml">
-<link href="http://clburlison.com/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+<link rel="canonical" href="http://localhost:4000/blog/categories/bash/atom.xml">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
 
 
 <!-- http://t.co/dKP3o1e -->
@@ -42,32 +42,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://clburlison.com/assets/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
 
 <!-- HTML5 Shiv and Media Query Support -->
 <!--[if lt IE 9]>
-	<script src="http://clburlison.com/assets/js/vendor/html5shiv.min.js"></script>
-	<script src="http://clburlison.com/assets/js/vendor/respond.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="http://clburlison.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="http://clburlison.com/favicon.ico">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
 <!-- 32x32 -->
-<link rel="shortcut icon" href="http://clburlison.com/favicon.png">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
 <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="http://clburlison.com/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
 <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://clburlison.com/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
 <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://clburlison.com/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://clburlison.com/images/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
 
 </head>
 
@@ -77,7 +77,7 @@
 
 <div class="navigation-wrapper">
 	<div class="site-name">
-		<a href="http://clburlison.com">Just another tech blog</a>
+		<a href="http://localhost:4000">Just another tech blog</a>
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
@@ -86,17 +86,17 @@
 					    
 					        
 					    
-					    <li><a href="http://clburlison.com/about/" >About</a></li>
+					    <li><a href="http://localhost:4000/about/" >About</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="http://clburlison.com/resources/" >Resources</a></li>
+					    <li><a href="http://localhost:4000/resources/" >Resources</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="http://clburlison.com/blog/archives/" >Archives</a></li>
+					    <li><a href="http://localhost:4000/blog/archives/" >Archives</a></li>
 					  
 		    </ul>
 		</nav>
@@ -111,7 +111,7 @@
 
 
 
-	<img src="http://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
 
 <h3>Clayton Burlison</h3>
 <p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
@@ -137,10 +137,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: bash | Just another tech blog]]></title>
-  <link href="http://clburlison.com/blog/categories/bash/atom.xml" rel="self"/>
-  <link href="http://clburlison.com/"/>
-  <updated>2014-09-30T08:58:29-05:00</updated>
-  <id>http://clburlison.com/</id>
+  <link href="http://localhost:4000/blog/categories/bash/atom.xml" rel="self"/>
+  <link href="http://localhost:4000/"/>
+  <updated>2014-10-02T03:05:42-05:00</updated>
+  <id>http://localhost:4000/</id>
   <author>
     <name><![CDATA[]]></name>
     
@@ -150,9 +150,9 @@
   
   <entry>
     <title type="html"><![CDATA[Shellshock]]></title>
-    <link href="http://clburlison.com/blog/2014/09/29/shellshock/"/>
+    <link href="http://localhost:4000/blog/2014/09/29/shellshock/"/>
     <updated>2014-09-29T22:55:49-05:00</updated>
-    <id>http://clburlison.com/blog/2014/09/29/shellshock</id>
+    <id>http://localhost:4000/blog/2014/09/29/shellshock</id>
     <content type="html"><![CDATA[<p>On September 24, 2014, a security vulnerability was publicly announced that affects a large percentage of Internet connected devices. This vulnerability, known as Shellshock, affects the Unix command shell Bash. Bash, the bourne again shell, is one of the most common applications on Unix based systems. Many devices running Mac OS X or Linux are affected by this serious exploit.</p>
 
 <p>It is important to understand that this vulnerability could allow unauthorized access of your computer. Although this exploit has been around for over two decades do not underestimate the seriousness, immediate patching should be deployed when possible.</p>
@@ -196,122 +196,122 @@
   
   <entry>
     <title type="html"><![CDATA[Bash if then cheat sheet]]></title>
-    <link href="http://clburlison.com/blog/2014/07/28/bash-if-then-cheat-sheet/"/>
+    <link href="http://localhost:4000/blog/2014/07/28/bash-if-then-cheat-sheet/"/>
     <updated>2014-07-28T22:05:56-05:00</updated>
-    <id>http://clburlison.com/blog/2014/07/28/bash-if-then-cheat-sheet</id>
+    <id>http://localhost:4000/blog/2014/07/28/bash-if-then-cheat-sheet</id>
     <content type="html"><![CDATA[<p>I always find myself looking for a good resource when writing if/then statements in bash scripts. It’s hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet…copied here because I was tired of having to look for a good resource.   </p>
 
 <p>Examples on usage can be found in the <a href="http://tldp.org/LDP/abs/html/comparison-ops.html">original article</a>.</p>
 
 <h2 id="integer-comparison">integer comparison</h2>
-<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;/p&gt;
+<p>{% highlight bash %}</p>
 
-&lt;pre&gt;&lt;code&gt;# The following are <span class="k">for</span> number values only.
+<pre><code># The following are for number values only.
 -eq
 	is equal to
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -eq <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	if [ "$a" -eq "$b" ]
 -ne
 	is not equal to
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -ne <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	if [ "$a" -ne "$b" ]
 
 -gt
 	is greater than
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -gt <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	if [ "$a" -gt "$b" ]
 
 -ge
 	is greater than or equal to
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -ge <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	if [ "$a" -ge "$b" ]
 
 -lt
 	is less than
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -lt <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	if [ "$a" -lt "$b" ]
 
 -le
 	is less than or equal to
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -le <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	if [ "$a" -le "$b" ]
 
-<span class="p">&amp;</span>lt<span class="p">;</span>
-	is less than <span class="o">(</span>within double parentheses<span class="o">)</span>
-	<span class="o">((</span><span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>lt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span><span class="o">))</span>
+&lt;
+	is less than (within double parentheses)
+	(("$a" &lt; "$b"))
 
-<span class="p">&amp;</span>lt<span class="p">;</span><span class="o">=</span>
-	is less than or equal to <span class="o">(</span>within double parentheses<span class="o">)</span>
-	<span class="o">((</span><span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>lt<span class="p">;</span><span class="o">=</span> <span class="s2">&quot;$b&quot;</span><span class="o">))</span>
+&lt;=
+	is less than or equal to (within double parentheses)
+	(("$a" &lt;= "$b"))
 
-<span class="p">&amp;</span>gt<span class="p">;</span>
-	is greater than <span class="o">(</span>within double parentheses<span class="o">)</span>
-	<span class="o">((</span><span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>gt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span><span class="o">))</span>
+&gt;
+	is greater than (within double parentheses)
+	(("$a" &gt; "$b"))
 
-<span class="p">&amp;</span>gt<span class="p">;</span><span class="o">=</span>
-	is greater than or equal to <span class="o">(</span>within double parentheses<span class="o">)</span>
-	<span class="o">((</span><span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>gt<span class="p">;</span><span class="o">=</span> <span class="s2">&quot;$b&quot;</span><span class="o">))</span></code></pre></div>
+&gt;=
+	is greater than or equal to (within double parentheses)
+	(("$a" &gt;= "$b")) {% endhighlight %}
 </code></pre>
 
 <h2 id="string-comparison">string comparison</h2>
-<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;/p&gt;
+<p>{% highlight bash %}</p>
 
-&lt;pre&gt;&lt;code&gt;# The following are <span class="k">for</span> strings of data.
-<span class="o">=</span>
+<pre><code># The following are for strings of data.
+=
 	is equal to
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="o">=</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	if [ "$a" = "$b" ]
 
 Caution:	
-	Note the whitespace framing <span class="nv">the</span> <span class="o">=</span>
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span><span class="o">=</span><span class="s2">&quot;$b&quot;</span> <span class="o">]</span> is not equivalent to the above.
+	Note the whitespace framing the =
+	if [ "$a"="$b" ] is not equivalent to the above.
 
-<span class="o">==</span>
+==
 	is equal to
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="o">==</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	if [ "$a" == "$b" ]
 
-This is a synonym <span class="k">for</span> <span class="o">=</span>
+This is a synonym for =
 Note:	
-	<span class="nv">The</span> <span class="o">==</span> comparison operator behaves differently 
-	within a double-brackets <span class="nb">test </span>than within single brackets.
-	<span class="o">[[</span> <span class="nv">$a</span> <span class="o">==</span> z* <span class="o">]]</span>   <span class="c"># True if $a starts with an &quot;z&quot; (pattern matching).</span>
-	<span class="o">[[</span> <span class="nv">$a</span> <span class="o">==</span> <span class="s2">&quot;z*&quot;</span> <span class="o">]]</span> <span class="c"># True if $a is equal to z* (literal matching).</span>
-	<span class="o">[</span> <span class="nv">$a</span> <span class="o">==</span> z* <span class="o">]</span>     <span class="c"># File globbing and word splitting take place.</span>
-	<span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="o">==</span> <span class="s2">&quot;z*&quot;</span> <span class="o">]</span> <span class="c"># True if $a is equal to z* (literal matching).</span>
-	<span class="c"># Thanks, Stéphane Chazelas</span>
+	The == comparison operator behaves differently 
+	within a double-brackets test than within single brackets.
+	[[ $a == z* ]]   # True if $a starts with an "z" (pattern matching).
+	[[ $a == "z*" ]] # True if $a is equal to z* (literal matching).
+	[ $a == z* ]     # File globbing and word splitting take place.
+	[ "$a" == "z*" ] # True if $a is equal to z* (literal matching).
+	# Thanks, Stéphane Chazelas
 
-!<span class="o">=</span>
+!=
 	is not equal to
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> !<span class="o">=</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	if [ "$a" != "$b" ]
 
-This operator uses pattern matching within a <span class="o">[[</span> ... <span class="o">]]</span> construct.
+This operator uses pattern matching within a [[ ... ]] construct.
 
-<span class="p">&amp;</span>lt<span class="p">;</span>
+&lt;
 	is less than, in ASCII alphabetical order
-	<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>lt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]]</span>
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="se">\&amp;</span>lt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	if [[ "$a" &lt; "$b" ]]
+	if [ "$a" \&lt; "$b" ]
 
-Note: that the <span class="s2">&quot;&amp;lt;&quot;</span> needs to be escaped within a <span class="o">[</span> <span class="o">]</span> construct.
+Note: that the "&lt;" needs to be escaped within a [ ] construct.
 
-<span class="p">&amp;</span>gt<span class="p">;</span>
+&gt;
 	is greater than, in ASCII alphabetical order
-	<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>gt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]]</span>
-	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="se">\&amp;</span>gt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	if [[ "$a" &gt; "$b" ]]
+	if [ "$a" \&gt; "$b" ]
 
-Note that the <span class="s2">&quot;&amp;gt;&quot;</span> needs to be escaped within a <span class="o">[</span> <span class="o">]</span> construct.
+Note that the "&gt;" needs to be escaped within a [ ] construct.
 
 -z
 	string is null, that is, has zero length
 
-<span class="nv">String</span><span class="o">=</span><span class="s1">&#39;&#39;</span>   <span class="c"># Zero-length (&quot;null&quot;) string variable.</span>
-	<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;$String&quot;</span> <span class="o">]</span>
-	<span class="k">then</span>
-	  <span class="nb">echo</span> <span class="s2">&quot;\$String is null.&quot;</span>
-	<span class="k">else</span>
-	  <span class="nb">echo</span> <span class="s2">&quot;\$String is NOT null.&quot;</span>
-	<span class="k">fi</span>     <span class="c"># $String is null.</span>
+String=''   # Zero-length ("null") string variable.
+	if [ -z "$String" ]
+	then
+	  echo "\$String is null."
+	else
+	  echo "\$String is NOT null."
+	fi     # $String is null.
 
 -n
 	string is not null.
 
 Caution:
-	The -n <span class="nb">test </span>requires that the string be quoted within the <span class="nb">test </span>brackets. 
+	The -n test requires that the string be quoted within the test brackets. 
 	Using an unquoted string with ! -z, or even just the unquoted string a
-	lone within <span class="nb">test </span>brackets <span class="o">(</span>see Example 7-6<span class="o">)</span> normally works, however, 
-	this is an unsafe practice. Always quote a tested string. <span class="o">[</span>1<span class="o">]</span></code></pre></div>
+	lone within test brackets (see Example 7-6) normally works, however, 
+	this is an unsafe practice. Always quote a tested string. [1] {% endhighlight %}
 </code></pre>
 
 <p>Special Thanks to the The Linux Documentation Project for outlining the information in such a usable format. They also include great examples on their website.</p>
@@ -351,8 +351,8 @@ Caution:
 </div><!-- /.footer-wrap -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://clburlison.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="http://clburlison.com/assets/js/scripts.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
 
 <!-- Asynchronous Google Analytics snippet -->
 <script>

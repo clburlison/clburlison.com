@@ -18,22 +18,22 @@
 <meta name="twitter:creator" content="@clburlison">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://clburlison.com/images/">
+<meta name="twitter:image" content="http://localhost:4000/images/">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Category: sourcetree">
 
-<meta property="og:url" content="http://clburlison.com/blog/categories/sourcetree/atom.xml">
+<meta property="og:url" content="http://localhost:4000/blog/categories/sourcetree/atom.xml">
 <meta property="og:site_name" content="Just another tech blog">
 
 
 
 
 
-<link rel="canonical" href="http://clburlison.com/blog/categories/sourcetree/atom.xml">
-<link href="http://clburlison.com/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+<link rel="canonical" href="http://localhost:4000/blog/categories/sourcetree/atom.xml">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
 
 
 <!-- http://t.co/dKP3o1e -->
@@ -42,32 +42,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://clburlison.com/assets/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
 
 <!-- HTML5 Shiv and Media Query Support -->
 <!--[if lt IE 9]>
-	<script src="http://clburlison.com/assets/js/vendor/html5shiv.min.js"></script>
-	<script src="http://clburlison.com/assets/js/vendor/respond.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="http://clburlison.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="http://clburlison.com/favicon.ico">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
 <!-- 32x32 -->
-<link rel="shortcut icon" href="http://clburlison.com/favicon.png">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
 <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="http://clburlison.com/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
 <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://clburlison.com/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
 <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://clburlison.com/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://clburlison.com/images/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
 
 </head>
 
@@ -77,7 +77,7 @@
 
 <div class="navigation-wrapper">
 	<div class="site-name">
-		<a href="http://clburlison.com">Just another tech blog</a>
+		<a href="http://localhost:4000">Just another tech blog</a>
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
@@ -86,17 +86,17 @@
 					    
 					        
 					    
-					    <li><a href="http://clburlison.com/about/" >About</a></li>
+					    <li><a href="http://localhost:4000/about/" >About</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="http://clburlison.com/resources/" >Resources</a></li>
+					    <li><a href="http://localhost:4000/resources/" >Resources</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="http://clburlison.com/blog/archives/" >Archives</a></li>
+					    <li><a href="http://localhost:4000/blog/archives/" >Archives</a></li>
 					  
 		    </ul>
 		</nav>
@@ -111,7 +111,7 @@
 
 
 
-	<img src="http://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
 
 <h3>Clayton Burlison</h3>
 <p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
@@ -137,10 +137,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: sourcetree | Just another tech blog]]></title>
-  <link href="http://clburlison.com/blog/categories/sourcetree/atom.xml" rel="self"/>
-  <link href="http://clburlison.com/"/>
-  <updated>2014-09-30T08:58:29-05:00</updated>
-  <id>http://clburlison.com/</id>
+  <link href="http://localhost:4000/blog/categories/sourcetree/atom.xml" rel="self"/>
+  <link href="http://localhost:4000/"/>
+  <updated>2014-10-02T03:05:42-05:00</updated>
+  <id>http://localhost:4000/</id>
   <author>
     <name><![CDATA[]]></name>
     
@@ -150,16 +150,16 @@
   
   <entry>
     <title type="html"><![CDATA[Github Two-factor Authentication with SourceTree]]></title>
-    <link href="http://clburlison.com/blog/2014/05/14/github-two-factor-authentication/"/>
+    <link href="http://localhost:4000/blog/2014/05/14/github-two-factor-authentication/"/>
     <updated>2014-05-14T23:48:17-05:00</updated>
-    <id>http://clburlison.com/blog/2014/05/14/github-two-factor-authentication</id>
+    <id>http://localhost:4000/blog/2014/05/14/github-two-factor-authentication</id>
     <content type="html"><![CDATA[<p>I finally got around to setting up two-factor authentication on my Github account. The process went quite smoothly, until I started to play around with  <a href="http://www.sourcetreeapp.com/">SourceTree</a> and I found out that I was unable to push commits to a git repo.</p>
 
 <hr />
 
 <h3 id="sourcetree-error">SourceTree error</h3>
 <p>The error message that I was receiving seemed pretty generic at the time. Besides I knew I was typing my Github password correctly, so that could not be the issue. In hindsight not realizing the two-factor authentication (2fa) was the problem immediately was pretty stupid. The solution to this error is to login with a One Time Password (OTP)  token <em>not</em> your normal Github password. If you do use the wrong password you will receive the follow error message.<br />
-<img src="/images/posts/2014-05-14/login_error.png" title="SourceTree error" ></p>
+{% img /images/posts/2014-05-14/login_error.png SourceTree error %}</p>
 
 <p><strong>Note:</strong> If you use the official <a href="https://mac.github.com/">GitHub app</a> you will not run into a login error because the app uses the GitHub API for authentication.  </p>
 
@@ -169,23 +169,23 @@
 
 <h3 id="setting-up-the-otp">Setting up the OTP</h3>
 <p>To create the OTP, use the following <a href="https://github.com/settings/applications">link</a>. Click on “Generate New Token”.<br />
-<img src="/images/posts/2014-05-14/otp.png" title="Creating an OTP" ></p>
+{% img /images/posts/2014-05-14/otp.png Creating an OTP %}</p>
 
 <p>Give your OTP a Token description. Make sure at least the “repo” and “public_repo” options are checked. Click “Generate token”.<br />
-<img src="/images/posts/2014-05-14/new_token.png" title="Token permissions" ></p>
+{% img /images/posts/2014-05-14/new_token.png Token permissions %}</p>
 
 <h3 id="configuration-for-sourcetree">Configuration for SourceTree</h3>
 <p>If you already have SourceTree setup, you will need to edit your account password for GitHub. You can accomplish this by opening the Bookmarks window and clicking on the “Hosted Repositories” button.<br />
-<img src="/images/posts/2014-05-14/bookmarks.png" title="Bookmarks Window" ></p>
+{% img /images/posts/2014-05-14/bookmarks.png Bookmarks Window %}</p>
 
 <p>Now you need to click on “Edit Accounts…” so you can select your Github account and make modifications.<br />
-<img src="/images/posts/2014-05-14/hosted_repositories.png" title="Hosted Repositories" >  </p>
+{% img /images/posts/2014-05-14/hosted_repositories.png Hosted Repositories %}  </p>
 
 <p>Click on “Set Password”.<br />
-<img src="/images/posts/2014-05-14/github_options.png" title="Github Acct Options" ></p>
+{% img /images/posts/2014-05-14/github_options.png Github Acct Options %}</p>
 
 <p>In the Authenticate window make sure and use your newly generated OTP token as your password. I recommend saving the password in your keychain.<br />
-<img src="/images/posts/2014-05-14/authenticate.png" title="Authenticate Window" ></p>
+{% img /images/posts/2014-05-14/authenticate.png Authenticate Window %}</p>
 
 <hr />
 
@@ -224,8 +224,8 @@
 </div><!-- /.footer-wrap -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://clburlison.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="http://clburlison.com/assets/js/scripts.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
 
 <!-- Asynchronous Google Analytics snippet -->
 <script>
