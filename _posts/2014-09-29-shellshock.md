@@ -2,7 +2,7 @@
 layout: post
 title: "Shellshock"
 date: 2014-09-29T22:55:49-05:00
-modified: 2014-09-30
+modified: 2014-10-2
 categories: Bash
 excerpt: Everything you need to know about Shellshock for OS X in English.
 comments: true
@@ -45,8 +45,11 @@ At this point, the worst might be behind us. Pay attention to Apple updates, as 
 ---
 
 Articles:  
+[Apple Stack Exchange](http://apple.stackexchange.com/questions/146849/how-do-i-recompile-bash-to-avoid-shellshock-the-remote-exploit-cve-2014-6271-an/146851#146851),  
 [Apple working to protect OS X against shellshock](http://www.imore.com/apple-working-quickly-protect-os-x-against-shellshock-exploit),  
 [Bash fix not in SUS](https://twitter.com/harryfike/status/516767315636285440),  
 [Github bashcheck script](https://github.com/hannob/bashcheck),  
 [Remote exploit vulnerability in bash](https://groups.google.com/forum/?fromgroups#!topic/macenterprise/o26UYKc2JvM),  
-[What is Shellshock](http://www.pcworld.com/article/2688672/two-scenarios-that-would-make-os-x-vulnerable-to-the-shellshock-bug.html)
+[What is Shellshock](http://www.pcworld.com/article/2688672/two-scenarios-that-would-make-os-x-vulnerable-to-the-shellshock-bug.html),  
+
+Update: Oct 2, 2014 - Added Apple Stack Exchange link. Nice descriptions of each exploit.

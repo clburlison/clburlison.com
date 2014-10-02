@@ -139,7 +139,7 @@
   <title><![CDATA[Category: bash | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/bash/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-10-02T15:34:50-05:00</updated>
+  <updated>2014-10-02T16:21:01-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -186,11 +186,14 @@
 <hr />
 
 <p>Articles:<br />
+<a href="http://apple.stackexchange.com/questions/146849/how-do-i-recompile-bash-to-avoid-shellshock-the-remote-exploit-cve-2014-6271-an/146851#146851">Apple Stack Exchange</a>,<br />
 <a href="http://www.imore.com/apple-working-quickly-protect-os-x-against-shellshock-exploit">Apple working to protect OS X against shellshock</a>,<br />
 <a href="https://twitter.com/harryfike/status/516767315636285440">Bash fix not in SUS</a>,<br />
 <a href="https://github.com/hannob/bashcheck">Github bashcheck script</a>,<br />
 <a href="https://groups.google.com/forum/?fromgroups#!topic/macenterprise/o26UYKc2JvM">Remote exploit vulnerability in bash</a>,<br />
-<a href="http://www.pcworld.com/article/2688672/two-scenarios-that-would-make-os-x-vulnerable-to-the-shellshock-bug.html">What is Shellshock</a></p>
+<a href="http://www.pcworld.com/article/2688672/two-scenarios-that-would-make-os-x-vulnerable-to-the-shellshock-bug.html">What is Shellshock</a>,  </p>
+
+<p>Update: Oct 2, 2014 - Added Apple Stack Exchange link. Nice descriptions of each exploit.</p>
 ]]></content>
   </entry>
   

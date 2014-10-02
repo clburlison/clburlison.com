@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://clburlison.com" />
-<updated>2014-10-02T15:34:50-05:00</updated>
+<updated>2014-10-02T16:21:01-05:00</updated>
 <id>http://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
@@ -379,7 +379,7 @@ sudo chmod -R g+r /usr/local/asus&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   <title type="html"><![CDATA[Shellshock]]></title>
   <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/09/29/shellshock/" />
   <id>http://clburlison.com/blog/2014/09/29/shellshock</id>
-  <updated>2014-09-30T00:00:00-00:00</updated>
+  <updated>2014-10-2T00:00:00-00:00</updated>
   <published>2014-09-29T22:55:49-05:00</published>
   
   <author>
@@ -420,11 +420,14 @@ sudo chmod -R g+r /usr/local/asus&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;Articles:&lt;br /&gt;
+&lt;a href=&quot;http://apple.stackexchange.com/questions/146849/how-do-i-recompile-bash-to-avoid-shellshock-the-remote-exploit-cve-2014-6271-an/146851#146851&quot;&gt;Apple Stack Exchange&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;http://www.imore.com/apple-working-quickly-protect-os-x-against-shellshock-exploit&quot;&gt;Apple working to protect OS X against shellshock&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;https://twitter.com/harryfike/status/516767315636285440&quot;&gt;Bash fix not in SUS&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;https://github.com/hannob/bashcheck&quot;&gt;Github bashcheck script&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;https://groups.google.com/forum/?fromgroups#!topic/macenterprise/o26UYKc2JvM&quot;&gt;Remote exploit vulnerability in bash&lt;/a&gt;,&lt;br /&gt;
-&lt;a href=&quot;http://www.pcworld.com/article/2688672/two-scenarios-that-would-make-os-x-vulnerable-to-the-shellshock-bug.html&quot;&gt;What is Shellshock&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;http://www.pcworld.com/article/2688672/two-scenarios-that-would-make-os-x-vulnerable-to-the-shellshock-bug.html&quot;&gt;What is Shellshock&lt;/a&gt;,  &lt;/p&gt;
+
+&lt;p&gt;Update: Oct 2, 2014 - Added Apple Stack Exchange link. Nice descriptions of each exploit.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/09/29/shellshock/&quot;&gt;Shellshock&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on September 29, 2014.&lt;/p&gt;</content>
 </entry>
