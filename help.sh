@@ -5,8 +5,8 @@ clear
 
 echo "clburlison.com || Blog cheat sheet"
 printf '\n'
-echo "	octopress new post "Post Title""
-echo "	octopress new page "Page Title""
+echo "	octopress new post \"Post Title\""
+echo "	octopress new page \"Page Title\""
 printf '\n'
 
 echo "	rake delete - deletes _site/"
