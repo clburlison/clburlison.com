@@ -1,0 +1,728 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Category: osx &#8211; </title>
+
+<meta name="keywords" content="">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Category: osx">
+
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Category: osx">
+
+<meta property="og:url" content="/categories/osx/atom.xml">
+<meta property="og:site_name" content="">
+
+
+
+
+
+<link rel="canonical" href="/categories/osx/atom.xml">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href=""></a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+					    
+					        
+					    
+					    <li><a href="/about/" >About</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="/resources/" >Resources</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="/blog/archives/" >Archives</a></li>
+					  
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+
+
+	<img src="/images/" class="bio-photo" alt=" bio photo"></a>
+
+<h3></h3>
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <article>
+    <h1>Category: osx</h1>
+    <div class="article-wrap">
+      <?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: osx | ]]></title>
+  <link href="/categories/osx/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2014-10-02T23:23:19-05:00</updated>
+  <id>/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bash if then cheat sheet]]></title>
+    <link href="/osx/bash/2014/07/28/bash-if-then-cheat-sheet.html"/>
+    <updated>2014-07-28T22:05:56-05:00</updated>
+    <id>/osx/bash/2014/07/28/bash-if-then-cheat-sheet</id>
+    <content type="html"><![CDATA[<p>I always find myself looking for a good resource when writing if/then statements in bash scripts. It’s hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet…copied here because I was tired of having to look for a good resource.   </p>
+
+<p>Examples on usage can be found in the <a href="http://tldp.org/LDP/abs/html/comparison-ops.html">original article</a>.</p>
+
+<h2 id="integer-comparison">integer comparison</h2>
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# The following are <span class="k">for</span> number values only.
+-eq
+	is equal to
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -eq <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+-ne
+	is not equal to
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -ne <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+-gt
+	is greater than
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -gt <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+-ge
+	is greater than or equal to
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -ge <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+-lt
+	is less than
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -lt <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+-le
+	is less than or equal to
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -le <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+<span class="p">&amp;</span>lt<span class="p">;</span>
+	is less than <span class="o">(</span>within double parentheses<span class="o">)</span>
+	<span class="o">((</span><span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>lt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span><span class="o">))</span>
+
+<span class="p">&amp;</span>lt<span class="p">;</span><span class="o">=</span>
+	is less than or equal to <span class="o">(</span>within double parentheses<span class="o">)</span>
+	<span class="o">((</span><span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>lt<span class="p">;</span><span class="o">=</span> <span class="s2">&quot;$b&quot;</span><span class="o">))</span>
+
+<span class="p">&amp;</span>gt<span class="p">;</span>
+	is greater than <span class="o">(</span>within double parentheses<span class="o">)</span>
+	<span class="o">((</span><span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>gt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span><span class="o">))</span>
+
+<span class="p">&amp;</span>gt<span class="p">;</span><span class="o">=</span>
+	is greater than or equal to <span class="o">(</span>within double parentheses<span class="o">)</span>
+	<span class="o">((</span><span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>gt<span class="p">;</span><span class="o">=</span> <span class="s2">&quot;$b&quot;</span><span class="o">))</span></code></pre></div>
+</code></pre>
+
+<h2 id="string-comparison">string comparison</h2>
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# The following are <span class="k">for</span> strings of data.
+<span class="o">=</span>
+	is equal to
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="o">=</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+Caution:	
+	Note the whitespace framing <span class="nv">the</span> <span class="o">=</span>
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span><span class="o">=</span><span class="s2">&quot;$b&quot;</span> <span class="o">]</span> is not equivalent to the above.
+
+<span class="o">==</span>
+	is equal to
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="o">==</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+This is a synonym <span class="k">for</span> <span class="o">=</span>
+Note:	
+	<span class="nv">The</span> <span class="o">==</span> comparison operator behaves differently 
+	within a double-brackets <span class="nb">test </span>than within single brackets.
+	<span class="o">[[</span> <span class="nv">$a</span> <span class="o">==</span> z* <span class="o">]]</span>   <span class="c"># True if $a starts with an &quot;z&quot; (pattern matching).</span>
+	<span class="o">[[</span> <span class="nv">$a</span> <span class="o">==</span> <span class="s2">&quot;z*&quot;</span> <span class="o">]]</span> <span class="c"># True if $a is equal to z* (literal matching).</span>
+	<span class="o">[</span> <span class="nv">$a</span> <span class="o">==</span> z* <span class="o">]</span>     <span class="c"># File globbing and word splitting take place.</span>
+	<span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="o">==</span> <span class="s2">&quot;z*&quot;</span> <span class="o">]</span> <span class="c"># True if $a is equal to z* (literal matching).</span>
+	<span class="c"># Thanks, Stéphane Chazelas</span>
+
+!<span class="o">=</span>
+	is not equal to
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> !<span class="o">=</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+This operator uses pattern matching within a <span class="o">[[</span> ... <span class="o">]]</span> construct.
+
+<span class="p">&amp;</span>lt<span class="p">;</span>
+	is less than, in ASCII alphabetical order
+	<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>lt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]]</span>
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="se">\&amp;</span>lt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+Note: that the <span class="s2">&quot;&amp;lt;&quot;</span> needs to be escaped within a <span class="o">[</span> <span class="o">]</span> construct.
+
+<span class="p">&amp;</span>gt<span class="p">;</span>
+	is greater than, in ASCII alphabetical order
+	<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$a&quot;</span> <span class="p">&amp;</span>gt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]]</span>
+	<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="se">\&amp;</span>gt<span class="p">;</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+Note that the <span class="s2">&quot;&amp;gt;&quot;</span> needs to be escaped within a <span class="o">[</span> <span class="o">]</span> construct.
+
+-z
+	string is null, that is, has zero length
+
+<span class="nv">String</span><span class="o">=</span><span class="s1">&#39;&#39;</span>   <span class="c"># Zero-length (&quot;null&quot;) string variable.</span>
+	<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;$String&quot;</span> <span class="o">]</span>
+	<span class="k">then</span>
+	  <span class="nb">echo</span> <span class="s2">&quot;\$String is null.&quot;</span>
+	<span class="k">else</span>
+	  <span class="nb">echo</span> <span class="s2">&quot;\$String is NOT null.&quot;</span>
+	<span class="k">fi</span>     <span class="c"># $String is null.</span>
+
+-n
+	string is not null.
+
+Caution:
+	The -n <span class="nb">test </span>requires that the string be quoted within the <span class="nb">test </span>brackets. 
+	Using an unquoted string with ! -z, or even just the unquoted string a
+	lone within <span class="nb">test </span>brackets <span class="o">(</span>see Example 7-6<span class="o">)</span> normally works, however, 
+	this is an unsafe practice. Always quote a tested string. <span class="o">[</span>1<span class="o">]</span></code></pre></div>
+</code></pre>
+
+<p>Special Thanks to the The Linux Documentation Project for outlining the information in such a usable format. They also include great examples on their website.</p>
+
+<hr />
+
+<p>Articles: 
+<a href="http://tldp.org/LDP/abs/html/comparison-ops.html">Advanced Bash-Scripting Guide</a>  </p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Show Help Desk Information]]></title>
+    <link href="/osx/geektool/munki/2014/07/14/show-helpdesk-info.html"/>
+    <updated>2014-07-14T17:47:53-05:00</updated>
+    <id>/osx/geektool/munki/2014/07/14/show-helpdesk-info</id>
+    <content type="html"><![CDATA[<p>Display useful information on your Desktop using Geektool. Make troubleshooting network issues for your end users easier. Find your hostname faster. The amount of useful information is limitless. If you can script it…you can display it.  </p>
+
+<p><img src="/images/posts/2014-07-14/current_info.png" width="400" height="100" title="My Results" ><br />
+My Geektools Results </p>
+
+<section id="table-of-contents" class="toc">
+  <header>
+    <h3>Overview</h3>
+  </header>
+<div id="drawer">
+<ul id="markdown-toc">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#what-is-it">What is it?</a>    <ul>
+      <li><a href="#the-script">The Script</a></li>
+    </ul>
+  </li>
+  <li><a href="#created-by-erik-gomez">Created by Erik Gomez</a>    <ul>
+      <li><a href="#script-variables">Script Variables</a></li>
+      <li><a href="#display-computer-names">Display Computer Names</a></li>
+      <li><a href="#display-user-name">Display User Name</a></li>
+      <li><a href="#display-operating-system-and-sub-build">Display Operating System and Sub Build</a></li>
+      <li><a href="#display-hardware-id">Display Hardware ID</a></li>
+      <li><a href="#spacing-to-make-things-pretty">Spacing to make things pretty</a></li>
+      <li><a href="#this-will-show-the-current-ip-addresses">This will show the Current IP addresses.</a></li>
+      <li><a href="#display-current-wireless-ssid">Display current wireless SSID</a></li>
+      <li><a href="#spacing-to-make-things-pretty-1">Spacing to make things pretty</a>        <ul>
+          <li><a href="#technology-support">Technology Support</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#how-do-you-use-it">How do you use it?</a>    <ul>
+      <li><a href="#modify-the-script">Modify the script</a></li>
+      <li><a href="#creating-the-profiles">Creating the profiles</a>        <ul>
+          <li><a href="#part-1---login-profile">Part 1 - Login profile</a></li>
+          <li><a href="#part-2---organization-profile">Part 2 - Organization profile</a></li>
+        </ul>
+      </li>
+      <li><a href="#deploying-your-profiles">Deploying your Profiles</a></li>
+    </ul>
+  </li>
+  <li><a href="#ending-notes">Ending Notes</a>    <ul>
+      <li><a href="#dependencies">Dependencies</a></li>
+      <li><a href="#credits">Credits</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</section>
+<!-- /#table-of-contents -->
+
+<hr />
+
+<h1 id="introduction">Introduction</h1>
+<p>Firstly, I take no credit for this valuable resource. All credit should go to Erik Gomez from the munki-dev <a href="https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY">mailing list</a>. All I have done is modified the script to work in my environment. Modifications included removing some excess <code>if</code>/ <code>then</code> statements, remove the MAC address, adding current SSID, and a few other tweaks so the script played nicely as a profile. The writing is on the wall, mcx is slowing dying or at least it is becoming a less preferred method of managing preferences.</p>
+
+<p><img src="/images/posts/2014-07-14/eriks_info.png" width="400" height="100" title="Eriks Results" ><br />
+Erik’s Original Desktop Results  </p>
+
+<p><strong>Requirements</strong> <em>-You will want to download and save these somewhere.</em></p>
+
+<ul>
+  <li><a href="http://projects.tynsoe.org/en/geektool/download.php">Geektool</a></li>
+  <li><a href="https://github.com/timsutton/mcxToProfile">mcxToProfile</a></li>
+  <li><a href="https://github.com/timsutton/make-profile-pkg">make-profile-pkg</a></li>
+  <li><a href="https://gist.github.com/clburlison/af2a1afe01fb9aff9288">Gist files for this project</a></li>
+  <li><a href="/images/posts/2014-07-14/Geektool-login-item.mobileconfig">Geektool-login-item.mobileconfig</a></li>
+</ul>
+
+<h1 id="what-is-it">What is it?</h1>
+<p>In short, this is simply a bash script that Geektool is running in the background. It defaults to refreshing every 30 seconds, though you can modify this in the <code>org.tynsoe.geeklet.shell.plist</code> file, which has negligible performance toll on Mac clients. You want the refresh rate low so when the network drops or you get a new IP address you can easily see changes.</p>
+
+<h2 id="the-script">The Script</h2>
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno">  1</span> <span class="c">#!/bin/sh&lt;/p&gt;</span>
+<span class="lineno">  2</span> 
+<span class="lineno">  3</span> &lt;h1 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;created-by-erik-gomez&quot;</span>&gt;Created by Erik Gomez&lt;/h1&gt;
+<span class="lineno">  4</span> &lt;p&gt;# Modified 30-10-2013
+<span class="lineno">  5</span> <span class="c">##### White Backgrounds will kill you!</span>
+<span class="lineno">  6</span> <span class="c"># Modified by Clayton Burlison for use at Birdville ISD</span>
+<span class="lineno">  7</span> <span class="c"># Date Modified June 25, 2014&lt;/p&gt;</span>
+<span class="lineno">  8</span> 
+<span class="lineno">  9</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;script-variables&quot;</span>&gt;Script Variables&lt;/h4&gt;
+<span class="lineno"> 10</span> &lt;p&gt;Computer_Name<span class="o">=</span>&lt;code&gt;scutil --get ComputerName&lt;/code&gt;
+<span class="lineno"> 11</span> <span class="nv">HostName</span><span class="o">=</span>&lt;code&gt;scutil --get HostName&lt;/code&gt;
+<span class="lineno"> 12</span> <span class="nv">LocalHostName</span><span class="o">=</span>&lt;code&gt;scutil --get LocalHostName&lt;/code&gt;
+<span class="lineno"> 13</span> <span class="nv">OS_Version</span><span class="o">=</span>&lt;code&gt;sw_vers <span class="p">|</span> grep <span class="s2">&quot;ProductVersion:&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 14</span> <span class="nv">OS_Sub_Build</span><span class="o">=</span>&lt;code&gt;sw_vers <span class="p">|</span> grep <span class="s2">&quot;BuildVersion:&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 15</span> <span class="nv">Hardware_ID</span><span class="o">=</span>&lt;code&gt;sysctl hw.model <span class="p">|</span> grep <span class="s2">&quot;hw.model:&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 16</span> <span class="nv">IP_en0</span><span class="o">=</span>&lt;code&gt;ifconfig en0 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 17</span> <span class="nv">IP_en1</span><span class="o">=</span>&lt;code&gt;ifconfig en1 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 18</span> <span class="nv">IP_en2</span><span class="o">=</span>&lt;code&gt;ifconfig en2 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 19</span> <span class="nv">IP_en3</span><span class="o">=</span>&lt;code&gt;ifconfig en3 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 20</span> <span class="nv">IP_en4</span><span class="o">=</span>&lt;code&gt;ifconfig en4 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 21</span> <span class="nv">IP_en5</span><span class="o">=</span>&lt;code&gt;ifconfig en5 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>&lt;/code&gt;
+<span class="lineno"> 22</span> <span class="nv">SSID</span><span class="o">=</span>&lt;code&gt;/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I <span class="p">|</span> awk <span class="s1">&#39;/ SSID/ {print substr($0, index($0, $2))}&#39;</span>&lt;/code&gt;&lt;/p&gt;
+<span class="lineno"> 23</span> 
+<span class="lineno"> 24</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;display-computer-names&quot;</span>&gt;Display Computer Names&lt;/h4&gt;
+<span class="lineno"> 25</span> &lt;p&gt;echo “Computer Name: <span class="nv">$Computer_Name</span>”<span class="p">;</span>
+<span class="lineno"> 26</span> <span class="c">#echo “Host Name: $HostName”;</span>
+<span class="lineno"> 27</span> <span class="c">#echo “LocalHost Name: $LocalHostName”;&lt;/p&gt;</span>
+<span class="lineno"> 28</span> 
+<span class="lineno"> 29</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;display-user-name&quot;</span>&gt;Display User Name&lt;/h4&gt;
+<span class="lineno"> 30</span> &lt;p&gt;echo “Username: <span class="nv">$USER</span>”<span class="p">;</span>&lt;/p&gt;
+<span class="lineno"> 31</span> 
+<span class="lineno"> 32</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;display-operating-system-and-sub-build&quot;</span>&gt;Display Operating System and Sub Build&lt;/h4&gt;
+<span class="lineno"> 33</span> &lt;p&gt;echo “Operating System: <span class="nv">$OS_Version</span>”_“<span class="nv">$OS_Sub_Build</span>”<span class="p">;</span>&lt;/p&gt;
+<span class="lineno"> 34</span> 
+<span class="lineno"> 35</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;display-hardware-id&quot;</span>&gt;Display Hardware ID&lt;/h4&gt;
+<span class="lineno"> 36</span> &lt;p&gt;echo “Hardware ID: <span class="nv">$Hardware_ID</span>”<span class="p">;</span>&lt;/p&gt;
+<span class="lineno"> 37</span> 
+<span class="lineno"> 38</span> &lt;h3 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;spacing-to-make-things-pretty&quot;</span>&gt;Spacing to make things pretty&lt;/h3&gt;
+<span class="lineno"> 39</span> &lt;p&gt;echo “”&lt;/p&gt;
+<span class="lineno"> 40</span> 
+<span class="lineno"> 41</span> &lt;h3 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;this-will-show-the-current-ip-addresses&quot;</span>&gt;This will show the Current IP addresses.&lt;/h3&gt;
+<span class="lineno"> 42</span> &lt;p&gt;### This should show all IP Addresses:
+<span class="lineno"> 43</span> <span class="c">### Wi-FI, Ethernet 1 &amp;amp; 2, and even Thunderbolt NICs</span>
+<span class="lineno"> 44</span> <span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en0</span>” <span class="o">=</span> ‘’ <span class="o">]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="o">[</span> “<span class="nv">$IP_en1</span>” <span class="o">=</span> ‘’ <span class="o">]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="o">[</span> “<span class="nv">$IP_en2</span>” <span class="o">=</span> ‘’ <span class="o">]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="o">[</span> “<span class="nv">$IP_en3</span>” <span class="o">=</span> ‘’ <span class="o">]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="o">[</span> “<span class="nv">$IP_en4</span>” <span class="o">=</span> ‘’ <span class="o">]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> <span class="o">[</span> “<span class="nv">$IP_en5</span>” <span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 45</span> 	<span class="k">then</span>
+<span class="lineno"> 46</span> 		<span class="nb">echo</span> “IP Address: No connection found”
+<span class="lineno"> 47</span> 	<span class="k">else</span>
+<span class="lineno"> 48</span> 		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en0</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 49</span> 			<span class="k">then</span> 
+<span class="lineno"> 50</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en0</span>”
+<span class="lineno"> 51</span>  			<span class="k">else</span>
+<span class="lineno"> 52</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 53</span>  		<span class="k">fi</span>
+<span class="lineno"> 54</span>  		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en1</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 55</span> 			<span class="k">then</span> 
+<span class="lineno"> 56</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en1</span>”
+<span class="lineno"> 57</span>  			<span class="k">else</span>
+<span class="lineno"> 58</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 59</span>  		<span class="k">fi</span>
+<span class="lineno"> 60</span>  		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en2</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 61</span> 			<span class="k">then</span> 
+<span class="lineno"> 62</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en2</span>”
+<span class="lineno"> 63</span>  			<span class="k">else</span>
+<span class="lineno"> 64</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 65</span>  		<span class="k">fi</span>
+<span class="lineno"> 66</span>  		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en3</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 67</span> 			<span class="k">then</span> 
+<span class="lineno"> 68</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en3</span>”
+<span class="lineno"> 69</span>  			<span class="k">else</span>
+<span class="lineno"> 70</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 71</span>  		<span class="k">fi</span>
+<span class="lineno"> 72</span>  		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en4</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 73</span> 			<span class="k">then</span> 
+<span class="lineno"> 74</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en4</span>”
+<span class="lineno"> 75</span>  			<span class="k">else</span>
+<span class="lineno"> 76</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 77</span>  		<span class="k">fi</span>
+<span class="lineno"> 78</span>  		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$IP_en5</span>” !<span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 79</span> 			<span class="k">then</span> 
+<span class="lineno"> 80</span> 				<span class="nb">echo</span> “IP Address: <span class="nv">$IP_en5</span>”
+<span class="lineno"> 81</span>  			<span class="k">else</span>
+<span class="lineno"> 82</span>  				<span class="nb">echo</span> “” <span class="p">&amp;</span>gt<span class="p">;</span>/dev/null
+<span class="lineno"> 83</span>  		<span class="k">fi</span>
+<span class="lineno"> 84</span> <span class="k">fi</span>		&lt;/p&gt;
+<span class="lineno"> 85</span> 
+<span class="lineno"> 86</span> &lt;h3 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;display-current-wireless-ssid&quot;</span>&gt;Display current wireless SSID&lt;/h3&gt;
+<span class="lineno"> 87</span> &lt;p&gt;if <span class="o">[</span> “<span class="nv">$SSID</span>” <span class="o">=</span> ‘’ <span class="o">]</span>
+<span class="lineno"> 88</span> 	<span class="k">then</span>
+<span class="lineno"> 89</span> 		<span class="nb">echo</span> “Wireless SSID: Disconnected”
+<span class="lineno"> 90</span> 	<span class="k">else</span>
+<span class="lineno"> 91</span> 		<span class="k">if</span> <span class="o">[</span> “<span class="nv">$SSID</span>” <span class="o">=</span> “           SSID: “ <span class="o">]</span>
+<span class="lineno"> 92</span> 			<span class="k">then</span>
+<span class="lineno"> 93</span> 				<span class="nb">echo</span> “Wireless SSID: Disconnected”
+<span class="lineno"> 94</span> 			<span class="k">else</span>
+<span class="lineno"> 95</span> 				<span class="nb">echo</span> “Wireless SSID: <span class="nv">$SSID</span>”
+<span class="lineno"> 96</span> 		<span class="k">fi</span>	
+<span class="lineno"> 97</span> <span class="k">fi</span>&lt;/p&gt;
+<span class="lineno"> 98</span> 
+<span class="lineno"> 99</span> &lt;h3 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;spacing-to-make-things-pretty-1&quot;</span>&gt;Spacing to make things pretty&lt;/h3&gt;
+<span class="lineno">100</span> &lt;p&gt;echo “”&lt;/p&gt;
+<span class="lineno">101</span> 
+<span class="lineno">102</span> &lt;h4 <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;technology-support&quot;</span>&gt;Technology Support&lt;/h4&gt;
+<span class="lineno">103</span> &lt;p&gt;echo “For Help Desk Support call: x3819”</code></pre></div></p>
+
+<h1 id="how-do-you-use-it">How do you use it?</h1>
+<p>Great now what? Well that script does nothing for you. Unless you want to manually copy and paste on every computer…for every user profile…in your entire fleet. So lets automate that process a bit. If you have not done so already you will want to download all five (5) of the requirements above. This includes two command lines tools created by Tim Sutton, Geektool.app, the gist with all the necessary plist files, and a profile to launch Geektool at login.</p>
+
+<h2 id="modify-the-script">Modify the script</h2>
+<p><em>Note:</em> If you wish to use the script as is, feel free to skip below to creating the profiles.  </p>
+
+<p>This will be the most time consuming process so start small. Lets start by changing the Help Desk Phone Number in my script. Open the main plist <code>org.tynsoe.geeklet.shell.plist</code> from the gist zip file. Scroll down to line 116 and change the following line to something useful.</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#### Technology Support</span>
+<span class="nb">echo</span> “For Help Desk Support call: x3819”</code></pre></div></p>
+
+<p>Now is a good time to mention that the script inside of the plist has been modified from the original <code>geektool_script.sh</code> script. The plist file needs to have <code>&amp;</code> encoded as <code>&amp;amp;</code>. For that reason if you make to many changes to the script you will need to test for compatibility with GeekTool. Testing will be outside the scope of this post but a hint if you are running into errors: open Geektool manually and paste your script directly into the application.</p>
+
+<h2 id="creating-the-profiles">Creating the profiles</h2>
+<p>Note for this to work, I have found that having two profiles was the easiest solution but your milage may vary. The main reason for splitting the profiles into two, was to use one profile for launching Geektool at login and the second profile deals with organization settings for Geektool: refresh rate, script, color of the text, etc.</p>
+
+<h3 id="part-1---login-profile">Part 1 - Login profile</h3>
+<p>With that out of the way, I will go ahead and say I cheated and created the <code>Geektool-login-item.mobileconfig</code> with my profile server since it was easier than creating from scratch. You should have downloaded the referenced profile under the requirement section. You can modify this profile to have your organization name by opening the file in a <a href="http://www.barebones.com/products/textwrangler/">text editing</a> application (aka not TextEdit.app). Search for “Birdville ISD” and change to your organization name. Save and exit.</p>
+
+<h3 id="part-2---organization-profile">Part 2 - Organization profile</h3>
+<p>Now we are going to use Tim Sutton’s mcxToProfile. This tool will combine the three plist files below: </p>
+
+<ul>
+  <li><code>org.tynsoe.geeklet.shell.plist</code></li>
+  <li><code>org.tynsoe.GeekTool.plist</code></li>
+  <li><code>org.tynsoe.geektool3.plist</code> into a single usable profile. </li>
+</ul>
+
+<p>Put mcxToProfile.py in the same directory as your three plist files. After changing directory to the folder with your files run the following in Terminal:</p>
+
+<p><strong>Creating your profile</strong>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mcxToProfile.py -r org.tynsoe.geeklet.shell.plist org.tynsoe.GeekTool.plist <span class="se">\</span>
+org.tynsoe.geektool3.plist –identifier BISD-GeekTool –manage Often</code></pre></div></p>
+
+<p><em>Note:</em> you will want to change your identifier to something useful for your organization. </p>
+
+<p>This will create a second profile with the name of your “identifier + .mobileconfig”</p>
+
+<h2 id="deploying-your-profiles">Deploying your Profiles</h2>
+<p>This is kind of the bonus round. If you have made it this far you should have two working profiles (one was already made for you). If you have a MDM server you could simply upload the profiles to that, you could have users double click the files, etc. I however choose to install the profiles via a package for my users.</p>
+
+<p>Luckily, Tim has made our life easy once again. This time we will use <code>make-profile-pkg</code> to create a package containing our profiles.  If you are using munki it is even easier, as this tool can even automatically import into your munki repository. </p>
+
+<p>Making sure your .mobileconfig files and <code>make-profile-pkg.py</code> are in the same directory. Run the following to create your install package.</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">make_profile_pkg.py –munki-import Geektool-login-item.mobileconfig</code></pre></div></p>
+
+<p>In the following, you will need to modify the profile name with your correct file.</p>
+
+<p><div class="highlight"><pre><code class="language-bash" data-lang="bash">make_profile_pkg.py –munki-import identifier.mobileconfig</code></pre></div></p>
+
+<p><em>Note:</em> you will want to remove the <code>--munki-import</code> flag if you just want to create a package.</p>
+
+<h1 id="ending-notes">Ending Notes</h1>
+<p>Hopefully you find this as useful as I did. If you run into any issues feel free to contact me on Twitter or email.</p>
+
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+  <li>Geektool.app needs to be located in /Applications/.</li>
+  <li>A logout/login is required after the profiles are installed for the information to be displayed.</li>
+  <li>If one or both of your profiles are removed…bye bye Desktop Info.</li>
+  <li>This script is only good for network interfaces up to 5. If you need more add them in the script.</li>
+  <li>Tested with 10.7 Lion through 10.9 Mavericks with success. </li>
+  <li>The text is white by default. If your desktop background is a bright color then you will want to change the text color using Geektool.</li>
+</ul>
+
+<h2 id="credits">Credits</h2>
+<p>Again, a giant thank you to Erik Gomez for sharing with the munki community. Without his original documentation I would have never gotten this to work. Thanks to Tim Sutton for providing awesome tools.  </p>
+
+<hr />
+
+<p>Articles: <a href="https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY">Using GeekTool to show HelpDesk Information</a>  </p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bender]]></title>
+    <link href="/osx/backup/2014/07/11/bender.html"/>
+    <updated>2014-07-11T16:42:20-05:00</updated>
+    <id>/osx/backup/2014/07/11/bender</id>
+    <content type="html"><![CDATA[<p>Many administrators use OS X Server. In my opinion the server OS has always lacked choices when it comes to backing up the server services data. Until I found Bender…</p>
+
+<p><img src="/images/posts/2014-07-11/bendericon_display.png"></p>
+
+<blockquote>
+  <p>Bender is a utility written by Forget Computers to automate the backup of OS X Server settings to provide easy restoration of services should they become corrupt, and for importing server settings after a migration or server upgrade.</p>
+
+  <p>Bender Home Page</p>
+</blockquote>
+
+<p>Sure you have TimeMachine but some of the postgresql databases have been known to not backup property with TimeMachine. Honestly, I had given up on a backup solution that just gets the data I need for OS X Server. While reading though the <a href="https://groups.google.com/d/msg/macenterprise/MxLssCqR72Y/J1qFuALErMwJ">macenterprise list</a> I found someone recommended Bender. Once I got to work I realized what a gem I had been missing out on. In my testing I have only used Bender on Mavericks (10.9) but it should work on Lion and up. It will daily backup the following:</p>
+
+<ul>
+  <li>Open Directory</li>
+  <li>Single XML plist of all the server settings (aka DHCP, DNS, NetBoot, FileShares, etc.)</li>
+  <li>A series of individual XML plists of each server setting (aka all the above as individual files)</li>
+  <li>Profile Manager and Wiki services</li>
+</ul>
+
+<p>The last one was the true winner for me. I had been researching what I needed to do to backup my wiki, as over the past few months it has become an invaluable documentation tool for me. After finding little to none in the way of Apple documentation/release notes I finally gave up. Although, Bender in combination with TimeMachine makes for a much more complete backup solution for OS X Server.</p>
+
+<p>Hopefully you find it as invaluable as I did or at least a nice utility to have in your tool-belt. </p>
+
+<hr />
+
+<p>Articles: <a href="http://robotcloud.screenstepslive.com/s/2459/m/5322/l/94467-bender-automated-backup-of-os-x-server-settings">Bender Home Page</a>, <a href="https://groups.google.com/d/msg/macenterprise/MxLssCqR72Y/J1qFuALErMwJ">macenterprise list</a>  </p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Encrypted DMGs]]></title>
+    <link href="/osx/2014/06/17/encrypted-dmgs.html"/>
+    <updated>2014-06-17T19:49:02-05:00</updated>
+    <id>/osx/2014/06/17/encrypted-dmgs</id>
+    <content type="html"><![CDATA[<p>We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.</p>
+
+<h2 id="what-to-secure">What to secure</h2>
+<p>First, you can secure whatever files your heart desires: bank statements, work files, secret plans for that special vacation with the family, photos, passwords, etc. Pretty much anything you want, though fair-warning this is not a backup solution and if you forget your encryption password it will make accessing those files quite difficult. </p>
+
+<p>The reason to secure files is because you do not want others to have access to your data. This will help protect you in case your laptop gets stolen or maybe it just get physically accessed by someone you know. This method will use a 256-bit AES encryption algorithm to secure your data. That being said if you use a simple password, <em>cough</em> <code>password</code> <em>cough</em>, then it is quite simple for someone to brute force hack that password and have access to your data. </p>
+
+<p><strong>Disclaimer</strong>: Nothing is 100% secure. This method is just another step that can help make it harder for someone to obtain your information. With enough time the right person could access these files but your average Joe is going to have a darn hard time.</p>
+
+<h1 id="creating-an-encrypted-dmg">Creating an encrypted DMG</h1>
+<p>Step 1 - Open Disk Utility<br />
+<img src="/images/posts/2014-06-17/step1.png" width="400" height="100"></p>
+
+<p>Step 2 - Create a Blank Disk Image…<br />
+<img src="/images/posts/2014-06-17/step2.png" width="600" height="400"></p>
+
+<p>Step 3 - Name your new dmg. Note the values shown are important.</p>
+
+<ul>
+  <li>Name: the mounted disk image name</li>
+  <li>Size: depends on your data needs</li>
+  <li>Format: the default <code>Mac OS Extended (Journaled)</code> should be fine for most needs</li>
+  <li>Encryption: use 256-bit AES unless you have a solid reason to not</li>
+  <li>Partitions: using <code>Single partition - GUID Partition Map</code> is a standard that is compatible with most Macs</li>
+  <li>Image Format: using <code>sparse disk image</code> will save space on your hard drive and only use the disk space needed by the dmg</li>
+</ul>
+
+<p><img src="/images/posts/2014-06-17/step3.png" width="600" height="400"></p>
+
+<p>Step 4 - Here you want to type a secure password<br />
+<img src="/images/posts/2014-06-17/step4.png" width="400" height="400"></p>
+
+<p>Step 5 - If you click the key icon OS X will help you create a secure password using the Password Assistant<br />
+<img src="/images/posts/2014-06-17/step5.png" width="600" height="400"></p>
+
+<p>Step 6 - Note the file names. This is your encrypted dmg. You can store files here just like a flash drive.<br />
+<img src="/images/posts/2014-06-17/step6.png" width="600" height="400"></p>
+
+<p>Step 7 - If you eject your dmg you will be presented with this pop-up the next time you try to open the dmg. Type your encryption password to unlock the dmg.<br />
+<img src="/images/posts/2014-06-17/step7.png" width="400" height="100"></p>
+
+<h2 id="video-showing-the-process">Video showing the process</h2>
+<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/zAc9H7AQ2TQ" allowfullscreen></iframe></div></p>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>Creating an encrypted dmg is quite easy once you know the steps. My preference is to not store the password in your Keychain. If you are logged into your machine another users could walk right up and open the dmg without typing a password.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Find My Mac]]></title>
+    <link href="/osx/2014/05/19/find-my-mac.html"/>
+    <updated>2014-05-19T11:38:52-05:00</updated>
+    <id>/osx/2014/05/19/find-my-mac</id>
+    <content type="html"><![CDATA[<p>Under the hood of Find My Mac there are some security details that are not widely published. I take no credit to figuring these out since they were just recently brought to my attention. These are not details that a consumer would need to concern themselves with but I found them quite interesting. I decided to share what information I found.</p>
+
+<hr />
+
+<p>When a user enables Find My Mac (FMM) on their computer this is a system level change. This means if a user wishes to enable FMM they must be an administrator of the computer. A result of this is that in most environments where students are standard users this feature should never be enabled by accident. Another action that can be taken to limit FMM on machines under your management is to disable the iCloud prompt when a user logs into the machine for the first time. Look at Rich Trouton’s <a href="https://github.com/rtrouton/rtrouton_scripts/blob/master/rtrouton_scripts/disable_icloud_pop_up/disable_icloud_pop_up.sh">script</a> if you need a solution to do just that. </p>
+
+<p>Some side affects of enabling FMM means giving access from <a href="https://www.icloud.com/#find">iCloud.com</a> to do the following:</p>
+
+<ol>
+  <li>play a sound on the computer</li>
+  <li>lock the computer 
+    <ul>
+      <li>requiring a four (4) digit passcode</li>
+      <li>optionally include a recovery message on the lock screen</li>
+    </ul>
+  </li>
+  <li>erase the computer</li>
+</ol>
+
+<p>The web interface<br />
+<img src="/images/posts/2014-05-19/icloud-interface.png" width="600" height="420"></p>
+
+<p>Close up of the options<br />
+<img src="/images/posts/2014-05-19/icloud-options.png"></p>
+
+<p>From my testing, if a computer is offline while one of these options are clicked from iCloud it takes approximately one minute for the signal to be processed on the computer in question (those this could be connectivity related). Playing a sound is by far the fastest option while taking less than one second most of the time when the computer is online. If you choice to lock the computer this will cause your computer will immediately lock up and restart. You will presented with the a screen like the following.<br />
+<img src="/images/posts/2014-05-19/icloud-lock.png" width="600" height="400"></p>
+
+<p>Though I did not test, my guess is that an erase will prompt the computer to go into a state like the lock screen while deleting your data. If anyone feels like testing this feel free to contact me with results on twitter.</p>
+
+<h2 id="nvram">NVRAM</h2>
+<p>None of the information above is particularly shocking if you yourself have ever used Find my iPhone or any of the similar Find my device services from Apple. What is interesting is where this data is stored on your computer…the nvram. This means even if someone removes the hard drive of your computer the information to connect to iCloud is still present. This is great news if your laptop was actually stolen (and connected to the internet) but what does this mean when reassigning a computer that has had FMM enabled? Well the previous user could erase all the information on this laptop at any time in the future. So now I have to check with every user to see if they have had FMM enabled when reassigning a computer? Well, instead of dealing with that huge hassle when it comes around to re-imaging or reassigning a computer you can simply run the following command to clear the nvram of content related to Find my Mac. </p>
+
+<p><strong>Disable iCloud from the Command Line</strong> <br />
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>nvram -d fmm-computer-name&lt;br /&gt;
+<span class="nv">$ </span>nvram -d fmm-mobileme-token-FMM</code></pre></div></p>
+
+<h2 id="consumers">Consumers</h2>
+<p>This means if you ever purchase a second hand Mac from someone you will want to run the same command just for safty. Also, if you are attempting to sell your device be a good consumer and run the command for the next owner. </p>
+
+<p>If you are not familiar with the command line use the following:</p>
+
+<h4 id="resetting-nvram--pram">Resetting NVRAM / PRAM</h4>
+<ol>
+  <li>Shut down your Mac.</li>
+  <li>Locate the following keys on the keyboard: Command (⌘), Option, P, and R. You will need to hold these keys down simultaneously in step 4.</li>
+  <li>Turn on the computer.</li>
+  <li>Press and hold the Command-Option-P-R keys before the gray screen appears.</li>
+  <li>Hold the keys down until the computer restarts and you hear the startup sound for the second time.</li>
+  <li>Release the keys. </li>
+</ol>
+
+<p><strong>Note</strong>: Apple ID’s are considered personal. Even if you use a work email address these are accounts are not designed to be use by more than ten (10) devices. This is a hard limit set by Apple. Do <em>not</em> attempt to setup all corporate laptops on one Apple ID it will not work. In fact do not use FMM, it was not designed for this…look into <a href="https://meraki.com/login/dashboard_login">Meraki</a> if you need a free solution.</p>
+
+<hr />
+
+<p>Articles: <a href="http://ilostmynotes.blogspot.com/2013/11/disable-find-my-mac-by-modifiying-nvram.html">Disable find my Mac</a>  </p>
+
+<p>External resources regarding iCloud: <a href="http://www.apple.com/support/icloud/find-my-device/">Apple Find my Device Support</a>, 
+<a href="http://www.cnet.com/how-to/how-to-use-find-my-mac-in-icloud/">Cnet</a>, <a href="http://www.macworld.com/article/2034795/how-to-track-a-lost-computer-with-find-my-mac.html">Macworld</a></p>
+]]></content>
+  </entry>
+  
+</feed>
+    </div><!-- /.article-wrap -->
+    
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div class="google-ads">
+  <!-- 320 x 50 ad -->
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client=""
+       data-ad-slot=""></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+<span>&copy; 2014 . Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100737449); }catch(e){}</script>
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+          
+
+</body>
+</html>

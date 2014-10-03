@@ -1,0 +1,290 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Find My Mac &#8211; </title>
+<meta name="description" content="Under the hood of Find My Mac there are some security details that are not widely published. I take no credit to figuring these out since they were just recently brought to my attention. These are not details that a consumer would need to concern themselves with but I found them quite interesting. I decided to share what information I found.
+
+">
+<meta name="keywords" content="">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Find My Mac">
+<meta name="twitter:description" content="Under the hood of Find My Mac there are some security details that are not widely published. I take no credit to figuring these out since they were just recently brought to my attention. These are not details that a consumer would need to concern themselves with but I found them quite interesting. I decided to share what information I found.
+
+">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Find My Mac">
+<meta property="og:description" content="Under the hood of Find My Mac there are some security details that are not widely published. I take no credit to figuring these out since they were just recently brought to my attention. These are not details that a consumer would need to concern themselves with but I found them quite interesting. I decided to share what information I found.
+
+">
+<meta property="og:url" content="/osx/2014/05/19/find-my-mac.html">
+<meta property="og:site_name" content="">
+
+
+
+
+
+<link rel="canonical" href="/osx/2014/05/19/find-my-mac.html">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href=""></a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+					    
+					        
+					    
+					    <li><a href="/about/" >About</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="/resources/" >Resources</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="/blog/archives/" >Archives</a></li>
+					  
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+
+
+	<img src="/images/" class="bio-photo" alt=" bio photo"></a>
+
+<h3></h3>
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="/osx/2014/05/19/find-my-mac.html" rel="bookmark" title="Find My Mac">Find My Mac</a></h1>
+      
+    Categories: 
+
+<span class="categories">
+  
+    <a class='category' href='//osx/'>osx</a>
+  
+</span>
+
+	 
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>Under the hood of Find My Mac there are some security details that are not widely published. I take no credit to figuring these out since they were just recently brought to my attention. These are not details that a consumer would need to concern themselves with but I found them quite interesting. I decided to share what information I found.</p>
+
+<hr />
+
+<p>When a user enables Find My Mac (FMM) on their computer this is a system level change. This means if a user wishes to enable FMM they must be an administrator of the computer. A result of this is that in most environments where students are standard users this feature should never be enabled by accident. Another action that can be taken to limit FMM on machines under your management is to disable the iCloud prompt when a user logs into the machine for the first time. Look at Rich Trouton’s <a href="https://github.com/rtrouton/rtrouton_scripts/blob/master/rtrouton_scripts/disable_icloud_pop_up/disable_icloud_pop_up.sh">script</a> if you need a solution to do just that. </p>
+
+<p>Some side affects of enabling FMM means giving access from <a href="https://www.icloud.com/#find">iCloud.com</a> to do the following:</p>
+
+<ol>
+  <li>play a sound on the computer</li>
+  <li>lock the computer 
+    <ul>
+      <li>requiring a four (4) digit passcode</li>
+      <li>optionally include a recovery message on the lock screen</li>
+    </ul>
+  </li>
+  <li>erase the computer</li>
+</ol>
+
+<p>The web interface<br />
+<img src="/images/posts/2014-05-19/icloud-interface.png" width="600" height="420" /></p>
+
+<p>Close up of the options<br />
+<img src="/images/posts/2014-05-19/icloud-options.png" /></p>
+
+<p>From my testing, if a computer is offline while one of these options are clicked from iCloud it takes approximately one minute for the signal to be processed on the computer in question (those this could be connectivity related). Playing a sound is by far the fastest option while taking less than one second most of the time when the computer is online. If you choice to lock the computer this will cause your computer will immediately lock up and restart. You will presented with the a screen like the following.<br />
+<img src="/images/posts/2014-05-19/icloud-lock.png" width="600" height="400" /></p>
+
+<p>Though I did not test, my guess is that an erase will prompt the computer to go into a state like the lock screen while deleting your data. If anyone feels like testing this feel free to contact me with results on twitter.</p>
+
+<h2 id="nvram">NVRAM</h2>
+<p>None of the information above is particularly shocking if you yourself have ever used Find my iPhone or any of the similar Find my device services from Apple. What is interesting is where this data is stored on your computer…the nvram. This means even if someone removes the hard drive of your computer the information to connect to iCloud is still present. This is great news if your laptop was actually stolen (and connected to the internet) but what does this mean when reassigning a computer that has had FMM enabled? Well the previous user could erase all the information on this laptop at any time in the future. So now I have to check with every user to see if they have had FMM enabled when reassigning a computer? Well, instead of dealing with that huge hassle when it comes around to re-imaging or reassigning a computer you can simply run the following command to clear the nvram of content related to Find my Mac. </p>
+
+<p><strong>Disable iCloud from the Command Line</strong>   </p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>nvram -d fmm-computer-name  
+<span class="nv">$ </span>nvram -d fmm-mobileme-token-FMM</code></pre></div>
+
+<h2 id="consumers">Consumers</h2>
+<p>This means if you ever purchase a second hand Mac from someone you will want to run the same command just for safty. Also, if you are attempting to sell your device be a good consumer and run the command for the next owner. </p>
+
+<p>If you are not familiar with the command line use the following:</p>
+
+<h4 id="resetting-nvram--pram">Resetting NVRAM / PRAM</h4>
+<ol>
+  <li>Shut down your Mac.</li>
+  <li>Locate the following keys on the keyboard: Command (⌘), Option, P, and R. You will need to hold these keys down simultaneously in step 4.</li>
+  <li>Turn on the computer.</li>
+  <li>Press and hold the Command-Option-P-R keys before the gray screen appears.</li>
+  <li>Hold the keys down until the computer restarts and you hear the startup sound for the second time.</li>
+  <li>Release the keys. </li>
+</ol>
+
+<p><strong>Note</strong>: Apple ID’s are considered personal. Even if you use a work email address these are accounts are not designed to be use by more than ten (10) devices. This is a hard limit set by Apple. Do <em>not</em> attempt to setup all corporate laptops on one Apple ID it will not work. In fact do not use FMM, it was not designed for this…look into <a href="https://meraki.com/login/dashboard_login">Meraki</a> if you need a free solution.</p>
+
+<hr />
+
+<p>Articles: <a href="http://ilostmynotes.blogspot.com/2013/11/disable-find-my-mac-by-modifiying-nvram.html">Disable find my Mac</a>  </p>
+
+<p>External resources regarding iCloud: <a href="http://www.apple.com/support/icloud/find-my-device/">Apple Find my Device Support</a>, 
+<a href="http://www.cnet.com/how-to/how-to-use-find-my-mac-in-icloud/">Cnet</a>, <a href="http://www.macworld.com/article/2034795/how-to-track-a-lost-computer-with-find-my-mac.html">Macworld</a></p>
+
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+
+
+
+	<img src="/images/" class="bio-photo" alt=" bio photo"></a>
+
+<h3></h3>
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <p><b>Published: </b><time datetime="2014-05-19T11:38:52-05:00">May 19, 2014</time><br>
+		</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+    <center><nav class="pagination" role="navigation">
+      
+        <a href="/vagrant/munki/2014/05/17/creating-a-development-munki-repo.html" class="btn" title="Creating a development munki_repo">Previous article</a>
+      
+      
+        <a href="/osx/2014/06/17/encrypted-dmgs.html" class="btn" title="Encrypted DMGs">Next article</a>
+      
+    </nav><!-- /.pagination --></center>
+    <hr />
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+
+  <footer>
+    <div class="google-ads">
+  <!-- 320 x 50 ad -->
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client=""
+       data-ad-slot=""></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+<span>&copy; 2014 . Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100737449); }catch(e){}</script>
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+  
+	        
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Enable AirDrop on Ethernet &#8211; </title>
+<meta name="description" content="A quick post over enabling AirDrop to use an ethernet connection along with the default wireless connection. 
+
+">
+<meta name="keywords" content="">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Enable AirDrop on Ethernet">
+<meta name="twitter:description" content="A quick post over enabling AirDrop to use an ethernet connection along with the default wireless connection. 
+
+">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Enable AirDrop on Ethernet">
+<meta property="og:description" content="A quick post over enabling AirDrop to use an ethernet connection along with the default wireless connection. 
+
+">
+<meta property="og:url" content="/osx/2014/04/18/enable-airdrop-on-ethernet.html">
+<meta property="og:site_name" content="">
+
+
+
+
+
+<link rel="canonical" href="/osx/2014/04/18/enable-airdrop-on-ethernet.html">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href=""></a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+					    
+					        
+					    
+					    <li><a href="/about/" >About</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="/resources/" >Resources</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="/blog/archives/" >Archives</a></li>
+					  
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+
+
+	<img src="/images/" class="bio-photo" alt=" bio photo"></a>
+
+<h3></h3>
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="/osx/2014/04/18/enable-airdrop-on-ethernet.html" rel="bookmark" title="Enable AirDrop on Ethernet">Enable AirDrop on Ethernet</a></h1>
+      
+    Categories: 
+
+<span class="categories">
+  
+    <a class='category' href='//osx/'>osx</a>
+  
+</span>
+
+	 
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>A quick post over enabling AirDrop to use an ethernet connection along with the default wireless connection. </p>
+
+<hr />
+
+<blockquote>
+  <p>AirDrop helps you share items with others nearby…a quick way to share files wirelessly between two Macs, without having to connect to an existing network.</p>
+
+  <p>–Apple KB Article</p>
+</blockquote>
+
+<p>AirDrop provides a great file-sharing experience and numerous departments at my workplace have grown to love it. The service is good for simple file exchanges without needing to use a files-share. That is until someone in the audio video department tries to send five (5) or more gigabytes of video files to someone sitting right next to him. This starts to cause problems as people experience slow downs and decide to wait instead of using our gigabit ethernet connection.</p>
+
+<p>Apple provides the ability to use AirDrop over ethernet but did not enable it by default. We can only assume this was for good reason so enabling it could have unknown consequences. I have been using it for well over three (3) months without any issue, but your milage may vary. I will state that after issuing this change I needed to restart my machines for the devices to be able to utilize the AirDrop service (wireless or wired).</p>
+
+<p>Type the following line of code into Terminal to make the change. Remember this needs to be made on both machines for it to take place.</p>
+
+<p><strong>Enable AirDrop Over Any Network Connection</strong></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1</code></pre></div>
+
+<p><strong>Disable AirDrop Over Any Network Connection</strong></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">defaults write com.apple.NetworkBrowser BrowseAllInterfaces 0</code></pre></div>
+
+<hr />
+
+<p>Article: 
+<a href="http://support.apple.com/kb/ht4783">Mac Basics: AirDrop</a></p>
+
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+
+
+
+	<img src="/images/" class="bio-photo" alt=" bio photo"></a>
+
+<h3></h3>
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <p><b>Published: </b><time datetime="2014-04-18T08:43:36-05:00">April 18, 2014</time><br>
+		<b>Modified:</b> <time datetime="2014-05-06">May 06, 2014</time></p>
+      </footer>
+    </div><!-- /.article-wrap -->
+    <center><nav class="pagination" role="navigation">
+      
+        <a href="/octopress/2014/04/15/setting-up-octopress.html" class="btn" title="Setting up octopress">Previous article</a>
+      
+      
+        <a href="/git/boxen/automation/puppet/2014/04/24/things-learned-from-boxen.html" class="btn" title="Things learned from boxen">Next article</a>
+      
+    </nav><!-- /.pagination --></center>
+    <hr />
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+
+  <footer>
+    <div class="google-ads">
+  <!-- 320 x 50 ad -->
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client=""
+       data-ad-slot=""></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+<span>&copy; 2014 . Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100737449); }catch(e){}</script>
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+  
+	        
+
+</body>
+</html>
