@@ -1,0 +1,259 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Category: programming &#8211; Just another tech blog</title>
+
+<meta name="keywords" content="">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Category: programming">
+
+<meta name="twitter:site" content="@clburlison">
+<meta name="twitter:creator" content="@clburlison">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://clburlison.com/images/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Category: programming">
+
+<meta property="og:url" content="http://clburlison.com/blog/categories/programming/atom.xml">
+<meta property="og:site_name" content="Just another tech blog">
+
+
+
+
+
+<link rel="canonical" href="http://clburlison.com/blog/categories/programming/atom.xml">
+<link href="http://clburlison.com/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://clburlison.com/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://clburlison.com/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://clburlison.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://clburlison.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://clburlison.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://clburlison.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://clburlison.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://clburlison.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://clburlison.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://clburlison.com/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://clburlison.com">Just another tech blog</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+					    
+					        
+					    
+					    <li><a href="http://clburlison.com/about/" >About</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://clburlison.com/resources/" >Resources</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://clburlison.com/blog/archives/" >Archives</a></li>
+					  
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+
+
+	<img src="http://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+
+<h3>Clayton Burlison</h3>
+<p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
+<a href="mailto:clburlison@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+<a href="http://twitter.com/clburlison" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://facebook.com/clburlison" class="author-social" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+
+<a href="http://linkedin.com/in/clburlison" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/clburlison" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+
+  </div>
+  <article>
+    <h1>Category: programming</h1>
+    <div class="article-wrap">
+      <?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: programming | Just another tech blog]]></title>
+  <link href="http://clburlison.com/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://clburlison.com/"/>
+  <updated>2014-10-02T23:26:11-05:00</updated>
+  <id>http://clburlison.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Java, CoreOS, Docker, & More]]></title>
+    <link href="http://clburlison.com/blog/2014/09/09/java-coreos-docker-and-more/"/>
+    <updated>2014-09-09T00:00:24-05:00</updated>
+    <id>http://clburlison.com/blog/2014/09/09/java-coreos-docker-and-more</id>
+    <content type="html"><![CDATA[<h1 id="quick-update">Quick Update</h1>
+<p>Firstly, the new semester has started up and my previous goal of one post per month might become a little more difficult to keep up with. For that reason I will be making this post mostly personal opinions and ideas rather than technical writing.</p>
+
+<p>It has certainly been a busy start to this school year getting multiple labs ready, updating computers, installing new software, and plenty of other daily tasks that are quite difficult to stay on top of. Hopefully, I can better prepare next summer…this year was quite different. </p>
+
+<h2 id="java">Java</h2>
+<p>I have been in college for a grand total of four (4) years now. Going part time has given me an amazing opportunity to work and obtain real-world experience but has also delayed me from getting into my upper level courses and even now I am just now starting to take courses related to the IT field. </p>
+
+<p>Experience with the command line and scripting at work has prepared farther than I could have imagined. The first class I am taking regarding my degree plan is “Object Oriented Programming” using Java (INSY 3300). All the code that I have seen while looking through open source projects has been quite beneficial since the ideas of variables, comments, tabbing/spacing, and even to an extent the idea of OS X packages has some relationship to Java code. I am still in the introduction of Java but it is quite fun to finally get the time to learn a programming language. </p>
+
+<h2 id="coreos">CoreOS</h2>
+<p>CoreOS is pretty new to me but the whole idea behind it is quite fascinating.</p>
+
+<blockquote>
+  <p>CoreOS is a new Linux distribution that has been rearchitected to provide features needed to run modern infrastructure stacks. The strategies and architectures that influence CoreOS allow companies like Google, Facebook and Twitter to run their services at scale with high resilience. –<a href="https://coreos.com/">CoreOS</a></p>
+</blockquote>
+
+<p>Think really really tiny virtual machine that uses linux, has the ability to automatically update, is heavily scalable, and automatable. This is still in the learning mode for me, much like Java, and I have not had a chance to dig very deep into the usability of CoreOS. If you wish to play around with CoreOS I highly recommend using Digital Ocean since the setup is quite painless and allows you to test things on a cloud platform. Below is a link if you want to sign up and receive $10 free credit.  </p>
+
+<p><a href="https://www.digitalocean.com/?refcode=b50b2cfc8144">Click here to receive $10 credit with Digital Ocean</a> </p>
+
+<p><em>(Note: this referral also earns me credit)</em></p>
+
+<h2 id="docker">Docker</h2>
+<p>Docker is related to CoreOS but only since Core heavily relies on the foundation of <a href="https://www.docker.com/">Docker</a>. However, Docker does not rely on CoreOS and can be ran on any operating system. Without using the terminology created by Docker it is kind of hard to understand what Docker actually does. In the simplest terms, Docker is ran at the lowest level of the computer interacting with the operating system. </p>
+
+<p>For example, to setup a simple website, instead of directly modifying the apache service to serve the website. Docker will interact with apache for you, almost like sandboxing. Docker will then manage apache which will serve the web files for the website like normal. </p>
+
+<p>So you have a slight idea about Docker, but what does it do? It will allow you quickly setup services automatically with minimal to no manual labor. Below are a few cool Docker projects hosted on Github to get ideas flowing. </p>
+
+<ul>
+  <li><a href="https://github.com/overshard/docker-teamspeak">overshard/docker-teamspeak</a></li>
+  <li><a href="https://github.com/macadmins/sal">macadmins/sal</a></li>
+  <li><a href="https://github.com/macadmins/munkireport-php">macadmins/munkireport-php</a></li>
+  <li><a href="https://github.com/arcus-io/docker-puppetmaster">arcus-io/docker-puppetmaster</a></li>
+</ul>
+
+<p>Docker is <em>not</em> another application to virtualize operating systems. It allows you to have “containers” that maintain a certain service and can easily be modified on one server or 1,000’s of servers.</p>
+
+<h2 id="more">More</h2>
+<p>Currently, I have a running list of topics I would like to share using this blog. It is simply taking much longer for me to get around to them than I anticipated. There are so many awesome technologies being developed everyday. I am just lucky I get to experience it first hand.</p>
+
+<p>Let me know what you think in the comments below!</p>
+
+<hr />
+
+<p>Resources:<br />
+<a href="https://coreos.com/blog/digital-ocean-supports-coreos/">Digital Ocean Supports CoreOS</a><br />
+<a href="https://coreos.com/docs/">CoreOS Docs</a><br />
+<a href="http://docs.docker.com/">Docker Docs</a></p>
+]]></content>
+  </entry>
+  
+</feed>
+    </div><!-- /.article-wrap -->
+    
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div class="google-ads">
+  <!-- 320 x 50 ad -->
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client=""
+       data-ad-slot=""></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+<span>&copy; 2014 Clayton Burlison. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100737449); }catch(e){}</script>
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://clburlison.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://clburlison.com/assets/js/scripts.min.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-49614309-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+          
+
+</body>
+</html>
