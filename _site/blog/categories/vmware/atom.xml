@@ -139,7 +139,7 @@
   <title><![CDATA[Category: vmware | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/vmware/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-10-02T23:26:11-05:00</updated>
+  <updated>2014-10-02T23:30:03-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -213,22 +213,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="http://clburlison.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="http://clburlison.com/assets/js/scripts.min.js"></script>
-
-<!-- Asynchronous Google Analytics snippet -->
-<script>
-  var _gaq = _gaq || [];
-  var pluginUrl = 
- '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-  _gaq.push(['_setAccount', 'UA-49614309-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 
           
 
