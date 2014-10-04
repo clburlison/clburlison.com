@@ -139,7 +139,7 @@
   <title><![CDATA[Category: ubuntu | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-10-04T10:21:15-05:00</updated>
+  <updated>2014-10-04T10:26:40-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -539,7 +539,7 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div></p>
 <p>Articles:<br />
 <a href="http://www.webreference.com/programming/apache_authentication/index.html">Apache authentication</a>,<br />
 <a href="http://www.iotopia.com/configure-reposado-on-an-ubuntu-oneric-server-so-deploy-studio-can-use-it/">Configure reposado with Rewrite Rules</a>,<br />
-<a href="https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps">Creating a Cron task</a>
+<a href="https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps">Creating a Cron task</a>,<br />
 <a href="http://jerome.co.za/reposado-a-custom-apple-software-update-server/">Reposado - Apple Software Update Server</a>,<br />
 <a href="http://denisonmac.wordpress.com/2013/02/28/running-margarita-in-apache/">Running Margarita in apache</a>,  </p>
 

@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://clburlison.com" />
-<updated>2014-10-04T10:21:15-05:00</updated>
+<updated>2014-10-04T10:26:40-05:00</updated>
 <id>http://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
@@ -364,7 +364,7 @@ sudo chmod -R g+r /usr/local/asus&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Articles:&lt;br /&gt;
 &lt;a href=&quot;http://www.webreference.com/programming/apache_authentication/index.html&quot;&gt;Apache authentication&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;http://www.iotopia.com/configure-reposado-on-an-ubuntu-oneric-server-so-deploy-studio-can-use-it/&quot;&gt;Configure reposado with Rewrite Rules&lt;/a&gt;,&lt;br /&gt;
-&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps&quot;&gt;Creating a Cron task&lt;/a&gt;
+&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps&quot;&gt;Creating a Cron task&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;http://jerome.co.za/reposado-a-custom-apple-software-update-server/&quot;&gt;Reposado - Apple Software Update Server&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;http://denisonmac.wordpress.com/2013/02/28/running-margarita-in-apache/&quot;&gt;Running Margarita in apache&lt;/a&gt;,  &lt;/p&gt;
 

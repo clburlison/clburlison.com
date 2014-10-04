@@ -379,7 +379,7 @@ Need to truly thank both Joe Wollard & Jerome for their excellent documentation.
 Articles:  
 [Apache authentication](http://www.webreference.com/programming/apache_authentication/index.html),  
 [Configure reposado with Rewrite Rules](http://www.iotopia.com/configure-reposado-on-an-ubuntu-oneric-server-so-deploy-studio-can-use-it/),  
-[Creating a Cron task](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps)
+[Creating a Cron task](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps),  
 [Reposado - Apple Software Update Server](http://jerome.co.za/reposado-a-custom-apple-software-update-server/),  
 [Running Margarita in apache](http://denisonmac.wordpress.com/2013/02/28/running-margarita-in-apache/),  
 
