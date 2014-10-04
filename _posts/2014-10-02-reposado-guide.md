@@ -2,7 +2,7 @@
 layout: post
 title: "Setup Reposado + Margarita on Ubuntu 14.04"
 date: 2014-10-2T22:55:49-05:00
-modified:
+modified: 2014-10-4
 categories: reposado guide ubuntu
 excerpt: A setup guide for Reposado and Margarita using Apache on Ubuntu 14.04 with notes on securing Margarita.
 comments: true
@@ -190,15 +190,10 @@ Once done your files should look like the above.
     ServerAdmin webmaster@localhost
     DocumentRoot /usr/local/asus/www
 
-    <Directory />
-        Options FollowSymLinks
-        AllowOverride None
-    </Directory>
-
     Alias /content /usr/local/asus/www/content
     <Directory />
         Options Indexes FollowSymLinks MultiViews
-        AllowOverride None
+        AllowOverride All
         Require all granted
     </Directory>
 
@@ -295,10 +290,10 @@ Well, that is the plan anyway. If you are still having trouble getting things wo
 Out of the box, reposado will not run the repo_sync command without your direct invocation. If you want your new SUS server to look for any new updates released by Apple on its own, leaving you to simply approve them, you can setup a simple cron job. Since it is probably sane for most environments to simply run this script once per day, fire up a sudo nano session and…
 
 ``sudo nano /etc/cron.daily/repo_sync``
+
 {% highlight bash %}
 #!/bin/bash
-pushd /usr/local/asus/reposado/code/
-./repo_sync
+/usr/local/asus/reposado/code/repo_sync
 /bin/chgrp -R www-data /usr/local/asus/www
 /bin/chmod -R g+rX /usr/local/asus/www
 {% endhighlight %}
@@ -306,6 +301,8 @@ pushd /usr/local/asus/reposado/code/
 …and of course, make sure the script is executable with
 
 ``sudo chmod +x /etc/cron.daily/repo_sync``
+
+For more information on creating a cron job [click here](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps).  
 
 #Addendum 2: Keeping Up To Date
 
@@ -375,13 +372,15 @@ Lastly, restart apache for the changes to take place.
 ---
 
 #Credits
-Need to truly thank both Joe Wollard & Jerome for their excellent documentation. This page is strongly based off of their work.
+Need to truly thank both Joe Wollard & Jerome for their excellent documentation. This page is strongly based off of their work. 
 
 ---
 
 Articles:  
 [Apache authentication](http://www.webreference.com/programming/apache_authentication/index.html),  
 [Configure reposado with Rewrite Rules](http://www.iotopia.com/configure-reposado-on-an-ubuntu-oneric-server-so-deploy-studio-can-use-it/),  
+[Creating a Cron task](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps)
 [Reposado - Apple Software Update Server](http://jerome.co.za/reposado-a-custom-apple-software-update-server/),  
 [Running Margarita in apache](http://denisonmac.wordpress.com/2013/02/28/running-margarita-in-apache/),  
 
+Updated: Oct 4, 2014 - Updated [scheduling reposync](./#addendum-1-scheduling-reposync) to work. Reduce vhost lines for reposado.conf (now disables directory listing).

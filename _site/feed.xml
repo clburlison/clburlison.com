@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://clburlison.com" />
-<updated>2014-10-02T23:30:03-05:00</updated>
+<updated>2014-10-04T10:21:15-05:00</updated>
 <id>http://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
@@ -17,8 +17,9 @@
   <title type="html"><![CDATA[Setup Reposado + Margarita on Ubuntu 14.04]]></title>
   <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/10/02/reposado-guide/" />
   <id>http://clburlison.com/blog/2014/10/02/reposado-guide</id>
+  <updated>2014-10-4T00:00:00-00:00</updated>
   <published>2014-10-02T22:55:49-05:00</published>
-  <updated>2014-10-02T22:55:49-05:00</updated>
+  
   <author>
     <name>Clayton Burlison</name>
     <uri>http://clburlison.com</uri>
@@ -198,15 +199,10 @@ Listen 8089
     ServerAdmin webmaster@localhost
     DocumentRoot /usr/local/asus/www
 
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-        Options FollowSymLinks
-        AllowOverride None
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
-
     Alias /content /usr/local/asus/www/content
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
         Options Indexes FollowSymLinks MultiViews
-        AllowOverride None
+        AllowOverride All
         Require all granted
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
 
@@ -294,14 +290,15 @@ sudo chmod -R g+r /usr/local/asus&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;sudo nano /etc/cron.daily/repo_sync&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;pushd&lt;/span&gt; /usr/local/asus/reposado/code/
-./repo_sync
+/usr/local/asus/reposado/code/repo_sync
 /bin/chgrp -R www-data /usr/local/asus/www
 /bin/chmod -R g+rX /usr/local/asus/www&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;…and of course, make sure the script is executable with&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;sudo chmod +x /etc/cron.daily/repo_sync&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;For more information on creating a cron job &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps&quot;&gt;click here&lt;/a&gt;.  &lt;/p&gt;
 
 &lt;h1 id=&quot;addendum-2-keeping-up-to-date&quot;&gt;Addendum 2: Keeping Up To Date&lt;/h1&gt;
 
@@ -360,16 +357,18 @@ sudo chmod -R g+r /usr/local/asus&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr /&gt;
 
 &lt;h1 id=&quot;credits&quot;&gt;Credits&lt;/h1&gt;
-&lt;p&gt;Need to truly thank both Joe Wollard &amp;amp; Jerome for their excellent documentation. This page is strongly based off of their work.&lt;/p&gt;
+&lt;p&gt;Need to truly thank both Joe Wollard &amp;amp; Jerome for their excellent documentation. This page is strongly based off of their work. &lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;Articles:&lt;br /&gt;
 &lt;a href=&quot;http://www.webreference.com/programming/apache_authentication/index.html&quot;&gt;Apache authentication&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;http://www.iotopia.com/configure-reposado-on-an-ubuntu-oneric-server-so-deploy-studio-can-use-it/&quot;&gt;Configure reposado with Rewrite Rules&lt;/a&gt;,&lt;br /&gt;
+&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps&quot;&gt;Creating a Cron task&lt;/a&gt;
 &lt;a href=&quot;http://jerome.co.za/reposado-a-custom-apple-software-update-server/&quot;&gt;Reposado - Apple Software Update Server&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;http://denisonmac.wordpress.com/2013/02/28/running-margarita-in-apache/&quot;&gt;Running Margarita in apache&lt;/a&gt;,  &lt;/p&gt;
 
+&lt;p&gt;Updated: Oct 4, 2014 - Updated &lt;a href=&quot;./#addendum-1-scheduling-reposync&quot;&gt;scheduling reposync&lt;/a&gt; to work. Reduce vhost lines for reposado.conf (now disables directory listing).&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/10/02/reposado-guide/&quot;&gt;Setup Reposado + Margarita on Ubuntu 14.04&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on October 02, 2014.&lt;/p&gt;</content>
 </entry>

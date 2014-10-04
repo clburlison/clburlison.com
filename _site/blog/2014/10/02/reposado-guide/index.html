@@ -320,15 +320,10 @@ Listen 8089
     ServerAdmin webmaster@localhost
     DocumentRoot /usr/local/asus/www
 
-    <span class="nt">&lt;Directory</span> <span class="nt">/&gt;</span>
-        Options FollowSymLinks
-        AllowOverride None
-    <span class="nt">&lt;/Directory&gt;</span>
-
     Alias /content /usr/local/asus/www/content
     <span class="nt">&lt;Directory</span> <span class="nt">/&gt;</span>
         Options Indexes FollowSymLinks MultiViews
-        AllowOverride None
+        AllowOverride All
         Require all granted
     <span class="nt">&lt;/Directory&gt;</span>
 
@@ -416,14 +411,15 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div>
 <p><code>sudo nano /etc/cron.daily/repo_sync</code></p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
-<span class="nb">pushd</span> /usr/local/asus/reposado/code/
-./repo_sync
+/usr/local/asus/reposado/code/repo_sync
 /bin/chgrp -R www-data /usr/local/asus/www
 /bin/chmod -R g+rX /usr/local/asus/www</code></pre></div>
 
 <p>…and of course, make sure the script is executable with</p>
 
 <p><code>sudo chmod +x /etc/cron.daily/repo_sync</code></p>
+
+<p>For more information on creating a cron job <a href="https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps">click here</a>.  </p>
 
 <h1 id="addendum-2-keeping-up-to-date">Addendum 2: Keeping Up To Date</h1>
 
@@ -482,16 +478,18 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div>
 <hr />
 
 <h1 id="credits">Credits</h1>
-<p>Need to truly thank both Joe Wollard &amp; Jerome for their excellent documentation. This page is strongly based off of their work.</p>
+<p>Need to truly thank both Joe Wollard &amp; Jerome for their excellent documentation. This page is strongly based off of their work. </p>
 
 <hr />
 
 <p>Articles:<br />
 <a href="http://www.webreference.com/programming/apache_authentication/index.html">Apache authentication</a>,<br />
 <a href="http://www.iotopia.com/configure-reposado-on-an-ubuntu-oneric-server-so-deploy-studio-can-use-it/">Configure reposado with Rewrite Rules</a>,<br />
+<a href="https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps">Creating a Cron task</a>
 <a href="http://jerome.co.za/reposado-a-custom-apple-software-update-server/">Reposado - Apple Software Update Server</a>,<br />
 <a href="http://denisonmac.wordpress.com/2013/02/28/running-margarita-in-apache/">Running Margarita in apache</a>,  </p>
 
+<p>Updated: Oct 4, 2014 - Updated <a href="./#addendum-1-scheduling-reposync">scheduling reposync</a> to work. Reduce vhost lines for reposado.conf (now disables directory listing).</p>
 
       <footer role="contentinfo">
         <div class="article-author-bottom">
@@ -519,7 +517,7 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div>
 
         </div>
         <p><b>Published: </b><time datetime="2014-10-02T22:55:49-05:00">October 02, 2014</time><br>
-		</p>
+		<b>Modified:</b> <time datetime="2014-10-04">October 04, 2014</time></p>
       </footer>
     </div><!-- /.article-wrap -->
     <center><nav class="pagination" role="navigation">
