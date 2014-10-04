@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://clburlison.com" />
-<updated>2014-10-04T10:35:14-05:00</updated>
+<updated>2014-10-04T10:44:23-05:00</updated>
 <id>http://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
@@ -502,8 +502,9 @@ sudo chmod -R g+r /usr/local/asus&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   <title type="html"><![CDATA[Vimium]]></title>
   <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/08/14/vimium/" />
   <id>http://clburlison.com/blog/2014/08/14/vimium</id>
+  <updated>2014-10-04T00:00:00-00:00</updated>
   <published>2014-08-14T15:50:38-05:00</published>
-  <updated>2014-08-14T15:50:38-05:00</updated>
+  
   <author>
     <name>Clayton Burlison</name>
     <uri>http://clburlison.com</uri>
@@ -524,6 +525,12 @@ sudo chmod -R g+r /usr/local/asus&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;thoughts&quot;&gt;Thoughts&lt;/h2&gt;
 &lt;p&gt;Vimium is amazing! Even if you only use 3-4 of the features selecting links and scrolling become much faster. I would recomend anyone who uses Chrome to at least give the plugin a try. Once it is installed if you ever forget the shortcuts just type a &lt;code&gt;?&lt;/code&gt;.&lt;/p&gt;
 
+&lt;h1 id=&quot;other-browsers&quot;&gt;Other browsers&lt;/h1&gt;
+&lt;p&gt;When I original wrote this article my main browser at the time was Google Chrome. Since then I have been forced to switch to Safari due to some compatibility issues. Guy Thompson created a port of vimium for Safari that works quite well. &lt;a href=&quot;https://github.com/guyht/vimari&quot;&gt;Check it out&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Updated - Oct 4, 2014 - Added link to &lt;a href=&quot;https://github.com/guyht/vimari&quot;&gt;vimari&lt;/a&gt;&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/08/14/vimium/&quot;&gt;Vimium&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on August 14, 2014.&lt;/p&gt;</content>
 </entry>

@@ -139,7 +139,7 @@
   <title><![CDATA[Category: plugins | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/plugins/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-10-04T10:35:14-05:00</updated>
+  <updated>2014-10-04T10:44:23-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -168,6 +168,12 @@
 <h2 id="thoughts">Thoughts</h2>
 <p>Vimium is amazing! Even if you only use 3-4 of the features selecting links and scrolling become much faster. I would recomend anyone who uses Chrome to at least give the plugin a try. Once it is installed if you ever forget the shortcuts just type a <code>?</code>.</p>
 
+<h1 id="other-browsers">Other browsers</h1>
+<p>When I original wrote this article my main browser at the time was Google Chrome. Since then I have been forced to switch to Safari due to some compatibility issues. Guy Thompson created a port of vimium for Safari that works quite well. <a href="https://github.com/guyht/vimari">Check it out</a>.</p>
+
+<hr />
+
+<p>Updated - Oct 4, 2014 - Added link to <a href="https://github.com/guyht/vimari">vimari</a></p>
 ]]></content>
   </entry>
   
