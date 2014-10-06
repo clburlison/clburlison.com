@@ -4,13 +4,179 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://clburlison.com" />
-<updated>2014-10-04T10:44:23-05:00</updated>
+<updated>2014-10-05T23:32:57-05:00</updated>
 <id>http://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
   <uri>http://clburlison.com/</uri>
   <email>clburlison@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Setup a Munki repo on Ubuntu 14.04 - Part 1]]></title>
+  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/10/06/munkirepo-guide-part-1/" />
+  <id>http://clburlison.com/blog/2014/10/06/munkirepo-guide-part-1</id>
+  <published>2014-10-06T22:55:49-05:00</published>
+  <updated>2014-10-06T22:55:49-05:00</updated>
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>http://clburlison.com</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
+  &lt;header&gt;
+    &lt;h3&gt;Overview&lt;/h3&gt;
+  &lt;/header&gt;
+&lt;div id=&quot;drawer&quot;&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#intro&quot;&gt;Intro&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-install&quot;&gt;The Install&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#installing-required-software&quot;&gt;Installing Required Software&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#setup-the-directories&quot;&gt;Setup the directories:&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#creating-the-service-accounts--set-directory-permissions&quot;&gt;Creating the service accounts &amp;amp; set directory permissions:&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#setting-up-nginx&quot;&gt;Setting up Nginx&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#securing-your-munkirepo&quot;&gt;Securing your munki_repo&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#setting-up-samba&quot;&gt;Setting up Samba&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#conclusion&quot;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- /#table-of-contents --&gt;
+
+&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+
+&lt;p&gt;As you might have guessed from my previous &lt;a href=&quot;/blog/2014/10/02/reposado-guide/&quot;&gt;post&lt;/a&gt;, I am trying to standardize at work. Part of this was to move many core OS X services away from OS X Server and towards Ubuntu. This will allow us to use our existing virtualization infrastructure. After reposado the next big service was our munki repo. &lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;/images/posts/2014-10-06/munki.jpg&quot; width=&quot;400&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://github.com/munki/munki&quot;&gt;Munki&lt;/a&gt; is a very powerful open source tool for patch management and software updates for OS X clients. The client component is pretty easy to install but the server component can be a bit more tricky for newer administrators. The goal of this guide is to walk through setting up the server web share with http basic authentication (read simply security), and lastly setup samba so we can remote into our web server to manage files. &lt;/p&gt;
+
+&lt;p&gt;In the past, our munki_repo has been shared using apache but due to some research and a few internal tests I will be using nginx as the backend in this guide. &lt;/p&gt;
+
+&lt;p&gt;Since our Munki setup has many add-on projects including: &lt;a href=&quot;https://github.com/wollardj/Mandrill&quot;&gt;mandrill&lt;/a&gt;,  &lt;a href=&quot;https://github.com/munkireport/munkireport-php/&quot;&gt;munkireport-php&lt;/a&gt;, and our in-house rsync replication I will be splitting this series into multiple parts. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2014-10-06/managed_software_center.png&quot; width=&quot;600&quot; height=&quot;600&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;the-install&quot;&gt;The Install&lt;/h1&gt;
+
+&lt;p&gt;As a matter of good practice, we are going to make sure our Ubuntu server is fully patched before we start. Then we will install &lt;em&gt;git, curl, build-essential, nginx, and apache2-utils, samba&lt;/em&gt;. &lt;/p&gt;
+
+&lt;h2 id=&quot;installing-required-software&quot;&gt;Installing Required Software&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get -y install git curl build-essential nginx apache2-utils samba&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;setup-the-directories&quot;&gt;Setup the directories:&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo mkdir /usr/local/munki_repo
+sudo mkdir -p /etc/nginx/sites-enabled/
+ln -s /usr/local/munki_repo/ ~/
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local/munki_repo
+sudo mkdir catalogs client_resources icons manifests pkgs pkgsinfo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;creating-the-service-accounts--set-directory-permissions&quot;&gt;Creating the service accounts &amp;amp; set directory permissions:&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo addgroup --system munki
+sudo adduser --system munki --ingroup munki
+sudo usermod -a -G munki &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Adds the current console user to munki group&lt;/span&gt;
+sudo usermod -a -G munki www-data &lt;span class=&quot;c&quot;&gt;# Adds web user to munki group&lt;/span&gt;
+sudo chown -R &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt;:munki /usr/local/munki_repo
+sudo chmod -R &lt;span class=&quot;m&quot;&gt;2774&lt;/span&gt; /usr/local/munki_repo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;setting-up-nginx&quot;&gt;Setting up Nginx&lt;/h2&gt;
+&lt;p&gt;Nginx is fast, light-weight, and uses a fraction of the resources that Apache uses. But don’t take my word for it there are lots of &lt;a href=&quot;http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/&quot;&gt;other reason&lt;/a&gt; why &lt;a href=&quot;http://wiki.nginx.org/WhyUseIt&quot;&gt;you might want to use Nginx&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nginx’s installation on Ubuntu is very similar to Apache’s. All of its config files are stored in &lt;em&gt;/etc/nginx&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lets create a site conf for our munki_repo. &lt;br /&gt;
+&lt;code&gt;sudo nano /etc/nginx/sites-enabled/munki_repo.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;# Munki Repo
+server {
+  listen 80;
+  server_name munki;
+  location /munki_repo/ {
+    alias /usr/local/munki_repo/;
+    autoindex off;
+    auth_basic &amp;quot;Restricted&amp;quot;;
+    auth_basic_user_file /etc/nginx/.htpasswd;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we must start the nginx service.&lt;br /&gt;
+&lt;code&gt;sudo /etc/init.d/nginx start&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;securing-your-munkirepo&quot;&gt;Securing your munki_repo&lt;/h3&gt;
+&lt;p&gt;For my purpose, I will be securing my munki_repo with simple http basic authentication. Depending on the needs of your organization this might be enough but you might need to look into ssl and other advanced options. If you are interesting in these options check out the &lt;a href=&quot;https://github.com/munki/munki/wiki&quot;&gt;munki wiki&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create an http user and password&lt;/strong&gt;
+&lt;code&gt;sudo htpasswd -c /etc/nginx/.htpasswd munkihttpuser&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The tool will prompt you to enter a password (make it strong).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;New password: ******
+Re-type new password: ******
+Adding password &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; user munkihttpuser&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The structure of the htpasswd is &lt;code&gt;login:password_hash&lt;/code&gt;. &lt;em&gt;Note:&lt;/em&gt; the htpasswd should be accessible by the user-account that is running Nginx (default www-data).&lt;/p&gt;
+
+&lt;p&gt;We must reload the nginx service to update the reflected change.&lt;br /&gt;
+&lt;code&gt;sudo /etc/init.d/nginx reload&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now when you try to access your website you will notice a browser prompt that asks you to enter the login and password. Enter the details that you used while creating the .htpasswd file. The prompt does not allow you to access the website till you enter the right credentials. The munki client supports this security feature with the AdditionalHttpHeaders key &lt;a href=&quot;https://github.com/munki/munki/wiki/Using-Basic-Authentication#configuring-the-clients-to-use-a-password&quot;&gt;more info&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; If you do not want to secure your munki repo you can remove this setting in the above ngix config file by removing the two lines that start with &lt;em&gt;auth_basic&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-samba&quot;&gt;Setting up Samba&lt;/h2&gt;
+&lt;p&gt;Now we just need a way to mount our munki_repo on a mac so we can do administrative things. Samba uses a separate set of passwords than the standard Linux system accounts (stored in /etc/samba/smbpasswd), so you’ll need to create a Samba password for yourself.  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo smbpasswd -a munki
+&lt;span class=&quot;c&quot;&gt;#output on the following lines&lt;/span&gt;
+New SMB password: *****
+Retype new SMB password: ****
+Added user munki.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we need to share the munki_repo. Once “smb.conf” has loaded, add this to the very end of the file:&lt;br /&gt;
+&lt;code&gt;sudo nano /etc/samba/smb.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;munki_repo&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; /usr/local/munki_repo 
+&lt;span class=&quot;nv&quot;&gt;available&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes
+valid &lt;span class=&quot;nv&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; munki      
+&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; no
+&lt;span class=&quot;nv&quot;&gt;browseable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes
+&lt;span class=&quot;nv&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; no 
+&lt;span class=&quot;nv&quot;&gt;writable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we must restart samba.&lt;br /&gt;
+&lt;code&gt;sudo restart smbd&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Test for errors with the config file with: &lt;code&gt;testparm&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;From your mac you will be able to access the munki_repo with the following &lt;a href=&quot;&quot;&gt;smb://munki.example.com/munki_repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;We now have a working munki_repo fully configured and ready for use to start importing packages into the repo. If you are really new to Munki, this takes care of the “Demonstration Setup” section from the &lt;a href=&quot;https://github.com/munki/munki/wiki&quot;&gt;munki wiki&lt;/a&gt;. To start populating Munki with manifests, packages, and more I would recommend using &lt;a href=&quot;https://github.com/hjuutilainen/munkiadmin&quot;&gt;MunkiAdmin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Articles:&lt;br /&gt;
+&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-configure-the-nginx-web-server-on-a-virtual-private-server&quot;&gt;How to configure Nginx&lt;/a&gt;,&lt;br /&gt;
+&lt;a href=&quot;http://wiki.nginx.org/Configuration&quot;&gt;Configuration - Official nginx documentation&lt;/a&gt;,&lt;br /&gt;
+&lt;a href=&quot;https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20(Command-line%20interface/Linux%20Terminal)%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!&quot;&gt;Samba Setup&lt;/a&gt;,&lt;br /&gt;
+&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10&quot;&gt;Basic Http Auth with Nginx&lt;/a&gt;,  &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/10/06/munkirepo-guide-part-1/&quot;&gt;Setup a Munki repo on Ubuntu 14.04 - Part 1&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on October 06, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1691,128 +1857,6 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Articles: &lt;a href=&quot;http://blog.jacobelder.com/2012/03/deploying-octopress-to-amazon-s3/&quot;&gt;Jacob Elder&lt;/a&gt;, &lt;a href=&quot;http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/&quot;&gt;Jerome Bernard&lt;/a&gt;&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/04/04/deploying-octopress-to-amazon-s3/&quot;&gt;Deploying Octopress to Amazon S3&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 04, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Setting up a puppetmaster on Mavericks]]></title>
-  <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/" />
-  <id>http://clburlison.com/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks</id>
-  <updated>2014-05-22T00:00:00-00:00</updated>
-  <published>2014-04-04T11:40:54-05:00</published>
-  
-  <author>
-    <name>Clayton Burlison</name>
-    <uri>http://clburlison.com</uri>
-    <email>clburlison@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;For various reasons I decided to set up my puppetmaster on an OS X install of Mavericks instead of what I would consider the norm, being a linux distro. Here are the results. This documentation is strongly based on the article by Nate Walck on afp548.com.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;introduction-to-puppet&quot;&gt;Introduction to puppet&lt;/h3&gt;
-&lt;p&gt;Puppet is a service that is normally ran in a client/server setup that helps manage and configure devices. Since I am an OS X administrator, this article will be coving the installation and configuration on an OS X platform. While many sysadmins will prefer server installation on a linux distro I simply did not want to mess with getting a Virtual Machine approved in my environment. Below are the steps that I took to set up a puppetmaster on an OS X Mavericks install.  &lt;/p&gt;
-
-&lt;h3 id=&quot;pre-steps&quot;&gt;Pre-steps&lt;/h3&gt;
-&lt;p&gt;Setting up dns, creating a CNAME record, verifying dns records, etc. Aka all the things I should have done but did not. I will go ahead and mention now that if you are doing this for production taking a moment to do this correctly the first time will save you hours of headache down the road. Since I do not have control over network settings at work, I skipped these steps and decided to use the server hostnames in my case. Please refer to the &lt;a href=&quot;http://www.afp548.com/2013/02/26/setting-up-a-basic-3-1-x-puppet-master-on-os-x-10-8/&quot;&gt;article&lt;/a&gt; by Nate if you want to do things the approved way.&lt;/p&gt;
-
-&lt;h3 id=&quot;install-the-software&quot;&gt;Install the software&lt;/h3&gt;
-&lt;p&gt;Next, we must install Puppet on our master.  The Reference Manual has a section specifically for OS X regarding the puppet install. For Mavericks, you will want at least &lt;strong&gt;Puppet version 3.2.X&lt;/strong&gt; or higher. You will also want to install &lt;strong&gt;Facter, and Hiera&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Each of these pieces of software can be obtained from &lt;a href=&quot;http://downloads.puppetlabs.com/mac/&quot;&gt;here&lt;/a&gt;. (After downloading, you will want to install each of the three packages. A control click might be needed if you have Gatekeeper enabled.)&lt;/p&gt;
-
-&lt;p&gt;The puppet service account should be created automatically. It is good practice to double checking this by running. Check for Puppet user: &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;id puppet&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The command above should list the puppet user’s uid, gid and groups.  If you get ‘id: puppet: no such user’ instead, then you will need to create the user manually.  Create the service account and puppet group using the following two commands (As per the Reference Manual):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo puppet resource group puppet &lt;span class=&quot;nv&quot;&gt;ensure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;present
-sudo puppet resource user puppet &lt;span class=&quot;nv&quot;&gt;ensure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;present &lt;span class=&quot;nv&quot;&gt;gid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;puppet &lt;span class=&quot;nv&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/sbin/nologin&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You also do not want this puppet user to appear at the login window (since it is a service account), so run the following command to hide it (or you can set it via MCX, Profile, etc):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo defaults write /Library/Preferences/com.apple.loginwindow Hide500Users -boolean YES&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;settings-up-our-puppetmaster&quot;&gt;Settings up our puppetmaster&lt;/h3&gt;
-&lt;p&gt;Now we will make changes to the default puppet configuration for our server. This can be done with &lt;strong&gt;sudo nano /etc/puppet/puppet.conf&lt;/strong&gt; then enter the following text. Save with “Ctrl + X”&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Default Puppet Settings&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; server_host_name_here &lt;span class=&quot;c&quot;&gt;# default is &amp;#39;puppet&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;report&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;pluginsync&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;certname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; server.company.com &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;The FQDN of the machine that is running puppet&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Also, since pluginsync is enabled by default, create the modules folder and make sure the puppet user owns it. We can create our manifests directory while we are at it. The latter command will create the default &lt;em&gt;site.pp&lt;/em&gt; file:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo mkdir /etc/puppet/modules
-sudo chown puppet /etc/puppet/modules
-sudo mkdir /etc/puppet/manifests
-sudo touch /etc/puppet/manifests/site.pp
-sudo chown puppet /etc/puppet/manifests/site.pp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Lastly, run puppet as a master for the first time using the following command:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo puppet master --debug --verbose --no-daemonize&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Because we are running puppet as a master, it will generate a CA (Certificate Authority) so it can securely talk to clients and create other folder structure that the master needs to function.&lt;/p&gt;
-
-&lt;h4 id=&quot;launchdaemon-setup&quot;&gt;LaunchDaemon setup&lt;/h4&gt;
-&lt;p&gt;Puppet is now fully configured as a basic master, but we are missing one key component: a service to make sure that Puppet is running.  Since we are setting this up on OS X, we will use a launchd job.  The Puppet documentation on setting up the launchd item can be found &lt;a href=&quot;http://docs.puppetlabs.com/guides/installation.html#with-launchd&quot;&gt;here&lt;/a&gt;.  In this documentation, Puppet Labs has provided us with a launchd item that can take care of starting our puppet master for us.  You can view the original plist &lt;a href=&quot;http://docs.puppetlabs.com/guides/installation.html#mac-os-x&quot;&gt;here&lt;/a&gt; or copy it from the box.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;lt;?xml &lt;span class=&quot;nv&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;1.0&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;?&amp;gt;
-&amp;lt;!DOCTYPE plist PUBLIC &lt;span class=&quot;s2&quot;&gt;&amp;quot;-//Apple Computer//DTD PLIST 1.0//EN&amp;quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&lt;/span&gt;&amp;gt;
-&amp;lt;plist &lt;span class=&quot;nv&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;1.0&amp;quot;&lt;/span&gt;&amp;gt;
-&amp;lt;dict&amp;gt;
-        &amp;lt;key&amp;gt;EnvironmentVariables&amp;lt;/key&amp;gt;
-        &amp;lt;dict&amp;gt;
-                &amp;lt;key&amp;gt;PATH&amp;lt;/key&amp;gt;
-                &amp;lt;string&amp;gt;/sbin:/usr/sbin:/bin:/usr/bin&amp;lt;/string&amp;gt;
-                &amp;lt;key&amp;gt;RUBYLIB&amp;lt;/key&amp;gt;
-                &amp;lt;string&amp;gt;/usr/lib/ruby/site_ruby/1.8/&amp;lt;/string&amp;gt;
-        &amp;lt;/dict&amp;gt;
-        &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt;
-        &amp;lt;string&amp;gt;com.puppetlabs.puppetmaster&amp;lt;/string&amp;gt;
-        &amp;lt;key&amp;gt;OnDemand&amp;lt;/key&amp;gt;
-        &amp;lt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;/&amp;gt;
-        &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt;
-        &amp;lt;array&amp;gt;
-                &amp;lt;string&amp;gt;/usr/bin/puppet&amp;lt;/string&amp;gt;
-                &amp;lt;string&amp;gt;master&amp;lt;/string&amp;gt;
-                &amp;lt;string&amp;gt;--verbose&amp;lt;/string&amp;gt;
-                &amp;lt;string&amp;gt;--no-daemonize&amp;lt;/string&amp;gt;
-        &amp;lt;/array&amp;gt;
-        &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt;
-        &amp;lt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;/&amp;gt;
-        &amp;lt;key&amp;gt;ServiceDescription&amp;lt;/key&amp;gt;
-        &amp;lt;string&amp;gt;Puppetmaster Daemon&amp;lt;/string&amp;gt;
-        &amp;lt;key&amp;gt;ServiceIPC&amp;lt;/key&amp;gt;
-        &amp;lt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;/&amp;gt;
-        &amp;lt;key&amp;gt;StandardErrorPath&amp;lt;/key&amp;gt;
-        &amp;lt;string&amp;gt;/var/log/puppet/puppetmaster.err&amp;lt;/string&amp;gt;
-        &amp;lt;key&amp;gt;StandardOutPath&amp;lt;/key&amp;gt;
-        &amp;lt;string&amp;gt;/var/log/puppet/puppetmaster.out&amp;lt;/string&amp;gt;
-&amp;lt;/dict&amp;gt;
-&amp;lt;/plist&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Save the contents of this file into &lt;strong&gt;/Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist&lt;/strong&gt; . Also, make sure the permissions are correct on the file:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo chown root:wheel /Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist  
-sudo chmod &lt;span class=&quot;m&quot;&gt;644&lt;/span&gt; /Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Lastly, load the launchd using launchctl:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo launchctl load -w /Library/LaunchDaemons/com.puppetlabs.puppetmaster.plist&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;We should now have a fully functional puppetmaster running on OS X Mavericks. Note that this is running with the default WEBrick server that comes with puppet. While this should be okay for development it is not suitable for production. Methods for scaling Puppet can be found on the &lt;a href=&quot;http://docs.puppetlabs.com/guides/scaling.html&quot;&gt;Scaling Puppet&lt;/a&gt; page.&lt;/p&gt;
-
-&lt;p&gt;More information about puppet will be published in the future. I am going through beta testing with Puppet at the time of this writing.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Articles: &lt;a href=&quot;http://www.afp548.com/2013/02/26/setting-up-a-basic-3-1-x-puppet-master-on-os-x-10-8/&quot;&gt;afp548.com&lt;/a&gt;, &lt;a href=&quot;http://docs.puppetlabs.com/guides/installation.html#mac-os-x&quot;&gt;Puppetlabs Offical Documentation&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/&quot;&gt;Setting up a puppetmaster on Mavericks&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

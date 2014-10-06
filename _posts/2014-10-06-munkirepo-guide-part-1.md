@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
-date: 2014-10-08T22:55:49-05:00
+date: 2014-10-06T22:55:49-05:00
 modified:
-categories: guide munki ubuntu
+categories: munki ubuntu
 excerpt: Gets the repo configured and shared via nginx. Plus, samba gets configured for remote administration.
 comments: true
-published: false
+published: true
 tags: []
 image:
   feature:
@@ -31,11 +31,17 @@ image:
 
 #Intro
 
-As you might have guessed from my previous [post](/blog/2014/10/02/reposado-guide/), I am trying to standardize at work. Part of this was to move many core OS X services away from OS X Server and towards Ubuntu. This will allow us to use our existing virtualization infrastructure. After reposado the next big service was our munki_repo. 
+As you might have guessed from my previous [post](/blog/2014/10/02/reposado-guide/), I am trying to standardize at work. Part of this was to move many core OS X services away from OS X Server and towards Ubuntu. This will allow us to use our existing virtualization infrastructure. After reposado the next big service was our munki repo. 
 
-In the past, our munki_repo has been shared using apache but due to some research and a few internal tests I will be using nginx as the backend. 
+{% img center /images/posts/2014-10-06/munki.jpg 400 400 %}
 
-Since our Munki setup has many add-on projects including: [munkireport-php](https://github.com/munkireport/munkireport-php/), [mandrill](https://github.com/wollardj/Mandrill), and our in-house rsync replication I will be splitting this series into multiple parts. 
+[Munki](http://github.com/munki/munki) is a very powerful open source tool for patch management and software updates for OS X clients. The client component is pretty easy to install but the server component can be a bit more tricky for newer administrators. The goal of this guide is to walk through setting up the server web share with http basic authentication (read simply security), and lastly setup samba so we can remote into our web server to manage files. 
+
+In the past, our munki_repo has been shared using apache but due to some research and a few internal tests I will be using nginx as the backend in this guide. 
+
+Since our Munki setup has many add-on projects including: [mandrill](https://github.com/wollardj/Mandrill),  [munkireport-php](https://github.com/munkireport/munkireport-php/), and our in-house rsync replication I will be splitting this series into multiple parts. 
+
+{% img /images/posts/2014-10-06/managed_software_center.png 600 600 %}
 
 #The Install
 
@@ -80,21 +86,19 @@ sudo chmod -R 2774 /usr/local/munki_repo
 ##Setting up Nginx
 Nginx is fast, light-weight, and uses a fraction of the resources that Apache uses. But don't take my word for it there are lots of [other reason](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/) why [you might want to use Nginx](http://wiki.nginx.org/WhyUseIt).
 
-Nginx's installation on Ubuntu is very similar to Apache's. All of its config files are stored in _/etc/nginx_. The first thing we want to do is remove the sites that are enabled by default since they're just placeholders and don't do anything interesting.
+Nginx's installation on Ubuntu is very similar to Apache's. All of its config files are stored in _/etc/nginx_.
 
-``sudo unlink /etc/nginx/sites-enabled/*``
-
-Now, lets create a site conf for our munki_repo.   
+Lets create a site conf for our munki_repo.   
 ``sudo nano /etc/nginx/sites-enabled/munki_repo.conf``
 
 {% highlight html %}
 # Munki Repo
 server {
   listen 80;
-  server_name munki01;
+  server_name munki;
   location /munki_repo/ {
     alias /usr/local/munki_repo/;
-    autoindex on;
+    autoindex off;
     auth_basic "Restricted";
     auth_basic_user_file /etc/nginx/.htpasswd;
   }
@@ -102,18 +106,16 @@ server {
 
 {% endhighlight %}
 
-_Note:_ In this example my server name is munki01. Change this to meet your needs.
-
 Now we must start the nginx service.  
 ``sudo /etc/init.d/nginx start``
 
 ###Securing your munki_repo
-For my purpose, I will be securing my munki_repo with simple http basic authentication. Depending on the needs of your organization this might be enough but you might need to look into ssl and other advanced options.
+For my purpose, I will be securing my munki_repo with simple http basic authentication. Depending on the needs of your organization this might be enough but you might need to look into ssl and other advanced options. If you are interesting in these options check out the [munki wiki](https://github.com/munki/munki/wiki).
 
 **Create an http user and password**
 ``sudo htpasswd -c /etc/nginx/.htpasswd munkihttpuser``
 
-The tool will prompt for a password so use a strong password.
+The tool will prompt you to enter a password (make it strong).
 {% highlight bash %}
 
 New password: ******
@@ -122,13 +124,14 @@ Adding password for user munkihttpuser
 
 {% endhighlight %}
 
-The structure of the htpasswd is ``login:encrypted_password``. _Note:_ the htpasswd should be accessible by the user-account that is running Nginx (default www-data).
+The structure of the htpasswd is ``login:password_hash``. _Note:_ the htpasswd should be accessible by the user-account that is running Nginx (default www-data).
 
 We must reload the nginx service to update the reflected change.  
 ``sudo /etc/init.d/nginx reload``
 
 Now when you try to access your website you will notice a browser prompt that asks you to enter the login and password. Enter the details that you used while creating the .htpasswd file. The prompt does not allow you to access the website till you enter the right credentials. The munki client supports this security feature with the AdditionalHttpHeaders key [more info](https://github.com/munki/munki/wiki/Using-Basic-Authentication#configuring-the-clients-to-use-a-password).
 
+_Note:_ If you do not want to secure your munki repo you can remove this setting in the above ngix config file by removing the two lines that start with _auth_basic_.
 
 ##Setting up Samba
 Now we just need a way to mount our munki_repo on a mac so we can do administrative things. Samba uses a separate set of passwords than the standard Linux system accounts (stored in /etc/samba/smbpasswd), so you'll need to create a Samba password for yourself.  
@@ -161,12 +164,10 @@ Now we must restart samba.
 
 Test for errors with the config file with: ``testparm``
 
-From your mac you will be able to access the munki_repo with the following [smb://munki01.example.com/munki_repo]().
+From your mac you will be able to access the munki_repo with the following [smb://munki.example.com/munki_repo]().
 
 #Conclusion
-We now have a working munki_repo fully configured and ready for use to start importing packages into the repo.
-
-
+We now have a working munki_repo fully configured and ready for use to start importing packages into the repo. If you are really new to Munki, this takes care of the "Demonstration Setup" section from the [munki wiki](https://github.com/munki/munki/wiki). To start populating Munki with manifests, packages, and more I would recommend using [MunkiAdmin](https://github.com/hjuutilainen/munkiadmin).
 
 ---
 
