@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://clburlison.com" />
-<updated>2014-10-13T15:20:02-05:00</updated>
+<updated>2014-10-13T15:26:15-05:00</updated>
 <id>http://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
@@ -229,7 +229,7 @@ valid &lt;span class=&quot;nv&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o
 &lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
 &lt;p&gt;Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup. &lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; I have added &lt;a href=&quot;./Addendum-4:-Using-nginx-instead-of-apache&quot;&gt;Addendum 4&lt;/a&gt; if you would like to serve reposado files using nginx. In my testing it has been much faster at serving html request. Also, a little easier to setup the redirect rules.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; I have added &lt;a href=&quot;./#addendum-4-using-nginx-instead-of-apache&quot;&gt;Addendum 4&lt;/a&gt; if you would like to serve files using nginx instead of apache. In my testing, it has been much faster at serving html request. Also, a little easier to setup the redirect rules.&lt;/p&gt;
 
 &lt;h1 id=&quot;the-software&quot;&gt;The software&lt;/h1&gt;
 &lt;p&gt;If you have not heard of &lt;a href=&quot;https://github.com/wdas/reposado&quot;&gt;reposado&lt;/a&gt;. It is a set of tools that replicate the key functionality of Mac OS X Server’s Software Update Service.&lt;/p&gt;
@@ -529,7 +529,7 @@ sudo chmod -R g+r /usr/local/asus&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get -y install nginx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Now we need to modify our ports file so nginx has access our desired ports. You can pick the port yourself just make sure and be consistent when you modify your &lt;code&gt;reposado.conf&lt;/code&gt; file. Remove both port 80 &amp;amp; 8088 from the file below.
+&lt;p&gt;Now we need to modify our ports file so nginx has access our desired ports. You can pick the port yourself just make sure and be consistent when you modify your &lt;code&gt;reposado.conf&lt;/code&gt; file. Remove both port 80 &amp;amp; 8088 from the file below.&lt;br /&gt;
 &lt;code&gt;sudo nano /etc/apache2/ports.conf&lt;/code&gt;  &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;# If you just change the port or add more ports here, you will likely also
@@ -548,7 +548,7 @@ Listen 8089
         Listen 443
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/IfModule&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Lets restart apache to free your server ports up. 
+&lt;p&gt;Lets restart apache to free your server ports up. &lt;br /&gt;
 &lt;code&gt;sudo service apache2 restart&lt;/code&gt; &lt;/p&gt;
 
 &lt;p&gt;Lastly, we need to setup nginx with the following config file. Modify your listening port to your preference.  &lt;/p&gt;
@@ -556,10 +556,10 @@ Listen 8089
 &lt;p&gt;&lt;code&gt;sudo nano /etc/nginx/sites-enabled/reposado.conf&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;server {
-  listen 80;
+  listen 8088;
   server_name reposado01;
   root /usr/local/asus/www;
-  autoindex on;
+  autoindex off;
   ## 10.4.x - Tiger
   if ( $http_user_agent ~ &amp;quot;Darwin/8&amp;quot; ){
     rewrite ^/index(.*)\.sucatalog$ /content/catalogs/index$1.sucatalog last;
@@ -607,8 +607,10 @@ Listen 8089
 &lt;a href=&quot;http://jerome.co.za/reposado-a-custom-apple-software-update-server/&quot;&gt;Reposado - Apple Software Update Server&lt;/a&gt;,&lt;br /&gt;
 &lt;a href=&quot;http://denisonmac.wordpress.com/2013/02/28/running-margarita-in-apache/&quot;&gt;Running Margarita in apache&lt;/a&gt;,  &lt;/p&gt;
 
-&lt;p&gt;Updated: Oct 4, 2014 - Updated &lt;a href=&quot;./#addendum-1-scheduling-reposync&quot;&gt;scheduling reposync&lt;/a&gt; to work. Reduce vhost lines for reposado.conf (now disables directory listing).&lt;br /&gt;
-Oct. 12, 2014 - Spelling&lt;/p&gt;
+&lt;p&gt;Updated:&lt;br /&gt;
+Oct 4, 2014 - Updated &lt;a href=&quot;./#addendum-1-scheduling-reposync&quot;&gt;scheduling reposync&lt;/a&gt; to work. Reduce vhost lines for reposado.conf (now disables directory listing).&lt;br /&gt;
+Oct. 12, 2014 - Spelling&lt;br /&gt;
+Oct. 13, 2014 - Added &lt;a href=&quot;./#addendum-4-using-nginx-instead-of-apache&quot;&gt;Nginx setup addendum&lt;/a&gt;&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/10/02/reposado-guide/&quot;&gt;Setup Reposado + Margarita on Ubuntu 14.04&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on October 02, 2014.&lt;/p&gt;</content>
 </entry>

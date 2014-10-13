@@ -139,7 +139,7 @@
   <title><![CDATA[Category: reposado | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/reposado/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-10-13T15:20:02-05:00</updated>
+  <updated>2014-10-13T15:26:15-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -196,7 +196,7 @@
 <h1 id="intro">Intro</h1>
 <p>Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup. </p>
 
-<p><em>Note:</em> I have added <a href="./Addendum-4:-Using-nginx-instead-of-apache">Addendum 4</a> if you would like to serve reposado files using nginx. In my testing it has been much faster at serving html request. Also, a little easier to setup the redirect rules.</p>
+<p><em>Note:</em> I have added <a href="./#addendum-4-using-nginx-instead-of-apache">Addendum 4</a> if you would like to serve files using nginx instead of apache. In my testing, it has been much faster at serving html request. Also, a little easier to setup the redirect rules.</p>
 
 <h1 id="the-software">The software</h1>
 <p>If you have not heard of <a href="https://github.com/wdas/reposado">reposado</a>. It is a set of tools that replicate the key functionality of Mac OS X Server’s Software Update Service.</p>
@@ -540,7 +540,7 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div></p>
 
 <p><div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get -y install nginx</code></pre></div></p>
 
-<p>Now we need to modify our ports file so nginx has access our desired ports. You can pick the port yourself just make sure and be consistent when you modify your <code>reposado.conf</code> file. Remove both port 80 &amp; 8088 from the file below.
+<p>Now we need to modify our ports file so nginx has access our desired ports. You can pick the port yourself just make sure and be consistent when you modify your <code>reposado.conf</code> file. Remove both port 80 &amp; 8088 from the file below.<br />
 <code>sudo nano /etc/apache2/ports.conf</code>  </p>
 
 <p><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;/p&gt;</span>
@@ -563,7 +563,7 @@ Listen 8089<span class="nt">&lt;/p&gt;</span>
 
 <span class="nt">&lt;p&gt;</span></code></pre></div></p>
 
-<p>Lets restart apache to free your server ports up. 
+<p>Lets restart apache to free your server ports up. <br />
 <code>sudo service apache2 restart</code> </p>
 
 <p>Lastly, we need to setup nginx with the following config file. Modify your listening port to your preference.  </p>
@@ -571,10 +571,10 @@ Listen 8089<span class="nt">&lt;/p&gt;</span>
 <p><code>sudo nano /etc/nginx/sites-enabled/reposado.conf</code></p>
 
 <p><div class="highlight"><pre><code class="language-html" data-lang="html">server {
-  listen 80;
+  listen 8088;
   server_name reposado01;
   root /usr/local/asus/www;
-  autoindex on;
+  autoindex off;
   ## 10.4.x - Tiger
   if ( $http_user_agent ~ “Darwin/8” ){
     rewrite ^/index(.<span class="nt">&lt;em&gt;</span>).sucatalog$ /content/catalogs/index$1.sucatalog last;
@@ -622,8 +622,10 @@ Listen 8089<span class="nt">&lt;/p&gt;</span>
 <a href="http://jerome.co.za/reposado-a-custom-apple-software-update-server/">Reposado - Apple Software Update Server</a>,<br />
 <a href="http://denisonmac.wordpress.com/2013/02/28/running-margarita-in-apache/">Running Margarita in apache</a>,  </p>
 
-<p>Updated: Oct 4, 2014 - Updated <a href="./#addendum-1-scheduling-reposync">scheduling reposync</a> to work. Reduce vhost lines for reposado.conf (now disables directory listing).<br />
-Oct. 12, 2014 - Spelling</p>
+<p>Updated:<br />
+Oct 4, 2014 - Updated <a href="./#addendum-1-scheduling-reposync">scheduling reposync</a> to work. Reduce vhost lines for reposado.conf (now disables directory listing).<br />
+Oct. 12, 2014 - Spelling<br />
+Oct. 13, 2014 - Added <a href="./#addendum-4-using-nginx-instead-of-apache">Nginx setup addendum</a></p>
 ]]></content>
   </entry>
   
