@@ -27,7 +27,7 @@ image:
 #Intro
 Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup. 
 
-_Note:_ I have added [Addendum 4](./#addendum-4-using-nginx-instead-of-apache) if you would like to serve files using nginx instead of apache. In my testing, it has been much faster at serving html request. Also, a little easier to setup the redirect rules.
+_Note:_ I have added [Addendum 4](./#addendum-4-using-nginx) if you would like to serve files using nginx instead of apache. In my testing, it has been much faster at serving html request. Also, a little easier to setup the redirect rules.
 
 #The software
 If you have not heard of [reposado](https://github.com/wdas/reposado). It is a set of tools that replicate the key functionality of Mac OS X Server's Software Update Service.
@@ -371,16 +371,18 @@ sudo chmod -R g+r /usr/local/asus
 Lastly, restart apache for the changes to take place.  
 ``sudo service apache2 restart``
 
-#Addendum 4: Using nginx instead of apache 
+#Addendum 4: Using nginx 
 
-Firstly, we must install nginx so we can use it.
+Nginx offers a few benefits over using apache, with the key benefit being lighter. This results in speeder transfers from the web server to clients. With that said, Nginx does not offer as easy usage of some moduales as such I am running Margarita over apache while serving reposado (Apple client updates) via nginx.
+
+Firstly, we must install nginx on our server so we can use it.
 
 {% highlight bash %}
 sudo apt-get -y install nginx
 {% endhighlight %}
 
 
-Now we need to modify our ports file so nginx has access our desired ports. You can pick the port yourself just make sure and be consistent when you modify your ``reposado.conf`` file. Remove both port 80 & 8088 from the file below.  
+Now we need to modify our apache ports file so nginx has access our desired ports. You can pick the port yourself just make sure and be consistent when you modify your ``reposado.conf`` file. Remove both port 80 & 8088 from the file below.  
 ``sudo nano /etc/apache2/ports.conf``  
 
 {% highlight html %}
@@ -403,14 +405,14 @@ Listen 8089
 
 {% endhighlight %}
 
-Lets restart apache to free your server ports up.   
+Restart apache to free ports 80 and 8088 for nginx.   
 ``sudo service apache2 restart`` 
 
-Lastly, we need to setup nginx with the following config file. Modify your listening port to your preference.  
+We need to setup nginx with the following config file. Modify your listening port to your preference.  
 
 ``sudo nano /etc/nginx/sites-enabled/reposado.conf``
 
-{% highlight html %}
+{% highlight bash %}
 server {
   listen 8088;
   server_name reposado01;
@@ -447,7 +449,7 @@ server {
 }
 {% endhighlight %}
 
-Lastly, start the nginx service to start serving your file.  
+Lastly, start the nginx service to start serving your files.  
 ``sudo /etc/init.d/nginx start``
 
 
@@ -469,4 +471,4 @@ Articles:
 Updated:  
 Oct 4, 2014 - Updated [scheduling reposync](./#addendum-1-scheduling-reposync) to work. Reduce vhost lines for reposado.conf (now disables directory listing).  
 Oct. 12, 2014 - Spelling  
-Oct. 13, 2014 - Added [Nginx setup addendum](./#addendum-4-using-nginx-instead-of-apache)
+Oct. 13, 2014 - Added [Nginx setup addendum](./#addendum-4-using-nginx)
