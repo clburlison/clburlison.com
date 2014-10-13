@@ -173,6 +173,7 @@
   <li><a href="#addendum-1-scheduling-reposync">Addendum 1: Scheduling repo_sync</a></li>
   <li><a href="#addendum-2-keeping-up-to-date">Addendum 2: Keeping Up To Date</a></li>
   <li><a href="#addendum-3-securing-margarita">Addendum 3: Securing Margarita</a></li>
+  <li><a href="#addendum-4-using-nginx-instead-of-apache">Addendum 4: Using nginx instead of apache</a></li>
   <li><a href="#credits">Credits</a></li>
 </ul>
 
@@ -181,7 +182,9 @@
 <!-- /#table-of-contents -->
 
 <h1 id="intro">Intro</h1>
-<p>Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup.</p>
+<p>Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup. </p>
+
+<p><em>Note:</em> I have added <a href="./Addendum-4:-Using-nginx-instead-of-apache">Addendum 4</a> if you would like to serve reposado files using nginx. In my testing it has been much faster at serving html request. Also, a little easier to setup the redirect rules.</p>
 
 <h1 id="the-software">The software</h1>
 <p>If you have not heard of <a href="https://github.com/wdas/reposado">reposado</a>. It is a set of tools that replicate the key functionality of Mac OS X Server’s Software Update Service.</p>
@@ -288,7 +291,7 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div>
 <p>Enable the mod_rewrite engine:<br />
 <code>sudo a2enmod rewrite</code> </p>
 
-<p>Lets initalize apache with the following command:<br />
+<p>Lets initialize apache with the following command:<br />
  <code>sudo service apache2 restart</code></p>
 
 <p>Now we need to add ports 8088 and 8089 to apache’s listening ports.<br />
@@ -475,6 +478,76 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div>
 <p>Lastly, restart apache for the changes to take place.<br />
 <code>sudo service apache2 restart</code></p>
 
+<h1 id="addendum-4-using-nginx-instead-of-apache">Addendum 4: Using nginx instead of apache</h1>
+
+<p>Firstly, we must install nginx so we can use it.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get -y install nginx</code></pre></div>
+
+<p>Now we need to modify our ports file so nginx has access our desired ports. You can pick the port yourself just make sure and be consistent when you modify your <code>reposado.conf</code> file. Remove both port 80 &amp; 8088 from the file below.
+<code>sudo nano /etc/apache2/ports.conf</code>  </p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"># If you just change the port or add more ports here, you will likely also
+# have to change the VirtualHost statement in
+# /etc/apache2/sites-enabled/000-default.conf
+
+#Listen 80
+#Listen 8088
+Listen 8089
+
+<span class="nt">&lt;IfModule</span> <span class="na">ssl_module</span><span class="nt">&gt;</span>
+        Listen 443
+<span class="nt">&lt;/IfModule&gt;</span>
+
+<span class="nt">&lt;IfModule</span> <span class="na">mod_gnutls</span><span class="err">.</span><span class="na">c</span><span class="nt">&gt;</span>
+        Listen 443
+<span class="nt">&lt;/IfModule&gt;</span></code></pre></div>
+
+<p>Lets restart apache to free your server ports up. 
+<code>sudo service apache2 restart</code> </p>
+
+<p>Lastly, we need to setup nginx with the following config file. Modify your listening port to your preference.  </p>
+
+<p><code>sudo nano /etc/nginx/sites-enabled/reposado.conf</code></p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">server {
+  listen 80;
+  server_name reposado01;
+  root /usr/local/asus/www;
+  autoindex on;
+  ## 10.4.x - Tiger
+  if ( $http_user_agent ~ &quot;Darwin/8&quot; ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/index$1.sucatalog last;
+  }
+  ## 10.5.x - Leopard
+  if ( $http_user_agent ~ &quot;Darwin/9&quot; ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-leopard.merged-1$1.sucatalog last;
+  }
+  ## 10.6.x - Snow Leopard
+  if ( $http_user_agent ~ &quot;Darwin/10&quot; ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-leopard-snowleopard.merged-1$1.sucatalog last;
+  }
+  ## 10.7.x - Lion
+  if ( $http_user_agent ~ &quot;Darwin/11&quot; ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-lion-snowleopard-leopard.merged-1$1.sucatalog last;
+  }
+  ## 10.8.x - Mountain Lion
+  if ( $http_user_agent ~ &quot;Darwin/12&quot; ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog last;
+  }
+  ## 10.9.x - Mavericks
+  if ( $http_user_agent ~ &quot;Darwin/13&quot; ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-10.9-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog last;
+  }
+  ## 10.10.x - Yosemite
+  if ( $http_user_agent ~ &quot;Darwin/14&quot; ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog last;
+  }
+}</code></pre></div>
+
+<p>Lastly, start the nginx service to start serving your file.<br />
+<code>sudo /etc/init.d/nginx start</code></p>
+
 <hr />
 
 <h1 id="credits">Credits</h1>
@@ -518,7 +591,7 @@ Oct. 12, 2014 - Spelling</p>
 
         </div>
         <p><b>Published: </b><time datetime="2014-10-02T22:55:49-05:00">October 02, 2014</time><br>
-		<b>Modified:</b> <time datetime="2014-10-04">October 04, 2014</time></p>
+		<b>Modified:</b> <time datetime="2014-10-13">October 13, 2014</time></p>
       </footer>
     </div><!-- /.article-wrap -->
     <center><nav class="pagination" role="navigation">

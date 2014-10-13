@@ -2,7 +2,7 @@
 layout: post
 title: "Setup Reposado + Margarita on Ubuntu 14.04"
 date: 2014-10-2T22:55:49-05:00
-modified: 2014-10-4
+modified: 2014-10-13
 categories: reposado ubuntu
 excerpt: A setup guide for Reposado and Margarita using Apache on Ubuntu 14.04 with notes on securing Margarita.
 comments: true
@@ -25,7 +25,9 @@ image:
 </section><!-- /#table-of-contents -->
 
 #Intro
-Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup.
+Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup. 
+
+_Note:_ I have added [Addendum 4](./Addendum-4:-Using-nginx-instead-of-apache) if you would like to serve reposado files using nginx. In my testing it has been much faster at serving html request. Also, a little easier to setup the redirect rules.
 
 #The software
 If you have not heard of [reposado](https://github.com/wdas/reposado). It is a set of tools that replicate the key functionality of Mac OS X Server's Software Update Service.
@@ -152,7 +154,7 @@ I have apache sharing the reposado files via port 8088 (the Apple default) and m
 Enable the mod_rewrite engine:  
 ``sudo a2enmod rewrite`` 
 
-Lets initalize apache with the following command:  
+Lets initialize apache with the following command:  
  ``sudo service apache2 restart``
 
 Now we need to add ports 8088 and 8089 to apache's listening ports.  
@@ -368,6 +370,87 @@ sudo chmod -R g+r /usr/local/asus
 
 Lastly, restart apache for the changes to take place.  
 ``sudo service apache2 restart``
+
+#Addendum 4: Using nginx instead of apache 
+
+Firstly, we must install nginx so we can use it.
+
+{% highlight bash %}
+sudo apt-get -y install nginx
+{% endhighlight %}
+
+
+Now we need to modify our ports file so nginx has access our desired ports. You can pick the port yourself just make sure and be consistent when you modify your ``reposado.conf`` file. Remove both port 80 & 8088 from the file below.
+``sudo nano /etc/apache2/ports.conf``  
+
+{% highlight html %}
+
+# If you just change the port or add more ports here, you will likely also
+# have to change the VirtualHost statement in
+# /etc/apache2/sites-enabled/000-default.conf
+
+#Listen 80
+#Listen 8088
+Listen 8089
+
+<IfModule ssl_module>
+        Listen 443
+</IfModule>
+
+<IfModule mod_gnutls.c>
+        Listen 443
+</IfModule>
+
+{% endhighlight %}
+
+Lets restart apache to free your server ports up. 
+``sudo service apache2 restart`` 
+
+Lastly, we need to setup nginx with the following config file. Modify your listening port to your preference.  
+
+``sudo nano /etc/nginx/sites-enabled/reposado.conf``
+
+{% highlight html %}
+server {
+  listen 80;
+  server_name reposado01;
+  root /usr/local/asus/www;
+  autoindex on;
+  ## 10.4.x - Tiger
+  if ( $http_user_agent ~ "Darwin/8" ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/index$1.sucatalog last;
+  }
+  ## 10.5.x - Leopard
+  if ( $http_user_agent ~ "Darwin/9" ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-leopard.merged-1$1.sucatalog last;
+  }
+  ## 10.6.x - Snow Leopard
+  if ( $http_user_agent ~ "Darwin/10" ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-leopard-snowleopard.merged-1$1.sucatalog last;
+  }
+  ## 10.7.x - Lion
+  if ( $http_user_agent ~ "Darwin/11" ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-lion-snowleopard-leopard.merged-1$1.sucatalog last;
+  }
+  ## 10.8.x - Mountain Lion
+  if ( $http_user_agent ~ "Darwin/12" ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog last;
+  }
+  ## 10.9.x - Mavericks
+  if ( $http_user_agent ~ "Darwin/13" ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-10.9-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog last;
+  }
+  ## 10.10.x - Yosemite
+  if ( $http_user_agent ~ "Darwin/14" ){
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog last;
+  }
+}
+{% endhighlight %}
+
+Lastly, start the nginx service to start serving your file.  
+``sudo /etc/init.d/nginx start``
+
+
 
 ---
 
