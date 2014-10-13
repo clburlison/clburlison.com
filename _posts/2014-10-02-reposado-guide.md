@@ -240,7 +240,7 @@ Once done your files should look like the above.
 
 ###Rewrite Rules
 
-To make allow Apple Clients to use pretty configuration URLs like [http://su.example.com:8088]() lets enable Rewrite Rules for the www directory.
+To allow Apple Clients to use pretty configuration URLs like [http://su.example.com:8088]() lets enable Rewrite Rules for the www directory.
 
 ``nano /usr/local/asus/www/.htaccess``
 
@@ -383,4 +383,5 @@ Articles:
 [Reposado - Apple Software Update Server](http://jerome.co.za/reposado-a-custom-apple-software-update-server/),  
 [Running Margarita in apache](http://denisonmac.wordpress.com/2013/02/28/running-margarita-in-apache/),  
 
-Updated: Oct 4, 2014 - Updated [scheduling reposync](./#addendum-1-scheduling-reposync) to work. Reduce vhost lines for reposado.conf (now disables directory listing).
+Updated: Oct 4, 2014 - Updated [scheduling reposync](./#addendum-1-scheduling-reposync) to work. Reduce vhost lines for reposado.conf (now disables directory listing).  
+Oct. 12, 2014 - Spelling

@@ -18,22 +18,22 @@
 <meta name="twitter:creator" content="@clburlison">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://clburlison.com/images/">
+<meta name="twitter:image" content="http://localhost:4000/images/">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Category: boxen">
 
-<meta property="og:url" content="http://clburlison.com/blog/categories/boxen/atom.xml">
+<meta property="og:url" content="http://localhost:4000/blog/categories/boxen/atom.xml">
 <meta property="og:site_name" content="Just another tech blog">
 
 
 
 
 
-<link rel="canonical" href="http://clburlison.com/blog/categories/boxen/atom.xml">
-<link href="http://clburlison.com/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+<link rel="canonical" href="http://localhost:4000/blog/categories/boxen/atom.xml">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
 
 
 <!-- http://t.co/dKP3o1e -->
@@ -42,32 +42,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://clburlison.com/assets/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
 
 <!-- HTML5 Shiv and Media Query Support -->
 <!--[if lt IE 9]>
-	<script src="http://clburlison.com/assets/js/vendor/html5shiv.min.js"></script>
-	<script src="http://clburlison.com/assets/js/vendor/respond.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="http://clburlison.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="http://clburlison.com/favicon.ico">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
 <!-- 32x32 -->
-<link rel="shortcut icon" href="http://clburlison.com/favicon.png">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
 <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="http://clburlison.com/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
 <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://clburlison.com/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
 <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://clburlison.com/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://clburlison.com/images/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
 
 </head>
 
@@ -77,7 +77,7 @@
 
 <div class="navigation-wrapper">
 	<div class="site-name">
-		<a href="http://clburlison.com">Just another tech blog</a>
+		<a href="http://localhost:4000">Just another tech blog</a>
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
@@ -86,17 +86,17 @@
 					    
 					        
 					    
-					    <li><a href="http://clburlison.com/about/" >About</a></li>
+					    <li><a href="http://localhost:4000/about/" >About</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="http://clburlison.com/resources/" >Resources</a></li>
+					    <li><a href="http://localhost:4000/resources/" >Resources</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="http://clburlison.com/blog/archives/" >Archives</a></li>
+					    <li><a href="http://localhost:4000/blog/archives/" >Archives</a></li>
 					  
 		    </ul>
 		</nav>
@@ -111,7 +111,7 @@
 
 
 
-	<img src="http://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
 
 <h3>Clayton Burlison</h3>
 <p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
@@ -137,10 +137,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: boxen | Just another tech blog]]></title>
-  <link href="http://clburlison.com/blog/categories/boxen/atom.xml" rel="self"/>
-  <link href="http://clburlison.com/"/>
-  <updated>2014-10-06T09:54:53-05:00</updated>
-  <id>http://clburlison.com/</id>
+  <link href="http://localhost:4000/blog/categories/boxen/atom.xml" rel="self"/>
+  <link href="http://localhost:4000/"/>
+  <updated>2014-10-12T21:42:04-05:00</updated>
+  <id>http://localhost:4000/</id>
   <author>
     <name><![CDATA[]]></name>
     
@@ -150,9 +150,9 @@
   
   <entry>
     <title type="html"><![CDATA[Things learned from boxen]]></title>
-    <link href="http://clburlison.com/blog/2014/04/24/things-learned-from-boxen/"/>
+    <link href="http://localhost:4000/blog/2014/04/24/things-learned-from-boxen/"/>
     <updated>2014-04-24T11:55:48-05:00</updated>
-    <id>http://clburlison.com/blog/2014/04/24/things-learned-from-boxen</id>
+    <id>http://localhost:4000/blog/2014/04/24/things-learned-from-boxen</id>
     <content type="html"><![CDATA[<h2 id="what-is-boxen">What is boxen?</h2>
 <p>So odds are if you have landed on this page you have probably already heard of boxen. For those who have not heard yet, boxen is an open source project created by the good people at <a href="http://github.com">github.com</a> as a way to quickly setup a Macintosh computer. Boxen can also be used as a way to keep certain settings managed between two or more devices. Think for a second, your laptop goes with you everywhere and along with that you have all of your custom shell scripts, shell alias, ssh keys, etc. With boxen you can systematically take all those settings that you love and move them to every computer you use.</p>
 
@@ -176,7 +176,7 @@
 <p>One of the issues I ran into while looking at boxen was storing personal information in a public github repo. You could make your boxen repo private but that was not the method I wanted to take. I could also just copy all my private information after the initial boxen setup but does that not defeat the main purpose of boxen? Luckily Graham had already found out a solution which is to use Dropbox for everything that should not be shared with others. Before I continue on let me put a disclaimer that if you plan on storing ssh keys, license files, or really personal information you really need to enable two-step verification. Attached <a href="https://www.dropbox.com/help/363/en">here</a> is the setup guide as this is very important for you to do.</p>
 
 <p>You setup 2fa for Drobox, right? If you have not what are you waiting for? Now that your Dropbox is secure or at least more secure, I would create a directory structure that matches OS X. This might make for long paths while creating settings in puppet code but having a logical file-management system that actually matches where the files are actually being placed by boxen will help. Below is a screenshot of my directory structure as of this writing.<br />
-<img src="http://clburlison.com/images/posts/2014-04-24/Dropbox-config.png" alt="dropbox-config" /> </p>
+<img src="http://localhost:4000/images/posts/2014-04-24/Dropbox-config.png" alt="dropbox-config" /> </p>
 
 <h3 id="no-really-how-can-i-get-started">No really how can I get started?</h3>
 <ul>
@@ -218,8 +218,8 @@
 </div><!-- /.footer-wrap -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://clburlison.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="http://clburlison.com/assets/js/scripts.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
 
           
 
