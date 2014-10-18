@@ -129,7 +129,7 @@ The structure of the htpasswd is ``login:password_hash``.
 We must reload the nginx service to update the reflected change.  
 ``sudo /etc/init.d/nginx reload``
 
-Now when you try to access your website you will notice a browser prompt that asks you to enter the login and password. Enter the details that you used while creating the .htpasswd file. The prompt does not allow you to access the website till you enter the right credentials. The munki client supports this security feature with the AdditionalHttpHeaders key [more info](https://github.com/munki/munki/wiki/Using-Basic-Authentication#configuring-the-clients-to-use-a-password).
+Now when you try to access your website, [http://yourmunkiserver/munki_repo/](), you will notice a browser prompt that asks you to enter the login and password. Enter the details that you used while creating the .htpasswd file. The prompt does not allow you to access the website till you enter the right credentials. The munki client supports this security feature with the AdditionalHttpHeaders key [more info](https://github.com/munki/munki/wiki/Using-Basic-Authentication#configuring-the-clients-to-use-a-password).
 
 _Note:_ If you do not want to secure your munki repo you can remove this setting in the above ngix config file by removing the two lines that start with _auth_basic_.
 

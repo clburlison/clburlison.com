@@ -139,7 +139,7 @@
   <title><![CDATA[Category: munki | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/munki/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-10-17T20:37:43-05:00</updated>
+  <updated>2014-10-17T20:39:51-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -276,7 +276,7 @@ Adding password <span class="k">for</span> user munkihttpuser&lt;/p&gt;
 <p>We must reload the nginx service to update the reflected change.<br />
 <code>sudo /etc/init.d/nginx reload</code></p>
 
-<p>Now when you try to access your website you will notice a browser prompt that asks you to enter the login and password. Enter the details that you used while creating the .htpasswd file. The prompt does not allow you to access the website till you enter the right credentials. The munki client supports this security feature with the AdditionalHttpHeaders key <a href="https://github.com/munki/munki/wiki/Using-Basic-Authentication#configuring-the-clients-to-use-a-password">more info</a>.</p>
+<p>Now when you try to access your website, <a href="">http://yourmunkiserver/munki_repo/</a>, you will notice a browser prompt that asks you to enter the login and password. Enter the details that you used while creating the .htpasswd file. The prompt does not allow you to access the website till you enter the right credentials. The munki client supports this security feature with the AdditionalHttpHeaders key <a href="https://github.com/munki/munki/wiki/Using-Basic-Authentication#configuring-the-clients-to-use-a-password">more info</a>.</p>
 
 <p><em>Note:</em> If you do not want to secure your munki repo you can remove this setting in the above ngix config file by removing the two lines that start with <em>auth_basic</em>.</p>
 

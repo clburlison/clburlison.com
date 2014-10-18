@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://clburlison.com" />
-<updated>2014-10-17T20:37:43-05:00</updated>
+<updated>2014-10-17T20:39:51-05:00</updated>
 <id>http://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
@@ -133,7 +133,7 @@ Adding password &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; user munkihttpu
 &lt;p&gt;We must reload the nginx service to update the reflected change.&lt;br /&gt;
 &lt;code&gt;sudo /etc/init.d/nginx reload&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Now when you try to access your website you will notice a browser prompt that asks you to enter the login and password. Enter the details that you used while creating the .htpasswd file. The prompt does not allow you to access the website till you enter the right credentials. The munki client supports this security feature with the AdditionalHttpHeaders key &lt;a href=&quot;https://github.com/munki/munki/wiki/Using-Basic-Authentication#configuring-the-clients-to-use-a-password&quot;&gt;more info&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now when you try to access your website, &lt;a href=&quot;&quot;&gt;http://yourmunkiserver/munki_repo/&lt;/a&gt;, you will notice a browser prompt that asks you to enter the login and password. Enter the details that you used while creating the .htpasswd file. The prompt does not allow you to access the website till you enter the right credentials. The munki client supports this security feature with the AdditionalHttpHeaders key &lt;a href=&quot;https://github.com/munki/munki/wiki/Using-Basic-Authentication#configuring-the-clients-to-use-a-password&quot;&gt;more info&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; If you do not want to secure your munki repo you can remove this setting in the above ngix config file by removing the two lines that start with &lt;em&gt;auth_basic&lt;/em&gt;.&lt;/p&gt;
 
