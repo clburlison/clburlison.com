@@ -139,7 +139,7 @@
   <title><![CDATA[Category: ubuntu | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-10-17T20:42:44-05:00</updated>
+  <updated>2014-10-17T20:50:29-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -715,7 +715,9 @@ sudo chmod -R g+r /usr/local/asus</code></pre></div></p>
 
 <h1 id="addendum-4-using-nginx">Addendum 4: Using nginx</h1>
 
-<p>Nginx offers a few benefits over using apache, with the key benefit being lighter. This results in speeder transfers from the web server to clients. With that said, Nginx does not offer as easy usage of some moduales as such I am running Margarita over apache while serving reposado (Apple client updates) via nginx.</p>
+<p>Nginx offers a few benefits over using apache, with the key benefit being lighter. This results in faster transfers from the web server to clients. With that said, Nginx does not offer as wide of a selection of modules as Apache. For that reason, I am currently running Margarita over apache while serving reposado (Apple client updates) via nginx. </p>
+
+<p><em>Note:</em> This section should be used in replace of using the <code>/etc/apache2/sites-enabled/reposado.conf</code> file not in addition. Bad things will happen if you try to share the reposado downloaded updates via both apache and nginx.</p>
 
 <p>Firstly, we must install nginx on our server so we can use it.</p>
 
@@ -806,7 +808,9 @@ Listen 8089<span class="nt">&lt;/p&gt;</span>
 <p>Updated:<br />
 Oct 4, 2014 - Updated <a href="./#addendum-1-scheduling-reposync">scheduling reposync</a> to work. Reduce vhost lines for reposado.conf (now disables directory listing).<br />
 Oct. 12, 2014 - Spelling<br />
-Oct. 13, 2014 - Added <a href="./#addendum-4-using-nginx">Nginx setup addendum</a></p>
+Oct. 13, 2014 - Added <a href="./#addendum-4-using-nginx">Nginx setup addendum</a><br />
+Oct. 17, 2014 - Type and updated wording on <a href="./#addendum-4-using-nginx">Nginx setup addendum</a> section  </p>
+
 ]]></content>
   </entry>
   

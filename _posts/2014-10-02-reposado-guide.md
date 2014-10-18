@@ -373,7 +373,9 @@ Lastly, restart apache for the changes to take place.
 
 #Addendum 4: Using nginx 
 
-Nginx offers a few benefits over using apache, with the key benefit being lighter. This results in speeder transfers from the web server to clients. With that said, Nginx does not offer as easy usage of some moduales as such I am running Margarita over apache while serving reposado (Apple client updates) via nginx.
+Nginx offers a few benefits over using apache, with the key benefit being lighter. This results in faster transfers from the web server to clients. With that said, Nginx does not offer as wide of a selection of modules as Apache. For that reason, I am currently running Margarita over apache while serving reposado (Apple client updates) via nginx. 
+
+_Note:_ This section should be used in replace of using the ``/etc/apache2/sites-enabled/reposado.conf`` file not in addition. Bad things will happen if you try to share the reposado downloaded updates via both apache and nginx.
 
 Firstly, we must install nginx on our server so we can use it.
 
@@ -471,4 +473,6 @@ Articles:
 Updated:  
 Oct 4, 2014 - Updated [scheduling reposync](./#addendum-1-scheduling-reposync) to work. Reduce vhost lines for reposado.conf (now disables directory listing).  
 Oct. 12, 2014 - Spelling  
-Oct. 13, 2014 - Added [Nginx setup addendum](./#addendum-4-using-nginx)
+Oct. 13, 2014 - Added [Nginx setup addendum](./#addendum-4-using-nginx)  
+Oct. 17, 2014 - Type and updated wording on [Nginx setup addendum](./#addendum-4-using-nginx) section  
+
