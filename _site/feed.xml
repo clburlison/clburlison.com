@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://clburlison.com" />
-<updated>2014-10-17T20:39:51-05:00</updated>
+<updated>2014-10-17T20:42:44-05:00</updated>
 <id>http://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
@@ -17,7 +17,7 @@
   <title type="html"><![CDATA[Setup a Munki repo on Ubuntu 14.04 - Part 1]]></title>
   <link rel="alternate" type="text/html" href="http://clburlison.com/blog/2014/10/06/munkirepo-guide-part-1/" />
   <id>http://clburlison.com/blog/2014/10/06/munkirepo-guide-part-1</id>
-  <updated>2014-10-16T00:00:00-00:00</updated>
+  <updated>2014-10-17T00:00:00-00:00</updated>
   <published>2014-10-06T22:55:49-05:00</published>
   
   <author>
@@ -158,10 +158,10 @@ valid &lt;span class=&quot;nv&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o
 &lt;span class=&quot;nv&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; no 
 &lt;span class=&quot;nv&quot;&gt;writable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; yes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;Test for errors with the config file with: &lt;code&gt;testparm&lt;/code&gt;&lt;/p&gt;
+
 &lt;p&gt;Now we must restart samba.&lt;br /&gt;
 &lt;code&gt;sudo restart smbd&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Test for errors with the config file with: &lt;code&gt;testparm&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;From your mac you will be able to access the munki_repo with the following &lt;a href=&quot;&quot;&gt;smb://munki.example.com/munki_repo&lt;/a&gt;.&lt;/p&gt;
 
@@ -177,7 +177,8 @@ valid &lt;span class=&quot;nv&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o
 &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10&quot;&gt;Basic Http Auth with Nginx&lt;/a&gt;,  &lt;/p&gt;
 
 &lt;p&gt;Update:&lt;br /&gt;
-Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.&lt;/p&gt;
+Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.&lt;br /&gt;
+Oct. 17, 2014 - Move samba error test command before you restart the samba service. Add reference URL to your munkiserver for authentication testing purposes.  &lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://clburlison.com/blog/2014/10/06/munkirepo-guide-part-1/&quot;&gt;Setup a Munki repo on Ubuntu 14.04 - Part 1&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;http://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on October 06, 2014.&lt;/p&gt;</content>
 </entry>

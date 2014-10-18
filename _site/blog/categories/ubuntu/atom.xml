@@ -139,7 +139,7 @@
   <title><![CDATA[Category: ubuntu | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-10-17T20:39:51-05:00</updated>
+  <updated>2014-10-17T20:42:44-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -303,10 +303,10 @@ valid <span class="nv">users</span> <span class="o">=</span> munki    &lt;br /&g
 <span class="nv">public</span> <span class="o">=</span> no 
 <span class="nv">writable</span> <span class="o">=</span> yes</code></pre></div></p>
 
+<p>Test for errors with the config file with: <code>testparm</code></p>
+
 <p>Now we must restart samba.<br />
 <code>sudo restart smbd</code></p>
-
-<p>Test for errors with the config file with: <code>testparm</code></p>
 
 <p>From your mac you will be able to access the munki_repo with the following <a href="">smb://munki.example.com/munki_repo</a>.</p>
 
@@ -322,7 +322,8 @@ valid <span class="nv">users</span> <span class="o">=</span> munki    &lt;br /&g
 <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10">Basic Http Auth with Nginx</a>,  </p>
 
 <p>Update:<br />
-Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.</p>
+Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.<br />
+Oct. 17, 2014 - Move samba error test command before you restart the samba service. Add reference URL to your munkiserver for authentication testing purposes.  </p>
 ]]></content>
   </entry>
   

@@ -279,10 +279,10 @@ valid <span class="nv">users</span> <span class="o">=</span> munki
 <span class="nv">public</span> <span class="o">=</span> no 
 <span class="nv">writable</span> <span class="o">=</span> yes</code></pre></div>
 
+<p>Test for errors with the config file with: <code>testparm</code></p>
+
 <p>Now we must restart samba.<br />
 <code>sudo restart smbd</code></p>
-
-<p>Test for errors with the config file with: <code>testparm</code></p>
 
 <p>From your mac you will be able to access the munki_repo with the following <a href="">smb://munki.example.com/munki_repo</a>.</p>
 
@@ -298,7 +298,8 @@ valid <span class="nv">users</span> <span class="o">=</span> munki
 <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10">Basic Http Auth with Nginx</a>,  </p>
 
 <p>Update:<br />
-Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.</p>
+Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.<br />
+Oct. 17, 2014 - Move samba error test command before you restart the samba service. Add reference URL to your munkiserver for authentication testing purposes.  </p>
 
       <footer role="contentinfo">
         <div class="article-author-bottom">
@@ -326,7 +327,7 @@ Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.</p>
 
         </div>
         <p><b>Published: </b><time datetime="2014-10-06T22:55:49-05:00">October 06, 2014</time><br>
-		<b>Modified:</b> <time datetime="2014-10-16">October 16, 2014</time></p>
+		<b>Modified:</b> <time datetime="2014-10-17">October 17, 2014</time></p>
       </footer>
     </div><!-- /.article-wrap -->
     <center><nav class="pagination" role="navigation">

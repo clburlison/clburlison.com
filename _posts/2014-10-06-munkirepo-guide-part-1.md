@@ -2,7 +2,7 @@
 layout: post
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
 date: 2014-10-06T22:55:49-05:00
-modified: 2014-10-16
+modified: 2014-10-17
 categories: munki ubuntu
 excerpt: Gets the repo configured and shared via nginx. Plus, samba gets configured for remote administration.
 comments: true
@@ -159,10 +159,10 @@ public = no
 writable = yes
 {% endhighlight %}
 
+Test for errors with the config file with: ``testparm``
+
 Now we must restart samba.  
 ``sudo restart smbd``
-
-Test for errors with the config file with: ``testparm``
 
 From your mac you will be able to access the munki_repo with the following [smb://munki.example.com/munki_repo]().
 
@@ -178,4 +178,5 @@ Articles:
 [Basic Http Auth with Nginx](https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10),  
 
 Update:  
-Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.
+Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.  
+Oct. 17, 2014 - Move samba error test command before you restart the samba service. Add reference URL to your munkiserver for authentication testing purposes.  
