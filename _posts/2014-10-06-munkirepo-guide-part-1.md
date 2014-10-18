@@ -2,7 +2,7 @@
 layout: post
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
 date: 2014-10-06T22:55:49-05:00
-modified:
+modified: 2014-10-16
 categories: munki ubuntu
 excerpt: Gets the repo configured and shared via nginx. Plus, samba gets configured for remote administration.
 comments: true
@@ -124,7 +124,7 @@ Adding password for user munkihttpuser
 
 {% endhighlight %}
 
-The structure of the htpasswd is ``login:password_hash``. _Note:_ the htpasswd should be accessible by the user-account that is running Nginx (default www-data).
+The structure of the htpasswd is ``login:password_hash``.
 
 We must reload the nginx service to update the reflected change.  
 ``sudo /etc/init.d/nginx reload``
@@ -176,3 +176,6 @@ Articles:
 [Configuration - Official nginx documentation](http://wiki.nginx.org/Configuration),  
 [Samba Setup](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20(Command-line%20interface/Linux%20Terminal)%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!),  
 [Basic Http Auth with Nginx](https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10),  
+
+Update:  
+Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.

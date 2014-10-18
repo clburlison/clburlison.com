@@ -249,7 +249,7 @@ server {
 Re-type new password: ******
 Adding password <span class="k">for</span> user munkihttpuser</code></pre></div>
 
-<p>The structure of the htpasswd is <code>login:password_hash</code>. <em>Note:</em> the htpasswd should be accessible by the user-account that is running Nginx (default www-data).</p>
+<p>The structure of the htpasswd is <code>login:password_hash</code>.</p>
 
 <p>We must reload the nginx service to update the reflected change.<br />
 <code>sudo /etc/init.d/nginx reload</code></p>
@@ -297,6 +297,9 @@ valid <span class="nv">users</span> <span class="o">=</span> munki
 <a href="https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20(Command-line%20interface/Linux%20Terminal)%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!">Samba Setup</a>,<br />
 <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10">Basic Http Auth with Nginx</a>,  </p>
 
+<p>Update:<br />
+Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.</p>
+
       <footer role="contentinfo">
         <div class="article-author-bottom">
           
@@ -323,7 +326,7 @@ valid <span class="nv">users</span> <span class="o">=</span> munki
 
         </div>
         <p><b>Published: </b><time datetime="2014-10-06T22:55:49-05:00">October 06, 2014</time><br>
-		</p>
+		<b>Modified:</b> <time datetime="2014-10-16">October 16, 2014</time></p>
       </footer>
     </div><!-- /.article-wrap -->
     <center><nav class="pagination" role="navigation">

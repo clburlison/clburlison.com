@@ -139,7 +139,7 @@
   <title><![CDATA[Category: ubuntu | Just another tech blog]]></title>
   <link href="http://clburlison.com/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://clburlison.com/"/>
-  <updated>2014-10-13T16:35:53-05:00</updated>
+  <updated>2014-10-17T20:37:43-05:00</updated>
   <id>http://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -271,7 +271,7 @@ Adding password <span class="k">for</span> user munkihttpuser&lt;/p&gt;
 
 &lt;p&gt;</code></pre></div></p>
 
-<p>The structure of the htpasswd is <code>login:password_hash</code>. <em>Note:</em> the htpasswd should be accessible by the user-account that is running Nginx (default www-data).</p>
+<p>The structure of the htpasswd is <code>login:password_hash</code>.</p>
 
 <p>We must reload the nginx service to update the reflected change.<br />
 <code>sudo /etc/init.d/nginx reload</code></p>
@@ -320,6 +320,9 @@ valid <span class="nv">users</span> <span class="o">=</span> munki    &lt;br /&g
 <a href="http://wiki.nginx.org/Configuration">Configuration - Official nginx documentation</a>,<br />
 <a href="https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20(Command-line%20interface/Linux%20Terminal)%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!">Samba Setup</a>,<br />
 <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10">Basic Http Auth with Nginx</a>,  </p>
+
+<p>Update:<br />
+Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.</p>
 ]]></content>
   </entry>
   
