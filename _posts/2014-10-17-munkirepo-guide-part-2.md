@@ -4,7 +4,7 @@ title: "Setup Mandrill on Ubuntu 14.04 - Part 2"
 date: 2014-10-19T22:55:49-05:00
 modified:
 categories: munki ubuntu mandrill
-excerpt: Install Mandrill on our munki server. This web front end gives the munkiadmin a flexible and powerful way to update manifests.
+excerpt: Install Mandrill on our munki server. This web front end gives administrators a flexible and powerful way to update manifests.
 comments: true
 published: true
 tags: []
