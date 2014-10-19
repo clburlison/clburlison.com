@@ -6,7 +6,7 @@ modified:
 categories: munki ubuntu mandrill
 excerpt: Install Mandrill on our munki server. This web front end gives the munkiadmin a flexible and powerful way to update manifests.
 comments: true
-published: false
+published: true
 tags: []
 image:
   feature:
@@ -37,18 +37,27 @@ A brief description of Mandrill.
   > Multi-user web front-end for managing a Munki repository. If you're here because of MailChimp, my apologies but this isn't the Mandrill you're looking for. /wavehand  
   > 
   > Mandrill is a NodeJS web application written using the Meteor framework. It supports one database engine: MongoDB. There are no plans to support other engines, but fear not, mandrillctl will install and secure MongoDB for you. If you already have MongoDB running on your server via homebrew, you should probably remove that installation first, or use an alternate server.  
+  >
   > --Joe Wollard
 
+{% img /images/posts/2014-10-19/mandrill.png 600 %}
 
 #The Install
 Lucky for us Joe, the developer, has excellent documentation for installation on Ubuntu. Unfortunately, the documentation is for an older version of Ubuntu and some of the commands need modification to work with 14.04 and this series. Instead of redirecting you back and forth between his guide and this, I decided to include all the commands required below without the descriptions. For more information on what/why you are doing something please reference the wiki [here](https://github.com/wollardj/Mandrill/wiki).
 
+To document changes from Joe's original guide all code changes will have ``# updated from wiki`` appended to code blocks. 
+
 ##Creating Users & Groups
+
+Lets create the Mandrill user and munki group along with allow mandrill access to modify our munki repo.
 
 {% highlight bash %}
 sudo addgroup --system munki
 sudo adduser --system _mandrill --ingroup munki --force-badname
+sudo chown -R _mandrill:munki /usr/local/munki_repo/
+sudo chmod -R 2774 /usr/local/munki_repo
 {% endhighlight %}
+
 
 _Note:_ You should receive an error from creating the 'munki' group if you went through [Part 1](/blog/2014/10/06/munkirepo-guide-part-1/). This is fine move along.
 
@@ -59,25 +68,18 @@ sudo apt-get install git curl build-essential
 
 ##Install NodeJS
 
-_Extracting the tarbar failed in my testing..._
-``sudo apt-get install nodejs``  
-
-
 {% highlight bash %}
+cd ~/
 curl -O http://nodejs.org/dist/v0.10.26/node-v0.10.26-linux-x64.tar.gz
 sudo tar --strip-components 1 -C /usr/local -zxf node-v0.10.26-linux-x64.tar.gz
 rm node-v0.10.26-linux-x64.tar.gz
 {% endhighlight %}
 
-##Nginx install
-
-_This might be an extra step that is not needed._
-``sudo apt-get install npm``
-
+##Install Nginx & pm2
 
 {% highlight bash %}
 sudo apt-get install nginx
-sudo npm install pm2 -g --unsafe-perm
+sudo npm install pm2 -g --unsafe-perm # updated from wiki
 
 # install startup scripts to make sure pm2 and all its daemons
 # respawn when the server reboots.
@@ -86,10 +88,11 @@ sudo pm2 startup ubuntu
 
 
 ##Configuring pm2
-
+_--direct from wiki start--_  
 Be sure to change ROOT_URL and PORT to values appropriate for your environment! If you're running a MongoDB instance on another server, or if your MongoDB instance requires authentication, you should change MONGO_URL as well.
 
 One thing you should not change is instances as Mandrill is not currently aware of other instances of itself and will needlessly consume resources.  
+_--end--_
 
 ``sudo nano /usr/local/etc/mandrilld.json``
 
@@ -120,33 +123,16 @@ sudo mkdir /var/log/mandrill
 
 ##Configuring Nginx
 
-``sudo nano /etc/nginx/sites-enabled/mandrill``
+If you read my Part 1 guide before October 19th you will want to follow the new steps from [Part 1 - Setting up Nginx](/blog/2014/10/06/munkirepo-guide-part-1/#setting-up-nginx). These changes were made in order to accommodate Munkireport, which we will setup next.
 
-{% highlight bash%}
-server {
-    listen 80 default_server;
-    listen [::]:80 default_server ipv6only=on;
+At this point, you have two options that you need to be aware of for using Mandrill:
 
-    # Change this to your server's FQDN or ip address
-    server_name localhost;
+* Use the  default port 3001 
+* Setup a DNS A record for your server
 
-    location / {
-      # If you configured pm2 to run Mandrill on another port,
-      # use that same port here. Leave 'localhost' though.
-        proxy_pass http://localhost:3001/;
-    }
+You get these choices since we will be setting up Munkireport next. Since I am not in charge of the network at my workplace I will simply leave Nginx alone and connect via port 3001. If however you would like to access Mandrill via a sub domain name or alternate address you can follow the original setup steps below. Just make sure and change your server_name to a record that is not the current hostname of your server. This change is necessary since by default Mandrill needs redirects for both the root directory of your web-server and /mandrill to work.
 
-    location /mandrill {
-        proxy_pass http://localhost:3001/;
-    }
-}
-{% endhighlight %}
-
-nginx -c /etc/nginx/nginx.conf -t
-
-
-Now lets start nginx.  
-``sudo /etc/init.d/nginx start``
+[Configuring Nginx in Ubuntu](https://github.com/wollardj/Mandrill/wiki/Configuring-Nginx-%28Ubuntu%29)
 
 ##Install Meteor
 
@@ -181,32 +167,30 @@ git clone https://github.com/wollardj/Mandrill.git
 cd Mandrill
 git checkout tags/`git tag -l | tail -n 1`
 
-sudo mrt bundle Mandrill.tar.gz
+sudo mrt bundle Mandrill.tar.gz # updated from wiki
 
 sudo mkdir /usr/local/Mandrill
 sudo tar --strip-components 1 -C /usr/local/Mandrill -zxf Mandrill.tar.gz
 
 {% endhighlight %}
 
-Now lets manually start all of the services Mandrill needs so we can check if it works.
+Now lets manually start our mandrill site.
 
 {% highlight bash%}
 sudo pm2 start /usr/local/etc/mandrilld.json
 sudo service mongod start
-sudo service nginx start
 {% endhighlight %}
 
+Visit to verify that everything is working [http://munki:3001]()
 
+##Mandrill Settings
 
----
- 
+Log into the web portal with the default username _admin_ and password _admin_. You will obviously want to change this password to something more secure. Under the mandrill settings tab you will want to change your repo path to ``/usr/local/munki_repo/``.
 
-``sudo chown -R _mandrill:munki munki_repo/``
+{% img /images/posts/2014-10-19/mandrill_settings.png 600 %}
 
-do not use nginx mandrill config file. 
-
-
-http://munki01:3001
+#Conclusion
+Mandrill is setup! Stay tuned for Part 3, setting up Munkireport.
 
 
 ---

@@ -1,0 +1,416 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Setup Mandrill on Ubuntu 14.04 - Part 2 &#8211; Just another tech blog</title>
+<meta name="description" content="Install Mandrill on our munki server. This web front end gives the munkiadmin a flexible and powerful way to update manifests.">
+<meta name="keywords" content="">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Setup Mandrill on Ubuntu 14.04 - Part 2">
+<meta name="twitter:description" content="Install Mandrill on our munki server. This web front end gives the munkiadmin a flexible and powerful way to update manifests.">
+<meta name="twitter:site" content="@clburlison">
+<meta name="twitter:creator" content="@clburlison">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Setup Mandrill on Ubuntu 14.04 - Part 2">
+<meta property="og:description" content="Install Mandrill on our munki server. This web front end gives the munkiadmin a flexible and powerful way to update manifests.">
+<meta property="og:url" content="http://localhost:4000/blog/2014/10/19/munkirepo-guide-part-2/">
+<meta property="og:site_name" content="Just another tech blog">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/blog/2014/10/19/munkirepo-guide-part-2/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000">Just another tech blog</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+					    
+					        
+					    
+					    <li><a href="http://localhost:4000/about/" >About</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://localhost:4000/resources/" >Resources</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="http://localhost:4000/blog/archives/" >Archives</a></li>
+					  
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+
+
+	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+
+<h3>Clayton Burlison</h3>
+<p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
+<a href="mailto:clburlison@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+<a href="http://twitter.com/clburlison" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://facebook.com/clburlison" class="author-social" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+
+<a href="http://linkedin.com/in/clburlison" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/clburlison" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/blog/2014/10/19/munkirepo-guide-part-2/" rel="bookmark" title="Setup Mandrill on Ubuntu 14.04 - Part 2">Setup Mandrill on Ubuntu 14.04 - Part 2</a></h1>
+      
+    Categories: 
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/mandrill/'>mandrill</a>, <a class='category' href='/blog/categories/munki/'>munki</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+  
+</span>
+
+	 
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <section id="table-of-contents" class="toc">
+  <header>
+    <h3>Overview</h3>
+  </header>
+<div id="drawer">
+<ul id="markdown-toc">
+  <li><a href="#intro">Intro</a></li>
+  <li><a href="#the-install">The Install</a>    <ul>
+      <li><a href="#creating-users--groups">Creating Users &amp; Groups</a></li>
+      <li><a href="#install-build-tools">Install build tools</a></li>
+      <li><a href="#install-nodejs">Install NodeJS</a></li>
+      <li><a href="#install-nginx--pm2">Install Nginx &amp; pm2</a></li>
+      <li><a href="#configuring-pm2">Configuring pm2</a></li>
+      <li><a href="#configuring-nginx">Configuring Nginx</a></li>
+      <li><a href="#install-meteor">Install Meteor</a></li>
+      <li><a href="#install-mongodb">Install MongoDB</a></li>
+      <li><a href="#installing-mandrill">Installing Mandrill</a></li>
+      <li><a href="#mandrill-settings">Mandrill Settings</a></li>
+    </ul>
+  </li>
+  <li><a href="#conclusion">Conclusion</a></li>
+</ul>
+
+  </div>
+</section>
+<!-- /#table-of-contents -->
+
+<h1 id="intro">Intro</h1>
+<p>This is Part 2 of a series on setting up a munki server on Ubuntu 14.04. Read <a href="/blog/2014/10/06/munkirepo-guide-part-1/">Part 1 here</a>. This section goes over setting up <a href="https://github.com/wollardj/Mandrill">Mandrill</a> so we can edit our repo metadata files, modify manifests, and assign new software to our fleet using a web browser. </p>
+
+<p>A brief description of Mandrill.</p>
+
+<blockquote>
+  <p>Multi-user web front-end for managing a Munki repository. If you’re here because of MailChimp, my apologies but this isn’t the Mandrill you’re looking for. /wavehand  </p>
+
+  <p>Mandrill is a NodeJS web application written using the Meteor framework. It supports one database engine: MongoDB. There are no plans to support other engines, but fear not, mandrillctl will install and secure MongoDB for you. If you already have MongoDB running on your server via homebrew, you should probably remove that installation first, or use an alternate server.  </p>
+
+  <p>–Joe Wollard</p>
+</blockquote>
+
+<p><img src="/images/posts/2014-10-19/mandrill.png" width="600" /></p>
+
+<h1 id="the-install">The Install</h1>
+<p>Lucky for us Joe, the developer, has excellent documentation for installation on Ubuntu. Unfortunately, the documentation is for an older version of Ubuntu and some of the commands need modification to work with 14.04 and this series. Instead of redirecting you back and forth between his guide and this, I decided to include all the commands required below without the descriptions. For more information on what/why you are doing something please reference the wiki <a href="https://github.com/wollardj/Mandrill/wiki">here</a>.</p>
+
+<p>To document changes from Joe’s original guide all code changes will have <code># updated from wiki</code> appended to code blocks. </p>
+
+<h2 id="creating-users--groups">Creating Users &amp; Groups</h2>
+
+<p>Lets create the Mandrill user and munki group along with allow mandrill access to modify our munki repo.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo addgroup --system munki
+sudo adduser --system _mandrill --ingroup munki --force-badname
+sudo chown -R _mandrill:munki /usr/local/munki_repo/
+sudo chmod -R <span class="m">2774</span> /usr/local/munki_repo</code></pre></div>
+
+<p><em>Note:</em> You should receive an error from creating the ‘munki’ group if you went through <a href="/blog/2014/10/06/munkirepo-guide-part-1/">Part 1</a>. This is fine move along.</p>
+
+<h2 id="install-build-tools">Install build tools</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install git curl build-essential</code></pre></div>
+
+<h2 id="install-nodejs">Install NodeJS</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/
+curl -O http://nodejs.org/dist/v0.10.26/node-v0.10.26-linux-x64.tar.gz
+sudo tar --strip-components <span class="m">1</span> -C /usr/local -zxf node-v0.10.26-linux-x64.tar.gz
+rm node-v0.10.26-linux-x64.tar.gz</code></pre></div>
+
+<h2 id="install-nginx--pm2">Install Nginx &amp; pm2</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install nginx
+sudo npm install pm2 -g --unsafe-perm <span class="c"># updated from wiki</span>
+
+<span class="c"># install startup scripts to make sure pm2 and all its daemons</span>
+<span class="c"># respawn when the server reboots.</span>
+sudo pm2 startup ubuntu</code></pre></div>
+
+<h2 id="configuring-pm2">Configuring pm2</h2>
+<p><em>–direct from wiki start–</em><br />
+Be sure to change ROOT_URL and PORT to values appropriate for your environment! If you’re running a MongoDB instance on another server, or if your MongoDB instance requires authentication, you should change MONGO_URL as well.</p>
+
+<p>One thing you should not change is instances as Mandrill is not currently aware of other instances of itself and will needlessly consume resources.<br />
+<em>–end–</em></p>
+
+<p><code>sudo nano /usr/local/etc/mandrilld.json</code></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[{</span>
+    <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;mandrilld&quot;</span>,
+    <span class="s2">&quot;script&quot;</span>: <span class="s2">&quot;/usr/local/Mandrill/main.js&quot;</span>,
+    <span class="s2">&quot;env&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;ROOT_URL&quot;</span>: <span class="s2">&quot;http://192.168.20.133:3001&quot;</span>,
+        <span class="s2">&quot;PORT&quot;</span>: <span class="s2">&quot;3001&quot;</span>,
+        <span class="s2">&quot;MONGO_URL&quot;</span>: <span class="s2">&quot;mongodb://localhost:27017/Mandrill&quot;</span>,
+        <span class="s2">&quot;MANDRILL_MODE&quot;</span>: <span class="s2">&quot;production&quot;</span>
+    <span class="o">}</span>,
+    <span class="s2">&quot;instances&quot;</span>: <span class="s2">&quot;1&quot;</span>,
+    <span class="s2">&quot;error_file&quot;</span>: <span class="s2">&quot;/var/log/mandrill/mandrill-err.log&quot;</span>,
+    <span class="s2">&quot;out_file&quot;</span>: <span class="s2">&quot;/var/log/mandrill/mandrill.log&quot;</span>,
+    <span class="s2">&quot;pid_file&quot;</span>: <span class="s2">&quot;/var/run/mandrill.pid&quot;</span>
+<span class="o">}]</span></code></pre></div>
+
+<p>The log directory must exist before you start mandrilld for the first time.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo mkdir /var/log/mandrill</code></pre></div>
+
+<h2 id="configuring-nginx">Configuring Nginx</h2>
+
+<p>If you read my Part 1 guide before October 19th you will want to follow the new steps from <a href="/blog/2014/10/06/munkirepo-guide-part-1/#setting-up-nginx">Part 1 - Setting up Nginx</a>. These changes were made in order to accommodate Munkireport, which we will setup next.</p>
+
+<p>At this point, you have two options that you need to be aware of for using Mandrill:</p>
+
+<ul>
+  <li>Use the  default port 3001 </li>
+  <li>Setup a DNS A record for your server</li>
+</ul>
+
+<p>You get these choices since we will be setting up Munkireport next. Since I am not in charge of the network at my workplace I will simply leave Nginx alone and connect via port 3001. If however you would like to access Mandrill via a sub domain name or alternate address you can follow the original setup steps below. Just make sure and change your server_name to a record that is not the current hostname of your server. This change is necessary since by default Mandrill needs redirects for both the root directory of your web-server and /mandrill to work.</p>
+
+<p><a href="https://github.com/wollardj/Mandrill/wiki/Configuring-Nginx-%28Ubuntu%29">Configuring Nginx in Ubuntu</a></p>
+
+<h2 id="install-meteor">Install Meteor</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># First, install meteor</span>
+curl https://install.meteor.com <span class="p">|</span> /bin/sh
+
+<span class="c"># next, install meteorite</span>
+sudo npm install -g meteorite</code></pre></div>
+
+<h2 id="install-mongodb">Install MongoDB</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 <span class="se">\</span>
+    --recv 7F0CEB10
+
+<span class="nb">echo</span> <span class="s1">&#39;deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen&#39;</span> <span class="se">\</span>
+    <span class="p">|</span> sudo tee /etc/apt/sources.list.d/mongodb.list
+
+sudo apt-get update
+sudo apt-get install mongodb-10gen</code></pre></div>
+
+<h2 id="installing-mandrill">Installing Mandrill</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/wollardj/Mandrill.git
+
+<span class="c"># If you want the latest source code, you&#39;re done. However,</span>
+<span class="c"># I suggest sticking with the latest release...</span>
+<span class="nb">cd </span>Mandrill
+git checkout tags/<span class="sb">`</span>git tag -l <span class="p">|</span> tail -n 1<span class="sb">`</span>
+
+sudo mrt bundle Mandrill.tar.gz <span class="c"># updated from wiki</span>
+
+sudo mkdir /usr/local/Mandrill
+sudo tar --strip-components <span class="m">1</span> -C /usr/local/Mandrill -zxf Mandrill.tar.gz</code></pre></div>
+
+<p>Now lets manually start our mandrill site.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo pm2 start /usr/local/etc/mandrilld.json
+sudo service mongod start</code></pre></div>
+
+<p>Visit to verify that everything is working <a href="">http://munki:3001</a></p>
+
+<h2 id="mandrill-settings">Mandrill Settings</h2>
+
+<p>Log into the web portal with the default username <em>admin</em> and password <em>admin</em>. You will obviously want to change this password to something more secure. Under the mandrill settings tab you will want to change your repo path to <code>/usr/local/munki_repo/</code>.</p>
+
+<p><img src="/images/posts/2014-10-19/mandrill_settings.png" width="600" /></p>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>Mandrill is setup! Stay tuned for Part 3, setting up Munkireport.</p>
+
+<hr />
+
+<p>Articles:<br />
+<a href="https://github.com/wollardj/Mandrill/wiki">Mandrill Wiki</a></p>
+
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+
+
+
+	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+
+<h3>Clayton Burlison</h3>
+<p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
+<a href="mailto:clburlison@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+<a href="http://twitter.com/clburlison" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://facebook.com/clburlison" class="author-social" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+
+<a href="http://linkedin.com/in/clburlison" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/clburlison" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+
+        </div>
+        <p><b>Published: </b><time datetime="2014-10-19T22:55:49-05:00">October 19, 2014</time><br>
+		</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+    <center><nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/blog/2014/10/06/munkirepo-guide-part-1/" class="btn" title="Setup a Munki repo on Ubuntu 14.04 - Part 1">Previous article</a>
+      
+      
+    </nav><!-- /.pagination --></center>
+    <hr />
+  
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+
+  <footer>
+    <div class="google-ads">
+  <!-- 320 x 50 ad -->
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client=""
+       data-ad-slot=""></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+<span>&copy; 2014 Clayton Burlison. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'clburlison'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+	        
+
+</body>
+</html>

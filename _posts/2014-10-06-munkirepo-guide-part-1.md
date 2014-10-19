@@ -84,18 +84,32 @@ sudo chmod -R 2774 /usr/local/munki_repo
 {% endhighlight %}
 
 ##Setting up Nginx
+_Note:_ if you read this guide before October 19th issue the following command before preceding to the setup below.  
+``sudo rm /etc/nginx/sites-enabled/munki_repo.conf``
+
 Nginx is fast, light-weight, and uses a fraction of the resources that Apache uses. But don't take my word for it there are lots of [other reason](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/) why [you might want to use Nginx](http://wiki.nginx.org/WhyUseIt).
 
 Nginx's installation on Ubuntu is very similar to Apache's. All of its config files are stored in _/etc/nginx_.
 
-Lets create a site conf for our munki_repo.   
-``sudo nano /etc/nginx/sites-enabled/munki_repo.conf``
+Lets backup the original default file create and create our own.    
+
+{% highlight bash %}
+sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bkup
+sudo nano /etc/nginx/sites-available/default
+{% endhighlight %}
+
+Make sure and change the server_name to match your server's FQDN or IP.
 
 {% highlight html %}
-# Munki Repo
 server {
-  listen 80;
+  listen 80 default_server;
+  listen [::]:80 default_server ipv6only=on;
+
+  root /usr/share/nginx/html;
+  index index.php index.html index.htm;
+
   server_name munki;
+
   location /munki_repo/ {
     alias /usr/local/munki_repo/;
     autoindex off;
@@ -106,7 +120,7 @@ server {
 
 {% endhighlight %}
 
-Now we must start the nginx service.  
+And finally start the nginx service.  
 ``sudo /etc/init.d/nginx start``
 
 ###Securing your munki_repo
@@ -180,3 +194,4 @@ Articles:
 Update:  
 Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.  
 Oct. 17, 2014 - Move samba error test command before you restart the samba service. Add reference URL to your munkiserver for authentication testing purposes.  
+Oct. 19, 2014 - Nginx settings are now done in the ``default`` file. This change was made to support Munkireport.

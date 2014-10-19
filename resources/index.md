@@ -15,7 +15,7 @@ image:
 * [Bash if/then Cheat Sheet](/blog/2014/07/28/bash-if-then-cheat-sheet/) 
 * [Creating a Development Munki repo](/blog/2014/05/17/creating-a-development-munki-repo/)
 * [Setup Reposado + Margarita](/blog/2014/10/02/reposado-guide/)
-* Munki server setup series on Ubuntu 14.04
+* Munki setup series on Ubuntu 14.04
   * [Setup a Munki repo - Part 1](/blog/2014/10/06/munkirepo-guide-part-1/)
   * Setup Mandrill- Part 2 (coming soon)
   * Setup Munkireport-php - Part 3 (coming soon)

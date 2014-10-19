@@ -18,22 +18,22 @@
 <meta name="twitter:creator" content="@clburlison">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://clburlison.com/images/">
+<meta name="twitter:image" content="http://localhost:4000/images/">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Setup a Munki repo on Ubuntu 14.04 - Part 1">
 <meta property="og:description" content="Gets the repo configured and shared via nginx. Plus, samba gets configured for remote administration.">
-<meta property="og:url" content="https://clburlison.com/blog/2014/10/06/munkirepo-guide-part-1/">
+<meta property="og:url" content="http://localhost:4000/blog/2014/10/06/munkirepo-guide-part-1/">
 <meta property="og:site_name" content="Just another tech blog">
 
 
 
 
 
-<link rel="canonical" href="https://clburlison.com/blog/2014/10/06/munkirepo-guide-part-1/">
-<link href="https://clburlison.com/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+<link rel="canonical" href="http://localhost:4000/blog/2014/10/06/munkirepo-guide-part-1/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
 
 
 <!-- http://t.co/dKP3o1e -->
@@ -42,32 +42,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="https://clburlison.com/assets/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
 
 <!-- HTML5 Shiv and Media Query Support -->
 <!--[if lt IE 9]>
-	<script src="https://clburlison.com/assets/js/vendor/html5shiv.min.js"></script>
-	<script src="https://clburlison.com/assets/js/vendor/respond.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="https://clburlison.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="https://clburlison.com/favicon.ico">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
 <!-- 32x32 -->
-<link rel="shortcut icon" href="https://clburlison.com/favicon.png">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
 <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="https://clburlison.com/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
 <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://clburlison.com/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
 <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://clburlison.com/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://clburlison.com/images/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
 
 </head>
 
@@ -77,7 +77,7 @@
 
 <div class="navigation-wrapper">
 	<div class="site-name">
-		<a href="https://clburlison.com">Just another tech blog</a>
+		<a href="http://localhost:4000">Just another tech blog</a>
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
@@ -86,17 +86,17 @@
 					    
 					        
 					    
-					    <li><a href="https://clburlison.com/about/" >About</a></li>
+					    <li><a href="http://localhost:4000/about/" >About</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="https://clburlison.com/resources/" >Resources</a></li>
+					    <li><a href="http://localhost:4000/resources/" >Resources</a></li>
 					  
 					    
 					        
 					    
-					    <li><a href="https://clburlison.com/blog/archives/" >Archives</a></li>
+					    <li><a href="http://localhost:4000/blog/archives/" >Archives</a></li>
 					  
 		    </ul>
 		</nav>
@@ -111,7 +111,7 @@
 
 
 
-	<img src="https://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
 
 <h3>Clayton Burlison</h3>
 <p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
@@ -133,7 +133,7 @@
   <article>
     <div class="headline-wrap">
       
-        <h1><a href="https://clburlison.com/blog/2014/10/06/munkirepo-guide-part-1/" rel="bookmark" title="Setup a Munki repo on Ubuntu 14.04 - Part 1">Setup a Munki repo on Ubuntu 14.04 - Part 1</a></h1>
+        <h1><a href="http://localhost:4000/blog/2014/10/06/munkirepo-guide-part-1/" rel="bookmark" title="Setup a Munki repo on Ubuntu 14.04 - Part 1">Setup a Munki repo on Ubuntu 14.04 - Part 1</a></h1>
       
     Categories: 
 
@@ -215,17 +215,29 @@ sudo chown -R <span class="nv">$USER</span>:munki /usr/local/munki_repo
 sudo chmod -R <span class="m">2774</span> /usr/local/munki_repo</code></pre></div>
 
 <h2 id="setting-up-nginx">Setting up Nginx</h2>
+<p><em>Note:</em> if you read this guide before October 19th issue the following command before preceding to the setup below.<br />
+<code>sudo rm /etc/nginx/sites-enabled/munki_repo.conf</code></p>
+
 <p>Nginx is fast, light-weight, and uses a fraction of the resources that Apache uses. But don’t take my word for it there are lots of <a href="http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/">other reason</a> why <a href="http://wiki.nginx.org/WhyUseIt">you might want to use Nginx</a>.</p>
 
 <p>Nginx’s installation on Ubuntu is very similar to Apache’s. All of its config files are stored in <em>/etc/nginx</em>.</p>
 
-<p>Lets create a site conf for our munki_repo. <br />
-<code>sudo nano /etc/nginx/sites-enabled/munki_repo.conf</code></p>
+<p>Lets backup the original default file create and create our own.    </p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"># Munki Repo
-server {
-  listen 80;
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bkup
+sudo nano /etc/nginx/sites-available/default</code></pre></div>
+
+<p>Make sure and change the server_name to match your server’s FQDN or IP.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">server {
+  listen 80 default_server;
+  listen [::]:80 default_server ipv6only=on;
+
+  root /usr/share/nginx/html;
+  index index.php index.html index.htm;
+
   server_name munki;
+
   location /munki_repo/ {
     alias /usr/local/munki_repo/;
     autoindex off;
@@ -234,7 +246,7 @@ server {
   }
 }</code></pre></div>
 
-<p>Now we must start the nginx service.<br />
+<p>And finally start the nginx service.<br />
 <code>sudo /etc/init.d/nginx start</code></p>
 
 <h3 id="securing-your-munkirepo">Securing your munki_repo</h3>
@@ -299,7 +311,8 @@ valid <span class="nv">users</span> <span class="o">=</span> munki
 
 <p>Update:<br />
 Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.<br />
-Oct. 17, 2014 - Move samba error test command before you restart the samba service. Add reference URL to your munkiserver for authentication testing purposes.  </p>
+Oct. 17, 2014 - Move samba error test command before you restart the samba service. Add reference URL to your munkiserver for authentication testing purposes.<br />
+Oct. 19, 2014 - Nginx settings are now done in the <code>default</code> file. This change was made to support Munkireport.</p>
 
       <footer role="contentinfo">
         <div class="article-author-bottom">
@@ -307,7 +320,7 @@ Oct. 17, 2014 - Move samba error test command before you restart the samba servi
 
 
 
-	<img src="https://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+	<img src="http://localhost:4000/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
 
 <h3>Clayton Burlison</h3>
 <p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
@@ -332,8 +345,10 @@ Oct. 17, 2014 - Move samba error test command before you restart the samba servi
     </div><!-- /.article-wrap -->
     <center><nav class="pagination" role="navigation">
       
-        <a href="https://clburlison.com/blog/2014/10/02/reposado-guide/" class="btn" title="Setup Reposado + Margarita on Ubuntu 14.04">Previous article</a>
+        <a href="http://localhost:4000/blog/2014/10/02/reposado-guide/" class="btn" title="Setup Reposado + Margarita on Ubuntu 14.04">Previous article</a>
       
+      
+        <a href="http://localhost:4000/blog/2014/10/19/munkirepo-guide-part-2/" class="btn" title="Setup Mandrill on Ubuntu 14.04 - Part 2">Next article</a>
       
     </nav><!-- /.pagination --></center>
     <hr />
@@ -363,8 +378,8 @@ Oct. 17, 2014 - Move samba error test command before you restart the samba servi
 </div><!-- /.footer-wrap -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="https://clburlison.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="https://clburlison.com/assets/js/scripts.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
 
 
   

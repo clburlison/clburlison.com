@@ -30,9 +30,9 @@ image:
 
 
 #Intro
-Welcome to the third part in our munki repo setup series. In this section, we will download and configure [Munkireport-php](https://github.com/munkireport/munkireport-php) on our munki server. Part of this installation includes setting up MySQL as our database backend, since the default SQLite backend will start to chock when higher volumes of clients start to check-in with the reporting server. 
+Welcome to the third part in our munki repo setup series. In this section, we will download and configure [Munkireport-php](https://github.com/munkireport/munkireport-php) on our munki server. Part of this installation includes setting up MySQL as our database backend, since the default SQLite backend will start to choke when higher volumes of clients start to check-in with the reporting server. 
 
-Before we get to far you might want to head over to [Part 1 - Setting up the munki repo]() or [Part 2 - Setting up mandrill](). Parts 1 and 2 are not technically required for this guide you will want to have an understanding of how the munki repo works before setting up the reporting server. You could host your reporting server on a separate server I highly recommend understanding those before moving on to this guide. 
+Before we get to far you might want to head over to [Part 1 - Setting up the munki repo]() or [Part 2 - Setting up mandrill](). Parts 1 and 2 are not technically required for this guide you will want to have an understanding of how the munki repo works before setting up the reporting server. You could host your reporting server on a separate server, that preference is left to the reader.
 
 
 #The Install
