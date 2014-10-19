@@ -2,8 +2,8 @@
 
 title:            Just another tech blog
 locale:           en_US
-# url:              https://clburlison.com
-url:              http://localhost:4000
+url:              https://clburlison.com
+# url:              http://localhost:4000
 
 # Jekyll configuration
 
