@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="https://clburlison.com" />
-<updated>2014-10-18T23:44:16-05:00</updated>
+<updated>2014-10-18T23:46:38-05:00</updated>
 <id>https://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
@@ -970,7 +970,7 @@ Oct. 17, 2014 - Type and updated wording on &lt;a href=&quot;./#addendum-4-using
   <title type="html"><![CDATA[Converting Audio With Media Encoder]]></title>
   <link rel="alternate" type="text/html" href="https://clburlison.com/blog/2014/07/23/converting-audio-with-media-encoder/" />
   <id>https://clburlison.com/blog/2014/07/23/converting-audio-with-media-encoder</id>
-  <updated>2014-08-09T00:00:00-00:00</updated>
+  <updated>2014-10-18T00:00:00-00:00</updated>
   <published>2014-07-23T04:32:35-05:00</published>
   
   <author>
@@ -978,7 +978,7 @@ Oct. 17, 2014 - Type and updated wording on &lt;a href=&quot;./#addendum-4-using
     <uri>https://clburlison.com</uri>
     <email>clburlison@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;I received a unique request today from a co-worker of mine. In short, he asked me if I was able to convert an audio clip from a Tascam audio recorder to a lower quality format suitable for our phone distribution system. The real challenege…was I going to be able to do this with the software currently installed?
+  <content type="html">&lt;p&gt;I received a unique request today from a co-worker of mine. In short, he asked me if I was able to convert an audio clip from a Tascam audio recorder to a lower quality format suitable for our phone distribution system. The real challenge…was I going to be able to do this with the software currently installed?
 &lt;!-- more --&gt;&lt;/p&gt;
 
 &lt;p&gt;Fortunately, I have access to the Adobe Create Suite (CS6) at work from which I will be using Media Encoder in this tutorial. The screenshots below are from a Mac but the steps should be pretty close on a Windows computer. The added benefit of this process is if you ever need to post-process audio that was recorded &lt;code&gt;clean&lt;/code&gt; and make it sound like it went through a phone this will produce a pretty decent &lt;code&gt;phone sound&lt;/code&gt;. &lt;/p&gt;
@@ -1038,6 +1038,8 @@ Oct. 17, 2014 - Type and updated wording on &lt;a href=&quot;./#addendum-4-using
 
 &lt;h1 id=&quot;update&quot;&gt;Update&lt;/h1&gt;
 &lt;p&gt;Although, this method does work and creates a windows audio file, it ended up not working for the original application that I needed. Needless to say there is no point removing this guide.&lt;/p&gt;
+
+&lt;p&gt;Update: Oct 18, 2014 - Typo&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;https://clburlison.com/blog/2014/07/23/converting-audio-with-media-encoder/&quot;&gt;Converting Audio With Media Encoder&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;https://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on July 23, 2014.&lt;/p&gt;</content>
 </entry>

@@ -139,7 +139,7 @@
   <title><![CDATA[Category: editing | Just another tech blog]]></title>
   <link href="https://clburlison.com/blog/categories/editing/atom.xml" rel="self"/>
   <link href="https://clburlison.com/"/>
-  <updated>2014-10-18T23:44:16-05:00</updated>
+  <updated>2014-10-18T23:46:38-05:00</updated>
   <id>https://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -153,7 +153,7 @@
     <link href="https://clburlison.com/blog/2014/07/23/converting-audio-with-media-encoder/"/>
     <updated>2014-07-23T04:32:35-05:00</updated>
     <id>https://clburlison.com/blog/2014/07/23/converting-audio-with-media-encoder</id>
-    <content type="html"><![CDATA[<p>I received a unique request today from a co-worker of mine. In short, he asked me if I was able to convert an audio clip from a Tascam audio recorder to a lower quality format suitable for our phone distribution system. The real challenege…was I going to be able to do this with the software currently installed?
+    <content type="html"><![CDATA[<p>I received a unique request today from a co-worker of mine. In short, he asked me if I was able to convert an audio clip from a Tascam audio recorder to a lower quality format suitable for our phone distribution system. The real challenge…was I going to be able to do this with the software currently installed?
 <!-- more --></p>
 
 <p>Fortunately, I have access to the Adobe Create Suite (CS6) at work from which I will be using Media Encoder in this tutorial. The screenshots below are from a Mac but the steps should be pretty close on a Windows computer. The added benefit of this process is if you ever need to post-process audio that was recorded <code>clean</code> and make it sound like it went through a phone this will produce a pretty decent <code>phone sound</code>. </p>
@@ -213,6 +213,8 @@
 
 <h1 id="update">Update</h1>
 <p>Although, this method does work and creates a windows audio file, it ended up not working for the original application that I needed. Needless to say there is no point removing this guide.</p>
+
+<p>Update: Oct 18, 2014 - Typo</p>
 ]]></content>
   </entry>
   

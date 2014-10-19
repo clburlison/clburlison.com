@@ -2,7 +2,7 @@
 layout: post
 title: "Converting Audio With Media Encoder"
 date: 2014-07-23 04:32:35 -0500
-modified: 2014-08-09
+modified: 2014-10-18
 comments: true
 published: true
 keywords: audio, editing, wav, windows, mac
@@ -10,7 +10,7 @@ description: Describes how to convert audio to a mono format that is suitable fo
 categories: editing
 ---
 
-I received a unique request today from a co-worker of mine. In short, he asked me if I was able to convert an audio clip from a Tascam audio recorder to a lower quality format suitable for our phone distribution system. The real challenege...was I going to be able to do this with the software currently installed?
+I received a unique request today from a co-worker of mine. In short, he asked me if I was able to convert an audio clip from a Tascam audio recorder to a lower quality format suitable for our phone distribution system. The real challenge...was I going to be able to do this with the software currently installed?
 <!-- more -->
 
 Fortunately, I have access to the Adobe Create Suite (CS6) at work from which I will be using Media Encoder in this tutorial. The screenshots below are from a Mac but the steps should be pretty close on a Windows computer. The added benefit of this process is if you ever need to post-process audio that was recorded ``clean`` and make it sound like it went through a phone this will produce a pretty decent ``phone sound``. 
@@ -70,3 +70,5 @@ The result is a Linear PCM codec audio file with 16 bit/sample rate, 8 kilohertz
 
 #Update
 Although, this method does work and creates a windows audio file, it ended up not working for the original application that I needed. Needless to say there is no point removing this guide.
+
+Update: Oct 18, 2014 - Typo
