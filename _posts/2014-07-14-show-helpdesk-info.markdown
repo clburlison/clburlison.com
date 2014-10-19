@@ -2,7 +2,7 @@
 layout: post
 title: "Show Help Desk Information"
 date: 2014-07-14 17:47:53 -0500
-modified: 2014-08-09
+modified: 2014-10-18
 comments: true
 published: true
 keywords: Desktop, Widget, Geektool, OSX
@@ -185,10 +185,10 @@ Put mcxToProfile.py in the same directory as your three plist files. After chang
 **Creating your profile**
 {% highlight bash %}
 mcxToProfile.py -r org.tynsoe.geeklet.shell.plist org.tynsoe.GeekTool.plist \
-org.tynsoe.geektool3.plist --identifier BISD-GeekTool --manage Often
+org.tynsoe.geektool3.plist --identifier BISD-GeekTool --displayname=BISD-GeekTool --manage Often
 {% endhighlight %}
 
-*Note:* you will want to change your identifier to something useful for your organization. 
+*Note:* you will want to change your identifier and displayname to something useful for your organization. 
 
 This will create a second profile with the name of your "identifier + .mobileconfig"
 
@@ -230,3 +230,5 @@ Again, a giant thank you to Erik Gomez for sharing with the munki community. Wit
 --- 
  
 Articles: [Using GeekTool to show HelpDesk Information](https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY)  
+
+Updated:  Oct. 18, 2014 - Add ``--displayname`` to the "Organization profile" section. AKA make the profile have a pretty name in the Profiles tab of System Preference.

@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="https://clburlison.com" />
-<updated>2014-10-18T23:23:16-05:00</updated>
+<updated>2014-10-18T23:35:48-05:00</updated>
 <id>https://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
@@ -1047,7 +1047,7 @@ Oct. 17, 2014 - Type and updated wording on &lt;a href=&quot;./#addendum-4-using
   <title type="html"><![CDATA[Show Help Desk Information]]></title>
   <link rel="alternate" type="text/html" href="https://clburlison.com/blog/2014/07/14/show-helpdesk-info/" />
   <id>https://clburlison.com/blog/2014/07/14/show-helpdesk-info</id>
-  <updated>2014-08-09T00:00:00-00:00</updated>
+  <updated>2014-10-18T00:00:00-00:00</updated>
   <published>2014-07-14T17:47:53-05:00</published>
   
   <author>
@@ -1253,9 +1253,9 @@ Erik’s Original Desktop Results  &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Creating your profile&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mcxToProfile.py -r org.tynsoe.geeklet.shell.plist org.tynsoe.GeekTool.plist &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-org.tynsoe.geektool3.plist --identifier BISD-GeekTool --manage Often&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+org.tynsoe.geektool3.plist --identifier BISD-GeekTool --displayname&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;BISD-GeekTool --manage Often&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; you will want to change your identifier to something useful for your organization. &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; you will want to change your identifier and displayname to something useful for your organization. &lt;/p&gt;
 
 &lt;p&gt;This will create a second profile with the name of your “identifier + .mobileconfig”&lt;/p&gt;
 
@@ -1293,6 +1293,8 @@ org.tynsoe.geektool3.plist --identifier BISD-GeekTool --manage Often&lt;/code&gt
 &lt;hr /&gt;
 
 &lt;p&gt;Articles: &lt;a href=&quot;https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY&quot;&gt;Using GeekTool to show HelpDesk Information&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;Updated:  Oct. 18, 2014 - Add &lt;code&gt;--displayname&lt;/code&gt; to the “Organization profile” section. AKA make the profile have a pretty name in the Profiles tab of System Preference.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;https://clburlison.com/blog/2014/07/14/show-helpdesk-info/&quot;&gt;Show Help Desk Information&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;https://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on July 14, 2014.&lt;/p&gt;</content>
 </entry>

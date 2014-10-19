@@ -139,7 +139,7 @@
   <title><![CDATA[Category: geektool | Just another tech blog]]></title>
   <link href="https://clburlison.com/blog/categories/geektool/atom.xml" rel="self"/>
   <link href="https://clburlison.com/"/>
-  <updated>2014-10-18T23:23:16-05:00</updated>
+  <updated>2014-10-18T23:35:48-05:00</updated>
   <id>https://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -363,9 +363,9 @@ Erik’s Original Desktop Results  </p>
 
 <p><strong>Creating your profile</strong>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">mcxToProfile.py -r org.tynsoe.geeklet.shell.plist org.tynsoe.GeekTool.plist <span class="se">\</span>
-org.tynsoe.geektool3.plist –identifier BISD-GeekTool –manage Often</code></pre></div></p>
+org.tynsoe.geektool3.plist –identifier BISD-GeekTool –displayname<span class="o">=</span>BISD-GeekTool –manage Often</code></pre></div></p>
 
-<p><em>Note:</em> you will want to change your identifier to something useful for your organization. </p>
+<p><em>Note:</em> you will want to change your identifier and displayname to something useful for your organization. </p>
 
 <p>This will create a second profile with the name of your “identifier + .mobileconfig”</p>
 
@@ -403,6 +403,8 @@ org.tynsoe.geektool3.plist –identifier BISD-GeekTool –manage Often</code></p
 <hr />
 
 <p>Articles: <a href="https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY">Using GeekTool to show HelpDesk Information</a>  </p>
+
+<p>Updated:  Oct. 18, 2014 - Add <code>--displayname</code> to the “Organization profile” section. AKA make the profile have a pretty name in the Profiles tab of System Preference.</p>
 ]]></content>
   </entry>
   
