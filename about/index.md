@@ -18,7 +18,7 @@ Many articles on this site will have external references. If you feel I have mat
 
 Please feel free to link to anything I have written here and all of the code can be considered open source unless otherwise stated. (credit is appreciated though not required)  
 
-License located [here](/license.txt).
+Code license located [here](/license.txt).
 
 ###Personal Life
 Besides work, I am currently a part time student attending the University of Arlington, major is Information Systems. In my free time I like to play Dota 2. And if you could not guess it from the site favicon I really enjoy running. 
