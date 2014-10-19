@@ -17,7 +17,7 @@ image:
 * [Setup Reposado + Margarita](/blog/2014/10/02/reposado-guide/)
 * Munki setup series on Ubuntu 14.04
   * [Setup a Munki repo - Part 1](/blog/2014/10/06/munkirepo-guide-part-1/)
-  * Setup Mandrill- Part 2 (coming soon)
+  * [Setup Mandrill- Part 2](/blog/2014/10/19/munkirepo-guide-part-2/)
   * Setup Munkireport-php - Part 3 (coming soon)
 
 ---
