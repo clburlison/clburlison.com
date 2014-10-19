@@ -18,8 +18,20 @@ task :build do
 end
 
 desc "Serve _site/"
-task :serve do
+task :serve => [:local] do
   sh "jekyll serve --watch"
+end
+
+desc "Change URL to localhost/"
+task :local do
+  puts "\n## Change URL to localhost"
+	sh "sed -i .bak 's,https://clburlison.com,http://localhost:4000,g' ./_config.yml; rm ./_config.yml.bak"
+end
+
+desc "Change URL to remote/"
+task :remote do
+  puts "\n## Change URL to localhost"
+	sh "sed -i .bak 's,http://localhost:4000,https://clburlison.com,g' ./_config.yml; rm ./_config.yml.bak"
 end
 
 desc "Commit _site/"
@@ -79,5 +91,5 @@ end
 
 
 desc "Commit and deploy _site/"
-task :push => [:build, :commit, :deploy] do
+task :push => [:remote, :build, :commit, :deploy] do
 end
