@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setup Mandrill on Ubuntu 14.04 - Part 2"
-date: 2014-10-17T22:55:49-05:00
+date: 2014-10-19T22:55:49-05:00
 modified:
 categories: munki ubuntu mandrill
 excerpt: Install Mandrill on our munki server. This web front end gives the munkiadmin a flexible and powerful way to update manifests.
@@ -41,7 +41,7 @@ A brief description of Mandrill.
 
 
 #The Install
-Lucky for us Joe has excellent documentation for installation on Ubuntu. Unfortunately, the documentation is for an older version of Ubuntu and some of the commands need modification to work with 14.04 and this series. Instead of redirecting you back and forth between his guide and this, I decided to include all the commands required below without the descriptions. For more information on what/why you are doing something please reference the wiki [here](https://github.com/wollardj/Mandrill/wiki).
+Lucky for us Joe, the developer, has excellent documentation for installation on Ubuntu. Unfortunately, the documentation is for an older version of Ubuntu and some of the commands need modification to work with 14.04 and this series. Instead of redirecting you back and forth between his guide and this, I decided to include all the commands required below without the descriptions. For more information on what/why you are doing something please reference the wiki [here](https://github.com/wollardj/Mandrill/wiki).
 
 ##Creating Users & Groups
 
@@ -59,6 +59,10 @@ sudo apt-get install git curl build-essential
 
 ##Install NodeJS
 
+_Extracting the tarbar failed in my testing..._
+``sudo apt-get install nodejs``  
+
+
 {% highlight bash %}
 curl -O http://nodejs.org/dist/v0.10.26/node-v0.10.26-linux-x64.tar.gz
 sudo tar --strip-components 1 -C /usr/local -zxf node-v0.10.26-linux-x64.tar.gz
@@ -66,6 +70,10 @@ rm node-v0.10.26-linux-x64.tar.gz
 {% endhighlight %}
 
 ##Nginx install
+
+_This might be an extra step that is not needed._
+``sudo apt-get install npm``
+
 
 {% highlight bash %}
 sudo apt-get install nginx
@@ -104,6 +112,11 @@ One thing you should not change is instances as Mandrill is not currently aware 
 }]
 {% endhighlight %}
 
+The log directory must exist before you start mandrilld for the first time.
+
+{% highlight bash%}
+sudo mkdir /var/log/mandrill
+{% endhighlight %}
 
 ##Configuring Nginx
 
@@ -118,8 +131,8 @@ server {
     server_name localhost;
 
     location / {
-                # If you configured pm2 to run Mandrill on another port,
-                # use that same port here. Leave 'localhost' though.
+      # If you configured pm2 to run Mandrill on another port,
+      # use that same port here. Leave 'localhost' though.
         proxy_pass http://localhost:3001/;
     }
 
@@ -128,6 +141,8 @@ server {
     }
 }
 {% endhighlight %}
+
+nginx -c /etc/nginx/nginx.conf -t
 
 
 Now lets start nginx.  
@@ -153,7 +168,7 @@ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' \
     | sudo tee /etc/apt/sources.list.d/mongodb.list
 
 sudo apt-get update
-sudo apt-get install -y mongodb-org
+sudo apt-get install mongodb-10gen
 {% endhighlight %}
 
 ##Installing Mandrill
@@ -180,17 +195,6 @@ sudo pm2 start /usr/local/etc/mandrilld.json
 sudo service mongod start
 sudo service nginx start
 {% endhighlight %}
-
-
-
-
-When installing Mandrill the following command, under Step 2, needs root access.
-{% highlight bash %}
-sudo mrt bundle Mandrill.tar.gz
-{% endhighlight %}
-
-
-
 
 
 
