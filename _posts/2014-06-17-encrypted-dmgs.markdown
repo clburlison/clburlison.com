@@ -52,8 +52,8 @@ Step 7 - If you eject your dmg you will be presented with this pop-up the next t
 
 
 ##Video showing the process
-{% youtube zAc9H7AQ2TQ %}
 
+<iframe width="420" height="300" src="//www.youtube-nocookie.com/embed/zAc9H7AQ2TQ?rel=0" frameborder="0" allowfullscreen></iframe>
 
 #Conclusion
 Creating an encrypted dmg is quite easy once you know the steps. My preference is to not store the password in your Keychain. If you are logged into your machine another users could walk right up and open the dmg without typing a password.
