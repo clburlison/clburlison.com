@@ -18,7 +18,7 @@ image:
 * Munki setup series on Ubuntu 14.04
   * [Setup a Munki repo - Part 1](/blog/2014/10/06/munkirepo-guide-part-1/)
   * [Setup Mandrill - Part 2](/blog/2014/10/19/munkirepo-guide-part-2/)
-  * Setup Munkireport-php - Part 3 (coming soon)
+  * [Setup Munkireport-php - Part 3](/blog/2014/10/23/munkirepo-guide-part-3/)
 
 ---
 

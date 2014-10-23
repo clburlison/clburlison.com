@@ -4,13 +4,308 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="https://clburlison.com" />
-<updated>2014-10-19T12:44:05-05:00</updated>
+<updated>2014-10-23T15:04:02-05:00</updated>
 <id>https://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
   <uri>https://clburlison.com/</uri>
   <email>clburlison@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Setup Munkireport on Ubuntu 14.04 - Part 3]]></title>
+  <link rel="alternate" type="text/html" href="https://clburlison.com/blog/2014/10/23/munkirepo-guide-part-3/" />
+  <id>https://clburlison.com/blog/2014/10/23/munkirepo-guide-part-3</id>
+  <published>2014-10-23T00:00:00-05:00</published>
+  <updated>2014-10-23T00:00:00-05:00</updated>
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>https://clburlison.com</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
+  &lt;header&gt;
+    &lt;h3&gt;Overview&lt;/h3&gt;
+  &lt;/header&gt;
+&lt;div id=&quot;drawer&quot;&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#intro&quot;&gt;Intro&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-install&quot;&gt;The Install&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#installing-required-software&quot;&gt;Installing Required Software&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#setup-mysql&quot;&gt;Setup MySQL&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#creating-the-database&quot;&gt;Creating the database&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#configure-php&quot;&gt;Configure php&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#downloading-munkireport&quot;&gt;Downloading MunkiReport&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#configure-nginx-for-munkireport&quot;&gt;Configure nginx for MunkiReport&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#conclusion&quot;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#apendium-1---connecting-a-client-to-munkireport&quot;&gt;Apendium 1 - connecting a client to MunkiReport&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#apendium-2---adding-munkireport-to-your-munkirepo&quot;&gt;Apendium 2 - adding MunkiReport to your munki_repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- /#table-of-contents --&gt;
+
+&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+&lt;p&gt;Welcome to the third part in our munki server setup series. In this section, we will download and configure &lt;a href=&quot;https://github.com/munkireport/munkireport-php&quot;&gt;Munkireport-php&lt;/a&gt; on our munki server.&lt;/p&gt;
+
+&lt;p&gt;Before we get to far you might want to head over to &lt;a href=&quot;/blog/2014/10/06/munkirepo-guide-part-1/&quot;&gt;Part 1 - Setting up the munki repo&lt;/a&gt; or &lt;a href=&quot;/blog/2014/10/19/munkirepo-guide-part-2/&quot;&gt;Part 2 - Setting up mandrill&lt;/a&gt;. Parts 1 and 2 are not technically required for MunkiReport by you will want to have an understanding of how the other components of your munki server work before setting up the reporting server. &lt;/p&gt;
+
+&lt;p&gt;If you have no idea what MunkiReport is go check out this &lt;a href=&quot;https://munkireportphp-nbalonso.rhcloud.com/&quot;&gt;Demo site&lt;/a&gt; hosted by &lt;a href=&quot;http://www.nbalonso.com/&quot;&gt;Noel&lt;/a&gt;. Noel has a custom color scheme but it should give you an idea of the system.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2014-10-23/mr.png&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;the-install&quot;&gt;The Install&lt;/h1&gt;
+&lt;p&gt;Munkireport is a web application writen in php that displays useful stats about your munki fleet. The resources taken up by MunkiReport are quite small but like all web apps if you client base grows very large you will want to make sure the database can keep up. With that you can install MunkiReport on any compatible web-server (IIS, apache, or nginx) for this guide we will be using our munki server from Parts 1 &amp;amp; 2 as our reporting server.&lt;/p&gt;
+
+&lt;p&gt;Part of this installation includes setting up MySQL as our database backend. SQLite is the default database but I highly recommend setting my MySQL since the &lt;a href=&quot;https://github.com/munkireport/munkireport-php/wiki/Performance&quot;&gt;performance&lt;/a&gt; gains are high and setup only takes a few more steps, not to mention SQLite will start to choke when higher volumes of clients start to check-in with the reporting server. &lt;/p&gt;
+
+&lt;p&gt;It is also important to note, I like MunkiReport to be hosted on a sub-directory. This means when connecting to MuniReport you will type &lt;a href=&quot;&quot;&gt;http://yourserver.example.com/report/&lt;/a&gt; to access the site. If you want a different setup, you will need to make the necessary changes.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-required-software&quot;&gt;Installing Required Software&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get update
+sudo apt-get -y install nginx git php5-fpm php5-mysql php5-ldap&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; the &lt;code&gt;php5-ldap&lt;/code&gt; package is only needed if you are planning on connecting to an Active Directory or LDAP directory for authenticating to MunkiReport. &lt;/p&gt;
+
+&lt;h2 id=&quot;setup-mysql&quot;&gt;Setup MySQL&lt;/h2&gt;
+
+&lt;p&gt;Lets install MySQL&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo apt-get install mysql-client mysql-server&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This will prompt you to create the root mysql database account. Do not forget the password you set.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, we need to tell MySQL to generate the directory structure it needs to store its databases and information. We can do this by typing:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo mysql_install_db&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, you can optionally run a simple security script that will prompt you to modify some insecure defaults (this is highly recommended on production servers). Begin the script by typing:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo mysql_secure_installation&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You will need to enter the MySQL root password that you selected during installation.&lt;/p&gt;
+
+&lt;p&gt;During the secure installation script it will ask if you want to change the root password. If you are happy with your MySQL root password, type “N” for no and hit “ENTER”. Afterwards, you will be prompted to remove some test users and databases. You should choice “Y” and hit “enter” through these prompts to remove the “unsafe” defaults from installation.&lt;/p&gt;
+
+&lt;p&gt;Once the script has been run, MySQL is ready to go.&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-the-database&quot;&gt;Creating the database&lt;/h3&gt;
+
+&lt;p&gt;Lets create our MunkiReport database with the name of &lt;code&gt;munkireport&lt;/code&gt;. We will also create a database user and password. Change &lt;em&gt;USERNAME&lt;/em&gt; and &lt;em&gt;PASSWORD&lt;/em&gt; to your preference. Note the database username that is created below is what you will enter into your config.php in the following steps. It is bad practice to use the root account for database entry.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;CREATE DATABASE munkireport CHARACTER SET utf8 COLLATE utf8_bin;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; mysql -u root -p
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;CREATE USER &amp;#39;USERNAME&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;PASSWORD&amp;#39;;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; mysql -u root -p
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;GRANT ALL PRIVILEGES ON munkireport.* TO &amp;#39;USERNAME&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;PASSWORD&amp;#39;;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; mysql -u root -p
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;FLUSH PRIVILEGES;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; mysql -u root -p&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;configure-php&quot;&gt;Configure php&lt;/h2&gt;
+&lt;p&gt;Lets make one small change to the default php configuration.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo nano /etc/php5/fpm/php.ini&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Find the line, &lt;strong&gt;cgi.fix_pathinfo=1&lt;/strong&gt;, and change the &lt;strong&gt;1 to 0&lt;/strong&gt;. Also, uncomment this line to enable this security setting. The file should now look like the below excerpt:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;lt;---------------
+
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; cgi.fix_pathinfo provides *real* PATH_INFO/PATH_TRANSLATED support &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; CGI.  PHP&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; previous behaviour was to &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;PATH_TRANSLATED to SCRIPT_FILENAME, and to not grok
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; what PATH_INFO is.  For more information on PATH_INFO, see the cgi specs.  Setting
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; this to &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; will cause PHP CGI to fix its paths to conform to the spec.  A setting
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; of zero causes PHP to behave as before.  Default is 1.  You should fix your scripts
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; to use SCRIPT_FILENAME rather than PATH_TRANSLATED.
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; http://php.net/cgi.fix-pathinfo
+cgi.fix_pathinfo&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+
+---------------&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If this number is kept as 1, the php interpreter will do its best to process the file that is as near to the requested file as possible. This is a possible security risk. If this number is set to 0, conversely, the interpreter will only process the exact file path—a much safer alternative. Save and Exit. &lt;/p&gt;
+
+&lt;p&gt;Now, restart php-fpm for the change to take affect:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo service php5-fpm restart&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;downloading-munkireport&quot;&gt;Downloading MunkiReport&lt;/h2&gt;
+
+&lt;p&gt;We are finally to the point that we can start getting MunkiReport setup.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo git clone https://github.com/munkireport/munkireport-php /usr/share/nginx/html/report&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;At this point, lets create a link to our report folder for our local Ubuntu admin, this allows us to make modifications easier in the future. &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo ln -s /usr/share/nginx/html/report ~/report&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;MunkiReport requires a config.php, this is your settings for MunkiReport. Below are some defaults that I think most users will want. For a full list of options please visit &lt;a href=&quot;https://github.com/munkireport/munkireport-php/blob/master/config_default.php&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You will want to change  the following in your config.php file: &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sitename = change Company to something useful&lt;/li&gt;
+  &lt;li&gt;allow_migrations = you will want to change this to true for MunkiReport updates&lt;/li&gt;
+  &lt;li&gt;debug = change this to false if you don’t need debugging&lt;/li&gt;
+  &lt;li&gt;timezone = for your &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_tz_database_time_zones&quot;&gt;timezone&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;ssh = change &lt;em&gt;ladmin&lt;/em&gt; to your company local mac admin account&lt;/li&gt;
+  &lt;li&gt;locale = change to location&lt;/li&gt;
+  &lt;li&gt;lang = change to your language&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The root account is created for you, for testing purposes. You will want to create your own admin account by visiting &lt;a href=&quot;http://yourserver.example.com/report/auth/generate&quot;&gt;http://yourserver/report/auth/generate&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The last section of the config file deals with out MySQL database. You will want to change the username and password to match what you created in the previous step.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo nano /usr/share/nginx/html/report/config.php&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;defined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;KISS&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;index_page&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;index.php?&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;sitename&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Company - MunkiReport&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;allow_migrations&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;debug&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;timezone&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date_default_timezone_get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;America&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Chicago&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;vnc_link&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;vnc://%s:5900&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;ssh_link&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;ssh://ladmin@%s&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;ini_set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;session.cookie_lifetime&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;43200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;locale&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;en_US&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;lang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;keep_previous_displays&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/*&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;|===============================================&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;| Authorized Users of Munki Report&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;|===============================================&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;| Visit http://munki/report/auth/generate to generate additional local values&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;*/&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$auth_config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;$P$BUqxGuzR2VfbSvOtjxlwsHTLIMTmuw0&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Password is root&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/*&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;|===============================================&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;| PDO Datasource&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;|===============================================&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;*/&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;pdo_dsn&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;mysql:host=localhost;dbname=munkireport&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;pdo_user&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;munki&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;pdo_pass&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;munki&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;pdo_opts&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PDO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;MYSQL_ATTR_INIT_COMMAND&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;SET NAMES utf8&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We are an Active Directory shop at my work place and for that reason I really like the ability for MunkiReport to pull an AD group and give access (remember the php5-ldap package we installed earlier). Unfortunately, in my current testing this function is slightly broken at the moment. When attempting to login to MunkiReport using AD Group Authorization you will be presented a white screen. A refresh on the blank screen along with a “Resend form data” will get you to the dashboard. This is a pretty annoying inconvenience, so at this moment I have simply added our report administrators into the ‘allowed_users’ line in my config.php.  &lt;/p&gt;
+
+&lt;p&gt;Below are the additional settings need to make Active Directory work with MunkiReport:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;// Below are the options &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; Active Directory user authorization
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth_AD&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;account_suffix&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;@example.com&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth_AD&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;base_dn&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;example,dc&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;come&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; //set to NULL to auto-detect
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth_AD&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;domain_controllers&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; array&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;server1.example.com&amp;#39;&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;&amp;#39;server2.example.com&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; //can be an array of servers
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth_AD&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;admin_username&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; //if needed to perform the search
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth_AD&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;admin_password&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;munki_is_cool&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; //if needed to perform the search
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth_AD&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mr_allowed_users&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; array&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;userA&amp;#39;&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;&amp;#39;userB&amp;#39;&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;&amp;#39;userC&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;auth_AD&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mr_allowed_groups&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; array&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;MunkiReportAdmins&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; //case sensitive&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;configure-nginx-for-munkireport&quot;&gt;Configure nginx for MunkiReport&lt;/h2&gt;
+
+&lt;p&gt;Lets configure nginx to use &lt;a href=&quot;http://yourserver.example.com/report&quot;&gt;http://yourserver.example.com/report&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo nano /etc/nginx/sites-enabled/default&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; make sure and change your server_name. This file also takes care of our munki_repo from &lt;a href=&quot;/blog/2014/10/06/munkirepo-guide-part-1/&quot;&gt;Part 1&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;server &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	listen &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt; default_server&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	listen &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;::&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;:80 default_server &lt;span class=&quot;nv&quot;&gt;ipv6only&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;on&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	root /usr/share/nginx/html&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	index index.php index.html index.htm&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	server_name munki&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	    
+    error_page &lt;span class=&quot;m&quot;&gt;404&lt;/span&gt; /404.html&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    error_page &lt;span class=&quot;m&quot;&gt;500&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;502&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;503&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;504&lt;/span&gt; /50x.html&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; /50x.html &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        root /usr/share/nginx/html&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    location /report &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        try_files &lt;span class=&quot;nv&quot;&gt;$uri&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$uri&lt;/span&gt;/ &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;404&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    location ~ &lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;php&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        try_files &lt;span class=&quot;nv&quot;&gt;$uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;404&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        fastcgi_split_path_info ^&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;.+&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;php&lt;span class=&quot;o&quot;&gt;)(&lt;/span&gt;/.+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$;&lt;/span&gt;
+        fastcgi_pass unix:/var/run/php5-fpm.sock&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        fastcgi_index index.php&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        include fastcgi_params&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    location /munki_repo/ &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt; /usr/local/munki_repo/&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      autoindex off&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      auth_basic &lt;span class=&quot;s2&quot;&gt;&amp;quot;Restricted&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      auth_basic_user_file /etc/nginx/.htpasswd&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We must change our nginx default settings for php to work. &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo nano /etc/nginx/nginx.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Look for &lt;code&gt;default_type  application/octet-stream;&lt;/code&gt; and comment this line out. Check out the below excerpt:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;lt;---------------
+
+&lt;span class=&quot;c&quot;&gt;# server_names_hash_bucket_size 64;&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# server_name_in_redirect off;&lt;/span&gt;
+
+        include /etc/nginx/mime.types&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;#default_type application/octet-stream; //comment me out for MunkiReport to work&lt;/span&gt;
+
+        &lt;span class=&quot;c&quot;&gt;##&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# Logging Settings&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;##&lt;/span&gt;
+
+---------------&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To test your nginx configuration run the following command. This will make sure that you have no errors.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo nginx -c /etc/nginx/nginx.conf -t&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Restart Nginx to make the necessary changes:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo service nginx restart&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;You should now have a basic MunkiReport configuration up and running. Double check that everything is working by visiting &lt;a href=&quot;http://youserver.example.com/report/&quot;&gt;http://youserver.example.com/report/&lt;/a&gt;. Remember the default username and password, &lt;code&gt;root&lt;/code&gt;. For more settings and additional information please visit the Wiki for &lt;a href=&quot;https://github.com/munkireport/munkireport-php/wiki&quot;&gt;MunkiReport&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As always feel free to drop a comment below or on Twitter. Feedback is always appreciated.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;apendium-1---connecting-a-client-to-munkireport&quot;&gt;Apendium 1 - connecting a client to MunkiReport&lt;/h1&gt;
+&lt;p&gt;If you would like to connect a single munki client to MunkiReport you can use the following command:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo /bin/bash -c &quot;$(curl -s http://yourserver.example.com/report/index.php?/install)&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;apendium-2---adding-munkireport-to-your-munkirepo&quot;&gt;Apendium 2 - adding MunkiReport to your munki_repo&lt;/h1&gt;
+&lt;p&gt;To add multiple Munki clients to MunkiReport we should use munki. To get a generated plist file that you can drop into your &lt;em&gt;munki_repo/pkginfo&lt;/em&gt; directory run the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -s https://yourserver.example.com/report/index.php?/install/plist -o &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+~/Desktop/MunkiReport.plist&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The output file will end up on your Desktop for easy transfer to your repo.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Articles:&lt;br /&gt;
+&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04&quot;&gt;Install LEMP stack on Ubuntu 14.04&lt;/a&gt;,&lt;br /&gt;
+&lt;a href=&quot;https://github.com/munkireport/munkireport-php/wiki&quot;&gt;Munkireport Wiki&lt;/a&gt;,&lt;br /&gt;
+&lt;a href=&quot;http://www.nbalonso.com/new-munkireport-php-2/&quot;&gt;nbalonso Munkireport-php&lt;/a&gt;,  &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://clburlison.com/blog/2014/10/23/munkirepo-guide-part-3/&quot;&gt;Setup Munkireport on Ubuntu 14.04 - Part 3&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;https://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on October 23, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -2002,78 +2297,6 @@ sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier testin
 &lt;a href=&quot;http://support.apple.com/kb/ht4783&quot;&gt;Mac Basics: AirDrop&lt;/a&gt;&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;https://clburlison.com/blog/2014/04/18/enable-airdrop-on-ethernet/&quot;&gt;Enable AirDrop on Ethernet&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;https://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Setting up octopress]]></title>
-  <link rel="alternate" type="text/html" href="https://clburlison.com/blog/2014/04/15/setting-up-octopress/" />
-  <id>https://clburlison.com/blog/2014/04/15/setting-up-octopress</id>
-  <updated>2014-04-21T00:00:00-00:00</updated>
-  <published>2014-04-15T00:00:00-05:00</published>
-  
-  <author>
-    <name>Clayton Burlison</name>
-    <uri>https://clburlison.com</uri>
-    <email>clburlison@gmail.com</email>
-  </author>
-  <content type="html">&lt;h1 id=&quot;notice&quot;&gt;NOTICE&lt;/h1&gt;
-&lt;p&gt;This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Setting up a blog can be a time consuming task. Setting up a blog that is created from static (markdown) files can be much more time consuming. In this post, I list references to most of the custom changes that were made to this site.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;this-is-not-a-setup-guide&quot;&gt;This is not a setup guide…&lt;/h2&gt;
-&lt;p&gt;…the internet has many really well outlined guides that do walk you through setting up Octopress. Since that is the case, I will instead list a few of the most helpful resources that I have found while attempting to setup Ocotpress. Please also note that the Octopress &lt;a href=&quot;http://octopress.org/docs/&quot;&gt;Documentation&lt;/a&gt; is the best source of information but it might not be the easiest to understand at first glance. &lt;/p&gt;
-
-&lt;p&gt;**&lt;em&gt;Disclaimer what works for me might not work for you. At the time of this writing release v3.0.0.rc.7 all of the following references do work. This is definitely not the faint of heart. Something down the line will break and you will have to troubleshoot the error.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
-&lt;p&gt;The most important reference, a get started guide that will walk you through the initial installation.&lt;br /&gt;
-Article: &lt;a href=&quot;http://webdesign.tutsplus.com/tutorials/getting-started-with-octopress--webdesign-11442&quot;&gt;Getting Started with Octopress&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;changing-the-color&quot;&gt;Changing the color&lt;/h3&gt;
-&lt;p&gt;I did not find any themes that I liked so I used this article to change the colors. This article establishes the easiest way to customize Octopress with the main drawback being the least amount of visual change.&lt;br /&gt;
-Article: &lt;a href=&quot;http://aijazansari.com/2012/08/27/how-to-customize-octopress-theme/index.html&quot;&gt;How to Customize Your Octopress Theme&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
-&lt;p&gt;###Monthly Archive Sidebar
-The setup for this plugin is really well done in the help file for the repo so I shall direct you there.&lt;br /&gt;
-&lt;img src=&quot;https://clburlison.com/images/posts/2014-04-15/monthly_archives.png&quot; alt=&quot;Monthly Archives&quot; /&gt;&lt;br /&gt;
-Article: &lt;a href=&quot;https://github.com/rcmdnk/monthly-archive&quot;&gt;Github-Plugin&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;categories&quot;&gt;Categories&lt;/h3&gt;
-&lt;p&gt;The setup for this plugin is really well done in the help file for the repo so I shall direct you there.
-Article: &lt;a href=&quot;https://github.com/matthiasbeyer/jekyll_group_categories&quot;&gt;Github-Plugin&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;tag-cloud-sidebar&quot;&gt;Tag Cloud (sidebar)&lt;/h3&gt;
-&lt;p&gt;The setup for this plugin is really well done in the help file for the repo so I shall direct you there.&lt;br /&gt;
-&lt;img src=&quot;https://clburlison.com/images/posts/2014-04-15/tag_cloud.png&quot; alt=&quot;Tag Cloud&quot; /&gt;&lt;br /&gt;
-Article: &lt;a href=&quot;https://github.com/tokkonopapa/octopress-tagcloud&quot;&gt;Github-Plugin&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;If you would like your tags to show up in a vertical view visit the following link.&lt;br /&gt;
-Article: &lt;a href=&quot;http://www.narga.net/improve-octopress-advanced-tweaks-tips/&quot;&gt;Tags vertical view&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;custom-404-page&quot;&gt;Custom 404 Page&lt;/h2&gt;
-&lt;p&gt;I was unable to find much information about 404 Errors for Octopress. After some googling, I found out it is super easy to add a custom 404 page to Octopress. In your config.ru file, you add the following code:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;not_found &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  send_sinatra_file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;404.html&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Sorry, I cannot find #{request.path}&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;To create the page, make a new file named 404.markdown in your /sources directory. Now, write your own 404 Error Page then deploy your website.&lt;br /&gt;
-Article: &lt;a href=&quot;http://www.narga.net/improve-octopress-advanced-tweaks-tips/&quot;&gt;Custom 404 Page&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Resources:
-&lt;a href=&quot;http://warpedvisions.org/projects/markdown-cheat-sheet.md&quot;&gt;Markdown Cheat Sheet&lt;/a&gt; , 
-&lt;a href=&quot;http://biancarelli.org/blog/2013/05/14/octopress-cheat-sheet&quot;&gt;Octopress Cheat Sheet&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://clburlison.com/blog/2014/04/15/setting-up-octopress/&quot;&gt;Setting up octopress&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;https://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
