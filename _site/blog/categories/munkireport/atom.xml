@@ -139,7 +139,7 @@
   <title><![CDATA[Category: munkireport | Just another tech blog]]></title>
   <link href="https://clburlison.com/blog/categories/munkireport/atom.xml" rel="self"/>
   <link href="https://clburlison.com/"/>
-  <updated>2014-10-23T15:04:41-05:00</updated>
+  <updated>2014-10-24T07:45:59-05:00</updated>
   <id>https://clburlison.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -191,7 +191,7 @@
 <p><img src="/images/posts/2014-10-23/mr.png" width="600"></p>
 
 <h1 id="the-install">The Install</h1>
-<p>Munkireport is a web application writen in php that displays useful stats about your munki fleet. The resources taken up by MunkiReport are quite small but like all web apps if you client base grows very large you will want to make sure the database can keep up. With that you can install MunkiReport on any compatible web-server (IIS, apache, or nginx) for this guide we will be using our munki server from Parts 1 &amp; 2 as our reporting server.</p>
+<p>Munkireport is a web application written in php that displays useful stats about your munki fleet. The resources taken up by MunkiReport are quite small but like all web apps if you client base grows very large you will want to make sure the database can keep up. With that you can install MunkiReport on any compatible web-server (IIS, apache, or nginx) for this guide we will be using our munki server from Parts 1 &amp; 2 as our reporting server.</p>
 
 <p>Part of this installation includes setting up MySQL as our database backend. SQLite is the default database but I highly recommend setting my MySQL since the <a href="https://github.com/munkireport/munkireport-php/wiki/Performance">performance</a> gains are high and setup only takes a few more steps, not to mention SQLite will start to choke when higher volumes of clients start to check-in with the reporting server. </p>
 
@@ -457,6 +457,8 @@ location /munki_repo/ <span class="o">{</span>
 <a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04">Install LEMP stack on Ubuntu 14.04</a>,<br />
 <a href="https://github.com/munkireport/munkireport-php/wiki">Munkireport Wiki</a>,<br />
 <a href="http://www.nbalonso.com/new-munkireport-php-2/">nbalonso Munkireport-php</a>,  </p>
+
+<p>Updated: Oct. 24, 2014 - Spelling</p>
 ]]></content>
   </entry>
   

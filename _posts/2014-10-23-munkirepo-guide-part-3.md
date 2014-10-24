@@ -2,7 +2,7 @@
 layout: post
 title: "Setup Munkireport on Ubuntu 14.04 - Part 3"
 date: 2014-10-23
-modified:
+modified: 2014-10-24
 categories: munki ubuntu munkireport
 excerpt: Install Munkireport-php on our munki server to give us a powerful reporting console for munki clients. 
 comments: true
@@ -39,7 +39,7 @@ If you have no idea what MunkiReport is go check out this [Demo site](https://mu
 {% img /images/posts/2014-10-23/mr.png 600 %}
 
 #The Install
-Munkireport is a web application writen in php that displays useful stats about your munki fleet. The resources taken up by MunkiReport are quite small but like all web apps if you client base grows very large you will want to make sure the database can keep up. With that you can install MunkiReport on any compatible web-server (IIS, apache, or nginx) for this guide we will be using our munki server from Parts 1 & 2 as our reporting server.
+Munkireport is a web application written in php that displays useful stats about your munki fleet. The resources taken up by MunkiReport are quite small but like all web apps if you client base grows very large you will want to make sure the database can keep up. With that you can install MunkiReport on any compatible web-server (IIS, apache, or nginx) for this guide we will be using our munki server from Parts 1 & 2 as our reporting server.
 
 Part of this installation includes setting up MySQL as our database backend. SQLite is the default database but I highly recommend setting my MySQL since the [performance](https://github.com/munkireport/munkireport-php/wiki/Performance) gains are high and setup only takes a few more steps, not to mention SQLite will start to choke when higher volumes of clients start to check-in with the reporting server. 
 
@@ -311,3 +311,5 @@ Articles:
 [Install LEMP stack on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04),  
 [Munkireport Wiki](https://github.com/munkireport/munkireport-php/wiki),  
 [nbalonso Munkireport-php](http://www.nbalonso.com/new-munkireport-php-2/),  
+
+Updated: Oct. 24, 2014 - Spelling
