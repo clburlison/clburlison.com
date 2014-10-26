@@ -41,7 +41,7 @@ image:
 ###Macintosh Open Source Software **
 1. [AutoDMG](https://github.com/MagerValp/AutoDMG)
 1. [AutoPkg](https://github.com/autopkg)
-1. [Munki](https://code.google.com/p/munki/)
+1. [Munki](https://github.com/munki/munki)
 1. [MunkiAdmin](https://github.com/hjuutilainen/munkiadmin)
 1. [Munkireport-php](https://github.com/munkireport/munkireport-php) 
 1. [Mandrill](https://github.com/wollardj/Mandrill)
