@@ -4,13 +4,38 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://clburlison.com/feed.xml" />
 <link rel="alternate" type="text/html" href="https://clburlison.com" />
-<updated>2014-10-26T14:21:45-05:00</updated>
+<updated>2014-10-27T07:39:10-05:00</updated>
 <id>https://clburlison.com/</id>
 <author>
   <name>Clayton Burlison</name>
   <uri>https://clburlison.com/</uri>
   <email>clburlison@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Sign Luggage Packages]]></title>
+  <link rel="alternate" type="text/html" href="https://clburlison.com/blog/2014/10/30/sign-luggage-packages/" />
+  <id>https://clburlison.com/blog/2014/10/30/sign-luggage-packages</id>
+  <published>2014-10-30T00:00:00-05:00</published>
+  <updated>2014-10-30T00:00:00-05:00</updated>
+  <author>
+    <name>Clayton Burlison</name>
+    <uri>https://clburlison.com</uri>
+    <email>clburlison@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Are you an Apple Developer? Most of the Apple Admin Community have developer accounts for the simply reason of having access to beta software releases earlier. This gives us more time to test software before it ends up in the hands of our users.&lt;/p&gt;
+
+&lt;p&gt;As of October 24th, commit &lt;a href=&quot;https://github.com/unixorn/luggage/commit/4d270a0dbc5f31bebbf9672d4a2970ad6316c8b4&quot;&gt;4d270a0&lt;/a&gt; of the Luggage project PKGBUILD=1 is the default for building packages. Before this change luggage created packages using an outdated packagemaker binary. &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Articles:&lt;br /&gt;
+&lt;a href=&quot;https://groups.google.com/forum/?fromgroups#!topic/the-luggage/9WeNMBcvKjA&quot;&gt;Productsign&lt;/a&gt;,&lt;br /&gt;
+&lt;a href=&quot;https://github.com/unixorn/luggage&quot;&gt;Luggage&lt;/a&gt;,  &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://clburlison.com/blog/2014/10/30/sign-luggage-packages/&quot;&gt;Sign Luggage Packages&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;https://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on October 30, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -2255,51 +2280,6 @@ sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier testin
 &lt;p&gt;Boxen is free to use. Allows you to configure existing computers, bootstrap new computers, and keep an online documentation detailed of all the custom settings that you love about your computer. Boxen is also a great way to get started with puppet. &lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;https://clburlison.com/blog/2014/04/24/things-learned-from-boxen/&quot;&gt;Things learned from boxen&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;https://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 24, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Enable AirDrop on Ethernet]]></title>
-  <link rel="alternate" type="text/html" href="https://clburlison.com/blog/2014/04/18/enable-airdrop-on-ethernet/" />
-  <id>https://clburlison.com/blog/2014/04/18/enable-airdrop-on-ethernet</id>
-  <updated>2014-05-06T00:00:00-00:00</updated>
-  <published>2014-04-18T08:43:36-05:00</published>
-  
-  <author>
-    <name>Clayton Burlison</name>
-    <uri>https://clburlison.com</uri>
-    <email>clburlison@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;A quick post over enabling AirDrop to use an ethernet connection along with the default wireless connection. &lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;AirDrop helps you share items with others nearby…a quick way to share files wirelessly between two Macs, without having to connect to an existing network.&lt;/p&gt;
-
-  &lt;p&gt;–Apple KB Article&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;AirDrop provides a great file-sharing experience and numerous departments at my workplace have grown to love it. The service is good for simple file exchanges without needing to use a files-share. That is until someone in the audio video department tries to send five (5) or more gigabytes of video files to someone sitting right next to him. This starts to cause problems as people experience slow downs and decide to wait instead of using our gigabit ethernet connection.&lt;/p&gt;
-
-&lt;p&gt;Apple provides the ability to use AirDrop over ethernet but did not enable it by default. We can only assume this was for good reason so enabling it could have unknown consequences. I have been using it for well over three (3) months without any issue, but your milage may vary. I will state that after issuing this change I needed to restart my machines for the devices to be able to utilize the AirDrop service (wireless or wired).&lt;/p&gt;
-
-&lt;p&gt;Type the following line of code into Terminal to make the change. Remember this needs to be made on both machines for it to take place.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Enable AirDrop Over Any Network Connection&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Disable AirDrop Over Any Network Connection&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;defaults write com.apple.NetworkBrowser BrowseAllInterfaces 0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Article: 
-&lt;a href=&quot;http://support.apple.com/kb/ht4783&quot;&gt;Mac Basics: AirDrop&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://clburlison.com/blog/2014/04/18/enable-airdrop-on-ethernet/&quot;&gt;Enable AirDrop on Ethernet&lt;/a&gt; was originally published by Clayton Burlison at &lt;a href=&quot;https://clburlison.com&quot;&gt;Just another tech blog&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
