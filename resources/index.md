@@ -11,9 +11,10 @@ image:
   creditlink: http://ThinkDesignBlog.com
 ---
 
-###clburlison.com
+
+_This section highlights useful/popular posts from this domain._
+
 * [Bash if/then Cheat Sheet](/blog/2014/07/28/bash-if-then-cheat-sheet/) 
-* [Creating a Development Munki repo](/blog/2014/05/17/creating-a-development-munki-repo/)
 * [Setup Reposado + Margarita](/blog/2014/10/02/reposado-guide/)
 * Munki setup series on Ubuntu 14.04
   * [Setup a Munki repo - Part 1](/blog/2014/10/06/munkirepo-guide-part-1/)
@@ -31,10 +32,11 @@ image:
 ---
 
 ###Blogroll
-1. [Greg Neagle's Blog](http://managingosx.wordpress.com/)
-1. [Rich Trouton's Blog](http://derflounder.wordpress.com/)
-1. [Graham Gilbert's Blog](http://grahamgilbert.com/)
-1. [Ben Toms' Blog](http://macmule.com/)
+1. [Greg Neagle](http://managingosx.wordpress.com/)
+1. [Rich Trouton](http://derflounder.wordpress.com/)
+1. [Graham Gilbert](http://grahamgilbert.com/)
+1. [Ben Toms (macmule)](http://macmule.com/)
+1. [Steve Yuroff](http://osofrio.wordpress.com/)
 
 ---
 

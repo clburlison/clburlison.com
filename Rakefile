@@ -35,7 +35,7 @@ task :remote do
 end
 
 desc "Commit _site/"
-task :commit do
+task :commit => [:delete] do
   puts "\n## Staging modified files"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
@@ -83,8 +83,8 @@ namespace :ping do
     XMLRPC::Client.new('rpc.pingomatic.com', '/').call(
       'weblogUpdates.extendedPing',
       'Just another tech blog',
-      'http://clburlison.com',
-      'http://clburlison.com/sitemap.xml'
+      'https://clburlison.com',
+      'https://clburlison.com/sitemap.xml'
     )
   end
 end
