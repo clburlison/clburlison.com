@@ -1,0 +1,367 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Bash if then cheat sheet &#8211; Just another tech blog</title>
+<meta name="description" content="I always find myself looking for a good resource when writing if/then statements in bash scripts. It’s hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet…copied here because I was tired of having to look for a good resource.   
+
+">
+<meta name="keywords" content="">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Bash if then cheat sheet">
+<meta name="twitter:description" content="I always find myself looking for a good resource when writing if/then statements in bash scripts. It’s hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet…copied here because I was tired of having to look for a good resource.   
+
+">
+<meta name="twitter:site" content="@clburlison">
+<meta name="twitter:creator" content="@clburlison">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://clburlison.com/images/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bash if then cheat sheet">
+<meta property="og:description" content="I always find myself looking for a good resource when writing if/then statements in bash scripts. It’s hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet…copied here because I was tired of having to look for a good resource.   
+
+">
+<meta property="og:url" content="https://clburlison.com/blog/2014/07/28/bash-if-then-cheat-sheet/">
+<meta property="og:site_name" content="Just another tech blog">
+
+
+
+
+
+<link rel="canonical" href="https://clburlison.com/blog/2014/07/28/bash-if-then-cheat-sheet/">
+<link href="https://clburlison.com/feed.xml" type="application/atom+xml" rel="alternate" title="Just another tech blog Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://clburlison.com/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="https://clburlison.com/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="https://clburlison.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://clburlison.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://clburlison.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://clburlison.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://clburlison.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://clburlison.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://clburlison.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://clburlison.com/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="https://clburlison.com">Just another tech blog</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+					    
+					        
+					    
+					    <li><a href="https://clburlison.com/about/" >About</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="https://clburlison.com/resources/" >Resources</a></li>
+					  
+					    
+					        
+					    
+					    <li><a href="https://clburlison.com/blog/archives/" >Archives</a></li>
+					  
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+
+
+	<img src="https://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+
+<h3>Clayton Burlison</h3>
+<p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
+<a href="mailto:clburlison@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+<a href="http://twitter.com/clburlison" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+
+
+<a href="http://linkedin.com/in/clburlison" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/clburlison" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="https://clburlison.com/blog/2014/07/28/bash-if-then-cheat-sheet/" rel="bookmark" title="Bash if then cheat sheet">Bash if then cheat sheet</a></h1>
+      
+    Categories: 
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/bash/'>bash</a>, <a class='category' href='/blog/categories/osx/'>osx</a>
+  
+</span>
+
+	 
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>I always find myself looking for a good resource when writing if/then statements in bash scripts. It’s hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet…copied here because I was tired of having to look for a good resource.   </p>
+
+<p>Examples on usage can be found in the <a href="http://tldp.org/LDP/abs/html/comparison-ops.html">original article</a>.</p>
+
+<h2 id="integer-comparison">integer comparison</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># The following are for number values only.</span>
+	-eq
+		is equal to
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -eq <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+	-ne
+		is not equal to
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -ne <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+	-gt
+		is greater than
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -gt <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+	-ge
+		is greater than or equal to
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -ge <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+	-lt
+		is less than
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -lt <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+	-le
+		is less than or equal to
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> -le <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+	&lt;
+		is less than <span class="o">(</span>within double parentheses<span class="o">)</span>
+		<span class="o">((</span><span class="s2">&quot;$a&quot;</span> &lt; <span class="s2">&quot;$b&quot;</span><span class="o">))</span>
+
+	&lt;<span class="o">=</span>
+		is less than or equal to <span class="o">(</span>within double parentheses<span class="o">)</span>
+		<span class="o">((</span><span class="s2">&quot;$a&quot;</span> &lt;<span class="o">=</span> <span class="s2">&quot;$b&quot;</span><span class="o">))</span>
+
+	&gt;
+		is greater than <span class="o">(</span>within double parentheses<span class="o">)</span>
+		<span class="o">((</span><span class="s2">&quot;$a&quot;</span> &gt; <span class="s2">&quot;$b&quot;</span><span class="o">))</span>
+
+	&gt;<span class="o">=</span>
+		is greater than or equal to <span class="o">(</span>within double parentheses<span class="o">)</span>
+		<span class="o">((</span><span class="s2">&quot;$a&quot;</span> &gt;<span class="o">=</span> <span class="s2">&quot;$b&quot;</span><span class="o">))</span></code></pre></div>
+
+<h2 id="string-comparison">string comparison</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># The following are for strings of data.</span>
+	<span class="o">=</span>
+		is equal to
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="o">=</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+	Caution:	
+		Note the whitespace framing <span class="nv">the</span> <span class="o">=</span>
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span><span class="o">=</span><span class="s2">&quot;$b&quot;</span> <span class="o">]</span> is not equivalent to the above.
+
+	<span class="o">==</span>
+		is equal to
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="o">==</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+	This is a synonym <span class="k">for</span> <span class="o">=</span>
+	Note:	
+		<span class="nv">The</span> <span class="o">==</span> comparison operator behaves differently 
+		within a double-brackets <span class="nb">test </span>than within single brackets.
+		<span class="o">[[</span> <span class="nv">$a</span> <span class="o">==</span> z* <span class="o">]]</span>   <span class="c"># True if $a starts with an &quot;z&quot; (pattern matching).</span>
+		<span class="o">[[</span> <span class="nv">$a</span> <span class="o">==</span> <span class="s2">&quot;z*&quot;</span> <span class="o">]]</span> <span class="c"># True if $a is equal to z* (literal matching).</span>
+		<span class="o">[</span> <span class="nv">$a</span> <span class="o">==</span> z* <span class="o">]</span>     <span class="c"># File globbing and word splitting take place.</span>
+		<span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="o">==</span> <span class="s2">&quot;z*&quot;</span> <span class="o">]</span> <span class="c"># True if $a is equal to z* (literal matching).</span>
+		<span class="c"># Thanks, Stéphane Chazelas</span>
+
+	!<span class="o">=</span>
+		is not equal to
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> !<span class="o">=</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+	This operator uses pattern matching within a <span class="o">[[</span> ... <span class="o">]]</span> construct.
+
+	&lt;
+		is less than, in ASCII alphabetical order
+		<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$a&quot;</span> &lt; <span class="s2">&quot;$b&quot;</span> <span class="o">]]</span>
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="se">\&lt;</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+	Note: that the <span class="s2">&quot;&lt;&quot;</span> needs to be escaped within a <span class="o">[</span> <span class="o">]</span> construct.
+
+	&gt;
+		is greater than, in ASCII alphabetical order
+		<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$a&quot;</span> &gt; <span class="s2">&quot;$b&quot;</span> <span class="o">]]</span>
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$a&quot;</span> <span class="se">\&gt;</span> <span class="s2">&quot;$b&quot;</span> <span class="o">]</span>
+
+	Note that the <span class="s2">&quot;&gt;&quot;</span> needs to be escaped within a <span class="o">[</span> <span class="o">]</span> construct.
+
+	-z
+		string is null, that is, has zero length
+
+	<span class="nv">String</span><span class="o">=</span><span class="s1">&#39;&#39;</span>   <span class="c"># Zero-length (&quot;null&quot;) string variable.</span>
+		<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;$String&quot;</span> <span class="o">]</span>
+		<span class="k">then</span>
+		  <span class="nb">echo</span> <span class="s2">&quot;\$String is null.&quot;</span>
+		<span class="k">else</span>
+		  <span class="nb">echo</span> <span class="s2">&quot;\$String is NOT null.&quot;</span>
+		<span class="k">fi</span>     <span class="c"># $String is null.</span>
+
+	-n
+		string is not null.
+
+	Caution:
+		The -n <span class="nb">test </span>requires that the string be quoted within the <span class="nb">test </span>brackets. 
+		Using an unquoted string with ! -z, or even just the unquoted string a
+		lone within <span class="nb">test </span>brackets <span class="o">(</span>see Example 7-6<span class="o">)</span> normally works, however, 
+		this is an unsafe practice. Always quote a tested string. <span class="o">[</span>1<span class="o">]</span></code></pre></div>
+
+<p>Special Thanks to the The Linux Documentation Project for outlining the information in such a usable format. They also include great examples on their website.</p>
+
+<hr />
+
+<p>Articles: 
+<a href="http://tldp.org/LDP/abs/html/comparison-ops.html">Advanced Bash-Scripting Guide</a>  </p>
+
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+
+
+
+	<img src="https://clburlison.com/images/me.jpg" class="bio-photo" alt="Clayton Burlison bio photo"></a>
+
+<h3>Clayton Burlison</h3>
+<p>A Mac sysadmin, documenting useful code, ideas, & guides.</p>
+<a href="mailto:clburlison@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
+<a href="http://twitter.com/clburlison" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+
+
+<a href="http://linkedin.com/in/clburlison" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/clburlison" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+
+
+
+
+
+
+        </div>
+        <p><b>Published: </b><time datetime="2014-07-28T22:05:56-05:00">July 28, 2014</time><br>
+		<b>Modified:</b> <time datetime="2014-07-31">July 31, 2014</time></p>
+      </footer>
+    </div><!-- /.article-wrap -->
+    <center><nav class="pagination" role="navigation">
+      
+        <a href="https://clburlison.com/blog/2014/07/23/converting-audio-with-media-encoder/" class="btn" title="Converting Audio With Media Encoder">Previous article</a>
+      
+      
+        <a href="https://clburlison.com/blog/2014/08/09/moving-to-plain-jekyll/" class="btn" title="Moving to Plain Jekyll">Next article</a>
+      
+    </nav><!-- /.pagination --></center>
+    <hr />
+  
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+
+  <footer>
+    <div class="google-ads">
+  <!-- 320 x 50 ad -->
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client=""
+       data-ad-slot=""></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+<span>&copy; 2014 Clayton Burlison. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://clburlison.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://clburlison.com/assets/js/scripts.min.js"></script>
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'clburlison'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+	        
+
+</body>
+</html>

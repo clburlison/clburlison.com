@@ -35,7 +35,7 @@ task :remote do
 end
 
 desc "Commit _site/"
-task :commit => [:delete] do
+task :commit do
   puts "\n## Staging modified files"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
@@ -49,7 +49,7 @@ task :commit => [:delete] do
 end
 
 desc "Deploy _site/ to master branch"
-task :deploy => [:build]  do
+task :deploy do
   puts "\n## Deleting master branch"
   status = system("git branch -D master")
   puts status ? "Success" : "Failed"
