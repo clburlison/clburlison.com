@@ -49,7 +49,7 @@ task :commit => [:delete] do
 end
 
 desc "Deploy _site/ to master branch"
-task :deploy do
+task :deploy => [:build]  do
   puts "\n## Deleting master branch"
   status = system("git branch -D master")
   puts status ? "Success" : "Failed"
@@ -65,30 +65,6 @@ task :deploy do
   status = system("git push --all origin")
   puts status ? "Success" : "Failed"
 end
-
-desc 'Notify various services of the updated website'
-task :ping => ['ping:sitemap', 'ping:pingomatic']
-
-
-namespace :ping do
-  task :sitemap do
-    Net::HTTP.get(
-        'www.google.com',
-        '/webmasters/tools/ping?sitemap=' +
-        URI.escape(File.join(config['base_url'], 'sitemap.xml'))
-    )
-  end
-
-  task :pingomatic do
-    XMLRPC::Client.new('rpc.pingomatic.com', '/').call(
-      'weblogUpdates.extendedPing',
-      'Just another tech blog',
-      'https://clburlison.com',
-      'https://clburlison.com/sitemap.xml'
-    )
-  end
-end
-
 
 desc "Commit and deploy _site/"
 task :push => [:remote, :build, :commit, :deploy] do
