@@ -8,7 +8,7 @@ url:              http://localhost:4000
 username: clburlison
 repo: clburlison.github.io
 branch: source
-destination: ../clburlison.github.io-gh-pages/
+destination = '_site'
 
 # Jekyll configuration
 
