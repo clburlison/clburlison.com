@@ -1,0 +1,10 @@
+language: ruby
+
+install:
+  # Install Jekyll and dependencies
+  - bundle install
+
+script: bundle exec rake site:deploy --quiet
+env:
+  global:
+    secure: liNpW7bMsjrLTxQWWY26VcQJX2nZcW29FHFQNFzcZB9VrAiPPw4+fhAJV63ev1wOoPKTsSYEWvronxT+66/0gMK1S82eR8sf6w0d5IDLuv2Qg6KmtFNNSPXQQf+Lw4x4nhqV8DMYHUYN6o8Hnfpye+tlepcYXcFcWWhloHRFBz4=

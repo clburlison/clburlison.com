@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sign Luggage Packages"
-date: 2014-10-30
+date:
 modified:
 categories: 
 excerpt:

@@ -2,7 +2,13 @@
 
 title:            Just another tech blog
 locale:           en_US
-url:              https://clburlison.com
+url:              http://localhost:4000
+
+# Travis.ci info
+username: clburlison
+repo: clburlison.github.io
+branch: source
+destination: ../clburlison.github.io-gh-pages/
 
 # Jekyll configuration
 
@@ -53,4 +59,4 @@ owner:
 
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", ".travis.yml", "vendor"]

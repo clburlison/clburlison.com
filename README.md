@@ -1,6 +1,8 @@
 Personal website for Clayton Burlison
 ===
 
+[![Build Status](https://travis-ci.org/clburlison/clburlison.github.io.png?branch=master)](https://travis-ci.org/clburlison/clburlison.github.io)
+
 Powered by Jekyll with the [Minimal Mistakes Theme](http://mademistakes.com/minimal-mistakes/).
 
 
