@@ -2,9 +2,6 @@
 # enable error reporting to the console
 set -e
 
-# make sure the URL is set to the remote
-#sed -i .bak 's,http://localhost:4000,https://clburlison.com,g' ./_config.yml; rm ./_config.yml.bak
-
 # build site with jekyll, by default to `_site' folder
 jekyll build
 

@@ -5,8 +5,5 @@ branches:
   - source
 install:
   - bundle install
-env:
-  global:
-     secure: "B+0E/niTxid8tLw1XL96KWexBW7oO3G8OxjxMcSOjP8d36PPZmYWHfHLupqMjP/qs9NjrbD2mf9080N5p85woXiM91WZ6iSKaqJmEAMfshLZaDRJHWfXtevKA8JfgkDgvMBuCtpuYob2Qcqh7aje0FXZ63ICJ2XJ/BhQkriDMsY="
 rvm:
 - 2.1.2 # version of `ruby' 
