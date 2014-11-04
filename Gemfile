@@ -6,5 +6,5 @@ group :development do
   gem "jekyll-sitemap"
   gem 'octopress', '~> 3.0.0.rc.12'
   gem 'stringex', '~> 1.4.0'
-	gem 'travis'
+  gem 'travis'
 end
