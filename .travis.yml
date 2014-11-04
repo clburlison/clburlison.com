@@ -1,9 +1,12 @@
 language: ruby
-script: "./build.sh"
+script: ./build.sh
 branches:
   only:
   - source
 install:
-  - bundle install
+- bundle install
 rvm:
-- 2.1.2 # version of `ruby' 
+- 2.1.2
+env:
+  global:
+    secure: qPVLDveD8QlIicTno23c/JD1h4eWUoV8S+cCdD7Czfulxwbh50AM3VWayYH5IbPk7e/Mt11aV2cEQUofF/vBZ2BxtwOILoP/4sbk/A8BnHsruEJye4W1bOLN0sq4reof7nqgF4J9F3Kbx8AdWOOVELOcJRUImp+a0qbDD205P6U=

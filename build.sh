@@ -1,8 +1,8 @@
 #/bin/bash
 # enable error reporting to the console
-set -e
+set -e 
 
-# build site with jekyll, by default to `_site' folder
+# build site with `jekyll', by default to `_site' folder
 jekyll build
 
 # cleanup
@@ -21,4 +21,4 @@ git config user.email "clburlison@gmail.com"
 git config user.name "Clayton Burlison"
 git add -A .
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-git push origin master
+git push origin master -f
