@@ -11,4 +11,4 @@ branches:
 script: bundle exec rake site:deploy --quiet
 env:
   global:
-     secure: "CKEirm3sdWZAVE0LvIX0Ltf4k7bnc0/Fyi0cMLVllcuCUCbdd6bD8KsmUO4WsoGZBuBJYReN2tx5r9ijdjoU75Dgoi47R2npWQWRIZVoZmHNYwtHolKGrzWGWbst5VfTs7/DXDRCHnuYxRIbG77FpIPfH/iC9agNsb9FJZvhjK4="
+     secure: "B+0E/niTxid8tLw1XL96KWexBW7oO3G8OxjxMcSOjP8d36PPZmYWHfHLupqMjP/qs9NjrbD2mf9080N5p85woXiM91WZ6iSKaqJmEAMfshLZaDRJHWfXtevKA8JfgkDgvMBuCtpuYob2Qcqh7aje0FXZ63ICJ2XJ/BhQkriDMsY="
