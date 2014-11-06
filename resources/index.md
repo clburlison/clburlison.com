@@ -47,8 +47,9 @@ _This section highlights useful/popular posts from this domain._
 1. [MunkiAdmin](https://github.com/hjuutilainen/munkiadmin)
 1. [Munkireport-php](https://github.com/munkireport/munkireport-php) 
 1. [Mandrill](https://github.com/wollardj/Mandrill)
-1. [Sal](https://github.com/grahamgilbert/sal)
+1. [Sal](https://github.com/salsoftware/sal)
 1. [Reposado](https://github.com/wdas/reposado)
+1. [Snipe-IT](https://github.com/snipe/snipe-it)
 
 
 ** AKA - the stuff I have [starred](https://github.com/stars/clburlison) on Github
