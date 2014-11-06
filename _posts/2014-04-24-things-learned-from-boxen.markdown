@@ -32,7 +32,7 @@ So which repo's do I recommend you looking at the most? [Gary Larizza](https://g
 One of the issues I ran into while looking at boxen was storing personal information in a public github repo. You could make your boxen repo private but that was not the method I wanted to take. I could also just copy all my private information after the initial boxen setup but does that not defeat the main purpose of boxen? Luckily Graham had already found out a solution which is to use Dropbox for everything that should not be shared with others. Before I continue on let me put a disclaimer that if you plan on storing ssh keys, license files, or really personal information you really need to enable two-step verification. Attached [here](https://www.dropbox.com/help/363/en) is the setup guide as this is very important for you to do.
 
 You setup 2fa for Drobox, right? If you have not what are you waiting for? Now that your Dropbox is secure or at least more secure, I would create a directory structure that matches OS X. This might make for long paths while creating settings in puppet code but having a logical file-management system that actually matches where the files are actually being placed by boxen will help. Below is a screenshot of my directory structure as of this writing.  
-![dropbox-config]({{ site.url }}/images/posts/2014-04-24/Dropbox-config.png) 
+![dropbox-config]({{ site.url }}/images/2014-04-24/Dropbox-config.png) 
  
 ###No really how can I get started?
 * Well Gary has the best write up though it is a bit dated [Puppet + Github = Laptop Love](http://garylarizza.com/blog/2013/02/15/puppet-plus-github-equals-laptop-love/)

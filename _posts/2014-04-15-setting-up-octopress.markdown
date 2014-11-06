@@ -37,7 +37,7 @@ Article: [How to Customize Your Octopress Theme](http://aijazansari.com/2012/08/
 ##Plugins
 ###Monthly Archive Sidebar
 The setup for this plugin is really well done in the help file for the repo so I shall direct you there.  
-![Monthly Archives]({{ site.url }}/images/posts/2014-04-15/monthly_archives.png)  
+![Monthly Archives]({{ site.url }}/images/2014-04-15/monthly_archives.png)  
 Article: [Github-Plugin](https://github.com/rcmdnk/monthly-archive)
 
 ###Categories
@@ -46,7 +46,7 @@ Article: [Github-Plugin](https://github.com/matthiasbeyer/jekyll_group_categorie
 
 ###Tag Cloud (sidebar)
 The setup for this plugin is really well done in the help file for the repo so I shall direct you there.  
-![Tag Cloud]({{ site.url }}/images/posts/2014-04-15/tag_cloud.png)  
+![Tag Cloud]({{ site.url }}/images/2014-04-15/tag_cloud.png)  
 Article: [Github-Plugin](https://github.com/tokkonopapa/octopress-tagcloud)
 
 If you would like your tags to show up in a vertical view visit the following link.  

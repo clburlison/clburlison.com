@@ -22,10 +22,10 @@ The reason to secure files is because you do not want others to have access to y
 
 #Creating an encrypted DMG
 Step 1 - Open Disk Utility  
-{% img /images/posts/2014-06-17/step1.png 400 100 %}
+{% img /images/2014-06-17/step1.png 400 100 %}
 
 Step 2 - Create a Blank Disk Image...  
-{% img /images/posts/2014-06-17/step2.png 600 400 %}
+{% img /images/2014-06-17/step2.png 600 400 %}
 
 Step 3 - Name your new dmg. Note the values shown are important.
 
@@ -36,19 +36,19 @@ Step 3 - Name your new dmg. Note the values shown are important.
 * Partitions: using `Single partition - GUID Partition Map` is a standard that is compatible with most Macs
 * Image Format: using `sparse disk image` will save space on your hard drive and only use the disk space needed by the dmg
   
-{% img /images/posts/2014-06-17/step3.png 600 400 %}
+{% img /images/2014-06-17/step3.png 600 400 %}
 
 Step 4 - Here you want to type a secure password  
-{% img /images/posts/2014-06-17/step4.png 400 400 %}
+{% img /images/2014-06-17/step4.png 400 400 %}
 
 Step 5 - If you click the key icon OS X will help you create a secure password using the Password Assistant  
-{% img /images/posts/2014-06-17/step5.png 600 400 %}
+{% img /images/2014-06-17/step5.png 600 400 %}
 
 Step 6 - Note the file names. This is your encrypted dmg. You can store files here just like a flash drive.  
-{% img /images/posts/2014-06-17/step6.png 600 400 %}
+{% img /images/2014-06-17/step6.png 600 400 %}
 
 Step 7 - If you eject your dmg you will be presented with this pop-up the next time you try to open the dmg. Type your encryption password to unlock the dmg.  
-{% img /images/posts/2014-06-17/step7.png 400 100 %}
+{% img /images/2014-06-17/step7.png 400 100 %}
 
 
 ##Video showing the process

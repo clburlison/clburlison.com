@@ -12,7 +12,7 @@ categories: osx geektool munki
 
 Display useful information on your Desktop using Geektool. Make troubleshooting network issues for your end users easier. Find your hostname faster. The amount of useful information is limitless. If you can script it...you can display it.  
 
-{% img /images/posts/2014-07-14/current_info.png 400 100 My Results %}  
+{% img /images/2014-07-14/current_info.png 400 100 My Results %}  
 My Geektools Results 
 
 <section id="table-of-contents" class="toc">
@@ -30,7 +30,7 @@ My Geektools Results
 #Introduction
 Firstly, I take no credit for this valuable resource. All credit should go to Erik Gomez from the munki-dev [mailing list](https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY). All I have done is modified the script to work in my environment. Modifications included removing some excess ``if``/ ``then`` statements, remove the MAC address, adding current SSID, and a few other tweaks so the script played nicely as a profile. The writing is on the wall, mcx is slowing dying or at least it is becoming a less preferred method of managing preferences.
 
-{% img /images/posts/2014-07-14/eriks_info.png 400 100 Eriks Results %}  
+{% img /images/2014-07-14/eriks_info.png 400 100 Eriks Results %}  
 Erik's Original Desktop Results  
 
 **Requirements** *-You will want to download and save these somewhere.*
@@ -39,7 +39,7 @@ Erik's Original Desktop Results
 * [mcxToProfile](https://github.com/timsutton/mcxToProfile)
 * [make-profile-pkg](https://github.com/timsutton/make-profile-pkg)
 * [Gist files for this project](https://gist.github.com/clburlison/af2a1afe01fb9aff9288)
-* [Geektool-login-item.mobileconfig]({{ site.url }}/images/posts/2014-07-14/Geektool-login-item.mobileconfig)
+* [Geektool-login-item.mobileconfig]({{ site.url }}/images/2014-07-14/Geektool-login-item.mobileconfig)
 
 #What is it?
 In short, this is simply a bash script that Geektool is running in the background. It defaults to refreshing every 30 seconds, though you can modify this in the ``org.tynsoe.geeklet.shell.plist`` file, which has negligible performance toll on Mac clients. You want the refresh rate low so when the network drops or you get a new IP address you can easily see changes.

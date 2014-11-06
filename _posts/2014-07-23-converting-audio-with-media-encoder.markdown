@@ -22,46 +22,46 @@ Fortunately, I have access to the Adobe Create Suite (CS6) at work from which I 
 
 1. Open Adobe Media Encoder.  
 	<figure>
-		<img src="{{ site.url }}/images/posts/2014-07-23/1_open.png">
+		<img src="{{ site.url }}/images/2014-07-23/1_open.png">
 	</figure>
 
 2. Create the Phone Preset by clicking on the ``+`` button in the Preset Browser window.  
 	<figure>
-		<img src="{{ site.url }}/images/posts/2014-07-23/2_add_preset.png">
+		<img src="{{ site.url }}/images/2014-07-23/2_add_preset.png">
 	</figure>
 
 3. Add a preset name and change the format to Waveform Audio.  
 	<figure>
-		<img src="{{ site.url }}/images/posts/2014-07-23/3_format.png">
+		<img src="{{ site.url }}/images/2014-07-23/3_format.png">
 	</figure>
 
 4. Change the basic audio setting the values below. Click okay to save the preset.    
 	<figure>
-		<img src="{{ site.url }}/images/posts/2014-07-23/4_settings.png">
+		<img src="{{ site.url }}/images/2014-07-23/4_settings.png">
 	</figure>
 
 5. Add your audio file to be converted by clicking the ``+`` button in the Queue window.  
 	<figure>
-		<img src="{{ site.url }}/images/posts/2014-07-23/5_adding_file_2_encode.png">
+		<img src="{{ site.url }}/images/2014-07-23/5_adding_file_2_encode.png">
 	</figure>
 
 6. Drag your phone setting preset from the Preset Browser window on top of the audio file you want to convert. It should look like the picture below. (note the .wav file extension)  
 	<figure>
-		<img src="{{ site.url }}/images/posts/2014-07-23/6_ready_2_encode.png">
+		<img src="{{ site.url }}/images/2014-07-23/6_ready_2_encode.png">
 	</figure>
 
 7. Click the green encode button.  
 	<figure>
-		<img src="{{ site.url }}/images/posts/2014-07-23/7_encode.png">
+		<img src="{{ site.url }}/images/2014-07-23/7_encode.png">
 	</figure>
 
 ##Before/After
 <div>
-	<a href="{{ site.url }}/images/posts/2014-07-23/audio-test.mp3" target="_blank"><img src="{{ site.url }}/images/speaker-30.jpg" height="30"> Before</a>
+	<a href="{{ site.url }}/images/2014-07-23/audio-test.mp3" target="_blank"><img src="{{ site.url }}/images/speaker-30.jpg" height="30"> Before</a>
 </div>
 
 <div>
-	<a href="{{ site.url }}/images/posts/2014-07-23/audio-test_1.wav" target="_blank"><img src="{{ site.url }}/images/speaker-30.jpg" height="30">  After</a>
+	<a href="{{ site.url }}/images/2014-07-23/audio-test_1.wav" target="_blank"><img src="{{ site.url }}/images/speaker-30.jpg" height="30">  After</a>
 </div>  
 
 

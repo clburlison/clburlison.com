@@ -36,7 +36,7 @@ Before we get to far you might want to head over to [Part 1 - Setting up the mun
 
 If you have no idea what MunkiReport is go check out this [Demo site](https://munkireportphp-nbalonso.rhcloud.com/) hosted by [Noel](http://www.nbalonso.com/). Noel has a custom color scheme but it should give you an idea of the system.
 
-{% img /images/posts/2014-10-23/mr.png 600 %}
+{% img /images/2014-10-23/mr.png 600 %}
 
 #The Install
 Munkireport is a web application written in php that displays useful stats about your munki fleet. The resources taken up by MunkiReport are quite small but like all web apps if you client base grows very large you will want to make sure the database can keep up. With that you can install MunkiReport on any compatible web-server (IIS, apache, or nginx) for this guide we will be using our munki server from Parts 1 & 2 as our reporting server.

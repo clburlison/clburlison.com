@@ -40,7 +40,7 @@ A brief description of Mandrill.
   >
   > --Joe Wollard
 
-{% img /images/posts/2014-10-19/mandrill.png 600 %}
+{% img /images/2014-10-19/mandrill.png 600 %}
 
 #The Install
 Lucky for us Joe, the developer, has excellent documentation for installation on Ubuntu. Unfortunately, the documentation is for an older version of Ubuntu and some of the commands need modification to work with 14.04 and this series. Instead of redirecting you back and forth between his guide and this, I decided to include all the commands required below without the descriptions. For more information on what/why you are doing something please reference the wiki [here](https://github.com/wollardj/Mandrill/wiki).
@@ -187,7 +187,7 @@ Visit to verify that everything is working [http://munki:3001]()
 
 Log into the web portal with the default username _admin_ and password _admin_. You will obviously want to change this password to something more secure. Under the mandrill settings tab you will want to change your repo path to ``/usr/local/munki_repo/``.
 
-{% img /images/posts/2014-10-19/mandrill_settings.png 600 %}
+{% img /images/2014-10-19/mandrill_settings.png 600 %}
 
 #Conclusion
 Mandrill is setup! Stay tuned for Part 3, setting up Munkireport.

@@ -45,7 +45,7 @@ secret_key = 9DJWHga1Y+uBAFXntDM1Ujd6FrnnUZb/9dLMOqzn
 ## Creating your s3 bucket
 You will have to create your s3 bucket with in the [Amazon AWS console](https://console.aws.amazon.com/s3/home). Create a bucket using the fully-qualified domain name of your blog `(e.g., www.example.com)`. Open the Properties pane for your bucket, and then enable "Static web hosting". Make note of the “endpoint”, something like `example.com.s3-website-us-east-1.amazonaws.com`. You can use this directly, but most people will create a DNS CNAME pointing to it instead.
 
-![Amazon AWS]({{ site.url }}/images/posts/2014-04-04/amazon_aws.png)
+![Amazon AWS]({{ site.url }}/images/2014-04-04/amazon_aws.png)
 
 ## Modifying your Rakefile
 Inside your octopress directory, you have a file `Rakefile` that we need to make a few modifications to so that we can upload to Amazon s3. Start by editing the `deploy_default` variable to be `s3`. Next establish a new variable by adding this line into the file `s3_bucket = "www.mywebsite.com"` modifying the website name. 

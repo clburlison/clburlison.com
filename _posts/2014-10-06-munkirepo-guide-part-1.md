@@ -33,7 +33,7 @@ image:
 
 As you might have guessed from my previous [post](/blog/2014/10/02/reposado-guide/), I am trying to standardize at work. Part of this was to move many core OS X services away from OS X Server and towards Ubuntu. This will allow us to use our existing virtualization infrastructure. After reposado the next big service was our munki repo. 
 
-{% img center /images/posts/2014-10-06/munki.jpg 400 400 %}
+{% img center /images/2014-10-06/munki.jpg 400 400 %}
 
 [Munki](http://github.com/munki/munki) is a very powerful open source tool for patch management and software updates for OS X clients. The client component is pretty easy to install but the server component can be a bit more tricky for newer administrators. The goal of this guide is to walk through setting up the server web share with http basic authentication (read simply security), and lastly setup samba so we can remote into our web server to manage files. 
 
@@ -41,7 +41,7 @@ In the past, our munki_repo has been shared using apache but due to some researc
 
 Since our Munki setup has many add-on projects including: [mandrill](https://github.com/wollardj/Mandrill),  [munkireport-php](https://github.com/munkireport/munkireport-php/), and our in-house rsync replication I will be splitting this series into multiple parts. 
 
-{% img /images/posts/2014-10-06/managed_software_center.png 600 600 %}
+{% img /images/2014-10-06/managed_software_center.png 600 600 %}
 
 #The Install
 

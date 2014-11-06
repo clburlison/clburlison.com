@@ -10,13 +10,13 @@ description: Quick post on why I have the one of the best jobs available.
 categories: personal
 ---
 **I get to be everyone's white knight**  
-{% img /images/posts/2014-05-06/white_knight.jpg 290 512 %}
+{% img /images/2014-05-06/white_knight.jpg 290 512 %}
 
 **Technology Superhero**  
-{% img /images/posts/2014-05-06/superhero.png %}
+{% img /images/2014-05-06/superhero.png %}
 
 **Or my personal favorite wizard**  
-{% img /images/posts/2014-05-06/wizard.jpg %}
+{% img /images/2014-05-06/wizard.jpg %}
 
 
 All funny pictures aside, being in the information technology field is a perfect fit for me. When people ask for help I get to take personal satisfaction in helping them. Very few times do I have to send the task to another tech. Sometimes this turns into a mini-adventure to learn how to fix the problem. Plus, my end users have a name and face to the person helping. The past four years of my job have been an amazing experience.
