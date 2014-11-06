@@ -1,10 +1,11 @@
-Personal website for Clayton Burlison
+Personal Website for Clayton Burlison
 ===
 
 [![Build Status](https://travis-ci.org/clburlison/clburlison.github.io.svg?branch=source)](https://travis-ci.org/clburlison/clburlison.github.io)
 
-Powered by Jekyll with the [Minimal Mistakes Theme](http://mademistakes.com/minimal-mistakes/).
+This repo contains my personal website, [clburlison.com](https://clburlison.com). The _source_ branch has my markdown files, images, and configuration settings while the _master_ branch is actually my "web share". This site is powered by Github, Travis-ci, Jekyll, and Cloudflare. With those four services, I am able to host a completely free website static website with a Content Deliver Network (CDN). Travis takes care of building my site. All I have to do is create the content, `git push` and my site is automagically updated.
 
+Powered by Jekyll with the [Minimal Mistakes Theme](http://mademistakes.com/minimal-mistakes/).
 
 ##Helpful Site info 
 
@@ -19,6 +20,9 @@ $ octopress new post "Post Title"
 $ octopress new page new-page/
 ````
 
+##Travis integration
+
+To get travis-ci to automatically generate this site check out this awesome project [jekyll-travis](https://github.com/mfenner/jekyll-travis)!
 
 ##License
 
