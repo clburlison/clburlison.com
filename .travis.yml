@@ -1,12 +1,10 @@
 language: ruby
-script: ./build.sh
+install:
+- bundle install
+script: bundle exec rake site:deploy --quiet
 branches:
   only:
   - source
-install:
-- bundle install
-rvm:
-- 2.1.2
 env:
   global:
-    secure: ZaPtQK27rzT2iHWsuOBptE6G3+1AgwyiOirztpWCOI5/uxwWeKM1eIr1XODWtLJUUwT/LOinKjxvmOFgTyXJjsYnirn6ZrGnY0aSYbeFB8/BxO6iL1+6WoIIiHgVPMXW3oNW8FIbr735LTlWXBOyquWtVKdLcjP4s4+mVxXkKzA=
+    secure: rBBEvW9Aa0E6mILehQuUB/RSZ3ycCpNXxZwfmJIgj7dR7WBdi9c7eg0J2tcdDYZQ+0N53rFzLLTMSxR4IQlQQ3zPlAVbNbbhOFdtzGEM1u3cYyHtMUFhPHKO8k8/2p0YCxsKUSoVCL7LVfZ3Oa/GJqoN90q96rcWj5lLYrQ6Emg=
