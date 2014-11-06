@@ -9,7 +9,7 @@ comments: true
 published: true
 tags: []
 image:
-  feature: posts/2014-09-29/shellshock3.jpg
+  feature: 2014-09-29/shellshock3.jpg
   credit: nghenhinvietnam
   creditlink: http://nghenhinvietnam.vn/tin-tuc/shellshock-bash-loi-bao-mat-gay-tac-hai-lon-hon-heartbleed-988.html
 ---
