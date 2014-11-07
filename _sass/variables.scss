@@ -29,8 +29,9 @@ $info				  : #308cbc;
 
 // Links
 $linkcolor 		    : #000;
-$link-color       : #000AB2;
-$linkcolorhover 	: lighten($link-color, 20);
+$link-color       : #A30000;
+//$linkcolorhover 	: lighten($link-color, 20);
+$linkcolorhover 	: #CC0000;
 $linkcolorvisited : darken($linkcolorhover, 20);
 $linkcolorfocus 	: darken($linkcolorvisited, 10);
 

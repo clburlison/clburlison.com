@@ -25,10 +25,6 @@ image:
 </section><!-- /#table-of-contents -->
 
 
-
-
-
-
 #Intro
 Welcome to the third part in our munki server setup series. In this section, we will download and configure [Munkireport-php](https://github.com/munkireport/munkireport-php) on our munki server.
 
