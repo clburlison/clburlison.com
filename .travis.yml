@@ -8,3 +8,4 @@ branches:
 env:
   global:
     secure: rBBEvW9Aa0E6mILehQuUB/RSZ3ycCpNXxZwfmJIgj7dR7WBdi9c7eg0J2tcdDYZQ+0N53rFzLLTMSxR4IQlQQ3zPlAVbNbbhOFdtzGEM1u3cYyHtMUFhPHKO8k8/2p0YCxsKUSoVCL7LVfZ3Oa/GJqoN90q96rcWj5lLYrQ6Emg=
+    secure: "p8U7lE3izZjytH7SfHQsbGqp/z0c/j9yejkXGe79aRrRxHNv5cZX8HUkhMvlSyDRakvg8RBj8c6BsIAOFCprvp8Nz17mY573vUAAblYt6IZtxxtTtXkR3f/nm2sJmnoimac9wPU8N+PHc1kyk8qUc3Bc2m2tXt7bHNsMelQ/oAE="
