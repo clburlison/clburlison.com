@@ -2,7 +2,7 @@
 
 title:            Just another tech blog
 locale:           en_US
-production_url:  https://clburlison.com
+url:  https://clburlison.com
 
 # Travis.ci info
 username: clburlison
