@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 excerpt: Preview files from Terminal.
 categories: bash
@@ -19,6 +19,8 @@ I highly recommend adding an alias to your either your .bashrc or .bash_profile.
 
 Below is the command I use:
 
-	ql () { qlmanage -p "$*" >& /dev/null; }
+{% highlight bash %}
+ql () { qlmanage -p "$*" >& /dev/null; }
+{% endhighlight %}
 
 Now you can preview a file from Terminal by using ``ql`` plus the path to a file.
