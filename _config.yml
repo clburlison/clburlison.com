@@ -90,8 +90,7 @@ prose:
     - 404.md
     - _octopress.yml	
     - _config.yml
-    - _config-dev.yml    	
-    - index.html
+    - _config-dev.yml
     - CNAME
     - feed.xml
     - Gemfile
@@ -107,7 +106,6 @@ prose:
     - favicon.ico
     - favicon.png
     - license.txt
-    - index.md
         
   siteurl: "https://clburlison.com"
   media: "images"
