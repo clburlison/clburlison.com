@@ -1,4 +1,5 @@
 ---
+filename: 2014-09-29-shellshock.md
 layout: post
 title: "Shellshock"
 date: 2014-09-29T22:55:49-05:00

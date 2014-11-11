@@ -119,25 +119,31 @@ end
 #############################################################################
 
 namespace :site do
+  desc "Add filenames to posts"
+  task :edit do
+    check_destination
+    system "./_scripts/add-filenames-to-posts.sh >/dev/null"
+  end
+  
   desc "Generate the site"
-  task :build do
+  task :build => [:edit] do
     check_destination
     sh "bundle exec jekyll build"
   end
 
   desc "Generate the site and serve locally"
-  task :serve do
+  task :serve => [:edit] do
     check_destination
     sh "bundle exec jekyll serve --config _config.yml,_config-dev.yml"
   end
 
   desc "Generate the site, serve locally and watch for changes"
-  task :watch do
+  task :watch => [:edit] do
     sh "bundle exec jekyll serve --watch --config _config.yml,_config-dev.yml"
   end
 
   desc "Generate the site and push changes to remote origin"
-  task :deploy do
+  task :deploy => [:edit] do
     # Detect pull request
     if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
       puts 'Pull request detected. Not proceeding with deploy.'

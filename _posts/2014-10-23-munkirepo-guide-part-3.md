@@ -1,4 +1,5 @@
 ---
+filename: 2014-10-23-munkirepo-guide-part-3.md
 layout: post
 title: "Setup Munkireport on Ubuntu 14.04 - Part 3"
 date: 2014-10-23

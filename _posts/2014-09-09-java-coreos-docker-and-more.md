@@ -1,4 +1,5 @@
 ---
+filename: 2014-09-09-java-coreos-docker-and-more.md
 layout: post
 title: "Java, CoreOS, Docker, & More"
 date: 2014-09-09T00:00:24-05:00

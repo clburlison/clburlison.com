@@ -1,4 +1,5 @@
 ---
+filename: 2014-08-09-moving-to-plain-jekyll.md
 layout: post
 title: "Moving to Plain Jekyll"
 date: 2014-08-09T01:06:34-05:00

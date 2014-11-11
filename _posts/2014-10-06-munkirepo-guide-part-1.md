@@ -1,4 +1,5 @@
 ---
+filename: 2014-10-06-munkirepo-guide-part-1.md
 layout: post
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
 date: 2014-10-06
