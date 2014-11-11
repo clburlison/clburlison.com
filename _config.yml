@@ -81,6 +81,7 @@ prose:
     - /_includes
     - /_layouts
     - /_plugins
+    - /_posts_sample
     - /_sass
     - /_templates
     - /assets	
@@ -98,6 +99,13 @@ prose:
     - Rakefile
     - README.md
     - robots.txt
+    - .gitignore
+    - .nojekyll
+    - .travis.yml
+    - favicon.ico
+    - favicon.png
+    - license.txt
+        
   siteurl: "https://clburlison.com"
   media: "images"
   metadata:

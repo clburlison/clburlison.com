@@ -7,6 +7,10 @@ This repo contains my personal website, [clburlison.com](https://clburlison.com)
 
 Powered by Jekyll with the [Minimal Mistakes Theme](http://mademistakes.com/minimal-mistakes/).
 
+
+##Prose
+This site can be managed via [prose.io](http://prose.io/#clburlison/clburlison.github.io). Visit the website and, when prompted, authorize via GitHub.
+
 ##Helpful Site info 
 
 *New Post*
