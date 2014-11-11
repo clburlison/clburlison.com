@@ -84,6 +84,8 @@ prose:
     - /_posts_sample
     - /_sass
     - /_templates
+    - /archives
+    - /categories
     - /assets	
     - 404.md
     - _octopress.yml	
@@ -105,6 +107,7 @@ prose:
     - favicon.ico
     - favicon.png
     - license.txt
+    - index.md
         
   siteurl: "https://clburlison.com"
   media: "images"
