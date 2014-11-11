@@ -120,33 +120,22 @@ prose:
       - name: "title"
         field:
           element: "text"
-          label: "Title"
-          value: ""
-          type: "text"
-          alterable: true
-      - name: "date"
-        field:
-          element: "text"
-          label: "date"
-          value: ""
-          type: "text"
-          alterable: true
+          label: "title"
       - name: "modified"
         field:
           element: "text"
           label: "modified"
-          value: ""
-          type: "text"
-          alterable: true 
+      - name: "excerpt"
+        field:
+          element: "text"
+          label: "excerpt"
       - name: "comments"
         field:
           element: checkbox
-          label: "Comments"
           value: "true"
-          alterable: true         
+          alterable: true
       - name: "categories"
         field:
           element: "multiselect"
-          label: "categories"
           help: "Enter one or more tags to categorize your post, E.g., bash, munki, personal."
           alterable: true

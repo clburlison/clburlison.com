@@ -8,7 +8,8 @@ comments: true
 published: true
 keywords: audio, editing, wav, windows, mac
 description: Describes how to convert audio to a mono format that is suitable for phone distribution purposes.
-categories: editing
+categories: 
+- editing
 ---
 
 I received a unique request today from a co-worker of mine. In short, he asked me if I was able to convert an audio clip from a Tascam audio recorder to a lower quality format suitable for our phone distribution system. The real challenge...was I going to be able to do this with the software currently installed?

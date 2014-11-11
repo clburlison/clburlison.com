@@ -4,7 +4,8 @@ layout: post
 title: "Moving to Plain Jekyll"
 date: 2014-08-09T01:06:34-05:00
 modified: 2014-08-10
-categories: jekyll
+categories: 
+- jekyll
 excerpt: Moving from Octopress to a plain Jekyll setup.
 comments: true
 published: true

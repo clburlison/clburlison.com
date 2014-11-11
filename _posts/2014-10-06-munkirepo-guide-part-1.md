@@ -4,7 +4,9 @@ layout: post
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
 date: 2014-10-06
 modified: 2014-10-17
-categories: munki ubuntu
+categories: 
+- munki 
+- ubuntu
 excerpt: Gets the repo configured and shared via nginx. Plus, samba gets configured for remote administration.
 comments: true
 published: true

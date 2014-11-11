@@ -8,7 +8,9 @@ comments: true
 published: true
 keywords: bash, scripting, if then, statements
 description: 
-categories: osx bash
+categories: 
+- osx 
+- bash
 ---
 
 I always find myself looking for a good resource when writing if/then statements in bash scripts. It's hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet...copied here because I was tired of having to look for a good resource.   

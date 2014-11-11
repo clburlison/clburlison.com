@@ -7,7 +7,8 @@ comments: true
 published: true
 keywords: blog, octopress, clayton burlison, amazon s3, static files
 description: First blog post using octopress and amazon s3 as storage.
-categories: [octopress]
+categories:
+- octopress
 ---
 
 This blog is setup as a personal resource for myself. Eventually, I can grow the information on this blog so that others can gain some educational value from this being hosted.  

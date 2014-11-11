@@ -8,7 +8,10 @@ comments: true
 published: true
 keywords: Desktop, Widget, Geektool, OSX
 description: Display helpful information on your Desktop using Geektool on Mac OS X.
-categories: osx geektool munki
+categories:  
+- osx 
+- geektool 
+- munki
 ---
 
 Display useful information on your Desktop using Geektool. Make troubleshooting network issues for your end users easier. Find your hostname faster. The amount of useful information is limitless. If you can script it...you can display it.  

@@ -3,7 +3,8 @@ filename: 2014-11-10-preview-files-from-terminal.md
 published: true
 layout: post
 excerpt: Preview files from Terminal.
-categories: bash
+categories: 
+- bash
 link: "http://krypted.com/mac-security/qlmanage/"
 share: true
 ---

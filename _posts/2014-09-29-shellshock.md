@@ -4,7 +4,8 @@ layout: post
 title: "Shellshock"
 date: 2014-09-29T22:55:49-05:00
 modified: 2014-10-2
-categories: Bash
+categories: 
+- bash
 excerpt: Everything you need to know about Shellshock for OS X in English.
 comments: true
 published: true

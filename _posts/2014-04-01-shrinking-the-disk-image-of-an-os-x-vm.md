@@ -8,7 +8,9 @@ comments: true
 published: true
 keywords: vmware, osx, mac, shrinking vmdk, mavericks
 description: Article examines steps to reduce the disk size of a vmdk file on a mac.
-categories: [vmware, osx]
+categories: 
+- vmware 
+- osx
 ---
 Reducing the size of a guest OS X Virtual Machines's vmdk file requires a few steps.  For a Windows VM's, there is a tool from VMWare with a GUI.  Unfortunately, there is not an equivalent tool for the Mac guest VM.
 

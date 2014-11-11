@@ -8,7 +8,8 @@ comments: true
 published: true
 keywords: personal, loving life, job
 description: Quick post on why I have the one of the best jobs available. 
-categories: personal
+categories: 
+- personal
 ---
 **I get to be everyone's white knight**  
 {% img /images/2014-05-06/white_knight.jpg 290 512 %}

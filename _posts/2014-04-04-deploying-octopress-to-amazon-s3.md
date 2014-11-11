@@ -8,7 +8,8 @@ comments: true
 published: true
 keywords: octopress, amazon s3, amazon aws, website, s3cmd
 description: Deploy octopress with s3cmd command.
-categories: [octopress]
+categories: 
+- octopress
 ---
 #NOTICE
 This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.

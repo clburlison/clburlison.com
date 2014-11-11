@@ -8,7 +8,9 @@ comments: true
 published: true
 keywords: munki, vagrant, development, testing, munki_repo,  
 description: Use vagrant along with virtualbox to create a fully functional munki_repo for testing on your localhost.
-categories: vagrant munki
+categories: 
+- vagrant 
+- munki
 ---
 
 I created a vagrant box that allows you create a completely self contained munki_repo for testing purposes. With the usage of [PuPHPet](https://puphpet.com) the process was quite easy.

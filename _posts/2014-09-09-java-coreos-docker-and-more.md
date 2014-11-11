@@ -4,7 +4,11 @@ layout: post
 title: "Java, CoreOS, Docker, & More"
 date: 2014-09-09T00:00:24-05:00
 modified:
-categories: personal automation programming java
+categories: 
+- personal 
+- automation 
+- programming 
+- java
 excerpt: A quick update regarding a few of the things I have been up to the last few weeks.
 comments: true
 published: true

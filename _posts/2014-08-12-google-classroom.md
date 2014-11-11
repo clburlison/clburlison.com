@@ -3,7 +3,8 @@ filename: 2014-08-12-google-classroom.md
 layout: post
 title: "Google Classroom"
 excerpt: "More teaching, Less tech-ing: Google Classroom Launches Today."
-categories: google
+categories: 
+- google
 link: http://googleenterprise.blogspot.com/2014/08/more-teaching-less-tech-ing-google.html  
 share: true
 ---

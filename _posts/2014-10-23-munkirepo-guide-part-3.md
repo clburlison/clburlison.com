@@ -4,11 +4,13 @@ layout: post
 title: "Setup Munkireport on Ubuntu 14.04 - Part 3"
 date: 2014-10-23
 modified: 2014-10-24
-categories: munki ubuntu munkireport
+categories: 
+- munki
+- ubuntu
+- munkireport
 excerpt: Install Munkireport-php on our munki server to give us a powerful reporting console for munki clients. 
 comments: true
 published: true
-tags: []
 image:
   feature:
   credit: 

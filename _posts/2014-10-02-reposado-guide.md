@@ -4,7 +4,9 @@ layout: post
 title: "Setup Reposado + Margarita on Ubuntu 14.04"
 date: 2014-10-2T22:55:49-05:00
 modified: 2014-10-13
-categories: reposado ubuntu
+categories: 
+- reposado 
+- ubuntu
 excerpt: A setup guide for Reposado and Margarita using Apache on Ubuntu 14.04 with notes on securing Margarita.
 comments: true
 published: true

@@ -8,7 +8,8 @@ comments: true
 published: true
 keywords: AirDrop, Ethernet, cli, Terminal,
 description: Quick post over enabling AirDrop over Ethernet.
-categories: osx
+categories: 
+- osx
 ---
 A quick post over enabling AirDrop to use an ethernet connection along with the default wireless connection. 
 
