@@ -8,10 +8,10 @@ This repo contains my personal website, [clburlison.com](https://clburlison.com)
 Powered by Jekyll with the [Minimal Mistakes Theme](http://mademistakes.com/minimal-mistakes/).
 
 
-##Prose
+#Site info 
 This site can be managed via [prose.io](http://prose.io/#clburlison/clburlison.github.io). Visit the website and, when prompted, authorize via GitHub.
 
-##Helpful Site info 
+If running locally, you can use the Octopress plugin to create a new .
 
 *New Post*
 
@@ -26,7 +26,7 @@ $ octopress new page new-page/
 
 ##Travis integration
 
-To get travis-ci to automatically generate this site check out this awesome project [jekyll-travis](https://github.com/mfenner/jekyll-travis)!
+To get travis-ci setup check out this awesome project [jekyll-travis](https://github.com/mfenner/jekyll-travis)!
 
 ##License
 
