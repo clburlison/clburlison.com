@@ -11,16 +11,12 @@ Powered by Jekyll with the [Minimal Mistakes Theme](http://mademistakes.com/mini
 #Site info 
 This site can be managed via [prose.io](http://prose.io/#clburlison/clburlison.github.io). Visit the website and, when prompted, authorize via GitHub.
 
-If running locally, you can use the Octopress plugin to create a new .
+If running locally, you can use the Octopress plugin:
 
-*New Post*
+*New Post & New Page*
 
 ````
 $ octopress new post "Post Title"
-````
-
-*New Page*
-````
 $ octopress new page new-page/
 ````
 
