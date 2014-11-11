@@ -89,7 +89,6 @@ prose:
     - /assets	
     - 404.md
     - _octopress.yml	
-    - _config.yml
     - _config-dev.yml
     - CNAME
     - feed.xml
