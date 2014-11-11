@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Sign Packages in Luggage"
-date: 2014-11-08
 modified:
 categories: 
 excerpt:
