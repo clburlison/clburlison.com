@@ -70,6 +70,7 @@ sitemap:
         - "/feed.xml"
         - "/blog/archives"
         - "/blog/categories"
+        - "/g/"
     include_posts:
         - "/index.html"
         - "/blog/index.html"
