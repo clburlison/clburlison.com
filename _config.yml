@@ -21,7 +21,6 @@ sass:
   style: compressed
 gems:
   - jekyll-redirect-from
-  - jekyll-sitemap
 
 kramdown:
   auto_ids: true
@@ -62,3 +61,81 @@ owner:
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", ".travis.yml", "vendor"]
+
+# Settings for sitemap_generator plugin.
+sitemap:
+    exclude:
+        - "/feed.xml"
+        - "/blog/archives"
+        - "/blog/categories"
+    include_posts:
+        - "/index.html"
+        - "/blog/index.html"
+        - "/blog/"
+
+
+# Setting for prose.io
+prose:
+  ignore:	
+    - /_data
+    - /_includes
+    - /_layouts
+    - /_plugins
+    - /_sass
+    - /_templates
+    - /assets	
+    - 404.md
+    - _octopress.yml	
+    - _config.yml
+    - _config-dev.yml    	
+    - index.html
+    - CNAME
+    - feed.xml
+    - Gemfile
+    - Gemfile.lock
+    - Gruntfile.js
+    - package.json
+    - Rakefile
+    - README.md
+    - robots.txt
+  siteurl: "https://clburlison.com"
+  media: "images"
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+          type: "text"
+          alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "date"
+          value: ""
+          type: "text"
+          alterable: true
+      - name: "modified"
+        field:
+          element: "text"
+          label: "modified"
+          value: ""
+          type: "text"
+          alterable: true 
+      - name: "comments"
+        field:
+          element: checkbox
+          label: "Comments"
+          value: "true"
+          alterable: true         
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "categories"
+          help: "Enter one or more tags to categorize your post, E.g., bash, munki, personal."
+          alterable: true
