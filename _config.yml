@@ -121,7 +121,7 @@ prose:
       - name: "title"
         field:
           element: "text"
-          label: "title"
+          label: "Title"
       - name: "modified"
         field:
           element: "text"
@@ -134,9 +134,40 @@ prose:
         field:
           element: checkbox
           value: "true"
+          label: "Comments"
           alterable: true
       - name: "categories"
         field:
           element: "multiselect"
+          label: "Categories"
           help: "Enter one or more tags to categorize your post, E.g., bash, munki, personal."
           alterable: true
+    _drafts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+      - name: "modified"
+        field:
+          element: "text"
+          label: "modified"
+      - name: "excerpt"
+        field:
+          element: "text"
+          label: "excerpt"
+      - name: "comments"
+        field:
+          element: checkbox
+          value: "true"
+          label: "Comments"
+          alterable: true
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Categories"
+          help: "Enter one or more tags to categorize your post, E.g., bash, munki, personal."
+          alterable: true          
