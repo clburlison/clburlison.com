@@ -1,10 +1,9 @@
 ---
 layout: page
 title: "Resources"
-date: 
 modified:
 excerpt:
-tags: []
+permalink: /resources/
 image:
   feature: GrungeTextures/TD-DarkGrungeTexture6.jpg
   credit: Think Four

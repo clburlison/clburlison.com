@@ -1,11 +1,11 @@
 ---
 layout: post
-published: false
+published: true
 title: Jekyll Pull Requests
 comments: true
 categories: 
   - jekyll
-excerpt: Build Github pull requests into your jekyll website.
+excerpt: Add a Github pull requests feature into your Jekyll website.
 ---
 
  
@@ -15,6 +15,8 @@ excerpt: Build Github pull requests into your jekyll website.
 * Add liquid html info to _layouts/posts.html
 * Prose.io gives ``pretty`` interface
 
+
+Github is awesome. Jekyll is awesome. Travis-ci is awesome. Prose.io is awesome. And now...you can be awesome as well. Open Source is a fantastic, wonderful, amazing, idea.
 
 ---
 

@@ -3,6 +3,7 @@ layout: page
 title: About Me
 tags: [about]
 modified: 8-7-2014
+permalink: /about/
 comments: true
 image:
   feature: GrungeTextures/TD-DarkGrungeTexture3.jpg

@@ -1,13 +1,10 @@
 ---
 layout: {{ layout }}
-title: {{ title }}
-date: {{ date }}
 modified:
-categories: {{ dir }}
 excerpt:
 comments: true
 published: true
-tags: []
+categories: {{ dir }}
 image:
   feature:
 ---
