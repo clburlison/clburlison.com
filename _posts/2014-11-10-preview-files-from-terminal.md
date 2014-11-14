@@ -5,6 +5,7 @@ layout: post
 excerpt: Preview files from Terminal.
 categories: 
 - bash
+- osx
 link: "http://krypted.com/mac-security/qlmanage/"
 share: true
 ---

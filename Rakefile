@@ -126,19 +126,19 @@ namespace :site do
   end
   
   desc "Generate the site"
-  task :build => [:edit] do
+  task :build do
     check_destination
     sh "bundle exec jekyll build"
   end
 
   desc "Generate the site and serve locally"
-  task :serve => [:edit] do
+  task :serve do
     check_destination
     sh "bundle exec jekyll serve --config _config.yml,_config-dev.yml"
   end
 
   desc "Generate the site, serve locally and watch for changes"
-  task :watch => [:edit] do
+  task :watch do
     sh "bundle exec jekyll serve --watch --drafts --config _config.yml,_config-dev.yml"
   end
 
