@@ -1,15 +1,15 @@
 ---
 layout: page
-title: "Resources"
-modified:
-excerpt:
+title: Resources
+modified: null
+excerpt: null
 permalink: /resources/
-image:
-  feature: GrungeTextures/TD-DarkGrungeTexture6.jpg
+image: 
+  feature: "GrungeTextures/TD-DarkGrungeTexture6.jpg"
   credit: Think Four
-  creditlink: http://ThinkDesignBlog.com
+  creditlink: "http://ThinkDesignBlog.com"
+published: true
 ---
-
 
 _This section highlights useful/popular posts from this domain._
 
@@ -35,7 +35,6 @@ _This section highlights useful/popular posts from this domain._
 1. [Rich Trouton](http://derflounder.wordpress.com/)
 1. [Graham Gilbert](http://grahamgilbert.com/)
 1. [Ben Toms (macmule)](http://macmule.com/)
-1. [Steve Yuroff](http://osofrio.wordpress.com/)
 
 ---
 
