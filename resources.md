@@ -13,7 +13,7 @@ published: true
 
 _This section highlights useful/popular posts from this domain._
 
-* [Bash if/then Cheat Sheet](/blog/2014/07/28/bash-if-then-cheat-sheet/) 
+* [Bash if/then Cheat Sheet](/blog/2014/07/29/bash-if-then-cheat-sheet/) 
 * [Setup Reposado + Margarita](/blog/2014/10/02/reposado-guide/)
 * Munki setup series on Ubuntu 14.04
   * [Setup a Munki repo - Part 1](/blog/2014/10/06/munkirepo-guide-part-1/)
