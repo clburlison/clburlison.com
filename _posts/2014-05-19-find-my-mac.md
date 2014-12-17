@@ -2,7 +2,7 @@
 filename: 2014-05-19-find-my-mac.md
 layout: post
 title: "Find My Mac"
-date: 2014-05-19 11:38:52 -0500
+date: 2014-05-19
 modified: 
 comments: true
 published: true

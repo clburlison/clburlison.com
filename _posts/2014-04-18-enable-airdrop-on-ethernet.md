@@ -2,7 +2,7 @@
 layout: post
 filename: "2014-04-18-enable-airdrop-on-ethernet.md"
 title: Enable AirDrop on Ethernet
-date: "2014-04-18 08:43:36 -0500"
+date: "2014-04-18"
 modified: "2014-11-19"
 comments: true
 published: true

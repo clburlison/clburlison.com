@@ -2,7 +2,7 @@
 filename: 2014-03-31-first-post.md
 layout: post
 title: "First post"
-date: 2014-03-31 23:38:41 -0500
+date: 2014-03-31
 comments: true
 published: true
 keywords: blog, octopress, clayton burlison, amazon s3, static files

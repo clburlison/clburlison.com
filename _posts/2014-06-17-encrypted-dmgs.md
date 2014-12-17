@@ -2,7 +2,7 @@
 filename: 2014-06-17-encrypted-dmgs.md
 layout: post
 title: "Encrypted DMGs"
-date: 2014-06-17 19:49:02 -0500
+date: 2014-06-17
 modified: 
 comments: true
 published: true

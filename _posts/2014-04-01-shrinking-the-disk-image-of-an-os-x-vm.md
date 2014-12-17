@@ -2,7 +2,7 @@
 filename: 2014-04-01-shrinking-the-disk-image-of-an-os-x-vm.md
 layout: post
 title: "Shrinking the disk image of an OS X VM"
-date: 2014-04-01 08:49:20 -0500
+date: 2014-04-01
 modified: 
 comments: true
 published: true
