@@ -29,11 +29,18 @@ $info				  : #308cbc;
 
 // Links
 $linkcolor 		    : #000;
-$link-color       : #A30000;
+$link-color       : $linkcolor;
 //$linkcolorhover 	: lighten($link-color, 20);
 $linkcolorhover 	: #CC0000;
-$linkcolorvisited : darken($linkcolorhover, 20);
-$linkcolorfocus 	: darken($linkcolorvisited, 10);
+$linkcolorvisited : darken($linkcolor, 20);
+$linkcolorfocus 	: darken($linkcolor, 10);
+
+
+
+//$linkcolorvisited : darken($linkcolorhover, 20);
+//$linkcolorfocus 	: darken($linkcolorvisited, 10);
+
+
 
 // Media Queries
 $micro            : "only screen and (min-width: 30em)";
