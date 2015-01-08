@@ -21,7 +21,7 @@ The idea behind this page came from Thomas Frank over at [collegeinfogeek.com](h
 ##Current focus:
 
 1. Learn Java
-1. 7-minute workout for 7 months
+1. 7-minute workout daily for 7 months
 1. Write for 10-minutes daily for a year
 1. Drink 48 + oz of water daily
 1. Cold showers for a month
@@ -40,7 +40,7 @@ The idea behind having a a current focus section is to disregard everything else
 * <del>Run a 10K</del> ()
 * <del>Run a half-marathon</del> ()
 * Run a marathon
-* 7-minute workout for 7 months
+* 7-minute workout daily for 7 months
 * Learn Yoga
 
 ##Professional Goals
