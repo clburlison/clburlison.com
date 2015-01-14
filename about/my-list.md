@@ -41,7 +41,7 @@ The idea behind having a a current focus section is to disregard everything else
 
 * <del>Run a 5K</del> ()
 * <del>Run a 10K</del> ()
-* <del>Run a half-marathon</del> ()
+* <del>Run a half-marathon</del> ([7/14/11](http://runkeeper.com/user/clburlison/activity/47599499))
 * Run a marathon
 * 7-minute workout daily for 7 months
 * Learn Yoga
