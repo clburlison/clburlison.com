@@ -28,7 +28,7 @@ Besides work, I am currently a part time student attending the University of Arl
 
 
 ###My list
-This is a simply list I use to keep up with my goals. I host it on this site to share with others and hopefully give others motivation to reach for their goals. It also helps keep myself held responsible since everyone in the world can see. To see my current list click [here](/about/my-list/).
+This is a simple list I use to keep up with my goals. I host it on this site to share and hopefully give others motivation to reach for their goals. It also helps keep me held responsible since everyone in the world can see. To see my current list click [here](/about/my-list/).
 
 ###Resume
 If you would like to check out my resume feel free to click [here](/docs/burl-resume-online.pdf).
