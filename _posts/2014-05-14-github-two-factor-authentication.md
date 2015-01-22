@@ -2,7 +2,6 @@
 filename: 2014-05-14-github-two-factor-authentication.md
 layout: post
 title: "Github Two-factor Authentication with SourceTree"
-date: 2014-05-14
 modified: 2014-05-15
 comments: true
 published: true

@@ -2,7 +2,6 @@
 filename: 2014-04-15-setting-up-octopress.md
 layout: post
 title: "Setting up octopress"
-date: 2014-04-15
 modified: 2014-04-21
 comments: true
 published: true

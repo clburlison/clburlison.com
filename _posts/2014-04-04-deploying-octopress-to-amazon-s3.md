@@ -2,7 +2,6 @@
 filename: 2014-04-04-deploying-octopress-to-amazon-s3.md
 layout: post
 title: "Deploying Octopress to Amazon S3"
-date: 2014-04-04
 modified: 2014-05-06
 comments: true
 published: true

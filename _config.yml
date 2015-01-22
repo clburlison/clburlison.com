@@ -118,14 +118,6 @@ prose:
         field:
           element: "hidden"
           value: "post"
-      # - name: "title"
-      #   field:
-      #     element: "text"
-      #     label: "Title"
-      - name: "date"
-        field:
-          element: "text"
-          label: "date"
       - name: "modified"
         field:
           element: "text"
@@ -151,10 +143,6 @@ prose:
         field:
           element: "hidden"
           value: "post"
-      # - name: "title"
-      #   field:
-      #     element: "text"
-      #     label: "Title"
       - name: "modified"
         field:
           element: "text"

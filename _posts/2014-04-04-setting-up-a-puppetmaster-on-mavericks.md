@@ -2,7 +2,6 @@
 filename: 2014-04-04-setting-up-a-puppetmaster-on-mavericks.md
 layout: post
 title: "Setting up a puppetmaster on Mavericks"
-date: 2014-04-04
 modified: 2014-05-22
 comments: true
 published: true

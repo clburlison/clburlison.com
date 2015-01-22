@@ -2,7 +2,6 @@
 filename: 2014-05-06-why-i-love-my-job.md
 layout: post
 title: "Why I love my job?"
-date: 2014-05-06
 modified: 2014-05-16
 comments: true
 published: true

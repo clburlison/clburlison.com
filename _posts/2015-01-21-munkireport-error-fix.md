@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Fix Munkireport Error Request Too Large"
-date: 2015-01-21
 modified: 
 categories: 
 - munkireport

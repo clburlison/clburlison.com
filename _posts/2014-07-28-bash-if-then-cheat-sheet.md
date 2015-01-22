@@ -2,7 +2,6 @@
 filename: 2014-07-28-bash-if-then-cheat-sheet.md
 layout: post
 title: "Bash if then cheat sheet"
-date: 2014-07-28
 modified: 2014-07-31
 comments: true
 published: true

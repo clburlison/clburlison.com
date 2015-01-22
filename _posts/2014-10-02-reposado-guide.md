@@ -2,7 +2,6 @@
 filename: 2014-10-02-reposado-guide.md
 layout: post
 title: "Setup Reposado + Margarita on Ubuntu 14.04"
-date: 2014-10-02
 modified: 2014-10-13
 categories: 
 - reposado 

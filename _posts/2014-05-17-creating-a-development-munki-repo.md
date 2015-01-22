@@ -2,7 +2,6 @@
 filename: 2014-05-17-creating-a-development-munki-repo.md
 layout: post
 title: "Creating a development munki_repo"
-date: 2014-05-17
 modified: 2014-05-18
 comments: true
 published: true

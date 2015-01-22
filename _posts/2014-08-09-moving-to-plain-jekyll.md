@@ -2,7 +2,6 @@
 filename: 2014-08-09-moving-to-plain-jekyll.md
 layout: post
 title: "Moving to Plain Jekyll"
-date: 2014-08-09
 modified: 2014-08-10
 categories: 
 - jekyll

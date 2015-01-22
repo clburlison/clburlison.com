@@ -2,7 +2,6 @@
 filename: 2014-09-29-shellshock.md
 layout: post
 title: "Shellshock"
-date: 2014-09-29
 modified: 2014-10-2
 categories: 
 - bash

@@ -2,7 +2,6 @@
 layout: post
 filename: "2014-11-13-sign-packages-with-luggage.md"
 title: Sign Packages with Luggage
-date: "2014-11-13"
 modified: "2015-01-22"
 excerpt: Learn to sign packages with Luggage using your Apple Developer Account.
 comments: true

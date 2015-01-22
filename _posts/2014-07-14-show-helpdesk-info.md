@@ -2,7 +2,6 @@
 filename: 2014-07-14-show-helpdesk-info.md
 layout: post
 title: "Show Help Desk Information"
-date: 2014-07-14
 modified: 2014-10-18
 comments: true
 published: true

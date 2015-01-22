@@ -2,7 +2,6 @@
 filename: 2014-07-23-converting-audio-with-media-encoder.md
 layout: post
 title: "Converting Audio With Media Encoder"
-date: 2014-07-23
 modified: 2014-10-18
 comments: true
 published: true

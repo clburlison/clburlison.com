@@ -2,7 +2,6 @@
 filename: 2014-04-24-things-learned-from-boxen.md
 layout: post
 title: "Things learned from boxen"
-date: 2014-04-24
 modified: 
 comments: true
 published: true
