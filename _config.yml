@@ -122,6 +122,10 @@ prose:
       #   field:
       #     element: "text"
       #     label: "Title"
+      - name: "date"
+        field:
+          element: "text"
+          label: "date"
       - name: "modified"
         field:
           element: "text"
