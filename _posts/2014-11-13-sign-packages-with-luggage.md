@@ -1,15 +1,15 @@
 ---
-filename: 2014-11-13-sign-packages-with-luggage.md
 layout: post
-title: "Sign Packages with Luggage"
-date: 2014-11-13
-modified:
+filename: "2014-11-13-sign-packages-with-luggage.md"
+title: Sign Packages with Luggage
+date: {}
+modified: "2015-01-22"
 excerpt: Learn to sign packages with Luggage using your Apple Developer Account.
 comments: true
 published: true
-categories:
-- luggage
-- osx
+categories: 
+  - luggage
+  - osx
 ---
 
 # Intro
@@ -67,7 +67,7 @@ _Note:_ Do not fill in the CA Email per Apple's instructions.
 1. Download your newly created certificate.
 {% img /images/2014-11-13/8-dl-cert.png %}
 
-1. Double click your cert to install into your keychain. (I choice to install to my login keychain)
+1. Double click your cert to install into your keychain. (I choice to install to my login keychain)  
 {% img /images/2014-11-13/9-install-cert.png %}
 
 For reference my certificate looks like the below.
@@ -89,7 +89,7 @@ If by some chance you have made it this far without actually installing luggage 
 make bootstrap_files
 {% endhighlight %}
 
-Now lets make a non-signed package with luggage, run the following:
+Now lets make a non-signed package with luggage, that installs luggage (meta enough for ya), run the following:
 
 {% highlight bash %}
 make pkg
@@ -160,3 +160,5 @@ Articles:
 [Productsign](https://groups.google.com/forum/?fromgroups#!topic/the-luggage/9WeNMBcvKjA),  
 [Luggage](https://github.com/unixorn/luggage),  
 [Pkgbuild vs PackageMaker](https://groups.google.com/forum/?fromgroups#!topic/the-luggage/aCU9nNsMUaE)
+
+Updated: Jan. 22, 2015 - Formatting & clarity
