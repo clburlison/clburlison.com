@@ -51,7 +51,10 @@ sudo apt-get update
 sudo apt-get -y install nginx git php5-fpm php5-mysql php5-ldap
 {% endhighlight %}
 
-_Note:_ the ``php5-ldap`` package is only needed if you are planning on connecting to an Active Directory or LDAP directory for authenticating to MunkiReport. 
+<div class="note info">
+  <h5>Note</h5>
+  <p>the <code>php5-ldap</code> package is only needed if you are planning on connecting to an Active Directory or LDAP directory for authenticating to MunkiReport. </p>
+</div>
 
 ##Setup MySQL
 
@@ -209,7 +212,10 @@ Lets configure nginx to use [http://yourserver.example.com/report](http://yourse
 
 ``sudo nano /etc/nginx/sites-enabled/default``  
 
-_Note:_ make sure and change your server_name. This file also takes care of our munki_repo from [Part 1](/blog/2014/10/06/munkirepo-guide-part-1/).
+<div class="note info">
+  <h5>Note</h5>
+  <p>Make sure and change your <code>server_name</code>. This file also takes care of our munki_repo from <a href="/blog/2014/10/06/munkirepo-guide-part-1/">Part 1</a>.</p>
+</div>
 
 {% highlight bash %}
 server {

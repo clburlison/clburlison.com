@@ -10,8 +10,8 @@ description: Deploy octopress with s3cmd command.
 categories: 
 - octopress
 ---
-<div class="notice">
-  <h5>NOTICE</h5>
+<div class="note info">
+  <h5>Notice</h5>
   <p>This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.</p>
 </div>
 

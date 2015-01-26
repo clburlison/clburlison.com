@@ -14,7 +14,10 @@ With some love and lots of error in trial, I was able to modify this site so tha
 
 <a id="pull-request-btn" class="btn btn-danger" href="">Send edit request</a>  button at the bottom of this page does.
 
-**NOTICE:** Now is a good point to state that if you are uncomfortable with the Markdown language you might not understand all the syntax of these posts. Which might make editing the page difficult. If you feel uncomfortable feel free to add a comment below and I can make the change.
+<div class="note info">
+  <h5>Note</h5>
+  <p>Now is a time to state that if you are uncomfortable with the Markdown language you might not understand all the syntax of these posts. Which might make editing the page difficult. If you feel uncomfortable feel free to add a comment below and I can make the change.</p>
+</div>
 
 #How to submit a change
 1. When you see a post you want to edit, click on “Send edit request” button at the bottom of the page. <a id="pull-request-btn" class="btn btn-danger" href="">Send edit request</a> 
