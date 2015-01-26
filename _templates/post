@@ -1,10 +1,10 @@
 ---
 layout: {{ layout }}
+title: {{ title }}
 modified:
-excerpt:
-comments: true
-published: true
 categories: {{ dir }}
+excerpt:
+tags: []
 image:
   feature:
 ---

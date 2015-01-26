@@ -16,6 +16,7 @@ This page is kind of personal but I have always found that if I write my goals d
 
 The idea behind this page came from Thomas Frank over at [collegeinfogeek.com](http://collegeinfogeek.com), you can find his list [here](http://collegeinfogeek.com/about/meet-the-author/my-impossible-list/). One change I made from Thomas was the name of my list. He refers to his list as "my impossible list", I on the other hand dislike thinking of any goal as impossible even if it is just by association. So below I would like to introduce you to "my list" aka the goals I would like to achieve. Note: if you check out the original impossible list by [Joel Runyol](http://impossiblehq.com/impossible-list) you will see his reasoning for the name...I simply disagree.
 
+
 If by chance you have some motivation and wish to create your own list feel free to post a link in the comment section. I'd love to read what goals you have set.
 
 

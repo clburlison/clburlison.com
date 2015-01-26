@@ -59,6 +59,7 @@ owner:
   foursquare:
   steam: 
   dribbble:
+  flickr: clburlison
 
 
 include: [".htaccess"]

@@ -24,6 +24,8 @@ GEM
       faraday (>= 0.7.4, < 0.10)
     fast-stemmer (1.0.2)
     ffi (1.9.6)
+    ffi (1.9.6-x64-mingw32)
+    ffi (1.9.6-x86-mingw32)
     flickraw (0.9.8)
     gh (0.13.2)
       addressable
@@ -140,9 +142,12 @@ GEM
       ethon (>= 0.7.1)
     websocket (1.2.1)
     yajl-ruby (1.1.0)
+    yajl-ruby (1.1.0-x86-mingw32)
 
 PLATFORMS
   ruby
+  x64-mingw32
+  x86-mingw32
 
 DEPENDENCIES
   dalli
@@ -152,7 +157,7 @@ DEPENDENCIES
   jekyll-sitemap
   mini_magick
   nokogiri
-  octopress
+  octopress (~> 3.0.0.rc.12)
   rake (~> 10.0)
   stringex (~> 1.4.0)
   travis

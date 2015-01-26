@@ -2,6 +2,7 @@
 filename: 2014-03-31-first-post.md
 layout: post
 title: "First post"
+modified: "2015-01-25"
 comments: true
 published: true
 keywords: blog, octopress, clayton burlison, amazon s3, static files
@@ -10,7 +11,6 @@ categories:
 - octopress
 ---
 
-This blog is setup as a personal resource for myself. Eventually, I can grow the information on this blog so that others can gain some educational value from this being hosted.  
+This blog is setup as a personal resource for myself. Eventually, I will grow the information on this blog so that others can gain some educational value.  
 
-The site is being hosted on Amazon's S3 backend with the content being created through [Octopress](http://octopress.org/).
-Over the next months, I will be documenting how I setup Octopress with Amazon S3 along with customizing the layout of this site.
+The site originally was hosted on Amazon's S3 backend with the content being created through [Octopress](http://octopress.org/). Currently, I am hosting this site on [Github](https://github.com) while the web pages are generated using [Jekyll](http://jekyllrb.com/).

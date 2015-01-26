@@ -32,36 +32,26 @@
   <div class="article-author-side">
     {% include _author-bio.html %}
   </div>
-  <article>
+  <article class="post">
     <div class="headline-wrap">
       {% if page.link %}
         <h1><a href="{{ page.link }}">{{ page.title }}</a></h1>
       {% else %}
         <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
       {% endif %}
-    Categories: {% include post/categories.html %}
+			Categories: {% include post/categories.html %}
+			<br>
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
       {{ content }}
+      <hr />
       <footer role="contentinfo">
-        <div class="article-author-bottom">
-          {% include _author-bio.html %}
-        </div>
-        <p><b>Published: </b><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time><br>
-		{% if page.modified %}<b>Modified:</b> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}</p>
-		<br>
+        {% if page.share != false %}{% include _social-share.html %}{% endif %}
+        <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
+        <br>
 		<a id="pull-request-btn" class="btn btn-danger" href="{{site.pullrequesturl}}{{page.filename}}" target="_blank">Send edit request</a>  <a href="/blog/2015/01/22/jekyll-pull-requests/">What is this?</a>
       </footer>
     </div><!-- /.article-wrap -->
-    <center><nav class="pagination" role="navigation">
-      {% if page.previous %}
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
-      {% endif %}
-      {% if page.next %}
-        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
-      {% endif %}
-    </nav><!-- /.pagination --></center>
-    <hr />
   {% if site.owner.disqus-shortname and page.comments == true %}
     <section id="disqus_thread"></section><!-- /#disqus_thread -->
   {% endif %}
@@ -69,13 +59,31 @@
 </div><!-- /#main -->
 
 <div class="footer-wrap">
-
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="{{ site.url }}/blog/archives/">View all posts</a>)</small></h4>
+    <ul>
+    {% for post in site.related_posts limit:3 %}
+      <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+    <!-- 
+<center><nav class="pagination" role="navigation">
+      {% if page.previous %}
+        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
+      {% endif %}
+      {% if page.next %}
+        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
+      {% endif %}
+    </nav><!~~ /.pagination ~~></center>
+ -->
+    <hr />
+  </div><!-- /.related-articles -->
   <footer>
     {% include _footer.html %}
   </footer>
 </div><!-- /.footer-wrap -->
 
-{% include _scripts.html %}
+{% include _scripts.html %}	        
 
 </body>
 </html>

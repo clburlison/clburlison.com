@@ -10,8 +10,12 @@ description: Go over customizing octopress and installing plugins.
 categories: 
 - octopress
 ---
-#NOTICE
-This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.
+
+
+<div class="notice">
+  <h5>NOTICE</h5>
+  <p>This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.</p>
+</div>
 
 ---
 
