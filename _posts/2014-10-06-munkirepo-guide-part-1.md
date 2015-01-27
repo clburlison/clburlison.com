@@ -2,7 +2,7 @@
 filename: 2014-10-06-munkirepo-guide-part-1.md
 layout: post
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
-modified: 2014-10-17
+modified: 2015-01-27
 categories: 
 - munki 
 - ubuntu
@@ -86,9 +86,6 @@ sudo chmod -R 2774 /usr/local/munki_repo
 {% endhighlight %}
 
 ##Setting up Nginx
-_Note:_ if you read this guide before October 19th issue the following command before preceding to the setup below.  
-``sudo rm /etc/nginx/sites-enabled/munki_repo.conf``
-
 Nginx is fast, light-weight, and uses a fraction of the resources that Apache uses. But don't take my word for it there are lots of [other reason](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/) why [you might want to use Nginx](http://wiki.nginx.org/WhyUseIt).
 
 Nginx's installation on Ubuntu is very similar to Apache's. All of its config files are stored in _/etc/nginx_.
