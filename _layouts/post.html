@@ -46,10 +46,10 @@
       {{ content }}
       <hr />
       <footer role="contentinfo">
-        {% if page.share != false %}{% include _social-share.html %}{% endif %}
         <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
         <br>
 		<a id="pull-request-btn" class="btn btn-danger" href="{{site.pullrequesturl}}{{page.filename}}" target="_blank">Send edit request</a>  <a href="/blog/2015/01/22/jekyll-pull-requests/">What is this?</a>
+		{% if page.share != false %}{% include _social-share.html %}{% endif %}
       </footer>
     </div><!-- /.article-wrap -->
   {% if site.owner.disqus-shortname and page.comments == true %}
