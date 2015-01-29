@@ -1,19 +1,19 @@
 ---
-filename: 2014-10-06-munkirepo-guide-part-1.md
 layout: post
+filename: "2014-10-06-munkirepo-guide-part-1.md"
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
-modified: 2015-01-27
+modified: "2015-01-29"
 categories: 
-- munki 
-- ubuntu
-excerpt: Gets the repo configured and shared via nginx. Plus, samba gets configured for remote administration.
+  - munki
+  - ubuntu
+excerpt: "Gets the repo configured and shared via nginx. Plus, samba gets configured for remote administration."
 comments: true
 published: true
 tags: []
-image:
-  feature:
-  credit: 
-  creditlink:
+image: 
+  feature: null
+  credit: null
+  creditlink: null
 ---
 
 <section id="table-of-contents" class="toc">
@@ -47,7 +47,7 @@ Since our Munki setup has many add-on projects including: [mandrill](https://git
 
 #The Install
 
-As a matter of good practice, we are going to make sure our Ubuntu server is fully patched before we start. Then we will install _git, curl, build-essential, nginx, and apache2-utils, samba_. 
+As a matter of good practice, we are going to make sure our Ubuntu server is fully patched before we start. Then we will install _git, curl, build-essential, nginx, apache2-utils, and samba_. 
 
 
 ##Installing Required Software
@@ -194,3 +194,4 @@ Update:
 Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.  
 Oct. 17, 2014 - Move samba error test command before you restart the samba service. Add reference URL to your munkiserver for authentication testing purposes.  
 Oct. 19, 2014 - Nginx settings are now done in the ``default`` file. This change was made to support Munkireport.
+Jan. 29, 2015 - Typo
