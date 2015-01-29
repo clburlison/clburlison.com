@@ -1,19 +1,19 @@
 ---
-filename: 2014-10-02-reposado-guide.md
 layout: post
-title: "Setup Reposado + Margarita on Ubuntu 14.04"
-modified: 2014-10-13
+filename: "2014-10-02-reposado-guide.md"
+title: Setup Reposado + Margarita on Ubuntu 14.04
+modified: "2014-10-17"
 categories: 
-- reposado 
-- ubuntu
+  - reposado
+  - ubuntu
 excerpt: A setup guide for Reposado and Margarita using Apache on Ubuntu 14.04 with notes on securing Margarita.
 comments: true
 published: true
 tags: []
-image:
-  feature:
-  credit: 
-  creditlink:
+image: 
+  feature: null
+  credit: null
+  creditlink: null
 ---
 
 <section id="table-of-contents" class="toc">
@@ -476,5 +476,4 @@ Updated:
 Oct 4, 2014 - Updated [scheduling reposync](./#addendum-1-scheduling-reposync) to work. Reduce vhost lines for reposado.conf (now disables directory listing).  
 Oct. 12, 2014 - Spelling  
 Oct. 13, 2014 - Added [Nginx setup addendum](./#addendum-4-using-nginx)  
-Oct. 17, 2014 - Type and updated wording on [Nginx setup addendum](./#addendum-4-using-nginx) section  
-
+Oct. 17, 2014 - Type and updated wording on [Nginx setup addendum](./#addendum-4-using-nginx) section
