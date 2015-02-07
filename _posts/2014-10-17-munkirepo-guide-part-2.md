@@ -1,20 +1,20 @@
 ---
-filename: 2014-10-17-munkirepo-guide-part-2.md
 layout: post
+filename: "2014-10-17-munkirepo-guide-part-2.md"
 title: "Setup Mandrill on Ubuntu 14.04 - Part 2"
-modified:
-categories:  
-- munki 
-- ubuntu 
-- mandrill
+modified: "2015-02-06"
+categories: 
+  - munki
+  - ubuntu
+  - mandrill
 excerpt: Install Mandrill on our munki server. This web front end gives administrators a flexible and powerful way to update manifests.
 comments: true
 published: true
 tags: []
-image:
-  feature:
-  credit: 
-  creditlink:
+image: 
+  feature: null
+  credit: null
+  creditlink: null
 ---
 
 <section id="table-of-contents" class="toc">
@@ -181,7 +181,7 @@ Now lets manually start our mandrill site.
 
 {% highlight bash%}
 sudo pm2 start /usr/local/etc/mandrilld.json
-sudo service mongod start
+sudo service mongodb start
 {% endhighlight %}
 
 Visit to verify that everything is working [http://munki:3001]()
@@ -200,3 +200,5 @@ Mandrill is setup! Stay tuned for Part 3, setting up Munkireport.
 
 Articles:  
 [Mandrill Wiki](https://github.com/wollardj/Mandrill/wiki)
+
+Updated: Feb. 06, 2015 - Typo. Thanks Tony.
