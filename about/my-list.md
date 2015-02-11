@@ -28,7 +28,6 @@ If by chance you have some motivation and wish to create your own list feel free
 1. 7-minute workout daily for 7 months
 1. Write for 10-minutes daily for a year
 1. Drink 48 + oz of water daily
-1. Cold showers for a month
 
 The idea behind having a a current focus section is to disregard everything else on this page. It is easy to become stretched too thin. It is easy to want to do everything. It is hard to accomplish everything when all you can think about it everything else. I try to limit this area to five or less.
 
@@ -52,7 +51,7 @@ The idea behind having a a current focus section is to disregard everything else
 * Obtain Cisco Certified Network Associate (CCNA) Routing and Switching
 * Learn Python
 * Learn C++
-* Setup a r10k puppet environment at work
+* Setup a masterless puppet environment at work
 * Create an iOS app
 
 ##Travel Goals
