@@ -1,6 +1,7 @@
 # Site wide configuration
 
 title:            Just another tech blog
+description: A Mac sysadmin, documenting useful code, ideas, & guides.
 locale:           en_US
 url:  https://clburlison.com
 
