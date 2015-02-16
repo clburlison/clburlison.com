@@ -2,9 +2,7 @@
 layout: post
 filename: "2014-07-28-bash-if-then-cheat-sheet.md"
 title: Bash if then cheat sheet
-modified: 
-  - 2014-07-31T00:00:00.000Z
-  - "Wed Jul 30 2014 19:00:00 GMT-0500 (CDT)"
+modified: "2015-02-16"
 comments: true
 published: true
 keywords: "bash, scripting, if then, statements"
@@ -130,26 +128,11 @@ Examples on usage can be found in the [original article](http://tldp.org/LDP/abs
 		this is an unsafe practice. Always quote a tested string. [1]
 {% endhighlight %}
 
-
-#Examples
-
-To check if a directory exists in a shell script you can use the following:
-{% highlight bash %}
-if [ -d "$DIRECTORY" ]; then
-  # Control will enter here if $DIRECTORY exists.
-fi
-{% endhighlight %}
-
-Or to check if a directory doesn't exist:
-{% highlight bash %}if [ ! -d "$DIRECTORY" ]; then
-  # Control will enter here if $DIRECTORY doesn't exist.
-fi
-{% endhighlight %}
-
-#Credit
 Special Thanks to the The Linux Documentation Project for outlining the information in such a usable format. They also include great examples on their website.
 
 ---
 
 Articles: 
 [Advanced Bash-Scripting Guide](http://tldp.org/LDP/abs/html/comparison-ops.html)
+
+Updates: Feb. 15, 2015 - Add examples section
