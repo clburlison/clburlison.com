@@ -128,6 +128,25 @@ Examples on usage can be found in the [original article](http://tldp.org/LDP/abs
 		this is an unsafe practice. Always quote a tested string. [1]
 {% endhighlight %}
 
+#Examples
+
+To check if a directory exists in a shell script you can use the following:
+
+{% highlight bash %}
+if [ -d "$DIRECTORY" ]; then
+  # Control will enter here if $DIRECTORY exists.
+fi
+{% endhighlight %}
+
+Or to check if a directory doesn't exist:
+
+{% highlight bash %}
+if [ ! -d "$DIRECTORY" ]; then
+  # Control will enter here if $DIRECTORY doesn't exist.
+fi
+{% endhighlight %}
+
+#Credit
 Special Thanks to the The Linux Documentation Project for outlining the information in such a usable format. They also include great examples on their website.
 
 ---
