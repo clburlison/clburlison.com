@@ -94,12 +94,25 @@ end
 
 #############################################################################
 #
+# Pull from Github
+#
+#############################################################################
+
+desc "Pull updates from Github"
+task :pull do
+  puts "\n## Pulling from Github"
+  status = system("git pull")
+end
+
+
+#############################################################################
+#
 # Commit to Github
 #
 #############################################################################
 
 desc "Commit site update to Github"
-task :commit do
+task :commit => [:pull] do
   puts "\n## Staging modified files"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
