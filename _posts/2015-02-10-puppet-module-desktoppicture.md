@@ -1,4 +1,5 @@
 ---
+filename: 2015-02-10-puppet-module-desktoppicture.md
 layout: post
 published: true
 title: Puppet Module desktop picture
