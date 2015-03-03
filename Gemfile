@@ -11,3 +11,8 @@ gem 'flickraw'
 gem 'dalli'
 gem 'mini_magick'
 gem 'jekyll-redirect-from'
+
+gem 'RedCloth'
+gem 'rdiscount'
+gem 'kramdown'
+gem 'redcarpet'
