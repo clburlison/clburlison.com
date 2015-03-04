@@ -21,6 +21,7 @@ _This section highlights useful/popular posts from this domain._
   * [Setup Munkireport-php - Part 3](/blog/2014/10/23/munkirepo-guide-part-3/)
 
 ---
+
 #External resources
 
 ###Links
