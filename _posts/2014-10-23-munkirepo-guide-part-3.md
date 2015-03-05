@@ -2,7 +2,7 @@
 filename: 2014-10-23-munkirepo-guide-part-3.md
 layout: post
 title: "Setup Munkireport on Ubuntu 14.04 - Part 3"
-modified: 2014-10-24
+modified: 2015-03-04
 categories: 
 - munki
 - ubuntu
@@ -60,18 +60,24 @@ sudo apt-get -y install nginx git php5-fpm php5-mysql php5-ldap
 
 Lets install MySQL
 
-``sudo apt-get install mysql-client mysql-server``
+{% highlight bash %}
+sudo apt-get install mysql-client mysql-server
+{% endhighlight %}
 
 __This will prompt you to create the root mysql database account. Do not forget the password you set.__
 
 
 Now, we need to tell MySQL to generate the directory structure it needs to store its databases and information. We can do this by typing:
 
-``sudo mysql_install_db``
+{% highlight bash %}
+sudo mysql_install_db
+{% endhighlight %}
 
 Next, you can optionally run a simple security script that will prompt you to modify some insecure defaults (this is highly recommended on production servers). Begin the script by typing:
 
-``sudo mysql_secure_installation``
+{% highlight bash %}
+sudo mysql_secure_installation
+{% endhighlight %}
 
 You will need to enter the MySQL root password that you selected during installation.
 
@@ -95,7 +101,9 @@ echo "FLUSH PRIVILEGES;" | mysql -u root -p
 ##Configure php
 Lets make one small change to the default php configuration.
 
-``sudo nano /etc/php5/fpm/php.ini``
+{% highlight bash %}
+sudo nano /etc/php5/fpm/php.ini
+{% endhighlight %}
 
 Find the line, __cgi.fix_pathinfo=1__, and change the __1 to 0__. Also, uncomment this line to enable this security setting. The file should now look like the below excerpt:
 
@@ -119,17 +127,23 @@ If this number is kept as 1, the php interpreter will do its best to process the
 
 Now, restart php-fpm for the change to take affect:
 
-``sudo service php5-fpm restart``
+{% highlight bash %}
+sudo service php5-fpm restart
+{% endhighlight %}
 
 ##Downloading MunkiReport
 
 We are finally to the point that we can start getting MunkiReport setup.
 
-``sudo git clone https://github.com/munkireport/munkireport-php /usr/share/nginx/html/report``
+{% highlight bash %}
+sudo git clone https://github.com/munkireport/munkireport-php /usr/share/nginx/html/report
+{% endhighlight %}
 
 At this point, lets create a link to our report folder for our local Ubuntu admin, this allows us to make modifications easier in the future. 
 
-``sudo ln -s /usr/share/nginx/html/report ~/report``
+{% highlight bash %}
+sudo ln -s /usr/share/nginx/html/report ~/report
+{% endhighlight %}
 
 MunkiReport requires a config.php, this is your settings for MunkiReport. Below are some defaults that I think most users will want. For a full list of options please visit [here](https://github.com/munkireport/munkireport-php/blob/master/config_default.php).
 
@@ -149,7 +163,9 @@ The root account is created for you, for testing purposes. You will want to crea
 
 The last section of the config file deals with out MySQL database. You will want to change the username and password to match what you created in the previous step.
 
-``sudo nano /usr/share/nginx/html/report/config.php``
+{% highlight bash %}
+sudo nano /usr/share/nginx/html/report/config.php
+{% endhighlight %}
 
 
 {% highlight php %}
@@ -210,7 +226,9 @@ $conf['auth']['auth_AD']['mr_allowed_groups'] = array('MunkiReportAdmins'); //ca
 Lets configure nginx to use [http://yourserver.example.com/report](http://yourserver.example.com/report)
 
 
-``sudo nano /etc/nginx/sites-enabled/default``  
+{% highlight bash %}
+sudo nano /etc/nginx/sites-enabled/default
+{% endhighlight %}  
 
 <div class="note info">
   <h5>Note</h5>
@@ -256,7 +274,9 @@ server {
 
 We must change our nginx default settings for php to work. 
 
-``sudo nano /etc/nginx/nginx.conf``
+{% highlight bash %}
+sudo nano /etc/nginx/nginx.conf
+{% endhighlight %}
 
 Look for ``default_type  application/octet-stream;`` and comment this line out. Check out the below excerpt:
 
@@ -279,12 +299,16 @@ Look for ``default_type  application/octet-stream;`` and comment this line out. 
 
 To test your nginx configuration run the following command. This will make sure that you have no errors.
 
-``sudo nginx -c /etc/nginx/nginx.conf -t``
+{% highlight bash %}
+sudo nginx -c /etc/nginx/nginx.conf -t
+{% endhighlight %}
 
 
 Restart Nginx to make the necessary changes:
 
-``sudo service nginx restart``
+{% highlight bash %}
+sudo service nginx restart
+{% endhighlight %}
 
 
 #Conclusion
@@ -297,7 +321,9 @@ As always feel free to drop a comment below or on Twitter. Feedback is always ap
 #Apendium 1 - connecting a client to MunkiReport
 If you would like to connect a single munki client to MunkiReport you can use the following command:
 
-``sudo /bin/bash -c "$(curl -s http://yourserver.example.com/report/index.php?/install)"``
+{% highlight bash %}
+sudo /bin/bash -c "$(curl -s http://yourserver.example.com/report/index.php?/install)"
+{% endhighlight %}
 
 #Apendium 2 - adding MunkiReport to your munki_repo
 To add multiple Munki clients to MunkiReport we should use munki. To get a generated plist file that you can drop into your _munki_repo/pkginfo_ directory run the following command.
@@ -316,4 +342,6 @@ Articles:
 [Munkireport Wiki](https://github.com/munkireport/munkireport-php/wiki),  
 [nbalonso Munkireport-php](http://www.nbalonso.com/new-munkireport-php-2/),  
 
-Updated: Oct. 24, 2014 - Spelling
+Updated:  
+Oct. 24, 2014 - Spelling  
+Mar. 04, 2015 - Modify code blocks to use site default.  

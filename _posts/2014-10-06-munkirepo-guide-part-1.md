@@ -2,7 +2,7 @@
 layout: post
 filename: "2014-10-06-munkirepo-guide-part-1.md"
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
-modified: "2015-04-04"
+modified: "2015-03-04"
 categories: 
   - munki
   - ubuntu
