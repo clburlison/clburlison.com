@@ -2,7 +2,7 @@
 layout: post
 filename: "2014-11-13-sign-packages-with-luggage.md"
 title: Sign Packages with Luggage
-modified: "2015-01-22"
+modified: "2015-03-04"
 excerpt: Learn to sign packages with Luggage using your Apple Developer Account.
 comments: true
 published: true
@@ -96,7 +96,7 @@ make pkg
 
 Rename the package to ``luggage-no-sign.pkg``. We are doing this for comparisons later.
 
-To tell luggage to sign the package you need to add the following line of code inside of the Makefile at the beginning. Make sure to change the information in the parentheses with the name of your certificate (review image 11 above).
+To tell luggage to sign the package you need to add the following line of code inside of the Makefile at the beginning. Make sure to change the information in the double quotes with the name of your certificate (review image 11 above).
 
 {% highlight bash %}
 PB_EXTRA_ARGS+= --sign "Developer ID Installer: Clayton Burlison"
@@ -160,4 +160,6 @@ Articles:
 [Luggage](https://github.com/unixorn/luggage),  
 [Pkgbuild vs PackageMaker](https://groups.google.com/forum/?fromgroups#!topic/the-luggage/aCU9nNsMUaE)
 
-Updated: Jan. 22, 2015 - Formatting & clarity
+Updated:  
+Jan. 22, 2015 - Formatting & clarity
+Mar. 04, 2015 - Fix error
