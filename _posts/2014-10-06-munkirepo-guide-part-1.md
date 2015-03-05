@@ -2,7 +2,7 @@
 layout: post
 filename: "2014-10-06-munkirepo-guide-part-1.md"
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
-modified: "2015-01-29"
+modified: "2015-04-04"
 categories: 
   - munki
   - ubuntu
@@ -47,7 +47,7 @@ Since our Munki setup has many add-on projects including: [mandrill](https://git
 
 #The Install
 
-As a matter of good practice, we are going to make sure our Ubuntu server is fully patched before we start. Then we will install _git, curl, build-essential, nginx, apache2-utils, and samba_. 
+It is good practice to make sure our Ubuntu server is fully patched before we start. Then we will install _git, curl, build-essential, nginx, apache2-utils, and samba_. 
 
 
 ##Installing Required Software
@@ -88,7 +88,7 @@ sudo chmod -R 2774 /usr/local/munki_repo
 ##Setting up Nginx
 Nginx is fast, light-weight, and uses a fraction of the resources that Apache uses. But don't take my word for it there are lots of [other reason](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/) why [you might want to use Nginx](http://wiki.nginx.org/WhyUseIt).
 
-Nginx's installation on Ubuntu is very similar to Apache's. All of its config files are stored in _/etc/nginx_.
+Nginx's installation on Ubuntu is very similar to Apache. All of its config files are stored in _/etc/nginx_.
 
 Lets backup the original default file create and create our own.    
 
@@ -193,5 +193,6 @@ Articles:
 Update:  
 Oct. 16, 2014 - Removed note about the htpasswd that was incorrect.  
 Oct. 17, 2014 - Move samba error test command before you restart the samba service. Add reference URL to your munkiserver for authentication testing purposes.  
-Oct. 19, 2014 - Nginx settings are now done in the ``default`` file. This change was made to support Munkireport.
-Jan. 29, 2015 - Typo
+Oct. 19, 2014 - Nginx settings are now done in the ``default`` file. This change was made to support Munkireport.  
+Jan. 29, 2015 - Typo.  
+Mar. 04, 2015 - Modify wording.
