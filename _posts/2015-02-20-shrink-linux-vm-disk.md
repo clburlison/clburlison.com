@@ -1,5 +1,4 @@
 ---
-filename: 2015-02-20-shrink-linux-vm-disk.md
 layout: post
 published: true
 title: Shrinking a linux virtual disk
@@ -8,6 +7,8 @@ categories:
   - vmware
   - linux
 excerpt: Steps to shrink the virtual disk of a linux vm using VMware Fusion.
+redirect_from:
+  - /blog/2015/02/20/shrink-linux-vm-disk/
 ---
 
 I have written about shrinking the virtual disk of an OS X Virtual Machine [here](/blog/2014/04/01/shrinking-the-disk-image-of-an-os-x-vm/) but recently I needed to shrink a Linux virtual machine. The process is almost identical across all of VMware's products you just have to find the ``vmware-vdiskmanager`` tool.

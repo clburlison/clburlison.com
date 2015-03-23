@@ -1,5 +1,4 @@
 ---
-filename: 2014-04-15-setting-up-octopress.md
 layout: post
 title: "Setting up octopress"
 modified: 2014-04-21
@@ -9,6 +8,8 @@ keywords: octopress, markdown, customize, plugins, setup
 description: Go over customizing octopress and installing plugins.
 categories: 
 - octopress
+redirect_from:
+  - /blog/2014/04/15/setting-up-octopress/
 ---
 
 

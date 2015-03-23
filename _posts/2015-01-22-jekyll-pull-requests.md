@@ -1,5 +1,4 @@
 ---
-filename: 2015-01-22-jekyll-pull-requests.md
 layout: post
 published: true
 title: Jekyll Pull Requests
@@ -7,6 +6,8 @@ comments: true
 categories: 
   - jekyll
 excerpt: Add a Github pull request feature to your Jekyll website.
+redirect_from:
+  - /blog/2015/01/22/jekyll-pull-requests/
 ---
 
 Github is awesome. Jekyll is awesome. Travis-ci is awesome. Prose.io is awesome. And now...you can be awesome as well. Open Source is a fantastic but it is not without its drawbacks. One of the biggest drawbacks to using a static website like this site is the lack of an easy way to update posts. Sometimes I make a typo or want to add information to a already created post. Unfortunately, this would require me to use my laptop and only my laptop to modify the markdown files, build the website, and upload the new static files of the website to Github. 

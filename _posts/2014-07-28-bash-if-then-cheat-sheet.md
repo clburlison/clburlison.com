@@ -1,6 +1,5 @@
 ---
 layout: post
-filename: "2014-07-28-bash-if-then-cheat-sheet.md"
 title: Bash if then cheat sheet
 modified: "2015-02-16"
 comments: true
@@ -10,6 +9,8 @@ description: null
 categories: 
   - osx
   - bash
+redirect_from:
+  - /blog/2014/07/28/bash-if-then-cheat-sheet/
 ---
 
 I always find myself looking for a good resource when writing if/then statements in bash scripts. It's hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet...copied here because I was tired of having to look for a good resource.   

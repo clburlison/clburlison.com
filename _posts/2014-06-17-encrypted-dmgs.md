@@ -1,5 +1,4 @@
 ---
-filename: 2014-06-17-encrypted-dmgs.md
 layout: post
 title: "Encrypted DMGs"
 modified: 
@@ -9,6 +8,8 @@ keywords: apple, dmg, encryption, encrypted, secure, files, security
 description: "Apple has a build in way to create secure encrypted 256-bit AES disk images. This is a guide on creating these disk images, usage, draw backs, and think to remember."
 categories:  
 - osx
+redirect_from:
+  - /blog/2014/06/17/encrypted-dmgs/
 ---
 
 We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.

@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://clburlison.com/sitemap.xml 
+Sitemap: https://clburlison.com/sitemap.xml

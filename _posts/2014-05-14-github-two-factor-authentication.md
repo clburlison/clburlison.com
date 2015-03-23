@@ -1,5 +1,4 @@
 ---
-filename: 2014-05-14-github-two-factor-authentication.md
 layout: post
 title: "Github Two-factor Authentication with SourceTree"
 modified: 2014-05-15
@@ -11,6 +10,8 @@ categories:
 - github 
 - sourcetree 
 - git
+redirect_from:
+  - /blog/2014/05/14/github-two-factor-authentication/
 ---
 I finally got around to setting up two-factor authentication on my Github account. The process went quite smoothly, until I started to play around with  [SourceTree](http://www.sourcetreeapp.com/) and I found out that I was unable to push commits to a git repo.
 

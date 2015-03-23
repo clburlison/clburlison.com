@@ -1,5 +1,4 @@
 ---
-filename: 2014-04-04-deploying-octopress-to-amazon-s3.md
 layout: post
 title: "Deploying Octopress to Amazon S3"
 modified: 2014-05-06
@@ -9,7 +8,10 @@ keywords: octopress, amazon s3, amazon aws, website, s3cmd
 description: Deploy octopress with s3cmd command.
 categories: 
 - octopress
+redirect_from:
+  - /blog/2014/04/04/deploying-octopress-to-amazon-s3/	
 ---
+
 <div class="note info">
   <h5>Notice</h5>
   <p>This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.</p>

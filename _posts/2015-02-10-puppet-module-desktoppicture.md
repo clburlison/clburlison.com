@@ -1,5 +1,4 @@
 ---
-filename: 2015-02-10-puppet-module-desktoppicture.md
 layout: post
 published: true
 title: Puppet Module desktop picture
@@ -8,6 +7,8 @@ categories:
   - puppet
   - automation
 excerpt: My first real puppet module designed to help you modify the desktop picture on OS X.
+redirect_from:
+  - /blog/2015/02/10/puppet-module-desktoppicture/
 ---
 
 #Intro

@@ -1,5 +1,4 @@
 ---
-filename: 2014-04-24-things-learned-from-boxen.md
 layout: post
 title: "Things learned from boxen"
 modified: 
@@ -8,10 +7,12 @@ published: true
 keywords: boxen, puppet, github, automation
 description: Lessons learned while setting up boxen for personal usage.
 categories: 
-- git 
-- boxen 
-- automation 
+- git
+- boxen
+- automation
 - puppet
+redirect_from:
+  - /blog/2014/04/24/things-learned-from-boxen/
 ---
 ##What is boxen?
 So odds are if you have landed on this page you have probably already heard of boxen. For those who have not heard yet, boxen is an open source project created by the good people at [github.com](http://github.com) as a way to quickly setup a Macintosh computer. Boxen can also be used as a way to keep certain settings managed between two or more devices. Think for a second, your laptop goes with you everywhere and along with that you have all of your custom shell scripts, shell alias, ssh keys, etc. With boxen you can systematically take all those settings that you love and move them to every computer you use.

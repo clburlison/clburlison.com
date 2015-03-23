@@ -15,8 +15,8 @@ destination: ../clburlison.github.io-master/
 pullrequesturl : "http://prose.io/#clburlison/clburlison.github.io/edit/source/_posts/"
 
 # Jekyll configuration
-
-permalink: /blog/:year/:month/:day/:title/
+#permalink: /blog/:year/:month/:day/:title/
+permalink: /:title/
 markdown:    kramdown
 highlighter: pygments
 sass:

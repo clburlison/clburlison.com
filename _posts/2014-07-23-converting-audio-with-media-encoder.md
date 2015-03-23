@@ -1,5 +1,4 @@
 ---
-filename: 2014-07-23-converting-audio-with-media-encoder.md
 layout: post
 title: "Converting Audio With Media Encoder"
 modified: 2014-10-18
@@ -9,6 +8,8 @@ keywords: audio, editing, wav, windows, mac
 description: Describes how to convert audio to a mono format that is suitable for phone distribution purposes.
 categories: 
 - editing
+redirect_from:
+  - /blog/2014/07/23/converting-audio-with-media-encoder/
 ---
 
 I received a unique request today from a co-worker of mine. In short, he asked me if I was able to convert an audio clip from a Tascam audio recorder to a lower quality format suitable for our phone distribution system. The real challenge...was I going to be able to do this with the software currently installed?

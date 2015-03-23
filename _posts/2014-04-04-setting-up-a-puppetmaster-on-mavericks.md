@@ -1,5 +1,4 @@
 ---
-filename: 2014-04-04-setting-up-a-puppetmaster-on-mavericks.md
 layout: post
 title: "Setting up a puppetmaster on Mavericks"
 modified: 2014-05-22
@@ -8,10 +7,12 @@ published: true
 keywords: puppet, mavericks, osx, install, puppetmaster
 description: Setting up a puppetmaster on osx Mavericks.
 categories: 
-- puppet 
-- osx 
-- mavericks 
+- puppet
+- osx
+- mavericks
 - server
+redirect_from:
+  - /blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/
 ---
 For various reasons I decided to set up my puppetmaster on an OS X install of Mavericks instead of what I would consider the norm, being a linux distro. Here are the results. This documentation is strongly based on the article by Nate Walck on afp548.com.
 

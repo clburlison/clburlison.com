@@ -1,6 +1,5 @@
 ---
 layout: post
-filename: "2014-04-18-enable-airdrop-on-ethernet.md"
 title: Enable AirDrop on Ethernet
 modified: "2014-11-19"
 comments: true
@@ -9,6 +8,8 @@ keywords: "AirDrop, Ethernet, cli, Terminal,"
 description: Quick post over enabling AirDrop over Ethernet.
 categories: 
   - osx
+redirect_from:
+  - /blog/2014/04/18/enable-airdrop-on-ethernet/
 ---
 
 A quick post over enabling AirDrop to use an ethernet connection along with the default wireless connection. 

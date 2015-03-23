@@ -1,5 +1,4 @@
 ---
-filename: 2014-05-19-find-my-mac.md
 layout: post
 title: "Find My Mac"
 modified: 
@@ -9,6 +8,8 @@ keywords: Find My Mac, iCloud, nvram,
 description: 
 categories: 
 - osx
+redirect_from:
+  - /blog/2014/05/19/find-my-mac/
 ---
 
 Under the hood of Find My Mac there are some security details that are not widely published. I take no credit to figuring these out since they were just recently brought to my attention. These are not details that a consumer would need to concern themselves with but I found them quite interesting. I decided to share what information I found.

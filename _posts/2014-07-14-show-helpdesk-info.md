@@ -1,5 +1,4 @@
 ---
-filename: 2014-07-14-show-helpdesk-info.md
 layout: post
 title: "Show Help Desk Information"
 modified: 2014-10-18
@@ -11,6 +10,8 @@ categories:
 - osx 
 - geektool 
 - munki
+redirect_from:
+  - /blog/2014/07/14/show-helpdesk-info/
 ---
 
 Display useful information on your Desktop using Geektool. Make troubleshooting network issues for your end users easier. Find your hostname faster. The amount of useful information is limitless. If you can script it...you can display it.  

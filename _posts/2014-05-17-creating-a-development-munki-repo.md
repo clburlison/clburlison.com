@@ -1,5 +1,4 @@
 ---
-filename: 2014-05-17-creating-a-development-munki-repo.md
 layout: post
 title: "Creating a development munki_repo"
 modified: 2014-05-18
@@ -10,6 +9,8 @@ description: Use vagrant along with virtualbox to create a fully functional munk
 categories: 
 - vagrant 
 - munki
+redirect_from:
+  - /blog/2014/05/17/creating-a-development-munki-repo/
 ---
 
 I created a vagrant box that allows you create a completely self contained munki_repo for testing purposes. With the usage of [PuPHPet](https://puphpet.com) the process was quite easy.

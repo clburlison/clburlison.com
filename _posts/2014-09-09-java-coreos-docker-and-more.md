@@ -1,5 +1,4 @@
 ---
-filename: 2014-09-09-java-coreos-docker-and-more.md
 layout: post
 title: "Java, CoreOS, Docker, & More"
 modified:
@@ -11,9 +10,8 @@ categories:
 excerpt: A quick update regarding a few of the things I have been up to the last few weeks.
 comments: true
 published: true
-tags: []
-image:
-  feature:
+redirect_from:
+  - /blog/2014/09/09/java-coreos-docker-and-more/
 ---
 
 #Quick Update

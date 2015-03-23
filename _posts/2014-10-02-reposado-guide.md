@@ -1,6 +1,5 @@
 ---
 layout: post
-filename: "2014-10-02-reposado-guide.md"
 title: Setup Reposado + Margarita on Ubuntu 14.04
 modified: "2014-10-17"
 categories: 
@@ -8,12 +7,8 @@ categories:
   - ubuntu
 excerpt: A setup guide for Reposado and Margarita using Apache on Ubuntu 14.04 with notes on securing Margarita.
 comments: true
-published: true
-tags: []
-image: 
-  feature: null
-  credit: null
-  creditlink: null
+redirect_from:
+  - /blog/2014/10/02/reposado-guide/	
 ---
 
 <section id="table-of-contents" class="toc">

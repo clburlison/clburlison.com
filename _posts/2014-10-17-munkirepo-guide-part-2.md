@@ -1,6 +1,5 @@
 ---
 layout: post
-filename: "2014-10-17-munkirepo-guide-part-2.md"
 title: "Setup Mandrill on Ubuntu 14.04 - Part 2"
 modified: "2015-02-06"
 categories: 
@@ -15,6 +14,8 @@ image:
   feature: null
   credit: null
   creditlink: null
+redirect_from:
+  - /blog/2014/10/17/munkirepo-guide-part-2/	
 ---
 
 <section id="table-of-contents" class="toc">

@@ -1,5 +1,4 @@
 ---
-filename: 2014-05-06-why-i-love-my-job.md
 layout: post
 title: "Why I love my job?"
 modified: 2014-05-16
@@ -9,6 +8,8 @@ keywords: personal, loving life, job
 description: Quick post on why I have the one of the best jobs available. 
 categories: 
 - personal
+redirect_from:
+  - /blog/2014/05/06/why-i-love-my-job/
 ---
 **I get to be everyone's white knight**  
 {% img /images/2014-05-06/white_knight.jpg 290 512 %}

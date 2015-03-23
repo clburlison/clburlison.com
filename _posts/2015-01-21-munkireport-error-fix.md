@@ -1,5 +1,4 @@
 ---
-filename: 2015-01-21-munkireport-error-fix.md
 layout: post
 title: "Fix Munkireport Error Request Too Large"
 modified: 
@@ -12,6 +11,8 @@ image:
   feature:
   credit: 
   creditlink:
+redirect_from:
+  - /blog/2015/01/21/munkireport-error-fix/
 ---
 
 <section id="table-of-contents" class="toc">

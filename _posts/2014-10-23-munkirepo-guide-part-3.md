@@ -1,5 +1,4 @@
 ---
-filename: 2014-10-23-munkirepo-guide-part-3.md
 layout: post
 title: "Setup Munkireport on Ubuntu 14.04 - Part 3"
 modified: 2015-03-04
@@ -14,6 +13,8 @@ image:
   feature:
   credit: 
   creditlink:
+redirect_from:
+  - /blog/2014/10/23/munkirepo-guide-part-3/
 ---
 
 <section id="table-of-contents" class="toc">

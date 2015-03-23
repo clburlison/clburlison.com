@@ -1,5 +1,4 @@
 ---
-filename: 2014-09-29-shellshock.md
 layout: post
 title: "Shellshock"
 modified: 2014-10-2
@@ -13,6 +12,8 @@ image:
   feature: 2014-09-29/shellshock3.jpg
   credit: nghenhinvietnam
   creditlink: http://nghenhinvietnam.vn/tin-tuc/shellshock-bash-loi-bao-mat-gay-tac-hai-lon-hon-heartbleed-988.html
+redirect_from:
+  - /blog/2014/09/29/shellshock/
 ---
 
 On September 24, 2014, a security vulnerability was publicly announced that affects a large percentage of Internet connected devices. This vulnerability, known as Shellshock, affects the Unix command shell Bash. Bash, the bourne again shell, is one of the most common applications on Unix based systems. Many devices running Mac OS X or Linux are affected by this serious exploit.

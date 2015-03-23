@@ -13,12 +13,12 @@ published: true
 
 _This section highlights useful/popular posts from this domain._
 
-* [Bash if/then Cheat Sheet](/blog/2014/07/28/bash-if-then-cheat-sheet/) 
-* [Setup Reposado + Margarita](/blog/2014/10/02/reposado-guide/)
-* Munki setup series on Ubuntu 14.04
-  * [Setup a Munki repo - Part 1](/blog/2014/10/06/munkirepo-guide-part-1/)
-  * [Setup Mandrill - Part 2](/blog/2014/10/17/munkirepo-guide-part-2/)
-  * [Setup Munkireport-php - Part 3](/blog/2014/10/23/munkirepo-guide-part-3/)
+* [Bash if/then Cheat Sheet](/bash-if-then-cheat-sheet/) 
+* [Setup Reposado + Margarita](/reposado-guide/)
+* **Munki setup series on Ubuntu 14.04**
+  * [Setup a Munki repo - Part 1](/munkirepo-guide-part-1/)
+  * [Setup Mandrill - Part 2](/munkirepo-guide-part-2/)
+  * [Setup Munkireport-php - Part 3](/munkirepo-guide-part-3/)
 
 ---
 
