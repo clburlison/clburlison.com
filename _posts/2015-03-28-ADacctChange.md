@@ -1,18 +1,27 @@
 ---
 layout: post
-title: "AD Account Change"
-modified:
+title: AD Account Change
+modified: "2015-03-29"
 categories: 
-- active directory
-- bash
+  - active directory
+  - bash
 excerpt: Change the account name of Cached User Accounts in an Active Directory environment on OS X.
 comments: true
 published: true
-image:
-  feature:
-  credit: 
-  creditlink:
-tags: [ad, active, directory, osx, mac, account, change, domain, migration]	
+image: 
+  feature: null
+  credit: null
+  creditlink: null
+tags: 
+  - ad
+  - active
+  - directory
+  - osx
+  - mac
+  - account
+  - change
+  - domain
+  - migration
 ---
 
 <section id="table-of-contents" class="toc">
@@ -27,7 +36,7 @@ tags: [ad, active, directory, osx, mac, account, change, domain, migration]
 
 
 #Intro
-Changing user account logons in a deployed environment can cause some issues. Doing so with OS X clients that are bound to Active Directory can cause even more issues. Below is how I over came some of the pitfalls of the OS X Active Directory plugin. This article expands on the basic project Readme instructions located [here](https://github.com/clburlison/scripts/tree/master/clburlison_scripts/ADacctChange).
+Changing user account logons in a deployed environment can cause some issues. Doing so with OS X clients that are bound to Active Directory can cause even more issues. Below is how I overcame some of the pitfalls of the built-in OS X Active Directory plugin. This article expands on the basic project Readme instructions located [here](https://github.com/clburlison/scripts/tree/master/clburlison_scripts/ADacctChange).
 
 
 ![acct](/images/2015-03-28/opening_header.png)
@@ -66,7 +75,7 @@ We needed to find a solution that allowed our Domain Administrators to move forw
 </div>
 
 #Solution
-To solve the issues described above you can delete the Cached Accounts from any affect OS X computer. This will of course allow the employee to log in using their newly structured account name with the one minor set-back of having all their files deleted (or located in the old path). It does fix all the Kerberos issues. I however had no intentions of copying files for hundreds of employees throughout my organization.
+To solve the issues described above you can delete the Cached Accounts from any affected OS X computer. This will of course allow the employee to log in using their newly structured account name with the one minor set-back of having all their files deleted (or located in the old path). It does fix all the Kerberos issues. I however had no intentions of copying files for hundreds of employees throughout my organization.
 
 What I needed to do was modify the Cached User Accounts already present on our OS X computers. It also needed to meet the following requirements:
 
@@ -204,7 +213,7 @@ fi
 [Check for Cached Accounts and modify if needed L175-222](https://github.com/clburlison/scripts/blob/master/clburlison_scripts/ADacctChange/ADacctChange.sh#L175-222)  
 This is the meat of the script. This searches through /Users/ for all accounts. Then loops through each account to check for the following:
 
-1. Don't modify the /Users/Shared folder
+1. Don't modify the /Users/Shared folder.
 2. Don't modify local accounts. We do this by looking for accounts present on the computer between uid 500 and 1000. This makes an assumption that all local accounts use Apple's Default uid range.
 3. ``uniqueIDAD`` does a search against the domain for each user in /Users/ to see what the Active Directory UniqueID is. All accounts that have not changed will output some string number. All accounts that have been changed will output an error message since the User Logon Name has changed and can no longer be found in Active Directory. This error results in the ``uniqueIDAD`` variable being null and displaying the following error:
 
