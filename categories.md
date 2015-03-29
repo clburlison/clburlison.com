@@ -7,7 +7,7 @@ excerpt:
 tags: []
 image:
   feature:
-permalink: /blog/categories/
+permalink: /categories/
 ---
 
 {% category_list counter:true %}

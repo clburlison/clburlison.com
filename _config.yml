@@ -32,7 +32,8 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
-category_dir: blog/categories
+category_dir: categories
+code_dir: code
 
 # Site owner
 owner:
@@ -70,13 +71,11 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 sitemap:
     exclude:
         - "/feed.xml"
-        - "/blog/archives"
-        - "/blog/categories"
+        - "/archives"
+        - "/categories"
         - "/g/"
     include_posts:
         - "/index.html"
-        - "/blog/index.html"
-        - "/blog/"
 
 
 # Setting for prose.io

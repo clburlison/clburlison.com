@@ -1,0 +1,235 @@
+<div class="highlight"><pre><span class="c">#!/bin/bash</span>
+
+<span class="c">###################################################################################</span>
+<span class="c">#</span>
+<span class="c"># ADacctChange.sh</span>
+<span class="c"># This script will:</span>
+<span class="c">#  1) Wait for a specific time/date in the future before running</span>
+<span class="c">#  2) Check for an active network connection</span>
+<span class="c">#  3) Check if bound to an AD Server</span>
+<span class="c">#  4) Check for access to an AD Server</span>
+<span class="c">#  5) Search all local &amp; Cached User Accounts on the current computer</span>
+<span class="c">#  6) Check with the AD Server and see if the &quot;User logon name&quot; is different from</span>
+<span class="c">#     the Cached &quot;User logon name&quot;. Make the necessary changes to Cached Accounts.</span>
+<span class="c"># </span>
+<span class="c"># When running this script you will see an error message on L185. This is</span>
+<span class="c"># an intentional code design error. The script decides what accounts to modify</span>
+<span class="c"># based off of the $uniqueIDAD variable so if it errors on run I want to see the output. </span>
+<span class="c"># If it does not error then that user account will be skipped.</span>
+<span class="c">#</span>
+<span class="c"># Hopefully all the check steps will verify data integrity before </span>
+<span class="c"># doing something harmful...but as always test in your environment.</span>
+<span class="c"># I hold no responsibility for broken systems.</span>
+<span class="c"># </span>
+<span class="c">#</span>
+<span class="c"># Maintainer: Clayton Burlison &lt;https://clburlison.com&gt;</span>
+<span class="c"># Last Modified: March 26th, 2015</span>
+<span class="c">#</span>
+<span class="c">#</span>
+<span class="c"># Special Thanks:</span>
+<span class="c"># </span>
+<span class="c"># Rich Trouton &lt;https://derflounder.wordpress.com/&gt;</span>
+<span class="c"># Charles Edge &lt;http://krypted.com/&gt;</span>
+<span class="c"># Jeff Kelley &lt;http://blog.slaunchaman.com/&gt;</span>
+<span class="c">#</span>
+<span class="c">#</span>
+<span class="c"># References:</span>
+<span class="c"># https://groups.google.com/d/msg/macenterprise/p9hrMuvfECM/9Lz_aW63vyMJ</span>
+<span class="c"># https://github.com/rtrouton/rtrouton_scripts/blob/master/rtrouton_scripts/migrate_local_user_to_AD_domain/MigrateLocalUserToADDomainAcct.command</span>
+<span class="c"># http://blog.slaunchaman.com/2010/07/01/how-to-run-a-launchdaemon-that-requires-networking/</span>
+<span class="c">#</span>
+<span class="c">###################################################################################</span>
+
+
+<span class="c">###################################################################################</span>
+<span class="c"># </span>
+<span class="c"># ~~~~~~~~~~~~~~~~~~~~~Variables~~~~~~~~~~~~~~~~~~</span>
+<span class="c"># </span>
+<span class="c"># Time Variables</span>
+<span class="c"># Need the current date and time information in numeric values. This allows us to</span>
+<span class="c"># run the script at a specific point in the future.</span>
+<span class="c"># Format = YearMonthDayHourMinute ie: 1503242228 March 24, 2015 at 10:28pm</span>
+<span class="c"># </span>
+<span class="c">###################################################################################</span>
+
+<span class="nv">DCSERVER</span><span class="o">=</span><span class="s2">&quot;bisd.k12&quot;</span>
+<span class="nv">DOMAIN</span><span class="o">=</span><span class="s2">&quot;BISD&quot;</span>
+<span class="nv">setTime</span><span class="o">=</span>1504060600
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Currently applying a Critical patch. The system will reboot when finished.&quot;</span>
+
+<span class="c">###################################################################################</span>
+<span class="c"># </span>
+<span class="c"># ~~~~~~~~~~~~~~~~~~~~~End of Variables~~~~~~~~~~~~~~~~~~</span>
+<span class="c"># </span>
+<span class="c">###################################################################################</span>
+
+
+<span class="c">###################################################################################</span>
+<span class="c"># </span>
+<span class="c"># This script will only work as root.</span>
+<span class="c"># </span>
+<span class="c">###################################################################################</span>
+
+RunAsRoot<span class="o">()</span>
+<span class="o">{</span>
+        <span class="c">## Pass in the full path to the executable as $1</span>
+        <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;${USER}&quot;</span> !<span class="o">=</span> <span class="s2">&quot;root&quot;</span> <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
+<span class="nb">echo</span>
+<span class="nb">echo</span> <span class="s2">&quot;*** This application must be run as root. Please authenticate below. ***&quot;</span>
+                <span class="nb">echo</span>
+sudo <span class="s2">&quot;${1}&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit </span>0
+        <span class="k">fi</span>
+<span class="o">}</span>
+
+RunAsRoot <span class="s2">&quot;${0}&quot;</span>
+
+<span class="c">###################################################################################</span>
+<span class="c"># </span>
+<span class="c"># Check for Date/Time to see if it is time to run the script</span>
+<span class="c"># </span>
+<span class="c">###################################################################################</span>
+
+<span class="nv">curTime</span><span class="o">=</span><span class="sb">`</span>date +%y%m%d%H%M<span class="sb">`</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$setTime&quot;</span> -gt <span class="s2">&quot;$curTime&quot;</span> <span class="o">]</span>
+    <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&quot;It is not time to run this script. Now exiting.&quot;</span>
+        <span class="nb">exit </span>0
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">&quot;$setTime&quot;</span> -lt <span class="s2">&quot;$curTime&quot;</span> <span class="o">]</span>
+    <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&quot;It is time to change the Active Directory Cached User Accounts on this system.&quot;</span>
+<span class="k">else</span> 
+        <span class="nb">echo</span> <span class="s2">&quot;Date/Time value is invalid. Now exiting.&quot;</span>
+        <span class="nb">exit </span>0
+<span class="k">fi</span>
+
+<span class="c">###################################################################################</span>
+<span class="c"># </span>
+<span class="c"># Test to make sure computer is bound to AD and has a active conneciton to an</span>
+<span class="c"># AD server</span>
+<span class="c"># </span>
+<span class="c">###################################################################################</span>
+
+<span class="c"># If the machine is not bound to AD, then there&#39;s no purpose going any further.</span>
+<span class="nv">check4AD</span><span class="o">=</span><span class="sb">`</span>/usr/bin/dscl localhost -list . <span class="p">|</span> grep <span class="s2">&quot;Active Directory&quot;</span><span class="sb">`</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;${check4AD}&quot;</span> !<span class="o">=</span> <span class="s2">&quot;Active Directory&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&quot;This machine is not bound to Active Directory.\nPlease bind to AD first. &quot;</span><span class="p">;</span>
+    /bin/rm /Library/LaunchDaemons/com.github.clburlison.ADacctChange.plist
+    /bin/rm <span class="nv">$0</span>
+<span class="k">fi</span>
+
+<span class="c"># Determine if the network is up by looking for any non-loopback internet network interfaces.</span>
+CheckForNetwork<span class="o">()</span>
+<span class="o">{</span>
+	<span class="nb">local test</span>
+<span class="nb">	</span><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;${NETWORKUP:=}&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+		<span class="nb">test</span><span class="o">=</span><span class="k">$(</span>ifconfig -a inet 2&gt;/dev/null <span class="p">|</span> sed -n -e <span class="s1">&#39;/127.0.0.1/d&#39;</span> -e <span class="s1">&#39;/0.0.0.0/d&#39;</span> -e <span class="s1">&#39;/inet/p&#39;</span> <span class="p">|</span> wc -l<span class="k">)</span>
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;${test}&quot;</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+			<span class="nv">NETWORKUP</span><span class="o">=</span><span class="s2">&quot;-YES-&quot;</span>
+		<span class="k">else</span>
+			<span class="nv">NETWORKUP</span><span class="o">=</span><span class="s2">&quot;-NO-&quot;</span>
+		<span class="k">fi</span>
+	<span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c"># If the network never becomes active this could run indefinitely</span>
+<span class="k">while</span> <span class="o">[</span> <span class="s2">&quot;${NETWORKUP}&quot;</span> !<span class="o">=</span> <span class="s2">&quot;-YES-&quot;</span> <span class="o">]</span>
+<span class="k">do</span>
+        sleep 5
+        <span class="nv">NETWORKUP</span><span class="o">=</span>
+        CheckForNetwork
+<span class="k">done</span>
+
+<span class="c"># abort if we&#39;re not able to contact a configured directory server</span>
+ping -c <span class="m">1</span> -t <span class="m">1</span> <span class="nv">$DCSERVER</span>  &gt; /dev/null 2&gt;<span class="p">&amp;</span>1
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+ 		<span class="nv">ONLOCALNETWORK</span><span class="o">=</span>YES
+	<span class="nb">echo</span> <span class="s2">&quot;Computer is on the network: $ONLOCALNETWORK&quot;</span>
+<span class="k">else</span>
+ 		<span class="nv">ONLOCALNETWORK</span><span class="o">=</span>NO
+	<span class="nb">echo</span> <span class="s2">&quot;Computer is on the network: $ONLOCALNETWORK&quot;</span>
+	<span class="nb">echo</span> <span class="s2">&quot;Exiting. We cannot talk to the domain controller.&quot;</span>
+	<span class="nb">exit </span>1
+<span class="k">fi</span>
+
+
+<span class="c">###################################################################################</span>
+<span class="c"># </span>
+<span class="c"># Display text using BigHonkingText to inform the user that the machine will</span>
+<span class="c"># reboot shortly. If BigHonkingText is not present don&#39;t run the following.</span>
+<span class="c">#</span>
+<span class="c">###################################################################################</span>
+
+<span class="k">if</span> <span class="o">[</span> -e <span class="s2">&quot;/usr/local/bin/BigHonkingText&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&quot;BigHonkingText is on this system.&quot;</span>
+  /usr/local/bin/BigHonkingText -w 90% -h 20% -m -p <span class="m">120</span> <span class="nv">$msg</span> &gt;&gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+<span class="k">fi</span>
+
+
+<span class="c">###################################################################################</span>
+<span class="c"># </span>
+<span class="c"># Check for Cached Active Directory User Accounts on Client Mac and make changes</span>
+<span class="c"># to the account if they do not match the new AD account.</span>
+<span class="c"># </span>
+<span class="c">###################################################################################</span>
+
+<span class="nv">USERLIST</span><span class="o">=</span><span class="sb">`</span>find /Users -type d -maxdepth <span class="m">1</span> -mindepth <span class="m">1</span> -not -name <span class="s2">&quot;.&quot;</span><span class="sb">`</span>
+<span class="k">for</span> a in <span class="nv">$USERLIST</span> <span class="p">;</span> <span class="k">do</span>
+    <span class="o">[[</span> <span class="s2">&quot;$a&quot;</span> <span class="o">==</span> <span class="s2">&quot;/Users/Shared&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span> <span class="c"># Do not modify the Shared Folder</span>
+    
+    <span class="c"># Do not modify any local account with UID between 500-1000</span>
+    <span class="nv">prefix</span><span class="o">=</span><span class="s2">&quot;/Users/&quot;</span>
+    <span class="nv">old</span><span class="o">=</span><span class="k">${</span><span class="nv">a</span><span class="p">#</span><span class="nv">$prefix</span><span class="k">}</span>
+    <span class="nv">OldID</span><span class="o">=</span><span class="sb">`</span>id -u <span class="nv">$old</span><span class="sb">`</span>
+    <span class="o">[</span> <span class="s2">&quot;$OldID&quot;</span> -ge <span class="m">500</span> -a <span class="s2">&quot;$OldID&quot;</span> -le <span class="m">1000</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span>
+    
+    <span class="nv">uniqueIDAD</span><span class="o">=</span><span class="sb">`</span>/usr/bin/dscl /Active<span class="se">\ </span>Directory/<span class="nv">$DOMAIN</span>/All<span class="se">\ </span>Domains -read <span class="nv">$a</span> UniqueID <span class="p">|</span> awk <span class="s1">&#39;{ print $2 }&#39;</span><span class="sb">`</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$uniqueIDAD&quot;</span> <span class="o">==</span> <span class="s2">&quot;source&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&quot;We have received bad data from dscl. Now exiting.&quot;</span>
+        <span class="nb">exit </span>0
+    <span class="k">elif</span> <span class="o">[</span> -z <span class="s2">&quot;$uniqueIDAD&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="c"># The varraible is null. We need to modify the current Cached User:</span>
+        <span class="c"># the following will be changed &quot;Account Name&quot; and &quot;Home Directory&quot;.</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Old username is: &quot;</span> <span class="nv">$old</span>
+        <span class="nv">CachedUID</span><span class="o">=</span><span class="sb">`</span>/usr/bin/id -u <span class="nv">$old</span><span class="sb">`</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Cached UID is: &quot;</span> <span class="nv">$CachedUID</span>
+
+        <span class="c"># Get new username as a variable from the Domain</span>
+        <span class="nv">new</span><span class="o">=</span><span class="sb">`</span>/usr/bin/dscl /Active<span class="se">\ </span>Directory/<span class="nv">$DOMAIN</span>/All<span class="se">\ </span>Domains -search /Users UniqueID <span class="nv">$CachedUID</span> <span class="p">|</span> awk <span class="s1">&#39;NR==1{print $1; exit}&#39;</span><span class="sb">`</span>
+        <span class="nb">echo</span> <span class="s2">&quot;New username is: &quot;</span> <span class="nv">$new</span>
+
+        <span class="c"># Move the old AD account to the new Account name. Essentially creating a new user account.</span>
+        /bin/mv /var/db/dslocal/nodes/Default/users/<span class="nv">$old</span>.plist /var/db/dslocal/nodes/Default/users/<span class="nv">$new</span>.plist
+        /usr/bin/killall opendirectoryd
+        sleep 10
+
+        <span class="c"># edit new user attributes, using same passwd hash</span>
+        /usr/bin/dscl . -change /Users/<span class="nv">$old</span> RecordName <span class="nv">$old</span> <span class="nv">$new</span>
+        sleep 3
+        /usr/bin/dscl . -change /Users/<span class="nv">$new</span> NFSHomeDirectory /Users/<span class="nv">$old</span> /Users/<span class="nv">$new</span>
+        sleep 3
+        /usr/bin/killall opendirectoryd
+
+        <span class="c"># Move Home Directory. Check if there&#39;s a home folder there already, if there is, exit before we wipe it</span>
+        <span class="k">if</span> <span class="o">[</span> -f /Users/<span class="nv">$new</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+            <span class="nb">echo</span> <span class="s2">&quot;Oops, theres a home folder there already for $new.\nIf you don&#39;t want that one, delete it in the Finder first,\nthen run this script again.&quot;</span>
+        <span class="k">else</span>
+            /bin/mv /Users/<span class="nv">$old</span> /Users/<span class="nv">$new</span>
+            /usr/sbin/chown -R <span class="k">${</span><span class="nv">new</span><span class="k">}</span> /Users/<span class="nv">$new</span>
+            <span class="c">#/usr/bin/dscl . -append /Users/$new RecordName $old</span>
+            <span class="nb">echo</span> <span class="s2">&quot;Home for $new now located at /Users/$new&quot;</span>
+        <span class="k">fi</span>
+    <span class="k">fi</span>
+<span class="k">done</span>
+
+
+<span class="c">###################################################################################</span>
+<span class="c"># </span>
+<span class="c"># Remove this script and launchDaemon. Lastly reboot the system.</span>
+<span class="c"># </span>
+<span class="c">###################################################################################</span>
+
+/bin/rm /Library/LaunchDaemons/com.github.clburlison.ADacctChange.plist
+/bin/rm <span class="nv">$0</span>
+
+/sbin/reboot
+</pre></div>
