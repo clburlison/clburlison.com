@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Oracle on Omega at UTA
-modified:
+modified: null
 categories: 
   - oracle
   - database
@@ -73,7 +73,7 @@ The server address for the VPN application is: **vpn.uta.edu**
 
 {% youtube y5Tj9-oMJuI 420 315 %}
 
-If embed youtube video does not work [click here](https://www.youtube.com/watch?v=y5Tj9-oMJuI).
+If the embed youtube video does not work [click here](https://www.youtube.com/watch?v=y5Tj9-oMJuI).
 
 
 
@@ -84,7 +84,7 @@ Download Cyberduck from [https://cyberduck.io](https://cyberduck.io).
 
 {% youtube U2te9s3zkZI 420 315 %}
 
-If embed youtube video does not work [click here](https://www.youtube.com/watch?v=U2te9s3zkZI).
+If the embed youtube video does not work [click here](https://www.youtube.com/watch?v=U2te9s3zkZI).
 
 
 ##SSH setup
@@ -110,7 +110,7 @@ Host omega
 
 {% youtube PQPaXi7mZGA 420 315 %}
 
-If embed youtube video does not work [click here](https://www.youtube.com/watch?v=PQPaXi7mZGA).
+If the embed youtube video does not work [click here](https://www.youtube.com/watch?v=PQPaXi7mZGA).
 
 ##Sqlplus
 
@@ -143,7 +143,7 @@ SQL > exit
 
 {% youtube MNEvtmSJj6Y 420 315 %}
 
-If embed youtube video does not work [click here](https://www.youtube.com/watch?v=MNEvtmSJj6Y).
+If the embed youtube video does not work [click here](https://www.youtube.com/watch?v=MNEvtmSJj6Y).
 
 
 The UTA helpdesk does provide some useful documentation at this point on using the Oracle database. I highly recommend changing your default password using the following instructions:
