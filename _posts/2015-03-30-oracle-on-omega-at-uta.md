@@ -168,4 +168,5 @@ As always feel free to drop a comment below or on Twitter. Feedback is always ap
 Articles:  
 [UTA VPN](http://www.uta.edu/oit/cs/software/vpn/),  
 [SSH application for Windows](http://www.uta.edu/oit/cs/software/ssh/ssh-secure-shell-for-workstations-3/index.php),  
-[Using Oracle on Omega](http://www.uta.edu/oit/cs/unix/applications/oracle/Using-Oracle-on-Omega.php)
+[Using Oracle on Omega](http://www.uta.edu/oit/cs/unix/applications/oracle/Using-Oracle-on-Omega.php),  
+[More Oracle tips](http://crystal.uta.edu/~elmasri/db2/usingOracleOnOmega.html)  
