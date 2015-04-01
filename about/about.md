@@ -3,7 +3,7 @@ layout: page
 title: About Me
 tags: 
   - about
-modified: "1-8-2015"
+modified: "03-31-2015"
 permalink: /about/
 comments: true
 image: 
@@ -21,11 +21,12 @@ Many articles on this site will have external references. If you feel I have mat
 
 Please feel free to link to anything I have written here and all of the code can be considered open source unless otherwise stated. (credit is appreciated though not required)  
 
+Site info can be found [here](/about/site-info/).
+
 Code license located [here](/docs/license.txt).
 
 ###Personal Life
 Besides work, I am currently a part time student attending the University of Arlington, major is Information Systems. In my free time I enjoy playing video games and if you could not guess it from the site favicon I really enjoy running/being active. 
-
 
 ###My list
 This is a simple list I use to keep up with my goals. I host it on this site to share and hopefully give others motivation to reach for their goals. It also helps keep me held responsible since everyone in the world can see. To see my current list click [here](/about/my-list/).
