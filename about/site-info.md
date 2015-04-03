@@ -21,8 +21,8 @@ Odds are if you have ended up on this site you found something interesting or he
 * All content is written in [Markdown](http://en.wikipedia.org/wiki/Markdown).
 * Hosting for this website is by [Github Pages](https://pages.github.com/).
 * Site code can be found in the follow repo [clburlison.github.io](https://github.com/clburlison/clburlison.github.io).
-* Content delivery network for this website is [CloudFlare](http://www.cloudflare.com).
+* Content delivery network provided by [CloudFlare](http://www.cloudflare.com).
 * The theme for this website was created by [Michael Rose](https://mademistakes.com/).
 * Travis-ci builds my website [Build History](https://travis-ci.org/clburlison/clburlison.github.io/builds). 
-* User tracking is enabled and provided by [Google Analytics](www.google.com/analytics/).
+* User tracking is enabled and provided by [Google Analytics](https://www.google.com/analytics/).
 * Site comments are provided by [Disqus](https://disqus.com) 
