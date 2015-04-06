@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
-modified: "2015-03-04"
+modified: "2015-04-06"
 categories: 
   - munki
   - ubuntu
@@ -145,7 +145,10 @@ We must reload the nginx service to update the reflected change.
 
 Now when you try to access your website, [http://yourmunkiserver/munki_repo/](), you will notice a browser prompt that asks you to enter the login and password. Enter the details that you used while creating the .htpasswd file. The prompt does not allow you to access the website till you enter the right credentials. The munki client supports this security feature with the AdditionalHttpHeaders key [more info](https://github.com/munki/munki/wiki/Using-Basic-Authentication#configuring-the-clients-to-use-a-password).
 
-_Note:_ If you do not want to secure your munki repo you can remove this setting in the above ngix config file by removing the two lines that start with _auth_basic_.
+<div class="note info">
+  <h5>Note</h5>
+  <p>If you do not want to secure your munki repo you can remove this setting in the above ngix config file by removing the two lines that start with <code>auth_basic</code>.</p>
+</div>
 
 ##Setting up Samba
 Now we just need a way to mount our munki_repo on a mac so we can do administrative things. Samba uses a separate set of passwords than the standard Linux system accounts (stored in /etc/samba/smbpasswd), so you'll need to create a Samba password for yourself.  

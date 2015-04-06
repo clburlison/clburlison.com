@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sign Packages with Luggage
-modified: "2015-03-04"
+modified: "2015-04-06"
 excerpt: Learn to sign packages with Luggage using your Apple Developer Account.
 comments: true
 published: true
@@ -28,7 +28,10 @@ Luggage allows us to create packages that meet the following requirements:
 
 The above is fantastic news and it lays the groundwork for Luggage to sign packages. Honestly, pkgutil is doing all of the hardwork behind the scene but I found documentation on using Luggage to sign packages spread all over. The goal below is to document the process of signing a package from start to finish.
 
-_Note:_  Apple recommends requesting a certificate via Xcode and while it is quite possible, and much easier, I found that the certificate generated via Xcode is only valid for 365 days. Doing it the manual method below creates a certificate valid for five (5) years.
+<div class="note info">
+  <h5>Note</h5>
+  <p>Apple recommends requesting a certificate via Xcode and while it is quite possible, and much easier, I found that the certificate generated via Xcode is only valid for 365 days. Doing it the manual method below creates a certificate valid for five (5) years.</p>
+</div>
 
 ##Obtaining the certificate
 Visit the [Apple Developer page](https://developer.apple.com) and login via the Member Center link (top right).
@@ -55,7 +58,12 @@ Visit the [Apple Developer page](https://developer.apple.com) and login via the 
 {% img /images/2014-11-13/4-keychain-csr.png %}
 
 1. Fill in the Email address and Common Name.  
-_Note:_ Do not fill in the CA Email per Apple's instructions.
+
+<div class="note info">
+  <h5>Note</h5>
+  <p>Do not fill in the CA Email per Apple's instructions.</p>
+</div>
+
 {% img /images/2014-11-13/5-creating-the-csr.png %}
 
 1. After the CSR is created upload to Apple's website.

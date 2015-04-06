@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setup Mandrill on Ubuntu 14.04 - Part 2"
-modified: "2015-02-06"
+modified: "2015-04-06"
 categories: 
   - munki
   - ubuntu
@@ -63,7 +63,10 @@ sudo chmod -R 2774 /usr/local/munki_repo
 {% endhighlight %}
 
 
-_Note:_ You should receive an error from creating the 'munki' group if you went through [Part 1](/blog/2014/10/06/munkirepo-guide-part-1/). This is fine move along.
+<div class="note info">
+  <h5>Note</h5>
+  <p>You should receive an error from creating the 'munki' group if you went through <a href="/munkirepo-guide-part-1/">Part 1</a>. This is fine move along.</p>
+</div>
 
 ##Install build tools
 {% highlight bash %}

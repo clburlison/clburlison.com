@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setup Reposado + Margarita on Ubuntu 14.04
-modified: "2014-10-17"
+modified: 2015-04-06
 categories: 
   - reposado
   - ubuntu
@@ -24,7 +24,10 @@ redirect_from:
 #Intro
 Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup. 
 
-_Note:_ I have added [Addendum 4](./#addendum-4-using-nginx) if you would like to serve files using nginx instead of apache. In my testing, it has been much faster at serving html request. Also, a little easier to setup the redirect rules.
+<div class="note info">
+  <h5>Note</h5>
+  <p>I have added <a href="./#addendum-4-using-nginx">Addendum 4</a> if you would like to serve files using nginx instead of apache. In my testing, it has been much faster at serving html requests. Also, a little easier to setup the redirect rules.</p>
+</div>
 
 #The software
 If you have not heard of [reposado](https://github.com/wdas/reposado). It is a set of tools that replicate the key functionality of Mac OS X Server's Software Update Service.
@@ -93,7 +96,10 @@ Base URL for your local Software Update Service
 
 {% endhighlight %}
 
-_Note:_ the repo_sync will download Apple catalogs + updates (if enabled). Grab a coffee, this could be upwards of 170GB.
+<div class="note info">
+  <h5>Note</h5>
+  <p>The repo_sync command will download Apple catalogs + updates (if enabled). Grab a coffee, this could be upwards of 170GB. Time obviously depends on connection speed.</p>
+</div>
 
 You now have Reposado fully installed and configured! Now we need to serve those files over http so clients can do something with the downloads.
 
@@ -372,7 +378,10 @@ Lastly, restart apache for the changes to take place.
 
 Nginx offers a few benefits over using apache, with the key benefit being lighter. This results in faster transfers from the web server to clients. With that said, Nginx does not offer as wide of a selection of modules as Apache. For that reason, I am currently running Margarita over apache while serving reposado (Apple client updates) via nginx. 
 
-_Note:_ This section should be used in replace of using the ``/etc/apache2/sites-enabled/reposado.conf`` file not in addition. Bad things will happen if you try to share the reposado downloaded updates via both apache and nginx.
+<div class="note info">
+  <h5>Note</h5>
+  <p>This section should be used in replace of using the <i>/etc/apache2/sites-enabled/reposado.conf</i> file not in addition. Bad things will happen if you try to share the reposado downloaded updates via both apache and nginx.</p>
+</div>
 
 Firstly, we must install nginx on our server so we can use it.
 

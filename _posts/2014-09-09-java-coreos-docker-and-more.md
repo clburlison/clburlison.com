@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Java, CoreOS, Docker, & More"
-modified:
+modified: 2015-04-06
 categories: 
 - personal 
 - automation 
@@ -33,7 +33,10 @@ Think really really tiny virtual machine that uses linux, has the ability to aut
 
 [Click here to receive $10 credit with Digital Ocean](https://www.digitalocean.com/?refcode=b50b2cfc8144) 
 
-_(Note: this referral also earns me credit)_
+<div class="note info">
+  <h5>Note</h5>
+  <p>The referral above also earns me credit.</p>
+</div>
 
 ##Docker
 Docker is related to CoreOS but only since Core heavily relies on the foundation of [Docker](https://www.docker.com/). However, Docker does not rely on CoreOS and can be ran on any operating system. Without using the terminology created by Docker it is kind of hard to understand what Docker actually does. In the simplest terms, Docker is ran at the lowest level of the computer interacting with the operating system. 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Github Two-factor Authentication with SourceTree"
-modified: 2014-05-15
+modified: 2015-04-06
 comments: true
 published: true
 keywords: github, sourcetree, git, two-factor, authentication,
@@ -21,7 +21,10 @@ I finally got around to setting up two-factor authentication on my Github accoun
 The error message that I was receiving seemed pretty generic at the time. Besides I knew I was typing my Github password correctly, so that could not be the issue. In hindsight not realizing the two-factor authentication (2fa) was the problem immediately was pretty stupid. The solution to this error is to login with a One Time Password (OTP)  token _not_ your normal Github password. If you do use the wrong password you will receive the follow error message.  
 {% img /images/2014-05-14/login_error.png SourceTree error %}
 
-**Note:** If you use the official [GitHub app](https://mac.github.com/) you will not run into a login error because the app uses the GitHub API for authentication.  
+<div class="note info">
+  <h5>Note</h5>
+  <p>If you use the official <a href="https://mac.github.com">GitHub app</a> you will not run into a login error because their app uses the GitHub API for authentication.</p>
+</div>
 
 Luckily Github has made creating a OTP quite easy once you know what you are looking for. It is recommended practice to use one token per application. This means if I ever need to reject a token it will only effect the one version of SourceTree on one device.
 

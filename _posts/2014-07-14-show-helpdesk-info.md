@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Show Help Desk Information"
-modified: 2014-10-18
+modified: 2015-04-06
 comments: true
 published: true
 keywords: Desktop, Widget, Geektool, OSX
@@ -160,7 +160,10 @@ echo "For Help Desk Support call: x3819"
 Great now what? Well that script does nothing for you. Unless you want to manually copy and paste on every computer...for every user profile...in your entire fleet. So lets automate that process a bit. If you have not done so already you will want to download all five (5) of the requirements above. This includes two command lines tools created by Tim Sutton, Geektool.app, the gist with all the necessary plist files, and a profile to launch Geektool at login.
 
 ##Modify the script
-*Note:* If you wish to use the script as is, feel free to skip below to creating the profiles.  
+<div class="note info">
+  <h5>Note</h5>
+  <p>If you wish to use the script as is, feel free to skip below to creating the profiles.</p>
+</div>  
 
 This will be the most time consuming process so start small. Lets start by changing the Help Desk Phone Number in my script. Open the main plist ``org.tynsoe.geeklet.shell.plist`` from the gist zip file. Scroll down to line 116 and change the following line to something useful.
 
@@ -191,8 +194,11 @@ Put mcxToProfile.py in the same directory as your three plist files. After chang
 mcxToProfile.py -r org.tynsoe.geeklet.shell.plist org.tynsoe.GeekTool.plist \
 org.tynsoe.geektool3.plist --identifier BISD-GeekTool --displayname=BISD-GeekTool --manage Often
 {% endhighlight %}
-
-*Note:* you will want to change your identifier and displayname to something useful for your organization. 
+ 
+<div class="note info">
+  <h5>Note</h5>
+  <p>You will want to change your <code>identifier</code> and <code>displayname</code> to something useful for your organization.</p>
+</div>
 
 This will create a second profile with the name of your "identifier + .mobileconfig"
 
@@ -214,8 +220,10 @@ In the following, you will need to modify the profile name with your correct fil
 make_profile_pkg.py --munki-import identifier.mobileconfig
 {% endhighlight %}
 
-*Note:* you will want to remove the ``--munki-import`` flag if you just want to create a package.
-
+<div class="note info">
+  <h5>Note</h5>
+  <p>You will want to remove the <code>--munki-import</code> flag if you just want to create a package.</p>
+</div>
 
 #Ending Notes
 Hopefully you find this as useful as I did. If you run into any issues feel free to contact me on Twitter or email.

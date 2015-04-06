@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AD Account Change
-modified: "2015-03-29"
+modified: "2015-04-06"
 categories: 
   - active directory
   - bash
@@ -41,7 +41,10 @@ Changing user account logons in a deployed environment can cause some issues. Do
 
 ![acct](/images/2015-03-28/opening_header.png)
 
-_Note:_ the above picture is for reference purposes only. All data has been modified.
+<div class="note info">
+  <h5>Note</h5>
+  <p>The above picture is for reference purposes only. All data has been modified.</p>
+</div>
 
 #Why would you do that?
 We had two differing username structures for active employees: 

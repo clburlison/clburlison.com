@@ -31,7 +31,7 @@ redirect_from:
 #Intro
 Welcome to the third part in our munki server setup series. In this section, we will download and configure [Munkireport-php](https://github.com/munkireport/munkireport-php) on our munki server.
 
-Before we get to far you might want to head over to [Part 1 - Setting up the munki repo](/blog/2014/10/06/munkirepo-guide-part-1/) or [Part 2 - Setting up mandrill](/blog/2014/10/19/munkirepo-guide-part-2/). Parts 1 and 2 are not technically required for MunkiReport by you will want to have an understanding of how the other components of your munki server work before setting up the reporting server. 
+Before we get to far you might want to head over to [Part 1 - Setting up the munki repo](/munkirepo-guide-part-1/) or [Part 2 - Setting up mandrill](/munkirepo-guide-part-2/). Parts 1 and 2 are not technically required for MunkiReport by you will want to have an understanding of how the other components of your munki server work before setting up the reporting server. 
 
 If you have no idea what MunkiReport is go check out this [Demo site](https://munkireportphp-nbalonso.rhcloud.com/) hosted by [Noel](http://www.nbalonso.com/). Noel has a custom color scheme but it should give you an idea of the system.
 
@@ -233,7 +233,7 @@ sudo nano /etc/nginx/sites-enabled/default
 
 <div class="note info">
   <h5>Note</h5>
-  <p>Make sure and change your <code>server_name</code>. This file also takes care of our munki_repo from <a href="/blog/2014/10/06/munkirepo-guide-part-1/">Part 1</a>.</p>
+  <p>Make sure and change your <code>server_name</code>. This file also takes care of our munki_repo from <a href="/munkirepo-guide-part-1/">Part 1</a>.</p>
 </div>
 
 {% highlight bash %}
