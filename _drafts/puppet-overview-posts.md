@@ -13,6 +13,8 @@ Masterless Puppet Articles
 
 
 #Part 2 - Why go masterless
+* what is a masterless setup? Definition time.
+
 ##Pro
 - no server overhead
 - everything is hosted on Github therefore it can be accessed anywhere
