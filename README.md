@@ -3,14 +3,12 @@ Personal Website for Clayton Burlison
 
 [![Build Status](https://travis-ci.org/clburlison/clburlison.github.io.svg?branch=source)](https://travis-ci.org/clburlison/clburlison.github.io),  [![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=ready&title=Ready)](http://waffle.io/clburlison/clburlison.github.io),  [![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/clburlison/clburlison.github.io)
 
-[![prose.io](https://clburlison.com/images/prose@57.png)](http://prose.io/#clburlison/clburlison.github.io)
+[![prose.io](https://clburlison.com/images/prose.png)](http://prose.io/#clburlison/clburlison.github.io)
 
 #Site info 
-This repo contains my personal website, [clburlison.com](https://clburlison.com). 
+This repo contains my personal website, [clburlison.com](https://clburlison.com).
 
-Powered by Jekyll with the [Minimal Mistakes Theme](http://mademistakes.com/minimal-mistakes/).
-
-Information about this site can be found [here](https://clburlison.com/about/site-info/).
+More information about this site can be found [here](https://clburlison.com/about/site-info/).
 
 ##Travis integration
 
