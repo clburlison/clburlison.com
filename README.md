@@ -3,22 +3,14 @@ Personal Website for Clayton Burlison
 
 [![Build Status](https://travis-ci.org/clburlison/clburlison.github.io.svg?branch=source)](https://travis-ci.org/clburlison/clburlison.github.io),  [![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=ready&title=Ready)](http://waffle.io/clburlison/clburlison.github.io),  [![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/clburlison/clburlison.github.io)
 
-This repo contains my personal website, [clburlison.com](https://clburlison.com). The _source_ branch has my markdown files, images, and configuration settings while the _master_ branch is actually my "web share". This site is powered by Github, Travis-ci, Jekyll, and Cloudflare. With those four services, I am able to host a completely free static website with a Content Deliver Network (CDN) plus Travis takes care of building my site. All I have to do is create the content, `git push` and my site is automagically updated.
+[![prose.io](https://clburlison.com/images/prose@57.png)](http://prose.io/#clburlison/clburlison.github.io)
+
+#Site info 
+This repo contains my personal website, [clburlison.com](https://clburlison.com). 
 
 Powered by Jekyll with the [Minimal Mistakes Theme](http://mademistakes.com/minimal-mistakes/).
 
-
-#Site info 
-This site can be managed via [prose.io](http://prose.io/#clburlison/clburlison.github.io). Visit the website and, when prompted, authorize via GitHub.
-
-If running locally, you can use the Octopress plugin:
-
-*New Post & New Page*
-
-````
-$ octopress new post "Post Title"
-$ octopress new page new-page/
-````
+Information about this site can be found [here](https://clburlison.com/about/site-info/).
 
 ##Travis integration
 
