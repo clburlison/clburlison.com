@@ -5,7 +5,7 @@ tags:
   - about
 modified: "03-31-2015"
 permalink: /about/
-comments: true
+comments: false
 image: 
   feature: "GrungeTextures/TD-DarkGrungeTexture3.jpg"
   credit: Think Four

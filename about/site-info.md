@@ -5,7 +5,7 @@ tags:
   - about
 modified: "04-01-2015"
 permalink: /about/site-info/
-comments: true
+comments: false
 image: 
   feature: "GrungeTextures/TD-GrungeWoodTexture2.jpg"
   credit: Think Four

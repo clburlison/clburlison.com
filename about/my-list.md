@@ -4,7 +4,7 @@ title: My List
 tags: []
 modified: "01-06-2015"
 permalink: "/about/my-list/"
-comments: true
+comments: false
 image: 
   feature: "GrungeTextures/TD-GrungeTexture.jpg"
   credit: Think Four
