@@ -3,7 +3,7 @@ Personal Website for Clayton Burlison
 
 [![Build Status](https://travis-ci.org/clburlison/clburlison.github.io.svg?branch=source)](https://travis-ci.org/clburlison/clburlison.github.io),  [![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=ready&title=Ready)](http://waffle.io/clburlison/clburlison.github.io),  [![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/clburlison/clburlison.github.io)
 
-[![prose.io](https://clburlison.com/images/prose.png)](http://prose.io/#clburlison/clburlison.github.io)
+[![prose.io](https://clburlison.com/images/prose.png)](http://prose.io/#clburlison/clburlison.github.io)  
 [Prose.io](http://prose.io/#clburlison/clburlison.github.) is a online service to write/edit content without the need for a full jekyll/git/ruby setup.
 
 #Site info 
