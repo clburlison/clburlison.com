@@ -25,9 +25,8 @@ _This section highlights useful/popular posts from this domain._
 #External resources
 
 ###Links
+* [Two Factor Auth List](https://twofactorauth.org/)
 * [Vim Cheat Sheet](http://vim.rtorr.com/)
-
----
 
 ###Mac Conferences
 * [PSU MacAdmin](http://macadmins.psu.edu/conference/resources/)
