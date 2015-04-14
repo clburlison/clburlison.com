@@ -94,19 +94,19 @@ body {
 }
 
 .warning {
-  background-color: #b42d13;
+  background-color: #e94a2b;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzllMjgxMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2ZjBkMGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#b42d13), to(#9e1515));
-  background-image: -webkit-linear-gradient(top, #b42d13 0%, #9e1515 100%);
-  background-image: -moz-linear-gradient(top, #b42d13 0%, #9e1515 100%);
-  background-image: -o-linear-gradient(top, #b42d13 0%, #9e1515 100%);
-  background-image: linear-gradient(to bottom, #b42d13 0%,#9e1515 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b42d13', endColorstr='#9e1515',GradientType=0 );
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e94a2b), to(#b42d13));
+  background-image: -webkit-linear-gradient(top, #e94a2b 0%, #b42d13 100%);
+  background-image: -moz-linear-gradient(top, #e94a2b 0%, #b42d13 100%);
+  background-image: -o-linear-gradient(top, #e94a2b 0%, #b42d13 100%);
+  background-image: linear-gradient(to bottom, #e94a2b 0%,#b42d13 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e94a2b', endColorstr='#b42d13',GradientType=0 );
 }
 
 .info:before { border-color: transparent #117ea0 #117ea0 transparent; }
 
-.warning:before { border-color: transparent #9e1515 #9e1515 transparent; }
+.warning:before { border-color: transparent #b42d13 #b42d13 transparent; }
 
 .info:after {
   content: '\24D8';

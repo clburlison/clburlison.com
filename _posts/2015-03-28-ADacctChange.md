@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AD Account Change
-modified: "2015-04-06"
+modified: "2015-04-14"
 categories: 
   - active directory
   - bash
@@ -306,6 +306,13 @@ The result was a package that is installable via [Luggage](https://github.com/un
 
 
 As always feel free to drop a comment below or on Twitter. Feedback is always appreciated.
+
+
+#Aftermath
+<div class="note warning">
+  <h5>Dropbox</h5>
+  <p>If your using Dropbox in your environment this process will mess up Dropbox settings. Inside of <code>/Users/$HOME/.dropbox</code> there is a setting that has hard coded the users home directory path. I found the easiest solution is to run a <code>rm ~/.dropbox</code> on the affected users and allow them to re-sign in via the Dropbox application.</p>
+</div>
 
 ---
 
