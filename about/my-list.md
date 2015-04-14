@@ -72,6 +72,7 @@ The idea behind having a a current focus section is to disregard everything else
 * <del>Read Time Managements for System Administrators</del> (5/10/2014)
 * Read Pro Puppet
 * Read The Docker Book
+* The Power of Habit
 
 ##Fun and/or "Insane" Goals
 
