@@ -99,7 +99,7 @@ nano ~/.ssh/config
 {% endhighlight %}
 
 
-**~/.ssh/config** file contents:
+**~/.ssh/config** file contents:  
 Change the ``User`` field to your UTA NetID.
 
 {% highlight bash %}
