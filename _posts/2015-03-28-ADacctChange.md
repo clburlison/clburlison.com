@@ -311,7 +311,7 @@ As always feel free to drop a comment below or on Twitter. Feedback is always ap
 #Aftermath
 <div class="note warning">
   <h5>Dropbox</h5>
-  <p>If your using Dropbox in your environment this process will mess up Dropbox settings. Inside of <code>/Users/$HOME/.dropbox</code> there is a setting that has hard coded the users home directory path. I found the easiest solution is to run a <code>rm ~/.dropbox</code> on the affected users and allow them to re-sign in via the Dropbox application.</p>
+  <p>If you are using Dropbox in your environment this process will mess up Dropbox settings. Inside of <code>/Users/$HOME/.dropbox</code> there is a setting that has hard coded to the users home directory path. I found the easiest solution is to run a <code>rm ~/.dropbox</code> on the affected users profile. Followed by having the user re-sign in via the Dropbox application. Obviously this solution does not scale very well.</p>
 </div>
 
 ---
