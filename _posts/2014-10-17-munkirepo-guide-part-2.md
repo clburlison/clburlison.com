@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setup Mandrill on Ubuntu 14.04 - Part 2"
-modified: "2015-04-06"
+modified: "2015-04-16"
 categories: 
   - munki
   - ubuntu
@@ -48,8 +48,6 @@ A brief description of Mandrill.
 
 #The Install
 Lucky for us Joe, the developer, has excellent documentation for installation on Ubuntu. Unfortunately, the documentation is for an older version of Ubuntu and some of the commands need modification to work with 14.04 and this series. Instead of redirecting you back and forth between his guide and this, I decided to include all the commands required below without the descriptions. For more information on what/why you are doing something please reference the wiki [here](https://github.com/wollardj/Mandrill/wiki).
-
-To document changes from Joe's original guide all code changes will have ``# updated from wiki`` appended to code blocks. 
 
 ##Creating Users & Groups
 
