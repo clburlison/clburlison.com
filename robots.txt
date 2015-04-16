@@ -1,4 +1,7 @@
 User-agent: *
-Disallow: 
+Disallow: /images/
+Disallow: /sitemap*
+Disallow: /archives/
+Disallow: /categories/
 
 Sitemap: https://clburlison.com/sitemap.xml
