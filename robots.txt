@@ -3,5 +3,6 @@ Disallow: /images/
 Disallow: /sitemap*
 Disallow: /archives/
 Disallow: /categories/
+Disallow: /docs/
 
 Sitemap: https://clburlison.com/sitemap.xml
