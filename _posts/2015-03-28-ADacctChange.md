@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AD Account Change
-modified: "2015-04-15"
+modified: "2015-04-24"
 categories: 
   - active directory
   - bash
@@ -313,7 +313,7 @@ For the most part our migration went smoothly in my environment. We installed th
 
 <div class="note warning">
   <h5>Dropbox</h5>
-  <p>If you are using Dropbox in your environment this process will mess up Dropbox settings. Inside of <code>/Users/$HOME/.dropbox</code> there is a setting that ishas hard coded to the users home directory path. I found the easiest solution is to run a <code>rm ~/.dropbox</code> on the affected users profile. Followed by having the user re-sign in via the Dropbox application. Obviously this solution does not scale very well.</p>
+  <p>If you are using Dropbox in your environment this process will mess up Dropbox settings. Inside of <code>/Users/$HOME/.dropbox</code> there is a setting that is hard coded to the users home directory path. I found the easiest solution is to run a <code>rm ~/.dropbox</code> on the affected users profile. Followed by having the user re-sign in via the Dropbox application. Obviously this solution does not scale very well.</p>
 </div>
 
 ---
