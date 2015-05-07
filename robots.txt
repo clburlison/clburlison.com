@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /images/
+# Disallow: /images/
 Disallow: /sitemap*
 Disallow: /archives/
 Disallow: /categories/
