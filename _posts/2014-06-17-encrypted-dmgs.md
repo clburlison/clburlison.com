@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Encrypted DMGs"
-modified: 
+modified: 05-12-2015
 comments: true
 published: true
 keywords: apple, dmg, encryption, encrypted, secure, files, security
@@ -15,9 +15,9 @@ redirect_from:
 We all know about file security but how many of our users take the time to properly protect their data? Sure you can make policy but unless someone documents the expectations, reasons, and how to do it, many users will simply ignore policy. How about personal files, we all store data on our computers that we know should be protect but how? Well luckily Apple has a very simple solution to the problem explained above.
 
 ##What to secure
-First, you can secure whatever files your heart desires: bank statements, work files, secret plans for that special vacation with the family, photos, passwords, etc. Pretty much anything you want, though fair-warning this is not a backup solution and if you forget your encryption password it will make accessing those files quite difficult. 
+First, you can secure whatever files your heart desires: bank statements, work files, photos, passwords, etc. Pretty much anything you want, though fair-warning this is not a backup solution and if you forget your encryption password it will make accessing those files quite difficult. 
 
-The reason to secure files is because you do not want others to have access to your data. This will help protect you in case your laptop gets stolen or maybe it just get physically accessed by someone you know. This method will use a 256-bit AES encryption algorithm to secure your data. That being said if you use a simple password, *cough* `password` *cough*, then it is quite simple for someone to brute force hack that password and have access to your data. 
+We secure files to limit access. This will help protect you in case your laptop gets stolen or maybe it just gets physically accessed by someone you know. This method will use a 256-bit AES encryption algorithm to secure your data. That being said if you use a simple password, *cough* `password` *cough*, then it is quite simple for someone to brute force hack that password and have access to your data. 
 
 **Disclaimer**: Nothing is 100% secure. This method is just another step that can help make it harder for someone to obtain your information. With enough time the right person could access these files but your average Joe is going to have a darn hard time.
 
@@ -43,7 +43,7 @@ Step 3 - Name your new dmg. Note the values shown are important.
 Step 4 - Here you want to type a secure password  
 {% img /images/2014-06-17/step4.png 400 400 %}
 
-Step 5 - If you click the key icon OS X will help you create a secure password using the Password Assistant  
+Step 5 - If you click the ``key icon`` OS X will help you create a secure password using the Password Assistant  
 {% img /images/2014-06-17/step5.png 600 400 %}
 
 Step 6 - Note the file names. This is your encrypted dmg. You can store files here just like a flash drive.  
