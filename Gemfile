@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
-gem 'jekyll-sitemap'
+# gem 'jekyll', '~> 3.0.0.pre.beta4'
+gem 'jekyll', '~> 2.5.3'
 gem 'jekyll-redirect-from'
+gem 'jekyll-sitemap'
+gem 'jekyll-gist'
 gem 'rake', '~> 10.0'
 gem 'stringex', '~> 1.4.0'
 gem 'travis'
-
 
 # Not currently in usage
 # gem 'nokogiri'
@@ -18,3 +19,4 @@ gem 'travis'
 # gem 'rdiscount'
 # gem 'kramdown'
 # gem 'redcarpet'
+# gem 'jekyll-compose'
