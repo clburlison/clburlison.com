@@ -2,7 +2,7 @@
 layout: page
 title: My List
 tags: []
-modified: "01-06-2015"
+modified: "05-15-2015"
 permalink: "/about/my-list/"
 comments: false
 image: 
@@ -24,7 +24,6 @@ If by chance you have some motivation and wish to create your own list feel free
 
 ##Current focus:
 
-1. Learn Java
 1. 7-minute workout daily for 7 months
 1. Write for 10-minutes daily for a year
 1. Drink 48 + oz of water daily
@@ -33,6 +32,7 @@ The idea behind having a a current focus section is to disregard everything else
 
 ##Last 5 Completed Goals
 
+* Learn Java (5/14/15 - proficient)
 * Fix ACL permission issues for munki server (7/3/14)
 * Register for UTA (6/2/14)
 * Setup Boxen for my personal laptop (4/10/14) 
