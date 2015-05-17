@@ -29,6 +29,11 @@ This article describes basic usage and setup for the project **munki.dev**.
 
 ---
 
+<div class="note warning">
+  <h5>Outdated</h5>
+  <p>These instructions are no longer current and are considered deprecated. This document remains for historical reasons only. Faster and easier method exist for creating development environments.</p>
+</div>
+
 #Purpose
 
 Setting up and maintaining a web server can be a pretty complex job. Apache is great at actually serving files but the initial setup can be tedious. Thanks to the many resources that are available on the internet this can become less tedious. Which brings me to the true purpose of the post...a way to setup a web server so I can test software patches using Munki.
@@ -45,7 +50,7 @@ To use this project you will need to make sure you have the following software i
 * Vagrant  http://www.vagrantup.com
 * VirtualBox  https://www.virtualbox.org
 * Git  http://sourceforge.net/projects/git-osx-installer/
-* Munkitools  [munkitools v.1- latest.dmg](https://munkibuilds.org/munkitools-latest.dmg) or [munkitools v.2 - latest.pkg](https://munkibuilds.org/munkitools2-latest.pkg)  
+* Munkitools https://github.com/munki/munki/releases  
 
 
 ###Vagrant
@@ -93,15 +98,13 @@ Save with Control + X.
 ##munki_repo Modifications
 Make these changes in the ``bootstrap.sh`` file. 
 
-Currently with Option 1, a developmental munki_repo will be pulled down via git from [munki_repo.dev](https://github.com/clburlison/munki_repo.dev). With Option 2, you can point this virtual machine to a munki_repo that exists on your local admin machine. This means theoretically you could have a complete copy of your production munki_repo on your localhost or an external hard drive. This would allow you to point to that folder and start testing/development immediately.
+You can point this virtual machine to a munki_repo that exists on your local admin machine. This means theoretically you could have a complete copy of your production munki_repo on your localhost or an external hard drive. This would allow you to point to that folder and start testing/development immediately.
 
 This will default to downloading a the testing munki_repo since this will allow new users to get started with the least amount of work. To get the virtual machine started run the following command.
 
 {% highlight bash%}
 ./bootstrap
 {% endhighlight %}
-
-_Note_: the default Option 1 will take some time to download. This is due to the software packages in the repo. It might even look like the command has become stalled. Go grab a coffee.
 
 #Client Settings
 At this point, the munki_repo should be up and running. You will want to setup a client computer to connect to the munki_repo. To do this you will need to run the following command on a client computer.
@@ -116,4 +119,4 @@ Now you should ready to test away. Open up ``/Applications/Managed Software Cent
 #Ending notes
 If you have any problems please create an [Issue](https://github.com/clburlison/munki.dev/issues) on Github. Let me know what you think on Twitter, Email, etc.
 
-Also, go check out [MunkiAdmin](https://github.com/hjuutilainen/munkiadmin) for a GUI to modify your munki_repo. Another great resource is [Mandrill](https://github.com/wollardj/Mandrill), a web front end for managing you munki_repo. Lastly, check out the [Getting Started with Munki](https://code.google.com/p/munki/wiki/GettingStartedWithMunki) guide if you have any questions about munki.  
+Also, go check out [MunkiAdmin](https://github.com/hjuutilainen/munkiadmin) for a GUI to modify your munki_repo. Another great resource is [Mandrill](https://github.com/wollardj/Mandrill), a web front end for managing you munki_repo. Lastly, check out the [Getting Started with Munki](https://github.com/munki/munki/wiki) guide if you have any questions about munki.  
