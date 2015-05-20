@@ -72,5 +72,3 @@ The result is a Linear PCM codec audio file with 16 bit/sample rate, 8 kilohertz
 
 #Update
 Although, this method does work and creates a windows audio file, it ended up not working for the original application that I needed. Needless to say there is no point removing this guide.
-
-Update: Oct 18, 2014 - Typo

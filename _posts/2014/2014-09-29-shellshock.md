@@ -54,4 +54,3 @@ Articles:
 [Remote exploit vulnerability in bash](https://groups.google.com/forum/?fromgroups#!topic/macenterprise/o26UYKc2JvM),  
 [What is Shellshock](http://www.pcworld.com/article/2688672/two-scenarios-that-would-make-os-x-vulnerable-to-the-shellshock-bug.html),  
 
-Update: Oct 2, 2014 - Added Apple Stack Exchange link. Nice descriptions of each exploit.

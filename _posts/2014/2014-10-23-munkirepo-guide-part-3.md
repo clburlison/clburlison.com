@@ -343,6 +343,3 @@ Articles:
 [Munkireport Wiki](https://github.com/munkireport/munkireport-php/wiki),  
 [nbalonso Munkireport-php](http://www.nbalonso.com/new-munkireport-php-2/),  
 
-Updated:  
-Oct. 24, 2014 - Spelling  
-Mar. 04, 2015 - Modify code blocks to use site default.  

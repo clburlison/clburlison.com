@@ -475,9 +475,3 @@ Articles:
 [Creating a Cron task](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps),  
 [Reposado - Apple Software Update Server](http://jerome.co.za/reposado-a-custom-apple-software-update-server/),  
 [Running Margarita in apache](http://denisonmac.wordpress.com/2013/02/28/running-margarita-in-apache/),  
-
-Updated:  
-Oct 4, 2014 - Updated [scheduling reposync](./#addendum-1-scheduling-reposync) to work. Reduce vhost lines for reposado.conf (now disables directory listing).  
-Oct. 12, 2014 - Spelling  
-Oct. 13, 2014 - Added [Nginx setup addendum](./#addendum-4-using-nginx)  
-Oct. 17, 2014 - Type and updated wording on [Nginx setup addendum](./#addendum-4-using-nginx) section

@@ -168,7 +168,3 @@ Articles:
 [Productsign](https://groups.google.com/forum/?fromgroups#!topic/the-luggage/9WeNMBcvKjA),  
 [Luggage](https://github.com/unixorn/luggage),  
 [Pkgbuild vs PackageMaker](https://groups.google.com/forum/?fromgroups#!topic/the-luggage/aCU9nNsMUaE)
-
-Updated:  
-Jan. 22, 2015 - Formatting & clarity
-Mar. 04, 2015 - Fix error

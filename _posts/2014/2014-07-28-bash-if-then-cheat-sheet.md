@@ -154,5 +154,3 @@ Special Thanks to the The Linux Documentation Project for outlining the informat
 
 Articles: 
 [Advanced Bash-Scripting Guide](http://tldp.org/LDP/abs/html/comparison-ops.html)
-
-Updates: Feb. 15, 2015 - Add examples section

@@ -202,5 +202,3 @@ Mandrill is setup! Stay tuned for Part 3, setting up Munkireport.
 
 Articles:  
 [Mandrill Wiki](https://github.com/wollardj/Mandrill/wiki)
-
-Updated: Feb. 06, 2015 - Typo. Thanks Tony.

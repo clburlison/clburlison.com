@@ -140,4 +140,3 @@ Again, a giant thank you to Erik Gomez for sharing with the munki community. Wit
  
 Articles: [Using GeekTool to show HelpDesk Information](https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY)  
 
-Updated:  Oct. 18, 2014 - Add ``--displayname`` to the "Organization profile" section. AKA make the profile have a pretty name in the Profiles tab of System Preference.
