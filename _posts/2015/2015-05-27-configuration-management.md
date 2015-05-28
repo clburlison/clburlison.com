@@ -118,7 +118,7 @@ managedmac::sshd::users:
    - techsupport
 {% endhighlight %}
 
-The syntax is easy to read. Even without knowing anything about Puppet or how Hiera works the above lines should make sense. Unfortunately, the above code on its own does nothing. The computer needs to know how to use that code which I will detail in a later posts.
+The syntax is easy to read. Even without knowing anything about Puppet or how Hiera works the above lines should make sense. Unfortunately, the above code on its own does nothing. The computer needs to know how to use that code which I will detail in a later post.
 
 # Conclusion
 Although using CM is not needed everywhere it can become quite handy. Using check scripts and creating multiple packages for closely related settings can be time consuming plus they are prone to error. In using Puppet, I am able to apply settings for multiple different groups however I only write the code once. The main advantage is when change is needed all 18+ versions look to one "master code" allowing me to make my updated change once.
