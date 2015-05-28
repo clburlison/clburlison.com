@@ -94,11 +94,11 @@ Nginx's installation on Ubuntu is very similar to Apache. All of its config file
 Lets backup the original default file create and create our own.    
 
 {% highlight bash %}
-sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bkup
-sudo nano /etc/nginx/sites-available/default
+sudo mv /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.bkup
+sudo nano /etc/nginx/sites-enabled/default
 {% endhighlight %}
 
-Make sure and change the server_name to match your server's FQDN or IP.
+Make sure and change the server_name to match your server's Fully Qualified Domain Name (FQDN) or IP.
 
 {% highlight html %}
 server {
@@ -108,7 +108,7 @@ server {
   root /usr/share/nginx/html;
   index index.php index.html index.htm;
 
-  server_name munki;
+  server_name munki; # Change this to your FQDN.
 
   location /munki_repo/ {
     alias /usr/local/munki_repo/;

@@ -208,3 +208,72 @@ body {
 	.vi { color: #f8f8f2 } /* Name.Variable.Instance */
 	.il { color: #ae81ff } /* Literal.Number.Integer.Long */
 }
+
+
+
+/* ==========================================================================
+   Collapsable content
+   http://stackoverflow.com/questions/15095933/pure-css-collapse-expand-div
+   ==========================================================================
+*/
+
+
+.more { 
+    display : block;
+    margin: 0px 0px 0px 70px;
+    vertical-align: top; 
+    height:auto !important; 
+}
+.list {
+    display:none; 
+    height:auto;
+    margin:0;
+    float: left;
+}
+.show {
+    display: none; 
+}
+.hide:target + .show {
+    display: inline; 
+}
+.hide:target {
+    display: none; 
+}
+.hide:target ~ .list {
+    display:inline; 
+}
+
+/*style the (+) and (-)*/
+.hide, .show {
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  opacity: .95;
+  margin-right: 0;
+  float: left;
+  margin-bottom: 25px;
+}
+
+.hide:hover, .show:hover {
+	color: #eee;
+	text-shadow: 0 0 1px #666;
+	text-decoration: none;
+	box-shadow: 0 0 4px #222 inset;
+	opacity: 1;
+	margin-bottom: 25px;
+}
+
+.list p{
+    height:auto;
+    margin:0;
+}
+.collapse-head {
+	float: left;
+	height: auto;
+	width: 90%;
+	line-height: 20px;
+	padding-left: 20px;
+	margin-bottom: 25px;
+	font-style: italic;
+}
