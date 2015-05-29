@@ -37,17 +37,17 @@ Odds are if you have ended up on this site you found something interesting or he
 </details>
 <details>
   <summary>Content delivery network provided by <u><a href= "http://www.cloudflare.com">CloudFlare</a></u>.</summary>
-  <p>More information coming soon!</p>
+  <p>Cloudflare is much more than just my Content deliver network (CDN). Cloudflare also runs my DNS for the domain clburlison.com, has the ability to directly inject code into my website, gives me a flexible SSL for free, and has some nice built in reporting features. Of those the SSL certificate is likely the coolest. Though I do not have a true SSL setup, content that you view is secure from your end to Cloudflare's servers.<br><br>They also have support to use CNAME alias records which means I am able to point my domain to clburlison.github.io. My search bar, powered by swiftype, is also injected via Cloudflare's built in app support. All pretty cool features for the free tier.</p>
 </details>
 <details>
   <summary>Content ideas are tracked via <u><a href= "https://github.com/clburlison/clburlison.github.io/issues">Github Issues</a></u> and <u><a href= "https://waffle.io/clburlison/clburlison.github.io">Waffle.io</a></u>.</summary>
   <p><a href="http://waffle.io/clburlison/clburlison.github.io"><img src="https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=ready&title=Ready" alt="Ready"></a>
     <a href="http://waffle.io/clburlison/clburlison.github.io"><img src="https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=in%20progress&title=In%20Progress" alt="In Progress"></a><br>
-    At any given time I might have 30 plus ideas or topics that I wish to write about. To keep track of these various ideas I create a Github issue. This allows me to add links or any notes that might be needed for me to understand what I wanted to write about. That means some of my issues might not make sense to you. Waffle.io just gives me a visual to keep me working on one or two topics at a time. The "Ready" tag is for content I am planning on writing about soon. The "In Progress" tag is for content ideas I'm working on right now.<br><br> With that said if you ever have any questions or would like for me to write about a specific topic feel free to create an issue and I will certainly think about it.  </p>
+    At any given time I might have 20 plus ideas or topics that I wish to write about. To keep track of these various ideas I create a Github issue. This allows me to add links or any notes that might be needed for me to understand what I wanted to write about. That means some of my issues might not make sense to you. Waffle.io just gives me a visual to keep me working on one or two topics at a time. The "Ready" tag is for content I am planning on writing about soon. The "In Progress" tag is for content ideas I'm working on right now.<br><br> With that said if you ever have any questions or would like for me to write about a specific topic feel free to create an issue and I will certainly think about it.  </p>
 </details>
 <details>
   <summary>The theme for this website was created by <u><a href= "https://mademistakes.com/">Michael Rose</a></u>.</summary>
-  <p>More information coming soon!</p>
+  <p>Michael Rose is a pretty awesome individual who is not only talented in web design but is also know for his drawings using the iOS app Paper. He also maintains a few other awesome Jekyll themes if you are interested. Lastly, his coding is very clear with plenty of code comments to help you understand what you're about to affect by changing values. </p>
 </details>
 <details>
   <summary>Travis-ci builds my website <u><a href= "https://travis-ci.org/clburlison/clburlison.github.io/builds">Build History</a></u>.</summary>
@@ -56,11 +56,11 @@ Odds are if you have ended up on this site you found something interesting or he
 </details>
 <details>
   <summary>User tracking is enabled and provided by <u><a href= "https://www.google.com/analytics/">Google Analytics</a></u>.</summary>
-  <p>More information coming soon!</p>
+  <p>Google rules the world. I do enable user tracking simply for the purpose of knowing viewership. Knowing which articles are the most popular help me when deciding what content I want to write about next.</p>
 </details>
 <details>
   <summary>Site comments are provided by <u><a href= "https://disqus.com">Disqus</a></u>.</summary>
-  <p>More information coming soon!</p>
+  <p>Disqus is a free service. It is widely used. It also allows users to login via different social media sites. What is not to like?</p>
 </details>
 
 </article>
