@@ -24,29 +24,16 @@ _This section highlights useful/popular posts from this domain._
 
 #External resources
 
-###Links
-* [Two Factor Auth List](https://twofactorauth.org/)
-* [Vim Cheat Sheet](http://vim.rtorr.com/)
-
-----
-
 ###Mac Conferences
-* [PSU MacAdmin](http://macadmins.psu.edu/conference/resources/)
+* [Penn State MacAdmins](http://macadmins.psu.edu/conference/resources/)
 * [MacSysAdmin](http://documentation.macsysadmin.se/)
 * [MacTech](http://www.mactech.com/conference/)
 * [MacIT](http://www.macitconf.com/full-agenda)
 
----
-
-###Blogroll
-1. [Greg Neagle](http://managingosx.wordpress.com/)
-1. [Rich Trouton](http://derflounder.wordpress.com/)
-1. [Graham Gilbert](http://grahamgilbert.com/)
-1. [Ben Toms (macmule)](http://macmule.com/)
 
 ---
 
-###Macintosh Open Source Software **
+###(Awesome) Mac Open Source Software **
 1. [AutoDMG](https://github.com/MagerValp/AutoDMG)
 1. [AutoPkg](https://github.com/autopkg)
 1. [Munki](https://github.com/munki/munki)
@@ -57,5 +44,27 @@ _This section highlights useful/popular posts from this domain._
 1. [Reposado](https://github.com/wdas/reposado)
 1. [Snipe-IT](https://github.com/snipe/snipe-it)
 
-
 ** AKA - the stuff I have [starred](https://github.com/stars/clburlison) on Github
+
+---
+
+###Blogroll
+1. [Managing OS X](http://managingosx.wordpress.com/) (Greg Neagle)
+1. [Der Flounder](http://derflounder.wordpress.com/) (Rich Trouton)
+1. [Graham Gilbert](http://grahamgilbert.com/)
+1. [Macmule](http://macmule.com/) (Ben Toms)
+1. [Groob](http://groob.io/) (Victor)
+1. [foigus' Notes](https://foigus.wordpress.com/) (Patrick Fergus)
+1. [Enterprise Mac)](http://enterprisemac.bruienne.com/) (Pepijn)
+1. [Mac Ops](http://macops.ca/) (Tim Sutton)
+1. [Shea Craig](http://labs.da.org/wordpress/sheagcraig/)
+1. [osxbytes](https://osxbytes.wordpress.com/) (Eric Holtam)
+1. [One More Admin](https://onemoreadmin.wordpress.com/) (Erik Gomez)
+1. [SWY's Technical Notes](https://swytechnotes.wordpress.com/) (Steve Yuroff)
+1. [On the Subject of Macs](https://grpugh.wordpress.com/) (Graham R Pugh)
+
+---
+
+###Random Links
+* [Two Factor Auth List](https://twofactorauth.org/)
+* [Vim Cheat Sheet](http://vim.rtorr.com/)
