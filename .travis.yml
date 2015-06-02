@@ -2,7 +2,9 @@ language: ruby
 cache: bundler
 sudo: false
 bundler_args: --without development --deployment --jobs=3 --retry=3
-script: bundle exec rake site:deploy --quiet
+script: 
+  - ./_scripts/add-filenames-to-posts.sh
+  - bundle exec rake site:deploy --quiet
 branches:
   only:
   - source

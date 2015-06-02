@@ -33,11 +33,14 @@ Masterless Puppet Articles
 - a script installs: facter, puppet, & heria plus any required gems
 - r10k downloads all git repos
 - eyaml secures private data from prying eyes
-- client checks in, gets "updates", compiles the delta updates against how the system currently is and modifies only the parts needed to keep the system in complines.
+- client checks in, gets "updates", compiles the delta updates against how the system currently is and modifies only the parts needed to keep the system in compliance.
 
-#Part 3 - Puppet Run script
+#Part 3 - Getting started with Puppet
+## Puppet Run script
 - credit to Graham Gilbert, Google for delay option
 - how the script works (quick overview)
+
+## More puppet details
 - puppet.conf : what do all these settings do/mean (in depth line by line)
 - Terminology what do all these repos have to mean?
 	* puppet-environment
