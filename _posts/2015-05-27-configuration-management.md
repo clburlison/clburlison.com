@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configuration Management
-modified: null
+modified: "2015-06-01"
 categories: 
   - automation
   - puppet
@@ -19,6 +19,7 @@ tags:
   - automation
   - configuration management
 ---
+
 
 <section id="table-of-contents" class="toc">
   <header>
@@ -66,7 +67,7 @@ Tim Sutton explained this recently on the munki-dev googlegroup. A relevant quot
 > 
 > [Tim Sutton](https://twitter.com/tvsutton) - [source](https://groups.google.com/d/msg/munki-dev/l_T_aZM9TGU/yb-CWZAv7UQJ)
 
-What Tim says above is absolutely true. However when that 5% is the most time consuming to "managed" and update you might want to look into a different solution. I have gotten away with using Munki as an all-in-one solution for over three years however when you need something custom...you have to write something custom. Also, don't forget to verify that custom something you just wrote works on all machines, with the logic in place to work with older operating systems. 
+What Tim says above is absolutely true. However when that 5% is the most time consuming to "manage" and update you might want to look into a different solution. I have gotten away with using Munki as an all-in-one solution for over three years however when you need something custom...you have to write something custom. Also, don't forget to verify that custom something you just wrote works on all machines, with the logic in place to work with older operating systems. 
 
 # How to use CM?
 I am still relatively new to using configuration management. However I have been working on a functional approach that fills the gap for me. The best advice I can give is to use CM for settings. Use a software solution, like Munki, for all packages. When you start making your CM product install software things can get complicated very quickly. 
