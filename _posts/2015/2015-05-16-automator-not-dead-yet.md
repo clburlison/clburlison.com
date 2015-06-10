@@ -1,23 +1,22 @@
 ---
 layout: post
 title: Automator is not dead yet
-modified: "2015-06-01"
+modified: null
 categories: 
   - automation
 excerpt: In fact it is as powerful today as it was five years ago.
 comments: true
 published: true
 image: 
-  feature: "2015-05-16/automator-workflow.png"
+  feature: 2015-05-16/automator-workflow.png
   credit: Brian Nagel
-  creditlink: "http://brian-nagel.com/2011/04/15/mac-osx-automator-examples/"
+  creditlink: http://brian-nagel.com/2011/04/15/mac-osx-automator-examples/
 tags: 
   - automator
   - apple
   - os x
   - automation
 ---
-
 
 # Intro
 Automator is unique in its ability of creating "automation" via the usage of a graphical tasked based workflow. Most other tools that I use for automation are command line driven. So what can you do that's so amazing? 
@@ -58,7 +57,7 @@ To run a service simply right click on a single file or group of files and selec
 {% img /images/2015-05-16/finder-service.png %}
 
 ## My Services
-Below are the services that I use frequently. To install these simply downloading, unzip, and double click on the ``.workflow`` file. A prompt to install will be be presented.
+Below are the services that I use frequently. To install these simply downloading, unzip, and double clicking on the ``.workflow`` file. A prompt to install will be be presented.
 
 * [Add_Prefix.workflow](/images/2015-05-16/Add_Prefix.workflow.zip)
 * [Print_Selection.workflow](/images/2015-05-16/Print_Selection.workflow.zip)
