@@ -62,6 +62,7 @@ _This section highlights useful/popular posts from this domain._
 1. [One More Admin](https://onemoreadmin.wordpress.com/) (Erik Gomez)
 1. [SWY's Technical Notes](https://swytechnotes.wordpress.com/) (Steve Yuroff)
 1. [On the Subject of Macs](https://grpugh.wordpress.com/) (Graham R Pugh)
+1. [Jason Wilder's Blog](http://jasonwilder.com/)
 
 ---
 
