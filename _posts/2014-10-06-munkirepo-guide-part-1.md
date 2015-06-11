@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
-modified: "2015-04-06"
+modified: "2015-06-10"
 categories: 
   - munki
   - ubuntu
@@ -94,7 +94,7 @@ Nginx's installation on Ubuntu is very similar to Apache. All of its config file
 Lets backup the original default file create and create our own.    
 
 {% highlight bash %}
-sudo mv /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.bkup
+sudo mv /etc/nginx/sites-enabled/default ~/default.bkup
 sudo nano /etc/nginx/sites-enabled/default
 {% endhighlight %}
 
@@ -122,6 +122,11 @@ server {
 
 And finally start the nginx service.  
 ``sudo /etc/init.d/nginx start``
+
+<div class="note info">
+  <h5>Nginx Issues</h5>
+  <p>To have Nginx check your configuration for issues run the following command <code>nginx -c /etc/nginx/nginx.conf -t</code>.</p>
+</div>
 
 ###Securing your munki_repo
 For my purpose, I will be securing my munki_repo with simple http basic authentication. Depending on the needs of your organization this might be enough but you might need to look into ssl and other advanced options. If you are interesting in these options check out the [munki wiki](https://github.com/munki/munki/wiki).
