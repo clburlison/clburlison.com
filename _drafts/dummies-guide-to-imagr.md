@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dummies Guide to Imagr (using Docker)"
+title: "Dummies Guide to Imagr (w/ Videos)"
 modified:
 categories: 
 - imaging
@@ -30,7 +30,9 @@ tags: [osx, imagr, imaging, OS X, Mac, ubuntu]
 
 
 # Introduction 
-This is the zero to hero walkthrough on setting up Imagr using all the hottest technologies available. With the added bonus of running on Linux (all of you OS X Server haters can rejoice). I will be using Ubuntu 14.04 in a virtual machine however since most of the setup is using Docker any distro should be compatible.
+This is the zero to hero walkthrough on setting up Imagr using all the hottest technologies available. With the added bonus of running on Linux (all of you OS X Server haters can rejoice). I will be using Ubuntu 14.04 in a virtual machine however since most of the setup is using Docker so any distro should be compatible.
+
+Before I get too far - Imagr is a python application that can restore a disk image, install packages, and run scripts all from a NetInstall environment. All of that said many community members are pushed away or confused by some of the requirements so hopefully this guide helps clear up some of the confusion. 
 
 The following technologies will be used:
 
@@ -41,10 +43,14 @@ The following technologies will be used:
 * [Imagr](https://github.com/grahamgilbert/imagr)
 * [Imagr Server](https://github.com/grahamgilbert/imagr_server)
 
-Although, I plan on covering the major points I will not be detailing every little bit and piece. I highly recommend reading the articles at the bottom of this post for more details.
+
+# Server Setup
+Prior to even downloading Imagr we want to setup the server requirements. I will be making the assumption that you want to run all services on a single box. In production, depending on load, it might be required to separate services or add additional hardware to meet your ideal performance. The only step I will not be detailing is installing Ubuntu and creating your admin account. If however you are truly lost the following [video](https://www.youtube.com/watch?v=klntfV5ZoOI) should get you pointed in the right direction. The only differing information I would say is download the 64 bit version and don't install any services at initial install, they can be installed later. 
 
 # Installing Docker
-To reduce the time of setup, many of these services we will be using Docker.
+To reduce the time of setup, many of these services we will be using Docker. This allows us to startup complex apps easily and reliable. Log into your docker host using ssh.
+
+VIDEO HERE
 
 Update your system:
 
@@ -55,11 +61,11 @@ sudo apt-get upgrade
 
 {% endhighlight %}
 
-Install wget and git:
+Install wget:
 
 {% highlight bash %}
 
-sudo apt-get install wget git
+sudo apt-get install wget
 
 {% endhighlight %}
 
@@ -77,10 +83,13 @@ Make sure any type your password when prompted.
 ## Setup Docker
 I will be "borrowing" [Graham's setup](http://grahamgilbert.com/blog/2015/04/22/getting-started-with-bsdpy-on-docker/) on using Docker. This make it easier to update containers in the future along with debugging when issues occur. We will store our permanent data at ``/usr/local/docker``.
 
+VIDEO HERE
+
 {% highlight bash %}
 
 sudo -i
 mkdir -p /usr/local/docker/{imagr-postgres,imagr,nbi}
+chmod -R 777 /usr/local/docker/{imagr,nbi}
 
 {% endhighlight %}
 
@@ -108,11 +117,11 @@ Paste the following code into your ``startup.sh`` and save.
 IP=`ifconfig eth0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://'`
 echo $IP
 
-# Build locally or via dockerhub
+# Pull new images
 cd /usr/local/docker/docker-imagr
 docker build -t web .
-cd /usr/local/docker/docker-imagr/smb-protected
-docker build -t smb-protected .
+
+docker pull clburlison/smb-protected:imagr_bsdpy
 docker pull grahamgilbert/imagr-server
 docker pull grahamgilbert/postgres
 
@@ -121,21 +130,21 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 sleep 5
 
+# Start all containers
 docker run -d \
   --restart="always" \
   --name web \
-  -v /usr/local/docker/imagr:/imagr \
+  -v /usr/local/docker/imagr:/repo \
   -p 80:80 \
   web
 
 docker run -d \
   --restart="always" \
-  --name smb-protected \
-  -e ADMIN_USER="imagr" \
-  -e ADMIN_PASS="imagr" \
-  -v /usr/local/docker/imagr:/repo \
+  --name smb \
+  -v /usr/local/docker/imagr:/imagr \
+  -v /usr/local/docker/nbi:/nbi \
   -p 445:445 \
-  smb-protected
+  clburlison/smb-protected:imagr_bsdpy
 
 docker run -d \
   --name="postgres-imagr" \
@@ -204,7 +213,7 @@ re-run the startup script. This will give BSDPy a chance to locate the new NBI i
 # AutoDMG / createOSXinstallPKG
 
 #Conclusion
-
+If you have gotten this far congratulations. 
 
 ---
 
