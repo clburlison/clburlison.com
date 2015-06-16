@@ -4,15 +4,19 @@
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
-		    <ul>
-		        {% for link in site.data.navigation %}
-				    {% if link.url contains 'http' %}
-				        {% assign domain = '' %}
-				        {% else %}
-				        {% assign domain = site.url %}
-				    {% endif %}
-				    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+        <ul>
+        {% for link in site.data.navigation %}
+  		    {% if link.url contains 'http' %}
+  		        {% assign domain = '' %}
+  		        {% else %}
+  		        {% assign domain = site.url %}
+  		    {% endif %}
+		    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
 				{% endfor %}
+        <form style="display: inline;">
+            <input type="text" class="st-default-search-input">
+            <input type="submit" value="Submit"></input>
+        </form>
 		    </ul>
 		</nav>
 	</div><!-- /.top-navigation -->
