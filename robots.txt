@@ -7,3 +7,4 @@ Disallow: /docs/
 
 User-agent: Swiftbot
 Disallow: /archives/
+Disallow: /categories/
