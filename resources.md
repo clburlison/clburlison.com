@@ -70,4 +70,4 @@ _This section highlights useful/popular posts from this domain._
 * [Two Factor Auth List](https://twofactorauth.org/)
 * [Vim Cheat Sheet](http://vim.rtorr.com/)
 * [htaccess to nginx converter](http://winginx.com/en/htaccess)
-* [EXL Escape](http://www.freeformatter.com/xml-escape.html)
+* [XML Escape](http://www.freeformatter.com/xml-escape.html)
