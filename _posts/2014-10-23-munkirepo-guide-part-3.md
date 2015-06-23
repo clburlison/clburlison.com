@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setup Munkireport on Ubuntu 14.04 - Part 3"
-modified: 2015-03-04
+modified: 2015-06-23
 categories: 
 - munki
 - ubuntu
@@ -160,7 +160,7 @@ You will want to change  the following in your config.php file:
 
 
 
-The root account is created for you, for testing purposes. You will want to create your own admin account by visiting [http://yourserver/report/auth/generate](http://yourserver.example.com/report/auth/generate).
+The root account is created for you, for testing purposes. You will want to create your own admin account by visiting [http://yourserver.example.com/report/index.php?/auth/generate](http://yourserver.example.com/report/index.php?/auth/generate).
 
 The last section of the config file deals with out MySQL database. You will want to change the username and password to match what you created in the previous step.
 
