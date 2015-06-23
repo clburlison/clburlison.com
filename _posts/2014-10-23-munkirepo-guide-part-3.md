@@ -188,7 +188,7 @@ $conf['keep_previous_displays'] = TRUE;
 |===============================================
 | Authorized Users of Munki Report
 |===============================================
-| Visit http://munki/report/auth/generate to generate additional local values
+| Visit http://yourserver.example.com/report/index.php?/auth/generate to generate additional local values
 */
 $auth_config['root'] = '$P$BUqxGuzR2VfbSvOtjxlwsHTLIMTmuw0'; // Password is root
 
