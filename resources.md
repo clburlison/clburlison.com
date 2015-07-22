@@ -49,20 +49,7 @@ _This section highlights useful/popular posts from this domain._
 ---
 
 ###Blogroll
-1. [Managing OS X](http://managingosx.wordpress.com/) (Greg Neagle)
-1. [Der Flounder](http://derflounder.wordpress.com/) (Rich Trouton)
-1. [Graham Gilbert](http://grahamgilbert.com/)
-1. [Macmule](http://macmule.com/) (Ben Toms)
-1. [Groob](http://groob.io/) (Victor)
-1. [foigus' Notes](https://foigus.wordpress.com/) (Patrick Fergus)
-1. [Enterprise Mac)](http://enterprisemac.bruienne.com/) (Pepijn)
-1. [Mac Ops](http://macops.ca/) (Tim Sutton)
-1. [Shea Craig](http://labs.da.org/wordpress/sheagcraig/)
-1. [osxbytes](https://osxbytes.wordpress.com/) (Eric Holtam)
-1. [One More Admin](https://onemoreadmin.wordpress.com/) (Erik Gomez)
-1. [SWY's Technical Notes](https://swytechnotes.wordpress.com/) (Steve Yuroff)
-1. [On the Subject of Macs](https://grpugh.wordpress.com/) (Graham R Pugh)
-1. [Jason Wilder's Blog](http://jasonwilder.com/)
+We are lucky enough that Charles Edge is hosting a pretty impressive list of MacAdmin blogs and sites, go check it out: [MacAdmin Links](http://krypted.com/guides/macadmin-links/)
 
 ---
 
