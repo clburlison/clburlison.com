@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Find My Mac"
-modified: 
+modified: 2015-09-21
 comments: true
 published: true
 keywords: Find My Mac, iCloud, nvram, 
@@ -12,9 +12,7 @@ redirect_from:
   - /blog/2014/05/19/find-my-mac/
 ---
 
-Under the hood of Find My Mac there are some security details that are not widely published. I take no credit to figuring these out since they were just recently brought to my attention. These are not details that a consumer would need to concern themselves with but I found them quite interesting. I decided to share what information I found.
-
----
+Under the hood of Find My Mac there are some security details that are not widely published. These details should not concern most consumers however I found them quite interesting.
 
 When a user enables Find My Mac (FMM) on their computer this is a system level change. This means if a user wishes to enable FMM they must be an administrator of the computer. A result of this is that in most environments where students are standard users this feature should never be enabled by accident. Another action that can be taken to limit FMM on machines under your management is to disable the iCloud prompt when a user logs into the machine for the first time. Look at Rich Trouton's [script](https://github.com/rtrouton/rtrouton_scripts/blob/master/rtrouton_scripts/disable_icloud_pop_up/disable_icloud_pop_up.sh) if you need a solution to do just that. 
 
