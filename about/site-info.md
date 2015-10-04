@@ -41,7 +41,7 @@ Odds are if you have ended up on this site you found something interesting or he
 </details>
 <details>
   <summary>Search bar powered by by <u><a href= "https://swiftype.com/">Swiftype</a></u>.</summary>
-  <p>I use to inject the search bar via Cloudflare's build in app support but the results were unreliable. Since then I have now embed the search bar in the header of this site. This might not give me the best results it definitely a 10/10 when you realize this is the free tier. The lack of easy to search website is definitely one of the downsides of a static website.</p>
+  <p>I use to inject the search bar via Cloudflare's build in app support but the results were unreliable. Since then I have now embed the search bar in the header of this site. This might not give me the best results but it is definitely a 10/10 when you realize this is the free tier. The lack of an easy to search is definitely one of the downsides of a static website.</p>
 </details>
 <details>
   <summary>Content ideas are tracked via <u><a href= "https://github.com/clburlison/clburlison.github.io/issues">Github Issues</a></u> and <u><a href= "https://waffle.io/clburlison/clburlison.github.io">Waffle.io</a></u>.</summary>
