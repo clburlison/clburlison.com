@@ -3,7 +3,7 @@ layout: post
 title: "iPhone 6S tips"
 excerpt: "Too many people do _not_ know these, you should they could help."
 categories: 
-- google
+- apple
 link: http://www.cultofmac.com/390109/iphone6s-tricks-tips/
 share: true
 ---

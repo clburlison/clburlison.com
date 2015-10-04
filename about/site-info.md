@@ -37,7 +37,11 @@ Odds are if you have ended up on this site you found something interesting or he
 </details>
 <details>
   <summary>Content delivery network provided by <u><a href= "http://www.cloudflare.com">CloudFlare</a></u>.</summary>
-  <p>Cloudflare is much more than just my Content deliver network (CDN). Cloudflare also runs my DNS for the domain clburlison.com, has the ability to directly inject code into my website, gives me a flexible SSL for free, and has some nice built in reporting features. Of those the SSL certificate is likely the coolest. Though I do not have a true SSL setup, content that you view is secure from your end to Cloudflare's servers.<br><br>They also have support to use CNAME alias records which means I am able to point my domain to clburlison.github.io. My search bar, powered by swiftype, is also injected via Cloudflare's built in app support. All pretty cool features for the free tier.</p>
+  <p>Cloudflare is much more than just my Content deliver network (CDN). Cloudflare also runs my DNS for the domain clburlison.com, has the ability to directly inject code into my website, gives me a flexible SSL for free, and has some nice built in reporting features. Of those the SSL certificate is likely the coolest. Though I do not have a true SSL setup, content that you view is secure from your end to Cloudflare's servers.<br><br>They also have support to use CNAME alias records which means I am able to point my domain to clburlison.github.io.</p>
+</details>
+<details>
+  <summary>Search bar powered by by <u><a href= "https://swiftype.com/">Swiftype</a></u>.</summary>
+  <p>I use to inject the search bar via Cloudflare's build in app support but the results were unreliable. Since then I have now embed the search bar in the header of this site. This might not give me the best results it definitely a 10/10 when you realize this is the free tier. The lack of easy to search website is definitely one of the downsides of a static website.</p>
 </details>
 <details>
   <summary>Content ideas are tracked via <u><a href= "https://github.com/clburlison/clburlison.github.io/issues">Github Issues</a></u> and <u><a href= "https://waffle.io/clburlison/clburlison.github.io">Waffle.io</a></u>.</summary>
