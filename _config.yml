@@ -22,10 +22,6 @@ highlighter: pygments
 sass:
   sass_dir: _sass
   style: compressed
-gems:
-  - jekyll-redirect-from
-  - jekyll-sitemap
-  - jekyll-gist
 
 kramdown:
   auto_ids: true

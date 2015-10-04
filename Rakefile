@@ -127,11 +127,56 @@ end
 
 #############################################################################
 #
+# Setup development environment
+#
+#############################################################################
+
+desc "Setup your development environment for this repo"
+task :setup => [:clean] do
+  puts "\n## Install Homebrew"
+  status = system('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"')
+  puts "\n## Install ruby for Homebrew"
+  status = system("brew install ruby")
+  puts status ? "Success" : "Failed"
+  puts "\n## Overrite ruby links for Homebrew"
+  status = system("brew link --overwrite ruby")
+  puts status ? "Success" : "Failed"
+  puts "\n## Install Bundler"
+  status = system("gem install bundler -v 1.9.7 --user-install -n /usr/local/bin")
+  puts status ? "Success" : "Failed"
+  puts "\n## Install repo requirements with Bundler"
+  status = system("bundle install --path /usr/local/Cellar")
+  puts status ? "Success" : "Failed"
+end
+
+desc "Clean up your development environment (uninstall)"
+task :clean do
+  puts "\n## Unlink ruby from Homebrew"  
+  status = system("brew unlink ruby")
+  puts status ? "Success" : "Failed"
+  puts "\n## Uninstall Homebrew"
+  puts "\n## Most of the time you should select No"  
+  status = system('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"')
+  puts status ? "Success" : "Failed"
+  puts "\n## Uninstall gpg"
+  status = system("brew uninstall gpg")
+  puts status ? "Success" : "Failed"
+  puts "\n## Uninstall rvm"
+  status = system("rvm implode")
+  puts status ? "Success" : "Failed"
+  puts "\n## Uninstall Bundler"
+  status = system("gem uninstall bundler")  
+  puts status ? "Success" : "Failed"
+end
+
+#############################################################################
+#
 # Site tasks
 #
 #############################################################################
 
 namespace :site do
+  # puts "export GEM_PATH=$HOME/.gem/ruby/2.0.0/bin"
   desc "Add filenames to posts"
   task :edit do
     check_destination
@@ -141,18 +186,18 @@ namespace :site do
   desc "Generate the site"
   task :build do
     check_destination
-    sh "bundle exec jekyll build"
+    sh "jekyll build"
   end
 
   desc "Generate the site and serve locally"
   task :serve do
     check_destination
-    sh "bundle exec jekyll serve --config _config.yml,_config-dev.yml"
+    sh " jekyll serve --config _config.yml,_config-dev.yml"
   end
 
   desc "Generate the site, serve locally and watch for changes"
   task :watch do
-    sh "bundle exec jekyll serve --watch --drafts --config _config.yml,_config-dev.yml"
+    sh "jekyll serve --watch --drafts --config _config.yml,_config-dev.yml"
   end
 
   desc "Generate the site and push changes to remote origin"
@@ -177,7 +222,7 @@ namespace :site do
     Dir.chdir(CONFIG["destination"]) { sh "git checkout #{DESTINATION_BRANCH}" }
 
     # Generate the site
-    sh "bundle exec jekyll build"
+    sh "jekyll build"
 
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
