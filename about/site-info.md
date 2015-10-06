@@ -21,11 +21,11 @@ Odds are if you have ended up on this site you found something interesting or he
 
 <details>
   <summary>This website is built using <u><a href= "http://jekyllrb.com">Jekyll</a></u>.</summary>
-  <p>Jekyll is the backbone of this site. It is a powerful engine that allows me to write plan text files. Jekyll then handles converting all the css, liquid tags, code blocks, html snippets, etc. into a pretty static web site. Since this site is static it allows me to quickly modify sections. Also, it is quite fast to serve static pages so response time should always be pretty good. </p>
+  <p>Jekyll is the backbone of this site. It is a powerful engine that allows me to write plain text files. Jekyll then handles converting all the css, liquid tags, code blocks, html snippets, etc. into a pretty static web site. Since this site is static it allows me to quickly modify sections. Also, it is quite fast to serve static pages so response time should always be pretty good. </p>
 </details>
 <details>
   <summary>All content is written in <u><a href= "http://en.wikipedia.org/wiki/Markdown">Markdown</a></u>.</summary>
-  <p>If you are not familiar with markdown it allows me to write plan text in such a way that an engine will be able to transform that text into a rich format like html. All this means I can write using any text editor I want (even vim if I so please) and create content without having to write all those dirty html tags. How many times have you forgotten to add that forward slash on a end tag resulting in a malformed page? </p>
+  <p>If you are not familiar with markdown it allows me to write plain text in such a way that an engine will be able to transform that text into a rich format like html. All this means I can write using any text editor I want (even vim if I so please) and create content without having to write all those dirty html tags. How many times have you forgotten to add that forward slash on a end tag resulting in a malformed page? </p>
 </details>
 <details>
   <summary>Hosting for this website is by <u><a href= "https://pages.github.com/">Github Pages</a></u>.</summary>

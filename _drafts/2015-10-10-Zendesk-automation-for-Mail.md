@@ -1,3 +1,19 @@
+---
+layout: post
+title: "Zendesk Automation for Mail"
+modified:
+categories:
+- automation
+excerpt: Utilize Zendesk's mail API with Apple Mail and Automator. 
+comments: true
+published: flase
+image:
+  feature: /temp/mail-api-banner.png
+  credit: Zendesk
+  creditlink: https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox
+tags: [osx, Apple, Mail, Zendesk, automation, api, automator, helpdesk, support]	
+---
+
 #Intro 
 
 
@@ -47,11 +63,11 @@ These servies are stored at ~/Library/Services/
 
 NOTE: I have the bcc field enabled in Apple Mail. If you don't you will need to remove one of the tabs
 
-#
+#Extra
 
 >To your second question: If the custom field is a drop down, use the tag associated with the selection you want to set. Once you add the tag and submit the ticket update, it will automatically make the corresponding selection from the drop-down. Other custom fields such as regex, numbers and text are not settable via the mail API.
 > 
-> [Emily - Comment 1/2 down page](https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox?page=4&preview%5Btheme_id%5D=-1%29)
+> [Comment by Emily - 3/4 page down](https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox?page=4&preview%5Btheme_id%5D=-1%29)
 
 Resources: [Updating Ticket Properties from You Inbox](https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox),  
 [Automatically Inserting Text Globally](http://apple.stackexchange.com/a/87989),  
