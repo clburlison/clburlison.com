@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-# gem 'jekyll', '~> 3.0.0.pre.beta4'
-gem 'jekyll', '~> 2.5.3'
+gem 'jekyll'
 gem 'jekyll-redirect-from'
 gem 'jekyll-sitemap'
 gem 'jekyll-gist'

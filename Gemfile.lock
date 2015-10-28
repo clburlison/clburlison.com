@@ -130,7 +130,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  jekyll (~> 2.5.3)
+  jekyll
   jekyll-gist
   jekyll-redirect-from
   jekyll-sitemap
@@ -138,3 +138,6 @@ DEPENDENCIES
   rake
   stringex
   travis
+
+BUNDLED WITH
+   1.10.6

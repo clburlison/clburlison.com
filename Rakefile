@@ -131,42 +131,45 @@ end
 #
 #############################################################################
 
-desc "Setup your development environment for this repo"
-task :setup => [:clean] do
+desc "Setup your development environment"
+task :setup do
   puts "\n## Install Homebrew"
   status = system('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"')
-  puts "\n## Install ruby for Homebrew"
-  status = system("brew install ruby")
+  puts "\n## Install rvm"
+  status = system("curl -sSL https://get.rvm.io | bash -s stable --ruby=")
   puts status ? "Success" : "Failed"
-  puts "\n## Overrite ruby links for Homebrew"
-  status = system("brew link --overwrite ruby")
+  puts "\n## Install Ruby 2.1.0 with rvm"
+  status = system("rvm install ruby-2.1.0")
+  puts status ? "Success" : "Failed"
+  puts "\n## Source rvm so it works in this session"
+  status = system("source ~/.profile")
   puts status ? "Success" : "Failed"
   puts "\n## Install Bundler"
-  status = system("gem install bundler -v 1.9.7 --user-install -n /usr/local/bin")
+  status = system("gem install bundler")
   puts status ? "Success" : "Failed"
   puts "\n## Install repo requirements with Bundler"
-  status = system("bundle install --path /usr/local/Cellar")
+  status = system("bundle install --binstubs=$GEM_HOME/bin/")
   puts status ? "Success" : "Failed"
 end
 
-desc "Clean up your development environment (uninstall)"
+desc "(Uninstall) Clean up your development environment"
 task :clean do
-  puts "\n## Unlink ruby from Homebrew"  
-  status = system("brew unlink ruby")
-  puts status ? "Success" : "Failed"
+  # puts "\n## Unlink ruby from Homebrew"
+  # status = system("brew unlink ruby")
+  # puts status ? "Success" : "Failed"
   puts "\n## Uninstall Homebrew"
-  puts "\n## Most of the time you should select No"  
+  puts "\n## Most of the time you should select _NO_"  
   status = system('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"')
   puts status ? "Success" : "Failed"
-  puts "\n## Uninstall gpg"
-  status = system("brew uninstall gpg")
+  puts "\n## Set Ruby to System"
+  status = system("rvm --default system")
   puts status ? "Success" : "Failed"
   puts "\n## Uninstall rvm"
   status = system("rvm implode")
   puts status ? "Success" : "Failed"
-  puts "\n## Uninstall Bundler"
-  status = system("gem uninstall bundler")  
-  puts status ? "Success" : "Failed"
+  # puts "\n## Uninstall Bundler"
+  # status = system("gem uninstall bundler")
+  # puts status ? "Success" : "Failed"
 end
 
 #############################################################################
@@ -234,3 +237,13 @@ namespace :site do
     end
   end
 end
+
+#############################################################################
+#
+# My personal rvm notes...because I'm not a ruby dev
+#
+#############################################################################
+# rvm gemset create blog
+# rvm gemset use blog
+# Set default Ruby to 2.1.0 with rvm
+# rvm --default use 2.1.0
