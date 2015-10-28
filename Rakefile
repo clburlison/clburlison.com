@@ -141,6 +141,9 @@ task :setup do
   puts "\n## Install Ruby 2.1.0 with rvm"
   status = system("rvm install ruby-2.1.0")
   puts status ? "Success" : "Failed"
+  puts "\n## Default use Ruby 2.1.0 from rvm"
+  status = system("rvm --default use 2.1.0")
+  puts status ? "Success" : "Failed"
   puts "\n## Source rvm so it works in this session"
   status = system("source ~/.profile")
   puts status ? "Success" : "Failed"
