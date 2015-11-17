@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import Logic Pro X Audio Content 
-modified: 2015-10-04
+modified: 2015-11-17
 categories: 
   - munki
 excerpt: Import Logic Pro X Audio Content packages into your Munki repo.
@@ -57,3 +57,15 @@ The previous script by Hannes will download the audio packages into many sub-dir
 {% endhighlight %}
 
 As such I needed to recursively search for the ``.pkg`` extension and import those files into Munki. The result is the following python script: [munkiimport_logic_audio.py](https://github.com/clburlison/scripts/tree/master/clburlison_scripts/LogicProX)
+
+<div class="note warning">
+  <h5>10.11 and Logic Audio Content</h5>
+	<b>November 17th, 2015</b>
+  <p>Dave Weale found a nice little bug with this approach. <br><br><u>TL;DR:</u> 10.11 has SIP enabled and Apple is writing Receipts for the audio content to <code>/System/Library/Receipts</code>. When munki imports these packages we are using the package receipts to determine if the content has been installed. When removing the package content Munki is unable to remove the recipe as /System is SIP protected. 
+    <br><br>
+    More info: <a href="https://groups.google.com/forum/#!topic/munki-discuss/TjeSl39zGVw">Logic Pro X assets not installing after removal & attempted reinstall</a>
+  </p>
+</div>
+
+
+
