@@ -6,16 +6,26 @@ Personal Website for Clayton Burlison
 [![prose.io](https://clburlison.com/images/prose.png)](http://prose.io/#clburlison/clburlison.github.io)  
 [Prose.io](http://prose.io/#clburlison/clburlison.github.) is a online service to write/edit content without the need for a full jekyll/git/ruby setup.
 
-#Site info 
+# Site info 
 This repo contains my personal website, [clburlison.com](https://clburlison.com).
 
 More information about this site can be found [here](https://clburlison.com/about/site-info/).
 
-##Travis integration
+## Jekyll Compose Help
+
+    draft      # Creates a new draft post with the given NAME
+    post       # Creates a new post with the given NAME
+    publish    # Moves a draft into the _posts directory and sets the date
+               #    publish _drafts/my-new-draft.md
+    unpublish  # Moves a post back into the _drafts directory
+    page       # Creates a new page with the given NAME
+
+
+## Travis integration
 
 To get travis-ci setup check out this awesome project [jekyll-travis](https://github.com/mfenner/jekyll-travis)!
 
-##License
+## License
 
 	The MIT License (MIT)
 
