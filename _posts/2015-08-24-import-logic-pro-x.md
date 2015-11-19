@@ -4,6 +4,7 @@ title: Import Logic Pro X Audio Content
 modified: 2015-11-17
 categories: 
   - munki
+  - python
 excerpt: Import Logic Pro X Audio Content packages into your Munki repo.
 comments: true
 published: true
