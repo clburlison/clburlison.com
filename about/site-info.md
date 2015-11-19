@@ -72,6 +72,6 @@ Odds are if you have ended up on this site you found something interesting or he
 <br>
 
 #Why Static?
-I really dislike CMS websites. When I see blogs that have code snippets that are a pain to view I cry a little. Sure Jekyll is harder to get the way you want. Customizing it can be very time consuming and confusing. However, the payoff is full control and ultimate flexibility. Also, the extra overhead on my plate to create this website the way I have is both fun and I believe provides the best experience. All that said what do I know...I just fix Macs.
+I really dislike CMS websites. When I see blogs that have code snippets that are a pain to view I cry a little. Sure Jekyll is harder to get the way you want. Customizing it can be very time consuming and confusing. However, the payoff is full control and ultimate flexibility. Also, the extra overhead on my plate to create this website the way I have is both fun and I believe provides the best experience. But what do I know...I just fix Macs.
 
 I have tried both Blogger and Wordpress prior to finally getting latched onto Jekyll. You won't find those sites...
