@@ -24,6 +24,14 @@ _This section highlights useful/popular posts from this domain._
 
 #External resources
 
+###Slack Channel
+
+[![Slack Status](https://macadmins.herokuapp.com/badge.svg)](https://macadmins.herokuapp.com)
+
+MacAdmins is a slack channel that is a free resource available to the community. You will find me online as 'clburlison' however I tend to avoid the `#general` channel and participate more in topic channels. After sign up you can visit our slack group in your browser by visiting [https://macadmins.slack.com/](https://macadmins.slack.com/) or [downloading](https://slack.com/downloads) Slack for Mac, Windows, Linux, iOS, Android, or Windows Phone.
+
+---
+
 ###Mac Conferences
 * [Penn State MacAdmins](http://macadmins.psu.edu/conference/resources/)
 * [MacSysAdmin](http://documentation.macsysadmin.se/)
