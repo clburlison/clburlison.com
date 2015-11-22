@@ -67,6 +67,7 @@
       <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
     {% endfor %}
     </ul>
+    {% include custom/_webmention.html %}
     <!-- 
 <center><nav class="pagination" role="navigation">
       {% if page.previous %}
