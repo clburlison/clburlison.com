@@ -1,0 +1,30 @@
+       _ _                _ _                 
+      | | |              | (_)                
+   ___| | |__  _   _ _ __| |_ ___  ___  _ __  
+  / __| | '_ \| | | | '__| | / __|/ _ \| '_ \ 
+ | (__| | |_) | |_| | |  | | \__ \ (_) | | | |
+  \___|_|_.__/ \__,_|_|  |_|_|___/\___/|_| |_|
+
+/* https://clburlison.com */
+
+
+/* ABOUT */
+
+    Maintainer:   Clayton Burlison
+    Twitter:      @clburlison
+    Location:     Fort Worth, Texas USA
+
+
+/* SITE */
+    
+    Language:     English
+    Built with:   Jekyll <https://jekyllrb.com>
+                  TextMate <https://macromates.com>
+                  Adobe Photoshop
+                  Travis CI <https://travis-ci.org>
+                  Text to ASCII Art Generator <http://patorjk.com/software/taag>
+    
+
+/* SPECIAL THANKS */
+
+    mademistakes <https://mademistakes.com>
