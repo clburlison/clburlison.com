@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setup Reposado + Margarita on Ubuntu 14.04
-modified: 2015-04-06
+modified: 2015-11-26
 categories: 
   - reposado
   - ubuntu
@@ -34,7 +34,7 @@ If you have not heard of [reposado](https://github.com/wdas/reposado). It is a s
 
 > * It doesn’t need to run on a Mac.
 > * It can provide updates to any OS X version, whereas Apple’s Mac OS X server can only provide updates (not strictly true, but not easily!) to its current version or below e.g. your OS X 10.6 server can only provide to OS X 10.6 or below – it can’t cater for your OS X 10.7 or OS X 10.8 clients. Reposado doesn’t have this pitfall, it caters for all!  
->   -- [Jerome](http://jerome.co.za/reposado-a-custom-apple-software-update-server/)
+>   -- [Jerome](http://jerome.co.za/) _orginal article has been removed_
 
 Plus, with reposado you can create multiple releases aka Production and Testing catalogs. 
 
@@ -146,10 +146,8 @@ from margarita import app as application
 Before we go about configuring Apache, we need to make sure it has the proper filesystem permissions.
 
 {% highlight bash %}
-
-sudo chgrp -R www-data /usr/local/asus
+sudo chown -R www-data:www-data /usr/local/asus
 sudo chmod -R g+r /usr/local/asus
-
 {% endhighlight %}
 
 I have apache sharing the reposado files via port 8088 (the Apple default) and margarita on port 8089 (default). You should be able to copy and paste the following snippets of my apache config files, and see everything working properly.
@@ -274,7 +272,7 @@ RewriteRule ^index(.*)\.sucatalog$ content/catalogs/others/index-10.10-10.9-moun
 Now we need to make sure the web service has permissions to the file we will re-run the following commands.
 
 {% highlight bash %}
-sudo chgrp -R www-data /usr/local/asus
+sudo chown -R www-data:www-data /usr/local/asus
 sudo chmod -R g+r /usr/local/asus
 {% endhighlight %}
 
@@ -367,7 +365,7 @@ Now modify the apache configuration file for Margarita. Add the following "Authe
 Modify permissions, one last time.
 
 {% highlight bash %}
-sudo chgrp -R www-data /usr/local/asus
+sudo chown -R www-data:www-data /usr/local/asus
 sudo chmod -R g+r /usr/local/asus
 {% endhighlight %}
 
@@ -467,11 +465,14 @@ Lastly, start the nginx service to start serving your files.
 #Credits
 Need to truly thank both Joe Wollard & Jerome for their excellent documentation. This page is strongly based off of their work. 
 
+Thanks Owen Pragel for reporting [issue #42](https://github.com/clburlison/clburlison.github.io/issues/42).
+
 ---
 
-Articles:  
+Links:  
 [Apache authentication](http://www.webreference.com/programming/apache_authentication/index.html),  
 [Configure reposado with Rewrite Rules](http://www.iotopia.com/configure-reposado-on-an-ubuntu-oneric-server-so-deploy-studio-can-use-it/),  
 [Creating a Cron task](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps),  
 [Reposado - Apple Software Update Server](http://jerome.co.za/reposado-a-custom-apple-software-update-server/),  
 [Running Margarita in apache](http://denisonmac.wordpress.com/2013/02/28/running-margarita-in-apache/),  
+[Issue #42](https://github.com/clburlison/clburlison.github.io/issues/42),  

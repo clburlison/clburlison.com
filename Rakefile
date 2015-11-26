@@ -127,56 +127,6 @@ end
 
 #############################################################################
 #
-# Setup development environment
-#
-#############################################################################
-
-desc "Setup your development environment"
-task :setup do
-  puts "\n## Install Homebrew"
-  status = system('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"')
-  puts "\n## Install rvm"
-  status = system("curl -sSL https://get.rvm.io | bash -s stable --ruby=")
-  puts status ? "Success" : "Failed"
-  puts "\n## Source rvm so it works in this session"
-  status = system("source $HOME/.rvm/scripts/rvm")
-  puts status ? "Success" : "Failed"
-  puts "\n## Install Ruby 2.1.0 with rvm"
-  status = system("rvm install ruby-2.1.0")
-  puts status ? "Success" : "Failed"
-  puts "\n## Default use Ruby 2.1.0 from rvm"
-  status = system("rvm --default use 2.1.0")
-  puts status ? "Success" : "Failed"
-  puts "\n## Install Bundler"
-  status = system("gem install bundler")
-  puts status ? "Success" : "Failed"
-  puts "\n## Install repo requirements with Bundler"
-  status = system("bundle install --binstubs=$GEM_HOME/bin/")
-  puts status ? "Success" : "Failed"
-end
-
-desc "(Uninstall) Clean up your development environment"
-task :clean do
-  # puts "\n## Unlink ruby from Homebrew"
-  # status = system("brew unlink ruby")
-  # puts status ? "Success" : "Failed"
-  puts "\n## Uninstall Homebrew"
-  puts "\n## Most of the time you should select _NO_"  
-  status = system('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"')
-  puts status ? "Success" : "Failed"
-  puts "\n## Set Ruby to System"
-  status = system("rvm --default system")
-  puts status ? "Success" : "Failed"
-  puts "\n## Uninstall rvm"
-  status = system("rvm implode")
-  puts status ? "Success" : "Failed"
-  # puts "\n## Uninstall Bundler"
-  # status = system("gem uninstall bundler")
-  # puts status ? "Success" : "Failed"
-end
-
-#############################################################################
-#
 # Site tasks
 #
 #############################################################################

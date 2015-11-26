@@ -7,7 +7,6 @@ gem 'jekyll-gist'
 gem 'rake'
 gem 'stringex'
 gem 'travis'
-gem 'jekyll-compose'
 
 group :jekyll_plugins do
   gem 'jekyll-compose'
@@ -23,4 +22,3 @@ end
 # gem 'rdiscount'
 gem 'kramdown'
 # gem 'redcarpet'
-# gem 'jekyll-compose'

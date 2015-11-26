@@ -21,4 +21,5 @@ tags: [office2016, choices.xml, microsoft, installer, command line, munki]
 ---
 
 Links:  
-[Munki ChoiceChangesXML Wiki](https://github.com/munki/munki/wiki/ChoiceChangesXML)
+[Munki ChoiceChangesXML Wiki](https://github.com/munki/munki/wiki/ChoiceChangesXML),  
+[Office 2011 Choices Explained](https://jamfnation.jamfsoftware.com/discussion.html?id=13946#responseChild84049)
