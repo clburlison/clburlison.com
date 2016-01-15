@@ -19,6 +19,7 @@ _This section highlights useful/popular posts from this domain._
   * [Setup a Munki repo - Part 1](/munkirepo-guide-part-1/)
   * [Setup Mandrill - Part 2](/munkirepo-guide-part-2/)
   * [Setup Munkireport-php - Part 3](/munkirepo-guide-part-3/)
+* [Demystify Office 2016 for Mac](/demystify-office2016/)  
 
 ---
 
@@ -47,7 +48,9 @@ MacAdmins is a slack group that is a free resource available to the community. Y
 1. [Munki](https://github.com/munki/munki)
 1. [MunkiAdmin](https://github.com/hjuutilainen/munkiadmin)
 1. [Munkireport-php](https://github.com/munkireport/munkireport-php) 
-1. [Mandrill](https://github.com/wollardj/Mandrill)
+1. [Munki Web Admin 2](https://github.com/munki/mwa2)
+1. [munkipkg](https://github.com/munki/munki-pkg)
+1. [the Luggage](https://github.com/unixorn/luggage)
 1. [Sal](https://github.com/salopensource/sal)
 1. [Reposado](https://github.com/wdas/reposado)
 1. [Snipe-IT](https://github.com/snipe/snipe-it)
