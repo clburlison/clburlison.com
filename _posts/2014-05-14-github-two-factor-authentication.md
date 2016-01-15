@@ -31,7 +31,7 @@ Luckily Github has made creating a OTP quite easy once you know what you are loo
 Below are the steps needed to create your OTP token and re-add your Github account in SourceTree.
 
 ###Setting up the OTP
-To create the OTP, use the following [link](https://github.com/settings/applications). Click on "Generate New Token".  
+To create the OTP, use the following [link](https://github.com/settings/tokens). Click on "Generate New Token".  
 {% img /images/2014-05-14/otp.png Creating an OTP %}
 
 Give your OTP a Token description. Make sure at least the "repo" and "public_repo" options are checked. Click "Generate token".  
