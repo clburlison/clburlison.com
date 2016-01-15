@@ -437,7 +437,7 @@ $ /usr/sbin/installer -applyChoiceChangesXML /path/to/office2016.xml \
 
 <div class="note info">
   <h5>Following section:</h5>
-  <p>I debaited adding the following section or not. The TL;DR is make sure you are using release 15.17.0 or greater. If you want more details then carry on.</p>
+  <p>I debated adding the following section or not. The TL;DR is make sure you are using release 15.17.0 or greater. If you want more details then carry on.</p>
 </div>
 
 
