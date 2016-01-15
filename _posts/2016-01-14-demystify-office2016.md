@@ -423,7 +423,7 @@ $ defaults write com.microsoft.autoupdate2 LastUpdate -date '2001-01-01T00:00:00
 ##I don't want to install MAU, is that supported?
 Yes, MAU is completely optional. In fact each of the five core MS applications are optional. Just because the installer has all five available does not mean you must install them. 
 
-If you choose to _not_ install MAU, all updates to the Office suite will be completely on you as the administrator. In my environment MAU is removed when I uninstall Office 2011. During the rollout of Office 2016 I use a choice xml file to disable the installation from the SKU-less installer. 
+If you choose to _not_ install MAU, all updates to the Office suite will be completely on you as the administrator. In my environment MAU is removed when I uninstall Office 2011. During the rollout of Office 2016 I use a choice xml file to disable the installation of MAU from the SKU-less installer. 
 
 In the example below:
 
