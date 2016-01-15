@@ -95,7 +95,7 @@ Five months into Office 2016 being out and there are five different kinds of ins
 
 #How do I install O2016?
   
-You should install the package that Microsoft is giving you. **PERIOD**. End of story. Stop taking their package apart and "fixing things". It is fine to poke your nose under the hood but there is absolutely no reason for you to be re-packaging anything Office 2016 related. This was a common practice with Office 2011 and at the start of Office 2016. All issues that were resolved with re-packaging have been resolved. Microsoft has listened and now it is your turn. STAHP.
+You should install the package that Microsoft is giving you. **PERIOD**. End of story. Stop taking their package apart and "fixing things". It is fine to poke your nose under the hood but there is absolutely no reason for you to be re-packaging anything Office 2016 related. This was a common practice with Office 2011 and at the start of Office 2016. All issues that were resolved with re-packaging have been fixed by Microsoft. Microsoft has listened and now it is your turn. STAHP.
 
 ###Method 1 - Office 365 installation
 You can download a retail full suite installer from your VLSC dashboard or from [http://macadmins.software](http://macadmins.software). Both locations point to the same file as it a public release. This installer can be installed:
