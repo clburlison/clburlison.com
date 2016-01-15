@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demystify Office 2016 for Mac"
-modified:
+modified: 2016-01-15
 categories: 
   - microsoft
   - osx
@@ -29,9 +29,9 @@ tags: [office2016, Mac, microsoft, os x, munki, casper, deployment, installation
 #Intro
 Microsoft Office 2016 for Mac had a [rough](https://macops.ca/whats-wrong-with-the-office-2016-volume-license-installer/) [start](https://macops.ca/the-office-for-mac-2016-volume-license-installer-two-months-later/) [for](http://www.richard-purves.com/?p=79) [sure](https://derflounder.wordpress.com/2015/08/05/creating-an-office-2016-15-12-3-installer/). With that being said things have gotten better and quite rapidly. This post will focus on where Office 2016 for Mac currently stands, commonly asked questions, best practices, and solutions for updates.
 
-This post should serve as a overview of the changes to Office 2016 for Mac from about November 2015 to Present (January 14th).
+This post should serve as a overview of the changes to Office 2016 (O2016) for Mac from about November 2015 to Present (January 14th).
 
-Before we can get too far into this post it needs to be noted that none of this would be possible without the hard work and support of the following individuals. William Smith ([@meck](https://twitter.com/meck)/talkingmoose) took it on himself to reach out to the Mac Development Team at Microsoft and helped push them into our community Slack group. Paul Bowden ([@mrexchange](https://twitter.com/mrexchange)/pbowden) and Erik Schwiebert ([@Schwieb](https://twitter.com/Schwieb)) are both Software Engineers at Microsoft inside the Mac Development group. They have been very responsive to feedback from the community.
+Before we can get too far into this post it needs to be noted that none of this would be possible without the hard work and support of the following individuals. Contact info is in the form of Twitter/Slack handle. William Smith ([@meck](https://twitter.com/meck)/[@talkingmoose](https://macadmins.slack.com/team/talkingmoose)) took it on himself to reach out to the Apple Product Experience (APEX) Team at Microsoft and helped push them into our community Slack group. Paul Bowden ([@mrexchange](https://twitter.com/mrexchange)/[@pbowden](https://macadmins.slack.com/team/pbowden)) and Erik Schwiebert ([@schwieb](https://twitter.com/schwieb)/[@schwieb](https://macadmins.slack.com/team/schwieb)) are both Software Engineers at Microsoft inside the APEX team. They have been very responsive to feedback from the community.
 
 And so you don't think I'm making up facts I will be supplying quotes from Microsoft's pbowden on almost everything. You will need to join our MacAdmins Slack group if you wish to view the source. Sign up page is [http://macadmins.org](http://macadmins.org). 
 
@@ -39,53 +39,62 @@ And so you don't think I'm making up facts I will be supplying quotes from Micro
 
 #Office Packages
 
-Five months into Office 2016 being out and there are five different kinds of installers/updaters. This table should help to understand what is available and the differences. 
+Five months into Office 2016 being out and there are five different kinds of installers/updaters. Plus a bonus serializer package. This table should help clarify what is available and the differences between each package. 
 
 <table border="1">
   <tr>
     <th>Name</th>
     <th>Type</th>
     <th>Comments</th>
+    <th>Requires Live System</th>
     <th>File Size★</th>
   </tr>
   <tr>
     <th>SKU-less★★</th>
     <th>Installer</th>
-    <th>Contains all of the apps, good for O365 installations. This package can be used in combination with the VL Serializer to create a VL Installer without needing to visit Microsoft's Volume Licensing Service Center (VLSC).</th>
+    <th>Contains all apps. Good for O365 installations. Can be used in combination with the VL Serializer to create a VL Installer without needing to visit Microsoft's Volume Licensing Service Center (VLSC). <u><a href="#method-1---office-365-installation">Additional info</a></u></th>
+    <th>No</th>
     <th>~1.4 GB</th>
   </tr>
   <tr>
     <th>Volume License (VL)</th>
     <th>Installer</th>
-    <th>Contains all apps, has Serializer package embed. Will <b>not</b> function properly on a non-live system. AKA - must be installed on a Mac that is currently running OS X (not target disk mode, AutoDMG, etc.)</th>
+    <th>Contains all apps. Has Serializer package embed. <u><a href="#method-2---volume-license-installation">Additional info</a></u></th>
+    <th>Yes</th>
     <th>~1.4 GB</th>
   </tr>
   <tr>
     <th>Standalone</th>
     <th>Installer</th>
-    <th>Available from <u><a href="http://macadmins.software">http://macadmins.software</a></u>. These install packages can be combined with the VL Serializer below to have a custom install solution of just "one" or a "handful" of O2016 apps★★★. These will also work with O365 installs. OneNote standalone not available (obtain from MAS if needed).</th>
+    <th>Available from <u><a href="http://macadmins.software">http://macadmins.software</a></u>. These install packages can be combined with the VL Serializer below to have a custom install solution of just "one" or a "handful" of O2016 apps★★★. These will also work with O365 installs. OneNote standalone not available (obtain from Mac App Store [MAS] if needed).</th>
+    <th>No</th>
     <th>~550 MB per app</th>
   </tr>
   <tr>
     <th>Combo</th>
     <th>Update</th>
     <th>These updates can take any previous Office 2016 installed app and make them current. These are per app upgrade packages, a difference from Office 2011's combo update packages.</th>
+    <th>Yes</th>
     <th>~1 GB per app</th>
   </tr>
   <tr>
     <th>Delta</th>
     <th>Update</th>
-    <th>These were first publicly available with 15.18. These significantly reduce the file size that is required to update an Office app. Also per app upgrade packages.<u><a href="#delta-updates">Additional info</a></u></th>
-    <th>~350 MB for suiteStandalone</th>
+    <th>These were first publicly available with 15.18. These significantly reduce the file size that is required to update an Office app. Also per app upgrade packages.<u> <a href="#delta-updates">Additional info</a></u></th>
+    <th>Yes</th>
+    <th>~350 MB for suite</th>
   </tr>
   <tr>
     <th>VL Serializer</th>
     <th>Serializer</th>
     <th>This is a special package that was released with 15.17. The purpose of this package is to apply the Office serialization process to the SKU-less installations. <u><a href="#vl-serializer">more info</a></u></th>
+    <th>Yes</th>
     <th>~5 MB</th>
   </tr>
 </table>
 
+
+If **Requires Live System**, is 'yes' these installers must be ran on fully booted Mac. IE - You must see the loginwindow or be logged into the physical Mac that you are installing O2016 on. If this option is 'no' you can bake these installers into a base image using tools like [AutoDMG](https://github.com/MagerValp/AutoDMG), [DeployStudio](http://www.deploystudio.com/), or Casper's Image creation process.
 
 ★All file sizes should be considered estimates and subject to change  
 ★★This installer is often the most confusing as it is also commonly called: **Full Suite**, **O365**, or a **Retail** installer. They are all the same.  
@@ -98,19 +107,27 @@ Five months into Office 2016 being out and there are five different kinds of ins
 You should install the package that Microsoft is giving you. **PERIOD**. End of story. Stop taking their package apart and "fixing things". It is fine to poke your nose under the hood but there is absolutely no reason for you to be re-packaging anything Office 2016 related. This was a common practice with Office 2011 and at the start of Office 2016. All issues that were resolved with re-packaging have been fixed by Microsoft. Microsoft has listened and now it is your turn. STAHP.
 
 ###Method 1 - Office 365 installation
-You can download a retail full suite installer from your VLSC dashboard or from [http://macadmins.software](http://macadmins.software). Both locations point to the same file as it a public release. This installer can be installed:
+You can download a SKU-less installer from your VLSC dashboard or from [http://macadmins.software](http://macadmins.software). Both locations point to the same file as it a public release. This installer is deployed via Apple's Installer Application (command line & GUI) and can be deployed via:
 
-* On never booted machines (AutoDMG, Casper Imaging, etc.)
-* Via the Apple's Installer.app GUI
-* Via Apple Remote Desktop
-* Via Munki
-* Via Casper
+* Apple Remote Desktop
+* Munki
+* Casper
 * While at the loginwindow
+* And can be baked into an image
 
 It all-around should be good to go!
 
 ###Method 2 - Volume License Installation
 If you are a Volume License (VL) customer your first step is to log into the VLSC and download the latest Office 2016 for Mac iso file. Inside of this file you will find the latest VL Installer package and the VL Serializer package. At this time, the VLSC has 15.17 however 15.18 has been released. Microsoft is working to sync the development and VLSC teams so that the latest update is available on the VLSC faster.
+
+This installer is deployed via Apple's Installer Application (command line & GUI) and can be deployed via:
+
+* Apple Remote Desktop
+* Munki
+* Casper
+* While at the loginwindow
+* And can **NOT** be baked into an image
+
 
 Your options are to now deploy the VL installer package or you can now download the latest SKU-less installer package ([http://macadmins.software](http://macadmins.software)) to deploy. When you use the second option you are able to deploy your SKL-less installer and then apply your VL Serializer package to create a supported install.
 
@@ -255,7 +272,7 @@ Normally quotes go at the end however that one was important. Go ahead read it a
 
 EX 1 - Update Packages: 
 
-This applies to the 'Delta' and 'Combo' updates and the 'Standalone Installer' packages. If you wish to deploy one of the "updates" your end-users will only need to close the application(s) that are being updated. Each update package correlates to one application on the file system. IE - Jane has Outlook open but the other O2016 applications closed. If your management solution supports unintended installs Word, PowerPoint, Excel, & OneNote could all be updated without bothering Jane. However, when it comes time to install Outlook she will need to close the application in order for the installation to properly complete.
+This applies to the 'Delta' and 'Combo' updates and the 'Standalone Installer' packages. If you wish to deploy one of the "updates" your end-users will only need to close the application(s) that are being updated. Each update package correlates to one application on the file system. IE - Jane has Outlook open but the other O2016 applications closed. If your management solution supports unattended installs Word, PowerPoint, Excel, & OneNote could all be updated without bothering Jane. However, when it comes time to install Outlook she will need to close the application in order for the installation to properly complete.
 
 
 **NOTE**: The standalone installer packages currently do not have an AutoPkg recipe. Nor do I personally feel a need for them.
