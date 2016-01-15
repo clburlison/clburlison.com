@@ -150,7 +150,7 @@ Office for Mac is cloud-connected, so you can quickly get to the documents youâ€
 --unattended_install
 
 ## VL Installer (only required if using the SKU-less Installer)
-$ munkiimport /path/to/Microsoft_Office_2016_VL_Serializer-15.17.pkg \
+$ munkiimport /path/to/Microsoft_Office_2016_VL_Serializer.pkg \
 --name=MSOffice2016_Serializer \
 --catalog=testing \
 --developer=Microsoft \
@@ -201,13 +201,13 @@ $ makepkginfo \
 ###Casper
 I was going to try and give resources for Casper...then I realized how completely unqualified for this section. Luckily Rich Trouton [has got you covered](https://derflounder.wordpress.com/2016/01/14/creating-an-office-2016-15-18-0-installer/){:target="_blank"}.
 
-Using his method you could add a [choice xml](#i-dont-want-to-install-mau-is-that-supported) file in order to customize your installation. Inside of Packages under the "Additional Resources" tab your would copy in your choice xml (downloadable [copy here](https://gist.github.com/clburlison/8fd09ae20de4279281f4#file-office2016-xml)).
+Using his method you could add a [choice xml](#i-dont-want-to-install-mau-is-that-supported) file if you wanted to customize your installation. Inside of Packages under the "Additional Resources" tab you would need to copy in your choice xml (downloadable [copy here](https://gist.github.com/clburlison/8fd09ae20de4279281f4#file-office2016-xml)). This is Step #6 in Rich's guide.
 
 Then a modified postinstall script would look like:
 
 {% gist clburlison/8fd09ae20de4279281f4 postinstall %}
 
-Make sure and walk through the remaining steps in Rich's guide. 
+Make sure and walk through the remaining steps in Rich's guide to complete this process. 
 
 **NOTE**: Using his method is repackaging the installer however he is making no-modifications to the Office installer ðŸ˜Š.  
 
