@@ -505,7 +505,7 @@ More on the actually fix to this issue. Inside of `$HOME/Library/Preferences/com
 ##Software not actually becoming licensed
 FIXED - 15.14
 
-Issue - If the VLSC instal package was installed while a user is was not logged in a GUI session, Office 2016 would fail to serialize the suite of applicaitons.
+Issue - If the VL intall package was installed at the loginwindow, Office 2016 would fail to properly serialize O2016.
 
 > @chrfr no, you won’t break if you manually extracted the VL serializer from 15.14 and run it with a 15.17 install. It’s just that there’s a bug with that VL serializer where it won’t run properly if the user is not logged on. That’s fixed in the 15.17 VL serializer.
 > 
