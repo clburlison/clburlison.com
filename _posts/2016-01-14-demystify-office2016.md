@@ -261,8 +261,6 @@ Technically speaking if you aren't using MAU, you really need to look into [Auto
 > 
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1452622212007576)
 
-Add Blocking Array.
-
 ##AutoPkg
 > As MAU is the recommended solution for updates, it was important to make that flow as seamless as possible. When you run custom install/update solutions you need to take care of those things yourself.
 > 
