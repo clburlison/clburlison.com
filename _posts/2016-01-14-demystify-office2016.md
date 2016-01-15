@@ -70,13 +70,13 @@ Five months into Office 2016 being out and there are five different kinds of ins
     <th>Combo</th>
     <th>Update</th>
     <th>These updates can take any previous Office 2016 installed app and make them current. These are per app upgrade packages, a difference from Office 2011's combo update packages.</th>
-    <th>~1 GB</th>
+    <th>~1 GB per app</th>
   </tr>
   <tr>
     <th>Delta</th>
     <th>Update</th>
     <th>These were first publicly available with 15.18. These significantly reduce the file size that is required to update an Office app. Also per app upgrade packages.<u><a href="#delta-updates">Additional info</a></u></th>
-    <th>~350 MB for all 5 apps</th>
+    <th>~350 MB for suite</th>
   </tr>
   <tr>
     <th>VL Serializer</th>
