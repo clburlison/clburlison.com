@@ -61,7 +61,7 @@ Five months into Office 2016 being out and there are five different kinds of ins
     <th>~1.4 GB</th>
   </tr>
   <tr>
-    <th>Stanalone</th>
+    <th>Standalone</th>
     <th>Installer</th>
     <th>Available from <u><a href="http://macadmins.software">http://macadmins.software</a></u>. These install packages can be combined with the VL Serializer below to have a custom install solution of just "one" or a "handful" of O2016 apps★★★. These will also work with O365 installs. OneNote standalone not available (obtain from MAS if needed).</th>
     <th>~550 MB per app</th>
@@ -76,7 +76,7 @@ Five months into Office 2016 being out and there are five different kinds of ins
     <th>Delta</th>
     <th>Update</th>
     <th>These were first publicly available with 15.18. These significantly reduce the file size that is required to update an Office app. Also per app upgrade packages.<u><a href="#delta-updates">Additional info</a></u></th>
-    <th>~350 MB for suite</th>
+    <th>~350 MB for suiteStandalone</th>
   </tr>
   <tr>
     <th>VL Serializer</th>
