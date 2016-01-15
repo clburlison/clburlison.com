@@ -51,13 +51,13 @@ Five months into Office 2016 being out and there are five different kinds of ins
   <tr>
     <th>SKU-less★★</th>
     <th>Installer</th>
-    <th>Contains all of the apps, good for O365 installations. These package can be used in combination with the VL Serializer to create a VL Installer without needed to visit Microsoft's Volume Licensing Service Center (VLSC).</th>
+    <th>Contains all of the apps, good for O365 installations. This package can be used in combination with the VL Serializer to create a VL Installer without needing to visit Microsoft's Volume Licensing Service Center (VLSC).</th>
     <th>~1.4 GB</th>
   </tr>
   <tr>
     <th>Volume License (VL)</th>
     <th>Installer</th>
-    <th>Contains all apps, has Serializer package embed. Will <b>not</b> function properly on never-booted machines. AKA - must be installed on a Mac that is currently running OS X (not target disk mode, AutoDMG, etc.)</th>
+    <th>Contains all apps, has Serializer package embed. Will <b>not</b> function properly on a non-live system. AKA - must be installed on a Mac that is currently running OS X (not target disk mode, AutoDMG, etc.)</th>
     <th>~1.4 GB</th>
   </tr>
   <tr>
@@ -70,12 +70,12 @@ Five months into Office 2016 being out and there are five different kinds of ins
     <th>Combo</th>
     <th>Update</th>
     <th>These updates can take any previous Office 2016 installed app and make them current. These are per app upgrade packages, a difference from Office 2011's combo update packages.</th>
-    <th>~1.4 GB</th>
+    <th>~1 GB</th>
   </tr>
   <tr>
     <th>Delta</th>
     <th>Update</th>
-    <th>These were first publicly available with 15.18. These significantly reduce the file size that is required to update an Office app. <u><a href="#delta-updates">Additional info</a></u></th>
+    <th>These were first publicly available with 15.18. These significantly reduce the file size that is required to update an Office app. Also per app upgrade packages.<u><a href="#delta-updates">Additional info</a></u></th>
     <th>~350 MB for all 5 apps</th>
   </tr>
   <tr>
@@ -105,13 +105,14 @@ You can download a retail full suite installer from your VLSC dashboard or from 
 * Via Apple Remote Desktop
 * Via Munki
 * Via Casper
+* While at the loginwindow
 
 It all-around should be good to go!
 
 ###Method 2 - Volume License Installation
 If you are a Volume License (VL) customer your first step is to log into the VLSC and download the latest Office 2016 for Mac iso file. Inside of this file you will find the latest VL Installer package and the VL Serializer package. At this time, the VLSC has 15.17 however 15.18 has been released. Microsoft is working to sync the development and VLSC teams so that the latest update is available on the VLSC faster.
 
-Your options are to now deploy the VL installer package or you can now download the latest SKU-less installer package ([http://macadmins.software](http://macadmins.software)) to deploy. When you use the second option you are able to deploy your SKL-less installer and then apply your VL Serializer package. 
+Your options are to now deploy the VL installer package or you can now download the latest SKU-less installer package ([http://macadmins.software](http://macadmins.software)) to deploy. When you use the second option you are able to deploy your SKL-less installer and then apply your VL Serializer package to create a supported install.
 
 A third, and slightly less preferred (personal opinion) option would be to download the Standalone Installer(s) from [http://macadmins.software](http://macadmins.software). After one or more Standalone installs have taken place you can run the VL Serializer in order to properly serialize your computers. This solution looks like it might be the most flexible upfront however, the same can be accomplished by using a [choice xml](#i-dont-want-to-install-mau-is-that-supported) (detail later in this post). Plus, after two standalone installers you would be much better off with the SKU-less installer package due to file size. With that said it is supported, I however do not believe it is the correct workflow for 99% of Mac Admins.
 
@@ -208,7 +209,7 @@ Then a modified postinstall script would look like:
 
 Make sure and walk through the remaining steps in Rich's guide. 
 
-**NOTE**: Using his method is repackaging the installer however he is making no-modifications to the Office installer.  
+**NOTE**: Using his method is repackaging the installer however he is making no-modifications to the Office installer 😊.  
 
 ---
 
@@ -216,7 +217,7 @@ Make sure and walk through the remaining steps in Rich's guide.
 Due to the shear quantity of content I am attempting to cover the remanding section of this post will be in FAQ format. 
 
 ##Why is O2016 so different from O2011?
-The main reason why Office 2016 is so different is the fact that each application is now [Sandboxed](https://developer.apple.com/library/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html). Due to that fact, Microsoft is now just one step away from releasing Office 2016 apps on the Mac App Store (figuratively speaking at least). Obviously time frame for this move would depend greatly on internal policies, process with Apple, and other factors unknown to me. Sandboxing also means it is easier to remove an Application after it has been installed IE - `sudo rm -rf "/Applications/Microsoft Word.app"`. However, one downside of Sandboxed applications is the large quantity duplicated data (mostly Fonts) being stored on the disk in five applications. 
+The main reason why Office 2016 is so different is the fact that each application is now [Sandboxed](https://developer.apple.com/library/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html). Due to that fact, Microsoft is now just one step away from releasing Office 2016 apps on the Mac App Store (figuratively speaking at least). Obviously time frame for this move would depend greatly on internal policies, process with Apple, and other factors unknown to me. Sandboxing also means it is easier to remove an Application after it has been installed IE - `sudo rm -rf "/Applications/Microsoft Word.app"`. However, one downside of Sandboxed applications is the large quantity of duplicated data (mostly Fonts) being stored on the disk in five applications. 
 
 Bonus regarding the MAS: 
 
@@ -250,11 +251,11 @@ Add Blocking Array.
 > 
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1452617616007496)
 
-Normally quotes go at the end however that one was important. Go ahead read it again. So AutoPkg users the importance of that statement is you need to make sure MS applications are closed when installing updates. For munki users this means incorporating ``blocking_applications`` arrays in your pkginfos. When installing "update" packages (delta or combo) you only need to force one application to be closed per update package. However, if you wish to utilize the "SKU-less Installer" package for both fresh machine installs and updates your ``blocking_applications`` will need to make sure all five applications are closed (the example I listed in the munki section covers this).
+Normally quotes go at the end however that one was important. Go ahead read it again. So AutoPkg users: the importance of that statement is you need to make sure MS applications are closed when installing updates. For munki users this means incorporating ``blocking_applications`` arrays in your pkginfos. When installing "update" packages (delta or combo) you only need to force one application to be closed per update package. However, if you wish to utilize the "SKU-less Installer" package for both fresh machine installs and updates your ``blocking_applications`` will need to make sure all five applications are closed (the example I listed in the munki section covers this).
 
 EX 1 - Update Packages: 
 
-This applies to the 'Delta' and 'Combo' updates and the 'Standalone Installer' packages. If you wish to deploy one of the "updates" your end-users will only need to close the application(s) that are being updated. Each update package correlates to one application on the file system. IE - Jane has Outlook open but the other O2016 applications closed. If your management solution supports unintended installs Word, PowerPoint, Excel, & OneNote could all be updated without bothering Jane. However, when it comes time to install Outlook she will need to close the application in order for the installation.
+This applies to the 'Delta' and 'Combo' updates and the 'Standalone Installer' packages. If you wish to deploy one of the "updates" your end-users will only need to close the application(s) that are being updated. Each update package correlates to one application on the file system. IE - Jane has Outlook open but the other O2016 applications closed. If your management solution supports unintended installs Word, PowerPoint, Excel, & OneNote could all be updated without bothering Jane. However, when it comes time to install Outlook she will need to close the application in order for the installation to properly complete.
 
 
 **NOTE**: The standalone installer packages currently do not have an AutoPkg recipe. Nor do I personally feel a need for them.
@@ -306,7 +307,7 @@ If you did copy the `com.microsoft.office.licensingV2.plist` file see [VL Serial
 
 
 ##Dialog Prompt(s) - IE What's New
-Eric Holtam has a great post regarding these dialog prompts and managing them with profiles [located here](https://osxbytes.wordpress.com/2015/09/17/not-much-whats-new-with-you/){:target="_blank"}. The only part that I didn't understand, initially, was Office is actually providing your with two separate "What's New" dialog boxes. The first (shown below with Excel) gives you a the splash screen and then prompts you to select your colour theme: Classic or Colorful. Along with prompting O365 users to sign-in for activation.
+Eric Holtam has a great post regarding these dialog prompts and managing them with profiles [located here](https://osxbytes.wordpress.com/2015/09/17/not-much-whats-new-with-you/){:target="_blank"}. The only part that I didn't understand, initially, was Office is actually providing your with two separate "What's New" dialog boxes. The first (shown below with Excel) gives you a splash screen and then prompts you to select your colour theme: Classic or Colorful. Along with prompting O365 users to sign-in for activation.
 
 {% img center /images/2016-01-14/WhatsNew1.png 420 200 %}
 
