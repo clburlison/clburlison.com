@@ -166,22 +166,28 @@ Office for Mac is cloud-connected, so you can quickly get to the documents youâ€
 --blocking_application="Microsoft OneNote" \
 --unattended_install
 
-## VL Installer (only required if using the SKU-less Installer)
+## VL Installer (only required if using the SKU-less Installer). The preinstall_script is located below.
 $ munkiimport /path/to/Microsoft_Office_2016_VL_Serializer.pkg \
 --name=MSOffice2016_Serializer \
 --catalog=testing \
 --developer=Microsoft \
 --category=Productivity \
 --update_for=MSOffice2016 \
+--preinstall_script=/path/to/preinstall_script \
 --unattended_install
 
 {% endhighlight %}
 
-You can optionally supply the `--installer_choices_xml` key to apply a [choice xml](#i-dont-want-to-install-mau-is-that-supported). Also, if you wish to apply an icon supply the `--icon_path=/path/to/MSOffice2016.png` key (the icon I used can be downloaded below).
+The VL Serializer should have the following preinstall script. This will help users who incorrectly copied com.microsoft.office.licensingV2.plist to their machine. ([download link](https://gist.github.com/clburlison/ac182c465ff40429aa1a/archive/e2729d9724fd08ed630e878193f75effc2159aa6.zip))
+{% gist clburlison/ac182c465ff40429aa1a preinstall_script %}
+
+You can optionally supply the `--installer_choices_xml=/path/to/office2016.xml` key to apply a [choice xml](#i-dont-want-to-install-mau-is-that-supported) ([download link](https://gist.github.com/clburlison/8fd09ae20de4279281f4/archive/7f2ba989717b4ac62fe4f6d84ae78a7662bf400f.zip)). Also, if you wish to apply an icon supply the `--icon_path=/path/to/MSOffice2016.png` key (the icon I used can be downloaded below).
 
 {% img center /images/2016-01-14/MSOffice2016.png 100 100 %}
 
 Right Click > Save Image As...
+
+**Munki - Installs Arrays**
 
 If you are planning on having a hybrid setup with MAU and munki both pushing updates to Office 2016 applications I highly recommend adding an install array to your Office 2016 installer. I also recommend this if your users have admin access and might "accidentally" delete an office application that you want to make sure doesn't disappear. This can be done two ways, during the `munkiimport` of your installer or by running `makepkginfo` and manually pasting the install array into your pkginfo:
 
