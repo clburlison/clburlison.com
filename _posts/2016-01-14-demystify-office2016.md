@@ -224,7 +224,7 @@ $ makepkginfo \
 ###Casper
 I was going to try and give resources for Casper...then I realized how completely unqualified for this section. Luckily Rich Trouton [has got you covered](https://derflounder.wordpress.com/2016/01/14/creating-an-office-2016-15-18-0-installer/){:target="_blank"}.
 
-Using his method you could add a [choice xml](#i-dont-want-to-install-mau-is-that-supported) file if you wanted to customize your installation. Inside of Packages under the "Additional Resources" tab you would need to copy in your choice xml (downloadable [copy here](https://gist.github.com/clburlison/8fd09ae20de4279281f4#file-office2016-xml)). This is Step #6 in Rich's guide.
+Using his method you could add a [choice xml](#i-dont-want-to-install-mau-is-that-supported) file if you wanted to customize your installation. Inside of Packages under the "Additional Resources" tab you would need to copy in your choice xml ([download link](https://gist.github.com/clburlison/8fd09ae20de4279281f4/archive/7f2ba989717b4ac62fe4f6d84ae78a7662bf400f.zip)). This is Step #6 in Rich's guide.
 
 Then a modified postinstall script would look like:
 
