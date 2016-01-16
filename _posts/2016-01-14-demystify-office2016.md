@@ -320,7 +320,7 @@ This is not a perfect solution however if you really need to change the default 
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1450417854005113)
 
 
-##Set the "User Information"
+##Set the User Information
 {% img center /images/2016-01-14/MeContact.png 600 %}
 
 This was found by [François Levaux](http://maclovin.org/blog-native/2015/office-2016-where-is-the-name-of-the-user-stored-) so I take no credit for the discovery however to make it more readily accessable I will be posting this here. If you wish to automatically populate the User Information fields (Name and Initials) the following script can do so.
