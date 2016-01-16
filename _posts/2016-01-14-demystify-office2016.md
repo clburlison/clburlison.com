@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demystify Office 2016 for Mac"
-modified: 2016-01-15
+modified: 2016-01-16
 categories: 
   - microsoft
   - osx
@@ -131,7 +131,7 @@ This installer is deployed via Apple's Installer Application (command line & GUI
 
 Your options are to now deploy the VL installer package or you can now download the latest SKU-less installer package ([http://macadmins.software](http://macadmins.software)) to deploy. When you use the second option you are able to deploy your SKL-less installer and then apply your VL Serializer package to create a supported install.
 
-A third, and slightly less preferred (personal opinion) option would be to download the Standalone Installer(s) from [http://macadmins.software](http://macadmins.software). After one or more Standalone installs have taken place you can run the VL Serializer in order to properly serialize your computers. This solution looks like it might be the most flexible upfront however, the same can be accomplished by using a [choice xml](#i-dont-want-to-install-mau-is-that-supported) (detail later in this post). Plus, after two standalone installers you would be much better off with the SKU-less installer package due to file size. With that said it is supported, I however do not believe it is the correct workflow for 99% of Mac Admins.
+A **third**, and slightly less preferred (personal opinion) option would be to download the Standalone Installer(s) from [http://macadmins.software](http://macadmins.software). After one or more Standalone installs have taken place you can run the VL Serializer in order to properly serialize your computers. This solution looks like it might be the most flexible upfront however, the same can be accomplished by using a [choice xml](#i-dont-want-to-install-mau-is-that-supported) (detail later in this post). Plus, after two standalone installers you would be much better off with the SKU-less installer package due to file size. With that said it is supported, I however do not believe it is the correct workflow for 99% of Mac Admins.
 
 > VLSC won’t be updated with the 15.17 build until first week of January. While the portal team is working on getting faster at making new builds available, the underlying reason for releasing the VL Serializer separately is so that you can take the Office 365/Retail (aka SKU-less) installer from future builds (15.18, 15.19, etc), deploy it, run the Serializer, and you have a fully up to date VL install. <u>This is a fully supported mechanism for deployment</u>.
 >   
@@ -257,16 +257,22 @@ You're limited to two solutions:
 
 Technically speaking if you aren't using MAU, you really need to look into [AutoPkg](#autopkg).
 
-> If anyone wants to try out delta updates (we’ve now got them down to 350 MB for the entire suite), just change MAU to the Internal channel
-> 
-> @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1452622212007576)
-
 ##AutoPkg
+
+<div class="note warning">
+  <h5>Unsupported!</h5>
+  <p>If you wish to utilize AutoPkg to install the individual applications IE - <code>MSWord2016.{download,install,munki,jss,etc.}</code>, <code>MSExcel2016.{etc}</code>, <code>MSPowerPoint2016.{etc}</code>. <code>MSOutlook2016.{etc}</code> or <code>MSOneNote2016.{etc}</code>, on <b><u>NEW</u></b> machines this is unsupported by Microsoft. These recipes correlate to the 'Combo' update packages (by default) and are not suitable for first time installation. The delta updates are also not suitable for first time installation.
+  <br><br>
+    This means your base installation should be one of the <a href="#how-do-i-install-o2016">supported options</a> above. Afterwards you can utilize AutoPkg to download the combo updates in place of MAU.
+  <br><br>
+    This is a common practice in the community that needs to stop. If you did this in the past to get Office 2016 on your computers simply changing to one of the supported solutions above will get your computers in compliance. I am unable to say for sure but it is very possible that if you did utilize this unsupported behavior to install Office 2016 the 15.20 update in March might break your installation (purely a guess).</p>
+</div>
+
 > As MAU is the recommended solution for updates, it was important to make that flow as seamless as possible. When you run custom install/update solutions you need to take care of those things yourself.
 > 
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1452617616007496)
 
-Normally quotes go at the end however that one was important. Go ahead read it again. So AutoPkg users: the importance of that statement is you need to make sure MS applications are closed when installing updates. For munki users this means incorporating ``blocking_applications`` arrays in your pkginfos. When installing "update" packages (delta or combo) you only need to force one application to be closed per update package. However, if you wish to utilize the "SKU-less Installer" package for both fresh machine installs and updates your ``blocking_applications`` will need to make sure all five applications are closed (the example I listed in the munki section covers this).
+Normally quotes go at the end however that one was important. Go ahead read it again. So AutoPkg users: the importance of that statement is you need to make sure MS applications are closed when installing updates. For munki users this means incorporating ``blocking_applications`` arrays in your pkginfos. When installing "update" packages (delta or combo) you only need to force one application to be closed per update package. However, if you wish to utilize the "SKU-less Installer" package for both fresh machine installs and updates your ``blocking_applications`` will need to make sure all five applications plus MAU are closed (the example I listed in the [munki](#munki) section covers this).
 
 EX 1 - Update Packages: 
 
@@ -277,7 +283,7 @@ This applies to the 'Delta' and 'Combo' updates and the 'Standalone Installer' p
 
 EX 2 - SKU-less Installer:
 
-If you go this route new machines will only ever need to install one package to get the latest Office 2016 (two packages if you could the VL Serializer). The down side to this solution is all five apps (Word, Excel, OneNote, PowerPoint, & Outlook plus MAU) will need to be closed prior to starting an update. Due to file size this package will take longer to download from your management system to the client computer, and will take longer to install compared to the update packages. 
+If you go this route new machines will only ever need to install one package to get the latest Office 2016 (two packages if you count the VL Serializer). The down side to this solution is all five apps (Word, Excel, OneNote, PowerPoint, & Outlook plus MAU) will need to be closed prior to starting an update. Due to file size this package will take longer to download from your management system to the client computer, and will take longer to install compared to the update packages. 
 
 If you aren't in the autopkg loop you'll want to add the main recipe repo (combo & delta update packages) and Allister repo (SKU-less & MAU installer packages).
 
@@ -313,6 +319,17 @@ This is not a perfect solution however if you really need to change the default 
 > 
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1450417854005113)
 
+
+##Set the "User Information"
+{% img center /images/2016-01-14/MeContact.png 600 %}
+
+This was found by [François Levaux](http://maclovin.org/blog-native/2015/office-2016-where-is-the-name-of-the-user-stored-) so I take no credit for the discovery however to make it more readily accessable I will be posting this here. If you wish to automatically populate the User Information fields (Name and Initials) the following script can do so.
+
+**Note:** This is another user level script and **must** be ran as the logged in user. Running under any instance of root (IE - sudo, or LaunchDaemon) will result in unfavorable results. 
+
+{% gist clburlison/4552c1036236a22ba829 Office2016-MeContact.sh %}
+
+
 ##Can't I just copy com.microsoft.office.licensingV2.plist?
 No. This was a bug. Microsoft is aware of the issue and this will be fixed in 15.20 which is scheduled to be released in March. 
 
@@ -344,6 +361,10 @@ IE - I have Office 15.17 installed when 15.18 was released MAU offered to instal
 The nice part about these Delta updates is if you are using MAU these are automatically offered to your users without any intervention on your part. 
 
 [{% img center /images/pdf.png 100 100 %}](/images/2016-01-14/Delta_Updates.pdf){:target="_blank"}
+
+> If anyone wants to try out delta updates (we’ve now got them down to 350 MB for the entire suite), just change MAU to the Internal channel
+> 
+> @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1452622212007576)
 
 
 ##VL Serializer
@@ -412,8 +433,6 @@ Sure. This process is the same as it was with Office 2011. My recommended method
 The change can also be applied per user with defaults:
 
 {% highlight bash %}
-
-## These should not be ran as root. They are user-level preferences.
 
 $ defaults write com.microsoft.autoupdate2 HowToCheck -string 'Manual'
 $ defaults write com.microsoft.autoupdate2 LastUpdate -date '2001-01-01T00:00:00Z'
@@ -530,10 +549,12 @@ Hopefully that covers all the bits and pieces a Mac Administrator would want to 
 Links:  
 [What's Wrong with Office 2016 VL Installer](https://macops.ca/whats-wrong-with-the-office-2016-volume-license-installer/),  
 [VL Installer two months later](https://macops.ca/the-office-for-mac-2016-volume-license-installer-two-months-later/),  
-[Office 2016 Packaging:](http://www.richard-purves.com/?p=79),  
+[Office 2016 Packaging](http://www.richard-purves.com/?p=79),  
 [Office 2016 Volume Installer findings](https://jamfnation.jamfsoftware.com/discussion.html?id=16761),  
 [JAMF Nation - Suppress this Dialog](https://jamfnation.jamfsoftware.com/discussion.html?id=17013),  
 [Not much what's new with you](https://osxbytes.wordpress.com/2015/09/17/not-much-whats-new-with-you/),  
 [Office 2016 Mac Admin Resource Links](https://osxbytes.wordpress.com/2015/09/23/office-2016-mac-admin-resource-links/),  
 [What's New and Improved in Office 2016 for Mac for Office 365](https://support.office.com/en-us/article/What-s-New-and-Improved-in-Office-2016-for-Mac-for-Office-365-44d5a464-3051-41b0-b44e-c6cee569f545),  
-[Creating an Office 2016 Installer](https://derflounder.wordpress.com/2016/01/14/creating-an-office-2016-15-18-0-installer/)
+[Creating an Office 2016 Installer](https://derflounder.wordpress.com/2016/01/14/creating-an-office-2016-15-18-0-installer/),  
+[Office 2011 Choices Explained](https://jamfnation.jamfsoftware.com/discussion.html?id=13946#responseChild84049),  
+[Office 2016 where is the name of the user stored](http://maclovin.org/blog-native/2015/office-2016-where-is-the-name-of-the-user-stored-)
