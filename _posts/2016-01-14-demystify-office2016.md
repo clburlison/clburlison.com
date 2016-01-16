@@ -129,7 +129,7 @@ This installer is deployed via Apple's Installer Application (command line & GUI
 * And can **NOT** be baked into an image
 
 
-Your options are to now deploy the VL installer package or you can now download the latest SKU-less installer package ([http://macadmins.software](http://macadmins.software)) to deploy. When you use the second option you are able to deploy your SKL-less installer and then apply your VL Serializer package to create a supported install.
+Your options are to now deploy the VL installer package or you can now download the latest SKU-less installer package ([http://macadmins.software](http://macadmins.software)) to deploy. When you use the second option you are able to deploy the SKU-less installer and then apply your VL Serializer package to create a supported install. This is a kind of "future proof" solution as you would not have to access the VLSC again to receive updates. 
 
 A **third**, and slightly less preferred (personal opinion) option would be to download the Standalone Installer(s) from [http://macadmins.software](http://macadmins.software). After one or more Standalone installs have taken place you can run the VL Serializer in order to properly serialize your computers. This solution looks like it might be the most flexible upfront however, the same can be accomplished by using a [choice xml](#i-dont-want-to-install-mau-is-that-supported) (detail later in this post). Plus, after two standalone installers you would be much better off with the SKU-less installer package due to file size. With that said it is supported, I however do not believe it is the correct workflow for 99% of Mac Admins.
 
