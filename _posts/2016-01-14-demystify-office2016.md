@@ -265,7 +265,7 @@ Technically speaking if you aren't using MAU, you really need to look into [Auto
   <br><br>
     This means your base installation should be one of the <a href="#how-do-i-install-o2016">supported options</a> above. Afterwards you can utilize AutoPkg to download the combo updates in place of MAU.
   <br><br>
-    This is a common practice in the community that needs to stop. If you did this in the past to get Office 2016 on your computers simply changing to one of the supported solutions above will get your computers in compliance. I am unable to say for sure but it is very possible that if you did utilize this unsupported behavior to install Office 2016 the 15.20 update in March might break your installation (purely a guess).</p>
+    This is a common practice in the community that needs to stop. If you did this in the past to get Office 2016 on your computers simply changing to one of the supported solutions above will get your computers in compliance. I am unable to say for sure but it is very possible that if you did install using this unsupported method the 15.20 update in March might break your installation (purely a guess).</p>
 </div>
 
 > As MAU is the recommended solution for updates, it was important to make that flow as seamless as possible. When you run custom install/update solutions you need to take care of those things yourself.
