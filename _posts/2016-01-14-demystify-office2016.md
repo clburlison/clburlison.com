@@ -337,6 +337,10 @@ The first editions of the Volume License installer from Microsoft caused issues 
 
 If you did copy the `com.microsoft.office.licensingV2.plist` file see [VL Serializer](#vl-serializer)
 
+> @reidblondell: bottom line is that if you're copying com.microsoft.office.licensingv2.plist between machines then you are not in a supportable state. The only supportable solution is to have that plist file generated on the machine you intend to use by the Microsoft Office Setup Assistant (MOSA). Up to you how you package this, but MOSA needs to be run
+> 
+> @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1447525532000461)
+
 
 ##Dialog Prompt(s) - IE What's New
 Eric Holtam has a great post regarding these dialog prompts and managing them with profiles [located here](https://osxbytes.wordpress.com/2015/09/17/not-much-whats-new-with-you/){:target="_blank"}. The only part that I didn't understand, initially, was Office is actually providing your with two separate "What's New" dialog boxes. The first (shown below with Excel) gives you a splash screen and then prompts you to select your colour theme: Classic or Colorful. Along with prompting O365 users to sign-in for activation.
