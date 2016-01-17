@@ -178,7 +178,8 @@ $ munkiimport /path/to/Microsoft_Office_2016_VL_Serializer.pkg \
 
 {% endhighlight %}
 
-The VL Serializer should have the following preinstall script. This will help users who incorrectly copied com.microsoft.office.licensingV2.plist to their machine. ([download link](https://gist.github.com/clburlison/ac182c465ff40429aa1a/archive/e2729d9724fd08ed630e878193f75effc2159aa6.zip))
+The VL Serializer should have the following preinstall script. This will help users who incorrectly copied com.microsoft.office.licensingV2.plist to their machine.  
+([download link](https://gist.github.com/clburlison/ac182c465ff40429aa1a/archive/e2729d9724fd08ed630e878193f75effc2159aa6.zip))
 {% gist clburlison/ac182c465ff40429aa1a preinstall_script %}
 
 You can optionally supply the `--installer_choices_xml=/path/to/office2016.xml` key to apply a [choice xml](#i-dont-want-to-install-mau-is-that-supported) ([download link](https://gist.github.com/clburlison/8fd09ae20de4279281f4/archive/7f2ba989717b4ac62fe4f6d84ae78a7662bf400f.zip)). Also, if you wish to apply an icon supply the `--icon_path=/path/to/MSOffice2016.png` key (the icon I used can be downloaded below).
@@ -357,7 +358,7 @@ The second "What's New" dialog prompt will only be shown for O365 users. With 15
 
 {% img center /images/2016-01-14/WhatsNew2.png 420 200 %}
 
-Both of these dialog boxes can be disabled, however if you are a O365 customer disabling the first dialog prompt is not recommended. (see quote from Eric below)
+Both of these dialog boxes can be disabled, however if you are a O365 customer disabling the first dialog prompt is not recommended (see quote from Eric below).
 
 > If you're an O365 customer and you suppress the 1507 key your users won't be prompted to authorize the license on first launch.  You'll have to do that from in-app and the dialog that appears makes it sound like it needs to be purchased.  There's a small link to click to specify you already have a license.
 > 
@@ -509,7 +510,7 @@ Included in 15.17 mid-December Release (i.e. work already complete and verified)
 
 FIXED - 15.17
 
-Issue - MAU (Microsoft Auto Update app) has a background process that would run to see if updates are available. This  
+Issue - MAU (Microsoft Auto Update app) has a background process that would run to see if updates are available. This process would prompt end users for permission to access the keychain which resulted in the picture above. Many end-users had no idea what or why this prompt was being displayed.
 
 > Next up, those pesky keychain access errors on first app launch are now a thing of the past. Most of you on VL probably don’t see these, but O365 users see them a lot. I’ve changed the code so that the Office 2016 apps are automatically provisioned with access on keychain creation.
 > 
@@ -540,7 +541,7 @@ Issue - If the VL intall package was installed at the loginwindow, Office 2016 w
 > 
 > @pbowden -- [source link #5](https://macadmins.slack.com/archives/microsoft-office/p1449897132003874)
 
-##Outlook/Word Resizing Bug
+##Outlook Resizing/Word Crashing Bugs
 FIXED - 15.17.1
 
 Issue - A bug that caused issues when resizing Outlook and some bug fixes for Word. 
