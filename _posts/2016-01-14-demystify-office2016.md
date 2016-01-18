@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demystify Office 2016 for Mac"
-modified: 2016-01-16
+modified: 2016-01-17
 categories: 
   - microsoft
   - osx
@@ -209,7 +209,7 @@ $ munkiimport /path/to/Microsoft_Office_2016_Installer.pkg \
 ...
 --unattended_install
 
-##via makepkginfo
+## via makepkginfo
 
 $ makepkginfo \
 --file "/Applications/Microsoft Excel.app" \
@@ -365,7 +365,7 @@ Both of these dialog boxes can be disabled, however if you are a O365 customer d
 > @eholtam -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1452712063008493)
 
 ##Delta Updates
-With the release of 15.18 Microsoft has released Delta updates. Paul has released a public document that goes over these updates in quite a bit of detail (see below). The biggest note for these delta updates is that they will only work on the current release minus one major revision (N-1). 
+With the release of 15.18 Microsoft has released Delta updates. Paul has released a public document that goes over these updates in quite a bit of detail (see below). The biggest note for these delta updates is that they will only work on the current release minus one minor revision (N-1). 
 
 IE - I have Office 15.17 installed when 15.18 was released MAU offered to install the latest 15.18 updates as delta packages. However, if I was on 15.16 I would need the 15.18 combo update packages (quite a bit larger in file size) in order to update to the latest release.
 
@@ -474,6 +474,8 @@ $ /usr/sbin/installer -applyChoiceChangesXML /path/to/office2016.xml \
 
 {% endhighlight %}
 
+If you are interested in how I created the choice xml above please see the following links: [Office 2011 Choices Explained](https://jamfnation.jamfsoftware.com/discussion.html?id=13946#responseChild84049), & [Munki Wiki ChoiceChangeXML](https://github.com/munki/munki/wiki/ChoiceChangesXML)
+
 
 > Okay, makes sense - thanks for the clarification. MAU is designed to be independent from the apps, so it is considered ​*optional*​ ….you’re fully supported if you want to omit it from your installs. However, the same is not true for the licensing and fonts/frameworks/proofing tools packages - those are required
 >
@@ -516,7 +518,7 @@ Issue - MAU (Microsoft Auto Update app) has a background process that would run 
 > 
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1450417340005109)
 
-More on the actually fix to this issue. Inside of `$HOME/Library/Preferences/com.microsoft.autoupdate2.plist` the following key value is created during a GUI installation: 
+More on the actual fix to this issue. Inside of `$HOME/Library/Preferences/com.microsoft.autoupdate2.plist` the following key value is created during a GUI installation: 
 
 **NOTE:** In case it isn't clear _you_ as the admin should **NOT** be creating or modifying this setting. That is the responsibility of Microsoft and the installer. 
 
@@ -568,4 +570,5 @@ Links:
 [What's New and Improved in Office 2016 for Mac for Office 365](https://support.office.com/en-us/article/What-s-New-and-Improved-in-Office-2016-for-Mac-for-Office-365-44d5a464-3051-41b0-b44e-c6cee569f545),  
 [Creating an Office 2016 Installer](https://derflounder.wordpress.com/2016/01/14/creating-an-office-2016-15-18-0-installer/),  
 [Office 2011 Choices Explained](https://jamfnation.jamfsoftware.com/discussion.html?id=13946#responseChild84049),  
-[Office 2016 where is the name of the user stored](http://maclovin.org/blog-native/2015/office-2016-where-is-the-name-of-the-user-stored-)
+[Office 2016 where is the name of the user stored](http://maclovin.org/blog-native/2015/office-2016-where-is-the-name-of-the-user-stored-),  
+[Munki Wiki ChoiceChangeXML](https://github.com/munki/munki/wiki/ChoiceChangesXML)  
