@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demystify Office 2016 for Mac"
-modified: 2016-01-17
+modified: 2016-01-20
 categories: 
   - microsoft
   - osx
