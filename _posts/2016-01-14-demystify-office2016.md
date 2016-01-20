@@ -182,7 +182,7 @@ The VL Serializer should have the following preinstall script. This will help us
 ([download link](https://gist.github.com/clburlison/ac182c465ff40429aa1a/archive/e2729d9724fd08ed630e878193f75effc2159aa6.zip))
 {% gist clburlison/ac182c465ff40429aa1a preinstall_script %}
 
-You can optionally supply the `--installer_choices_xml=/path/to/office2016.xml` key to apply a [choice xml](#i-dont-want-to-install-mau-is-that-supported) ([download link](https://gist.github.com/clburlison/8fd09ae20de4279281f4/archive/7f2ba989717b4ac62fe4f6d84ae78a7662bf400f.zip)). Also, if you wish to apply an icon supply the `--icon_path=/path/to/MSOffice2016.png` key (the icon I used can be downloaded below).
+If you wish to implement a choice xml file for munki you will want to copy and paste the `installer_choices_xml` array from the `office2016_munki.xml` file into your Office 2016 pkginfo ([download link](https://gist.github.com/clburlison/8fd09ae20de4279281f4/archive/89a8735ac42fd634389e89f0f45c80e8f0e3bf3b.zip)). Also, if you wish to apply an icon supply the `--icon_path=/path/to/MSOffice2016.png` key (the icon I used can be downloaded below).
 
 {% img center /images/2016-01-14/MSOffice2016.png 100 100 %}
 
@@ -225,7 +225,7 @@ $ makepkginfo \
 ###Casper
 I was going to try and give resources for Casper...then I realized how completely unqualified for this section. Luckily Rich Trouton [has got you covered](https://derflounder.wordpress.com/2016/01/14/creating-an-office-2016-15-18-0-installer/){:target="_blank"}.
 
-Using his method you could add a [choice xml](#i-dont-want-to-install-mau-is-that-supported) file if you wanted to customize your installation. Inside of Packages under the "Additional Resources" tab you would need to copy in your choice xml ([download link](https://gist.github.com/clburlison/8fd09ae20de4279281f4/archive/7f2ba989717b4ac62fe4f6d84ae78a7662bf400f.zip)). This is Step #6 in Rich's guide.
+Using his method you could add a [choice xml](#i-dont-want-to-install-mau-is-that-supported) file if you wanted to customize your installation. Inside of Packages under the "Additional Resources" tab you would need to copy in your choice xml ([download link](https://gist.github.com/clburlison/8fd09ae20de4279281f4/archive/89a8735ac42fd634389e89f0f45c80e8f0e3bf3b.zip)). This is Step #6 in Rich's guide.
 
 Then a modified postinstall script would look like:
 
