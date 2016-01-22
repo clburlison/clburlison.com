@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demystify Office 2016 for Mac"
-modified: 2016-01-20
+modified: 2016-01-22
 categories: 
   - microsoft
   - osx
@@ -53,13 +53,13 @@ Five months into Office 2016 being out and there are five different kinds of ins
     <th>SKU-less★★</th>
     <th>Installer</th>
     <th>Contains all apps. Good for O365 installations. Can be used in combination with the VL Serializer to create a VL Installer without needing to visit Microsoft's Volume Licensing Service Center (VLSC). <u><a href="#method-1---office-365-installation">Additional info</a></u></th>
-    <th>No</th>
+    <th>Yes</th>
     <th>~1.4 GB</th>
   </tr>
   <tr>
     <th>Volume License (VL)</th>
     <th>Installer</th>
-    <th>Contains all apps. Has Serializer package embed. <u><a href="#method-2---volume-license-installation">Additional info</a></u></th>
+    <th>Contains all apps. Available from VLSC only. Has Serializer package embed. <u><a href="#method-2---volume-license-installation">Additional info</a></u></th>
     <th>Yes</th>
     <th>~1.4 GB</th>
   </tr>
@@ -69,6 +69,13 @@ Five months into Office 2016 being out and there are five different kinds of ins
     <th>Available from <u><a href="http://macadmins.software">http://macadmins.software</a></u>. These install packages can be combined with the VL Serializer below to have a custom install solution of just "one" or a "handful" of O2016 apps★★★. These will also work with O365 installs. OneNote standalone not available (obtain from Mac App Store [MAS] if needed).</th>
     <th>No</th>
     <th>~550 MB per app</th>
+  </tr>
+  <tr>
+    <th>Standalone VL</th>
+    <th>Installer</th>
+    <th>Available from VLSC only. These are standalone install packages that contain your VL serial. They can be used to have a custom install solution of just "one" or a "handful" of O2016 apps★★★. These will also work with O365 installs.</th>
+    <th>No</th>
+    <th>~1 GB per app</th>
   </tr>
   <tr>
     <th>Combo</th>
