@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demystify Office 2016 for Mac"
-modified: 2016-01-22
+modified: 2016-01-24
 categories: 
   - microsoft
   - osx
@@ -31,15 +31,20 @@ Microsoft Office 2016 for Mac had a [rough](https://macops.ca/whats-wrong-with-t
 
 This post should serve as a overview of the changes to Office 2016 (O2016) for Mac from about November 2015 to Present (January 14th).
 
-Before we can get too far into this post it needs to be noted that none of this would be possible without the hard work and support of the following individuals. Contact info is in the form of Twitter/Slack handle. William Smith ([@meck](https://twitter.com/meck)/[@talkingmoose](https://macadmins.slack.com/team/talkingmoose)) took it on himself to reach out to the Apple Product Experience (APEX) Team at Microsoft and helped push them into our community Slack group. Paul Bowden ([@mrexchange](https://twitter.com/mrexchange)/[@pbowden](https://macadmins.slack.com/team/pbowden)) and Erik Schwiebert ([@schwieb](https://twitter.com/schwieb)/[@schwieb](https://macadmins.slack.com/team/schwieb)) are both Software Engineers at Microsoft inside the APEX team. They have been very responsive to feedback from the community.
+Before we can get too far into this post it needs to be noted that none of this would be possible without the hard work and support of the following individuals. Contact info is in the form of Twitter/Slack handle. William Smith ([@meck](https://twitter.com/meck)/[@talkingmoose](https://macadmins.slack.com/team/talkingmoose)) took it on himself to reach out to the Apple Platform Experience (APEX) Team at Microsoft and helped push them into our community Slack group. Paul Bowden ([@mrexchange](https://twitter.com/mrexchange)/[@pbowden](https://macadmins.slack.com/team/pbowden)) and Erik Schwiebert ([@schwieb](https://twitter.com/schwieb)/[@schwieb](https://macadmins.slack.com/team/schwieb)) are both Software Engineers at Microsoft inside the APEX team. They have been very responsive to feedback from the community.
 
 And so you don't think I'm making up facts I will be supplying quotes from Microsoft's pbowden on almost everything. You will need to join our MacAdmins Slack group if you wish to view the source. Sign up page is [http://macadmins.org](http://macadmins.org). 
+
+<div class="note info">
+  <h5>Video Presentation</h5>
+  <p>Paul Bowden gave a presentation at the University of Utah's January Mac Managers meeting which can be viewed <a href="https://stream.lib.utah.edu/index.php?c=details&id=11705" target="_blank">here</a>.</p>
+</div>
 
 ---
 
 #Office Packages
 
-Five months into Office 2016 being out and there are five different kinds of installers/updaters. Plus a bonus serializer package. This table should help clarify what is available and the differences between each package. 
+Five months into Office 2016 being out and there are <s>five</s> six different kinds of installers/updaters. Plus a bonus serializer package. This table should help clarify what is available and the differences between each package. 
 
 <table border="1">
   <tr>
@@ -54,14 +59,14 @@ Five months into Office 2016 being out and there are five different kinds of ins
     <th>Installer</th>
     <th>Contains all apps. Good for O365 installations. Can be used in combination with the VL Serializer to create a VL Installer without needing to visit Microsoft's Volume Licensing Service Center (VLSC). <u><a href="#method-1---office-365-installation">Additional info</a></u></th>
     <th>Yes</th>
-    <th>~1.4 GB</th>
+    <th>~1.3 GB</th>
   </tr>
   <tr>
     <th>Volume License (VL)</th>
     <th>Installer</th>
     <th>Contains all apps. Available from VLSC only. Has Serializer package embed. <u><a href="#method-2---volume-license-installation">Additional info</a></u></th>
     <th>Yes</th>
-    <th>~1.4 GB</th>
+    <th>~1.3 GB</th>
   </tr>
   <tr>
     <th>Standalone</th>
@@ -89,7 +94,7 @@ Five months into Office 2016 being out and there are five different kinds of ins
     <th>Update</th>
     <th>These were first publicly available with 15.18. These significantly reduce the file size that is required to update an Office app. Also per app upgrade packages.<u> <a href="#delta-updates">Additional info</a></u></th>
     <th>Yes</th>
-    <th>~350 MB for suite</th>
+    <th>~780 MB for suite</th>
   </tr>
   <tr>
     <th>VL Serializer</th>
