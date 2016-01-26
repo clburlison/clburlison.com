@@ -79,7 +79,7 @@ Five months into Office 2016 being out and there are <s>five</s> six different k
     <th>Standalone VL</th>
     <th>Installer</th>
     <th>Available from VLSC only. These are standalone install packages that contain your VL serial. They can be used to have a custom install solution of just "one" or a "handful" of O2016 apps★★★.</th>
-    <th>No</th>
+    <th>Yes</th>
     <th>~1 GB per app</th>
   </tr>
   <tr>
