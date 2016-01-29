@@ -16,16 +16,6 @@ image:
 tags: [office2016, Mac, microsoft, os x, munki, casper, deployment, installation, dummies, guide]
 ---
 
-<section id="table-of-contents" class="toc">
-  <header>
-    <h3>Overview</h3>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section><!-- /#table-of-contents -->
-
 #Intro
 Microsoft Office 2016 for Mac had a [rough](https://macops.ca/whats-wrong-with-the-office-2016-volume-license-installer/) [start](https://macops.ca/the-office-for-mac-2016-volume-license-installer-two-months-later/) [for](http://www.richard-purves.com/?p=79) [sure](https://derflounder.wordpress.com/2015/08/05/creating-an-office-2016-15-12-3-installer/). With that being said things have gotten better and quite rapidly. This post will focus on where Office 2016 for Mac currently stands, commonly asked questions, best practices, and solutions for updates.
 
@@ -125,7 +115,7 @@ You can download a SKU-less installer from your VLSC dashboard or from [http://m
 * Munki
 * Casper
 * While at the loginwindow
-* <s>And can be baked into an image</s>. There is currently a bug in the postflight script such that the correct target drive is not selected. AKA - this installer will not work on baked images.
+* <s>And can be baked into an image</s> There is currently a bug in the postflight script such that the correct target drive is not selected.
 
 It all-around should be good to go!
 
@@ -584,3 +574,16 @@ Links:
 [Office 2011 Choices Explained](https://jamfnation.jamfsoftware.com/discussion.html?id=13946#responseChild84049),  
 [Office 2016 where is the name of the user stored](http://maclovin.org/blog-native/2015/office-2016-where-is-the-name-of-the-user-stored-),  
 [Munki Wiki ChoiceChangeXML](https://github.com/munki/munki/wiki/ChoiceChangesXML)  
+
+
+
+
+<section id="table-of-contents" class="toc">
+  <header>
+    <h3>Overview</h3>
+  </header>
+<div id="drawer" markdown="1">
+*  Auto generated table of contents
+{:toc}
+</div>
+</section><!-- /#table-of-contents -->
