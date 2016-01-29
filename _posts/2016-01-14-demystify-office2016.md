@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demystify Office 2016 for Mac"
-modified: 2016-01-24
+modified: 2016-01-29
 categories: 
   - microsoft
   - osx
@@ -125,7 +125,7 @@ You can download a SKU-less installer from your VLSC dashboard or from [http://m
 * Munki
 * Casper
 * While at the loginwindow
-* And can be baked into an image
+* <s>And can be baked into an image</s>. There is currently a bug in the postflight script such that the correct target drive is not selected. AKA - this installer will not work on baked images.
 
 It all-around should be good to go!
 
@@ -138,7 +138,7 @@ This installer is deployed via Apple's Installer Application (command line & GUI
 * Munki
 * Casper
 * While at the loginwindow
-* And can **NOT** be baked into an image
+* And can **NOT** be baked into an image. This is due to how the serialization process works.
 
 
 Your options are to now deploy the VL installer package or you can now download the latest SKU-less installer package ([http://macadmins.software](http://macadmins.software)) to deploy. When you use the second option you are able to deploy the SKU-less installer and then apply your VL Serializer package to create a supported install. This is a kind of "future proof" solution as you would not have to access the VLSC again to receive updates. 
