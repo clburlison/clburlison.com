@@ -1,8 +1,11 @@
-.DS_Store
+_site
 .sass-cache
-Gemfile.lock
-_site/
 .DS_Store
-!.gitkeep
+*.sublime-project
+*.sublime-workspace
+codekit-config.json
+node_modules
+_asset_bundler_cache
+.jekyll-metadata
 *.psd
 .bundle/config

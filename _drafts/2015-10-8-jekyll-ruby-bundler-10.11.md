@@ -4,7 +4,7 @@ It seems like a ton of people are having issues with Ruby, Jekyll, and Bundler a
 Easiest solution below:
 
 
-{% gist https://github.com/clburlison/clburlison.github.io/blob/source/Rakefile#L128-L170 %}
+ https://github.com/clburlison/clburlison.github.io/blob/source/Rakefile#L128-L170
 
 
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 setup () {
-	echo "## Setup your development environment" 
+  echo "## Setup your development environment" 
   echo "## Install Homebrew"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   echo "## Install rvm"
@@ -15,11 +15,11 @@ setup () {
   gem install bundler
   echo "## Install repo requirements with Bundler"
   bundle install --binstubs=$GEM_HOME/bin/
-	echo "## Setup complete"
+  echo "## Setup complete"
 }
 
 clean () {
-	echo "## Clean (Uninstall) up your development environment"
+  echo "## Clean (Uninstall) up your development environment"
   echo "## Uninstall Homebrew"
   echo "## Most of the time you should select _NO_"  
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
@@ -28,6 +28,13 @@ clean () {
   echo "## Uninstall rvm"
   rvm implode
 }
+
+# WIP
+# update () {
+#   echo "## Update Bundle config to match current $USER"
+#   print "---
+# BUNDLE_BIN: "/Users/${USER}/.rvm/gems/ruby-2.1.0/bin/" > ./bundle/config
+# }
 
 case "$1" in
   setup)

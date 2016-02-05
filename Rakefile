@@ -153,7 +153,7 @@ namespace :site do
 
   desc "Generate the site, serve locally and watch for changes"
   task :watch do
-    sh "jekyll serve --watch --drafts --config _config.yml,_config-dev.yml"
+    sh "jekyll serve --incremental --watch --drafts --config _config.yml,_config-dev.yml"
   end
 
   desc "Generate the site and push changes to remote origin"

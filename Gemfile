@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+gem "jekyll", "~> 3.0"
+gem "jekyll-sitemap"
+gem "jekyll-gist"
 gem 'jekyll-redirect-from'
-gem 'jekyll-sitemap'
-gem 'jekyll-gist'
+gem "octopress"
 gem 'rake'
 gem 'stringex'
 gem 'travis'
+gem 'kramdown'
 
 group :jekyll_plugins do
   gem 'jekyll-compose'
@@ -20,5 +22,5 @@ end
 # gem 'octopress', '~> 3.0.0.rc.12'
 # gem 'RedCloth'
 # gem 'rdiscount'
-gem 'kramdown'
 # gem 'redcarpet'
+
