@@ -24,17 +24,16 @@ If by chance you have some motivation and wish to create your own list feel free
 
 ##Current focus:
 
-1. Learn Python
+1. Graduate from college w/ Bachelors Degree
+
 
 
 The idea behind having a a current focus section is to disregard everything else on this page. It is easy to become stretched too thin. It is easy to want to do everything. It is hard to accomplish everything when all you can think about it everything else. I try to limit this area to five or less.
 
 ##Last 5 Completed Goals
 
+* Learn Python (3/12/15)
 * Learn Java (5/14/15 - proficient)
-* Fix ACL permission issues for munki server (7/3/14)
-* Register for UTA (6/2/14)
-* Setup Boxen for my personal laptop (4/10/14) 
 
 ##Fitness/Health Goals
 
@@ -48,7 +47,7 @@ The idea behind having a a current focus section is to disregard everything else
 ##Professional Goals
 
 * Obtain Cisco Certified Network Associate (CCNA) Routing and Switching
-* Learn Python
+* <del>Learn Python</del> (3/12/15)
 * Learn Ruby
 * Learn Objective-C
 * Learn C++
