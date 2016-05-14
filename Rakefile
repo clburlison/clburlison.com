@@ -157,7 +157,7 @@ namespace :site do
   end
 
   desc "Generate the site and push changes to remote origin"
-  task :deploy => [:edit] do
+  task :deploy do
     # Detect pull request
     if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
       puts 'Pull request detected. Not proceeding with deploy.'

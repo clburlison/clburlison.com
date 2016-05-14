@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e # halt script on error
+
+rake site:build
+# rake site:check
