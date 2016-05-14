@@ -1,0 +1,15 @@
+---
+layout: archive
+author_profile: true
+header:
+  image: /unsplash/photo-1453090522900-026de5423c2a.png
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/SKcTKYNRvHY)"
+---
+
+{% include base_path %}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts }}</h3>
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}

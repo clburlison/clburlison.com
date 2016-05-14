@@ -1,13 +1,34 @@
-# Site navigation links
+# main navigation links
+main:
+  - title: "About"
+    url: /about/
+  - title: "Resources"
+    url: /resources/
+  - title: "Archives"
+    url: /year-archive/
 
-- title: About
-  url: /about/
 
-- title: Resources
-  url: /resources/
+# archive navigation links
+archive:
+  - title: "Posts..."
+    children:
+      - title: "By year"
+        url: /year-archive/
+      - title: "By tag"
+        url: /tags/
+      - title: "By category"
+        url: /categories/
+      - title: "By collection"
+        url: /collection-archive/
 
-- title: Scripts
-  url: https://github.com/clburlison/scripts
 
-- title: Archives
-  url: /archives/
+# about navigation links
+about:
+  - title: "About..."
+    children:
+      - title: "About me"
+        url: /about/
+      - title: "About this site"
+        url: /about/site-info/
+      - title: "My list"
+        url: /about/my-list/

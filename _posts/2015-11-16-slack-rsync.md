@@ -1,9 +1,7 @@
 ---
-layout: post
 title: Slack rsync
-modified:
-comments: true
-categories: 
+modified: ""
+tags: 
   - python
   - automation
 excerpt: A simple script to rsync a directory and send a summary to Slack.
@@ -15,7 +13,7 @@ My use case is simple, every day I sync my munki repo to a separate server (I al
 
 Sample output:
 
-{% img center /images/2015-10-16/sample.png 500 500 %}
+![]({{ site.url }}{{ site.baseurl }}/images/2015-10-16/sample.png)
 
 For this to work you will need to: 
 

@@ -1,25 +1,22 @@
 ---
-layout: post
 title: "Zendesk Automation for Mail"
 modified:
-categories:
-- automation
+tags:
+  - automation
+  - osx
 excerpt: Utilize Zendesk's mail API with Apple Mail and Automator. 
-comments: true
-published: flase
-image:
-  feature: /temp/mail-api-banner.png
-  credit: Zendesk
-  creditlink: https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox
-tags: [osx, Apple, Mail, Zendesk, automation, api, automator, helpdesk, support]	
+header:
+  image: /temp/mail-api-banner.png
+  caption: "Photo credit: [**Zendesk**](https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox)"
+keywords: [osx, Apple, Mail, Zendesk, automation, api, automator, helpdesk, support]	
 ---
 
-#Intro 
+# Intro 
+
+I should write something here... ¯\_(ツ)_/¯
 
 
-
-
-#Apple Mail Stationary
+# Apple Mail Stationary
 
 1) Download stationary 
 
@@ -52,7 +49,7 @@ At this point if you wish to add the stationary to your favorites just drag it u
 
 The above is great for creating new tickets. However what is a use has emailed you the issue directly. The simple solution is, use Zendesk's same email API commands. The only problem is stationary emails are only allowed for new emails in Apple mail. Which brings us to solution two. 
 
-#Automator
+# Automator
 
 These servies are stored at ~/Library/Services/
 
@@ -63,7 +60,7 @@ These servies are stored at ~/Library/Services/
 
 NOTE: I have the bcc field enabled in Apple Mail. If you don't you will need to remove one of the tabs
 
-#Extra
+# Extra
 
 >To your second question: If the custom field is a drop down, use the tag associated with the selection you want to set. Once you add the tag and submit the ticket update, it will automatically make the corresponding selection from the drop-down. Other custom fields such as regex, numbers and text are not settable via the mail API.
 > 

@@ -1,22 +1,17 @@
 ---
-layout: post
 title: "Demystify Office 2016 for Mac"
 modified: 2016-01-29
-categories: 
+tags: 
   - microsoft
   - osx
-  - office2016
 excerpt: An pratical guide on installing and managing Office 2016 for Mac. Includes - common questions, best practices, bugs/fixes, preferences, etc.
-comments: true
-published: true
-image:
-  feature:
-  credit: 
-  creditlink:
-tags: [office2016, Mac, microsoft, os x, munki, casper, deployment, installation, dummies, guide]
+categories:
+  - guides
 ---
 
-#Intro
+{% include toc %}
+
+# Intro
 Microsoft Office 2016 for Mac had a [rough](https://macops.ca/whats-wrong-with-the-office-2016-volume-license-installer/) [start](https://macops.ca/the-office-for-mac-2016-volume-license-installer-two-months-later/) [for](http://www.richard-purves.com/?p=79) [sure](https://derflounder.wordpress.com/2015/08/05/creating-an-office-2016-15-12-3-installer/). With that being said things have gotten better and quite rapidly. This post will focus on where Office 2016 for Mac currently stands, commonly asked questions, best practices, and solutions for updates.
 
 This post should serve as a overview of the changes to Office 2016 (O2016) for Mac from about November 2015 to Present (January 14th).
@@ -25,75 +20,26 @@ Before we can get too far into this post it needs to be noted that none of this 
 
 And so you don't think I'm making up facts I will be supplying quotes from Microsoft's pbowden on almost everything. You will need to join our MacAdmins Slack group if you wish to view the source. Sign up page is [http://macadmins.org](http://macadmins.org). 
 
-<div class="note info">
-  <h5>Video Presentation</h5>
-  <p>Paul Bowden gave a presentation at the University of Utah's January Mac Managers meeting which can be viewed <a href="https://stream.lib.utah.edu/index.php?c=details&id=11705" target="_blank">here</a>.</p>
-</div>
+
+**Video Presentation:** Paul Bowden gave a presentation, 2016.01.20, at the University of Utah's Mac Managers meeting which can be viewed [here](https://stream.lib.utah.edu/index.php?c=details&id=11705){:target="_blank"}. It covers many of the topics from this post in video form.
+{: .notice--info}
 
 ---
 
-#Office Packages
+# Office Packages
 
 Five months into Office 2016 being out and there are <s>five</s> six different kinds of installers/updaters. Plus a bonus serializer package. This table should help clarify what is available and the differences between each package. 
 
-<table border="1">
-  <tr>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Comments</th>
-    <th>Requires Live System</th>
-    <th>File Size★</th>
-  </tr>
-  <tr>
-    <th>SKU-less★★</th>
-    <th>Installer</th>
-    <th>Contains all apps. Good for O365 installations. Can be used in combination with the VL Serializer to create a VL Installer without needing to visit Microsoft's Volume Licensing Service Center (VLSC). <u><a href="#method-1---office-365-installation">Additional info</a></u></th>
-    <th>Yes</th>
-    <th>~1.3 GB</th>
-  </tr>
-  <tr>
-    <th>Volume License (VL)</th>
-    <th>Installer</th>
-    <th>Contains all apps. Available from VLSC only. Has Serializer package embed. <u><a href="#method-2---volume-license-installation">Additional info</a></u></th>
-    <th>Yes</th>
-    <th>~1.3 GB</th>
-  </tr>
-  <tr>
-    <th>Standalone</th>
-    <th>Installer</th>
-    <th>Available from <u><a href="http://macadmins.software">http://macadmins.software</a></u>. These install packages can be combined with the VL Serializer below to have a custom install solution of just "one" or a "handful" of O2016 apps★★★. These will also work with O365 installs. OneNote standalone not available (obtain from Mac App Store [MAS] if needed).</th>
-    <th>No</th>
-    <th>~550 MB per app</th>
-  </tr>
-  <tr>
-    <th>Standalone VL</th>
-    <th>Installer</th>
-    <th>Available from VLSC only. These are standalone install packages that contain your VL serial. They can be used to have a custom install solution of just "one" or a "handful" of O2016 apps★★★.</th>
-    <th>Yes</th>
-    <th>~1 GB per app</th>
-  </tr>
-  <tr>
-    <th>Combo</th>
-    <th>Update</th>
-    <th>These updates can take any previous Office 2016 installed app and make them current. These are per app upgrade packages, a difference from Office 2011's combo update packages.</th>
-    <th>Yes</th>
-    <th>~1 GB per app</th>
-  </tr>
-  <tr>
-    <th>Delta</th>
-    <th>Update</th>
-    <th>These were first publicly available with 15.18. These significantly reduce the file size that is required to update an Office app. Also per app upgrade packages.<u> <a href="#delta-updates">Additional info</a></u></th>
-    <th>Yes</th>
-    <th>~780 MB for suite</th>
-  </tr>
-  <tr>
-    <th>VL Serializer</th>
-    <th>Serializer</th>
-    <th>This is a special package that was released with 15.17. The purpose of this package is to apply the Office serialization process to the SKU-less installations. <u><a href="#vl-serializer">more info</a></u></th>
-    <th>Yes</th>
-    <th>~5 MB</th>
-  </tr>
-</table>
+| Name | Type | Comments | Requires Live System | File Size★ | 
+|:-----|:-----|:---------|:--------------------:|:----------:|
+| SKU-less★★ | Installer | Contains all apps. Good for O365 installations. Can be used in combination with the VL Serializer to create a VL Installer without needing to visit Microsoft's Volume Licensing Service Center (VLSC). <a href="#method-1---office-365-installation">Additional info</a> | Yes | ~1.3 GB | 
+| Volume License (VL) | Installer | Contains all apps. Available from VLSC only. Has Serializer package embed. <a href="#method-2---volume-license-installation">Additional info</a> | Yes | ~1.3 GB | 
+| Standalone | Installer | Available from <a href="http://macadmins.software">http://macadmins.software</a>. These install packages can be combined with the VL Serializer below to have a custom install solution of just "one" or a "handful" of O2016 apps★★★. These will also work with O365 installs. OneNote standalone not available (obtain from Mac App Store [MAS] if needed). | No | ~550 MB per app | 
+| Standalone VL | Installer | Available from VLSC only. These are standalone install packages that contain your VL serial. They can be used to have a custom install solution of just "one" or a "handful" of O2016 apps★★★. | Yes | ~1 GB per app | 
+| Combo | Update | These updates can take any previous Office 2016 installed app and make them current. These are per app upgrade packages, a difference from Office 2011's combo update packages. | Yes | ~1 GB per app | 
+| Delta | Update | These were first publicly available with 15.18. These significantly reduce the file size that is required to update an Office app. Also per app upgrade packages. <a href="#delta-updates">Additional info</a> | Yes | ~780 MB for suite | 
+| VL Serializer | Serializer | This is a special package that was released with 15.17. The purpose of this package is to apply the Office serialization process to the SKU-less installations. <a href="#vl-serializer">more info</a> | Yes | ~5 MB | 
+{: rules="groups"}
 
 
 If **Requires Live System**, is 'yes' these installers must be ran on fully booted Mac. IE - You must see the loginwindow or be logged into the physical Mac that you are installing O2016 on. If this option is 'no' you can bake these installers into a base image using tools like [AutoDMG](https://github.com/MagerValp/AutoDMG), [DeployStudio](http://www.deploystudio.com/), or Casper's Image creation process.
@@ -104,11 +50,11 @@ If **Requires Live System**, is 'yes' these installers must be ran on fully boot
 
 
 
-#How do I install O2016?
+# How do I install O2016?
   
 You should install the package that Microsoft is giving you. **PERIOD**. End of story. Stop taking their package apart and "fixing things". It is fine to poke your nose under the hood but there is absolutely no reason for you to be re-packaging anything Office 2016 related. This was a common practice with Office 2011 and at the start of Office 2016. All issues that were resolved with re-packaging have been fixed by Microsoft. Microsoft has listened and now it is your turn. STAHP.
 
-###Method 1 - Office 365 installation
+### Method 1 - Office 365 installation
 You can download a SKU-less installer from your VLSC dashboard or from [http://macadmins.software](http://macadmins.software). Both locations point to the same file as it a public release. This installer is deployed via Apple's Installer Application (command line & GUI) and can be deployed via:
 
 * Apple Remote Desktop
@@ -119,7 +65,7 @@ You can download a SKU-less installer from your VLSC dashboard or from [http://m
 
 It all-around should be good to go!
 
-###Method 2 - Volume License Installation
+### Method 2 - Volume License Installation
 If you are a Volume License (VL) customer your first step is to log into the VLSC and download the latest Office 2016 for Mac iso file. Inside of this file you will find the latest VL Installer package and the VL Serializer package. At this time, the VLSC has 15.17 however 15.18 has been released. Microsoft is working to sync the development and VLSC teams so that the latest update is available on the VLSC faster.
 
 This installer is deployed via Apple's Installer Application (command line & GUI) and can be deployed via:
@@ -140,7 +86,7 @@ A **third**, and slightly less preferred (personal opinion) option would be to d
 > @pbowden -- [source link #1](https://macadmins.slack.com/archives/microsoft-office/p1449897132003874) 
 
 
-###Munki
+### Munki
 If you are a munki shop pick one of the methods above and run the following to import Office 2016 into your repo:
 
 {% highlight bash %}
@@ -186,7 +132,7 @@ The VL Serializer should have the following preinstall script. This will help us
 
 If you wish to implement a choice xml file for munki you will want to copy and paste the `installer_choices_xml` array from the `office2016_munki.xml` file into your Office 2016 pkginfo ([download link](https://gist.github.com/clburlison/8fd09ae20de4279281f4/archive/89a8735ac42fd634389e89f0f45c80e8f0e3bf3b.zip)). Also, if you wish to apply an icon supply the `--icon_path=/path/to/MSOffice2016.png` key (the icon I used can be downloaded below).
 
-{% img center /images/2016-01-14/MSOffice2016.png 100 100 %}
+![]({{ site.url }}{{ site.baseurl }}/images/2016-01-14/MSOffice2016.png)
 
 Right Click > Save Image As...
 
@@ -224,7 +170,7 @@ $ makepkginfo \
 {% endhighlight %}
 
 
-###Casper
+### Casper
 I was going to try and give resources for Casper...then I realized how completely unqualified for this section. Luckily Rich Trouton [has got you covered](https://derflounder.wordpress.com/2016/01/14/creating-an-office-2016-15-18-0-installer/){:target="_blank"}.
 
 Using his method you could add a [choice xml](#i-dont-want-to-install-mau-is-that-supported) file if you wanted to customize your installation. Inside of Packages under the "Additional Resources" tab you would need to copy in your choice xml ([download link](https://gist.github.com/clburlison/8fd09ae20de4279281f4/archive/89a8735ac42fd634389e89f0f45c80e8f0e3bf3b.zip)). This is Step #6 in Rich's guide.
@@ -239,10 +185,10 @@ Make sure and walk through the remaining steps in Rich's guide to complete this 
 
 ---
 
-#FAQ
+# FAQ
 Due to the shear quantity of content I am attempting to cover the remanding section of this post will be in FAQ format. 
 
-##Why is O2016 so different from O2011?
+## Why is O2016 so different from O2011?
 The main reason why Office 2016 is so different is the fact that each application is now [Sandboxed](https://developer.apple.com/library/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html). Due to that fact, Microsoft is now just one step away from releasing Office 2016 apps on the Mac App Store (figuratively speaking at least). Obviously time frame for this move would depend greatly on internal policies, process with Apple, and other factors unknown to me. Sandboxing also means it is easier to remove an Application after it has been installed IE - `sudo rm -rf "/Applications/Microsoft Word.app"`. However, one downside of Sandboxed applications is the large quantity of duplicated data (mostly Fonts) being stored on the disk in five applications. 
 
 Bonus regarding the MAS: 
@@ -251,14 +197,14 @@ Bonus regarding the MAS:
 > 
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1447219900000887)
 
-##O2016 takes up so much more space.
+## O2016 takes up so much more space.
 True. This is due to Sandboxing. This is a limitation is due to Apple's guidelines on how Sandboxing is implemented. 
 
 Nothing can be done about the increased size at this point in time. 
 
 Now is a good time to mention [OfficeThinner](https://github.com/goodbest/OfficeThinner) is bad, will break code signing, and is **not** supported. If you did this on a personal machine you should revert the changes sooner rather than later (easiest fix is to install latest SKU-less installer).
 
-##How do I manage updates for Office 2016?
+## How do I manage updates for Office 2016?
 You're limited to two solutions:
 
 1. Use MAU
@@ -266,10 +212,10 @@ You're limited to two solutions:
 
 Technically speaking if you aren't using MAU, you really need to look into [AutoPkg](#autopkg).
 
-##AutoPkg
+## AutoPkg
 
-<div class="note warning">
-  <h5>Unsupported!</h5>
+<div class="notice--danger">
+  <b>Unsupported!</b>
   <p>If you wish to utilize AutoPkg to install the individual applications IE - <code>MSWord2016.{download,install,munki,jss,etc.}</code>, <code>MSExcel2016.{etc}</code>, <code>MSPowerPoint2016.{etc}</code>. <code>MSOutlook2016.{etc}</code> or <code>MSOneNote2016.{etc}</code>, on <b><u>NEW</u></b> machines this is unsupported by Microsoft. These recipes correlate to the 'Combo' update packages (by default) and are not suitable for first time installation. The delta updates are also not suitable for first time installation.
   <br><br>
     This means your base installation should be one of the <a href="#how-do-i-install-o2016">supported options</a> above. Afterwards you can utilize AutoPkg to download the combo updates in place of MAU.
@@ -306,11 +252,11 @@ autopkg repo-add https://github.com/autopkg/arubdesu-recipes
 
 Using AutoPkg is outside of the scope of this guide.
 
-##http://macadmins.software
+## http://macadmins.software
 This is a site that is _not_ affiliated with Microsoft but ran by a friendly face (*cough* pbowden *cough*). This website is simple and has one purpose: get current software links/version easier. With that said all of the links are actually redirects to Microsoft's Official CDN so software downloaded from this site is safe. The packages can be verified as they are all signed by Microsoft's developer certs.
 
-##When saving I get a blank directory!
-{% img center /images/2016-01-14/saving_online_default.png 600 600 %}
+## When saving I get a blank directory!
+![]({{ site.url }}{{ site.baseurl }}/images/2016-01-14/saving_online_default.png)
 
 By default the Office 2016 suite of applications have 'Online Locations' selected in the save window. This might be considered confusing to end-users. In addition some environments are not allowed to save files to cloud based storage locations. This is now manageable with a preference, example below:
 
@@ -329,8 +275,8 @@ This is not a perfect solution however if you really need to change the default 
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1450417854005113)
 
 
-##Set the User Information
-{% img center /images/2016-01-14/MeContact.png 600 %}
+## Set the User Information
+![]({{ site.url }}{{ site.baseurl }}/images/2016-01-14/MeContact.png)
 
 This was found by [François Levaux](http://maclovin.org/blog-native/2015/office-2016-where-is-the-name-of-the-user-stored-) so I take no credit for the discovery however to make it more readily accessable I will be posting this here. If you wish to automatically populate the User Information fields (Name and Initials) the following script can do so.
 
@@ -339,7 +285,7 @@ This was found by [François Levaux](http://maclovin.org/blog-native/2015/office
 {% gist clburlison/4552c1036236a22ba829 Office2016-MeContact.sh %}
 
 
-##Can't I just copy com.microsoft.office.licensingV2.plist?
+## Can't I just copy com.microsoft.office.licensingV2.plist?
 No. This was a bug. Microsoft is aware of the issue and this will be fixed in 15.20 which is scheduled to be released in March. 
 
 The first editions of the Volume License installer from Microsoft caused issues with licensing. The Mac Admin Community collectively came to the solution of packaging `/Library/Preferences/com.microsoft.office.licensingV2.plist` separately and applying this file to new installations. This was wrong. Do not do it.
@@ -351,14 +297,14 @@ If you did copy the `com.microsoft.office.licensingV2.plist` file see [VL Serial
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1447525532000461)
 
 
-##Dialog Prompt(s) - IE What's New
+## Dialog Prompt(s) - IE What's New
 Eric Holtam has a great post regarding these dialog prompts and managing them with profiles [located here](https://osxbytes.wordpress.com/2015/09/17/not-much-whats-new-with-you/){:target="_blank"}. The only part that I didn't understand, initially, was Office is actually providing your with two separate "What's New" dialog boxes. The first (shown below with Excel) gives you a splash screen and then prompts you to select your colour theme: Classic or Colorful. Along with prompting O365 users to sign-in for activation.
 
-{% img center /images/2016-01-14/WhatsNew1.png 420 200 %}
+![]({{ site.url }}{{ site.baseurl }}/images/2016-01-14/WhatsNew1.png)
 
 The second "What's New" dialog prompt will only be shown for O365 users. With 15.15 and up VL customers will not see these prompts. It does not matter how you installed O2016, even the SKU-less installer, if you are a VL customer these dialog prompts will not be shown. 
 
-{% img center /images/2016-01-14/WhatsNew2.png 420 200 %}
+![]({{ site.url }}{{ site.baseurl }}/images/2016-01-14/WhatsNew2.png)
 
 Both of these dialog boxes can be disabled, however if you are a O365 customer disabling the first dialog prompt is not recommended (see quote from Eric below).
 
@@ -366,35 +312,35 @@ Both of these dialog boxes can be disabled, however if you are a O365 customer d
 > 
 > @eholtam -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1452712063008493)
 
-##Delta Updates
+## Delta Updates
 With the release of 15.18 Microsoft has released Delta updates. Paul has released a public document that goes over these updates in quite a bit of detail (see below). The biggest note for these delta updates is that they will only work on the current release minus one minor revision (N-1). 
 
 IE - I have Office 15.17 installed when 15.18 was released MAU offered to install the latest 15.18 updates as delta packages. However, if I was on 15.16 I would need the 15.18 combo update packages (quite a bit larger in file size) in order to update to the latest release.
 
 The nice part about these Delta updates is if you are using MAU these are automatically offered to your users without any intervention on your part. 
 
-[{% img center /images/pdf.png 100 100 %}](/images/2016-01-14/Delta_Updates.pdf){:target="_blank"}
+[![]({{ site.url }}{{ site.baseurl }}/images/pdf-200x200.png)](/images/2016-01-14/Delta_Updates.pdf){:target="_blank"}
 
 > If anyone wants to try out delta updates (we’ve now got them down to 350 MB for the entire suite), just change MAU to the Internal channel
 > 
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1452622212007576)
 
 
-##VL Serializer
+## VL Serializer
 Again, Paul has released a document that will cover more information than I can. The only thing I want to highlight is if you are coming from a known bad install of office (IE - you copied com.microsoft.office.licensingV2.plist) you need to run a `rm -f /Library/Preferences/com.microsoft.office.licensingV2.plist` prior to running the VL Serializer package.
 
-[{% img center /images/pdf.png 100 100 %}](/images/2016-01-14/VL_Serializer.pdf){:target="_blank"}
+[![]({{ site.url }}{{ site.baseurl }}/images/pdf-200x200.png)](/images/2016-01-14/VL_Serializer.pdf){:target="_blank"}
 
 
-##Office Insider
+## Office Insider
 
 > The	Office	Insider	program	is	a	new	initiative	to	provide	Office	customers	on	all	platforms	to	get	early	access	to	the	very	latest	builds	of	the	
 product.	The	public	description	can	be	found	at	https://products.office.com/office-insider
 
-[{% img center /images/pdf.png 100 100 %}](/images/2016-01-14/Office_Insider.pdf){:target="_blank"}
+[![]({{ site.url }}{{ site.baseurl }}/images/pdf-200x200.png)](/images/2016-01-14/Office_Insider.pdf){:target="_blank"}
 
 
-#MAU
+# MAU
 Sorry, MAU is a very complex topic. I do not plan on utilizing it in my environment so below are important notes from Paul.
 
 > Warning …long paragraph coming up  😉
@@ -424,8 +370,8 @@ Let me know if you have any questions or comments! When we get closer to end of 
 >
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1449904185003906) 
 
-##MAU 3.4 update 
-{% img center /images/2016-01-14/insider_builds.png 300 300 %}
+## MAU 3.4 update 
+![]({{ site.url }}{{ site.baseurl }}/images/2016-01-14/insider_builds.png)
 
 > Lots of good progress today towards our 15.18 January release that I wanted to share. First up, MAU 3.4 which is scheduled to release on 1/4. The big change here is support for the new Office Insiders program, and the official release of multiple update channels. 
 >
@@ -440,7 +386,7 @@ Let me know if you have any questions or comments! When we get closer to end of 
 > 
 > @pbowden -- [source link](https://macadmins.slack.com/files/pbowden/F0GUKFW4C/pasted_image_at_2015_12_17_09_36_pm.png)
 
-##Can I disable MAU from auto-checking for updates? 
+## Can I disable MAU from auto-checking for updates? 
 Sure. This process is the same as it was with Office 2011. My recommended method for making this change is with a profile. Example from Greg Neagle: [disable_autoupdates_microsoftautoupdater.mobileconfig](https://github.com/gregneagle/profiles/blob/master/autoupdate_disablers/disable_autoupdates_microsoftautoupdater.mobileconfig)
 
 The change can also be applied per user with defaults:
@@ -452,7 +398,7 @@ $ defaults write com.microsoft.autoupdate2 LastUpdate -date '2001-01-01T00:00:00
 
 {% endhighlight %}
 
-##I don't want to install MAU, is that supported?
+## I don't want to install MAU, is that supported?
 Yes, MAU is completely optional. In fact each of the five core MS applications are optional. Just because the installer has all five available does not mean you must install them. 
 
 If you choose to _not_ install MAU, all updates to the Office suite will be completely on you as the administrator. In my environment MAU is removed when I uninstall Office 2011. During the rollout of Office 2016 I use a choice xml file to disable the installation of MAU from the SKU-less installer. 
@@ -483,17 +429,13 @@ If you are interested in how I created the choice xml above please see the follo
 >
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1447219794000886)
 
+**Following section:** I debated adding the following section or not. The TL;DR is make sure you are using release 15.17.0 or greater. If you want more details then carry on.
+{: .notice}
 
-<div class="note info">
-  <h5>Following section:</h5>
-  <p>I debated adding the following section or not. The TL;DR is make sure you are using release 15.17.0 or greater. If you want more details then carry on.</p>
-</div>
-
-
-#Bugs
+# Bugs
 Oh the bugs that have been squashed. This is not an all encompassing list however "big issues" should be listed below.
 
-#15.17 Release Log for Admins
+# 15.17 Release Log for Admins
 
 Included in 15.17 mid-December Release (i.e. work already complete and verified)*​
 
@@ -509,8 +451,8 @@ Included in 15.17 mid-December Release (i.e. work already complete and verified)
 
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1448495549001887)
 
-##Keychain Prompt
-{% img center /images/2016-01-14/bad_mau_daemon.png 420 200 %}
+## Keychain Prompt
+![]({{ site.url }}{{ site.baseurl }}/images/2016-01-14/bad_mau_daemon.png)
 
 FIXED - 15.17
 
@@ -536,7 +478,7 @@ More on the actual fix to this issue. Inside of `$HOME/Library/Preferences/com.m
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1449899823003896)
 
 
-##Software not actually becoming licensed
+## Software not actually becoming licensed
 FIXED - 15.14
 
 Issue - If the VL intall package was installed at the loginwindow, Office 2016 would fail to properly serialize O2016.
@@ -545,7 +487,7 @@ Issue - If the VL intall package was installed at the loginwindow, Office 2016 w
 > 
 > @pbowden -- [source link #5](https://macadmins.slack.com/archives/microsoft-office/p1449897132003874)
 
-##Outlook Resizing/Word Crashing Bugs
+## Outlook Resizing/Word Crashing Bugs
 FIXED - 15.17.1
 
 Issue - A bug that caused issues when resizing Outlook and some bug fixes for Word. 
@@ -555,7 +497,7 @@ Issue - A bug that caused issues when resizing Outlook and some bug fixes for Wo
 > @pbowden -- [source link](https://macadmins.slack.com/archives/microsoft-office/p1450377975004954)
 
 
-#Wrap up
+# Wrap up
 Hopefully that covers all the bits and pieces a Mac Administrator would want to know.
 
 
@@ -574,16 +516,3 @@ Links:
 [Office 2011 Choices Explained](https://jamfnation.jamfsoftware.com/discussion.html?id=13946#responseChild84049),  
 [Office 2016 where is the name of the user stored](http://maclovin.org/blog-native/2015/office-2016-where-is-the-name-of-the-user-stored-),  
 [Munki Wiki ChoiceChangeXML](https://github.com/munki/munki/wiki/ChoiceChangesXML)  
-
-
-
-
-<section id="table-of-contents" class="toc">
-  <header>
-    <h3>Overview</h3>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section><!-- /#table-of-contents -->

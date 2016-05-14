@@ -1,12 +1,9 @@
 ---
-layout: post
 title: Bash if then cheat sheet
 modified: "2015-02-16"
-comments: true
-published: true
 keywords: "bash, scripting, if then, statements"
 description: null
-categories: 
+tags: 
   - osx
   - bash
 redirect_from:
@@ -17,7 +14,7 @@ I always find myself looking for a good resource when writing if/then statements
 
 Examples on usage can be found in the [original article](http://tldp.org/LDP/abs/html/comparison-ops.html).
 
-##integer comparison
+## integer comparison
 {% highlight bash %}
 
 	# The following are for number values only.
@@ -62,7 +59,7 @@ Examples on usage can be found in the [original article](http://tldp.org/LDP/abs
 {% endhighlight %}
 
 
-##string comparison
+## string comparison
 {% highlight bash %}
 
 	# The following are for strings of data.
@@ -129,7 +126,7 @@ Examples on usage can be found in the [original article](http://tldp.org/LDP/abs
 		this is an unsafe practice. Always quote a tested string. [1]
 {% endhighlight %}
 
-#Examples
+# Examples
 
 To check if a directory exists in a shell script you can use the following:
 
@@ -147,7 +144,7 @@ if [ ! -d "$DIRECTORY" ]; then
 fi
 {% endhighlight %}
 
-#Credit
+# Credit
 Special Thanks to the The Linux Documentation Project for outlining the information in such a usable format. They also include great examples on their website.
 
 ---

@@ -1,10 +1,10 @@
 ---
-layout: post
 title: "Writing tips"
 modified:
 categories: 
-- personal
-- writing
+  - personal
+tags:
+  - writing
 excerpt:
 comments: true
 published: true
@@ -15,7 +15,7 @@ image:
 tags: []	
 ---
 
-#Intro
+# Intro
 These are some helpful writing tips I find valuable.
 
 

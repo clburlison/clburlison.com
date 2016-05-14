@@ -1,12 +1,9 @@
 ---
-layout: post
 title: "Converting Audio With Media Encoder"
 modified: 2014-10-18
-comments: true
-published: true
 keywords: audio, editing, wav, windows, mac
 description: Describes how to convert audio to a mono format that is suitable for phone distribution purposes.
-categories: 
+tags: 
 - editing
 redirect_from:
   - /blog/2014/07/23/converting-audio-with-media-encoder/
@@ -20,44 +17,37 @@ Fortunately, I have access to the Adobe Create Suite (CS6) at work from which I 
 
 **Goal:** Create a ``.wma`` or ``.wav`` format file with a low sample rate, low sample size, and mono channel audio. 
 
-#Process to convert the audio
+# Process to convert the audio
 
 1. Open Adobe Media Encoder.  
-	<figure>
-		<img src="{{ site.url }}/images/2014-07-23/1_open.png">
-	</figure>
+    ![]({{ site.url }}{{ site.baseurl }}/images/2014-07-23/1_open.png %}
+
 
 2. Create the Phone Preset by clicking on the ``+`` button in the Preset Browser window.  
-	<figure>
-		<img src="{{ site.url }}/images/2014-07-23/2_add_preset.png">
-	</figure>
+    ![]({{ site.url }}{{ site.baseurl }}/images/2014-07-23/2_add_preset.png %}
+
 
 3. Add a preset name and change the format to Waveform Audio.  
-	<figure>
-		<img src="{{ site.url }}/images/2014-07-23/3_format.png">
-	</figure>
+    ![]({{ site.url }}{{ site.baseurl }}/images/2014-07-23/3_format.png %}
+
 
 4. Change the basic audio setting the values below. Click okay to save the preset.    
-	<figure>
-		<img src="{{ site.url }}/images/2014-07-23/4_settings.png">
-	</figure>
+    ![]({{ site.url }}{{ site.baseurl }}/images/2014-07-23/4_settings.png %}
+
 
 5. Add your audio file to be converted by clicking the ``+`` button in the Queue window.  
-	<figure>
-		<img src="{{ site.url }}/images/2014-07-23/5_adding_file_2_encode.png">
-	</figure>
+    ![]({{ site.url }}{{ site.baseurl }}/images/2014-07-23/5_adding_file_2_encode.png %}
+
 
 6. Drag your phone setting preset from the Preset Browser window on top of the audio file you want to convert. It should look like the picture below. (note the .wav file extension)  
-	<figure>
-		<img src="{{ site.url }}/images/2014-07-23/6_ready_2_encode.png">
-	</figure>
+    ![]({{ site.url }}{{ site.baseurl }}/images/2014-07-23/6_ready_2_encode.png %}
+
 
 7. Click the green encode button.  
-	<figure>
-		<img src="{{ site.url }}/images/2014-07-23/7_encode.png">
-	</figure>
+    ![]({{ site.url }}{{ site.baseurl }}/images/2014-07-23/7_encode.png %}
 
-##Before/After
+
+## Before/After
 <div>
 	<a href="{{ site.url }}/images/2014-07-23/audio-test.mp3" target="_blank"><img src="{{ site.url }}/images/speaker-30.jpg" height="30"> Before</a>
 </div>
@@ -70,5 +60,5 @@ Fortunately, I have access to the Adobe Create Suite (CS6) at work from which I 
 The result is a Linear PCM codec audio file with 16 bit/sample rate, 8 kilohertz (kHz) in a ``.wav`` format.
 
 
-#Update
+# Update
 Although, this method does work and creates a windows audio file, it ended up not working for the original application that I needed. Needless to say there is no point removing this guide.

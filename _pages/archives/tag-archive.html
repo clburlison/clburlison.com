@@ -1,0 +1,30 @@
+---
+permalink: /tags/
+title: "Posts by Tags"
+---
+
+{% include base_path %}
+{% include group-by-array collection=site.posts field="tags" %}
+
+<!-- https://superdevresources.com/tag-cloud-jekyll/ -->
+<h2>Tag Cloud</h2>
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
+ <span class="site-tag">
+    <a href="/tags/{{ tag | first | slugify }}/"
+        style="font-size: {{ tag | last | size | times: 4 | plus: 70 }}%">
+            {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+    </a>
+</span>
+{% endfor %}
+
+
+
+<h2>All posts</h2>
+{% for tag in group_names %}
+  {% assign posts = group_items[forloop.index0] %}
+  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
+  {% for post in posts %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endfor %}

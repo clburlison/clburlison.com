@@ -1,0 +1,10 @@
+<!-- https://github.com/Haacked/haacked.com/ -->
+{% if post.url %}
+  {% assign path = post.path %}
+{% else %}
+  {% assign path = page.path %}
+{% endif %}
+
+<p class="page__edit"><strong>
+<i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i></strong> <a href="{{ site.github_repo_url }}edit/source/{{ path }}">edit</a>
+</p>

@@ -1,6 +1,11 @@
-# Site wide configuration
-url:  http://localhost:4000
+# Develop override settings
 
-# Site owner
-owner:
-  disqus-shortname: 
+url: http://localhost:4000
+
+analytics:
+  provider: false
+
+comments:
+  provider               : false
+  disqus:
+    shortname            : 

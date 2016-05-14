@@ -1,14 +1,13 @@
 ---
-layout: post
 title: "Setup Munkireport on Ubuntu 14.04 - Part 3"
 modified: 2015-06-23
-categories: 
-- munki
-- ubuntu
-- munkireport
+tags: 
+  - munki
+  - ubuntu
+  - munkireport
 excerpt: Install Munkireport-php on our munki server to give us a powerful reporting console for munki clients. 
-comments: true
-published: true
+categories:
+  - guides
 image:
   feature:
   credit: 
@@ -17,27 +16,19 @@ redirect_from:
   - /blog/2014/10/23/munkirepo-guide-part-3/
 ---
 
-<section id="table-of-contents" class="toc">
-  <header>
-    <h3>Overview</h3>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section><!-- /#table-of-contents -->
+{% include toc %}
 
 
-#Intro
+# Intro
 Welcome to the third part in our munki server setup series. In this section, we will download and configure [Munkireport-php](https://github.com/munkireport/munkireport-php) on our munki server.
 
 Before we get to far you might want to head over to [Part 1 - Setting up the munki repo](/munkirepo-guide-part-1/) or [Part 2 - Setting up mandrill](/munkirepo-guide-part-2/). Parts 1 and 2 are not technically required for MunkiReport by you will want to have an understanding of how the other components of your munki server work before setting up the reporting server. 
 
 If you have no idea what MunkiReport is go check out this [Demo site](https://munkireportphp-nbalonso.rhcloud.com/) hosted by [Noel](http://www.nbalonso.com/). Noel has a custom color scheme but it should give you an idea of the system.
 
-{% img /images/2014-10-23/mr.png 600 %}
+![]({{ site.url }}{{ site.baseurl }}/images/2014-10-23/mr.png)
 
-#The Install
+# The Install
 Munkireport is a web application written in php that displays useful stats about your munki fleet. The resources taken up by MunkiReport are quite small but like all web apps if you client base grows very large you will want to make sure the database can keep up. With that you can install MunkiReport on any compatible web-server (IIS, apache, or nginx) for this guide we will be using our munki server from Parts 1 & 2 as our reporting server.
 
 Part of this installation includes setting up MySQL as our database backend. SQLite is the default database but I highly recommend setting my MySQL since the [performance](https://github.com/munkireport/munkireport-php/wiki/Performance) gains are high and setup only takes a few more steps, not to mention SQLite will start to choke when higher volumes of clients start to check-in with the reporting server. 
@@ -45,19 +36,17 @@ Part of this installation includes setting up MySQL as our database backend. SQL
 It is also important to note, I like MunkiReport to be hosted on a sub-directory. This means when connecting to MuniReport you will type [http://yourserver.example.com/report/]() to access the site. If you want a different setup, you will need to make the necessary changes.
 
 
-##Installing Required Software
+## Installing Required Software
 
 {% highlight bash %}
 sudo apt-get update
 sudo apt-get -y install nginx git php5-fpm php5-mysql php5-ldap
 {% endhighlight %}
 
-<div class="note info">
-  <h5>Note</h5>
-  <p>the <code>php5-ldap</code> package is only needed if you are planning on connecting to an Active Directory or LDAP directory for authenticating to MunkiReport. </p>
-</div>
+**Note:** The <code>php5-ldap</code> package is only needed if you are planning on connecting to an Active Directory or LDAP directory for authenticating to MunkiReport.
+{: .notice--info}
 
-##Setup MySQL
+## Setup MySQL
 
 Lets install MySQL
 
@@ -86,7 +75,7 @@ During the secure installation script it will ask if you want to change the root
 
 Once the script has been run, MySQL is ready to go.
 
-###Creating the database
+### Creating the database
 
 Lets create our MunkiReport database with the name of ``munkireport``. We will also create a database user and password. Change _USERNAME_ and _PASSWORD_ to your preference. Note the database username that is created below is what you will enter into your config.php in the following steps. It is bad practice to use the root account for database entry.
 
@@ -99,7 +88,7 @@ echo "FLUSH PRIVILEGES;" | mysql -u root -p
 
 {% endhighlight %}
   
-##Configure php
+## Configure php
 Lets make one small change to the default php configuration.
 
 {% highlight bash %}
@@ -132,7 +121,7 @@ Now, restart php-fpm for the change to take affect:
 sudo service php5-fpm restart
 {% endhighlight %}
 
-##Downloading MunkiReport
+## Downloading MunkiReport
 
 We are finally to the point that we can start getting MunkiReport setup.
 
@@ -222,7 +211,7 @@ $conf['auth']['auth_AD']['mr_allowed_groups'] = array('MunkiReportAdmins'); //ca
 
 {% endhighlight %}
 
-##Configure nginx for MunkiReport
+## Configure nginx for MunkiReport
 
 Lets configure nginx to use [http://yourserver.example.com/report](http://yourserver.example.com/report)
 
@@ -231,10 +220,8 @@ Lets configure nginx to use [http://yourserver.example.com/report](http://yourse
 sudo nano /etc/nginx/sites-enabled/default
 {% endhighlight %}  
 
-<div class="note info">
-  <h5>Note</h5>
-  <p>Make sure and change your <code>server_name</code>. This file also takes care of our munki_repo from <a href="/munkirepo-guide-part-1/">Part 1</a>.</p>
-</div>
+**Note:** Make sure and change your <code>server_name</code>. This file also takes care of our munki_repo from <a href="/munkirepo-guide-part-1/">Part 1</a>.
+{: .notice--info}
 
 {% highlight bash %}
 server {
@@ -312,21 +299,21 @@ sudo service nginx restart
 {% endhighlight %}
 
 
-#Conclusion
+# Conclusion
 You should now have a basic MunkiReport configuration up and running. Double check that everything is working by visiting [http://youserver.example.com/report/](http://youserver.example.com/report/). Remember the default username and password, ``root``. For more settings and additional information please visit the Wiki for [MunkiReport](https://github.com/munkireport/munkireport-php/wiki).
 
 As always feel free to drop a comment below or on Twitter. Feedback is always appreciated.
 
 ---
 
-#Apendium 1 - connecting a client to MunkiReport
+# Apendium 1 - connecting a client to MunkiReport
 If you would like to connect a single munki client to MunkiReport you can use the following command:
 
 {% highlight bash %}
 sudo /bin/bash -c "$(curl -s http://yourserver.example.com/report/index.php?/install)"
 {% endhighlight %}
 
-#Apendium 2 - adding MunkiReport to your munki_repo
+# Apendium 2 - adding MunkiReport to your munki_repo
 To add multiple Munki clients to MunkiReport we should use munki. To get a generated plist file that you can drop into your _munki_repo/pkginfo_ directory run the following command.
 
 {% highlight bash %}

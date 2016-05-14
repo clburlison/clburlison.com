@@ -11,16 +11,6 @@ This repo contains my personal website, [clburlison.com](https://clburlison.com)
 
 More information about this site can be found [here](https://clburlison.com/about/site-info/).
 
-## Jekyll Compose Help
-
-    draft      # Creates a new draft post with the given NAME
-    post       # Creates a new post with the given NAME
-    publish    # Moves a draft into the _posts directory and sets the date
-               #    publish _drafts/my-new-draft.md
-    unpublish  # Moves a post back into the _drafts directory
-    page       # Creates a new page with the given NAME
-
-
 ## Travis integration
 
 To get travis-ci setup check out this awesome project [jekyll-travis](https://github.com/mfenner/jekyll-travis)!
@@ -29,7 +19,7 @@ To get travis-ci setup check out this awesome project [jekyll-travis](https://gi
 
 	The MIT License (MIT)
 
-	Copyright (c) 2015 Clayton Burlison
+	Copyright (c) 2014 - 2016 Clayton Burlison
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal

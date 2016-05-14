@@ -1,14 +1,12 @@
 ---
-layout: post
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
 modified: "2015-06-10"
-categories: 
+tags: 
   - munki
   - ubuntu
 excerpt: "Gets the repo configured and shared via nginx. Plus, samba gets configured for remote administration."
-comments: true
-published: true
-tags: []
+categories:
+  - guides
 image: 
   feature: null
   credit: null
@@ -17,26 +15,15 @@ redirect_from:
   - /blog/2014/10/06/munkirepo-guide-part-1/	
 ---
 
-<section id="table-of-contents" class="toc">
-  <header>
-    <h3>Overview</h3>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section><!-- /#table-of-contents -->
+{% include toc %}
 
 
 
-
-
-
-#Intro
+# Intro
 
 As you might have guessed from my previous [post](/blog/2014/10/02/reposado-guide/), I am trying to standardize at work. Part of this was to move many core OS X services away from OS X Server and towards Ubuntu. This will allow us to use our existing virtualization infrastructure. After reposado the next big service was our munki repo. 
 
-{% img center /images/2014-10-06/munki.jpg 400 400 %}
+![]({{ site.url }}{{ site.baseurl }}/images/2014-10-06/munki.jpg)
 
 [Munki](http://github.com/munki/munki) is a very powerful open source tool for patch management and software updates for OS X clients. The client component is pretty easy to install but the server component can be a bit more tricky for newer administrators. The goal of this guide is to walk through setting up the server web share with http basic authentication (read simply security), and lastly setup samba so we can remote into our web server to manage files. 
 
@@ -44,14 +31,14 @@ In the past, our munki_repo has been shared using apache but due to some researc
 
 Since our Munki setup has many add-on projects including: [mandrill](https://github.com/wollardj/Mandrill),  [munkireport-php](https://github.com/munkireport/munkireport-php/), and our in-house rsync replication I will be splitting this series into multiple parts. 
 
-{% img /images/2014-10-06/managed_software_center.png 600 600 %}
+![]({{ site.url }}{{ site.baseurl }}/images/2014-10-06/managed_software_center.png)
 
-#The Install
+# The Install
 
 It is good practice to make sure our Ubuntu server is fully patched before we start. Then we will install _git, curl, build-essential, nginx, apache2-utils, and samba_. 
 
 
-##Installing Required Software
+## Installing Required Software
 
 {% highlight bash %}
 
@@ -62,7 +49,7 @@ sudo apt-get -y install git curl build-essential nginx apache2-utils samba
 {% endhighlight %}
 
 
-###Setup the directories:
+### Setup the directories:
 {% highlight bash %}
 
 sudo mkdir /usr/local/munki_repo
@@ -74,7 +61,7 @@ sudo mkdir catalogs client_resources icons manifests pkgs pkgsinfo
 {% endhighlight %}
 
 
-###Creating the service accounts & set directory permissions:
+### Creating the service accounts & set directory permissions:
 {% highlight bash %}
 
 sudo addgroup --system munki
@@ -86,7 +73,7 @@ sudo chmod -R 2774 /usr/local/munki_repo
 
 {% endhighlight %}
 
-##Setting up Nginx
+## Setting up Nginx
 Nginx is fast, light-weight, and uses a fraction of the resources that Apache uses. But don't take my word for it there are lots of [other reason](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/) why [you might want to use Nginx](http://wiki.nginx.org/WhyUseIt).
 
 Nginx's installation on Ubuntu is very similar to Apache. All of its config files are stored in _/etc/nginx_.
@@ -123,12 +110,11 @@ server {
 And finally start the nginx service.  
 ``sudo /etc/init.d/nginx start``
 
-<div class="note info">
-  <h5>Nginx Issues</h5>
-  <p>To have Nginx check your configuration for issues run the following command <code>nginx -c /etc/nginx/nginx.conf -t</code>.</p>
-</div>
+**Nginx Issues:** To have Nginx check your configuration for issues run the following command: <br> <code>nginx -c /etc/nginx/nginx.conf -t</code>
+{: .notice--info}
 
-###Securing your munki_repo
+
+### Securing your munki_repo
 For my purpose, I will be securing my munki_repo with simple http basic authentication. Depending on the needs of your organization this might be enough but you might need to look into ssl and other advanced options. If you are interesting in these options check out the [munki wiki](https://github.com/munki/munki/wiki).
 
 **Create an http user and password**
@@ -150,12 +136,11 @@ We must reload the nginx service to update the reflected change.
 
 Now when you try to access your website, [http://yourmunkiserver/munki_repo/](), you will notice a browser prompt that asks you to enter the login and password. Enter the details that you used while creating the .htpasswd file. The prompt does not allow you to access the website till you enter the right credentials. The munki client supports this security feature with the AdditionalHttpHeaders key [more info](https://github.com/munki/munki/wiki/Using-Basic-Authentication#configuring-the-clients-to-use-a-password).
 
-<div class="note info">
-  <h5>Note</h5>
-  <p>If you do not want to secure your munki repo you can remove this setting in the above ngix config file by removing the two lines that start with <code>auth_basic</code>.</p>
-</div>
+**Note:** If you do not want to secure your munki repo you can remove this setting in the above ngix config file by removing the two lines that start with <code>auth_basic</code>
+{: .notice--info}
 
-##Setting up Samba
+
+## Setting up Samba
 Now we just need a way to mount our munki_repo on a mac so we can do administrative things. Samba uses a separate set of passwords than the standard Linux system accounts (stored in /etc/samba/smbpasswd), so you'll need to create a Samba password for yourself.  
 
 {% highlight bash %}
@@ -188,7 +173,7 @@ Now we must restart samba.
 
 From your mac you will be able to access the munki_repo with the following [smb://munki.example.com/munki_repo]().
 
-#Conclusion
+# Conclusion
 We now have a working munki_repo fully configured and ready for use to start importing packages into the repo. If you are really new to Munki, this takes care of the "Demonstration Setup" section from the [munki wiki](https://github.com/munki/munki/wiki). To start populating Munki with manifests, packages, and more I would recommend using [MunkiAdmin](https://github.com/hjuutilainen/munkiadmin).
 
 ---

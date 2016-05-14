@@ -1,12 +1,9 @@
 ---
-layout: post
 title: "Find My Mac"
 modified: 2015-09-21
-comments: true
-published: true
 keywords: Find My Mac, iCloud, nvram, 
 description: 
-categories: 
+tags: 
 - osx
 redirect_from:
   - /blog/2014/05/19/find-my-mac/
@@ -26,18 +23,18 @@ Some side affects of enabling FMM means giving access from [iCloud.com](https://
 3. erase the computer
 
 The web interface  
-{% img /images/2014-05-19/icloud-interface.png 600 420 %}
+![]({{ site.url }}{{ site.baseurl }}/images/2014-05-19/icloud-interface.png)
 
 Close up of the options  
-{% img /images/2014-05-19/icloud-options.png %}
+![]({{ site.url }}{{ site.baseurl }}/images/2014-05-19/icloud-options.png)
 
 
 From my testing, if a computer is offline while one of these options are clicked from iCloud it takes approximately one minute for the signal to be processed on the computer in question (those this could be connectivity related). Playing a sound is by far the fastest option while taking less than one second most of the time when the computer is online. If you choice to lock the computer this will cause your computer will immediately lock up and restart. You will presented with the a screen like the following.  
-{% img /images/2014-05-19/icloud-lock.png 600 400 %}
+![]({{ site.url }}{{ site.baseurl }}/images/2014-05-19/icloud-lock.png)
 
 Though I did not test, my guess is that an erase will prompt the computer to go into a state like the lock screen while deleting your data. If anyone feels like testing this feel free to contact me with results on twitter.
 
-##NVRAM
+## NVRAM
 None of the information above is particularly shocking if you yourself have ever used Find my iPhone or any of the similar Find my device services from Apple. What is interesting is where this data is stored on your computer...the nvram. This means even if someone removes the hard drive of your computer the information to connect to iCloud is still present. This is great news if your laptop was actually stolen (and connected to the internet) but what does this mean when reassigning a computer that has had FMM enabled? Well the previous user could erase all the information on this laptop at any time in the future. So now I have to check with every user to see if they have had FMM enabled when reassigning a computer? Well, instead of dealing with that huge hassle when it comes around to re-imaging or reassigning a computer you can simply run the following command to clear the nvram of content related to Find my Mac. 
 
 **Disable iCloud from the Command Line**   
@@ -46,12 +43,12 @@ $ nvram -d fmm-computer-name
 $ nvram -d fmm-mobileme-token-FMM
 {% endhighlight %}
 
-##Consumers
+## Consumers
 This means if you ever purchase a second hand Mac from someone you will want to run the same command just for safty. Also, if you are attempting to sell your device be a good consumer and run the command for the next owner. 
 
 If you are not familiar with the command line use the following:
 
-####Resetting NVRAM / PRAM
+#### Resetting NVRAM / PRAM
 1. Shut down your Mac.
 2. Locate the following keys on the keyboard: Command (⌘), Option, P, and R. You will need to hold these keys down simultaneously in step 4.
 3. Turn on the computer.

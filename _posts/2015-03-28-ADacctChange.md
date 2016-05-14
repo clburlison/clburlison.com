@@ -1,52 +1,26 @@
 ---
-layout: post
 title: AD Account Change
 modified: "2015-04-24"
-categories: 
-  - active directory
+tags: 
+  - active-directory
   - bash
 excerpt: Change the account name of Cached User Accounts in an Active Directory environment on OS X.
-comments: true
-published: true
-image: 
-  feature: null
-  credit: null
-  creditlink: null
-tags: 
-  - ad
-  - active
-  - directory
-  - osx
-  - mac
-  - account
-  - change
-  - domain
-  - migration
 ---
 
-<section id="table-of-contents" class="toc">
-  <header>
-    <h3>Overview</h3>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section><!-- /#table-of-contents -->
+{% include toc %}
 
 
-#Intro
+# Intro
 Changing user account logons in a deployed environment can cause some issues. Doing so with OS X clients that are bound to Active Directory can cause even more issues. Below is how I overcame some of the pitfalls of the built-in OS X Active Directory plugin. This article expands on the basic project Readme instructions located [here](https://github.com/clburlison/scripts/tree/master/clburlison_scripts/ADacctChange).
 
 
 ![acct](/images/2015-03-28/opening_header.png)
 
-<div class="note info">
-  <h5>Note</h5>
-  <p>The above picture is for reference purposes only. All data has been modified.</p>
-</div>
+**Note:** The above picture is for reference purposes only. All data has been modified.
+{: .notice--info}
 
-#Why would you do that?
+
+# Why would you do that?
 We had two differing username structures for active employees: 
 
 1. An older format of first initial followed by last name _(cburlison)_
@@ -58,7 +32,7 @@ We decided on a new structure of "b" followed by employee ID number _(b12345)_. 
 
 ![acct](/images/2015-03-28/ad_acct_structure.png)
 
-##Down-side
+## Down-side
 Unfortunately, when you change the "User Logon Name" in Active Directory funky things start to happen to Cached Mobile Accounts on OS X clients. 
 
 Most notably:
@@ -72,12 +46,11 @@ Most notably:
 
 We needed to find a solution that allowed our Domain Administrators to move forward with the Account Policy change while allowing users to still __use__ their Macintosh computers.
 
-<div class="note info">
-  <h5>Note</h5>
-  <p>On Windows a simple reboot of the client computer will allow users to login with the new name structure. Windows has the polices in place to deal with this type of change. Good job Microsoft!</p>
-</div>
+**Note:** On Windows a simple reboot of the client computer will allow users to login with the new name structure. Windows has the polices in place to deal with this type of change. Good job Microsoft!
+{: .notice--info}
 
-#Solution
+
+# Solution
 To solve the issues described above you can delete the Cached Accounts from any affected OS X computer. This will of course allow the employee to log in using their newly structured account name with the one minor set-back of having all their files deleted (or located in the old path). It does fix all the Kerberos issues. I however had no intentions of copying files for hundreds of employees throughout my organization.
 
 What I needed to do was modify the Cached User Accounts already present on our OS X computers. It also needed to meet the following requirements:
@@ -89,7 +62,7 @@ What I needed to do was modify the Cached User Accounts already present on our O
 
 
 
-##The Code
+## The Code
 Below is a walk-through of the important lines of the [ADacctChange.sh](https://github.com/clburlison/scripts/blob/master/clburlison_scripts/ADacctChange/ADacctChange.sh) script, along with a description. The purpose is to have additional information that does not really "belong" in the code comments.
 
 
@@ -292,7 +265,7 @@ This preforms a cleanup of files, deleting the LaunchDaemon and script. The rebo
 
 
 
-#Special thanks
+# Special thanks
 The following individuals had valuable code that I used while putting this project together.
 
 * Rich Trouton - [https://derflounder.wordpress.com/](https://derflounder.wordpress.com/)
@@ -300,7 +273,7 @@ The following individuals had valuable code that I used while putting this proje
 * Jeff Kelley - [http://blog.slaunchaman.com/](http://blog.slaunchaman.com/)
 
 
-#Conclusion
+# Conclusion
 
 The result was a package that is installable via [Luggage](https://github.com/unixorn/luggage) and hosted on Github [here](https://github.com/clburlison/scripts/tree/master/clburlison_scripts/ADacctChange).
 
@@ -308,13 +281,12 @@ The result was a package that is installable via [Luggage](https://github.com/un
 As always feel free to drop a comment below or on Twitter. Feedback is always appreciated.
 
 
-#Aftermath
+# Aftermath
 For the most part our migration went smoothly in my environment. We installed this package a week prior to our Active Directory change and instructed our Mac users to reboot the morning after the change took place. For some users that did not reboot like we asked this script took over and forced a reboot. They had plenty of prior knowledge and at least received a nice popup using BigHonkingText explaining the reboot.  
 
-<div class="note warning">
-  <h5>Dropbox</h5>
-  <p>If you are using Dropbox in your environment this process will mess up Dropbox settings. Inside of <code>/Users/$HOME/.dropbox</code> there is a setting that is hard coded to the users home directory path. I found the easiest solution is to run a <code>rm ~/.dropbox</code> on the affected users profile. Followed by having the user re-sign in via the Dropbox application. Obviously this solution does not scale very well.</p>
-</div>
+**Note:** If you are using Dropbox in your environment this process will mess up Dropbox settings. Inside of <code>/Users/$HOME/.dropbox</code> there is a setting that is hard coded to the users home directory path. I found the easiest solution is to run a <code>rm ~/.dropbox</code> on the affected users profile. Followed by having the user re-sign in via the Dropbox application. Obviously this solution does not scale very well.
+{: .notice--danger}
+
 
 ---
 

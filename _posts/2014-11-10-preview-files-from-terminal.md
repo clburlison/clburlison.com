@@ -1,12 +1,9 @@
 ---
-published: true
-layout: post
 excerpt: Preview files from Terminal.
-categories: 
-- bash
-- osx
+tags: 
+  - bash
+  - osx
 link: "http://krypted.com/mac-security/qlmanage/"
-share: true
 redirect_from:
   - /blog/2014/11/10/preview-files-from-terminal/
 ---

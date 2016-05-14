@@ -1,12 +1,8 @@
 ---
-layout: post
 title: "Moving to Plain Jekyll"
 modified: 2014-08-10
-categories: 
+tags: 
 - jekyll
-excerpt: Moving from Octopress to a plain Jekyll setup.
-comments: true
-published: true
 redirect_from:
   - /blog/2014/08/09/moving-to-plain-jekyll/	
 ---

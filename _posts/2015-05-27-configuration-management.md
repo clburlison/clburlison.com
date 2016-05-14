@@ -1,35 +1,14 @@
 ---
-layout: post
 title: Configuration Management
 modified: "2015-06-01"
-categories: 
+tags: 
   - automation
   - puppet
 excerpt: My ramblings on puppet as a configuration management tool on OS X.
-comments: true
-published: true
-image: 
-  feature: null
-  credit: null
-  creditlink: null
-tags: 
-  - puppet
-  - apple
-  - os x
-  - automation
-  - configuration management
 ---
 
 
-<section id="table-of-contents" class="toc">
-  <header>
-    <h3>Overview</h3>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section><!-- /#table-of-contents -->
+{% include toc %}
 
 
 
@@ -90,7 +69,7 @@ I had already used Puppet personally but had always hated the idea of yet anothe
 Puppet takes a huge change in thinking. Puppet code defines a state that you want clients to be in...not how to be in that state. This will be touched on later but I wanted to plant that seed prior to getting into the full setup later. I found getting started with Puppet was relatively easy however starting to manage specific parts of the OS X client leaves tons of room for issues to arise. With the assistance mainly the [managedmac](https://github.com/dayglojesus/managedmac) module from Brian Warsing it becomes much easier to work with OS X clients using puppet.
 
 
-##Example code
+## Example code
 The hiera code below is used to create a local admin account and make sure that account is always present:
 
 {% highlight yaml %}

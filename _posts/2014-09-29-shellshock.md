@@ -1,17 +1,12 @@
 ---
-layout: post
 title: "Shellshock"
 modified: 2014-10-2
-categories: 
+tags: 
 - bash
 excerpt: Everything you need to know about Shellshock for OS X in English.
-comments: true
-published: true
-tags: []
-image:
-  feature: 2014-09-29/shellshock3.jpg
-  credit: nghenhinvietnam
-  creditlink: http://nghenhinvietnam.vn/tin-tuc/shellshock-bash-loi-bao-mat-gay-tac-hai-lon-hon-heartbleed-988.html
+header:
+  image: 2014-09-29/shellshock3.jpg
+  caption: "Photo credit: [**nghenhinvietnam**](http://nghenhinvietnam.vn/tin-tuc/shellshock-bash-loi-bao-mat-gay-tac-hai-lon-hon-heartbleed-988.html)"
 redirect_from:
   - /blog/2014/09/29/shellshock/
 ---
@@ -20,7 +15,7 @@ On September 24, 2014, a security vulnerability was publicly announced that affe
 
 It is important to understand that this vulnerability could allow unauthorized access of your computer. Although this exploit has been around for over two decades do not underestimate the seriousness, immediate patching should be deployed when possible.
 
-##Patch
+## Patch
 
 __OS X bash Update 1.0 may be obtained from the following webpages:__
 [http://support.apple.com/kb/DL1767]() – OS X Lion  
@@ -29,7 +24,7 @@ __OS X bash Update 1.0 may be obtained from the following webpages:__
 
 _released:_ September 29th, 2014
 
-##Future
+## Future
 So if you install the patch you might think, "Great I'm done", crisis adverted. False! Since the original Shellshock exploit (CVE-2014-6271) at least four additional exploits have been found. If you would like to test your Mac to see if you are vulnerable you can use the following [script](https://github.com/hannob/bashcheck) to help identify exploits that you are susceptible to.
 
 Additional bugs related to Shellshock:

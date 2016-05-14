@@ -1,21 +1,13 @@
 ---
-layout: post
 title: Automator is not dead yet
 modified: "2015-06-01"
-categories: 
+tags: 
   - automation
 excerpt: In fact it is as powerful today as it was five years ago.
-comments: true
-published: true
 image: 
   feature: "2015-05-16/automator-workflow.png"
   credit: Brian Nagel
   creditlink: "http://brian-nagel.com/2011/04/15/mac-osx-automator-examples/"
-tags: 
-  - automator
-  - apple
-  - os x
-  - automation
 ---
 
 
@@ -33,29 +25,29 @@ Creating a service is relatively simple. Below is the process of creating a serv
 
 1. Create a new Service.
 
-	{% img /images/2015-05-16/service-new.png %}
+	![]({{ site.url }}{{ site.baseurl }}/images/2015-05-16/service-new.png)
 
 1. Change the "Service receives selected" to "files or folders" and leave "any application".
 
-	{% img /images/2015-05-16/service-received.png %}
+	![]({{ site.url }}{{ site.baseurl }}/images/2015-05-16/service-received.png)
 
 1. Search for "Rename" in the Library. Drag "Rename Finder Items" into the workflow. 
 
-	{% img /images/2015-05-16/service-rename.png %}
+	![]({{ site.url }}{{ site.baseurl }}/images/2015-05-16/service-rename.png)
 
 1. If you see the following pop-up select "Don't Add"
 
-	{% img /images/2015-05-16/service-popup.png %}
+	![]({{ site.url }}{{ site.baseurl }}/images/2015-05-16/service-popup.png)
 
 1. Modify the workflow to match the following settings. The Find field has a single space character typed.
 
-	{% img /images/2015-05-16/service-rename-workflow.png %}
+	![]({{ site.url }}{{ site.baseurl }}/images/2015-05-16/service-rename-workflow.png)
 
 1. Save and name your service. This service will live in ``~/Library/Services/``.
 
 To run a service simply right click on a single file or group of files and select the service. This will work on Folders as well.
 
-{% img /images/2015-05-16/finder-service.png %}
+![]({{ site.url }}{{ site.baseurl }}/images/2015-05-16/finder-service.png)
 
 ## My Services
 Below are the services that I use frequently. To install these simply downloading, unzip, and double click on the ``.workflow`` file. A prompt to install will be be presented.

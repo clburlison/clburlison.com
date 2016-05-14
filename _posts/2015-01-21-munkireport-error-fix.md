@@ -1,35 +1,19 @@
 ---
-layout: post
 title: "Fix Munkireport Error Request Too Large"
 modified: 
-categories: 
+tags: 
 - munkireport
-excerpt: "ERROR: Request Entity Too Large."
-comments: true
-published: true
-image:
-  feature:
-  credit: 
-  creditlink:
 redirect_from:
   - /blog/2015/01/21/munkireport-error-fix/
 ---
 
-<section id="table-of-contents" class="toc">
-  <header>
-    <h3>Overview</h3>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section><!-- /#table-of-contents -->
+{% include toc %}
 
 
-#Intro
+# Intro
 I use [Munkireport-php](https://github.com/munkireport/munkireport-php) as my main reporting system at my work but have recently ran into an error when uploading data from client machines. My setup is using nginx to serve the files. 
 
-##Error message
+## Error message
 The error message below is what was showing up from a manual munki run with verbose enabled, you can run the command with:
 
 {% highlight bash %}
@@ -75,7 +59,7 @@ After some digging around, this error is an http Error 413 which is normally cau
 
 This can be easily fixed by modifying your nginx configuration to increasing the size allowed on upload. Which will allow the run to complete successfully. 
 
-#The Fix
+# The Fix
 
 We can fix this HTTP request issue at three different levels of the nginx config: the **http** block, the **server** block or the **location** block. 
 
@@ -100,7 +84,7 @@ After changing the server configuration run the following command to reload your
 sudo service nginx restart
 {% endhighlight %} 
 
-#Anything else?
+# Anything else?
 In addition to the change above, it might be necessary to modify PHP settings on your server. Open your PHP configuration file:
 
 {% highlight bash %}

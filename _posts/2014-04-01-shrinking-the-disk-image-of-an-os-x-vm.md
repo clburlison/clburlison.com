@@ -1,12 +1,9 @@
 ---
-layout: post
 title: "Shrinking the disk image of an OS X VM"
 modified: 
-comments: true
-published: true
 keywords: vmware, osx, mac, shrinking vmdk, mavericks
 description: Article examines steps to reduce the disk size of a vmdk file on a mac.
-categories: 
+tags: 
 - vmware
 - osx
 redirect_from:

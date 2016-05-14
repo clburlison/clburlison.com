@@ -1,3 +1,13 @@
+---
+title: "Masterless Puppet Articles"
+modified:
+image:
+  feature: null
+  credit:
+  creditlink:
+tags: [osx]	
+---
+
 Masterless Puppet Articles
 ===
 

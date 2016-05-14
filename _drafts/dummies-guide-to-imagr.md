@@ -1,32 +1,20 @@
 ---
-layout: post
 title: "Dummies Guide to Imagr (w/ Videos)"
 modified:
-categories: 
-- imaging
-- imagr
-- ubuntu
-- docker
+tags: 
+  - imaging
+  - imagr
+  - ubuntu
+  - docker
 excerpt: Setup a fully functional Imagr server with netboot, reporting, smb, and web share on Ubuntu. 
-comments: true
-published: true
 image:
   feature: /2015-06-05/imagr-banner.png
   credit:
   creditlink:
-tags: [osx, imagr, imaging, OS X, Mac, ubuntu]	
+keywords: [osx, imagr, imaging, OS X, Mac, ubuntu]	
 ---
 
-<section id="table-of-contents" class="toc">
-  <header>
-    <h3>Overview</h3>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section><!-- /#table-of-contents -->
-
+{% include toc %}
 
 
 # Introduction 
@@ -212,16 +200,14 @@ re-run the startup script. This will give BSDPy a chance to locate the new NBI i
 
 # AutoDMG / createOSXinstallPKG
 
-#Conclusion
+# Conclusion
 If you have gotten this far congratulations. 
 
 ---
 
 Articles:  
 [We Are Imagr (And So Can You)](https://osxdominion.wordpress.com/2015/05/12/we-are-imagr-and-so-can-you/),  
-[Imagr Wiki](https://github.com/grahamgilbert/imagr/wiki/Getting-Started), ***  
-[BSDpy Redis Caching](http://enterprisemac.bruienne.com/2015/06/03/bsdpy-redis-caching/), ***  
+[Imagr Wiki](https://github.com/grahamgilbert/imagr/wiki/Getting-Started),  
+[BSDpy Redis Caching](http://enterprisemac.bruienne.com/2015/06/03/bsdpy-redis-caching/),  
 [Getting Started with BSDPy on Docker](http://grahamgilbert.com/blog/2015/04/22/getting-started-with-bsdpy-on-docker/)
 [Bind multiple domains](https://www.digitalocean.com/community/questions/how-to-bind-multiple-domains-ports-80-and-443-to-docker-contained-applications)
-
-** - Recommended reading

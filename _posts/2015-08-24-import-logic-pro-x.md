@@ -1,33 +1,18 @@
 ---
-layout: post
 title: Import Logic Pro X Audio Content 
 modified: 2015-11-17
-categories: 
+tags: 
   - munki
   - python
 excerpt: Import Logic Pro X Audio Content packages into your Munki repo.
-comments: true
-published: true
-image: 
-  feature: null
-  credit: null
-  creditlink: null
-tags: 
-  - python
-  - script
-  - logic pro x
-  - audio
-  - package
-  - munki
-  - os x
 ---
 
 
-<div class="note info">
-  <h5>Updated for Logic 10.2.0</h5>
-	<b>September 18th, 2015</b>
+<div class="notice--info">
+	<b>Updated for Logic 10.2.0 -- September 18th, 2015</b>
   <p>This script has been updated to support Logic Pro 10.2.0. This release included many additional audio libraries for the added Alchemy Plugin. The updated script from Hannes will now download audio content to a "__Downloaded Items" directory and create hard links to Apple's categories.</p>
 </div>
+
 
 Today I needed to import 60 packages (37 GB) of audio content for Logic Pro X into my Munki repo. Hannes Juutilainen did most of the hard work with his [download-logicprox-content.py](https://github.com/hjuutilainen/adminscripts/blob/master/download-logicprox-content.py) script which will download all the packages from Apple. 
 
@@ -59,9 +44,8 @@ The previous script by Hannes will download the audio packages into many sub-dir
 
 As such I needed to recursively search for the ``.pkg`` extension and import those files into Munki. The result is the following python script: [munkiimport_logic_audio.py](https://github.com/clburlison/scripts/tree/master/clburlison_scripts/LogicProX)
 
-<div class="note warning">
-  <h5>10.11 and Logic Audio Content</h5>
-	<b>November 17th, 2015</b>
+<div class="notice--danger">
+	<b>10.11 and Logic Audio Content -- November 17th, 2015</b>
   <p>Dave Weale found a nice little bug with this approach. <br><br><u>TL;DR:</u> 10.11 has SIP enabled and Apple is writing Receipts for the audio content to <code>/System/Library/Receipts</code>. When munki imports these packages we are using the package receipts to determine if the content has been installed. When removing the package content Munki is unable to remove the recipe as /System is SIP protected. 
     <br><br>
     More info: <a href="https://groups.google.com/forum/#!topic/munki-discuss/TjeSl39zGVw">Logic Pro X assets not installing after removal & attempted reinstall</a>

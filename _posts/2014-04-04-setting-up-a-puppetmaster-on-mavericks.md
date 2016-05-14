@@ -1,16 +1,11 @@
 ---
-layout: post
 title: "Setting up a puppetmaster on Mavericks"
 modified: 2014-05-22
-comments: true
-published: true
 keywords: puppet, mavericks, osx, install, puppetmaster
 description: Setting up a puppetmaster on osx Mavericks.
-categories: 
+tags: 
 - puppet
 - osx
-- mavericks
-- server
 redirect_from:
   - /blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/
 ---
@@ -18,18 +13,16 @@ For various reasons I decided to set up my puppetmaster on an OS X install of Ma
 
 ---
 
-<div class="note warning">
-  <h5>Warning</h5>
-  <p>I do not use these instructions any longer. The setup of a puppetmaster on OS X Server was just for testing purposes.</p>
-</div>
+**Notice:** I do not use these instructions any longer. The setup of a puppetmaster on OS X Server was just for testing purposes.
+{: .notice--info}
 
-###Introduction to puppet
+### Introduction to puppet
 Puppet is a service that is normally ran in a client/server setup that helps manage and configure devices. Since I am an OS X administrator, this article will be coving the installation and configuration on an OS X platform. While many sysadmins will prefer server installation on a linux distro I simply did not want to mess with getting a Virtual Machine approved in my environment. Below are the steps that I took to set up a puppetmaster on an OS X Mavericks install.  
 
-###Pre-steps
+### Pre-steps
 Setting up dns, creating a CNAME record, verifying dns records, etc. Aka all the things I should have done but did not. I will go ahead and mention now that if you are doing this for production taking a moment to do this correctly the first time will save you hours of headache down the road. Since I do not have control over network settings at work, I skipped these steps and decided to use the server hostnames in my case. Please refer to the [article](http://www.afp548.com/2013/02/26/setting-up-a-basic-3-1-x-puppet-master-on-os-x-10-8/) by Nate if you want to do things the approved way.
 
-###Install the software
+### Install the software
 Next, we must install Puppet on our master.  The Reference Manual has a section specifically for OS X regarding the puppet install. For Mavericks, you will want at least **Puppet version 3.2.X** or higher. You will also want to install **Facter, and Hiera**.
 
 Each of these pieces of software can be obtained from [here](http://downloads.puppetlabs.com/mac/). (After downloading, you will want to install each of the three packages. A control click might be needed if you have Gatekeeper enabled.)
@@ -50,7 +43,7 @@ You also do not want this puppet user to appear at the login window (since it is
 sudo defaults write /Library/Preferences/com.apple.loginwindow Hide500Users -boolean YES
 {% endhighlight %}
 
-###Settings up our puppetmaster
+### Settings up our puppetmaster
 Now we will make changes to the default puppet configuration for our server. This can be done with **sudo nano /etc/puppet/puppet.conf** then enter the following text. Save with "Ctrl + X"
 
 {% highlight bash %}
