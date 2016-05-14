@@ -259,6 +259,7 @@ exclude:
   - README
   - tmp
   - vendor
+  - helper.sh
 keep_files:
   - .git
   - .svn
