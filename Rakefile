@@ -156,6 +156,11 @@ namespace :site do
     sh "bundle exec jekyll serve --watch --drafts --config _config.yml,_config-dev.yml"
   end
 
+  desc "Check URLs with htmlproofer"
+  task :checkurls do
+    sh "bundle exec htmlproofer ../clburlison.github.io-master --disable-external --empty-alt-ignore"
+  end
+
   desc "Generate the site and push changes to remote origin"
   task :deploy do
     # Detect pull request
