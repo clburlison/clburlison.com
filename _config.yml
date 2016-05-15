@@ -109,7 +109,7 @@ defaults:
       sidebar:
         nav: "about"
       header:
-        image: /unsplash/photo-1446426156356-92b664d86b77.jpeg
+        image: unsplash/photo-1446426156356-92b664d86b77.jpeg
         caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/RdyMe8KQAV0)"
   # _pages/archives
   - scope:
@@ -125,7 +125,7 @@ defaults:
       sidebar:
         nav: "archive"
       header:
-        image: /unsplash/photo-1457685373807-8c4d8be4c560.jpeg
+        image: unsplash/photo-1457685373807-8c4d8be4c560.jpeg
         caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/90FzfXFEEjo)"
   # _drafts
   - scope:

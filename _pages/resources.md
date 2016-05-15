@@ -4,7 +4,7 @@ title: Resources
 modified: 05-13-2016
 permalink: /resources/
 header:
-  image: /unsplash/photo-1454982523318-4b6396f39d3a.jpeg
+  image: unsplash/photo-1454982523318-4b6396f39d3a.jpeg
   caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/mWRR1xj95hg)"
 ---
 

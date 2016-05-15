@@ -2,9 +2,6 @@
 title: Using Masterless Puppet
 modified: 
 excerpt: Pros/Cons of using Puppet in a masterless configuration.
-header:
-  image: null
-  caption: null
 tags: 
   - puppet
   - osx

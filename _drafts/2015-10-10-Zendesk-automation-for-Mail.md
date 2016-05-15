@@ -6,7 +6,7 @@ tags:
   - osx
 excerpt: Utilize Zendesk's mail API with Apple Mail and Automator. 
 header:
-  image: /temp/mail-api-banner.png
+  image: temp/mail-api-banner.png
   caption: "Photo credit: [**Zendesk**](https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox)"
 keywords: [osx, Apple, Mail, Zendesk, automation, api, automator, helpdesk, support]	
 ---
