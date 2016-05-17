@@ -1,9 +1,17 @@
 #!/bin/bash
 setup () {
-  SEARCH=`gem list | grep "bundler"`
-  if [ -z "$SEARCH" ]; then
+  BUNDLER=`gem list | grep "bundler"`
+  if [ -z "$BUNDLER" ]; then
     echo '## Install bundler locally'
     gem install --user-install bundler rake
+  fi
+  if [ -a "/usr/local/bin/resume" ]; then
+    echo '## Install resume command line locally'
+    sudo npm install -g resume-cli
+  fi
+  if [ -a "/usr/local/bin/html-pdf" ]; then
+    echo '## Install html to pdf locally'
+    sudo npm install -g html-pdf
   fi
   echo '## Install gems to an isolated path'
   bundle install --path .gem

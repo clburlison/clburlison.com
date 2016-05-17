@@ -32,3 +32,5 @@ about:
         url: /about/site-info/
       - title: "My list"
         url: /about/my-list/
+      - title: "Resume"
+        url: /resume/

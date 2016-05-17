@@ -277,6 +277,7 @@ prose:
     - /_posts_sample
     - /_sass
     - /_templates
+    - /_scripts
     - /archives
     - /categories
     - /assets	
