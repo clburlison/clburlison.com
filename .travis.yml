@@ -4,7 +4,10 @@ sudo: false
 rvm:
   - 2.1.0
 bundler_args: --without development --deployment --jobs=3 --retry=3
+install:
+  - npm install -g resume-cli
 script:
+  - ./_scripts/build_resume.sh
   - bundle exec rake site:deploy --quiet
 branches:
   only:
