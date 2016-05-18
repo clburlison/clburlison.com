@@ -1,5 +1,8 @@
 language: ruby
-cache: bundler
+cache: 
+  bundler: true
+  directories:
+    - node_modules
 sudo: false
 rvm:
   - 2.1.0
