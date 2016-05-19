@@ -1,7 +1,6 @@
 language: ruby
 cache: 
   bundler: true
-  custom_install: true
   directories:
     - node_modules
 sudo: false
@@ -10,6 +9,7 @@ rvm:
 bundler_args: --without development --deployment --jobs=3 --retry=3
 install:
   - npm install -g resume-cli
+  - bundle install --path $CASHER_DIR
 script:
   - ./_scripts/build_resume.sh
   - bundle exec rake site:deploy --quiet
