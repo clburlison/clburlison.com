@@ -82,8 +82,7 @@
       "keywords": [
         "Technical Support",
         "Help Desk Support",
-        "Troubleshooting",
-        "Virtualization"
+        "Troubleshooting"
       ]
     },
     {
@@ -96,7 +95,8 @@
         "OS X",
         "Git",
         "Munki",
-        "AutoPkg"
+        "AutoPkg",
+				"Virtualization"
       ]
     }
   ],
