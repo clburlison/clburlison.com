@@ -4,6 +4,7 @@ modified: "2015-04-30"
 tags: 
   - oracle
   - database
+  - college
 excerpt: Guide for using the Omega server and Oracle application for UTA students.
 ---
 
