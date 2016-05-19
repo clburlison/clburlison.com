@@ -1,6 +1,7 @@
 language: ruby
 cache: 
   bundler: true
+  custom_install: true
   directories:
     - node_modules
 sudo: false
