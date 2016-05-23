@@ -8,7 +8,6 @@ rvm:
   - 2.1.0
 bundler_args: --without development --deployment --jobs=3 --retry=3
 install:
-  - npm link ./node_modules/resume-cli
   - npm install -g resume-cli
   - bundle install --path vendor/bundle
 script:
