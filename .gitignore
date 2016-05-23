@@ -10,3 +10,4 @@ _asset_bundler_cache
 *.psd
 .bundle/config
 .gem
+resume/index.html
