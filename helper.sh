@@ -5,14 +5,15 @@ setup () {
     echo '## Install bundler locally'
     gem install --user-install bundler rake
   fi
-  if [ -a "/usr/local/bin/resume" ]; then
-    echo '## Install resume command line locally'
-    sudo npm install -g resume-cli
-  fi
-  if [ -a "/usr/local/bin/html-pdf" ]; then
-    echo '## Install html to pdf locally'
-    sudo npm install -g html-pdf
-  fi
+  # These checks aren't working right now
+  # if [ -e "/usr/local/bin/resume" ]; then
+  #   echo '## Install resume command line locally'
+  #   sudo npm install -g resume-cli
+  # fi
+  # if [ -e "/usr/local/bin/html-pdf" ]; then
+  #   echo '## Install html to pdf locally'
+  #   sudo npm install -g html-pdf
+  # fi
   echo '## Install gems to an isolated path'
   bundle install --path .gem
 }
@@ -24,6 +25,11 @@ update () {
 
 clean () {
   echo '## Clean old gems'
+  bundle clean
+}
+
+clean () {
+  echo "## Clean up your ruby gems"
   bundle clean
 }
 
@@ -46,7 +52,7 @@ clean () {
 #   echo "## Setup complete"
 # }
 
-# clean () {
+# clean_old () {
 #   echo "## Clean (Uninstall) up your development environment"
 #   echo "## Uninstall Homebrew"
 #   echo "## Most of the time you should select _NO_"
@@ -64,10 +70,7 @@ case "$1" in
   clean)
       clean
       ;;
-  update)
-      update
-      ;;
   *)
-    echo $"Usage: $0 {setup|clean|update}"
+    echo $"Usage: $0 {setup|clean}"
     exit 1
 esac

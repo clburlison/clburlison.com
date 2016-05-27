@@ -7,6 +7,9 @@ redirect_from:
 
 {% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
+
+<u><a href="#2014">2014</a></u>, <u><a href="#2015">2015</a></u>, <u><a href="#2016">2016</a></u>
+
 {% for post in site.posts %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if year != written_year %}
