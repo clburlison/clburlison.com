@@ -12,7 +12,7 @@ I ran into the following error earlier this year and have yet to write about it.
 Basically I would launch Adobe's Creative Cloud Packager (CCP) tool and nothing would work. Luckily the fix is really simple:
 
 ```bash
-rm -rf ~/Library/Application Support/Adobe/OOBE
+rm -rf ~/Library/Application\ Support/Adobe/OOBE
 ```
 
 Links:  
