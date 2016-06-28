@@ -72,8 +72,8 @@ author:
   bitbucket        :
   codepen          :
   dribbble         :
-  flickr           : "clburlison"
-  facebook         : "clburlison"
+  flickr           : # "clburlison"
+  facebook         : # "clburlison"
   foursquare       :
   github           : "clburlison"
   google_plus      :
@@ -83,14 +83,14 @@ author:
   linkedin         : "clburlison"
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : # http://stackoverflow.com/users/4811765/clburlison
   steam            :
   tumblr           :
   twitter          : "clburlison"
   vine             :
   weibo            :
   xing             :
-  youtube          : "clburlison"
+  youtube          : # "clburlison"
 
 
 # site yaml defaults
