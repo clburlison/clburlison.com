@@ -1,6 +1,6 @@
 ---
 title: My List
-modified: "05-13-2016"
+modified: "07-12-2016"
 permalink: "/about/my-list/"
 ---
 
@@ -17,7 +17,7 @@ If by chance you have some motivation and wish to create your own list feel free
 ## Current focus:
 
 1. Graduate from college w/ Bachelors Degree
-
+1. Learn Swift
 
 
 The idea behind having a a current focus section is to disregard everything else on this page. It is easy to become stretched too thin. It is easy to want to do everything. It is hard to accomplish everything when all you can think about it everything else. I try to limit this area to five or less.
@@ -38,11 +38,10 @@ The idea behind having a a current focus section is to disregard everything else
 
 ## Professional Goals
 
-* Obtain Cisco Certified Network Associate (CCNA) Routing and Switching
 * <del>Learn Python</del> (3/12/15)
+* Learn Swift
 * Learn Ruby
 * Learn Objective-C
-* Learn C++
 * <del>Setup a masterless puppet environment at work</del> (6/1/15)
 * Create an iOS app
 
@@ -56,7 +55,6 @@ The idea behind having a a current focus section is to disregard everything else
 ## Habit Goals
 
 * Write for 10-minutes daily for a year
-* Drink 48 + oz of water daily
 
 ## Reading Goals
 
@@ -73,5 +71,3 @@ The idea behind having a a current focus section is to disregard everything else
 
 * <del>Graduate from college w/ Associates Degree</del> (5/9/2013)
 * Graduate from college w/ Bachelors Degree
-* Reduce "complaining"
-* Move out on my own
