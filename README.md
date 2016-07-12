@@ -1,7 +1,12 @@
-Personal Website for Clayton Burlison
+[Personal Website for Clayton Burlison](https://clburlison.com)
 ===
 
-[![Build Status](https://travis-ci.org/clburlison/clburlison.github.io.svg?branch=source)](https://travis-ci.org/clburlison/clburlison.github.io),  [![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=ready&title=Ready)](http://waffle.io/clburlison/clburlison.github.io),  [![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/clburlison/clburlison.github.io)
+| **Badges** | |
+|---|---|
+[![Build Status](https://travis-ci.org/clburlison/clburlison.github.io.svg?branch=source)](https://travis-ci.org/clburlison/clburlison.github.io)| This travis job builds this website on each `git push`. Allowing me to use `jekyll` without the `--safe` option that [Github pages](https://jekyllrb.com/docs/plugins/) forces.
+[![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=ready&title=Ready)](http://waffle.io/clburlison/clburlison.github.io) |  Ready - this tag is reserved for content I am planning on writing about soon™ 
+[![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/clburlison/clburlison.github.io) | In Progress - this tag is reserved for content ideas I'm working on right now.
+
 
 [![prose.io](https://clburlison.com/images/prose.png)](http://prose.io/#clburlison/clburlison.github.io)  
 [Prose.io](http://prose.io/#clburlison/clburlison.github.) is a online service to write/edit content without the need for a full jekyll/git/ruby setup.
