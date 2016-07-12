@@ -1,6 +1,6 @@
 ---
 title: My List
-modified: "07-12-2016"
+modified: "12-07-2016"
 permalink: "/about/my-list/"
 ---
 
