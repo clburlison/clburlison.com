@@ -151,13 +151,13 @@ You will want to change  the following in your config.php file:
 
 The root account is created for you, for testing purposes. You will want to create your own admin account by visiting [http://yourserver.example.com/report/index.php?/auth/generate](http://yourserver.example.com/report/index.php?/auth/generate).
 
-The last section of the config file deals with out MySQL database. You will want to change the username and password to match what you created in the previous step. Let's create a new `config.php` file that stores our settings. 
+Let's create a new `config.php` file that stores our settings. 
 
 {% highlight bash %}
 sudo nano /usr/share/nginx/html/report/config.php
 {% endhighlight %}
 
-You'll want to copy/paste the entire section below file below making changes where necessary.
+You'll want to copy/paste the entire section below, making changes where necessary. The last section of the config file deals with our MySQL database. You will want to change the username and password to match what you created in the previous step.
 
 {% highlight php %}
 <?php if ( ! defined( 'KISS' ) ) exit;
