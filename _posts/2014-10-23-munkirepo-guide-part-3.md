@@ -151,17 +151,18 @@ You will want to change  the following in your config.php file:
 
 The root account is created for you, for testing purposes. You will want to create your own admin account by visiting [http://yourserver.example.com/report/index.php?/auth/generate](http://yourserver.example.com/report/index.php?/auth/generate).
 
-The last section of the config file deals with out MySQL database. You will want to change the username and password to match what you created in the previous step.
+Let's create a new `config.php` file that stores our settings. 
 
 {% highlight bash %}
 sudo nano /usr/share/nginx/html/report/config.php
 {% endhighlight %}
 
+You'll want to copy/paste the entire section below, making changes where necessary. The last section of the config file deals with our MySQL database. You will want to change the username and password to match what you created in the previous step.
 
 {% highlight php %}
 <?php if ( ! defined( 'KISS' ) ) exit;
 
-$conf['index_page'] = 'index.php?';
+$conf['index_page'] = 'index.php?'
 $conf['sitename'] = 'Company - MunkiReport';
 $conf['allow_migrations'] = FALSE;
 $conf['debug'] = TRUE;
@@ -202,7 +203,7 @@ Below are the additional settings need to make Active Directory work with MunkiR
 
 // Below are the options for Active Directory user authorization
 $conf['auth']['auth_AD']['account_suffix'] = '@example.com';
-$conf['auth']['auth_AD']['base_dn'] = dc=example,dc=come; //set to NULL to auto-detect
+$conf['auth']['auth_AD']['base_dn'] = 'dc=example,dc=come'; //set to NULL to auto-detect
 $conf['auth']['auth_AD']['domain_controllers'] = array('server1.example.com','server2.example.com'); //can be an array of servers
 $conf['auth']['auth_AD']['admin_username'] = 'admin'; //if needed to perform the search
 $conf['auth']['auth_AD']['admin_password'] = 'munki_is_cool'; //if needed to perform the search
