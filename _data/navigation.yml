@@ -4,8 +4,8 @@ main:
     url: /about/
   - title: "Resources"
     url: /resources/
-  # - title: "Talks"
-  #   url: /talks/
+  - title: "Talks"
+    url: /talks/
   - title: "Archives"
     url: /year-archive/
 
