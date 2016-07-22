@@ -1,16 +1,16 @@
 ---
 title: "Setup Munkireport on Ubuntu 14.04 - Part 3"
 modified: 2015-06-23
-tags: 
+tags:
   - munki
   - ubuntu
   - munkireport
-excerpt: Install Munkireport-php on our munki server to give us a powerful reporting console for munki clients. 
+excerpt: Install Munkireport-php on our munki server to give us a powerful reporting console for munki clients.
 categories:
   - guides
 image:
   feature:
-  credit: 
+  credit:
   creditlink:
 redirect_from:
   - /blog/2014/10/23/munkirepo-guide-part-3/
@@ -22,7 +22,7 @@ redirect_from:
 # Intro
 Welcome to the third part in our munki server setup series. In this section, we will download and configure [Munkireport-php](https://github.com/munkireport/munkireport-php) on our munki server.
 
-Before we get to far you might want to head over to [Part 1 - Setting up the munki repo](/munkirepo-guide-part-1/) or [Part 2 - Setting up mandrill](/munkirepo-guide-part-2/). Parts 1 and 2 are not technically required for MunkiReport by you will want to have an understanding of how the other components of your munki server work before setting up the reporting server. 
+Before we get to far you might want to head over to [Part 1 - Setting up the munki repo](/munkirepo-guide-part-1/) or [Part 2 - Setting up mandrill](/munkirepo-guide-part-2/). Parts 1 and 2 are not technically required for MunkiReport by you will want to have an understanding of how the other components of your munki server work before setting up the reporting server.
 
 If you have no idea what MunkiReport is go check out this [Demo site](https://munkireportphp-nbalonso.rhcloud.com/) hosted by [Noel](http://www.nbalonso.com/). Noel has a custom color scheme but it should give you an idea of the system.
 
@@ -31,7 +31,7 @@ If you have no idea what MunkiReport is go check out this [Demo site](https://mu
 # The Install
 Munkireport is a web application written in php that displays useful stats about your munki fleet. The resources taken up by MunkiReport are quite small but like all web apps if you client base grows very large you will want to make sure the database can keep up. With that you can install MunkiReport on any compatible web-server (IIS, apache, or nginx) for this guide we will be using our munki server from Parts 1 & 2 as our reporting server.
 
-Part of this installation includes setting up MySQL as our database backend. SQLite is the default database but I highly recommend setting my MySQL since the [performance](https://github.com/munkireport/munkireport-php/wiki/Performance) gains are high and setup only takes a few more steps, not to mention SQLite will start to choke when higher volumes of clients start to check-in with the reporting server. 
+Part of this installation includes setting up MySQL as our database backend. SQLite is the default database but I highly recommend setting my MySQL since the [performance](https://github.com/munkireport/munkireport-php/wiki/Performance) gains are high and setup only takes a few more steps, not to mention SQLite will start to choke when higher volumes of clients start to check-in with the reporting server.
 
 It is also important to note, I like MunkiReport to be hosted on a sub-directory. This means when connecting to MuniReport you will type [http://yourserver.example.com/report/]() to access the site. If you want a different setup, you will need to make the necessary changes.
 
@@ -87,7 +87,7 @@ echo "GRANT ALL PRIVILEGES ON munkireport.* TO 'USERNAME'@'localhost' IDENTIFIED
 echo "FLUSH PRIVILEGES;" | mysql -u root -p
 
 {% endhighlight %}
-  
+
 ## Configure php
 Lets make one small change to the default php configuration.
 
@@ -113,7 +113,7 @@ cgi.fix_pathinfo=0
 {% endhighlight %}
 
 
-If this number is kept as 1, the php interpreter will do its best to process the file that is as near to the requested file as possible. This is a possible security risk. If this number is set to 0, conversely, the interpreter will only process the exact file path—a much safer alternative. Save and Exit. 
+If this number is kept as 1, the php interpreter will do its best to process the file that is as near to the requested file as possible. This is a possible security risk. If this number is set to 0, conversely, the interpreter will only process the exact file path—a much safer alternative. Save and Exit.
 
 Now, restart php-fpm for the change to take affect:
 
@@ -129,7 +129,7 @@ We are finally to the point that we can start getting MunkiReport setup.
 sudo git clone https://github.com/munkireport/munkireport-php /usr/share/nginx/html/report
 {% endhighlight %}
 
-At this point, lets create a link to our report folder for our local Ubuntu admin, this allows us to make modifications easier in the future. 
+At this point, lets create a link to our report folder for our local Ubuntu admin, this allows us to make modifications easier in the future.
 
 {% highlight bash %}
 sudo ln -s /usr/share/nginx/html/report ~/report
@@ -137,7 +137,7 @@ sudo ln -s /usr/share/nginx/html/report ~/report
 
 MunkiReport requires a config.php, this is your settings for MunkiReport. Below are some defaults that I think most users will want. For a full list of options please visit [here](https://github.com/munkireport/munkireport-php/blob/master/config_default.php).
 
-You will want to change  the following in your config.php file: 
+You will want to change  the following in your config.php file:
 
 * sitename = change Company to something useful
 * allow_migrations = you will want to change this to true for MunkiReport updates
@@ -151,7 +151,7 @@ You will want to change  the following in your config.php file:
 
 The root account is created for you, for testing purposes. You will want to create your own admin account by visiting [http://yourserver.example.com/report/index.php?/auth/generate](http://yourserver.example.com/report/index.php?/auth/generate).
 
-Let's create a new `config.php` file that stores our settings. 
+Let's create a new `config.php` file that stores our settings.
 
 {% highlight bash %}
 sudo nano /usr/share/nginx/html/report/config.php
@@ -162,7 +162,7 @@ You'll want to copy/paste the entire section below, making changes where necessa
 {% highlight php %}
 <?php if ( ! defined( 'KISS' ) ) exit;
 
-$conf['index_page'] = 'index.php?'
+$conf['index_page'] = 'index.php?';
 $conf['sitename'] = 'Company - MunkiReport';
 $conf['allow_migrations'] = FALSE;
 $conf['debug'] = TRUE;
@@ -233,7 +233,7 @@ server {
 	index index.php index.html index.htm;
 
 	server_name munki;
-	    
+
     error_page 404 /404.html;
     error_page 500 502 503 504 /50x.html;
     location = /50x.html {
@@ -261,7 +261,7 @@ server {
 }
 {% endhighlight %}
 
-We must change our nginx default settings for php to work. 
+We must change our nginx default settings for php to work.
 
 {% highlight bash %}
 sudo nano /etc/nginx/nginx.conf
@@ -330,4 +330,3 @@ Articles:
 [Install LEMP stack on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04),  
 [Munkireport Wiki](https://github.com/munkireport/munkireport-php/wiki),  
 [nbalonso Munkireport-php](http://www.nbalonso.com/new-munkireport-php-2/),  
-
