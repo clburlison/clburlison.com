@@ -224,24 +224,24 @@ sudo nano /etc/nginx/sites-enabled/default
 
 {% highlight bash %}
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server ipv6only=on;
-
-	root /usr/share/nginx/html;
-	index index.php index.html index.htm;
-
-	server_name munki;
-
+    listen 80 default_server;
+    listen [::]:80 default_server ipv6only=on;
+    
+    root /usr/share/nginx/html;
+    index index.php index.html index.htm;
+    
+    server_name munki;
+    
     error_page 404 /404.html;
     error_page 500 502 503 504 /50x.html;
     location = /50x.html {
         root /usr/share/nginx/html;
     }
-
+    
     location /report {
         try_files $uri $uri/ =404;
     }
-
+    
     location ~ \.php$ {
         try_files $uri =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
@@ -249,7 +249,7 @@ server {
         fastcgi_index index.php;
         include fastcgi_params;
     }
-
+    
     location /munki_repo/ {
       alias /usr/local/munki_repo/;
       autoindex off;
