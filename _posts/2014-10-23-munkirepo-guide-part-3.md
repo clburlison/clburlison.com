@@ -24,8 +24,6 @@ Welcome to the third part in our munki server setup series. In this section, we 
 
 Before we get to far you might want to head over to [Part 1 - Setting up the munki repo](/munkirepo-guide-part-1/) or [Part 2 - Setting up mandrill](/munkirepo-guide-part-2/). Parts 1 and 2 are not technically required for MunkiReport by you will want to have an understanding of how the other components of your munki server work before setting up the reporting server.
 
-If you have no idea what MunkiReport is go check out this [Demo site](https://munkireportphp-nbalonso.rhcloud.com/) hosted by [Noel](http://www.nbalonso.com/). Noel has a custom color scheme but it should give you an idea of the system.
-
 ![]({{ site.url }}{{ site.baseurl }}/images/2014-10-23/mr.png)
 
 # The Install
