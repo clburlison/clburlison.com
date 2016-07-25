@@ -170,7 +170,7 @@ Visit to verify that everything is working [http://munki:3001]()
 
 Log into the web portal with the default username _admin_ and password _admin_. You will obviously want to change this password to something more secure. Under the mandrill settings tab you will want to change your repo path to ``/usr/local/munki_repo/``.
 
-![]({{ site.url }}{{ site.baseurl }}/images/2014-10-19/mandrill_settings.png 600 %}
+![]({{ site.url }}{{ site.baseurl }}/images/2014-10-19/mandrill_settings.png)
 
 # Conclusion
 Mandrill is setup! Stay tuned for Part 3, setting up Munkireport.
