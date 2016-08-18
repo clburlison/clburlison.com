@@ -1,6 +1,6 @@
 ---
 title: "Setup a Munki repo on Ubuntu 14.04 - Part 1"
-modified: "2016-06-13"
+modified: "2016-07-30"
 tags: 
   - munki
   - ubuntu
@@ -169,7 +169,7 @@ writable = yes
 Test for errors with the config file with: ``testparm``
 
 Now we must restart samba.  
-``sudo restart smbd``
+``sudo /etc/init.d/smbd reload``
 
 From your mac you will be able to access the munki_repo with the following [smb://munki.example.com/munki_repo]().
 

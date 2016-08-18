@@ -1,6 +1,6 @@
 ---
 title: "Setup Munkireport on Ubuntu 14.04 - Part 3"
-modified: 2015-06-23
+modified: 2016-07-25
 tags:
   - munki
   - ubuntu
@@ -23,8 +23,6 @@ redirect_from:
 Welcome to the third part in our munki server setup series. In this section, we will download and configure [Munkireport-php](https://github.com/munkireport/munkireport-php) on our munki server.
 
 Before we get to far you might want to head over to [Part 1 - Setting up the munki repo](/munkirepo-guide-part-1/) or [Part 2 - Setting up mandrill](/munkirepo-guide-part-2/). Parts 1 and 2 are not technically required for MunkiReport by you will want to have an understanding of how the other components of your munki server work before setting up the reporting server.
-
-If you have no idea what MunkiReport is go check out this [Demo site](https://munkireportphp-nbalonso.rhcloud.com/) hosted by [Noel](http://www.nbalonso.com/). Noel has a custom color scheme but it should give you an idea of the system.
 
 ![]({{ site.url }}{{ site.baseurl }}/images/2014-10-23/mr.png)
 
@@ -226,24 +224,24 @@ sudo nano /etc/nginx/sites-enabled/default
 
 {% highlight bash %}
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server ipv6only=on;
-
-	root /usr/share/nginx/html;
-	index index.php index.html index.htm;
-
-	server_name munki;
-
+    listen 80 default_server;
+    listen [::]:80 default_server ipv6only=on;
+    
+    root /usr/share/nginx/html;
+    index index.php index.html index.htm;
+    
+    server_name munki;
+    
     error_page 404 /404.html;
     error_page 500 502 503 504 /50x.html;
     location = /50x.html {
         root /usr/share/nginx/html;
     }
-
+    
     location /report {
         try_files $uri $uri/ =404;
     }
-
+    
     location ~ \.php$ {
         try_files $uri =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
@@ -251,7 +249,7 @@ server {
         fastcgi_index index.php;
         include fastcgi_params;
     }
-
+    
     location /munki_repo/ {
       alias /usr/local/munki_repo/;
       autoindex off;
