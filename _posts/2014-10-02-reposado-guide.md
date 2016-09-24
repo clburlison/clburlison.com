@@ -255,9 +255,11 @@ RewriteRule ^index(.*)\.sucatalog$ content/catalogs/others/index-mountainlion-li
 RewriteCond %{HTTP_USER_AGENT} Darwin/13
 RewriteRule ^index(.*)\.sucatalog$ content/catalogs/others/index-10.9-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog [L]
 RewriteCond %{HTTP_USER_AGENT} Darwin/14
-RewriteRule ^index(.*)\.sucatalog$ content/catalogs/others/index-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog [L]
+RewriteRule ^index(.*)\.sucatalog$ content/catalogs/others/index-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog [L]
 RewriteCond %{HTTP_USER_AGENT} Darwin/15
 RewriteRule ^index(.*)\.sucatalog$ content/catalogs/others/index-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog [L]
+RewriteCond %{HTTP_USER_AGENT} Darwin/16
+RewriteRule ^index(.*)\.sucatalog$ content/catalogs/others/index-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog [L]
 
 {% endhighlight %}
 
@@ -441,11 +443,17 @@ server {
   }
   ## 10.10.x - Yosemite
   if ( $http_user_agent ~ "Darwin/14" ){
-    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog last;
+    rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog last;
   }
   ## 10.11.x - El Capitan
   if ( $http_user_agent ~ "Darwin/15" ){
     rewrite ^/index(.*)\.sucatalog$ /content/catalogs/others/index-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog last;
+  }
+  
+  ## 10.12.x - Sierra
+  if ( $http_user_agent ~ "Darwin/16" ){
+    rewrite ^/index(.*)\.sucatalog$
+    /content/catalogs/others/index-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog last;
   }
 }
 {% endhighlight %}
