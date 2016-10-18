@@ -1,6 +1,6 @@
 ---
 title: My List
-modified: "12-07-2016"
+modified: "10-18-2016"
 permalink: "/about/my-list/"
 ---
 
@@ -20,7 +20,7 @@ If by chance you have some motivation and wish to create your own list feel free
 1. Learn Swift
 
 
-The idea behind having a a current focus section is to disregard everything else on this page. It is easy to become stretched too thin. It is easy to want to do everything. It is hard to accomplish everything when all you can think about it everything else. I try to limit this area to five or less.
+The idea behind having a current focus section is to disregard everything else on this page. It is easy to become stretched too thin. It is easy to want to do everything. It is hard to accomplish everything when all you can think about it everything else. I try to limit this area to five or less.
 
 ## Last 5 Completed Goals
 
@@ -49,8 +49,8 @@ The idea behind having a a current focus section is to disregard everything else
 
 * Visit Washington DC
 * Visit Paris, France
-* Visit Niagara Falls
-* Visit Rome
+* Visit Niagara Falls, New York
+* Visit Rome, Italy
 
 ## Habit Goals
 
@@ -65,7 +65,7 @@ The idea behind having a a current focus section is to disregard everything else
 
 ## Fun and/or "Insane" Goals
 
-***_currently out of ideas_
+_currently out of ideas_
 
 ## Life Goals
 
