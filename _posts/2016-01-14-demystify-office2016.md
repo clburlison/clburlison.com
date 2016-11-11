@@ -4,7 +4,7 @@ modified: 2016-01-29
 tags: 
   - microsoft
   - osx
-excerpt: An pratical guide on installing and managing Office 2016 for Mac. Includes - common questions, best practices, bugs/fixes, preferences, etc.
+excerpt: A practical guide on installing and managing Office 2016 for Mac. Includes - common questions, best practices, bugs/fixes, preferences, etc.
 categories:
   - guides
 ---
