@@ -10,12 +10,14 @@ title: "Posts by Tags"
 <h2>Tag Cloud</h2>
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
+{% unless tag == 'type' or tag == 'path' %}
  <span class="site-tag">
     <a href="/tags/{{ tag | first | slugify }}/"
         style="font-size: {{ tag | last | size | times: 4 | plus: 70 }}%">
             {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
     </a>
 </span>
+{% endunless %}
 {% endfor %}
 
 

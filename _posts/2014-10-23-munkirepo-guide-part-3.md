@@ -18,6 +18,8 @@ redirect_from:
 
 {% include toc %}
 
+**Ubuntu 16.04/ PHP 7:** Lucas Hall has created an updated guide based off of this one that uses Ubuntu 16.04 with PHP 7, which can be viewed [here](https://lucasjhall.com/2016/08/06/munkireport-ubuntu-sql/){:target="_blank"}.
+{: .notice--info}
 
 # Intro
 Welcome to the third part in our munki server setup series. In this section, we will download and configure [Munkireport-php](https://github.com/munkireport/munkireport-php) on our munki server.
@@ -226,22 +228,22 @@ sudo nano /etc/nginx/sites-enabled/default
 server {
     listen 80 default_server;
     listen [::]:80 default_server ipv6only=on;
-    
+
     root /usr/share/nginx/html;
     index index.php index.html index.htm;
-    
+
     server_name munki;
-    
+
     error_page 404 /404.html;
     error_page 500 502 503 504 /50x.html;
     location = /50x.html {
         root /usr/share/nginx/html;
     }
-    
+
     location /report {
         try_files $uri $uri/ =404;
     }
-    
+
     location ~ \.php$ {
         try_files $uri =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
@@ -249,7 +251,7 @@ server {
         fastcgi_index index.php;
         include fastcgi_params;
     }
-    
+
     location /munki_repo/ {
       alias /usr/local/munki_repo/;
       autoindex off;
