@@ -1,0 +1,21 @@
+[about]
+    Name = "About"
+    URL = "/about"
+
+[resources]
+    Name = "Resources"
+    URL = "/resources"
+
+[talks]
+    Name = "Talks"
+    URL = "/talks"
+
+[posts]
+    Name = "Posts"
+    Title = "Show list of posts"
+    URL = "/post"
+
+[tags]
+    Name = "Tags"
+    Title = "Show list of tags"
+    URL = "/tags"

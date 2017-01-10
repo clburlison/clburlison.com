@@ -1,0 +1,87 @@
+# hostname (and path) to the root eg. http://spf13.com/
+baseurl = "https://clburlison.com"
+
+# Site title
+title = "clburlison"
+
+# Copyright
+copyright = "(c) 2014 - 2017 Clayton Burlison"
+
+# Language
+languageCode = "en-EN"
+
+# Metadata format
+# "yaml", "toml", "json"
+metaDataFormat = "yaml"
+
+# Theme to use (located in /themes/THEMENAME/)
+theme = "hyde-y"
+
+# Pagination
+paginate = 20
+paginatePath = "page"
+
+# Enable Disqus integration
+disqusShortname = "clburlison"
+
+[permalinks]
+    post = "/:title/"
+    page = "/:title/"
+
+[taxonomies]
+    tag = "tags"
+    topic = "topics"
+    category = "categories"
+
+[author]
+    name = "Clayton Burlison"
+    email = "clburlison@gmail.com"
+
+#
+# All parameters below here are optional and can be mixed and matched.
+#
+[params]
+    # You can use markdown here.
+    brand = "clburlison"
+    topline = "A Mac sysadmin, documenting useful code, ideas, & guides."
+    footline = "code with <i class='fa fa-heart'></i>"
+
+    # Sidebar position
+    # false, true, "left", "right"
+    sidebar = "left"
+
+    # Text for the top menu link, which goes the root URL for the site.
+    # Default (if omitted) is "Home".
+    home = "Home"
+
+    # Select a syntax highight.
+    # Check the static/css/highlight directory for options.
+    highlight = "default"
+
+    # Google Analytics.
+    googleAnalytics = "UA-49614309-2"
+
+    # Sidebar social links.
+    github = "clburlison" # Your Github profile ID
+    bitbucket = "" # Your Bitbucket profile ID
+    linkedin = "clburlison" # Your LinkedIn profile ID (from public URL)
+    googleplus = "" # Your Google+ profile ID
+    facebook = "" # Your Facebook profile ID
+    twitter = "clburlison" # Your Twitter profile ID
+    youtube = ""  # Your Youtube channel ID
+    flattr = ""  # populate with your flattr uid
+    flickr = "" # Your Flickr profile ID
+    vimeo = "" # Your Vimeo profile ID
+
+    # Sidebar RSS link: will only show up if there is a RSS feed
+    # associated with the current page
+    rss = true
+
+[blackfriday]
+    angledQuotes = false
+    fractions = false
+    hrefTargetBlank = true
+    latexDashes = true
+    plainIdAnchors = true
+    extensions = []
+    extensionmask = []
