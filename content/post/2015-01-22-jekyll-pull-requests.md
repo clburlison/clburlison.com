@@ -11,8 +11,10 @@ tags:
 title: Jekyll Pull Requests
 ---
 
+
+{{% alert danger %}}
 **Outdated:** I am no longer using this process nor is the original author that I was linking to. He has an archive of his post [here](https://github.com/brunosan/brunosan.eu/blob/main/_posts/blog/2012-07-01-jekyll-pull-requests.md).
-{: .notice--danger}
+{{% /alert %}}
 
 Github is awesome. Jekyll is awesome. Travis-ci is awesome. Prose.io is awesome. And now...you can be awesome as well. Open Source is a fantastic but it is not without its drawbacks. One of the biggest drawbacks to using a static website like this site is the lack of an easy way to update posts. Sometimes I make a typo or want to add information to a already created post. Unfortunately, this would require me to use my laptop and only my laptop to modify the markdown files, build the website, and upload the new static files of the website to Github.
 
@@ -20,8 +22,10 @@ With some love and lots of error in trial, I was able to modify this site so tha
 
 <a id="pull-request-btn" class="btn btn-danger" href="">Send edit request</a>  button at the bottom of this page does.
 
+
+{{% alert info %}}
 **Note:** Now is a time to state that if you are uncomfortable with the Markdown language you might not understand all the syntax of these posts. Which might make editing the page difficult. If you feel uncomfortable feel free to add a comment below and I can make the change.
-{: .notice--info}
+{{% /alert %}}
 
 # How to submit a change
 1. When you see a post you want to edit, click on “Send edit request” button at the bottom of the page. <a id="pull-request-btn" class="btn btn-danger" href="">Send edit request</a>

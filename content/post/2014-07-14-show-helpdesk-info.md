@@ -49,8 +49,9 @@ Great now what? Well that script does nothing for you. Unless you want to manual
 
 ## Modify the script
 
+{{% alert info %}}
 **Note:** If you wish to use the script as is, feel free to skip below to creating the profiles.
-{: .notice--info}
+{{% /alert %}}
 
 This will be the most time consuming process so start small. Lets start by changing the Help Desk Phone Number in my script. Open the main plist ``org.tynsoe.geeklet.shell.plist`` from the gist zip file. Scroll down to line 116 and change the following line to something useful.
 
@@ -82,8 +83,11 @@ mcxToProfile.py -r org.tynsoe.geeklet.shell.plist org.tynsoe.GeekTool.plist \
 org.tynsoe.geektool3.plist --identifier BISD-GeekTool --displayname=BISD-GeekTool --manage Often
 ```
 
+
+{{% alert info %}}
 **Note:** You will want to change your <code>identifier</code> and <code>displayname</code> to something useful for your organization.
-{: .notice--info}
+{{% /alert %}}
+
 
 This will create a second profile with the name of your "identifier + .mobileconfig"
 
@@ -105,8 +109,9 @@ In the following, you will need to modify the profile name with your correct fil
 make_profile_pkg.py --munki-import identifier.mobileconfig
 ```
 
+{{% alert info %}}
 **Note:** You will want to remove the <code>--munki-import</code> flag if you just want to create a package.
-{: .notice--info}
+{{% /alert %}}
 
 # Ending Notes
 Hopefully you find this as useful as I did. If you run into any issues feel free to contact me on Twitter or email.

@@ -42,8 +42,10 @@ In short, Omega is a server that UTA maintains. On that server they have Oracle'
 ## VPN connection
 Since most students will want to work on their homework while at home I highly recommend setting up the VPN connection now. This VPN connection is needed to access the Omega server. The setup should be very similar on Windows.
 
+
+{{% alert info %}}
 **Note:** If you are currently on the UTA campus the VPN connection does not need to be active.
-{: .notice--info}
+{{% /alert %}}
 
 
 You will need to download and install the Cisco AnyConnect application from [https://vpn.uta.edu](https://vpn.uta.edu).

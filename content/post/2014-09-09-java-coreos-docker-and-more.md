@@ -33,8 +33,9 @@ Think really really tiny virtual machine that uses linux, has the ability to aut
 
 [Click here to receive $10 credit with Digital Ocean](https://www.digitalocean.com/?refcode=b50b2cfc8144)
 
+{{% alert info %}}
 **Note:** The referral above also earns me credit.
-{: .notice--info}
+{{% /alert %}}
 
 ## Docker
 Docker is related to CoreOS but only since Core heavily relies on the foundation of [Docker](https://www.docker.com/). However, Docker does not rely on CoreOS and can be ran on any operating system. Without using the terminology created by Docker it is kind of hard to understand what Docker actually does. In the simplest terms, Docker is ran at the lowest level of the computer interacting with the operating system.

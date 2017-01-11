@@ -4,32 +4,32 @@ title: Alerts
 
 Alerts are a useful feature that add side content such as tips, notes, or warnings to your articles. They are especially handy when writing educational tutorial-style articles. Use the corresponding shortcodes to enable alerts inside your content:
 
-    {{</* alert info */>}}
+    {{%/* alert info */%}}
     Here's a tip or note...
-    {{</* /alert */>}}
+    {{%/* /alert */%}}
 
 This will display the following *note* block:
 
-{{< alert info >}}
+{{% alert info %}}
 Here's a tip or note...
-{{< /alert >}}
+{{% /alert %}}
 
 ---
 
 All four styles below:
 
-{{< alert success >}}
+{{% alert success %}}
 Here's a success...
-{{< /alert >}}
+{{% /alert %}}
 
-{{< alert info >}}
+{{% alert info %}}
 Here's a info...
-{{< /alert >}}
+{{% /alert %}}
 
-{{< alert warning >}}
+{{% alert warning %}}
 Here's a warning...
-{{< /alert >}}
+{{% /alert %}}
 
-{{< alert danger >}}
+{{% alert danger %}}
 Here's a danger...
-{{< /alert >}}
+{{% /alert %}}

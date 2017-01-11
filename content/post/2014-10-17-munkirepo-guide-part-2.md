@@ -43,8 +43,10 @@ sudo chown -R _mandrill:munki /usr/local/munki_repo/
 sudo chmod -R 2774 /usr/local/munki_repo
 ```
 
+
+{{% alert info %}}
 **Note:** You should receive an error from creating the 'munki' group if you went through <a href="/munkirepo-guide-part-1/">Part 1</a>. This is fine move along.
-{: .notice--info}
+{{% /alert %}}
 
 ## Install build tools
 ```bash

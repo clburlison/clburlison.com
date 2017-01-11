@@ -20,8 +20,10 @@ toc: true
 # Intro
 Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup.
 
+
+{{% alert info %}}
 **Note:** I have added <a href="./#addendum-4-using-nginx">Addendum 4</a> if you would like to serve files using nginx instead of apache. In my testing, it has been much faster at serving html requests. Also, a little easier to setup the redirect rules.
-{: .notice--info}
+{{% /alert %}}
 
 
 # The software
@@ -91,8 +93,10 @@ Base URL for your local Software Update Service
 
 ```
 
+
+{{% alert info %}}
 **Note:** The repo_sync command will download Apple catalogs + updates (if enabled). Grab a coffee, this could be upwards of 170GB. Time obviously depends on connection speed.
-{: .notice--info}
+{{% /alert %}}
 
 
 You now have Reposado fully installed and configured! Now we need to serve those files over http so clients can do something with the downloads.
@@ -123,6 +127,7 @@ So far we have properly configured both Reposado and Margarita. Now all we want 
 A .wsgi script gives mod_wsgi the information it needs to launch the python web app, but Margarita does not come with one. Fortunately, these files are pretty easy to make. Using your favorite text editor (*cough* nano *cough*), create the file _/usr/local/asus/margarita/margarita.wsgi_ with the following contents:
 
 ``sudo nano /usr/local/asus/margarita/margarita.wsgi``
+
 ```bash
 
 import sys
@@ -374,8 +379,10 @@ Lastly, restart apache for the changes to take place.
 
 Nginx offers a few benefits over using apache, with the key benefit being lighter. This results in faster transfers from the web server to clients. With that said, Nginx does not offer as wide of a selection of modules as Apache. For that reason, I am currently running Margarita over apache while serving reposado (Apple client updates) via nginx.
 
+
+{{% alert info %}}
 **Note:** This section should be used in replace of using the <code>/etc/apache2/sites-enabled/reposado.conf</code> file not in addition. Bad things will happen if you try to share the reposado downloaded updates via both apache and nginx.
-{: .notice--info}
+{{% /alert %}}
 
 
 Firstly, we must install nginx on our server so we can use it.

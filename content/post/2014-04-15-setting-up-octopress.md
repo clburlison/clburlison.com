@@ -12,8 +12,9 @@ tags:
 title: Setting up octopress
 ---
 
+{{% alert info %}}
 **Notice:** This site is no created using Octopress. I have since moved to a plain Jekyll setup. Content exists mostly for reference and will not be updated in the future.
-{: .notice--info}
+{{% /alert %}}
 
 
 ---

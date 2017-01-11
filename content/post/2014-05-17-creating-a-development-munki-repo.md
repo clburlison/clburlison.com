@@ -15,14 +15,15 @@ url: "creating-a-development-munki-repo/"
 toc: true
 ---
 
+{{% alert danger %}}
+**Outdated:** These instructions are no longer current and are considered deprecated. This document remains for historical reasons only. Faster and easier methods exist for creating development environments.
+{{% /alert %}}
+
 I created a vagrant box that allows you create a completely self contained munki_repo for testing purposes. With the usage of [PuPHPet](https://puphpet.com) the process was quite easy.
 
 This article describes basic usage and setup for the project **munki.dev**.
 
 ---
-
-**Outdated:** These instructions are no longer current and are considered deprecated. This document remains for historical reasons only. Faster and easier methods exist for creating development environments.
-{: .notice--danger}
 
 # Purpose
 

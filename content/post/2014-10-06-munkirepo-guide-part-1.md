@@ -112,8 +112,10 @@ server {
 And finally start the nginx service.  
 ``sudo /etc/init.d/nginx start``
 
+
+{{% alert info %}}
 **Nginx Issues:** To have Nginx check your configuration for issues run the following command: <br> <code>nginx -c /etc/nginx/nginx.conf -t</code>
-{: .notice--info}
+{{% /alert %}}
 
 
 ### Securing your munki_repo
@@ -138,8 +140,10 @@ We must reload the nginx service to update the reflected change.
 
 Now when you try to access your website, [http://yourmunkiserver/munki_repo/](), you will notice a browser prompt that asks you to enter the login and password. Enter the details that you used while creating the .htpasswd file. The prompt does not allow you to access the website until you enter the right credentials. The munki client supports this security feature with the AdditionalHttpHeaders key [more info](https://github.com/munki/munki/wiki/Using-Basic-Authentication#configuring-the-clients-to-use-a-password).
 
-**Note:** If you do not want to secure your munki repo you can remove this setting in the above ngix config file by removing the two lines that start with <code>auth_basic</code>
-{: .notice--info}
+
+{{{% alert info %}}
+**Note:** If you do not want to secure your munki repo you can remove this setting in the above nginx config file by removing the two lines that start with <code>auth_basic</code>
+{{% /alert %}}
 
 
 ## Setting up Samba

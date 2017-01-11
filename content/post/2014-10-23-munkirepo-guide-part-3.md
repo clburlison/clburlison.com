@@ -21,8 +21,10 @@ toc: true
 ---
 
 
+
+{{% alert info %}}
 **Ubuntu 16.04/ PHP 7:** Lucas Hall has created an updated guide based off of this one that uses Ubuntu 16.04 with PHP 7, which can be viewed [here](https://lucasjhall.com/2016/08/06/munkireport-ubuntu-sql/).
-{: .notice--info}
+{{% /alert %}}
 
 # Intro
 Welcome to the third part in our munki server setup series. In this section, we will download and configure [Munkireport-php](https://github.com/munkireport/munkireport-php) on our munki server.
@@ -46,8 +48,10 @@ sudo apt-get update
 sudo apt-get -y install nginx git php5-fpm php5-mysql php5-ldap
 ```
 
+
+{{% alert info %}}
 **Note:** The <code>php5-ldap</code> package is only needed if you are planning on connecting to an Active Directory or LDAP directory for authenticating to MunkiReport.
-{: .notice--info}
+{{% /alert %}}
 
 ## Setup MySQL
 
@@ -224,8 +228,10 @@ Lets configure nginx to use [http://yourserver.example.com/report](http://yourse
 sudo nano /etc/nginx/sites-enabled/default
 ```  
 
+
+{{% alert info %}}
 **Note:** Make sure and change your <code>server_name</code>. This file also takes care of our munki_repo from <a href="/munkirepo-guide-part-1/">Part 1</a>.
-{: .notice--info}
+{{% /alert %}}
 
 ```bash
 server {

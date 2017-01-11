@@ -22,8 +22,11 @@ The error message that I was receiving seemed pretty generic at the time. Beside
 ![](/images/2014-05-14/login_error.png SourceTree error %}
 
 
+
+{{% alert info %}}
 **Note:** If you use the official <a href="https://mac.github.com">GitHub app</a> you will not run into a login error because their app uses the GitHub API for authentication.
-{: .notice--info}
+{{% /alert %}}
+
 
 Luckily Github has made creating a OTP quite easy once you know what you are looking for. It is recommended practice to use one token per application. This means if I ever need to reject a token it will only effect the one version of SourceTree on one device.
 

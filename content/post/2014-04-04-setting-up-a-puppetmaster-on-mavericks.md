@@ -17,8 +17,10 @@ For various reasons I decided to set up my puppetmaster on an OS X install of Ma
 
 ---
 
+
+{{% alert info %}}
 **Notice:** I do not use these instructions any longer. The setup of a puppetmaster on OS X Server was just for testing purposes.
-{: .notice--info}
+{{% /alert %}}
 
 ### Introduction to puppet
 Puppet is a service that is normally ran in a client/server setup that helps manage and configure devices. Since I am an OS X administrator, this article will be coving the installation and configuration on an OS X platform. While many sysadmins will prefer server installation on a linux distro I simply did not want to mess with getting a Virtual Machine approved in my environment. Below are the steps that I took to set up a puppetmaster on an OS X Mavericks install.  
