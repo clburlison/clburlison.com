@@ -1,5 +1,6 @@
 ---
-title: Alerts
+title: "Alerts"
+draft: true
 ---
 
 Alerts are a useful feature that add side content such as tips, notes, or warnings to your articles. They are especially handy when writing educational tutorial-style articles. Use the corresponding shortcodes to enable alerts inside your content:
