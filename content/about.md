@@ -19,7 +19,7 @@ Code license located [here](/docs/license/).
 Besides work, I recently graduated from the University of Texas at Arlington with a Bachelor of Science in Information Systems. In my free time I enjoy playing video games and if you could not guess it from the site favicon I really enjoy running.
 
 ### This site
-RSS feeds for this site can be found in many locations with the main feed located at [clburlison.com/feed.xml](/feed.xml). However if you only want a "tech" only feed that doesn't have any personal posts you will want to follow [clburlison.com/categories/tech/feed.xml](/categories/tech/feed.xml).
+RSS feeds for this site can be found in many locations with the main feed located at [clburlison.com/feed.xml](/feed.xml). However if you want a "tech" only feed that does not include any personal posts you will want to follow [clburlison.com/categories/tech/feed.xml](/categories/tech/feed.xml).
 
 If you want to learn more about how this site is created visit [site-info](/site-info/).
 
