@@ -10,6 +10,7 @@ tags:
 - osx
 - munki
 title: Show Help Desk Information
+url: "show-helpdesk-info/"
 ---
 
 {% include toc %}

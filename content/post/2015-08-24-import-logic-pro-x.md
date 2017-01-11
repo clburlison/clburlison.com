@@ -6,6 +6,7 @@ tags:
 - munki
 - python
 title: Import Logic Pro X Audio Content
+url: "import-logic-pro-x/"
 ---
 
 <div class="notice--info">

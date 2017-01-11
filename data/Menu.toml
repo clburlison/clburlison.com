@@ -15,6 +15,11 @@
     Title = "Show list of posts"
     URL = "/post"
 
+[categories]
+    Name = "Categories"
+    Title = "Show list of categories"
+    URL = "/categories"
+
 [tags]
     Name = "Tags"
     Title = "Show list of tags"

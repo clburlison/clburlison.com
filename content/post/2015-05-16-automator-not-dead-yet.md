@@ -9,6 +9,8 @@ modified: 2015-06-01
 tags:
 - automation
 title: Automator is not dead yet
+aliases:
+  - "automator-not-dead-yet/"
 ---
 
 # Intro

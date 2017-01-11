@@ -7,6 +7,7 @@ tags:
 - active-directory
 - bash
 title: AD Account Change
+url: "ADacctChange/"
 ---
 
 {% include toc %}

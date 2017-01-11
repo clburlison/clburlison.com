@@ -8,6 +8,7 @@ tags:
 - puppet
 - automation
 title: Puppet Module desktop picture
+url: "puppet-module-desktoppicture/"
 ---
 
 # Intro

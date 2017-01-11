@@ -10,6 +10,7 @@ published: true
 aliases:
 - /blog/2014/09/09/java-coreos-docker-and-more/
 title: Java, CoreOS, Docker, & More
+url: "java-coreos-docker-and-more/"
 ---
 
 # Quick Update
