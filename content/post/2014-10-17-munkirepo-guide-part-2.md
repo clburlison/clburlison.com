@@ -11,9 +11,8 @@ tags:
 - ubuntu
 title: Setup Mandrill on Ubuntu 14.04 - Part 2
 url: /munkirepo-guide-part-2/
+toc: true
 ---
-
-{% include toc %}
 
 
 # Intro

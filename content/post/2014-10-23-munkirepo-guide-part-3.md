@@ -16,9 +16,9 @@ tags:
 - munkireport
 title: Setup Munkireport on Ubuntu 14.04 - Part 3
 url: /munkirepo-guide-part-3/
+toc: true
 ---
 
-{% include toc %}
 
 **Ubuntu 16.04/ PHP 7:** Lucas Hall has created an updated guide based off of this one that uses Ubuntu 16.04 with PHP 7, which can be viewed [here](https://lucasjhall.com/2016/08/06/munkireport-ubuntu-sql/).
 {: .notice--info}

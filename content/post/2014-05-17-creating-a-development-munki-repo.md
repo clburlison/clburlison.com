@@ -10,13 +10,12 @@ tags:
 - munki
 title: Creating a development munki_repo
 url: "creating-a-development-munki-repo/"
+toc: true
 ---
 
 I created a vagrant box that allows you create a completely self contained munki_repo for testing purposes. With the usage of [PuPHPet](https://puphpet.com) the process was quite easy.
 
 This article describes basic usage and setup for the project **munki.dev**.
-
-{% include toc %}
 
 ---
 

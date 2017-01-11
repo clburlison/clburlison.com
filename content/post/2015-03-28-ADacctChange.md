@@ -8,9 +8,8 @@ tags:
 - bash
 title: AD Account Change
 url: "ADacctChange/"
+toc: true
 ---
-
-{% include toc %}
 
 
 # Intro

@@ -6,10 +6,8 @@ tags:
 - automation
 - puppet
 title: Configuration Management
+toc: true
 ---
-
-{% include toc %}
-
 
 
 # Intro

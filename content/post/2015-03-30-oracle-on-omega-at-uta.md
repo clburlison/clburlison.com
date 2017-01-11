@@ -7,9 +7,9 @@ tags:
 - database
 - college
 title: Oracle on Omega at UTA
+toc: true
 ---
 
-{% include toc %}
 
 # Intro
 The University of Texas at Arlington (UTA) has some articles that are quite outdated regarding using their Oracle database server. On top of that no information is given to users that have Macintosh computers. If you happen to be taking an Information System class like Database Management Systems (INSY 3304) then good luck when it comes to remotely connecting to the Oracle server. To make-up for the lack of documentation I am creating the following guide.

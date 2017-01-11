@@ -10,9 +10,8 @@ tags:
 - osx
 title: Demystify Office 2016 for Mac
 url: /demystify-office2016/
+toc: true
 ---
-
-{% include toc %}
 
 # Intro
 Microsoft Office 2016 for Mac had a [rough](https://macops.ca/whats-wrong-with-the-office-2016-volume-license-installer/) [start](https://macops.ca/the-office-for-mac-2016-volume-license-installer-two-months-later/) [for](http://www.richard-purves.com/?p=79) [sure](https://derflounder.wordpress.com/2015/08/05/creating-an-office-2016-15-12-3-installer/). With that being said things have gotten better and quite rapidly. This post will focus on where Office 2016 for Mac currently stands, commonly asked questions, best practices, and solutions for updates.
@@ -42,7 +41,6 @@ Five months into Office 2016 being out and there are <s>five</s> six different k
 | Combo | Update | These updates can take any previous Office 2016 installed app and make them current. These are per app upgrade packages, a difference from Office 2011's combo update packages. | Yes | ~1 GB per app |
 | Delta | Update | These were first publicly available with 15.18. These significantly reduce the file size that is required to update an Office app. Also per app upgrade packages. <a href="#delta-updates">Additional info</a> | Yes | ~780 MB for suite |
 | VL Serializer | Serializer | This is a special package that was released with 15.17. The purpose of this package is to apply the Office serialization process to the SKU-less installations. <a href="#vl-serializer">more info</a> | Yes | ~5 MB |
-{: rules="groups"}
 
 
 If **Requires Live System**, is 'yes' these installers must be ran on fully booted Mac. IE - You must see the loginwindow or be logged into the physical Mac that you are installing O2016 on. If this option is 'no' you can bake these installers into a base image using tools like [AutoDMG](https://github.com/MagerValp/AutoDMG), [DeployStudio](http://www.deploystudio.com/), or Casper's Image creation process.
@@ -57,7 +55,7 @@ If **Requires Live System**, is 'yes' these installers must be ran on fully boot
 
 You should install the package that Microsoft is giving you. **PERIOD**. End of story. Stop taking their package apart and "fixing things". It is fine to poke your nose under the hood but there is absolutely no reason for you to be re-packaging anything Office 2016 related. This was a common practice with Office 2011 and at the start of Office 2016. All issues that were resolved with re-packaging have been fixed by Microsoft. Microsoft has listened and now it is your turn. STAHP.
 
-### Method 1 - Office 365 installation
+## Method 1 - Office 365 installation
 You can download a SKU-less installer from your VLSC dashboard or from [http://macadmins.software](http://macadmins.software). Both locations point to the same file as it a public release. This installer is deployed via Apple's Installer Application (command line & GUI) and can be deployed via:
 
 * Apple Remote Desktop
@@ -68,7 +66,7 @@ You can download a SKU-less installer from your VLSC dashboard or from [http://m
 
 It all-around should be good to go!
 
-### Method 2 - Volume License Installation
+## Method 2 - Volume License Installation
 If you are a Volume License (VL) customer your first step is to log into the VLSC and download the latest Office 2016 for Mac iso file. Inside of this file you will find the latest VL Installer package and the VL Serializer package. At this time, the VLSC has 15.17 however 15.18 has been released. Microsoft is working to sync the development and VLSC teams so that the latest update is available on the VLSC faster.
 
 This installer is deployed via Apple's Installer Application (command line & GUI) and can be deployed via:
@@ -89,7 +87,7 @@ A **third**, and slightly less preferred (personal opinion) option would be to d
 > @pbowden -- [source link #1](https://macadmins.slack.com/archives/microsoft-office/p1449897132003874)
 
 
-### Munki
+## Munki
 If you are a munki shop pick one of the methods above and run the following to import Office 2016 into your repo:
 
 ```bash
@@ -173,7 +171,7 @@ $ makepkginfo \
 ```
 
 
-### Casper
+## Casper
 I was going to try and give resources for Casper...then I realized how completely unqualified for this section. Luckily Rich Trouton [has got you covered](https://derflounder.wordpress.com/2016/01/14/creating-an-office-2016-15-18-0-installer/).
 
 Using his method you could add a [choice xml](#i-dont-want-to-install-mau-is-that-supported) file if you wanted to customize your installation. Inside of Packages under the "Additional Resources" tab you would need to copy in your choice xml ([download link](https://gist.github.com/clburlison/8fd09ae20de4279281f4/archive/89a8735ac42fd634389e89f0f45c80e8f0e3bf3b.zip)). This is Step #6 in Rich's guide.

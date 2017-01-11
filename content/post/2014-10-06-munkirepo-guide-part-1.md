@@ -16,10 +16,8 @@ tags:
 - ubuntu
 title: Setup a Munki repo on Ubuntu 14.04 - Part 1
 url: /munkirepo-guide-part-1/
+toc: true
 ---
-
-{% include toc %}
-
 
 
 # Intro

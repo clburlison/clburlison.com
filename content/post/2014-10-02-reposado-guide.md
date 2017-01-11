@@ -12,9 +12,9 @@ tags:
 - ubuntu
 title: Setup Reposado + Margarita on Ubuntu 14.04
 url: /reposado-guide/
+toc: true
 ---
 
-{% include toc %}
 
 # Intro
 Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup.
