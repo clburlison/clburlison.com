@@ -7,11 +7,10 @@ tags:
   - imagr
   - ubuntu
   - docker
-excerpt: Setup a fully functional Imagr server with netboot, reporting, smb, and web share on Ubuntu. 
+excerpt: Setup a fully functional Imagr server with netboot, reporting, smb, and web share on Ubuntu.
 keywords: [osx, imagr, imaging, OS X, Mac, ubuntu]
+toc: true
 ---
-
-{% include toc %}
 
 
 # Introduction
