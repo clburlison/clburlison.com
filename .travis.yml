@@ -1,7 +1,8 @@
+# Based off of: http://rcoedo.com/post/hugo-static-site-generator/
 language: go
 
 go:
-    - "1.7.1"
+    - "1.7.4"
 
 env:
     global:
@@ -19,6 +20,8 @@ before_script:
     - go get -u -v github.com/spf13/hugo
 
 script:
+    - ls
+    - git pull; git submodule update --init --recursive
     # - git clone https://github.com/rcoedo/hugo-steam-theme ./themes/hugo-steam-theme
     - hugo
 
