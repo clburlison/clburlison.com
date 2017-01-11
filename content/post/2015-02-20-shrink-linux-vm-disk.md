@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2015-02-20T00:00:00Z
 excerpt: Steps to shrink the virtual disk of a linux vm using VMware Fusion.
 aliases:

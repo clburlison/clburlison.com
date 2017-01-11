@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2015-05-27T00:00:00Z
 excerpt: My ramblings on puppet as a configuration management tool on OS X.
 modified: 2015-06-01

@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 comments: true
 date: 2014-06-17T00:00:00Z
 description: Apple has a build in way to create secure encrypted 256-bit AES disk

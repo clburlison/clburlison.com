@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-05-17T00:00:00Z
 description: Use vagrant along with virtualbox to create a fully functional munki_repo
   for testing on your localhost.

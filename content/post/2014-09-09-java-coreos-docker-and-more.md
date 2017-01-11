@@ -1,6 +1,7 @@
 ---
 categories:
 - personal
+- tech
 comments: true
 date: 2014-09-09T00:00:00Z
 excerpt: A quick update regarding a few of the things I have been up to the last few

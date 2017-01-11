@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2015-01-21T00:00:00Z
 modified: null
 aliases:

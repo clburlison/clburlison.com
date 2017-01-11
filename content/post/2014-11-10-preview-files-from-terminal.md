@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 title: Preview files from terminal
 date: 2014-11-10T00:00:00Z
 excerpt: Preview files from Terminal.

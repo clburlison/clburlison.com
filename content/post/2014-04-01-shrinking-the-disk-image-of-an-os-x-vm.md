@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-04-01T00:00:00Z
 description: Article examines steps to reduce the disk size of a vmdk file on a mac.
 keywords: vmware, osx, mac, shrinking vmdk, mavericks

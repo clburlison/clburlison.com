@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2015-11-16T00:00:00Z
 excerpt: A simple script to rsync a directory and send a summary to Slack.
 modified: ""

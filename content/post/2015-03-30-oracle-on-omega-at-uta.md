@@ -1,4 +1,6 @@
 ---
+categories:
+- personal
 date: 2015-03-30T00:00:00Z
 excerpt: Guide for using the Omega server and Oracle application for UTA students.
 modified: 2015-04-30

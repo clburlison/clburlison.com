@@ -1,6 +1,7 @@
 ---
 categories:
 - guides
+- tech
 date: 2014-10-02T00:00:00Z
 excerpt: A setup guide for Reposado and Margarita using Apache on Ubuntu 14.04 with
   notes on securing Margarita.

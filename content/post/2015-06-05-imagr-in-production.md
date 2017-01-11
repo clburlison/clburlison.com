@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2015-06-05T00:00:00Z
 excerpt: How better to test something than throwing a bunch of clients at it?
 header:

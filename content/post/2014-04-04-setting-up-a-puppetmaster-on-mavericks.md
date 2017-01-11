@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-04-04T00:00:00Z
 description: Setting up a puppetmaster on osx Mavericks.
 keywords: puppet, mavericks, osx, install, puppetmaster

@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2015-03-28T00:00:00Z
 excerpt: Change the account name of Cached User Accounts in an Active Directory environment
   on OS X.

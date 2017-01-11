@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-04-15T00:00:00Z
 description: Go over customizing octopress and installing plugins.
 keywords: octopress, markdown, customize, plugins, setup

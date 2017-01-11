@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-11-13T00:00:00Z
 excerpt: Learn to sign packages with Luggage using your Apple Developer Account.
 modified: 2015-04-06

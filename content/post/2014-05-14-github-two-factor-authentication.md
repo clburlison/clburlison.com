@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-05-14T00:00:00Z
 description: Setting up Two-factor Authentication on Github while using SourceTree.
 keywords: github, sourcetree, git, two-factor, authentication,

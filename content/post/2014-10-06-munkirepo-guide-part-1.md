@@ -1,6 +1,7 @@
 ---
 categories:
 - guides
+- tech
 date: 2014-10-06T00:00:00Z
 excerpt: Gets the repo configured and shared via nginx. Plus, samba gets configured
   for remote administration.

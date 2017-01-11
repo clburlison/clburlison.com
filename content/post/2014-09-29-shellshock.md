@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-09-29T00:00:00Z
 excerpt: Everything you need to know about Shellshock for OS X in English.
 header:

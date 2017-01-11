@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-07-23T00:00:00Z
 description: Describes how to convert audio to a mono format that is suitable for
   phone distribution purposes.

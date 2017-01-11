@@ -1,6 +1,7 @@
 ---
 categories:
 - guides
+- tech
 date: 2016-01-14T00:00:00Z
 excerpt: A practical guide on installing and managing Office 2016 for Mac. Includes
   - common questions, best practices, bugs/fixes, preferences, etc.

@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2015-05-16T00:00:00Z
 excerpt: In fact it is as powerful today as it was five years ago.
 image:

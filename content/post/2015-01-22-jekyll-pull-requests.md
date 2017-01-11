@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 comments: true
 date: 2015-01-22T00:00:00Z
 excerpt: Add a Github pull request feature to your Jekyll website.

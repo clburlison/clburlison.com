@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2015-08-24T00:00:00Z
 excerpt: Import Logic Pro X Audio Content packages into your Munki repo.
 modified: 2015-11-17

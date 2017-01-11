@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2015-02-10T00:00:00Z
 excerpt: My first real puppet module designed to help you modify the desktop picture
   on OS X.

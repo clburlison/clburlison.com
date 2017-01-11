@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-07-28T00:00:00Z
 description: null
 keywords: bash, scripting, if then, statements

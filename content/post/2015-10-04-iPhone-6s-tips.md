@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2015-10-04T00:00:00Z
 excerpt: Too many people do _not_ know these, you should they could help.
 link: http://www.cultofmac.com/390109/iphone6s-tricks-tips/

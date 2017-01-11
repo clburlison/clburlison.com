@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-04-04T00:00:00Z
 description: Deploy octopress with s3cmd command.
 keywords: octopress, amazon s3, amazon aws, website, s3cmd

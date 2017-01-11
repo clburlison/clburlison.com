@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-04-24T00:00:00Z
 description: Lessons learned while setting up boxen for personal usage.
 keywords: boxen, puppet, github, automation

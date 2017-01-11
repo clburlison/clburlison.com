@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-03-31T00:00:00Z
 description: First blog post using octopress and amazon s3 as storage.
 keywords: blog, octopress, clayton burlison, amazon s3, static files

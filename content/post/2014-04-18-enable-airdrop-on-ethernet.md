@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-04-18T00:00:00Z
 description: Quick post over enabling AirDrop over Ethernet.
 keywords: AirDrop, Ethernet, cli, Terminal,

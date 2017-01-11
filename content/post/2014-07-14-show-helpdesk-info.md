@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-07-14T00:00:00Z
 description: Display helpful information on your Desktop using Geektool on Mac OS
   X.

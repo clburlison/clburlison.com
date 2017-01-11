@@ -1,6 +1,7 @@
 ---
 categories:
 - guides
+- tech
 date: 2014-10-23T00:00:00Z
 excerpt: Install Munkireport-php on our munki server to give us a powerful reporting console for munki clients.
 image:

@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2016-05-17T00:00:00Z
 modified: null
 tags:

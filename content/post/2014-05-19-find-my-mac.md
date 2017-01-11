@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2014-05-19T00:00:00Z
 description: null
 keywords: Find My Mac, iCloud, nvram,

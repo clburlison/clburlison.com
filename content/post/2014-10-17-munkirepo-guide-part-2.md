@@ -1,6 +1,7 @@
 ---
 categories:
 - guides
+- tech
 date: 2014-10-17T00:00:00Z
 excerpt: Install Mandrill on our munki server. This web front end gives administrators a flexible and powerful way to update manifests.
 modified: 2015-04-16
