@@ -33,7 +33,6 @@ disqusShortname = "clburlison"
 
 [taxonomies]
     tag = "tags"
-    topic = "topics"
     category = "categories"
 
 [author]
@@ -47,7 +46,7 @@ disqusShortname = "clburlison"
     # You can use markdown here.
     brand = "clburlison"
     topline = "A Mac sysadmin, documenting useful code, ideas, & guides."
-    footline = "<br>powered by [Hugo](https://gohugo.io/)."
+    footline = "powered by [Hugo](https://gohugo.io/)."
 
     # Sidebar position
     # false, true, "left", "right"
