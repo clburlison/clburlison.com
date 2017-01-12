@@ -1,6 +1,7 @@
 ---
 title: My List
 modified: "10-18-2016"
+toc: true
 aliases:
 - /about/my-list/
 ---
@@ -15,60 +16,63 @@ If by chance you have some motivation and wish to create your own list feel free
 
 ---
 
-## Current focus:
+# Current focus
 
-1. Graduate from college w/ Bachelors Degree
+1. Learn Go
 1. Learn Swift
-
+1. Run a marathon
 
 The idea behind having a current focus section is to disregard everything else on this page. It is easy to become stretched too thin. It is easy to want to do everything. It is hard to accomplish everything when all you can think about it everything else. I try to limit this area to five or less.
 
-## Last 5 Completed Goals
+# Last 5 Completed Goals
 
-* Learn Python (3/12/15)
-* Learn Java (5/14/15 - proficient)
+* Graduate from college w/ Bachelors Degree (Dec 17, 2016)
+* Learn Python (March 12, 2015)
+* Learn Java (May 14, 2015 - proficient)
 
-## Fitness/Health Goals
+# Fitness/Health Goals
 
 * <del>Run a 5K</del> ()
 * <del>Run a 10K</del> ()
-* <del>Run a half-marathon</del> ([7/14/11](http://runkeeper.com/user/clburlison/activity/47599499))
+* <del>Run a half-marathon</del> ([July 14, 2011](http://runkeeper.com/user/clburlison/activity/47599499))
 * Run a marathon
 * 7-minute workout daily for 7 months
 * Learn Yoga
 
-## Professional Goals
+# Professional Goals
 
-* <del>Learn Python</del> (3/12/15)
+* <del>Setup a masterless puppet environment at work</del> (June 1, 2015)
+* <del>Learn Java</del> (May 14, 2015 - proficient)
+* <del>Learn Python</del> (March 12, 2015)
 * Learn Swift
 * Learn Ruby
 * Learn Objective-C
-* <del>Setup a masterless puppet environment at work</del> (6/1/15)
+* Learn Go
 * Create an iOS app
 
-## Travel Goals
+# Travel Goals
 
 * Visit Washington DC
 * Visit Paris, France
 * Visit Niagara Falls, New York
 * Visit Rome, Italy
 
-## Habit Goals
+# Habit Goals
 
 * Write for 10-minutes daily for a year
 
-## Reading Goals
+# Reading Goals
 
-* <del>Read Time Managements for System Administrators</del> (5/10/2014)
+* <del>Read Time Managements for System Administrators</del> (May 10, 2014)
 * Read Pro Puppet
 * Read The Docker Book
 * The Power of Habit
 
-## Fun and/or "Insane" Goals
+# Fun and/or "Insane" Goals
 
 _currently out of ideas_
 
-## Life Goals
+# Life Goals
 
-* <del>Graduate from college w/ Associates Degree</del> (5/9/2013)
-* Graduate from college w/ Bachelors Degree
+* <del>Graduate from college w/ Associates Degree</del> (May 9, 2013)
+* <del>Graduate from college w/ Bachelors Degree</del> (Dec 17, 2016)
