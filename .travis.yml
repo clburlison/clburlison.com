@@ -7,8 +7,8 @@ go:
 env:
     global:
         - SSH_KEY="github_rsa"
-        - GIT_NAME="Clayton Burlison"
-        - GIT_EMAIL="github@clburlison.com"
+        - GIT_NAME="clayton-bot"
+        - GIT_EMAIL="clburlison+gitbot@gmail.com"
         - SOURCE_DIR="public"
         - DEPLOY_BRANCH="source"
 
