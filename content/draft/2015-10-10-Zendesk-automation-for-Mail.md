@@ -17,16 +17,22 @@ tags:
 - automation
 - osx
 title: Zendesk Automation for Mail
-aliases:
-- /2015/10/10/Zendesk-automation-for-Mail/
+toc: true
 ---
 
 # Intro
 
-I should write something here... ¯\_(ツ)_/¯
+Before I get into the material of this post I want to refer you to an article written this week by Sal Soghoian, [App Extensions Are Not a Replacement for User Automation](https://www.macstories.net/stories/app-extensions-are-not-a-replacement-for-user-automation/).
 
+Did you read it? I hope so as it's quite possibly a future that could come sooner rather then later. Now with that out of the way let's look at some Mac automation for Zendesk.
+
+Zendesk is a web based helpdesk application that is entirely cloud hosted and in the past few years it has become quite popular. They have a email API that allows agents to forward emails that they might get at their personal email address and forward it to the helpdesk, creating a ticket automatically. 
 
 # Apple Mail Stationary
+
+This was the method I attempted first however it turned out to be a big flop. Mail Stationary can only be applied to new emails. 
+
+The Mail Stationary is great for creating new tickets. However what is a use has emailed you the issue directly. The simple solution is, use Zendesk's same email API commands. The only problem is stationary emails are only allowed for new emails in Apple mail.
 
 1) Download stationary
 
@@ -54,12 +60,11 @@ Now lets modify the file.
 1) Scroll down to 'Custom'
 1) Select your template
 
-
 At this point if you wish to add the stationary to your favorites just drag it up to the favorites folder. This gives you an easy way to create ticket all from your email. Just make sure and modify any of the command tags.
 
-The above is great for creating new tickets. However what is a use has emailed you the issue directly. The simple solution is, use Zendesk's same email API commands. The only problem is stationary emails are only allowed for new emails in Apple mail. Which brings us to solution two.
-
 # Automator
+
+Since the Mail Stationary method has some pretty large drawbacks this brings us to solution two.
 
 These servies are stored at ~/Library/Services/
 
@@ -75,6 +80,13 @@ NOTE: I have the bcc field enabled in Apple Mail. If you don't you will need to 
 >To your second question: If the custom field is a drop down, use the tag associated with the selection you want to set. Once you add the tag and submit the ticket update, it will automatically make the corresponding selection from the drop-down. Other custom fields such as regex, numbers and text are not settable via the mail API.
 >
 > [Comment by Emily - 3/4 page down](https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox?page=4&preview%5Btheme_id%5D=-1%29)
+
+# Wrap up
+
+It is really nice that this functionality is built into macOS. Automator and the tools that come along allow non-technical people to do amazing things. 
+
+---
+
 
 Resources: [Updating Ticket Properties from You Inbox](https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox),  
 [Automatically Inserting Text Globally](http://apple.stackexchange.com/a/87989),  
