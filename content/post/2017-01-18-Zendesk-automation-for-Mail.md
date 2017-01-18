@@ -1,4 +1,6 @@
 ---
+categories:
+- tech
 date: 2017-01-18
 excerpt: Utilize Zendesk's mail API with Apple Mail and Automator.
 keywords:
