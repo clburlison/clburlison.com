@@ -15,6 +15,9 @@ url: /munkirepo-guide-part-2/
 toc: true
 ---
 
+{{% alert danger %}}
+**Update:** This article should only be used for reference at this time. Mandrill has been great for many years but no longer has an active maintainer. Please use MunkiWebAdmin 2 (mwa2) from [github.com/munki/mwa2](https://github.com/munki/mwa2) instead.
+{{% /alert %}}
 
 # Intro
 This is Part 2 of a series on setting up a munki server on Ubuntu 14.04. Read [Part 1 here](/blog/2014/10/06/munkirepo-guide-part-1/). This section goes over setting up [Mandrill](https://github.com/wollardj/Mandrill) so we can edit our repo metadata files, modify manifests, and assign new software to our fleet using a web browser.
