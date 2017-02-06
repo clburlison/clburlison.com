@@ -18,7 +18,6 @@ If by chance you have some motivation and wish to create your own list feel free
 
 # Current focus
 
-1. Learn Go
 1. Learn Swift
 1. Run a marathon
 
@@ -32,12 +31,11 @@ The idea behind having a current focus section is to disregard everything else o
 
 # Fitness/Health Goals
 
-* <del>Run a 5K</del> ()
-* <del>Run a 10K</del> ()
+* <del>Run a 5K</del> ([Dec 18, 2010](https://runkeeper.com/user/clburlison/activity/21346886))
+* <del>Run a 10K</del> ([Nov 27, 2012](https://runkeeper.com/user/clburlison/activity/133743862))
 * <del>Run a half-marathon</del> ([July 14, 2011](http://runkeeper.com/user/clburlison/activity/47599499))
 * Run a marathon
-* 7-minute workout daily for 7 months
-* Learn Yoga
+* Yoga
 
 # Professional Goals
 
@@ -64,8 +62,6 @@ The idea behind having a current focus section is to disregard everything else o
 # Reading Goals
 
 * <del>Read Time Managements for System Administrators</del> (May 10, 2014)
-* Read Pro Puppet
-* Read The Docker Book
 * The Power of Habit
 
 # Fun and/or "Insane" Goals
