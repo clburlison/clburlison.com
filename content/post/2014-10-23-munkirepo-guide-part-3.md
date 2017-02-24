@@ -314,6 +314,11 @@ You should now have a basic MunkiReport configuration up and running. Double che
 
 As always feel free to drop a comment below or on Twitter. Feedback is always appreciated.
 
+
+{{% alert info %}}
+**Congrats!** You made it this far. Unfortunately you're not done yet. You will likely run into an issue with request size on your munki clients as such please go read [this](https://lucasjhall.com/2016/08/06/munkireport-ubuntu-sql://clburlison.com/munkireport-error-fix/).
+{{% /alert %}}
+
 ---
 
 # Apendium 1 - connecting a client to MunkiReport
