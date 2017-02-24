@@ -316,7 +316,7 @@ As always feel free to drop a comment below or on Twitter. Feedback is always ap
 
 
 {{% alert info %}}
-**Congrats!** You made it this far. Unfortunately you're not done yet. You will likely run into an issue with request size on your munki clients as such please go read [this](https://lucasjhall.com/2016/08/06/munkireport-ubuntu-sql://clburlison.com/munkireport-error-fix/).
+**Congrats!** You made it this far. Unfortunately you're not done yet. You will likely run into an issue with request size on your munki clients as such please go read [this](https://clburlison.com/munkireport-error-fix/).
 {{% /alert %}}
 
 ---
