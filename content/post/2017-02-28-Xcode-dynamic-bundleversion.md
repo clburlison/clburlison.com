@@ -24,7 +24,16 @@ One of the first tasks I wanted to do was auto update the CFBundleVersion whenev
 <br>
 The script:
 
-{{< gist clburlison da0827cbc685f0352231e11ed1af5827 >}}
+```bash
+# based on http://tgoode.com/2014/06/05/sensible-way-increment-bundle-version-cfbundleversion-xcode
+if git rev-parse --is-inside-work-tree 2> /dev/null > /dev/null; then
+echo "Setting CFBundleVersion to Git rev-list --count"
+build_number=$(git rev-list HEAD --count)
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $build_number" "${TARGET_BUILD_DIR}/${INFOPLIST_PATH}"
+else
+echo "Not in a Git repo, not setting CFBundleVersion"
+fi
+```
 
 
 # Articles:
