@@ -2,13 +2,13 @@
 ===
 
 
-[![CircleCI](https://circleci.com/gh/clburlison/clburlison.github.io.svg?style=svg)](https://circleci.com/gh/clburlison/clburlison.github.io)  - This travis job builds this website on each `git push`.
+[![CircleCI](https://circleci.com/gh/clburlison/clburlison.github.io.svg?style=svg)](https://circleci.com/gh/clburlison/clburlison.github.io)  - This CircleCI job builds this website on each `git push`.
 
 [![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=ready&title=Ready)](http://waffle.io/clburlison/clburlison.github.io) - this tag is reserved for content I am planning on writing about soon™.
 
 [![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/clburlison/clburlison.github.io) - this tag is reserved for content ideas I'm working on right now.
 
-# Site info 
+# Site info
 This repo contains my personal website, [clburlison.com](https://clburlison.com).
 
 More information about this site can be found [here](https://clburlison.com/about/site-info/).
@@ -36,5 +36,3 @@ More information about this site can be found [here](https://clburlison.com/abou
 	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
-
-

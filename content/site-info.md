@@ -42,9 +42,9 @@ Odds are if you have ended up on this site you found something interesting or he
   <p>The theme <a target="_blank" href="https://github.com/enten/hyde-y">hyde-y</a> is an enhanced port of the Jekyll "Hyde" theme.</p>
 </details>
 <details>
-  <summary>Travis-ci builds my website <u><a target="_blank" href="https://travis-ci.org/clburlison/clburlison.github.io/builds">Build History</a></u>.</summary>
-  <p><a href="https://travis-ci.org/clburlison/clburlison.github.io"><img src="https://travis-ci.org/clburlison/clburlison.github.io.svg?branch=source" alt="Build Status"></a> <br>
-    Travis-ci is a continuous integration application that pulls the contents of my Github repo on every commit I submit to the source branch. The purpose of using Travis to build my Hugo site is so I no longer have to manually manage any of the master branch, which is where all of the html files are stored. Other benefits to using Travis include the ability to have a running record of all my builds. This allows me to know at any given point in time when I broke something. </p>
+  <summary>CircleCI builds my website <u><a target="_blank" href="https://circleci.com/gh/clburlison/clburlison.github.io">Build History</a></u>.</summary>
+  <p><a href="https://circleci.com/gh/clburlison/clburlison.github.io"><img src="https://circleci.com/gh/clburlison/clburlison.github.io.svg?style=svg" alt="Build Status"></a> <br>
+    CircleCI is a continuous integration application that pulls the contents of my Github repo on every commit I submit to the source branch. The purpose of using CircleCI to build my Hugo site is so I no longer have to manually manage any of the master branch, which is where all of the html files are stored. Other benefits to using CircleCI include the ability to have a running record of all my builds. This allows me to know at any given point in time when I broke something. In the past this site used Travis CI however CircleCI is way faster.</p>
 </details>
 <details>
   <summary>User tracking is enabled and provided by <u><a target="_blank" href="https://www.google.com/analytics/">Google Analytics</a></u>.</summary>
