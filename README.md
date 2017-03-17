@@ -2,7 +2,7 @@
 ===
 
 
-[![Build Status](https://travis-ci.org/clburlison/clburlison.github.io.svg?branch=source)](https://travis-ci.org/clburlison/clburlison.github.io) - This travis job builds this website on each `git push`.
+[![CircleCI](https://circleci.com/gh/clburlison/clburlison.github.io.svg?style=svg)](https://circleci.com/gh/clburlison/clburlison.github.io)  - This travis job builds this website on each `git push`.
 
 [![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=ready&title=Ready)](http://waffle.io/clburlison/clburlison.github.io) - this tag is reserved for content I am planning on writing about soon™.
 

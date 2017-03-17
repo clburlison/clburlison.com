@@ -1,0 +1,69 @@
+version: 2
+jobs:
+  build:
+    working_directory: /tmp/clburlison.github.io
+    environment:
+        - GIT_NAME: clayton-bot
+        - GIT_EMAIL: clburlison+gitbot@gmail.com
+        - SOURCE_DIR: /tmp/public
+        - GH_PAGES_BRANCH: master
+    docker:
+      - image: jguyomard/hugo-builder:0.19
+    steps:
+      - run:
+          name: Add deps
+          command: apk update && apk upgrade && apk add --no-cache rsync git openssh
+      - checkout  # Checkout our git repo
+      - run:
+          name: Download submodules for our theme
+          command: git submodule sync && git submodule update --init # use submodules
+      - run:
+          name: Compile site
+          command: /usr/local/bin/hugo --destination "$SOURCE_DIR"
+      - add_ssh_keys
+      - run:
+          name: Print environment vars
+          command: env
+      - run:
+          name: Deploy
+          command: |
+            set -x
+            set +e
+            # Variables
+            ORIGIN_URL=$(git config --get remote.origin.url)
+            BUILD_MSG=$(git log -1 --pretty=%B)
+            HASH=$(git rev-parse --verify HEAD --short)
+            CURRENT_DIR=$(pwd)
+
+            echo "Started deploying"
+
+            # Checkout $GH_PAGES_BRANCH branch or create orphan branch if it doesn't exist.
+            if [ `git branch --remotes | grep $GH_PAGES_BRANCH` ]
+            then
+              echo "The branch exists so we are doing a checkout..."
+              git checkout $GH_PAGES_BRANCH
+            else
+              echo "The branch doesn't exist yet so we will create an orphan..."
+              git checkout --orphan $GH_PAGES_BRANCH
+            fi
+
+            # Delete and copy files.
+            echo "Removing all files and copying built site"
+            rm -rf {themes,hugo_cache}
+            find . -not -path "./.git*" -delete
+            cp -r $SOURCE_DIR/* $CURRENT_DIR
+
+            # Push to $GH_PAGES_BRANCH.
+            echo "Adding git config"
+            git config user.name "$GIT_NAME"
+            git config user.email "$GIT_EMAIL"
+            git add -fA
+            git commit -m "Build $CIRCLE_BUILD_NUM of $CIRCLE_SHA1 for $CIRCLE_USERNAME [ci skip]"
+            if [ "$?" -eq "0" ]; then
+              echo "Pushing to $GH_PAGES_BRANCH"
+              git push -f $ORIGIN_URL $GH_PAGES_BRANCH
+              echo "Deployed Successfully!"
+            else
+              echo "Nothing to push to master!"
+              exit 0
+            fi
