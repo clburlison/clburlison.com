@@ -6,13 +6,11 @@ jobs:
         - GIT_NAME: clayton-bot
         - GIT_EMAIL: clburlison+gitbot@gmail.com
         - SOURCE_DIR: /tmp/public
+        - SOURCE_BRANCH: source
         - GH_PAGES_BRANCH: master
     docker:
       - image: jguyomard/hugo-builder:0.19
     steps:
-      - run:
-          name: Add deps
-          command: apk update && apk upgrade && apk add --no-cache rsync git openssh
       - checkout  # Checkout our git repo
       - run:
           name: Download submodules for our theme
@@ -20,10 +18,6 @@ jobs:
       - run:
           name: Compile site
           command: /usr/local/bin/hugo --destination "$SOURCE_DIR"
-      - add_ssh_keys
-      - run:
-          name: Print environment vars
-          command: env
       - run:
           name: Deploy
           command: |
@@ -55,8 +49,11 @@ jobs:
 
             # Push to $GH_PAGES_BRANCH.
             echo "Adding git config"
-            git config user.name "$GIT_NAME"
-            git config user.email "$GIT_EMAIL"
+            # Only add git config with on the CircleCI cloud instance
+            if [ "$CIRCLE_BUILD_NUM" ]; then
+              git config user.name "$GIT_NAME"
+              git config user.email "$GIT_EMAIL"
+            fi
             git add -fA
             git commit -m "Build $CIRCLE_BUILD_NUM of $CIRCLE_SHA1 for $CIRCLE_USERNAME [ci skip]"
             if [ "$?" -eq "0" ]; then
@@ -67,3 +64,5 @@ jobs:
               echo "Nothing to push to master!"
               exit 0
             fi
+            # Change back to source branch
+            git checkout $SOURCE_BRANCH
