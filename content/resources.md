@@ -5,11 +5,9 @@ modified: 05-13-2016
 
 _This section highlights useful/popular posts from this domain._
 
-* [Bash if/then Cheat Sheet](/bash-if-then-cheat-sheet/)
 * [Setup Reposado + Margarita](/reposado-guide/)
 * **Munki setup series on Ubuntu 14.04**
   * [Setup a Munki repo - Part 1](/munkirepo-guide-part-1/)
-  * [Setup Mandrill - Part 2](/munkirepo-guide-part-2/)
   * [Setup Munkireport-php - Part 3](/munkirepo-guide-part-3/)
 * [Demystify Office 2016 for Mac](/demystify-office2016/)  
 
