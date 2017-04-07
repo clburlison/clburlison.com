@@ -9,7 +9,7 @@ aliases:
 - /blog/2014/04/04/setting-up-a-puppetmaster-on-mavericks/
 tags:
 - puppet
-- osx
+- macos
 title: Setting up a puppetmaster on Mavericks
 ---
 

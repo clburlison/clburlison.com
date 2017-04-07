@@ -9,7 +9,7 @@ aliases:
 - /blog/2014/04/01/shrinking-the-disk-image-of-an-os-x-vm/
 tags:
 - vmware
-- osx
+- macos
 title: Shrinking the disk image of an OS X VM
 ---
 

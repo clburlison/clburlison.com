@@ -12,7 +12,7 @@ published: true
 aliases:
 - /blog/2014/06/17/encrypted-dmgs/
 tags:
-- osx
+- macos
 title: Encrypted DMGs
 ---
 

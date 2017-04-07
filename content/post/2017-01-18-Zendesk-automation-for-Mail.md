@@ -4,7 +4,7 @@ categories:
 date: 2017-01-18
 excerpt: Utilize Zendesk's mail API with Apple Mail and Automator.
 keywords:
-- osx
+- macos
 - Apple
 - Mail
 - Zendesk
@@ -16,7 +16,7 @@ keywords:
 modified:
 tags:
 - automation
-- osx
+- macos
 title: Zendesk Automation for Mail
 toc: false
 ---

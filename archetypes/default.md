@@ -4,6 +4,6 @@ categories:
 draft: true
 modified:
 tags:
-- osx
+- macos
 toc: false
 ---

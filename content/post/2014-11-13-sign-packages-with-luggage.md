@@ -8,7 +8,7 @@ aliases:
 - /blog/2014/11/13/sign-packages-with-luggage/
 tags:
 - luggage
-- osx
+- macos
 title: Sign Packages with Luggage
 ---
 

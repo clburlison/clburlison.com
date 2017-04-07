@@ -8,7 +8,7 @@ modified: 2014-11-19
 aliases:
 - /blog/2014/04/18/enable-airdrop-on-ethernet/
 tags:
-- osx
+- macos
 title: Enable AirDrop on Ethernet
 ---
 

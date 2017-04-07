@@ -8,7 +8,7 @@ modified: 2015-09-21
 aliases:
 - /blog/2014/05/19/find-my-mac/
 tags:
-- osx
+- macos
 title: Find My Mac
 ---
 

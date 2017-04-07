@@ -9,7 +9,7 @@ modified: 2015-04-06
 aliases:
 - /blog/2014/07/14/show-helpdesk-info/
 tags:
-- osx
+- macos
 - munki
 title: Show Help Desk Information
 url: "show-helpdesk-info/"

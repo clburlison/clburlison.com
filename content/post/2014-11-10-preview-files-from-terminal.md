@@ -9,7 +9,7 @@ aliases:
 - /blog/2014/11/10/preview-files-from-terminal/
 tags:
 - bash
-- osx
+- macos
 ---
 
 > QuickLook scans file contents before you open those files. Usually this just lets you view a file quickly. But you can also use this same technology from the command line to bring about a change to the Finder without actually opening a file. To access QuickLook from the command line, use qlmanage.

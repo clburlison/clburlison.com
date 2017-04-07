@@ -8,7 +8,7 @@ excerpt: A practical guide on installing and managing Office 2016 for Mac. Inclu
 modified: 2016-01-29
 tags:
 - microsoft
-- osx
+- macos
 title: Demystify Office 2016 for Mac
 url: /demystify-office2016/
 toc: true

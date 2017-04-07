@@ -8,7 +8,7 @@ modified: 2015-02-16
 aliases:
 - /blog/2014/07/28/bash-if-then-cheat-sheet/
 tags:
-- osx
+- macos
 - bash
 title: Bash if then cheat sheet
 ---
