@@ -9,7 +9,7 @@ jobs:
         - SOURCE_BRANCH: source
         - GH_PAGES_BRANCH: master
     docker:
-      - image: jguyomard/hugo-builder:0.19
+      - image: jguyomard/hugo-builder:0.20
     steps:
       - checkout  # Checkout our git repo
       - run:
