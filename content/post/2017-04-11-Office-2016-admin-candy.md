@@ -3,7 +3,7 @@ categories:
 - tech
 date: 2017-04-11
 draft: false
-modified: 2017-04-12
+modified: 2017-04-13
 tags:
 - microsoft
 title: Office 2016 admin candy
@@ -51,7 +51,7 @@ Now MAU 3.9, released in April 2017, has added:
 2017-04-12: An incorrect statement regarding the suite deltas has now been corrected.
 {{% /alert %}}
 
-This one is my **absolute** favorite update as it means we now have anther upgrade option (not sarcasm actually super cool). I have been a big fan of using the full SKULess installer package for both initial installs and updates on my fleet since my finds in January in 2016.
+This one is my **absolute** favorite update as it means we now have another upgrade option (not sarcasm actually super cool). I have been a big fan of using the full SKULess installer package for both initial installs and updates on my fleet since my finds in January in 2016.
 
 This might look like a minor quality of life but it took quite a bit of engineering to get this released. Now instead of doing file based diffs for each of the applications individually, the team is able to do a complete diff of the entire suite. This method allows the team to wrap all updates, PowerPoint, Word, Excel, Outlook, and OneNote[^1], into a single ~280 MB update package for the entire suite. This will allow users to go from something like 15.33 to 15.34 with a single package that is almost a 1 GB smaller than the SKULess installer and almost 350 MB smaller than the five individual delta updates. Please note all of this is over the wire data and on disk space is not being changed.
 
