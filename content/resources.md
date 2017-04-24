@@ -59,5 +59,5 @@ We are lucky enough that Charles Edge is hosting a pretty impressive list of Mac
 * [htaccess to nginx converter](http://winginx.com/en/htaccess)
 * [XML Escape](http://www.freeformatter.com/xml-escape.html)
 * [XML Formatter](http://www.freeformatter.com/xml-formatter.html) for when your plist gets real funky
-
+* [Shell Scripts Matter](https://dev.to/thiht/shell-scripts-matter)
 
