@@ -19,7 +19,7 @@ I finally got around to setting up two-factor authentication on my Github accoun
 
 ### SourceTree error
 The error message that I was receiving seemed pretty generic at the time. Besides I knew I was typing my Github password correctly, so that could not be the issue. In hindsight not realizing the two-factor authentication (2fa) was the problem immediately was pretty stupid. The solution to this error is to login with a One Time Password (OTP)  token _not_ your normal Github password. If you do use the wrong password you will receive the follow error message.  
-![](/images/2014-05-14/login_error.png SourceTree error %}
+![Error](/images/2014-05-14/login_error.png)
 
 
 
