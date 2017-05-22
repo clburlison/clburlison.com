@@ -338,8 +338,7 @@ Again, Paul has released a document that will cover more information than I can.
 
 ## Office Insider
 
-> The   Office  Insider program is  a   new initiative  to  provide Office  customers   on  all platforms   to  get early   access  to  the very    latest  builds  of  the
-product.    The public  description can be  found   at  https://products.office.com/office-insider
+> The Office Insider program is a new initiative to provide Office customers on all platforms to get early access to the very latest builds of the product. The public description can be found at https://products.office.com/office-insider
 
 [![](/images/pdf-200x200.png)](/images/2016-01-14/Office_Insider.pdf)
 
