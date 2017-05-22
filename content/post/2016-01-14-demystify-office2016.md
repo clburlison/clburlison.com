@@ -190,7 +190,7 @@ Make sure and walk through the remaining steps in Rich's guide to complete this 
 ---
 
 # FAQ
-Due to the shear quantity of content I am attempting to cover the remanding section of this post will be in FAQ format.
+Due to the shear quantity of content I am attempting to cover the remaining section of this post will be in FAQ format.
 
 ## Why is O2016 so different from O2011?
 The main reason why Office 2016 is so different is the fact that each application is now [Sandboxed](https://developer.apple.com/library/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html). Due to that fact, Microsoft is now just one step away from releasing Office 2016 apps on the Mac App Store (figuratively speaking at least). Obviously time frame for this move would depend greatly on internal policies, process with Apple, and other factors unknown to me. Sandboxing also means it is easier to remove an Application after it has been installed IE - `sudo rm -rf "/Applications/Microsoft Word.app"`. However, one downside of Sandboxed applications is the large quantity of duplicated data (mostly Fonts) being stored on the disk in five applications.
@@ -338,8 +338,8 @@ Again, Paul has released a document that will cover more information than I can.
 
 ## Office Insider
 
-> The	Office	Insider	program	is	a	new	initiative	to	provide	Office	customers	on	all	platforms	to	get	early	access	to	the	very	latest	builds	of	the
-product.	The	public	description	can	be	found	at	https://products.office.com/office-insider
+> The   Office  Insider program is  a   new initiative  to  provide Office  customers   on  all platforms   to  get early   access  to  the very    latest  builds  of  the
+product.    The public  description can be  found   at  https://products.office.com/office-insider
 
 [![](/images/pdf-200x200.png)](/images/2016-01-14/Office_Insider.pdf)
 
@@ -485,7 +485,7 @@ More on the actual fix to this issue. Inside of `$HOME/Library/Preferences/com.m
 ## Software not actually becoming licensed
 FIXED - 15.14
 
-Issue - If the VL intall package was installed at the loginwindow, Office 2016 would fail to properly serialize O2016.
+Issue - If the VL install package was installed at the loginwindow, Office 2016 would fail to properly serialize O2016.
 
 > @chrfr no, you won’t break if you manually extracted the VL serializer from 15.14 and run it with a 15.17 install. It’s just that there’s a bug with that VL serializer where it won’t run properly if the user is not logged on. That’s fixed in the 15.17 VL serializer.
 >
