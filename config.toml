@@ -7,9 +7,6 @@ title = "clburlison"
 # Copyright
 copyright = "(c) 2014 - 2017 Clayton Burlison"
 
-# Change rss feed to make old jekyll name
-rssuri = "feed.xml"
-
 # Language
 languageCode = "en-EN"
 
@@ -87,3 +84,8 @@ disqusShortname = "clburlison"
     plainIdAnchors = true
     extensions = []
     extensionmask = []
+
+[outputFormats]
+
+[outputFormats.RSS]
+baseName = "feed"
