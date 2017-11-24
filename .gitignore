@@ -16,3 +16,7 @@ resume/index.html
 # Hugo
 public
 hugo_cache
+
+# CI
+.terraform/.terraform
+*.tfstate*
