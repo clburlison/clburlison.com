@@ -21,7 +21,7 @@ If you have ever used AWS you will know the options are limitless. For consisten
 No seriously keep waiting. Building a CF distribution point takes a while...
 
 ## DNS Notes
-Route53 has a $0.50 charge per month just for hosting a domain. This cost, while nominal, can add up overtime. Many other DNS providers (Namecheap, Google Domains, etc.) are more than sufficient for most sites and do not have a month charge. If you go with another provider you'll need to comment out the DNS resources at the bottom of the `main.tf` file. You will lose the programmatic DNS access that Route53 providers but save money.
+Route53 has a $0.50 charge per month just for hosting a domain. This cost, while nominal, can add up overtime. Many other DNS providers (Namecheap, Google Domains, etc.) are more than sufficient for most sites and do not have a monthly charge. If you go with another provider you'll need to comment out the DNS resources at the bottom of the `main.tf` file. You will lose the programmatic DNS access that Route53 provides but save money in the long run.
 
 ## (Pretty) URL Notes
 CloudFront has no way to rewrite `/path/index.html` to `/path`, also known as "PrettyUrls", therefore I'm sharing the site using the AWS S3 "static website hosting" feature which supports rewrites. Then CloudFront in front of this S3 hosting for lower cost and faster speeds.
