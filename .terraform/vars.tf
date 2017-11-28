@@ -10,8 +10,8 @@ variable "region" {
 
 variable "ssl_cert_arn" {
   type        = "string"
-  description = "Used for CloudFront distribution point. Use Amazon Certificate Manager to create."
-  default     = "arn:aws:acm:us-east-1:029516313545:certificate/474e81bb-4700-4cb6-8b11-358553c619b7"
+  description = "Used for CloudFront distribution point. Use Amazon Certificate Manager to create. Make sure to add all CNAMES: www.example.com, example.com, etc."
+  default     = "arn:aws:acm:us-east-1:029516313545:certificate/0ed36f57-8d4a-495e-bb17-85a6fd10657b"
 }
 
 variable "dns_zone" {
@@ -23,6 +23,11 @@ variable "dns_zone" {
 variable "dns_record" {
   type    = "string"
   default = "clburlison.com"
+}
+
+variable "alt_dns_record" {
+  type    = "string"
+  default = "www.clburlison.com"
 }
 
 variable "content-secret" {

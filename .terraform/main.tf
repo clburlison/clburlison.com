@@ -160,7 +160,7 @@ resource "aws_cloudfront_distribution" "website_distribution" {
   comment             = "Website CloudFront distribution"
   default_root_object = "index.html"
 
-  aliases = ["${var.dns_record}"]
+  aliases = ["${var.dns_record}", "${var.alt_dns_record}"]
 
   custom_error_response {
     error_code            = "404"
@@ -265,9 +265,9 @@ resource "aws_route53_record" "dns" {
   }
 }
 
-resource "aws_route53_record" "www-dns" {
+resource "aws_route53_record" "alt-dns" {
   zone_id = "${data.aws_route53_zone.main.zone_id}"
-  name    = "www.${var.dns_record}."
+  name    = "${var.alt_dns_record}."
   type    = "A"
 
   alias {
