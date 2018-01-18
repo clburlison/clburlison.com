@@ -12,7 +12,7 @@ toc: false
 
 Find My Mac (FMM) is a service from Apple that allows individual iCloud users to locate their devices as long as they are signed in and the device has a valid internet connection. The problem, in enterprise, is we often do not want these services up and running due to security. You can disable the ability to sign into iCloud all together but what if you want to just stop FMM?
 
-It is pretty easy to detective if FMM has been setup with:
+It is pretty easy to detect if FMM has been setup with:
 
 ```bash
 /usr/sbin/nvram -x -p | /usr/bin/grep fmm-mobileme-token-FMM
