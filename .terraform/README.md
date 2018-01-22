@@ -13,6 +13,7 @@ If you have ever used AWS you will know the options are limitless. For consisten
 * Modify the `vars.tf` file with your settings. You could overwrite my defaults with the `-var-file` flag.
 * Setup AWS keys (`~/.aws/config` & `~/.aws/credentials`)
 * Download [Terraform](https://www.terraform.io/downloads.html)
+* `AWS_PROFILE=personal` set your AWS profile (optional)
 * `terraform init`
 * `terraform plan`
 * `terraform apply`
