@@ -1,13 +1,14 @@
 ---
 title: My List
 modified: "10-18-2016"
-toc: true
 aliases:
 - /about/my-list/
 showPagination: false
 showSocial: false
 showDate: false
 ---
+
+<!-- toc -->
 
 This page is kind of personal but I have always found that if I write my goals down it is much easier to obtain them. Before I created this page I use to have everything stored in a pages document, and before that I use to keep it in a Facebook note.
 

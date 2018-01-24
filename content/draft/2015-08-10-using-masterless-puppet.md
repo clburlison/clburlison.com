@@ -6,9 +6,9 @@ excerpt: Pros/Cons of using Puppet in a masterless configuration.
 tags:
   - puppet
   - osx
-toc: true
 ---
 
+<!-- toc -->
 
 # Intro
 It has been a while since I wrote about Puppet and honestly I still have split opinions on the following workflow as a whole. However the below method is a way to start using Puppet with a relatively low starting pain. I do not consider myself an expert on this topic. The following is meant to help those new to the idea of Configuration Management, specifically Puppet, with a working masterless workflow. More or less a getting started with Puppet for managing Macs.

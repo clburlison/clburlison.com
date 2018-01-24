@@ -13,8 +13,9 @@ tags:
 - munki
 title: Show Help Desk Information
 url: "show-helpdesk-info/"
-toc: true
 ---
+
+<!-- toc -->
 
 Display useful information on your Desktop using Geektool. Make troubleshooting network issues for your end users easier. Find your hostname faster. The amount of useful information is limitless. If you can script it...you can display it.  
 

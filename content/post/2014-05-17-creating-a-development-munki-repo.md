@@ -12,8 +12,9 @@ tags:
 - munki
 title: Creating a development munki_repo
 url: "creating-a-development-munki-repo/"
-toc: true
 ---
+
+<!-- toc -->
 
 {{% alert danger %}}
 **Outdated:** These instructions are no longer current and are considered deprecated. This document remains for historical reasons only. Faster and easier methods exist for creating development environments.

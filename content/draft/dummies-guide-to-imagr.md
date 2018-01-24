@@ -9,9 +9,9 @@ tags:
   - docker
 excerpt: Setup a fully functional Imagr server with netboot, reporting, smb, and web share on Ubuntu.
 keywords: [osx, imagr, imaging, OS X, Mac, ubuntu]
-toc: true
 ---
 
+<!-- toc -->
 
 # Introduction
 This is the zero to hero walkthrough on setting up Imagr using all the hottest technologies available. With the added bonus of running on Linux (all of you OS X Server haters can rejoice). I will be using Ubuntu 14.04 in a virtual machine however since most of the setup is using Docker so any distro should be compatible.

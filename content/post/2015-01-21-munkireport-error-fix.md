@@ -9,10 +9,9 @@ tags:
 - munkireport
 title: Fix Munkireport Error Request Too Large
 url: "munkireport-error-fix/"
-toc: true
 ---
 
-
+<!-- toc -->
 
 # Intro
 I use [Munkireport-php](https://github.com/munkireport/munkireport-php) as my main reporting system at my work but have recently ran into an error when uploading data from client machines. My setup is using nginx to serve the files.

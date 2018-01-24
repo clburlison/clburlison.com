@@ -7,8 +7,9 @@ modified: 2017-04-13
 tags:
 - microsoft
 title: Office 2016 admin candy
-toc: true
 ---
+
+<!-- toc -->
 
 Office 2016 has had a few updates since my [last post](/demystify-office2016/) on the topic however most of these simply don't apply to me as an admin of the mac platform. Many of these updates have been bug and feature related which is great...I just do not see them as I am not a user. Honestly, since I finished college in December I have not used a Microsoft product on my mac except for Microsoft Remote Desktop.
 

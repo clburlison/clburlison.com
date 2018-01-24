@@ -8,9 +8,9 @@ tags:
 - automation
 - puppet
 title: Configuration Management
-toc: true
 ---
 
+<!-- toc -->
 
 # Intro
 This is part one in a four part series on using Puppet on OS X. However to understand my move to Puppet I wanted to share my thoughts on Configuration Management (CM) in general.

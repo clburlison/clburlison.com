@@ -12,9 +12,9 @@ tags:
 - bash
 title: AD Account Change
 url: "adacctchange/"
-toc: true
 ---
 
+<!-- toc -->
 
 # Intro
 Changing user account logons in a deployed environment can cause some issues. Doing so with OS X clients that are bound to Active Directory can cause even more issues. Below is how I overcame some of the pitfalls of the built-in OS X Active Directory plugin. This article expands on the basic project Readme instructions located [here](https://github.com/clburlison/scripts/tree/master/clburlison_scripts/ADacctChange).

@@ -12,8 +12,9 @@ tags:
 - ubuntu
 title: Setup Mandrill on Ubuntu 14.04 - Part 2
 url: /munkirepo-guide-part-2/
-toc: true
 ---
+
+<!-- toc -->
 
 {{% alert danger %}}
 **Update:** This article should only be used for reference at this time. Mandrill has been great for many years but no longer has an active maintainer. Please use MunkiWebAdmin 2 (mwa2) from [github.com/munki/mwa2](https://github.com/munki/mwa2) instead.
