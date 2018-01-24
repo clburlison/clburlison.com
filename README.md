@@ -2,11 +2,7 @@
 ===
 
 
-[![CircleCI](https://circleci.com/gh/clburlison/clburlison.com.svg?style=svg)](https://circleci.com/gh/clburlison/clburlison.com)  - This CircleCI job builds this website on each `git push`.
-
-[![Waffle.io](https://badge.waffle.io/clburlison/clburlison.com.svg?label=ready&title=Ready)](http://waffle.io/clburlison/clburlison.com) - this tag is reserved for content I am planning on writing about soon™.
-
-[![Waffle.io](https://badge.waffle.io/clburlison/clburlison.com.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/clburlison/clburlison.com) - this tag is reserved for content ideas I'm working on right now.
+[![CircleCI](https://circleci.com/gh/clburlison/clburlison.com.svg?style=svg)](https://circleci.com/gh/clburlison/clburlison.com) [![Waffle.io - Columns and their card count](https://badge.waffle.io/clburlison/clburlison.com.svg?columns=all)](https://waffle.io/clburlison/clburlison.com)
 
 # Site info
 This repo contains my personal website, [clburlison.com](https://clburlison.com).
@@ -17,7 +13,7 @@ More information about this site can be found [here](https://clburlison.com/abou
 
 	The MIT License (MIT)
 
-	Copyright (c) 2014 - 2017 Clayton Burlison
+	Copyright (c) 2014 - 2018 Clayton Burlison
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
