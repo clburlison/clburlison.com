@@ -1,6 +1,9 @@
 ---
 title: Talks
 modified: 07-20-2016
+showPagination: false
+showSocial: false
+showDate: false
 ---
 
 ### Bug Reporting Best Practices

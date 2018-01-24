@@ -3,6 +3,9 @@ title: Site Information
 modified: "05-18-2016"
 aliases:
 - /about/site-info/
+showPagination: false
+showSocial: false
+showDate: false
 ---
 
 Odds are if you have ended up on this site you found something interesting or helpful. The following information gives insight on the tools and technologies used on this site.
