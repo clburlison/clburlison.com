@@ -3,9 +3,12 @@ title: "License"
 modified: 2017-01-09
 aliases:
 - /docs/license/
+comments:       false
+showMeta:       false
+showActions:    false
 showPagination: false
-showSocial: false
-showDate: false
+showSocial:     false
+showDate:       false
 ---
 
 The MIT License (MIT)

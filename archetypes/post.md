@@ -2,8 +2,7 @@
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 categories:
-- category
-- subcategory
+- tech
 tags:
 - tag1
 - tag2

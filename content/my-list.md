@@ -3,9 +3,12 @@ title: My List
 modified: "10-18-2016"
 aliases:
 - /about/my-list/
+comments:       false
+showMeta:       false
+showActions:    false
 showPagination: false
-showSocial: false
-showDate: false
+showSocial:     false
+showDate:       false
 ---
 
 <!-- toc -->

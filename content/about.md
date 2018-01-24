@@ -1,9 +1,12 @@
 ---
 title: About
 modified: "01-23-2018"
+comments:       false
+showMeta:       false
+showActions:    false
 showPagination: false
-showSocial: false
-showDate: false
+showSocial:     false
+showDate:       false
 ---
 
 ![Clayton](/images/me.jpg)

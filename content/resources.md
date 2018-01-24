@@ -1,9 +1,12 @@
 ---
 title: Resources
 modified: 05-13-2016
+comments:       false
+showMeta:       false
+showActions:    false
 showPagination: false
-showSocial: false
-showDate: false
+showSocial:     false
+showDate:       false
 ---
 
 _This section highlights useful/popular posts from this domain._
