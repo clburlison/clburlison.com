@@ -18,15 +18,14 @@ toc: true
 
 Display useful information on your Desktop using Geektool. Make troubleshooting network issues for your end users easier. Find your hostname faster. The amount of useful information is limitless. If you can script it...you can display it.  
 
-{{< img src="/images/2014-07-14/current_info.png" title="My geektools results." >}}
+{{< image classes="fancybox center clear" src="/images/2014-07-14/current_info.png" title="My geektools results." >}}
 
 ---
 
 # Introduction
 Firstly, I take no credit for this valuable resource. All credit should go to Erik Gomez from the munki-dev [mailing list](https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY). All I have done is modified the script to work in my environment. Modifications included removing some excess ``if``/ ``then`` statements, remove the MAC address, adding current SSID, and a few other tweaks so the script played nicely as a profile. The writing is on the wall, mcx is slowing dying or at least it is becoming a less preferred method of managing preferences.
 
-{{< img src="/images/2014-07-14/eriks_info.png" title="Erik's original geektools results." >}}
-
+{{< image classes="fancybox center clear" src="/images/2014-07-14/eriks_info.png" title="Erik's original geektools results." >}}
 
 **Requirements** *-You will want to download and save these somewhere.*
 

@@ -69,8 +69,7 @@ At this point if you wish to add the stationary to your favorites just drag it u
 
 Zendesk has a great article on [Updating Ticket Properties from You Inbox](https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox) that gives an overview of what the mail API does and how it works. This post will extend on the API to help automate the process. We are going to use an Automator service to type all of the metadata fields. It should be noted that this process will work in Outlook and Apple Mail for macOS. An example of the output can be seen below:
 
-{{< img src="/images/2017-01-18/mail_api_example_2.png" alt="Example api metadata" title="Example metadata for the email API. Image credit Zendesk." >}}
-
+{{< image classes="fancybox center clear" src="/images/2017-01-18/mail_api_example_2.png" title="Example metadata for the email API. Image credit Zendesk." >}}
 
 
 1. You can download a template service from [github.com/clburlison/automator_services](https://github.com/clburlison/automator_services/archive/master.zip).
