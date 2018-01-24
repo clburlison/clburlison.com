@@ -2,11 +2,11 @@
 ===
 
 
-[![CircleCI](https://circleci.com/gh/clburlison/clburlison.github.io.svg?style=svg)](https://circleci.com/gh/clburlison/clburlison.github.io)  - This CircleCI job builds this website on each `git push`.
+[![CircleCI](https://circleci.com/gh/clburlison/clburlison.com.svg?style=svg)](https://circleci.com/gh/clburlison/clburlison.com)  - This CircleCI job builds this website on each `git push`.
 
-[![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=ready&title=Ready)](http://waffle.io/clburlison/clburlison.github.io) - this tag is reserved for content I am planning on writing about soon™.
+[![Waffle.io](https://badge.waffle.io/clburlison/clburlison.com.svg?label=ready&title=Ready)](http://waffle.io/clburlison/clburlison.com) - this tag is reserved for content I am planning on writing about soon™.
 
-[![Waffle.io](https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/clburlison/clburlison.github.io) - this tag is reserved for content ideas I'm working on right now.
+[![Waffle.io](https://badge.waffle.io/clburlison/clburlison.com.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/clburlison/clburlison.com) - this tag is reserved for content ideas I'm working on right now.
 
 # Site info
 This repo contains my personal website, [clburlison.com](https://clburlison.com).
