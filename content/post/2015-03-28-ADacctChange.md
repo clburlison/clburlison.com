@@ -5,13 +5,10 @@ date: 2015-03-28T00:00:00Z
 excerpt: Change the account name of Cached User Accounts in an Active Directory environment
   on OS X.
 modified: 2015-04-24
-aliases:
-- ADacctChange
 tags:
 - active-directory
 - bash
 title: AD Account Change
-url: "adacctchange/"
 ---
 
 <!-- toc -->

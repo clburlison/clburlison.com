@@ -2,7 +2,8 @@ defaults: &defaults
   working_directory: /tmp/clburlison.com
   environment:
     - SOURCE_DIR: /tmp/clburlison.com/public
-    - S3_BUCKET: s3://clburlison.com
+    - S3_BUCKET: clburlison.com
+    - S3_REGION: us-east-1
 
 
 version: 2
@@ -10,7 +11,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: jguyomard/hugo-builder:0.31
+      - image: jguyomard/hugo-builder:0.33
     steps:
       - checkout
       - run:
@@ -19,21 +20,25 @@ jobs:
       - run:
           name: Compile site
           command: /usr/local/bin/hugo --destination "$SOURCE_DIR"
+      - run:
+          name: Persist .s3deploy.yml for upload
+          command: cp .circleci/.s3deploy.yml /tmp/clburlison.com/
       - persist_to_workspace:
           root: /tmp/clburlison.com
           paths:
             - public
+            - .s3deploy.yml
 
   upload:
     <<: *defaults
     docker:
-      - image: xueshanf/awscli
+      - image: clburlison/s3deploy
     steps:
       - attach_workspace:
           at: /tmp/clburlison.com
       - run:
           name: Upload to s3
-          command: aws s3 sync "$SOURCE_DIR" "$S3_BUCKET" --delete
+          command: /usr/local/bin/s3deploy -source="$SOURCE_DIR" -region="$S3_REGION" -bucket="$S3_BUCKET"
 
 
 workflows:

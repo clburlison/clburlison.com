@@ -21,13 +21,17 @@ resource "aws_iam_user_policy" "circleci" {
   "Statement": [
     {
       "Effect": "Allow",
-      "Action": ["s3:ListBucket"],
+      "Action": [
+          "s3:ListBucket",
+          "s3:GetBucketLocation"
+      ],
       "Resource": ["arn:aws:s3:::${var.s3_bucket_name}"]
     },
     {
       "Effect": "Allow",
       "Action": [
         "s3:PutObject",
+        "s3:PutObjectAcl",
         "s3:GetObject",
         "s3:DeleteObject"
       ],
@@ -192,96 +196,6 @@ resource "aws_cloudfront_distribution" "website_distribution" {
     min_ttl                = 120                 # 2min
     default_ttl            = 120                 # 2min
     max_ttl                = 300                 # 5min
-  }
-
-  # Terraform doesn't follow order for cache_behavior 
-  # so you might have to reorder this after applying.
-  cache_behavior {
-    path_pattern     = "*.js"
-    target_origin_id = "myS3Origin"
-    allowed_methods  = ["GET", "HEAD"]
-    cached_methods   = ["GET", "HEAD"]
-    compress         = true
-    smooth_streaming = false
-
-    forwarded_values {
-      query_string = false
-
-      cookies {
-        forward = "none"
-      }
-    }
-
-    viewer_protocol_policy = "redirect-to-https"
-    min_ttl                = 1800                # 30min
-    default_ttl            = 86400               # 24hrs
-    max_ttl                = 259200              # 72hrs
-  }
-
-  cache_behavior {
-    path_pattern     = "*.jpg"
-    target_origin_id = "myS3Origin"
-    allowed_methods  = ["GET", "HEAD"]
-    cached_methods   = ["GET", "HEAD"]
-    compress         = true
-    smooth_streaming = false
-
-    forwarded_values {
-      query_string = false
-
-      cookies {
-        forward = "none"
-      }
-    }
-
-    viewer_protocol_policy = "redirect-to-https"
-    min_ttl                = 1800                # 30min
-    default_ttl            = 86400               # 24hrs
-    max_ttl                = 259200              # 72hrs
-  }
-
-  cache_behavior {
-    path_pattern     = "*.jpeg"
-    target_origin_id = "myS3Origin"
-    allowed_methods  = ["GET", "HEAD"]
-    cached_methods   = ["GET", "HEAD"]
-    compress         = true
-    smooth_streaming = false
-
-    forwarded_values {
-      query_string = false
-
-      cookies {
-        forward = "none"
-      }
-    }
-
-    viewer_protocol_policy = "redirect-to-https"
-    min_ttl                = 1800                # 30min
-    default_ttl            = 86400               # 24hrs
-    max_ttl                = 259200              # 72hrs
-  }
-
-  cache_behavior {
-    path_pattern     = "*.png"
-    target_origin_id = "myS3Origin"
-    allowed_methods  = ["GET", "HEAD"]
-    cached_methods   = ["GET", "HEAD"]
-    compress         = true
-    smooth_streaming = false
-
-    forwarded_values {
-      query_string = false
-
-      cookies {
-        forward = "none"
-      }
-    }
-
-    viewer_protocol_policy = "redirect-to-https"
-    min_ttl                = 1800                # 30min
-    default_ttl            = 86400               # 24hrs
-    max_ttl                = 259200              # 72hrs
   }
 
   viewer_certificate {
