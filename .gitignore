@@ -18,5 +18,5 @@ public
 hugo_cache
 
 # CI
-.terraform/.terraform
+*.terraform*
 *.tfstate*

@@ -61,7 +61,8 @@ EOF
 # START: For PrettyURLS
 resource "aws_s3_bucket_policy" "s3_bucket_policy" {
   bucket = "${var.s3_bucket_name}"
-  policy =<<POLICY
+
+  policy = <<POLICY
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -81,6 +82,7 @@ resource "aws_s3_bucket_policy" "s3_bucket_policy" {
 }
 POLICY
 }
+
 # END: For PrettyURLS
 
 # START: For UglyURLS
@@ -126,16 +128,19 @@ resource "aws_cloudfront_distribution" "website_distribution" {
     # START: For PrettyURLS
     domain_name = "${var.s3_bucket_name}.s3-website-${var.region}.amazonaws.com"
     origin_id   = "myS3Origin"
+
     custom_origin_config {
       origin_protocol_policy = "http-only"
       http_port              = "80"
       https_port             = "443"
       origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
     }
+
     custom_header {
       name  = "User-Agent"
       value = "${var.content-secret}"
     }
+
     # END: For PrettyURLS
 
     # START: For UglyURLS
@@ -184,13 +189,35 @@ resource "aws_cloudfront_distribution" "website_distribution" {
     }
 
     viewer_protocol_policy = "redirect-to-https"
-    min_ttl                = 1800
-    default_ttl            = 3600
-    max_ttl                = 14400
+    min_ttl                = 120                 # 2min
+    default_ttl            = 120                 # 2min
+    max_ttl                = 300                 # 5min
   }
 
   # Terraform doesn't follow order for cache_behavior 
   # so you might have to reorder this after applying.
+  cache_behavior {
+    path_pattern     = "*.js"
+    target_origin_id = "myS3Origin"
+    allowed_methods  = ["GET", "HEAD"]
+    cached_methods   = ["GET", "HEAD"]
+    compress         = true
+    smooth_streaming = false
+
+    forwarded_values {
+      query_string = false
+
+      cookies {
+        forward = "none"
+      }
+    }
+
+    viewer_protocol_policy = "redirect-to-https"
+    min_ttl                = 1800                # 30min
+    default_ttl            = 86400               # 24hrs
+    max_ttl                = 259200              # 72hrs
+  }
+
   cache_behavior {
     path_pattern     = "*.jpg"
     target_origin_id = "myS3Origin"
@@ -208,9 +235,31 @@ resource "aws_cloudfront_distribution" "website_distribution" {
     }
 
     viewer_protocol_policy = "redirect-to-https"
-    min_ttl                = 3600
-    default_ttl            = 86400
-    max_ttl                = 259200
+    min_ttl                = 1800                # 30min
+    default_ttl            = 86400               # 24hrs
+    max_ttl                = 259200              # 72hrs
+  }
+
+  cache_behavior {
+    path_pattern     = "*.jpeg"
+    target_origin_id = "myS3Origin"
+    allowed_methods  = ["GET", "HEAD"]
+    cached_methods   = ["GET", "HEAD"]
+    compress         = true
+    smooth_streaming = false
+
+    forwarded_values {
+      query_string = false
+
+      cookies {
+        forward = "none"
+      }
+    }
+
+    viewer_protocol_policy = "redirect-to-https"
+    min_ttl                = 1800                # 30min
+    default_ttl            = 86400               # 24hrs
+    max_ttl                = 259200              # 72hrs
   }
 
   cache_behavior {
@@ -230,9 +279,9 @@ resource "aws_cloudfront_distribution" "website_distribution" {
     }
 
     viewer_protocol_policy = "redirect-to-https"
-    min_ttl                = 3600
-    default_ttl            = 86400
-    max_ttl                = 259200
+    min_ttl                = 1800                # 30min
+    default_ttl            = 86400               # 24hrs
+    max_ttl                = 259200              # 72hrs
   }
 
   viewer_certificate {
