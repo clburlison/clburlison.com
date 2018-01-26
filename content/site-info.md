@@ -1,6 +1,6 @@
 ---
 title: Site Information
-modified: "05-18-2016"
+modified: "01-26-2018"
 aliases:
 - /about/site-info/
 comments:       false
@@ -11,9 +11,11 @@ showSocial:     false
 showDate:       false
 ---
 
-Odds are if you have ended up on this site you found something interesting or helpful. The following information gives insight on the tools and technologies used on this site.
+Odds are if you have ended up on this site you found something interesting
+or helpful. The following information gives insight on the tools and
+technologies used on this site.
 
-## Nerd facts
+# Nerd facts
 
 <article>
 
@@ -26,30 +28,29 @@ Odds are if you have ended up on this site you found something interesting or he
   <p>If you are not familiar with markdown it allows me to write plain text in such a way that an engine will be able to transform that text into a rich format like html. All this means I can write using any text editor I want (even vim if I so please) and create content without having to write all those dirty html tags. How many times have you forgotten to add that forward slash on a end tag resulting in a malformed page? </p>
 </details>
 <details>
-  <summary>Hosting for this website is by <u><a target="_blank" href="https://pages.github.com/">Github Pages</a></u>.</summary>
-  <p>Github pages makes hosting a website easy. If Jekyll is my bread, Github Pages is my butter. Hosting a website via Apache, Nginx, or IIS isn't rocket science however by using Github my raw code and static html are right next to each other. As you can imagine this makes things easier to troubleshoot. </p>
+  <summary>Hosting for this website is by <u><a target="_blank" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">AWS S3</a></u>.</summary>
+  <p>AWS S3 allows me to dumb a bunch of files into a bucket and easily share the static website. Github pages makes hosting a website easy. Hosting a website via Apache, Nginx, or IIS isn't rocket science however by using AWS it's dirt cheap and no server cost. </p>
 </details>
 <details>
-  <summary>Site code can be found in the follow repo <u><a target="_blank" href="https://github.com/clburlison/clburlison.github.io">clburlison.github.io</a></u>.</summary>
+  <summary>Site code can be found in the follow repo <u><a target="_blank" href="https://github.com/clburlison/clburlison.com">clburlison.com</a></u>.</summary>
   <p>I <3 Github. Git is such a nice version control system to work with. All content is publicly accessible for two reasons: 1) I want others to be able to see how this site was created. 2) Sharing this code means if you find something you like you are able to copy/paste working code. With that said please don't blatantly steal written work of mine without crediting me. </p>
 </details>
 <details>
-  <summary>Content delivery network provided by <u><a target="_blank" href="http://www.cloudflare.com">CloudFlare</a></u>.</summary>
-  <p>Cloudflare is much more than just my Content deliver network (CDN). Cloudflare also runs my DNS for the domain clburlison.com, has the ability to directly inject code into my website, gives me a flexible SSL for free, and has some nice built in reporting features. Of those the SSL certificate is likely the coolest. Though I do not have a true SSL setup, content that you view is secure from your end to Cloudflare's servers.</p>
+  <summary>Content delivery network provided by <u><a target="_blank" href="https://aws.amazon.com/cloudfront/">CloudFront</a></u>.</summary>
+  <p>CloudFront connects into the rest of the AWS ecosystem really easily. This keeps the cost of this website down since everyone will hit the cached content instead of the S3 bucket directly, which also helps with scale. It also means you get a nice and fast response time. </p>
 </details>
 <details>
-  <summary>Content ideas are tracked via <u><a target="_blank" href="https://github.com/clburlison/clburlison.github.io/issues">Github Issues</a></u> and <u><a target="_blank" href="https://waffle.io/clburlison/clburlison.github.io">Waffle.io</a></u>.</summary>
-  <p><a href="http://waffle.io/clburlison/clburlison.github.io"><img src="https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=ready&title=Ready" alt="Ready"></a>
-    <a href="http://waffle.io/clburlison/clburlison.github.io"><img src="https://badge.waffle.io/clburlison/clburlison.github.io.svg?label=in%20progress&title=In%20Progress" alt="In Progress"></a><br>
+  <summary>Content ideas are tracked via <u><a target="_blank" href="https://github.com/clburlison/clburlison.com/issues">Github Issues</a></u> and <u><a target="_blank" href="https://waffle.io/clburlison/clburlison.com">Waffle.io</a></u>.</summary>
+    <p><a href="https://waffle.io/clburlison/clburlison.com"><img src="https://badge.waffle.io/clburlison/clburlison.com.svg?columns=all" alt="Waffle.io status badge"></a><br>
     At any given time I might have 20 plus ideas or topics that I wish to write about. To keep track of these various ideas I create a Github issue. This allows me to add links or any notes that might be needed for me to understand what I wanted to write about. That means some of my issues might not make sense to you. Waffle.io just gives me a visual to keep me working on one or two topics at a time. The "Ready" tag is for content I am planning on writing about soon. The "In Progress" tag is for content ideas I'm working on right now.<br><br> With that said if you ever have any questions or would like for me to write about a specific topic feel free to create an issue and I will certainly think about it.  </p>
 </details>
 <details>
-  <summary>The theme for this website was created by <u><a target="_blank" href="https://github.com/enten/">Steven Enten</a></u>.</summary>
-  <p>The theme <a target="_blank" href="https://github.com/enten/hyde-y">hyde-y</a> is an enhanced port of the Jekyll "Hyde" theme.</p>
+  <summary>The theme for this website was created by <u><a target="_blank" href="https://github.com/kakawait">Thibaud Lepretre</a></u>.</summary>
+  <p>The theme <a target="_blank" href="https://github.com/kakawait/hugo-tranquilpeak-theme/">tranquilpeak</a> is a gorgeous responsive theme for Hugo blog framework.</p>
 </details>
 <details>
-  <summary>CircleCI builds my website <u><a target="_blank" href="https://circleci.com/gh/clburlison/clburlison.github.io">Build History</a></u>.</summary>
-  <p><a href="https://circleci.com/gh/clburlison/clburlison.github.io"><img src="https://circleci.com/gh/clburlison/clburlison.github.io.svg?style=svg" alt="Build Status"></a> <br>
+  <summary>CircleCI builds my website <u><a target="_blank" href="https://circleci.com/gh/clburlison/clburlison.com">Build History</a></u>.</summary>
+  <p><a href="https://circleci.com/gh/clburlison/clburlison.com"><img src="https://circleci.com/gh/clburlison/clburlison.com.svg?style=svg" alt="Build Status"></a> <br>
     CircleCI is a continuous integration application that pulls the contents of my Github repo on every commit I submit to the source branch. The purpose of using CircleCI to build my Hugo site is so I no longer have to manually manage any of the master branch, which is where all of the html files are stored. Other benefits to using CircleCI include the ability to have a running record of all my builds. This allows me to know at any given point in time when I broke something. In the past this site used Travis CI however CircleCI is way faster.</p>
 </details>
 <details>
