@@ -21,7 +21,7 @@ development process of a project.
 The best aspect to this is how simple it really is.
 
 ```bash
-docker run -it --rm -v "$(shell pwd)":/usr/local/src/your-app \
+docker run -it --rm -v "$(pwd)":/usr/local/src/your-app \
     clburlison/github-changelog-generator \
     -u clburlison -p pinpoint \
     -t ${CHANGELOG_GITHUB_TOKEN}
