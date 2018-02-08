@@ -71,11 +71,14 @@ above?
     | PublicSeed      | http://swscan.apple.com/content/catalogs/others/index-10.13beta-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog |
     | CustomerSeed | http://swscan.apple.com/content/catalogs/others/index-10.13customerseed-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog |
 
-{{% alert info %}}
-Tip: SUS Inspector is an alpha release. When you copy/paste the Name and URL hit "enter" on the keyboard after each item is added. Once all three feeds have been added click "save".
-{{% /alert %}}
 
-1. Let SUS Inspector sync the catalogs [^2].
+    {{% alert info %}}
+    Tip: SUS Inspector is an alpha release. When you copy/paste
+    the Name and URL hit "enter" on the keyboard after each item is added.
+    Once all three feeds have been added click "save".
+    {{% /alert %}}
+
+1. Let SUS Inspector sync the catalogs.
     {{< image classes="fancybox center clear" src="/images/2018-02-07/sus02.png" title="SUS Inspector syncing catalogs" >}}
 1. Use the CustomerSeed or PublicSeed to find the latest 10.13.X combo update beta.
 1. Right click the item, select "Get Info", change to packages tab, download all of them.
@@ -115,7 +118,6 @@ not allow us to validate changes until Apple releases full point releases,
 which often is too late.
 
 [^1]: Close SUS Inspector and delete the following directory `~/Library/Application Support/SUS Inspector/SUS_Inspector.storedata` see the following link for [more info][SUS Reset]
-[^2]: Yes I realize my ordered list is now screwed up at this point thanks to mardown/rendering/theme/etc. If you have a fix PR accepted.
 
 <!-- Links -->
 [apple_10.13.4b2]: https://www.macrumors.com/2018/02/06/apple-seeds-macos-high-sierra-10-13-4-beta-2/
