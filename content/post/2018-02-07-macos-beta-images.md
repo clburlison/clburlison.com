@@ -43,7 +43,7 @@ onto the root drive running 10.13 so it is highly recommended you do not use
 your primary machine unless it is already on the beta track. Remember "hacky"
 above?
 
-1. Use autodmg with a 10.13.x installer to create a .dmg.
+1. Use autodmg with a 10.13.x installer to create a dmg.
     {{< image classes="fancybox center clear" src="/images/2018-02-07/autodmg.gif" title="Using Autodmg" >}}
 1. Mount the 10.13.X ouput dmg with.
     ```bash
@@ -59,7 +59,12 @@ above?
     /dev/disk4s1        	EFI                            	
     /dev/disk4s2        	Apple_APFS    
     ```
-    Remember **your** disk number. IE - `/dev/disk5` from the above output
+
+    {{% alert info %}}
+    Note your disk number: '/dev/disk5' from the above output  
+    Note your mount path: '/Volumes/Macintosh HD 1' from the above output
+    {{% /alert %}}
+
 1. Launch SUS Inspector.
 1. If this is your first time using SUS Inspector you will be asked if you want to add custom catalogs which we do. If you have already configured SUS and didn't add these seed catalogs see [^1].
     {{< image classes="fancybox center clear" src="/images/2018-02-07/sus01.png" title="Adding custom catalogs" >}}
@@ -89,7 +94,6 @@ above?
     ```bash
     sed -i '' 's/return false/return true/g' /path/to/091-65991.English.dist
     ```
-1. Use the path to the `091-65991.English.dist` file in the following command.
 1. Use an undocumented option to install from the dist file directly to the shadow mounted dmg. Make sure to change the Volumes path if it is named differently.
 
     ```bash
@@ -99,11 +103,11 @@ above?
     ```bash
     hdiutil detach /dev/disk<number_from_step2>
     ```
-1. Convert the shadow path mounted dmg to compressed dmg.
+1. Convert the shadow dmg to compressed dmg.
     ```bash
     hdiutil convert -format UDZO -o 10.13.4b2.dmg /path/to/10.13.3.dmg -shadow
     ```
-1. Now you will want to delete shadow file manually. It will be next to your 10.13.3.dmg with .shadow extension.
+1. Now you will want to delete shadow file manually. It will be next to your 10.13.3.dmg with `.shadow` extension.
 
 This dmg can now be used in [vfuse], imaging, etc. for DEP testing.
 
