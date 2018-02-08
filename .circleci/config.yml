@@ -4,6 +4,7 @@ defaults: &defaults
     - SOURCE_DIR: /tmp/clburlison.com/public
     - S3_BUCKET: clburlison.com
     - S3_REGION: us-east-1
+    - DEV_URL: http://dev.clburlison.com
 
 
 version: 2
@@ -19,7 +20,13 @@ jobs:
           command: git submodule sync && git submodule update --init
       - run:
           name: Compile site
-          command: /usr/local/bin/hugo --destination "$SOURCE_DIR"
+          command: |
+            if [ $CIRCLE_BRANCH = 'source' ]; then
+                /usr/local/bin/hugo --destination "$SOURCE_DIR"
+            fi
+            if [ $CIRCLE_BRANCH = 'dev' ]; then
+                /usr/local/bin/hugo --destination "$SOURCE_DIR" --baseURL $DEV_URL
+            fi
       - run:
           name: Persist .s3deploy.yml for upload
           command: cp .circleci/.s3deploy.yml /tmp/clburlison.com/
@@ -29,10 +36,26 @@ jobs:
             - public
             - .s3deploy.yml
 
-  upload:
+  upload-prod:
     <<: *defaults
     docker:
       - image: clburlison/s3deploy
+    steps:
+      - attach_workspace:
+          at: /tmp/clburlison.com
+      - run:
+          name: Upload to s3
+          command: /usr/local/bin/s3deploy -source="$SOURCE_DIR" -region="$S3_REGION" -bucket="$S3_BUCKET"
+
+  upload-dev:
+    <<: *defaults
+    docker:
+      - image: clburlison/s3deploy
+    # CircleCI doesn't do composition from default env vars with this override properly
+    environment:
+      - SOURCE_DIR: /tmp/clburlison.com/public
+      - S3_BUCKET: dev.clburlison.com
+      - S3_REGION: us-east-1
     steps:
       - attach_workspace:
           at: /tmp/clburlison.com
@@ -46,6 +69,15 @@ workflows:
   build-and-upload:
     jobs:
       - build
-      - upload:
+      - upload-prod:
           requires:
             - build
+          filters:
+            branches:
+              only: source
+      - upload-dev:
+          requires:
+            - build
+          filters:
+            branches:
+              only: dev
