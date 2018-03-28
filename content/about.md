@@ -11,7 +11,7 @@ showDate:       false
 
 {{< image classes="fancybox center clear" src="/images/me.jpg" >}}
 
-👋 I'm Clayton Burlison. Currently, I am a Mac System Engineer for AppDynamics.
+👋 I'm Clayton Burlison.
 
 It looks like you stumbled across my blog so hopefully you can find
 something helpful. If you want to reach out please message me via email,
