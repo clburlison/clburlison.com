@@ -4,7 +4,6 @@ defaults: &defaults
     - SOURCE_DIR: /tmp/clburlison.com/public
     - S3_BUCKET: clburlison.com
     - S3_REGION: us-east-1
-    - DEV_URL: http://dev.clburlison.com
 
 
 version: 2
@@ -12,7 +11,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: jguyomard/hugo-builder:0.33
+      - image: jguyomard/hugo-builder:0.37
     steps:
       - checkout
       - run:
@@ -25,7 +24,7 @@ jobs:
                 /usr/local/bin/hugo --destination "$SOURCE_DIR"
             fi
             if [ $CIRCLE_BRANCH = 'dev' ]; then
-                /usr/local/bin/hugo --destination "$SOURCE_DIR" --baseURL $DEV_URL
+                /usr/local/bin/hugo --destination "$SOURCE_DIR" --config config.toml,config-dev.toml
             fi
       - run:
           name: Persist .s3deploy.yml for upload
