@@ -11,7 +11,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: jguyomard/hugo-builder:0.37
+      - image: jguyomard/hugo-builder:0.41
     steps:
       - checkout
       - run:
