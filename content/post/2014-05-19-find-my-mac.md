@@ -47,7 +47,7 @@ $ nvram -d fmm-mobileme-token-FMM
 ```
 
 ## Consumers
-This means if you ever purchase a second hand Mac from someone you will want to run the same command just for safty. Also, if you are attempting to sell your device be a good consumer and run the command for the next owner.
+This means if you ever purchase a second hand Mac from someone you will want to run the same command just for safety. Also, if you are attempting to sell your device be a good consumer and run the command for the next owner.
 
 If you are not familiar with the command line use the following:
 
