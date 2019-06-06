@@ -1,8 +1,7 @@
 [Personal Website for Clayton Burlison](https://clburlison.com)
 ===
 
-
-[![CircleCI](https://circleci.com/gh/clburlison/clburlison.com.svg?style=svg)](https://circleci.com/gh/clburlison/clburlison.com) [![Waffle.io - Columns and their card count](https://badge.waffle.io/clburlison/clburlison.com.svg?columns=all)](https://waffle.io/clburlison/clburlison.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bcfca6c4-0b3b-4a7c-8a18-11d15ee37c6e/deploy-status)](https://app.netlify.com/sites/nifty-jang-49dbb0/deploys)
 
 # Site info
 This repo contains my personal website, [clburlison.com](https://clburlison.com).
