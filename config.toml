@@ -3,8 +3,6 @@ languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "clburlison"
 theme = "tranquilpeak"
-disqusShortname = "clburlison"
-googleAnalytics = "UA-49614309-2"
 paginate = 7
 canonifyurls = true
 
@@ -20,7 +18,7 @@ canonifyurls = true
 [author]
   name = "Clayton Burlison"
   bio = "Just another nerd writing and documenting things he finds interesting."
-  job = "Mac System Engineer"
+  job = "Manager in Tech"
   location = "Texas, USA"
   gravatarEmail = "clburlison@gmail.com"
   twitter = "clburlison"

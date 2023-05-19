@@ -20,3 +20,4 @@ hugo_cache
 # CI
 *.terraform*
 *.tfstate*
+.hugo_build.lock
