@@ -1,0 +1,10 @@
+Sitemap: https://clburlison.com/sitemap.xml
+
+User-agent: *
+Disallow: /archives/
+Disallow: /categories/
+Disallow: /docs/
+
+User-agent: Swiftbot
+Disallow: /archives/
+Disallow: /categories/

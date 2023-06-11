@@ -1,0 +1,14 @@
+<!-- https://github.com/spf13/hugo/blob/c2bf748ec5ca662384953ec3fe4345218afb71b1/docs/layouts/_default/baseof.html#L2-L11 -->
+{{ if .Params.toc }}
+<nav class="toc">
+<input id="ac-toc" name="accordion-toc" type="checkbox">
+<label for="ac-toc">Table of Contents</label>
+<div id="toc" class="toc__menu">
+{{ .TableOfContents }}
+</div>
+</input>
+</nav>
+
+{{ else }}
+{{block "main" .}}{{end}}
+{{ end }}
