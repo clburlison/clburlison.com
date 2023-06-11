@@ -1,22 +1,21 @@
 ---
 categories:
-- tech
+  - tech
 title: Preview files from terminal
 date: 2014-11-10T00:00:00Z
 excerpt: Preview files from Terminal.
-link: http://krypted.com/mac-security/qlmanage/
 aliases:
-- /blog/2014/11/10/preview-files-from-terminal/
+  - /blog/2014/11/10/preview-files-from-terminal/
 tags:
-- bash
-- macos
+  - bash
+  - macos
 ---
 
 > QuickLook scans file contents before you open those files. Usually this just lets you view a file quickly. But you can also use this same technology from the command line to bring about a change to the Finder without actually opening a file. To access QuickLook from the command line, use qlmanage.
 >
 > qlmanage -p ~/Desktop/MyTowel42.pdf
 >
-> ---Charles Edge
+> ---[Charles Edge](http://krypted.com/mac-security/qlmanage/)
 
 ---
 
@@ -28,4 +27,4 @@ Below is the command I use:
 ql () { qlmanage -p "$*" >& /dev/null; }
 ```
 
-Now you can preview a file from Terminal by using ``ql`` plus the path to a file.
+Now you can preview a file from Terminal by using `ql` plus the path to a file.

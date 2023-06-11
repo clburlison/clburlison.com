@@ -1,13 +1,12 @@
 ---
 categories:
-- tech
+  - tech
 date: 2014-08-12T00:00:00Z
-excerpt: 'More teaching, Less tech-ing: Google Classroom Launches Today.'
-link: http://googleenterprise.blogspot.com/2014/08/more-teaching-less-tech-ing-google.html
+excerpt: "More teaching, Less tech-ing: Google Classroom Launches Today."
 aliases:
-- /blog/2014/08/12/google-classroom/
+  - /blog/2014/08/12/google-classroom/
 tags:
-- google
+  - google
 title: Google Classroom
 ---
 
