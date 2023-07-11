@@ -1,0 +1,24 @@
+{
+  "_note": "https://mastodon.social/.well-known/webfinger?resource=acct:clburlison@mastodon.social",
+  "subject": "acct:clburlison@mastodon.social",
+  "aliases": [
+    "https://mastodon.social/@clburlison",
+    "https://mastodon.social/users/clburlison"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://mastodon.social/@clburlison"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://mastodon.social/users/clburlison"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://mastodon.social/authorize_interaction?uri={uri}"
+    }
+  ]
+}
