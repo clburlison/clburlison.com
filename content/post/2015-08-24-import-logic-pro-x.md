@@ -1,22 +1,21 @@
 ---
 categories:
-- tech
+  - tech
 date: 2015-08-24T00:00:00Z
 excerpt: Import Logic Pro X Audio Content packages into your Munki repo.
 modified: 2015-11-17
 tags:
-- munki
-- python
+  - munki
+  - python
 title: Import Logic Pro X Audio Content
 url: "import-logic-pro-x/"
 ---
 
-{{% alert info %}}
+{{< notice info >}}
 **Updated for Logic 10.2.0 - September 18th, 2015**
 
-This script has been updated to support Logic Pro 10.2.0. This release included many additional audio libraries for the added Alchemy Plugin. The updated script from Hannes will now download audio content to a "__Downloaded Items" directory and create hard links to Apple's categories.
-{{% /alert %}}
-
+This script has been updated to support Logic Pro 10.2.0. This release included many additional audio libraries for the added Alchemy Plugin. The updated script from Hannes will now download audio content to a "\_\_Downloaded Items" directory and create hard links to Apple's categories.
+{{< /notice >}}
 
 Today I needed to import 60 packages (37 GB) of audio content for Logic Pro X into my Munki repo. Hannes Juutilainen did most of the hard work with his [download-logicprox-content.py](https://github.com/hjuutilainen/adminscripts/blob/master/download-logicprox-content.py) script which will download all the packages from Apple.
 
@@ -46,7 +45,7 @@ The previous script by Hannes will download the audio packages into many sub-dir
 
 ```
 
-As such I needed to recursively search for the ``.pkg`` extension and import those files into Munki. The result is the following python script: [munkiimport_logic_audio.py](https://github.com/clburlison/scripts/tree/master/clburlison_scripts/LogicProX)
+As such I needed to recursively search for the `.pkg` extension and import those files into Munki. The result is the following python script: [munkiimport_logic_audio.py](https://github.com/clburlison/scripts/tree/master/clburlison_scripts/LogicProX)
 
 <div class="notice--danger">
 	<b>10.11 and Logic Audio Content -- November 17th, 2015</b>

@@ -1,12 +1,12 @@
 ---
 categories:
-- tech
+  - tech
 date: 2017-03-21T10:21:13-05:00
 draft: false
 modified: null
 tags:
-- chef
-- ubuntu
+  - chef
+  - ubuntu
 title: Chef Grocery Delivery Setup
 toc: false
 ---
@@ -21,10 +21,10 @@ So lets get started on setting up GD using a ubuntu 16.04 host that already has 
 
 In case it wasn't clear your chef server needs to already be setup, if not go to chef docs on [installing the server](https://docs.chef.io/install_server.html). Plus:
 
-* access to a user key
-* access to a validator key
-* ssh access to the chef server
-* your chef repo in source control
+- access to a user key
+- access to a validator key
+- ssh access to the chef server
+- your chef repo in source control
 
 # Setup
 
@@ -48,10 +48,9 @@ Install the GD gem into the chef server ruby path. The path is not a strict requ
 
 Create the config file for GD using the default path.
 
-{{% alert info %}}
+{{< notice info >}}
 NOTE: you will need to change the git `repo_url` and potentially the `cookbook_paths`, `role_path`, and `databag_path`.
-{{% /alert %}}
-
+{{< /notice >}}
 
     vi /etc/gd-config.rb
 
@@ -80,9 +79,9 @@ Create the knife config:
 
 Paste the following:
 
-{{% alert info %}}
+{{< notice info >}}
 NOTE: make sure and update the `node_name`, `client_key`, `validation_client_name`, and `chef_server_url` keys
-{{% /alert %}}
+{{< /notice >}}
 
     log_level               :info
     log_location            STDOUT
@@ -147,9 +146,9 @@ Now copy the `gd_deploy.pub` public key to your chef repo deploy key section. Fo
 
 https://github.com/USERNAME/example-chef-repo/settings/keys
 
-{{% alert info %}}
-NOTE: that this key should *not* have write access to the git repo.
-{{% /alert %}}
+{{< notice info >}}
+NOTE: that this key should _not_ have write access to the git repo.
+{{< /notice >}}
 
 Make a test connection to github to add the RSA fingerprint.
 
@@ -172,7 +171,6 @@ Great now if we did everything correctly the following command should add our co
 
     /opt/opscode/embedded/bin/grocery-delivery -vv
 
-
 If all works you'll likely want to run this script on a cron job without the verbose flag:
 
     vi /etc/cron.d/gd
@@ -188,7 +186,6 @@ Cron hates me so lets be safe and force a reload.
     /etc/init.d/cron reload
 
 If you are having cron issues add `&>> /tmp/gd.log` to the end of your command and reload to write debug info to a log file.
-
 
 # Bonus
 

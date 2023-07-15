@@ -2,9 +2,6 @@
 categories:
   - tech
 date: 2014-05-17T00:00:00Z
-description:
-  Use vagrant along with virtualbox to create a fully functional munki_repo
-  for testing on your localhost.
 keywords: munki, vagrant, development, testing, munki_repo,
 modified: 2014-05-18
 aliases:
@@ -16,9 +13,9 @@ url: "creating-a-development-munki-repo/"
 showtoc: true
 ---
 
-{{% alert danger %}}
+{{< notice warning >}}
 **Outdated:** These instructions are no longer current and are considered deprecated. This document remains for historical reasons only. Faster and easier methods exist for creating development environments.
-{{% /alert %}}
+{{< /notice >}}
 
 I created a vagrant box that allows you create a completely self contained munki_repo for testing purposes. With the usage of [PuPHPet](https://puphpet.com) the process was quite easy.
 

@@ -21,9 +21,9 @@ showtoc: true
 
 Why on earth are you creating another guide? Why not use Puppet or Docker? Well the short answer is I could not find anything that covered all the criteria that I needed. I might go back later and puppetize this or use docker but needed a working solution. Plus the first step to automating something is to document how to do it manually, so below is the process to get Reposado and Margarita with Authorization (optional) setup on a clean install of Ubuntu 14.04 using Apache. The only pre-requirement is having an administrator account on the Ubuntu box already setup.
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** I have added <a href="./#addendum-4-using-nginx">Addendum 4</a> if you would like to serve files using nginx instead of apache. In my testing, it has been much faster at serving html requests. Also, a little easier to setup the redirect rules.
-{{% /alert %}}
+{{< /notice >}}
 
 # The software
 
@@ -93,9 +93,9 @@ Base URL for your local Software Update Service
 
 ```
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** The repo_sync command will download Apple catalogs + updates (if enabled). Grab a coffee, this could be upwards of 170GB. Time obviously depends on connection speed.
-{{% /alert %}}
+{{< /notice >}}
 
 You now have Reposado fully installed and configured! Now we need to serve those files over http so clients can do something with the downloads.
 
@@ -369,9 +369,9 @@ Lastly, restart apache for the changes to take place.
 
 Nginx offers a few benefits over using apache, with the key benefit being lighter. This results in faster transfers from the web server to clients. With that said, Nginx does not offer as wide of a selection of modules as Apache. For that reason, I am currently running Margarita over apache while serving reposado (Apple client updates) via nginx.
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** This section should be used in replace of using the <code>/etc/apache2/sites-enabled/reposado.conf</code> file not in addition. Bad things will happen if you try to share the reposado downloaded updates via both apache and nginx.
-{{% /alert %}}
+{{< /notice >}}
 
 Firstly, we must install nginx on our server so we can use it.
 

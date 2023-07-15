@@ -15,7 +15,7 @@ showtoc: false
 
 👋 I'm Clayton Burlison.
 
-This is my blog of random information. Normally I write about Technology or Apple related information. While I am not super active on social media you can find me as _clburlison_ on most sites.
+You stumbled on my website, where I write about interesting software, document workflows, share experiences, or anything else I feel like sharing. Generally speaking, I write about Technology related topics. You can find me on most sites under the handle _clburlison_, though I'm less active nowadays.
 
 {{< custom_social_icons >}}
 

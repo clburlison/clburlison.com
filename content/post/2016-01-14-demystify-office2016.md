@@ -25,9 +25,9 @@ Before we can get too far into this post it needs to be noted that none of this 
 
 And so you don't think I'm making up facts I will be supplying quotes from Microsoft's pbowden on almost everything. You will need to join our MacAdmins Slack group if you wish to view the source. Sign up page is [http://macadmins.org](http://macadmins.org).
 
-{{% alert info %}}
+{{< notice info >}}
 **Video Presentation:** Paul Bowden gave a presentation, 2016.01.20, at the University of Utah's Mac Managers meeting which can be viewed [here](https://stream.lib.utah.edu/index.php?c=details&id=11705). It covers many of the topics from this post in video form.
-{{% /alert %}}
+{{< /notice >}}
 
 ---
 
@@ -220,7 +220,7 @@ Technically speaking if you aren't using MAU, you really need to look into [Auto
 
 ## AutoPkg
 
-{{% alert danger %}}
+{{< notice warning >}}
 <b>Unsupported!</b>
 
 <p>If you wish to utilize AutoPkg to install the individual applications IE - <code>MSWord2016.{download,install,munki,jss,etc.}</code>, <code>MSExcel2016.{etc}</code>, <code>MSPowerPoint2016.{etc}</code>. <code>MSOutlook2016.{etc}</code> or <code>MSOneNote2016.{etc}</code>, on <b><u>NEW</u></b> machines this is unsupported by Microsoft. These recipes correlate to the 'Combo' update packages (by default) and are not suitable for first time installation. The delta updates are also not suitable for first time installation.
@@ -228,7 +228,7 @@ Technically speaking if you aren't using MAU, you really need to look into [Auto
   This means your base installation should be one of the <a href="#how-do-i-install-o2016">supported options</a> above. Afterwards you can utilize AutoPkg to download the combo updates in place of MAU.
 <br><br>
   This is a common practice in the community that needs to stop. If you did this in the past to get Office 2016 on your computers simply changing to one of the supported solutions above will get your computers in compliance. I am unable to say for sure but it is very possible that if you did install using this unsupported method the 15.20 update in March might break your installation (purely a guess).</p>
-{{% /alert %}}
+{{< /notice >}}
 
 > As MAU is the recommended solution for updates, it was important to make that flow as seamless as possible. When you run custom install/update solutions you need to take care of those things yourself.
 >
@@ -366,8 +366,7 @@ Sorry, MAU is a very complex topic. I do not plan on utilizing it in my environm
 > Now, MAU verifies the hash across the CAT and XML, so you can’t tamper with the XML, or try to use your own server for PKGs, but you can at least prevent MAU from ‘seeing’ versions that you don’t support.
 >
 > The MAU configuration for this is as follows:
-> `defaults write com.microsoft.autoupdate2 ChannelName -string 'Custom'`
-> `defaults write com.microsoft.autoupdate2 ManifestServer -string 'https://yourwebserver/yourpath/'`
+> `defaults write com.microsoft.autoupdate2 ChannelName -string 'Custom'` > `defaults write com.microsoft.autoupdate2 ManifestServer -string 'https://yourwebserver/yourpath/'`
 >
 > NOTE: That MAU 3.3 will only work with HTTPS servers. In MAU 3.4 which is coming next month, I’ve relaxed this so you can also use HTTP.
 > Let me know if you have any questions or comments! When we get closer to end of this month, I’ll talk more about how channels work in MAU 3.4 and how to take advantage of them(edited)

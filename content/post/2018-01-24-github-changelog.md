@@ -2,20 +2,21 @@
 title: "Github Changelog"
 date: 2018-01-24T17:01:00-06:00
 categories:
-- tech
+  - tech
 tags:
-- github
-- docker
+  - github
+  - docker
 keywords:
-- tech
-- github
-- changelog
+  - tech
+  - github
+  - changelog
 ---
 
 I recently ran into a really awesome [ruby project][chlog_project] for
 creating Github Changelog files automatically. These files make it very easy
 for community members to quickly get up to speed and follow the
 development process of a project.
+
 <!--more-->
 
 The best aspect to this is how simple it really is.
@@ -32,7 +33,7 @@ can view a full sample in my [clburlison/pinpoint][pinpoint_chlog] repo. If you
 create tags, releases, milestones, and properly triage issues with labels the
 results will be very useful.
 
-{{< image classes="fancybox center clear" src="/images/2018-01-24/changelog_sample.png" title="Sample Changelog" >}}
+{{< figure src="/images/2018-01-24/changelog_sample.png" title="Sample Changelog" align=center >}}
 
 # Setup
 

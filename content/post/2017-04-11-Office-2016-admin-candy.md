@@ -45,9 +45,9 @@ Now MAU 3.9, released in April 2017, has added:
 
 ## Office Suite Delta Updates
 
-{{% alert info %}}
+{{< notice info >}}
 2017-04-12: An incorrect statement regarding the suite deltas has now been corrected.
-{{% /alert %}}
+{{< /notice >}}
 
 This one is my **absolute** favorite update as it means we now have another upgrade option (not sarcasm actually super cool). I have been a big fan of using the full SKULess installer package for both initial installs and updates on my fleet since my finds in January in 2016.
 

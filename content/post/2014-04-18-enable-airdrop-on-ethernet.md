@@ -1,14 +1,13 @@
 ---
 categories:
-- tech
+  - tech
 date: 2014-04-18T00:00:00Z
-description: Quick post over enabling AirDrop over Ethernet.
 keywords: AirDrop, Ethernet, cli, Terminal,
 modified: 2014-11-19
 aliases:
-- /blog/2014/04/18/enable-airdrop-on-ethernet/
+  - /blog/2014/04/18/enable-airdrop-on-ethernet/
 tags:
-- macos
+  - macos
 title: Enable AirDrop on Ethernet
 ---
 
@@ -27,11 +26,13 @@ Apple provides the ability to use AirDrop over ethernet but did not enable it by
 Type the following line of code into Terminal to make the change. Remember this needs to be made on both machines for it to take place.
 
 **Enable AirDrop Over Any Network Connection**
+
 ```bash
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 ```
 
 **Disable AirDrop Over Any Network Connection**
+
 ```bash
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 0
 ```

@@ -9,11 +9,11 @@ Alerts are a useful feature that add side content such as tips, notes, or warnin
     Here's a tip or note...
     {{%/* /alert */%}}
 
-This will display the following *note* block:
+This will display the following _note_ block:
 
-{{% alert info %}}
+{{< notice info >}}
 Here's a tip or note...
-{{% /alert %}}
+{{< /notice >}}
 
 ---
 
@@ -21,16 +21,16 @@ All four styles below:
 
 {{% alert success %}}
 Here's a success...
-{{% /alert %}}
+{{< /notice >}}
 
-{{% alert info %}}
+{{< notice info >}}
 Here's a info...
-{{% /alert %}}
+{{< /notice >}}
 
-{{% alert warning %}}
+{{< notice warning >}}
 Here's a warning...
-{{% /alert %}}
+{{< /notice >}}
 
-{{% alert danger %}}
+{{< notice warning >}}
 Here's a danger...
-{{% /alert %}}
+{{< /notice >}}

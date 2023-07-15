@@ -1,12 +1,11 @@
 ---
 categories:
-- personal
+  - personal
 date: 2014-05-06T00:00:00Z
-description: Quick post on why I have the one of the best jobs available.
 keywords: personal, loving life, job
 modified: 2014-05-16
 aliases:
-- /blog/2014/05/06/why-i-love-my-job/
+  - /blog/2014/05/06/why-i-love-my-job/
 title: Why I love my job?
 ---
 
@@ -18,7 +17,6 @@ title: Why I love my job?
 
 **Or my personal favorite wizard**  
 ![](/images/2014-05-06/wizard.jpg)
-
 
 All funny pictures aside, being in the information technology field is a perfect fit for me. When people ask for help I get to take personal satisfaction in helping them. Very few times do I have to send the task to another tech. Sometimes this turns into a mini-adventure to learn how to fix the problem. Plus, my end users have a name and face to the person helping. The past four years of my job have been an amazing experience.
 

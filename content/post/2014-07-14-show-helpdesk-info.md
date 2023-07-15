@@ -2,9 +2,6 @@
 categories:
   - tech
 date: 2014-07-14T00:00:00Z
-description:
-  Display helpful information on your Desktop using Geektool on Mac OS
-  X.
 keywords: Desktop, Widget, Geektool, OSX
 modified: 2015-04-06
 aliases:
@@ -19,7 +16,7 @@ showtoc: true
 
 Display useful information on your Desktop using Geektool. Make troubleshooting network issues for your end users easier. Find your hostname faster. The amount of useful information is limitless. If you can script it...you can display it.
 
-{{< image classes="fancybox center clear" src="/images/2014-07-14/current_info.png" title="My geektools results." >}}
+{{< figure src="/images/2014-07-14/current_info.png" title="My geektools results." align=center >}}
 
 ---
 
@@ -27,7 +24,7 @@ Display useful information on your Desktop using Geektool. Make troubleshooting 
 
 Firstly, I take no credit for this valuable resource. All credit should go to Erik Gomez from the munki-dev [mailing list](https://groups.google.com/forum/?fromgroups#!topic/munki-dev/jxs3ljEFbJY). All I have done is modified the script to work in my environment. Modifications included removing some excess `if`/ `then` statements, remove the MAC address, adding current SSID, and a few other tweaks so the script played nicely as a profile. The writing is on the wall, mcx is slowing dying or at least it is becoming a less preferred method of managing preferences.
 
-{{< image classes="fancybox center clear" src="/images/2014-07-14/eriks_info.png" title="Erik's original geektools results." >}}
+{{< figure src="/images/2014-07-14/eriks_info.png" title="Erik's original geektools results." align=center >}}
 
 **Requirements** _-You will want to download and save these somewhere._
 
@@ -51,9 +48,9 @@ Great now what? Well that script does nothing for you. Unless you want to manual
 
 ## Modify the script
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** If you wish to use the script as is, feel free to skip below to creating the profiles.
-{{% /alert %}}
+{{< /notice >}}
 
 This will be the most time consuming process so start small. Lets start by changing the Help Desk Phone Number in my script. Open the main plist `org.tynsoe.geeklet.shell.plist` from the gist zip file. Scroll down to line 116 and change the following line to something useful.
 
@@ -89,9 +86,9 @@ mcxToProfile.py -r org.tynsoe.geeklet.shell.plist org.tynsoe.GeekTool.plist \
 org.tynsoe.geektool3.plist --identifier BISD-GeekTool --displayname=BISD-GeekTool --manage Often
 ```
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** You will want to change your <code>identifier</code> and <code>displayname</code> to something useful for your organization.
-{{% /alert %}}
+{{< /notice >}}
 
 This will create a second profile with the name of your "identifier + .mobileconfig"
 
@@ -113,9 +110,9 @@ In the following, you will need to modify the profile name with your correct fil
 make_profile_pkg.py --munki-import identifier.mobileconfig
 ```
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** You will want to remove the <code>--munki-import</code> flag if you just want to create a package.
-{{% /alert %}}
+{{< /notice >}}
 
 # Ending Notes
 
