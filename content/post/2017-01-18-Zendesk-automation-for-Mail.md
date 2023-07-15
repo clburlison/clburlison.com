@@ -1,32 +1,31 @@
 ---
 categories:
-- tech
+  - tech
 date: 2017-01-18
 excerpt: Utilize Zendesk's mail API with Apple Mail and Automator.
 keywords:
-- macos
-- Apple
-- Mail
-- Zendesk
-- automation
-- api
-- automator
-- helpdesk
-- support
+  - macos
+  - Apple
+  - Mail
+  - Zendesk
+  - automation
+  - api
+  - automator
+  - helpdesk
+  - support
 modified:
 tags:
-- automation
-- macos
+  - automation
+  - macos
 title: Zendesk Automation for Mail
 toc: false
 ---
-
 
 # Intro
 
 Before I get into the material of this post I want to refer you to an article written last week by Sal Soghoian, [click here](https://www.macstories.net/stories/app-extensions-are-not-a-replacement-for-user-automation/). The information that he provides regarding user automation is exactly what makes the process described in this post possible.
 
-In case you are not aware, Zendesk is a web-based helpdesk application that is cloud hosted and quite popular. They have an email API that allows agents to create a ticket with a simple email. The power behind this API starts to show when you are an agent that happens to get many emails that could be tickets. *cough*.
+In case you are not aware, Zendesk is a web-based helpdesk application that is cloud hosted and quite popular. They have an email API that allows agents to create a ticket with a simple email. The power behind this API starts to show when you are an agent that happens to get many emails that could be tickets. _cough_.
 
 Now with that out of the way let's look at some automation for Zendesk.
 
@@ -69,61 +68,62 @@ At this point if you wish to add the stationary to your favorites just drag it u
 
 Zendesk has a great article on [Updating Ticket Properties from You Inbox](https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox) that gives an overview of what the mail API does and how it works. This post will extend on the API to help automate the process. We are going to use an Automator service to type all of the metadata fields. It should be noted that this process will work in Outlook and Apple Mail for macOS. An example of the output can be seen below:
 
-{{< image classes="fancybox center clear" src="/images/2017-01-18/mail_api_example_2.png" title="Example metadata for the email API. Image credit Zendesk." >}}
-
+{{< figure src="/images/2017-01-18/mail_api_example_2.png" title="Example metadata for the email API. Image credit Zendesk." align=center >}}
 
 1. You can download a template service from [github.com/clburlison/automator_services](https://github.com/clburlison/automator_services/archive/master.zip).
 1. Unzip the archive file and double-click on the `_AssignZendeskTicket.workflow` file.
 1. When you see the following popup select "Open in Automator"
 
-    ![automator prompt](/images/2017-01-18/automator_prompt.png)
+   ![automator prompt](/images/2017-01-18/automator_prompt.png)
 
 1. You will see the following AppleScript action:
 
-    ```bash
-    on run {input, parameters}
-    tell application "System Events"
-      keystroke "support@example.zendesk.com"
-      keystroke tab
-      keystroke tab
-      keystroke tab
-      keystroke tab
-      #keystroke "#requester"
-      #keystroke space
-      #keystroke return
-      keystroke "#assignee jane.doe@example.com"
-      keystroke return
-      keystroke "#location Some location"
-      keystroke return
-      keystroke "#group IT Staff"
-      keystroke return
-      keystroke "#status open"
-      keystroke return
-      keystroke "#priority normal"
-      keystroke return
-      keystroke "#type incident"
-      keystroke return
-      keystroke "#public false"
-      keystroke return
-      #keystroke return
-      #keystroke "Hi ___ENTER_NAME_HERE,"
-      #keystroke return
-      #keystroke return
-      #keystroke "MESSAGE_HERE."
-      #keystroke return
-      keystroke return
-    end tell
-    end run
-    ```
+   ```bash
+   on run {input, parameters}
+   tell application "System Events"
+     keystroke "support@example.zendesk.com"
+     keystroke tab
+     keystroke tab
+     keystroke tab
+     keystroke tab
+     #keystroke "#requester"
+     #keystroke space
+     #keystroke return
+     keystroke "#assignee jane.doe@example.com"
+     keystroke return
+     keystroke "#location Some location"
+     keystroke return
+     keystroke "#group IT Staff"
+     keystroke return
+     keystroke "#status open"
+     keystroke return
+     keystroke "#priority normal"
+     keystroke return
+     keystroke "#type incident"
+     keystroke return
+     keystroke "#public false"
+     keystroke return
+     #keystroke return
+     #keystroke "Hi ___ENTER_NAME_HERE,"
+     #keystroke return
+     #keystroke return
+     #keystroke "MESSAGE_HERE."
+     #keystroke return
+     keystroke return
+   end tell
+   end run
+   ```
 
 1. You will want to modify many of the lines to match your location, group, default status, etc.
-  * Notice that I have the `#requester` metadata field commented out with a hash (`#`), this is due to a Zendesk setting that we have enabled (you might need to uncomment this)
-  * I also have a few additional lines at the end for comments if you want to add to the ticket on creation.
-  * Lastly, I have four (4) `keystroke tab` lines this is due to me enabling the "Bcc" field so delete one of the tabs if you don't have this enabled.
+
+- Notice that I have the `#requester` metadata field commented out with a hash (`#`), this is due to a Zendesk setting that we have enabled (you might need to uncomment this)
+- I also have a few additional lines at the end for comments if you want to add to the ticket on creation.
+- Lastly, I have four (4) `keystroke tab` lines this is due to me enabling the "Bcc" field so delete one of the tabs if you don't have this enabled.
+
 1. Once you have made all the changes that you want you will want to save and close the file.
 1. Now double click on the `_AssignZendeskTicket.workflow` file once again, this time selecting "Install"
 
-    ![automator prompt](/images/2017-01-18/automator_prompt.png)
+   ![automator prompt](/images/2017-01-18/automator_prompt.png)
 
 After the service has been installed the workflow will be copied to `~/Library/Services/`. In case you need to locate the service to make changes in the future.
 
@@ -136,10 +136,9 @@ If you wish to add a keyboard shortcut
 1. Open **System Preferences**
 1. Go to **Keyboard » Shortcuts » Services**
 1. Now assign your service a keyboard shortcut. I used Command + Option + H (⌘ + ⌥ + H)
-    ![Services](/images/2017-01-18/services.png)
+   ![Services](/images/2017-01-18/services.png)
 
 ---
-
 
 Resources:  
 [Updating Ticket Properties from You Inbox](https://support.zendesk.com/hc/en-us/articles/203691006-Updating-ticket-properties-from-your-inbox),  
