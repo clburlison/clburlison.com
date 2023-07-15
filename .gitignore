@@ -21,3 +21,4 @@ hugo_cache
 *.terraform*
 *.tfstate*
 .hugo_build.lock
+/resources

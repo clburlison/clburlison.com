@@ -2,21 +2,21 @@
 title: "macOS Wifi Scanning"
 date: 2018-03-09
 categories:
-- tech
+  - tech
 tags:
-- macOS
-- python
+  - macOS
+  - python
 keywords:
-- tech
-- python
-- pyobjc
-- apple
-- wireless
-- CoreWLAN
-- CWInterface
+  - tech
+  - python
+  - pyobjc
+  - apple
+  - wireless
+  - CoreWLAN
+  - CWInterface
+showtoc: true
 ---
 
-<!-- toc -->
 Have you ever just wanted to see all the wireless networks around you? Apple
 provides quite a few tools to help do this out of the box including a really
 nice command line tool called `airport`. But what if there was more...
@@ -285,15 +285,15 @@ In the help output you should see our option:
 
 ```python
  |  scanForNetworksWithChannels_ssid_bssid_restTime_dwellTime_ssidList_error_
- |  
+ |
  |  scanForNetworksWithName_error_
- |  
+ |
  |  scanForNetworksWithName_includeHidden_error_
- |  
+ |
  |  scanForNetworksWithParameters_error_
- |  
+ |
  |  scanForNetworksWithSSID_error_
- |  
+ |
  |  scanForNetworksWithSSID_includeHidden_error_
 ```
 
@@ -319,9 +319,9 @@ TypeError: Need 3 arguments, got 0
 You now know definitively that this method needs three arguments. They can be
 found from the Apple [declaration] documentation:
 
-* `(NSString *)networkName`
-* `(BOOL)includeHidden`
-* `(out NSError * _Nullable *)error`
+- `(NSString *)networkName`
+- `(BOOL)includeHidden`
+- `(out NSError * _Nullable *)error`
 
 Try substituting the name of your SSID into the first field:
 
@@ -396,8 +396,8 @@ helped guide you through the weeds. The above process was almost exactly how I
 stepped through the code to figure out how things worked...while maybe a bit
 exaggerated in this post.
 
-
 <!-- Links -->
+
 [bug]: https://github.com/clburlison/pinpoint/issues/34
 [WiFi Explorer]: https://www.adriangranados.com/apps/wifi-explorer
 [NetSpot]: https://www.netspotapp.com/
