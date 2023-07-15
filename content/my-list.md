@@ -1,6 +1,6 @@
 ---
 title: My List
-modified: "10-18-2016"
+modified: "2023-07-15"
 aliases:
   - /about/my-list/
 comments: false
@@ -12,67 +12,76 @@ showDate: false
 showtoc: false
 ---
 
-This page is kind of personal but I have always found that if I write my goals down it is much easier to obtain them. Before I created this page I use to have everything stored in a pages document, and before that I use to keep it in a Facebook note.
+_*Last Modified: {{< last_modified >}}*_
 
-The idea behind this page came from Thomas Frank over at [collegeinfogeek.com](http://collegeinfogeek.com), you can find his list [here](http://collegeinfogeek.com/about/meet-the-author/my-impossible-list/). One change I made from Thomas was the name of my list. He refers to his list as "my impossible list", I on the other hand dislike thinking of any goal as impossible even if it is just by association. So below I would like to introduce you to "my list" aka the goals I would like to achieve. Note: if you check out the original impossible list by [Joel Runyol](http://impossiblehq.com/impossible-list) you will see his reasoning for the name...I simply disagree.
-
-If by chance you have some motivation and wish to create your own list feel free to post a link on Twitter. I'd love to read what goals you have set.
+This page lists some goals I am working on or have completed. I have kept many to-do lists, including the original, which started as a private Facebook note in high school. Since then, my list has transformed between various digital and paper mediums into the current format you see today. Keeping these items in public is a nice way to share while holding myself semi-accountable.
 
 ---
 
-# Current focus
+## Current focus
 
-1. Learn Swift
-1. Run a marathon
+1. Write one blog a month between July - Dec in 2023
+1. Read two books in 2023
 
-The idea behind having a current focus section is to disregard everything else on this page. It is easy to become stretched too thin. It is easy to want to do everything. It is hard to accomplish everything when all you can think about it everything else. I try to limit this area to five or less.
+The idea behind having a current focus section is to disregard everything else on this page. It is too easy to become stretched too thin or overwhelmed trying to manage everything. My goal is to limit this area to less than five.
 
-# Last 5 Completed Goals
+## Last 5 Completed
 
-- Graduate from college w/ Bachelors Degree (Dec 17, 2016)
-- Learn Python (March 12, 2015)
-- Learn Java (May 14, 2015 - proficient)
+- Learn React (Feb 2023)
+- Learn Javascript (Nov 2022)
+- Visit Hawaii (Sept 2021)
+- Got married (Sept 2021)
+- Run a marathon ([July 29, 2018](https://twitter.com/clburlison/status/1023638741296996353?s=20))
 
-# Fitness/Health Goals
+## Health
 
-- <del>Run a 5K</del> ([Dec 18, 2010](https://runkeeper.com/user/clburlison/activity/21346886))
-- <del>Run a 10K</del> ([Nov 27, 2012](https://runkeeper.com/user/clburlison/activity/133743862))
-- <del>Run a half-marathon</del> ([July 14, 2011](http://runkeeper.com/user/clburlison/activity/47599499))
-- Run a marathon
-- Yoga
+- ~~Run a 5K~~ ([Dec 18, 2010](https://runkeeper.com/user/clburlison/activity/21346886))
+- ~~Run a 10K~~ ([Nov 27, 2012](https://runkeeper.com/user/clburlison/activity/133743862))
+- ~~Run a half-marathon~~ ([July 14, 2011](http://runkeeper.com/user/clburlison/activity/47599499))
+- ~~Run a marathon~~ ([July 29, 2018](https://twitter.com/clburlison/status/1023638741296996353?s=20))
 
-# Professional Goals
+## Professional
 
-- <del>Setup a masterless puppet environment at work</del> (June 1, 2015)
-- <del>Learn Java</del> (May 14, 2015 - proficient)
-- <del>Learn Python</del> (March 12, 2015)
+- ~~Setup a masterless puppet environment at work~~ (June 1, 2015)
+- ~~Learn Java~~ (May 14, 2015)
+- ~~Learn Python~~ (March 12, 2015)
+- ~~Learn Javascript~~ (Nov 2022)
+- ~~Learn React~~ (Feb 2023)
+- Learn TypeScript
 - Learn Swift
-- Learn Ruby
-- Learn Objective-C
 - Learn Go
 - Create an iOS app
 
-# Travel Goals
+## Travel
 
+- ~~Visit Hawaii~~ (Sept 2021)
 - Visit Washington DC
 - Visit Paris, France
 - Visit Niagara Falls, New York
 - Visit Rome, Italy
 
-# Habit Goals
+## Habit
 
 - Write for 10-minutes daily for a year
 
-# Reading Goals
+## Book list
 
-- <del>Read Time Managements for System Administrators</del> (May 10, 2014)
+- ~~Read Time Managements for System Administrators~~ (May 10, 2014)
+- Engineering Management for the Rest of us
 - The Power of Habit
+- Automate your Busywork
+- Pragmatic Programmer
+- Kanban in action
+- The Phoenix Project
+- The Art of Mac Malware
+- Measure What Matters: OKRs
 
-# Fun and/or "Insane" Goals
+## Life Events
 
-_currently out of ideas_
+- ~~Graduate from college w/ Associates Degree~~ (May 9, 2013)
+- ~~Graduate from college w/ Bachelors Degree~~ (Dec 17, 2016)
+- ~~Got married~~ (Sept 2021)
 
-# Life Goals
+---
 
-- <del>Graduate from college w/ Associates Degree</del> (May 9, 2013)
-- <del>Graduate from college w/ Bachelors Degree</del> (Dec 17, 2016)
+The idea behind this page came from Thomas Frank over at [collegeinfogeek.com](http://collegeinfogeek.com), you can find his list [here](http://collegeinfogeek.com/about/meet-the-author/my-impossible-list/). There is also the original impossible list by [Joel Runyol](http://impossiblehq.com/impossible-list).
