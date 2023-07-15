@@ -1,7 +1,7 @@
 baseURL = ""
 title = "clburlison"
 paginate = 10
-theme = "PaperMod"
+theme = ["hugo-notice", "PaperMod"]
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false

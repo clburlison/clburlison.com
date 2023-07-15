@@ -1,23 +1,23 @@
 ---
 categories:
-- tech
+  - tech
 date: 2014-07-28T00:00:00Z
-description: null
 keywords: bash, scripting, if then, statements
 modified: 2015-02-16
 aliases:
-- /blog/2014/07/28/bash-if-then-cheat-sheet/
+  - /blog/2014/07/28/bash-if-then-cheat-sheet/
 tags:
-- macos
-- bash
+  - macos
+  - bash
 title: Bash if then cheat sheet
 ---
 
-I always find myself looking for a good resource when writing if/then statements in bash scripts. It's hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet...copied here because I was tired of having to look for a good resource.   
+I always find myself looking for a good resource when writing if/then statements in bash scripts. It's hard to remember all the combinations when you simply do not use most of them frequently. Below is my personal cheat sheet...copied here because I was tired of having to look for a good resource.
 
 Examples on usage can be found in the [original article](http://tldp.org/LDP/abs/html/comparison-ops.html).
 
 ## integer comparison
+
 ```bash
 
 	# The following are for number values only.
@@ -61,8 +61,8 @@ Examples on usage can be found in the [original article](http://tldp.org/LDP/abs
 		(("$a" >= "$b"))
 ```
 
-
 ## string comparison
+
 ```bash
 
 	# The following are for strings of data.
@@ -148,6 +148,7 @@ fi
 ```
 
 # Credit
+
 Special Thanks to the The Linux Documentation Project for outlining the information in such a usable format. They also include great examples on their website.
 
 ---

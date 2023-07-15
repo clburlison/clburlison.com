@@ -2,9 +2,6 @@
 categories:
   - tech
 date: 2014-07-14T00:00:00Z
-description:
-  Display helpful information on your Desktop using Geektool on Mac OS
-  X.
 keywords: Desktop, Widget, Geektool, OSX
 modified: 2015-04-06
 aliases:
@@ -51,9 +48,9 @@ Great now what? Well that script does nothing for you. Unless you want to manual
 
 ## Modify the script
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** If you wish to use the script as is, feel free to skip below to creating the profiles.
-{{% /alert %}}
+{{< /notice >}}
 
 This will be the most time consuming process so start small. Lets start by changing the Help Desk Phone Number in my script. Open the main plist `org.tynsoe.geeklet.shell.plist` from the gist zip file. Scroll down to line 116 and change the following line to something useful.
 
@@ -89,9 +86,9 @@ mcxToProfile.py -r org.tynsoe.geeklet.shell.plist org.tynsoe.GeekTool.plist \
 org.tynsoe.geektool3.plist --identifier BISD-GeekTool --displayname=BISD-GeekTool --manage Often
 ```
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** You will want to change your <code>identifier</code> and <code>displayname</code> to something useful for your organization.
-{{% /alert %}}
+{{< /notice >}}
 
 This will create a second profile with the name of your "identifier + .mobileconfig"
 
@@ -113,9 +110,9 @@ In the following, you will need to modify the profile name with your correct fil
 make_profile_pkg.py --munki-import identifier.mobileconfig
 ```
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** You will want to remove the <code>--munki-import</code> flag if you just want to create a package.
-{{% /alert %}}
+{{< /notice >}}
 
 # Ending Notes
 

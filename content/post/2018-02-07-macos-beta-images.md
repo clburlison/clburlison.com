@@ -62,10 +62,10 @@ above?
    /dev/disk4s2        	Apple_APFS
    ```
 
-   {{% alert info %}}
+   {{< notice info >}}
    Note your disk number: '/dev/disk5' from the above output  
    Note your mount path: '/Volumes/Macintosh HD 1' from the above output
-   {{% /alert %}}
+   {{< /notice >}}
 
 1. Launch SUS Inspector.
 1. If this is your first time using SUS Inspector you will be asked if you want to add custom catalogs which we do. If you have already configured SUS and didn't add these seed catalogs see [^1].
@@ -78,11 +78,11 @@ above?
    | PublicSeed    | http://swscan.apple.com/content/catalogs/others/index-10.13beta-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog         |
    | CustomerSeed  | http://swscan.apple.com/content/catalogs/others/index-10.13customerseed-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog |
 
-   {{% alert info %}}
+   {{< notice info >}}
    Tip: SUS Inspector is an alpha release. When you copy/paste
    the Name and URL hit "enter" on the keyboard after each item is added.
    Once all three feeds have been added click "save".
-   {{% /alert %}}
+   {{< /notice >}}
 
 1. Let SUS Inspector sync the catalogs.
    {{< figure src="/images/2018-02-07/sus02.png" title="SUS Inspector syncing catalogs" align=center >}}

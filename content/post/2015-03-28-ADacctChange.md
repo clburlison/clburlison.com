@@ -19,9 +19,9 @@ Changing user account logons in a deployed environment can cause some issues. Do
 
 ![acct](/images/2015-03-28/opening_header.png)
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** The above picture is for reference purposes only. All data has been modified.
-{{% /alert %}}
+{{< /notice >}}
 
 # Why would you do that?
 
@@ -51,9 +51,9 @@ Most notably:
 
 We needed to find a solution that allowed our Domain Administrators to move forward with the Account Policy change while allowing users to still **use** their Macintosh computers.
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** On Windows a simple reboot of the client computer will allow users to login with the new name structure. Windows has the polices in place to deal with this type of change. Good job Microsoft!
-{{% /alert %}}
+{{< /notice >}}
 
 # Solution
 
@@ -277,9 +277,9 @@ As always feel free to drop a comment below or on Twitter. Feedback is always ap
 
 For the most part our migration went smoothly in my environment. We installed this package a week prior to our Active Directory change and instructed our Mac users to reboot the morning after the change took place. For some users that did not reboot like we asked this script took over and forced a reboot. They had plenty of prior knowledge and at least received a nice popup using BigHonkingText explaining the reboot.
 
-{{% alert danger %}}
+{{< notice warning >}}
 **Note:** If you are using Dropbox in your environment this process will mess up Dropbox settings. Inside of <code>/Users/$HOME/.dropbox</code> there is a setting that is hard coded to the users home directory path. I found the easiest solution is to run a <code>rm ~/.dropbox</code> on the affected users profile. Followed by having the user re-sign in via the Dropbox application. Obviously this solution does not scale very well.
-{{% /alert %}}
+{{< /notice >}}
 
 ---
 

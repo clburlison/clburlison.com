@@ -15,9 +15,9 @@ url: /munkirepo-guide-part-2/
 showtoc: true
 ---
 
-{{% alert danger %}}
+{{< notice warning >}}
 **Update:** This article should only be used for reference at this time. Mandrill has been great for many years but no longer has an active maintainer. Please use MunkiWebAdmin 2 (mwa2) from [github.com/munki/mwa2](https://github.com/munki/mwa2) instead.
-{{% /alert %}}
+{{< /notice >}}
 
 # Intro
 
@@ -48,9 +48,9 @@ sudo chown -R _mandrill:munki /usr/local/munki_repo/
 sudo chmod -R 2774 /usr/local/munki_repo
 ```
 
-{{% alert info %}}
+{{< notice info >}}
 **Note:** You should receive an error from creating the 'munki' group if you went through <a href="/munkirepo-guide-part-1/">Part 1</a>. This is fine move along.
-{{% /alert %}}
+{{< /notice >}}
 
 ## Install build tools
 

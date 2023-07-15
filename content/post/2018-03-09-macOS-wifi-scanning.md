@@ -160,10 +160,10 @@ and requires the code above it to run. This way you can see the output of each
 step as we progress. No seriously this section is designed for user interaction
 open up your shell!
 
-{{% alert info %}}
+{{< notice info >}}
 First tip: Always make sure you are viewing Apple documentation under the
 'objective-c' language if you are planing on using PyObjC.
-{{% /alert %}}
+{{< /notice >}}
 
 ## Import
 
@@ -209,9 +209,9 @@ Now lets try calling the disassociate method:
 CWInterface.disassociate()
 ```
 
-{{% alert info %}}
+{{< notice info >}}
 Note: All we did was add a period and the parentheses to call the method.
-{{% /alert %}}
+{{< /notice >}}
 
 Hopefully you got back the following error:
 
@@ -225,7 +225,7 @@ Strange, right? The option was in our help list. So why didn't it work? Lets
 go back to the [CWInterface] documentation. You see that important warning message
 up top? Here I'll paste it below:
 
-{{% alert warning %}}
+{{< notice warning >}}
 **Important**
 
 Do not instantiate interface objects directly. Instead, use interface objects
@@ -235,7 +235,7 @@ method or one of its relatives. This enables your app to adopt App Sandbox
 even when it uses CoreWLAN without the need for any special exceptions.
 Directly instantiating interface objects causes low level access to system
 sockets, which by default is not allowed in a sandboxed environment.
-{{% /alert %}}
+{{< /notice >}}
 
 So the positive is we don't care about Sandboxing since we are in python land.
 This also means we can be lazy and instantiate the deprecated interface. IE:
@@ -271,11 +271,11 @@ Lets get onto the scanning so lets revisit the objective-c code:
                                           error:(out NSError * _Nullable *)error;
 ```
 
-{{% alert info %}}
+{{< notice info >}}
 The documentation on CWInterface has multiple types of scans but we will be
 working with the "WithName" + "includeHidden" option. For bonus when we are
 complete try using one of the other scan options.
-{{% /alert %}}
+{{< /notice >}}
 
 Now on to the scan. I would recommend revisiting the `help(CWInterface)`
 help menu and searching for "scan". Since we have an instantiation object
