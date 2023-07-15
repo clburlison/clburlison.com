@@ -8,6 +8,10 @@ buildFuture = false
 buildExpired = false
 pygmentsUseClasses = true
 
+[permalinks]
+  post = "/:title/"
+  page = "/:title/"
+
 [minify]
 disableXML = true
 minifyOutput = true
