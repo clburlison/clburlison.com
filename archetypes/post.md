@@ -8,7 +8,4 @@ tags:
 - tag2
 keywords:
 - tech
-#thumbnailImage: //example.com/image.jpg
 ---
-
-<!--more-->
