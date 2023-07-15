@@ -1,22 +1,23 @@
 ---
 categories:
-- tech
+  - tech
 date: 2015-01-21T00:00:00Z
 modified: null
 aliases:
-- /blog/2015/01/21/munkireport-error-fix/
+  - /blog/2015/01/21/munkireport-error-fix/
 tags:
-- munkireport
+  - munkireport
 title: Fix Munkireport Error Request Too Large
 url: "munkireport-error-fix/"
+showtoc: true
 ---
 
-<!-- toc -->
-
 # Intro
+
 I use [Munkireport-php](https://github.com/munkireport/munkireport-php) as my main reporting system at my work but have recently ran into an error when uploading data from client machines. My setup is using nginx to serve the files.
 
 ## Error message
+
 The error message below is what was showing up from a manual munki run with verbose enabled, you can run the command with:
 
 ```bash
@@ -57,8 +58,8 @@ Done.
 
 After some digging around, this error is an http Error 413 which is normally caused by:
 
-* uploading a large file from a visitor or client machine to the web server
-* too much POST data being sent by the client
+- uploading a large file from a visitor or client machine to the web server
+- too much POST data being sent by the client
 
 This can be easily fixed by modifying your nginx configuration to increasing the size allowed on upload. Which will allow the run to complete successfully.
 
@@ -88,6 +89,7 @@ sudo service nginx restart
 ```
 
 # Anything else?
+
 In addition to the change above, it might be necessary to modify PHP settings on your server. Open your PHP configuration file:
 
 ```bash
@@ -96,8 +98,8 @@ sudo nano /etc/php5/fpm/php.ini
 
 Look for the following two values and increase if needed:
 
-* **upload_max_filesize:** Maximum allowed size for uploaded files (default: 2 megabytes). You need to increase this value if you expect files over 2 megabytes in size.
-* **post_max_size:** Maximum size of POST data that PHP will accept (default: 8 megabytes). Files are sent via POST data, so you need to increase this value if you are expecting files over 8 megabytes.
+- **upload_max_filesize:** Maximum allowed size for uploaded files (default: 2 megabytes). You need to increase this value if you expect files over 2 megabytes in size.
+- **post_max_size:** Maximum size of POST data that PHP will accept (default: 8 megabytes). Files are sent via POST data, so you need to increase this value if you are expecting files over 8 megabytes.
 
 If you make any changes your will need to reload Nginx (above) and PHP-FPM (below):
 
@@ -107,9 +109,8 @@ sudo restart php5-fpm
 
 _Note_: Modifying my PHP was not necessary for my setup but I will leave it here in case it helps you.
 
-
 ---
 
 Articles:  
 [Nginx error 413](http://cnedelcu.blogspot.com/2013/09/nginx-error-413-request-entity-too-large.html),  
-[Munkireport Wiki](https://github.com/munkireport/munkireport-php/),  
+[Munkireport Wiki](https://github.com/munkireport/munkireport-php/),
