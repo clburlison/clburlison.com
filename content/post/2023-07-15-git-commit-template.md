@@ -1,6 +1,7 @@
 ---
 title: "Git Commit Template"
 date: 2023-07-15T15:11:31-05:00
+modified: 2023-07-17
 categories:
   - tech
 tags:
@@ -29,7 +30,7 @@ You aren't writing descriptive messages for the current you. These are for your 
 
 {{< figure src="/images/2023-07-15/example_commits.png" alt="Github screenshot of example commit messages" title="Example commit messages" align=center height=700 >}}
 
-On review, it is clear what each commit is changed. After multiple weeks, I can go back and find exactly where specific changes occurred, and this same concept has applied to projects that I have not touched in years.
+On review, it is clear what each commit has changed. After multiple weeks, I can go back and find exactly where specific changes occurred, and this same concept has applied to projects that I have not touched in years.
 
 ## My template
 
