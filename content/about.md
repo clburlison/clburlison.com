@@ -1,6 +1,6 @@
 ---
 title: About
-modified: "07-14-2023"
+modified: "01-21-2025"
 comments: false
 showMeta: false
 hidemeta: true
@@ -15,7 +15,7 @@ showtoc: false
 
 👋 I'm Clayton Burlison.
 
-You stumbled on my website, where I write about interesting software, document workflows, share experiences, or anything else I feel like sharing. Generally speaking, I write about Technology related topics. You can find me on most sites under the handle _clburlison_, though I'm less active nowadays.
+Welcome to my personal website, where I share thoughts on technology, workflows, and experiences. It's a space for documenting what I find interesting and useful in the tech world.
 
 {{< custom_social_icons >}}
 
