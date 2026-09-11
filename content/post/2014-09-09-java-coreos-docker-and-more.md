@@ -8,7 +8,6 @@ excerpt:
   A quick update regarding a few of the things I have been up to the last few
   weeks.
 modified: 2015-04-06
-published: true
 aliases:
   - /blog/2014/09/09/java-coreos-docker-and-more/
 title: Java, CoreOS, Docker, & More

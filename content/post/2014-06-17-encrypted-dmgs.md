@@ -4,8 +4,7 @@ categories:
 comments: true
 date: 2014-06-17T00:00:00Z
 keywords: apple, dmg, encryption, encrypted, secure, files, security
-modified: 05-12-2015
-published: true
+modified: 2015-05-12
 aliases:
   - /blog/2014/06/17/encrypted-dmgs/
 tags:

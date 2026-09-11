@@ -6,7 +6,7 @@ excerpt: Everything you need to know about Shellshock for OS X in English.
 header:
   caption: 'Photo credit: [**nghenhinvietnam**](http://nghenhinvietnam.vn/tin-tuc/shellshock-bash-loi-bao-mat-gay-tac-hai-lon-hon-heartbleed-988.html)'
   image: 2014-09-29/shellshock3.jpg
-modified: 2014-10-2
+modified: 2014-10-02
 aliases:
 - /blog/2014/09/29/shellshock/
 tags:
