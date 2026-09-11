@@ -1,6 +1,6 @@
 ---
 title: About
-modified: "01-21-2025"
+modified: "2025-01-21"
 comments: false
 showMeta: false
 hidemeta: true

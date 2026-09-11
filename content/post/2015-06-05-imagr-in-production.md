@@ -55,7 +55,7 @@ I prepped all 40 iMacs with only a small visual bug. When the computers would bo
 
 The MacBook Airs (MBA) came around and I was really halted. MBA's don't have true ethernet ports so I was using Apple's Thunderbolt Adapters. They would work fine in the NetInstall environment but I would get to the Apple Setup Wizard and no network connectivity. If you click continue on the first setup screen connectivity would work. My initial solution was to install the following script by [Allen](https://github.com/golbiga/Scripts/blob/master/enable_external_network_adapter/enable_external_network_adapter.sh) however when I did my copy/paste failed me. The followup (bandaid) was to install a dummy user account and remove the Setup Wizard. This would get the laptop to the login window were network connectivity started to work. Later that evening [Joseph Chilcote](https://twitter.com/chilcote) reported a similar issue on twitter.
 
-{{< tweet chilcote 606233511968808960 >}}
+{{< x user="chilcote" id="606233511968808960" >}}
 
 Then the following [pull-request](https://github.com/grahamgilbert/imagr/pull/86) fixed the issue.
 

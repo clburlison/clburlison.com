@@ -1,6 +1,6 @@
 ---
 title: Talks
-modified: 07-20-2016
+modified: 2016-07-20
 comments: false
 hidemeta: true
 showActions: false

@@ -15,7 +15,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.112.7
+      HUGO_VERSION: "0.166.0"
     permissions:
       contents: read
       deployments: write
@@ -25,7 +25,7 @@ jobs:
       # https://github.com/cloudflare/pages-action/issues/16#issuecomment-1398478711
       - name: Comment deploy start
         if: github.event_name != 'push'
-        uses: mshick/add-pr-comment@v2
+        uses: mshick/add-pr-comment@v3.12.0
         with:
           message-id: cloudflare-deploy
           message: |
@@ -37,15 +37,15 @@ jobs:
             |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7.0.1
         with:
           submodules: recursive
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3.2.1
         with:
-          hugo-version: "0.110.0"
+          hugo-version: "${{ env.HUGO_VERSION }}"
           # extended: true
 
       - name: Build for main
@@ -58,17 +58,15 @@ jobs:
 
       - name: Publish to Cloudflare Pages
         id: cloudflare
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: "clburlison"
-          directory: public
-          wranglerVersion: "3"
+          command: pages deploy public --project-name=clburlison
 
       - name: Comment deploy url
         if: github.event_name != 'push'
-        uses: mshick/add-pr-comment@v2
+        uses: mshick/add-pr-comment@v3.12.0
         with:
           message-id: cloudflare-deploy
           message: |
@@ -79,5 +77,5 @@ jobs:
             |---------------------------------|------------------------|
             |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
             |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
-            |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.cloudflare.outputs.url }}](${{ steps.cloudflare.outputs.url }}) |
-            |<span aria-hidden="true">🌳</span> Environment | ${{ steps.cloudflare.outputs.environment }} |
+            |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.cloudflare.outputs.deployment-url }}](${{ steps.cloudflare.outputs.deployment-url }}) |
+            |<span aria-hidden="true">🌳</span> Environment | ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }} |
